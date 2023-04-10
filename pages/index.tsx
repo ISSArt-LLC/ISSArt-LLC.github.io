@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
-
-import Link from 'next/link';
-import content from '../content/home.md';
+import React, { Component } from "react";
+import Link from "next/link";
+import content from "../content/home.md";
 
 export default class Home extends Component {
   render() {

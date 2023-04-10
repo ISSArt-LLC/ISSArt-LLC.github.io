@@ -1,6 +1,5 @@
-import React from 'react';
-
-import content from '../../content/about.md';
+import React from "react";
+import content from "../../content/about.md";
 
 const About = () => {
   const { attributes, html } = content;

@@ -1,4 +1,4 @@
-import { FC, useState, MouseEvent, KeyboardEvent } from 'react';
+import { FC, useState, MouseEvent, KeyboardEvent } from "react";
 import {
   AppBar,
   Toolbar,
@@ -7,17 +7,17 @@ import {
   useTheme,
   IconButton,
   SwipeableDrawer,
-} from '@mui/material';
-import Image from 'next/image';
+} from "@mui/material";
+import Image from "next/image";
 // import MenuIcon from '@mui/icons-material/Menu';
 
 // import LanguageSwitchMenu from '../LanguageSwitchMenu';
 // import ProjectSearchInput from '../ProjectSearchInput';
-// import HeaderLinksList from '../HeaderLinksList';
+import HeaderLinksList from "../HeaderLinkList";
 
 const NavBar: FC = () => {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
+  const isMobile = useMediaQuery(theme.breakpoints.down("lg"));
 
   const [drawerOpen, setDrawerOpen] = useState(false);
 
@@ -25,9 +25,9 @@ const NavBar: FC = () => {
     (open: boolean) => (event: KeyboardEvent | MouseEvent) => {
       if (
         event &&
-        event.type === 'keydown' &&
-        ((event as KeyboardEvent).key === 'Tab' ||
-          (event as KeyboardEvent).key === 'Shift')
+        event.type === "keydown" &&
+        ((event as KeyboardEvent).key === "Tab" ||
+          (event as KeyboardEvent).key === "Shift")
       ) {
         return;
       }
@@ -36,34 +36,33 @@ const NavBar: FC = () => {
     };
 
   return (
-    <AppBar position='fixed'>
-      <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
+    <AppBar position="fixed">
+      <Toolbar sx={{ display: "flex", justifyContent: "start" }}>
         {!isMobile ? (
           <>
             <Image
               width={150}
               height={37}
-              src='/assets/icons/CompanyLogo.svg'
-              alt='ISS Art company logo'
+              src="/assets/icons/CompanyLogo.svg"
+              alt="ISS Art company logo"
+              style={{ marginRight: 50 }}
             />
-            <Box>
-              {/* <HeaderLinksList local /> */}
-            </Box>
+            <Box>{<HeaderLinksList local />}</Box>
           </>
         ) : (
           <>
             <IconButton
-              size='large'
-              edge='start'
-              color='inherit'
-              aria-label='menu'
+              size="large"
+              edge="start"
+              color="inherit"
+              aria-label="menu"
               sx={{ mr: 2 }}
               onClick={toggleDrawer(true)}
             >
               {/* <MenuIcon /> */}
             </IconButton>
             <SwipeableDrawer
-              anchor='left'
+              anchor="left"
               open={drawerOpen}
               onClose={toggleDrawer(false)}
               onOpen={toggleDrawer(true)}
@@ -74,17 +73,17 @@ const NavBar: FC = () => {
               <Image
                 width={150}
                 height={37}
-                src='/assets/icons/CompanyLogo.svg'
-                alt='ISS Art company logo'
-                style={{ marginBottom: '16px' }}
+                src="/assets/icons/CompanyLogo.svg"
+                alt="ISS Art company logo"
+                style={{ marginBottom: "16px" }}
               />
-              <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+              <Box sx={{ display: "flex", flexDirection: "column" }}>
                 {/* <HeaderLinksList local mobile /> */}
               </Box>
             </SwipeableDrawer>
           </>
         )}
-        <Box alignItems='center'>
+        <Box alignItems="center">
           {/* <ProjectSearchInput /> */}
           {/* <LanguageSwitchMenu /> */}
         </Box>
