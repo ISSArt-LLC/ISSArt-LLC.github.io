@@ -2,7 +2,7 @@ import React from 'react';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import Post from '../../components/Post';
+import CardPost from '../../components/CardPost';
 import { sortByDate } from '../../utils';
 
 export default function Home({ posts }: any) {
@@ -10,7 +10,8 @@ export default function Home({ posts }: any) {
     <div>
       <div className="container">
         <div className="row">
-          <div className="col-lg-8">{posts.map((post: any, index: any) => <Post key={index} post={post} />)}</div>
+          <div className="col-lg-8">
+            {posts.map((post: any, index: any) => <p key={index}><CardPost key={index} post={post} /></p> )}</div>
         </div>
       </div>
     </div>

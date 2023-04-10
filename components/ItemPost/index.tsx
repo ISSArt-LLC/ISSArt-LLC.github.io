@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Button from "@mui/material/Button";
 export default function ItemPost({ post: { post } }: any) {
   const date = new Date(post.date);
   return (
@@ -12,9 +12,7 @@ export default function ItemPost({ post: { post } }: any) {
         <div className="small text-muted">{`${date.getMonth() + 1} - ${date.getDate()} - ${date.getFullYear()}`}</div>
 
         <p className="card-text">{post.author}</p>
-        <Link href={`/blog/post/${post.slug}`}>
-          Read More
-        </Link>
+        <Button href={`/blog/post/${post.slug}`} variant="outlined">Read More</Button>
       </div>
     </div>
   );

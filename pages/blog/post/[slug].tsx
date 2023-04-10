@@ -1,45 +1,53 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-// import { marked } from 'marked'
+import { marked } from 'marked'
 import Link from 'next/link'
 import { slugify } from '../../../utils'
+import Image from 'next/image'
+import Button from '@mui/material/Button'
+import Chip from '@mui/material/Chip'
 
 export default function PostPage({ content, frontmatter }: any) {
   const date = new Date(frontmatter.date)
 
   return (
     <>
-      <div className="container my-5">
+      <div className="container">
         <div className="row">
           <div className="col-lg-10 m-auto">
+            <Button href={`/blog/`} variant="outlined">Go back</Button>
+
             <div className='card card-page'>
-              <a href={`/blog/post/${frontmatter.slug}`} > <img className="card-img-top" src={frontmatter.image} width="500px" height="500px" alt="..." /></a>
+              <Image
+                src={(frontmatter?.image) ? frontmatter.image : '/assets/images/logo.jpg'}
+                alt=""
+                width="250"
+                height="250"
+              />
+              <h1 className='post-title'>{frontmatter.title}</h1>
+              <div className="small text-muted">{`${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`} by {frontmatter.author}</div>
 
-              <h1 className='post-title mt-2 p-2'>{frontmatter.title}</h1>
-              <div className='post-date m-1 p-2'>
+              {(frontmatter.categories) ? <p>categories: {frontmatter.categories.join()}</p> : ''}
+              <div className='post-date'>
 
-                <div><h6>{`${date.getMonth() + 1} - ${date.getDate()} - ${date.getFullYear()}`} </h6>  </div>
                 <div> {
-                  frontmatter.categories.map(
-                    (category: any) => {
+                  (frontmatter.tags) ?
+                    frontmatter.tags.map(
+                      (tag: string) => {
+                        const slug = slugify(tag)
 
-                      const slug = slugify(category)
-
-                      return (
-                        <Link key={category} href={`/category/${slug}`}>
-                          <h6 className=' post-title'>#{category}</h6>
-                        </Link>)
-                    }
-                  )
+                        return (
+                          <Link key={tag} href={`/tag/${slug}`}>
+                            <Chip variant="outlined" clickable={true} label={`#${tag}`} />
+                          </Link>
+                        )
+                      }
+                    ) : 'no tags'
                 } </div>
-
-
               </div>
 
-              {/* <div className='post-body p-5 m-auto' dangerouslySetInnerHTML={{ __html: marked.parse(content) }}> */}
-
-              {/* </div> */}
+              <div className='post-body' dangerouslySetInnerHTML={{ __html: marked.parse(content) }}></div>
             </div>
           </div>
         </div>
@@ -83,7 +91,7 @@ export async function getStaticPaths() {
     }
   )
 
-  console.log("paths", paths)
+  // console.log("paths", paths)
 
   return {
     paths,

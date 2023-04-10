@@ -6,7 +6,7 @@ author: 'Some User'
 image: /static/img/2099/01/example.jpg
 categories:
     - General
-draft: false
+draft: true
 ---
 
 # Header

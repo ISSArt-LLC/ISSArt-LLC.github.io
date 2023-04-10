@@ -2,15 +2,18 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import { slugify } from '../../utils';
-import { Key } from 'react';
 import ItemPost from '../../components/ItemPost';
+import { Button } from '@mui/material';
+
 export default function tag({ posts }: any) {
   return (
     <>
       <div className="container my-3">
+        <Button href={`/blog/`} variant="outlined">Go back</Button>
+        <p>search results:</p>
         <div className="row">
           <div className="col-lg-10 post-date m-1 p-2m-auto">
-            {posts.map((post: any, index: Key | null | undefined) => {
+            {posts.map((post: any, index: any) => {
               return <ItemPost key={index} post={post} />;
             })}
           </div>
@@ -19,6 +22,7 @@ export default function tag({ posts }: any) {
     </>
   );
 }
+
 export async function getStaticPaths() {
   const files = fs.readdirSync(path.join('posts'));
   let tempStorage: { params: { slug: string; }; }[] = [];
@@ -28,11 +32,13 @@ export async function getStaticPaths() {
       'utf-8'
     );
     const { data: frontmatter } = matter(markdownWithMeta);
-    if (frontmatter.draft === false) {
-      frontmatter.categories.map((tag: string) => {
-        let slug = slugify(tag);
-        tempStorage.push({ params: { slug } });
-      });
+    if (!frontmatter.draft || frontmatter.draft === false) {
+      if (frontmatter.tags) {
+        frontmatter.tags.map((tag: string) => {
+          let slug = slugify(tag);
+          tempStorage.push({ params: { slug } });
+        });
+      }
     } else {
       return null;
     }
@@ -40,16 +46,16 @@ export async function getStaticPaths() {
   const paths = tempStorage.filter((item, index) => {
     return tempStorage.indexOf(item) === index;
   });
-  // const paths=["npm"]
   return {
     paths,
     fallback: false
   };
 }
+
 export async function getStaticProps({ params: { slug } }: any) {
   // Get files from the posts dir
   const files = fs.readdirSync(path.join('posts'));
-  let tempStorage: { post: { [key: string]: any; }; }[] = [];
+  let tempStorage: { post: { [key: string]: Array<any>; } }[] = [];
   // Get slug and frontmatter from posts
   const tempPosts = files.map(filename => {
     // Get frontmatter
@@ -59,12 +65,14 @@ export async function getStaticProps({ params: { slug } }: any) {
     );
     const { data: frontmatter } = matter(markdownWithMeta);
     if (!frontmatter.draft || frontmatter.draft === false) {
-      frontmatter.categories.map((tag: string) => {
-        let tagSlug = slugify(tag);
-        if (slug === tagSlug) {
-          tempStorage.push({ post: frontmatter });
-        }
-      });
+      if (frontmatter.tags) {
+        frontmatter.tags.map((tag: string) => {
+          let tagSlug = slugify(tag);
+          if (slug === tagSlug) {
+            tempStorage.push({ post: frontmatter });
+          }
+        });
+      }
     } else {
       return null;
     }
