@@ -1,76 +1,56 @@
-import React, { Component } from "react";
-import Image from "next/image";
-import Link from "next/link";
+import React from 'react';
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
+import Post from '../../components/Post';
+import { sortByDate } from '../../utils';
 
-const BLOG_POSTS_PATH = "../../content/blogPosts";
-
-const importBlogPosts = async () => {
-  // https://medium.com/@shawnstern/importing-multiple-markdown-files-into-a-react-component-with-webpack-7548559fce6f
-  // second flag in require.context function is if subdirectories should be searched
-  const markdownFiles = require
-    .context("../../content/blogPosts", false, /\.md$/)
-    .keys()
-    .filter((el) => !el.includes("blogPosts"))
-    .map((relativePath) => relativePath.substring(2));
-  return Promise.all(
-    markdownFiles.map(async (path) => {
-      console.log("markdownFiles", markdownFiles);
-      console.log("path", path);
-      const markdown = await import(`../../content/blogPosts/${path}`);
-      return { ...markdown, slug: path.substring(0, path.length - 3) };
-    })
+export default function Home({ posts }: any) {
+  return (
+    <div>
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-8">{posts.map((post: any, index: any) => <Post key={index} post={post} />)}</div>
+        </div>
+      </div>
+    </div>
   );
-};
-
-interface Props {
-  postsList?: Array<any>;
 }
 
-export default class Blog extends Component<Props> {
-  static async getInitialProps() {
-    const postsList = await importBlogPosts();
-
-    return { postsList };
-  }
-  render() {
-    const { postsList } = this.props;
-    return (
-      <div className="blog-list">
-        {postsList && postsList.map((post) => {
-          return (
-            <>
-              <Link key={post.slug} href={`blog/post/${post.slug}`}>
-                <Image
-                  src={post.attributes.image}
-                  alt=""
-                  width="500"
-                  height="500"
-                />
-                <h2>{post.attributes.title}</h2>
-              </Link>
-              <p>{post.attributes.date} {post.attributes.author}</p>
-              <p>{post.attributes.categories}</p>
-            </>
-
-          );
-        })}
-        <style jsx>{`
-          .blog-list a {
-            display: block;
-          }
-          .blog-list img {
-            max-width: 100%;
-            max-height: 300px;
-          }
-          .blog-list {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-          }
-        `}</style>
-      </div>
-    );
-  }
+export async function getStaticProps() {
+  // Get files from the posts dir
+  const files = fs.readdirSync(path.join('posts'));
+  // Get slug and frontmatter from posts
+  const tempPosts = files.map(filename => {
+    // Create slug
+    const slug = filename.replace('.md', '');
+    // Get frontmatter
+    const markdownWithMeta = fs.readFileSync(path.join('posts', filename), 'utf-8');
+    const { data: frontmatter } = matter(markdownWithMeta);
+    if (!frontmatter.draft || frontmatter.draft === false) {
+      return {
+        slug,
+        frontmatter
+      };
+    } else {
+      return null;
+    }
+  });
+  //  remove null in tempPosts
+  const posts = tempPosts.filter(post => {
+    return post && post;
+  });
+  // const jsonString = JSON.stringify(posts)
+  // fs.writeFileSync('./search.json', jsonString, err => {
+  //   if (err) {
+  //     console.log('Error writing file', err)
+  //   } else {
+  //     console.log('Successfully wrote file')
+  //   }
+  // })
+  return {
+    props: {
+      posts: posts.sort(sortByDate)
+    }
+  };
 }
