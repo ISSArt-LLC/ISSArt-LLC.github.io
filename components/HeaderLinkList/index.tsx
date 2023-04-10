@@ -1,6 +1,5 @@
 import { FC } from "react";
 import { Link } from "@mui/material";
-import { useLanguageQuery, useTranslation } from "next-export-i18n";
 import { useRouter } from "next/router";
 
 const pages = [
@@ -15,7 +14,7 @@ const HeaderLinksList: FC<{ mobile?: boolean; local?: boolean }> = ({
 }) => {
   const router = useRouter();
 
-  const highlightActiveUrl = (path, idx) => {
+  const highlightActiveUrl = (path: string, idx: number) => {
     if (idx === 0) {
       return router.pathname === "/" ? "1px solid white" : "none";
     }

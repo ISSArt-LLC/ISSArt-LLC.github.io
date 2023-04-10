@@ -1,8 +1,13 @@
 import React, { Component } from "react";
 import Image from "next/image";
+import { NextPageContext } from "next";
 
-class Post extends Component {
-  static async getInitialProps({ query }) {
+interface Props {
+  blogpost?: any;
+}
+
+class Post extends Component<Props> {
+  static async getStatic({ query }: NextPageContext) {
     const { slug } = query;
     const blogpost = await import(
       `../../../content/blogPosts/${slug}.md`

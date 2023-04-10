@@ -22,7 +22,11 @@ const importBlogPosts = async () => {
   );
 };
 
-export default class Blog extends Component {
+interface Props {
+  postsList?: Array<any>;
+}
+
+export default class Blog extends Component<Props> {
   static async getInitialProps() {
     const postsList = await importBlogPosts();
 
@@ -32,17 +36,22 @@ export default class Blog extends Component {
     const { postsList } = this.props;
     return (
       <div className="blog-list">
-        {postsList.map((post) => {
+        {postsList && postsList.map((post) => {
           return (
-            <Link key={post.slug} href={`blog/post/${post.slug}`}>
-              <Image
-                src={post.attributes.thumbnail}
-                alt=""
-                width="500"
-                height="500"
-              />
-              <h2>{post.attributes.title}</h2>
-            </Link>
+            <>
+              <Link key={post.slug} href={`blog/post/${post.slug}`}>
+                <Image
+                  src={post.attributes.image}
+                  alt=""
+                  width="500"
+                  height="500"
+                />
+                <h2>{post.attributes.title}</h2>
+              </Link>
+              <p>{post.attributes.date} {post.attributes.author}</p>
+              <p>{post.attributes.categories}</p>
+            </>
+
           );
         })}
         <style jsx>{`
