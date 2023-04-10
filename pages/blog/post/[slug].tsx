@@ -7,7 +7,7 @@ interface Props {
 }
 
 class Post extends Component<Props> {
-  static async getStatic({ query }: NextPageContext) {
+  static async getInitialProps({ query }: NextPageContext) {
     const { slug } = query;
     const blogpost = await import(
       `../../../content/blogPosts/${slug}.md`
