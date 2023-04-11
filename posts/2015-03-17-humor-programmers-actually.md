@@ -1,0 +1,19 @@
+---
+id: 939
+title: 'IT Humor: What programmers actually do'
+date: '2015-03-17T13:22:19+08:00'
+author: 'Olga Rekovskaya'
+layout: post
+categories:
+    - General
+---
+
+<iframe allowfullscreen="" frameborder="0" height="339" src="https://www.youtube.com/embed/thfZbl7GF8U?feature=oembed" width="602"></iframe>
+
+What my grandma thinks I do…  
+What my wife thinks I do…  
+What my boss thinks I do…  
+What I think I do…  
+What my clients think I do…  
+What I actually do…  
+**Find out the truth about programmers in this video!**

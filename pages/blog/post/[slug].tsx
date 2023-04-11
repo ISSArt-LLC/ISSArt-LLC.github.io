@@ -87,7 +87,6 @@ export async function getStaticPaths() {
       return null
     }
 
-
   })
   //   remove null in tempPosts 
   const paths = temppaths.filter(
