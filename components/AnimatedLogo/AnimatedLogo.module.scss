@@ -1,0 +1,18 @@
+.container {
+  position: relative;
+
+  svg {
+    width: 386px;
+    height: 210px;
+    z-index: 2;
+    position: absolute;
+    left: 0;
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: grayscale(100%);
+  }
+}

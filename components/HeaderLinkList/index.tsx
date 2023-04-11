@@ -4,8 +4,8 @@ import { useRouter } from "next/router";
 
 const pages = [
   { name: "Home", path: "/" },
-  { name: "About", path: "/about" },
   { name: "Blog", path: "/blog" },
+  { name: "About", path: "/about" },  
 ];
 
 const HeaderLinksList: FC<{ mobile?: boolean; local?: boolean }> = ({

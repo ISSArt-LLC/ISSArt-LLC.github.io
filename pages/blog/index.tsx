@@ -4,17 +4,18 @@ import path from 'path';
 import matter from 'gray-matter';
 import CardPost from '../../components/CardPost';
 import { sortByDate } from '../../utils';
+import { Container, Grid } from '@mui/material';
 
 export default function Home({ posts }: any) {
   return (
-    <div>
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-8">
-            {posts.map((post: any, index: any) => <p key={index}><CardPost key={index} post={post} /></p> )}</div>
-        </div>
-      </div>
-    </div>
+    <>
+      {(posts) ? posts.map((post: any, index: any) => (
+        <Grid key={index} marginBottom={4} marginTop={4}>
+          <CardPost key={index} post={post.frontmatter} slug={post.slug} />
+        </Grid>)) : (
+        <p>No posts yet!</p>
+      )}
+    </>
   );
 }
 
@@ -27,7 +28,8 @@ export async function getStaticProps() {
     const slug = filename.replace('.md', '');
     // Get frontmatter
     const markdownWithMeta = fs.readFileSync(path.join('posts', filename), 'utf-8');
-    const { data: frontmatter } = matter(markdownWithMeta);
+    let { data: frontmatter } = matter(markdownWithMeta);
+    frontmatter.slug = slug;
     if (!frontmatter.draft || frontmatter.draft === false) {
       return {
         slug,

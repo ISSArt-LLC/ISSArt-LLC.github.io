@@ -7,52 +7,57 @@ import { slugify } from '../../../utils'
 import Image from 'next/image'
 import Button from '@mui/material/Button'
 import Chip from '@mui/material/Chip'
+import { Box, Container, Stack, Typography } from '@mui/material'
 
 export default function PostPage({ content, frontmatter }: any) {
   const date = new Date(frontmatter.date)
 
   return (
-    <>
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-10 m-auto">
-            <Button href={`/blog/`} variant="outlined">Go back</Button>
+    <Container>
+      <Button href={`/blog`} variant="outlined">Go back</Button>
 
-            <div className='card card-page'>
-              <Image
-                src={(frontmatter?.image) ? frontmatter.image : '/assets/images/logo.jpg'}
-                alt=""
-                width="250"
-                height="250"
-              />
-              <h1 className='post-title'>{frontmatter.title}</h1>
-              <div className="small text-muted">{`${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`} by {frontmatter.author}</div>
-
-              {(frontmatter.categories) ? <p>categories: {frontmatter.categories.join()}</p> : ''}
-              <div className='post-date'>
-
-                <div> {
-                  (frontmatter.tags) ?
-                    frontmatter.tags.map(
-                      (tag: string) => {
-                        const slug = slugify(tag)
-
-                        return (
-                          <Link key={tag} href={`/tag/${slug}`}>
-                            <Chip variant="outlined" clickable={true} label={`#${tag}`} />
-                          </Link>
-                        )
-                      }
-                    ) : 'no tags'
-                } </div>
-              </div>
-
-              <div className='post-body' dangerouslySetInnerHTML={{ __html: marked.parse(content) }}></div>
-            </div>
-          </div>
+      <div className='card card-page'>
+        <Typography gutterBottom variant="h3" component="div">
+          {frontmatter.title}
+        </Typography>
+        <Typography gutterBottom variant="h6" component="div">
+          {(frontmatter.categories) ? (`Categories: ` + frontmatter.categories.join(', ')) : ''}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          {`${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`} by {frontmatter.author}
+        </Typography>
+        <div className='post-image'>
+          <Box
+            display="flex"
+            justifyContent="center"
+            alignItems="center">
+            <Image
+              src={(frontmatter?.image) ? frontmatter.image : '/assets/images/logo.jpg'}
+              alt=""
+              width="250"
+              height="250"
+            />
+          </Box>
         </div>
+        <Stack direction="row" spacing={1}>
+          {(frontmatter.tags) ?
+            frontmatter.tags.map(
+              (tag: string) => {
+                const slug = slugify(tag)
+
+                return (
+                  <Link key={tag} href={`/tag/${slug}`}>
+                    <Chip variant="outlined" clickable={true} label={`#${tag}`} />
+                  </Link>
+                )
+              }
+            ) : 'no tags'
+          }
+        </Stack>
+
+        <div className='post-body' dangerouslySetInnerHTML={{ __html: marked.parse(content) }}></div>
       </div>
-    </>
+    </Container>
   )
 }
 
@@ -91,24 +96,21 @@ export async function getStaticPaths() {
     }
   )
 
-  // console.log("paths", paths)
-
   return {
     paths,
     fallback: false,
   }
-
 }
 
 
 export async function getStaticProps({ params: { slug } }: any) {
-
   const markdownWithMeta = fs.readFileSync(
     path.join('posts', slug + '.md'),
     'utf-8'
   )
 
-  const { data: frontmatter, content } = matter(markdownWithMeta)
+  let { data: frontmatter, content } = matter(markdownWithMeta)
+  frontmatter.slug = slug;
 
   return {
     props: {

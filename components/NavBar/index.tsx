@@ -9,10 +9,8 @@ import {
   SwipeableDrawer,
 } from "@mui/material";
 import Image from "next/image";
-// import MenuIcon from '@mui/icons-material/Menu';
+import MenuIcon from '@mui/icons-material/Menu';
 
-// import LanguageSwitchMenu from '../LanguageSwitchMenu';
-// import ProjectSearchInput from '../ProjectSearchInput';
 import HeaderLinksList from "../HeaderLinkList";
 
 const NavBar: FC = () => {
@@ -37,7 +35,7 @@ const NavBar: FC = () => {
 
   return (
     <AppBar position="fixed">
-      <Toolbar sx={{ display: "flex", justifyContent: "start" }}>
+      <Toolbar sx={{ display: "flex", justifyContent: "left" }}>
         {!isMobile ? (
           <>
             <Image
@@ -47,7 +45,9 @@ const NavBar: FC = () => {
               alt="ISS Art company logo"
               style={{ marginRight: 50 }}
             />
-            <Box>{<HeaderLinksList local />}</Box>
+            <Box>
+              <HeaderLinksList local />
+            </Box>
           </>
         ) : (
           <>
@@ -59,7 +59,7 @@ const NavBar: FC = () => {
               sx={{ mr: 2 }}
               onClick={toggleDrawer(true)}
             >
-              {/* <MenuIcon /> */}
+              <MenuIcon />
             </IconButton>
             <SwipeableDrawer
               anchor="left"
@@ -78,14 +78,12 @@ const NavBar: FC = () => {
                 style={{ marginBottom: "16px" }}
               />
               <Box sx={{ display: "flex", flexDirection: "column" }}>
-                {/* <HeaderLinksList local mobile /> */}
+                <HeaderLinksList local mobile />
               </Box>
             </SwipeableDrawer>
           </>
         )}
         <Box alignItems="center">
-          {/* <ProjectSearchInput /> */}
-          {/* <LanguageSwitchMenu /> */}
         </Box>
       </Toolbar>
     </AppBar>

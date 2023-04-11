@@ -2,24 +2,22 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import { slugify } from '../../utils';
-import ItemPost from '../../components/ItemPost';
-import { Button } from '@mui/material';
+import { Button, Container, Grid, Typography } from '@mui/material';
+import CardPost from '../../components/CardPost';
 
 export default function tag({ posts }: any) {
   return (
-    <>
-      <div className="container my-3">
-        <Button href={`/blog/`} variant="outlined">Go back</Button>
-        <p>search results:</p>
-        <div className="row">
-          <div className="col-lg-10 post-date m-1 p-2m-auto">
-            {posts.map((post: any, index: any) => {
-              return <ItemPost key={index} post={post} />;
-            })}
-          </div>
-        </div>
-      </div>
-    </>
+    <Container>
+      <Button href={`/blog`} variant="outlined">Go back</Button>
+      <Typography variant="h4">search results:</Typography>
+
+      {(posts) ? posts.map((post: any, index: any) => (
+        <Grid key={index} marginBottom={4} marginTop={4}>
+          <CardPost key={index} post={post.post} />
+        </Grid>)) : (
+        <p>No posts found!</p>
+      )}
+    </Container>
   );
 }
 

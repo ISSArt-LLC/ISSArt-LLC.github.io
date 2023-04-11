@@ -1,19 +1,22 @@
-import React, { Component } from "react";
+import React from "react";
+import AnimatedLogo from "../components/AnimatedLogo";
+import Container from "@mui/material/Container";
+import { Box, Button, Stack } from "@mui/material";
 
-export default class Home extends Component {
-  render() {
-    // const { attributes, html } = content;
-    return (
-      <React.Fragment>
-        <h1>attributes.title</h1>
-        {/* <div dangerouslySetInnerHTML={{ __html: html }} />
-        <style jsx>{`
-          h1,
-          div {
-            text-align: center;
-          }
-        `}</style> */}
-      </React.Fragment>
-    );
-  }
+export default function Home() {
+  return (
+    <>
+      <Box
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+        minHeight="85vh"
+      >
+        <Stack spacing={8}>
+          <AnimatedLogo />
+          <Button href={`/blog`} variant="outlined">Explore</Button>
+        </Stack>
+      </Box>
+    </>
+  );
 }
