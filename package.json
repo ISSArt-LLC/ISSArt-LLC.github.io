@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next",
-    "build": "next build && next export",
+    "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "next build && touch out/.nojekyll"
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",
