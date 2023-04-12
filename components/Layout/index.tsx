@@ -2,6 +2,7 @@ import { FC, ReactNode } from 'react';
 import { CssBaseline, Grid, useMediaQuery, useTheme } from '@mui/material';
 
 import NavBar from '../NavBar';
+import Footer from '../Footer';
 
 const Layout: FC<{
   children?: ReactNode;
@@ -23,6 +24,7 @@ const Layout: FC<{
           {children}
         </Grid>
       </Grid>
+      <Footer />
     </>
   );
 };
