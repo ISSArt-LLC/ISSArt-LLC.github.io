@@ -60,7 +60,7 @@ export default function CardPost({ post }: any) {
             : ""}
         </Stack>
       </CardContent>
-      <CardActions>
+      <CardActions sx={{ float: "right" }}>
         <Button href={`/blog/post/${post.slug}`}>Read More</Button>
       </CardActions>
     </Card>
