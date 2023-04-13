@@ -130,11 +130,11 @@ We hope that these insights will be interesting and useful for you. If you have 
 
 Many thanks to all the companies who participated in our survey! We really appreciate your contribution to the preparation of this material.
 **The list of companies who participated in the survey and who agreed to mention their name in the report:**
-1\. Globus
-2\. Inreco LAN
-3\. Growapps
-4\. Simbirsoft
-5\. BEETLAB
-6\. ISS Art
-7\. 7bits
-8\. Ronas IT
+1. Globus
+2. Inreco LAN
+3. Growapps
+4. Simbirsoft
+5. BEETLAB
+6. ISS Art
+7. 7bits
+8. Ronas IT
