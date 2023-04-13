@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Image from "next/image";
 import { marked } from "marked";
 import { Box, Chip, Link, Stack, Typography } from "@mui/material";
@@ -15,6 +16,18 @@ export default function PostContentCard({
   content,
 }: PostContentCardProps) {
   const date = new Date(frontmatter.date);
+
+  useEffect(() => {
+    // get images inside "div.post-body", to fix their sizes to fit container
+    // otherwise they are too big and overflow container and even viewport
+    const images = document.querySelectorAll(".post-body img");
+
+    images.forEach(
+      (el) =>
+        //@ts-ignore
+        (el.style.cssText = "width: 100%; height: 300px; object-fit: contain")
+    );
+  }, []);
 
   return (
     <div className="card card-page">
