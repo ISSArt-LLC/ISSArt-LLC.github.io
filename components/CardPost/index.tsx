@@ -30,7 +30,7 @@ export default function CardPost({ post }: any) {
                 height: 250,
                 width: "100%",
                 position: "relative",
-                margin: 5,
+                margin: { xs: 1, md: 5 },
               }}
             >
               <Image

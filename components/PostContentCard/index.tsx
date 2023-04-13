@@ -37,7 +37,7 @@ export default function PostContentCard({
               height: 250,
               width: { xs: "100%", md: "50%" },
               position: "relative",
-              margin: 5,
+              margin: { xs: 1, md: 5 },
             }}
           >
             <Image
