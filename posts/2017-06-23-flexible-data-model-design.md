@@ -41,37 +41,37 @@ There are some more questions we should answer before starting the implementatio
         }
     }
     ```
-    
+  
     is not acceptable to use in the data access layer.
-    
+  
     You should have something like
-    
+  
     ```
     public class ModelA {
         ...;
     }
     ```
-    
+  
     ```
     public class ModelB {
     ```
-    
+  
     ```
         ...
         AId refenebceToA() {...}
     }
     ```
-    
+  
     ```
     public class ModelBDao {
     ```
-    
+  
     ```
         ...
         List<ModelB> byA(ModelA a) {...}
     }
     ```
-    
+  
     instead.
 2. Mutable objects do not conform SOLID. Thus, all data representing objects should be *immutable*.
 3. Multi valued fields compromise. Generally this: ```
@@ -80,10 +80,10 @@ There are some more questions we should answer before starting the implementatio
         Collection<String> strings() { return this.strings; }
     }
     ```
-    
+  
     makes A mutable, but sometimes you need to read the multiple values.
-    
-    Depending on your situation it is possible to declare this method returning read-only collection clearly. Or you can return something like rx.Observable&lt;String&gt; or Stream&lt;String&gt; here. Upon the whole, it should be obvious that the returning value is *immutable*.
+  
+    Depending on your situation it is possible to declare this method returning read-only collection clearly. Or you can return something like rx.Observable<String> or Stream<String> here. Upon the whole, it should be obvious that the returning value is *immutable*.
 
 If you agree with above statements let’s move to the whole example.
 
@@ -317,17 +317,17 @@ public enum ValueType {
             return new NullValue(valueTypeId());
         }
     };
-    
+  
     private final Class<?> supported;
 
     ValueType(Class<?> supported) {
         this.supported = supported;
     }
-    
+  
     public String valueTypeId() {
         return name().toLowerCase();
     }
-    
+  
     public boolean isSupported(Class<?> cls) {
         return supported.equals(cls);
     }
@@ -335,13 +335,13 @@ public enum ValueType {
     public Class<?> supported() {
         return supported;
     }
-    
+  
     public static Optional<ValueType> of(Class<?> cls) {
         return Stream.of(values())
             .filter(v -> v.isSupported(cls))
             .min(Comparator.comparingInt(Enum::ordinal));
     }
-    
+  
     public static Optional<ValueType> of(String typeId) {
         return Stream.of(values())
             .filter(v -> v.valueTypeId().equalsIgnoreCase(typeId))
@@ -450,7 +450,7 @@ try {
 }
 ```
 
-Or, it can be a NoSQL database. Perhaps, you will need to define the identity in the Schema class. Usually document-oriented databases are integrated with Map&lt;String, Object&gt; source.
+Or, it can be a NoSQL database. Perhaps, you will need to define the identity in the Schema class. Usually document-oriented databases are integrated with Map<String, Object> source.
 
 Depending on the technology you need or do not need to specify the identity of the document.
 

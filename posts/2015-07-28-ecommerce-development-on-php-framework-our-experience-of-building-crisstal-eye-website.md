@@ -21,7 +21,7 @@ This all sound attractive in theory, but what’s on practice? Let’s focus on 
 
 ### Which framework to choose?
 
-In one of our previous posts we’ve discussed various PHP frameworks that can be used for [eCommerce website development](http://www.issart.com/blog/php-framework-ecommerce-website-development/). So, the choice can be different in every particular project – depending on the goals, conditions, team skills, etc.  
+In one of our previous posts we’ve discussed various PHP frameworks that can be used for [eCommerce website development](http://www.issart.com/blog/php-framework-ecommerce-website-development/). So, the choice can be different in every particular project – depending on the goals, conditions, team skills, etc.
 To develop CrISStal Eye website we have decided to utilize [Symfony framework](https://symfony.com/). Why?
 
 - It is a flexible technology enabling various customizations based on your project needs;
@@ -92,7 +92,7 @@ This was our experience that proved that eCommerce development on PHP framework 
 
 Have you utilized PHP frameworks for your eCommerce projects? What were the results? Feel free to share your thoughts in comments!
 
-**References**  
-\[1\] <http://www.slideshare.net/NidhiVasavda/the-many-advantages-of-symfony-framework-21098094>  
-\[2\] <http://www.symfonydriven.com/news/advantages-using-symfony-framework>  
+**References**
+\[1\] <http://www.slideshare.net/NidhiVasavda/the-many-advantages-of-symfony-framework-21098094>
+\[2\] <http://www.symfonydriven.com/news/advantages-using-symfony-framework>
 \[3\] <http://www.sitepoint.com/11-reasons-to-use-twitter-bootstrap/>

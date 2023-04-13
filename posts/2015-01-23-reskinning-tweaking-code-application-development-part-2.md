@@ -30,11 +30,11 @@ Needless to say, it will take a bit of hunting around to find the exact sound li
 
 Sometimes, reskinning just takes more work than fresh application development. Although the app-preuneurs would like to deny it, the fact remains that the internet is full of horror stories of how a badly written code took more time to correct than what would have been needed to get the program going from scratch.
 
-- **The existing app was not designed to handle increased loads**. If this is the case, the code would seriously impact your potential to earn even after all the hard work you have put into it; not to mention that an app which is prone to crashes will not do your reputation any favors.
-- **There is no scope of added functionality**. As stated above, most source code allows for a few changes like the graphics, sounds and monetization methods. However, the program you get may not be flexible enough to take the addition of new features and functions. In fact, you may find it daunting to even get rid of the functions that you don’t want.
-- **Testing will be required for additional feature inclusion**. Do not buy into the hype that testing will not be needed after making tweaks to the source code. If you have added to the features list, you will have to go through a few rounds of testing. Moral of the story, you will be investing time and money in this part of application development, whether you are working on a fresh code or a source program.
-- **You have so many readily available tools**. There are so many cutting edge tools that simplify the process of application development; there is absolutely no reason to work with a poorly written source code. Some of the top choices include AppGyver, Firebase, Appscend, Tabris (this is particularly noteworthy) and Appcelerator Titanium.
-- **Selling it forward**. Finally, once you have gotten your effort’s worth from your app, you can continue to make money with it by selling the source code forward. This is of course not an option with source code you have purchased, because you will not have resale rights.
+**The existing app was not designed to handle increased loads**. If this is the case, the code would seriously impact your potential to earn even after all the hard work you have put into it; not to mention that an app which is prone to crashes will not do your reputation any favors.
+**There is no scope of added functionality**. As stated above, most source code allows for a few changes like the graphics, sounds and monetization methods. However, the program you get may not be flexible enough to take the addition of new features and functions. In fact, you may find it daunting to even get rid of the functions that you don’t want.
+**Testing will be required for additional feature inclusion**. Do not buy into the hype that testing will not be needed after making tweaks to the source code. If you have added to the features list, you will have to go through a few rounds of testing. Moral of the story, you will be investing time and money in this part of application development, whether you are working on a fresh code or a source program.
+**You have so many readily available tools**. There are so many cutting edge tools that simplify the process of application development; there is absolutely no reason to work with a poorly written source code. Some of the top choices include AppGyver, Firebase, Appscend, Tabris (this is particularly noteworthy) and Appcelerator Titanium.
+**Selling it forward**. Finally, once you have gotten your effort’s worth from your app, you can continue to make money with it by selling the source code forward. This is of course not an option with source code you have purchased, because you will not have resale rights.
 
 ##  
 
@@ -44,22 +44,16 @@ Depending on the type of application or game you are developing, the amount of t
 
 Although it is options galore when choosing source code, there are some drawbacks to working on a program that is written by somebody else.
 
-- **Familiarization**. This may be the very first indication of trouble in paradise; the process of familiarizing yourself with the coding style and manner used by the programmer of the source code can be both time and effort consuming.
-- **It’s not your code after all**. To every programmer, his own code is his love child, meaning you will never find it easy to work with anybody else’s code but your own. This problem will only become compounded if you are dealing with a particularly lengthy and complex program.
+**Familiarization**. This may be the very first indication of trouble in paradise; the process of familiarizing yourself with the coding style and manner used by the programmer of the source code can be both time and effort consuming.
+**It’s not your code after all**. To every programmer, his own code is his love child, meaning you will never find it easy to work with anybody else’s code but your own. This problem will only become compounded if you are dealing with a particularly lengthy and complex program.
 
 It is imperative to understand that a single round of reskinning will seldom offer the results that you are aiming for, in terms of uniqueness and the app’s ability to be sold on a wide scale. At the very least, you will need 2-3 rounds of reskinning, which would easily be an investment of 4-5 weeks or even more, depending on the source code you are handling.
 
 So all things considered, application development from the ground up may not be such a bad option. When you lay out all the positives and negatives, it seems to look that way, but what do you think? Do you have an overwhelming reason to redevelop or reskin and application instead of application development from scratch?
 
-<style type="text/css">
-	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }<br />
-	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.<br />
-	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */<br />
-</style>
 
-<div id="mc_embed_signup"><form action="//issart.us8.list-manage.com/subscribe/post?u=27b4bef1d5ce0a19dc5a471f5&id=9fce49f49e" class="validate" id="mc-embedded-subscribe-form" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank"><div id="mc_embed_signup_scroll"><label for="mce-EMAIL">Subscribe to receive more tips and tricks</label>  
-<input class="email" id="mce-EMAIL" name="EMAIL" placeholder="email address" required="" type="email" value=""></input>  
-<div style="position: absolute; left: -5000px;"><input name="b_27b4bef1d5ce0a19dc5a471f5_9fce49f49e" tabindex="-1" type="text" value=""></input></div><div class="clear"><input class="button" id="mc-embedded-subscribe" name="subscribe" type="submit" value="Subscribe"></input></div></div></form></div>Reference sites:
+
+Reference sites:
 
 > [160+ mobile marketing statistics to know in 2022](https://themarketinghelpline.com/mobile-marketing-statistics/)
 

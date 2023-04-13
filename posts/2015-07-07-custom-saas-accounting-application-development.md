@@ -102,7 +102,7 @@ Before deciding whether or not it is in your best interest to customize a SaaS a
 - Analytics or Specification
 - Design
 - Layout
-- Architecture &amp; Design
+- Architecture & Design
 - Program Code Development
 - Code Documenting
 - Software Test Results

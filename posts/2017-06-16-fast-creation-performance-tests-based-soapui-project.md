@@ -63,11 +63,11 @@ So, SoapUI testing project can be converted to the taurus script.
 
 ### Support of SoapUI project and its conversion to taurus script
 
-To perform load testing with SoapUI project first needs to be converted to a jmx file. Let us create a configuration file. We will set the number of users equal to 1. And the number of iterations will be 1. Let us run the script and see what the generated jmx file looks like:  
-*executor: jmeter  
-concurrency: 1  
-iterations: 1  
-scenario:  
+To perform load testing with SoapUI project first needs to be converted to a jmx file. Let us create a configuration file. We will set the number of users equal to 1. And the number of iterations will be 1. Let us run the script and see what the generated jmx file looks like:
+*executor: jmeter
+concurrency: 1
+iterations: 1
+scenario:
 script: Flickr-soapui-project.xml*
 
 Flickr-soapui-project.xml is a SoapUI project.
@@ -84,15 +84,15 @@ We also get information on the test duration, the number of tests and the result
 
 The artifact directory contains the following files:
 
-*bzt.log – Taurus log  
-effective.json/yml – a configuration file, the rules and all other modifications made during the execution, which were saved in two formats.  
-error.jtl – an xml file with the test execution results.  
-jmeter.log – Jmeter log  
-jmeter-bzt.properties – Jmeter properties  
-kpi.jtl – the test execution result in text format.  
-Merged.json/yml – the result of merging several configuration files.  
-requests.jmx – YAML configuration file converted to JMeter .jmx format  
-modified\_requests.jmx – same as requests.jmx plus Taurus-driven changes via YAML  
+*bzt.log – Taurus log
+effective.json/yml – a configuration file, the rules and all other modifications made during the execution, which were saved in two formats.
+error.jtl – an xml file with the test execution results.
+jmeter.log – Jmeter log
+jmeter-bzt.properties – Jmeter properties
+kpi.jtl – the test execution result in text format.
+Merged.json/yml – the result of merging several configuration files.
+requests.jmx – YAML configuration file converted to JMeter .jmx format
+modified\_requests.jmx – same as requests.jmx plus Taurus-driven changes via YAML
 system.properties – effective JVM System Properties*
 
 Let’s look at the result of the tests. All the tests failed. We will open the tests in the JMeter to look for the cause.
@@ -107,10 +107,10 @@ In order for the script to work correctly, replace all HTTP requests in JMeter w
 
 Edit the generated configuration yml file to run load tests. Set the number of users to 5. Set the load holding time to 1min.
 
-*executor: jmeter  
-concurrency: 5  
-hold-for: 1m  
-scenario:  
+*executor: jmeter
+concurrency: 5
+hold-for: 1m
+scenario:
 script: requests.jmx*
 
 Run this script. The result is in the console.

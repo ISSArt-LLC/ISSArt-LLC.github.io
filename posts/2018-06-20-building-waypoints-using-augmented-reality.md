@@ -23,8 +23,8 @@ A lot of time has passed since Augmented Reality (AR) and Virtual Reality (VR) w
 
 ## A little bit of math
 
-Before diving into Augmented Reality implementation, we need a clear understanding of what we are planning to do. Every position on the surface of the Earth can be represented with two numbers: latitude and longitude.  
-**Latitude** is the distance between the North or the South Pole and the equator (an imaginary circle around the Earth halfway between the poles). It goes from 0º to 90º for places to the north of the equator, and 0º to -90º for places to the south of the equator.  
+Before diving into Augmented Reality implementation, we need a clear understanding of what we are planning to do. Every position on the surface of the Earth can be represented with two numbers: latitude and longitude.
+**Latitude** is the distance between the North or the South Pole and the equator (an imaginary circle around the Earth halfway between the poles). It goes from 0º to 90º for places to the north of the equator, and 0º to -90º for places to the south of the equator.
 **Longitude** is the distance from the prime meridian (an imaginary line running from the north to the south through Greenwich, England) to a point in the west or east. It goes from 0 to 180º for places to the east of the prime meridian, and 0º to -180º for places to the west of the prime meridian. For example, if you are in Brazil, your latitude and longitude will be negative, because you are on the southwest side of the Earth:
 
 [![](/static/img/2018/06/earth_map-300x135.png)](/static/img/2018/06/earth_map.png)
@@ -40,10 +40,10 @@ If we were talking about a [сartesian coordinate system](https://en.wikipedia.o
 
 **atan2 ( X, Y )**
 
-Where X equals:  
+Where X equals:
 **sin(long2 – long1) \* cos(long2)**
 
-And Y equals:  
+And Y equals:
 **cos(lat1) \* sin(lat2) – sin(lat1) \* cos(lat2) \* cos(long2 – long1)π**
 
 Another thing to consider is that for the matrix transformation, we will have to use [radians](https://en.wikipedia.org/wiki/Radian) instead of degrees as angle units. As the length of the entire circumference is equal to 2π radians (360º), one radian is equal to 180/π degrees. So, our plan is when we receive the array of waypoints from Google service, using the formulas explained above, place a 3D model (or any other object) in the position of the first waypoint relative to your location inside the AR world. Then we put the second waypoint marker relative to the first one and so on.
@@ -52,11 +52,21 @@ Another thing to consider is that for the matrix transformation, we will have to
 
 First of all, we need to add Google Maps to our project. You can do it using [Google Developers Console](https://console.developers.google.com/). To do that we need to add Google Maps SDK for iOS in our project. You can do it using [CocoaPods](https://cocoapods.org/about) or install it manually. Either way, please, refer to Google Guides for [Google Maps SDK](https://developers.google.com/maps/documentation/ios-sdk/start) for proper installation steps according to the selected method. Then we initialize the view and camera to display our map. It’s just a few lines:
 
-`let camera = GMSCameraPosition.camera(withLatitude: lat, longitude: long, zoom: 18.0)<br></br>mapView = GMSMapView.map(withFrame: defaultMapView.bounds, camera: camera)<br></br>mapView.isMyLocationEnabled = true<br></br>mapView.delegate = self<br></br>view.addSubview(mapView)`
+`let camera = GMSCameraPosition.camera(withLatitude: lat, longitude: long, zoom: 18.0)
+mapView = GMSMapView.map(withFrame: defaultMapView.bounds, camera: camera)
+mapView.isMyLocationEnabled = true
+mapView.delegate = self
+view.addSubview(mapView)`
 
 Instead of ‘*lat*’ and ‘*long*’ variables you can insert any coordinates you want to center your camera at the start. Or you can use *myLocation* property of *mapView* object to get your current position and center your map on that position. After that we need to implement the ability to place marks on our map, we will use those marks to indicate the start and finish of our path. Adding markers on the map is quite an easy and common task, just implement the delegate method in your view controller class:
 
-`public func mapView(_ mapView: GMSMapView, didTapAt coordinate:   CLLocationCoordinate2D) {<br></br>destinationMarker?.map = nil<br></br>destinationMarker = GMSMarker(position: coordinate)<br></br>destinationMarker!.position.latitude = coordinate.latitude<br></br>destinationMarker!.position.longitude = coordinate.longitude<br></br>destinationMarker!.map = mapView<br></br>}`
+`public func mapView(_ mapView: GMSMapView, didTapAt coordinate:   CLLocationCoordinate2D) {
+destinationMarker?.map = nil
+destinationMarker = GMSMarker(position: coordinate)
+destinationMarker!.position.latitude = coordinate.latitude
+destinationMarker!.position.longitude = coordinate.longitude
+destinationMarker!.map = mapView
+}`
 
 ## Working with Google Service
 
@@ -67,7 +77,7 @@ Next, we need to add ‘Get Path’ button. Callback code for this button will s
 - mode – to select our movement type;
 - key – needed to provide Googlekey of our app.
 
-Your request should be something like this: https://maps.googleapis.com/maps/api/directions/**json?origin=lat,lng&amp;destination=lat,lng&amp;sensor=true&amp;mode=walking&amp;key=googleKey**. We set JSON as our response format, instead of **lat** and **lng** you should place latitude and longitude of your origin and destination points. I set mode parameter to walking value, but you can select any mode you want. And finally you need to replace **googleKey** with your application Google ID. As a response to this request, you will receive a big JSON containing a bunch of data. We don’t need all of this data we need to parse the response and take only routes array from it. Usually this array will contain only one route (if it’s possible to build a route between the provided coordinates) and during the response processing we will simply take the first route from this array. The routes in the service response are represented by strings in a special format. All you need to do is:
+Your request should be something like this: https://maps.googleapis.com/maps/api/directions/**json?origin=lat,lng&destination=lat,lng&sensor=true&mode=walking&key=googleKey**. We set JSON as our response format, instead of **lat** and **lng** you should place latitude and longitude of your origin and destination points. I set mode parameter to walking value, but you can select any mode you want. And finally you need to replace **googleKey** with your application Google ID. As a response to this request, you will receive a big JSON containing a bunch of data. We don’t need all of this data we need to parse the response and take only routes array from it. Usually this array will contain only one route (if it’s possible to build a route between the provided coordinates) and during the response processing we will simply take the first route from this array. The routes in the service response are represented by strings in a special format. All you need to do is:
 
 - parse the service response and take the routes array;
 - take the first route string from this array;
@@ -76,7 +86,10 @@ Your request should be something like this: https://maps.googleapis.com/maps/api
 
 The last item of the list can be implemented using the following code:
 
-`for index in 0...path!.count() - 1 {<br></br>let pinLocation = CLLocation(coordinate: (path?.coordinate(at: index))!, altitude: 236)<br></br>self.locations.append(pinLocation)<br></br>}`
+`for index in 0...path!.count() - 1 {
+let pinLocation = CLLocation(coordinate: (path?.coordinate(at: index))!, altitude: 236)
+self.locations.append(pinLocation)
+}`
 
 At this point, we have an application with the implemented Google Map display and path finding functions. We can request a path from Google service and process response to get waypoints as CLLocation. Now we can go to the main part of this work – the AR part.
 
@@ -84,11 +97,24 @@ At this point, we have an application with the implemented Google Map display an
 
 First, we will create a new view controller. And add [ARSCNView](https://developer.apple.com/documentation/arkit/arscnview) or [ARSKView](https://developer.apple.com/documentation/arkit/arskview) (the first should be used if you want to add 3D objects to the scene, the latter is for 2D images and sprites) to display the camera and augmented reality objects. To complete our initial setup of the AR scene, we need to add the view to this scene.
 
-`public override func viewDidLoad() {<br></br>super.viewDidLoad()<br></br>let scene = SCNScene()<br></br>sceneView.delegate = self<br></br>sceneView.scene = scene<br></br>}`
+`public override func viewDidLoad() {
+super.viewDidLoad()
+let scene = SCNScene()
+sceneView.delegate = self
+sceneView.scene = scene
+}`
 
-`override func viewWillAppear(_ animated: Bool) {<br></br>super.viewWillAppear(animated)<br></br>let configuration = ARWorldTrackingConfiguration()<br></br>configuration.worldAlignment = .gravityAndHeading<br></br>sceneView.session.run(configuration)<br></br>}`
+`override func viewWillAppear(_ animated: Bool) {
+super.viewWillAppear(animated)
+let configuration = ARWorldTrackingConfiguration()
+configuration.worldAlignment = .gravityAndHeading
+sceneView.session.run(configuration)
+}`
 
-`override func viewWillDisappear(_ animated: Bool) {<br></br>super.viewWillDisappear(animated)<br></br>sceneView.session.pause()<br></br>}`
+`override func viewWillDisappear(_ animated: Bool) {
+super.viewWillDisappear(animated)
+sceneView.session.pause()
+}`
 
 Now we need to import the object that will represent the waypoints on the augmented reality scene. As it was mentioned above, we can use a 3D model or 2D sprite for this purpose. In the code above we used *ARSCNView* and for the waypoints we will use 3D model. If you created your project using Augmented Reality Project template of XCode, then you should have *art.scnassets* folder in your project workspace. If you have used any other template, you need to create this folder yourself. To do that Next, open the New File dialog and scroll down to choose the *Asset Catalog* type. In the name field enter: *art.scnassets* and confirm extension changing (from xcassets to scnassets).
 
@@ -98,7 +124,10 @@ When you have art.scnassets folder inside your project, you need to add all need
 
 Now we will get back to the formulas from the beginning of this article and implement them in the code. To translate geo position coordinates in augmented reality scene coordinates we will use the function:
 
-`func translateNode (_ location: CLLocation) -> SCNVector3  {<br></br>let locationTransform = transformMatrix(matrix_identity_float4x4, userLocation, nextWaypoint)<br></br>return positionFromTransform(locationTransform)<br></br>}`
+`func translateNode (_ location: CLLocation) -> SCNVector3  {
+let locationTransform = transformMatrix(matrix_identity_float4x4, userLocation, nextWaypoint)
+return positionFromTransform(locationTransform)
+}`
 
 Main calculations are hidden behind **transformMatrix** function. To calculate the transformation matrix we:
 
@@ -111,23 +140,55 @@ Main calculations are hidden behind **transformMatrix** function. To calculate t
 
 Those steps can be implemented in the following way (main transform function):
 
-`func transformMatrix(_ matrix:simd_float4x4,_ originLocation:CLLocation, _ waypointLocation: CLLocation) -> simd_float4x4 {<br></br>let bearing = <strong>bearingBetweenLocations</strong>(userLocation, waypointLocation)<br></br>let rotationMatrix = <strong>rotateAroundY</strong>(matrix_identity_float4x4, Float(bearing))<br></br>let position = vector_float4(0.0, 0.0, -distance, 0.0)<br></br>let translationMatrix = getTranslationMatrix(matrix_identity_float4x4, position)<br></br>let transformMatrix = simd_mul(rotationMatrix, translationMatrix<br></br>return simd_mul(matrix, transformMatrix)<br></br>}`
+`func transformMatrix(_ matrix:simd_float4x4,_ originLocation:CLLocation, _ waypointLocation: CLLocation) -> simd_float4x4 {
+let bearing = <strong>bearingBetweenLocations</strong>(userLocation, waypointLocation)
+let rotationMatrix = <strong>rotateAroundY</strong>(matrix_identity_float4x4, Float(bearing))
+let position = vector_float4(0.0, 0.0, -distance, 0.0)
+let translationMatrix = getTranslationMatrix(matrix_identity_float4x4, position)
+let transformMatrix = simd_mul(rotationMatrix, translationMatrix
+return simd_mul(matrix, transformMatrix)
+}`
 
 Here goes the function for step 2 from the sequence above. We calculate the bearing, note that we are using radians instead of degrees, as it was mentioned above:
 
-`func bearingBetweenLocations(_ originLocation: CLLocation, _ waypointLocation: CLLocation) -> Double {<br></br>let lat1 = originLocation.coordinate.latitude.toRadians()<br></br>let lon1 = originLocation.coordinate.longitude.toRadians()<br></br>let lat2 = waypointLocation.coordinate.latitude.toRadians()<br></br>let lon2 = waypointLocation.coordinate.longitude.toRadians()<br></br>let longitudeDiff = lon2 - lon1<br></br>let y = sin(longitudeDiff) * cos(lat2);<br></br>let x = cos(lat1) * sin(lat2) - sin(lat1) * cos(lat2) * cos(longitudeDiff);<br></br>return atan2(y, x)<br></br>}<br></br>`
+`func bearingBetweenLocations(_ originLocation: CLLocation, _ waypointLocation: CLLocation) -> Double {
+let lat1 = originLocation.coordinate.latitude.toRadians()
+let lon1 = originLocation.coordinate.longitude.toRadians()
+let lat2 = waypointLocation.coordinate.latitude.toRadians()
+let lon2 = waypointLocation.coordinate.longitude.toRadians()
+let longitudeDiff = lon2 - lon1
+let y = sin(longitudeDiff) * cos(lat2);
+let x = cos(lat1) * sin(lat2) - sin(lat1) * cos(lat2) * cos(longitudeDiff);
+return atan2(y, x)
+}
+`
 
 Next, we need a rotation matrix:
 
-`func rotateAroundY(_ matrix: simd_float4x4, _ degrees: Float) -> simd_float4x4<br></br>{<br></br>var matrix = matrix<br></br>matrix.columns.0.x = cos(degrees)<br></br>matrix.columns.0.z = -sin(degrees)<br></br>matrix.columns.2.x = sin(degrees)<br></br>matrix.columns.2.z = cos(degrees)<br></br>return matrix.inverse<br></br>}`
+`func rotateAroundY(_ matrix: simd_float4x4, _ degrees: Float) -> simd_float4x4
+{
+var matrix = matrix
+matrix.columns.0.x = cos(degrees)
+matrix.columns.0.z = -sin(degrees)
+matrix.columns.2.x = sin(degrees)
+matrix.columns.2.z = cos(degrees)
+return matrix.inverse
+}`
 
 Then we need the translation matrix to work with the distance value.
 
-`func getTranslationMatrix(_ matrix:simd_float4x4, _ translation:vector_float4)->simd_float4x4 {<br></br>var matrix = matrix<br></br>matrix.columns.3 = translation<br></br>return matrix<br></br>}`
+`func getTranslationMatrix(_ matrix:simd_float4x4, _ translation:vector_float4)->simd_float4x4 {
+var matrix = matrix
+matrix.columns.3 = translation
+return matrix
+}`
 
 All that we need to do now is to apply our **transformMatrix** function to all coordinates from Google Service and put markers or place 3D models on converted coordinates (instead of **waypoint.dae** you should use the name of your model):
 
-`let modelScene = SCNScene(named: "art.scnassets/<strong>waypoint.dae</strong>")!<br></br>self.modelNode = modelScene.rootNode.childNode(withName: rootNodeName, recursively: true)!<br></br>self.modelNode.position = translateNode(location)<br></br>sceneView.scene.rootNode.addChildNode(self.modelNode)`
+`let modelScene = SCNScene(named: "art.scnassets/<strong>waypoint.dae</strong>")!
+self.modelNode = modelScene.rootNode.childNode(withName: rootNodeName, recursively: true)!
+self.modelNode.position = translateNode(location)
+sceneView.scene.rootNode.addChildNode(self.modelNode)`
 
 ## Conclusion
 

@@ -45,9 +45,9 @@ Let’s look how it is done in python.
 
 ## Let’s go searching
 
-![](https://www.shoutmeloud.com/wp-content/uploads/2018/05/Find-Google-Keyword-Planner-Search-Volume.jpg)  
-Imagine we are running an online-store that sells toys. And we have an item on sale with given name – *Bearington Lil’ Grizby Small Plush Stuffed Animal Brown Grizzly Bear, 7 inches*. Cute teddy bear, isn’t it?  
-![](https://images-na.ssl-images-amazon.com/images/I/61XkHgA5QtL._SL1000_.jpg)  
+![](https://www.shoutmeloud.com/wp-content/uploads/2018/05/Find-Google-Keyword-Planner-Search-Volume.jpg)
+Imagine we are running an online-store that sells toys. And we have an item on sale with given name – *Bearington Lil’ Grizby Small Plush Stuffed Animal Brown Grizzly Bear, 7 inches*. Cute teddy bear, isn’t it?
+![](https://images-na.ssl-images-amazon.com/images/I/61XkHgA5QtL._SL1000_.jpg)
 We can go and search this item with [Amazon Product Advertising API](https://docs.aws.amazon.com/AWSECommerceService/latest/DG/EX_SearchingbyKeyword.html). In response we will get the necessary product features including its categories, but registering as a developer requires signing up, entering your credit card info and other credentials, reading docs and doing other redundant stuff. Is there a workaround if we want to scrape the items just once and not periodically? Yes there is – we can search for them in Google.
 
 First, let’s install the necessary lib:
@@ -94,10 +94,10 @@ response = requests.get(res_urls[0], headers=headers)
 soup = BeautifulSoup(response.text, 'html5lib')
 ```
 
-So we have fetched a page with relevant item content, and now we can move towards vivisecting it. First, we need to find out where categories information is rendered on the Amazon web page. And here it is – in the breadcrumbs section.  
+So we have fetched a page with relevant item content, and now we can move towards vivisecting it. First, we need to find out where categories information is rendered on the Amazon web page. And here it is – in the breadcrumbs section.
 ![alt text](https://snag.gy/fLorCc.jpg)
 
-Let’s examine DOM tree to find some clues for fetching this data.  
+Let’s examine DOM tree to find some clues for fetching this data.
 ![](https://snag.gy/A9wHxm.jpg)
 
 As we can see the data we need is stored in a child of *div* with id *wayfinding-breadcrumbs\_feature\_div*. And the particular category information lies in the links. So we have to find the breadcrumbs node, find all the links there and extract the content from them. This is how it looks like in the code.
@@ -116,9 +116,9 @@ That’s all. We now have a set of categories mapped for a given product name.
 
 We have successfully predicted a category for a given item without doing any time consuming stuff like creating our own hierarchy of categories and manually assigning all of our products to them. Thank you, Amazon. But this solution is not a silver bullet of course, and here are some tips-and-tricks we can use further to make this approach even better:
 
-- **Gracefull polling.** Of course Amazon can bear large loads, but if your decide to annotate all your 2M items with its help, sooner or later it will be revealed and you will be banned. Then Amazon will review its anti-bot defence, and next time it will be a more complex task. And not only for you, but for everybody. So don’t abuse – make pauses by adding **sleep** while fetching pages.
-- **Hierarchical categories.** In the code above we were dealing categories like a flat list, but they certainly have parent-child relations between them. This can be implemented if we will store not a list of strings but a list objects with *parent* attribute where we can reference a parent category. Categories with not *parent* attribute will be roots.
-- **Handling orphaned items.** Although Amazon is big and has a lot of product items in its database, it certainly doesn’t have everything. So you should keep it mind while making automated categories annotation either by assigning them to *Unknown* categories or by manually assigning the needed categories.
+**Gracefull polling.** Of course Amazon can bear large loads, but if your decide to annotate all your 2M items with its help, sooner or later it will be revealed and you will be banned. Then Amazon will review its anti-bot defence, and next time it will be a more complex task. And not only for you, but for everybody. So don’t abuse – make pauses by adding **sleep** while fetching pages.
+**Hierarchical categories.** In the code above we were dealing categories like a flat list, but they certainly have parent-child relations between them. This can be implemented if we will store not a list of strings but a list objects with *parent* attribute where we can reference a parent category. Categories with not *parent* attribute will be roots.
+**Handling orphaned items.** Although Amazon is big and has a lot of product items in its database, it certainly doesn’t have everything. So you should keep it mind while making automated categories annotation either by assigning them to *Unknown* categories or by manually assigning the needed categories.
 
 ## Full code
 
@@ -129,7 +129,7 @@ from googlesearch import search
 
 def find_on_amazon(item_name):
     return [url for url in search(f'site:www.amazon.com {item_name}', stop=20)]
-    
+  
 res_urls = find_on_amazon("Bearington Lil' Grizby Small Plush Stuffed Animal Brown Grizzly Bear, 7 inches.") 
 
 headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.93 Safari/537.36'}

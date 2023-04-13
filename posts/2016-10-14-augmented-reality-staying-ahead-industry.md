@@ -23,8 +23,8 @@ While a majority of the time augmented reality (AR) has been used in the gaming 
 
 Organizations that use augmented reality in some capacity are likely to experience:
 
-• Better referral rates, happier customers, and lower churn rates due to the ability to deliver a unique and better experience.  
-• Less breakdown time and higher efficiency and production rates because workers know exactly how to fix a machine.  
+• Better referral rates, happier customers, and lower churn rates due to the ability to deliver a unique and better experience.
+• Less breakdown time and higher efficiency and production rates because workers know exactly how to fix a machine.
 • Higher employee retention rates and better trained staff.
 
 In this article, we’ll discuss exactly what augmented reality is, how businesses are using it to improve their metrics, and how your organization can move forward into the future with AR.
@@ -43,9 +43,9 @@ It can be defined as the integration of digital information with the user’s en
 
 AR has four distinct tasks:
 
-1\. Capture: The reality that is set to be augmented is captured using a video device.  
-2\. Identification: Reality is scanned to determine the exact position for where the virtual content should be displayed and embedded. Positions can be identified by markers, infrared, GPS, sensors, or lasers.  
-3\. Processing: As the environment is recognized and identified, the corresponding virtual content is requested from the internet or another database.  
+1\. Capture: The reality that is set to be augmented is captured using a video device.
+2\. Identification: Reality is scanned to determine the exact position for where the virtual content should be displayed and embedded. Positions can be identified by markers, infrared, GPS, sensors, or lasers.
+3\. Processing: As the environment is recognized and identified, the corresponding virtual content is requested from the internet or another database.
 4\. Visualization: A mixed image of real space and virtual content is produced.
 
 It’s important to differentiate augmented reality from virtual reality (VR). Unlike VR, which creates a totally artificial environment, AR simply overlays information in the existing environment.

@@ -16,9 +16,9 @@ tags:
     - 'neural network'
 ---
 
-<figure class="wp-block-image size-large is-resized">![](/static/img/2022/07/cf4f2e66d16f162ee87d-1024x614.jpg)A Graph Neural Networks (GNN) is a class of artificial neural networks for processing graph data. Here we need to define what a graph is, and a definition is a quite simple – a graph is a set of vertices (nodes) and a set of edges representing the connections between the vertices. There are many data sources which produce data that can be organically presented in a graph form. For example, we can consider social network users as graph vertices where two vertices are connected if corresponding users are friends.
+![](/static/img/2022/07/cf4f2e66d16f162ee87d-1024x614.jpg)A Graph Neural Networks (GNN) is a class of artificial neural networks for processing graph data. Here we need to define what a graph is, and a definition is a quite simple – a graph is a set of vertices (nodes) and a set of edges representing the connections between the vertices. There are many data sources which produce data that can be organically presented in a graph form. For example, we can consider social network users as graph vertices where two vertices are connected if corresponding users are friends.
 
-<figure class="wp-block-image size-large is-resized">![](/static/img/2022/07/1.png)A graph can be represented by an adjacency matrix. A graph with N nodes will have an adjacency matrix with N x N dimensionality. The contents of this matrix depend on the type of the graph – it can be directed or not, weighted or not. However, in all cases, we have the same idea of keeping numerical descriptions of the relationships between each pair of vertices. Sometimes a graph can also have the additional feature matrix describing the nodes in the graph.
+![](/static/img/2022/07/1.png)A graph can be represented by an adjacency matrix. A graph with N nodes will have an adjacency matrix with N x N dimensionality. The contents of this matrix depend on the type of the graph – it can be directed or not, weighted or not. However, in all cases, we have the same idea of keeping numerical descriptions of the relationships between each pair of vertices. Sometimes a graph can also have the additional feature matrix describing the nodes in the graph.
 
 #### **So, why do we need to use GNN?**
 
@@ -28,10 +28,10 @@ The main reason is that we can’t convert a graph to an N-dimensional vector or
 
 Let’s give an example of some problems that GNN can solve:
 
-- **Node classification**. In node classification, the task is to predict the node type for all the nodes in a graph. This type of problem is usually trained in a semi-supervised way, where only part of the graph is labeled. Typical applications for node classification include citation networks, social network posts and users classification.
-- **Link prediction**. In link prediction, the task is to understand the relationship between entities in graphs and predict if two entities have a connection in between. For example, a recommender system can be treated as a link prediction problem where the model is given a set of users’ reviews of different products, the task is to predict the users’ preferences and tune the recommender system to push more relevant products according to users’ interest.
-- **Representation learning**. During the GNN training, most of the architectures involve the outputs that produce node embeddings that contain both structural information from the graph regarding the specific nodes and node feature descriptions. These outputs can be further used as the input for other models or components of the initial model (e.g. be sent to the multilayer perceptron for classification).
-- **Graph classification**. The task is to determine the type or class of the whole graph into different categories. For example, we can try to classify whether a specific molecule (which structure is represented by the graph) has a useful property in biomedical or chemistry spheres.
+**Node classification**. In node classification, the task is to predict the node type for all the nodes in a graph. This type of problem is usually trained in a semi-supervised way, where only part of the graph is labeled. Typical applications for node classification include citation networks, social network posts and users classification.
+**Link prediction**. In link prediction, the task is to understand the relationship between entities in graphs and predict if two entities have a connection in between. For example, a recommender system can be treated as a link prediction problem where the model is given a set of users’ reviews of different products, the task is to predict the users’ preferences and tune the recommender system to push more relevant products according to users’ interest.
+**Representation learning**. During the GNN training, most of the architectures involve the outputs that produce node embeddings that contain both structural information from the graph regarding the specific nodes and node feature descriptions. These outputs can be further used as the input for other models or components of the initial model (e.g. be sent to the multilayer perceptron for classification).
+**Graph classification**. The task is to determine the type or class of the whole graph into different categories. For example, we can try to classify whether a specific molecule (which structure is represented by the graph) has a useful property in biomedical or chemistry spheres.
 
 #### **What types of GNN exist?**
 
@@ -39,11 +39,11 @@ Let’s give an example of some problems that GNN can solve:
 
 Recurrent Graph Neural Network – it’s the first designed GNN architecture introduced in the original GNN paper. Its main idea is connected with iterative update of the node “state” – the computed function value utilizing the information about node neighborhood states.
 
-<figure class="wp-block-image size-large is-resized">![](/static/img/2022/07/2.png)<figcaption>An illustration of node state update based on the information in its neighbors. Figure from [“The Graph Neural Network Model”](https://ieeexplore.ieee.org/document/4700287)</figcaption>**Spatial Convolutional Network**
+![](/static/img/2022/07/2.png)An illustration of node state update based on the information in its neighbors. Figure from [“The Graph Neural Network Model”](https://ieeexplore.ieee.org/document/4700287)**Spatial Convolutional Network**
 
 The idea of convolution on a graph is almost similar as in image convolution. In case of working with image, we sum the neighboring pixels around a center pixel, specified by a filter with parameterized size and learnable weight. Spatial Convolutional Network adopts the same idea by aggregating the features of neighboring nodes into the center node.
 
-![](/static/img/2022/07/3.png)<figcaption>Left: Convolution on a regular graph such as an image. Right: Convolution on the arbitrary graph structure. Figure from “[A Comprehensive Survey on Graph Neural Networks](https://arxiv.org/abs/1901.00596)”</figcaption>#### **Real-world applications**
+![](/static/img/2022/07/3.png)Left: Convolution on a regular graph such as an image. Right: Convolution on the arbitrary graph structure. Figure from “[A Comprehensive Survey on Graph Neural Networks](https://arxiv.org/abs/1901.00596)”#### **Real-world applications**
 
 **Recommender systems**
 

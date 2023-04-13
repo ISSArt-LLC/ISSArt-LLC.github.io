@@ -47,13 +47,7 @@ Google and Microsoft, for example, both utilize some form of Java in their Andro
 
 Highload Java application development principles have been notably employed in many major projects that subsequently went on to achieve huge global successes. For instance, the insanely popular sandbox game Minecraft was originally written in Java, allowing it to run on Windows, OS X, Linux and even Xbox. While you may not be aiming for selling your software to more than 54 million users, like Minecraft’s creators did, the fact that you can make incredibly complex apps with highload Java application development should definitely be encouraging.
 
-<style type="text/css">
-	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }<br />
-	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.<br />
-	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */<br />
-</style><div id="mc_embed_signup"><form action="//issart.us8.list-manage.com/subscribe/post?u=27b4bef1d5ce0a19dc5a471f5&id=9fce49f49e" class="validate" id="mc-embedded-subscribe-form" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank"><div id="mc_embed_signup_scroll"><label for="mce-EMAIL">Subscribe to receive more tips and tricks</label>  
-<input class="email" id="mce-EMAIL" name="EMAIL" placeholder="email address" required="" type="email" value=""></input>  
-<div style="position: absolute; left: -5000px;"><input name="b_27b4bef1d5ce0a19dc5a471f5_9fce49f49e" tabindex="-1" type="text" value=""></input></div><div class="clear"><input class="button" id="mc-embedded-subscribe" name="subscribe" type="submit" value="Subscribe"></input></div></div></form></div>### Where Should Your Organization Go From Here?
+### Where Should Your Organization Go From Here?
 
 While there are scores of tutorials about Java that make it easy to jump in and build something basic, don’t be misled by the language’s widespread accessibility. Creating a highly-optimized application that responds to user demands reliably and resonates with their desires usually requires expert assistance.
 

@@ -34,7 +34,7 @@ The most effective companies build their success on prioritization.
 
 [![Steve Jobs citation: People think focus means saying yes to the thing you've got to focus on. But that's not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully](https://issart.com/blog/wp-content/uploads/2018/12/Steve-Jobs-focus-saying-no.jpg)](https://issart.com/blog/wp-content/uploads/2018/12/Steve-Jobs-focus-saying-no.jpg)
 
-**How to understand what things are more important?** How to **say no** to less important things?  
+**How to understand what things are more important?** How to **say no** to less important things?
 In this article we have collected several practical examples, some of them have helped us prioritize tasks on real [ISS Art projects](https://issart.com/portfolio/).
 
 ## 2. A logical approach to tasks prioritization
@@ -119,10 +119,10 @@ Assess the order that you get. If you are sure that some tasks are located too h
 
 ### 3.1 Prioritize tasks in the backlog
 
-The following example is fictional, but it helps to understand the logic better.  
+The following example is fictional, but it helps to understand the logic better.
 Let’s imagine you are working as a product owner of a travel order processing system. The backlog contains a number of features.
 
-Please see the features in the spreadsheet below.  
+Please see the features in the spreadsheet below.
 <iframe height="300" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSW6cdSTbzuqoKneVBMXlo0qWQivQr9ESnPgkMqyKZN5h70BNnW25yIlxtTVC9Jqz_xaj14UW4ygRyK/pubhtml?gid=0&single=true&widget=true&headers=false" width="400"><span class="mce_SELRES_start" data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;">﻿</span><span class="mce_SELRES_start" data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;">﻿</span><span class="mce_SELRES_start" data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;">﻿</span></iframe>
 
 Please wait for a moment and answer the question: how would you prioritize these features right now? You can compare your first prioritization with the following one.
@@ -135,12 +135,12 @@ As the product owner, you are trying to determine the importance of each feature
     2. *The probability of the loss.* Not every user will feel unhappy about the loss. Let’s estimate the probability, that we’ll lose part of the income in the case of a dissatisfied user. The scale is just percentage.
     3. *The importance.* You can derive a fruitful index based on the two previous ones. If you multiply the loss by the probability, you will get the mathematical expectation of the loss, that is more accurate than just the loss factor.
     4. *The number of interested users.* Let’s imagine, you know or can estimate the number of potential users, who expect to get a feature. It is a positive factor. The more people use the product, the bigger income you get.
-    5. *The effort of development.* Your development team can estimate the development of each feature in working hours. Influence of this factor is negative: the stronger it is, the longer you need to achieve the goal.Having this set of factors, you can summarize their influence on the achievement of the goal. One of the simplest ways is to multiply the positive factors by each other and divide them by negative factors, so you get the formula:  
+    5. *The effort of development.* Your development team can estimate the development of each feature in working hours. Influence of this factor is negative: the stronger it is, the longer you need to achieve the goal.Having this set of factors, you can summarize their influence on the achievement of the goal. One of the simplest ways is to multiply the positive factors by each other and divide them by negative factors, so you get the formula:
         [![Formula of the tasks priority. The formula uses the factors of the importance.](https://issart.com/blog/wp-content/uploads/2018/12/3.1-backlog-tasks-priority.png)](https://issart.com/blog/wp-content/uploads/2018/12/3.1-backlog-tasks-priority.png)
 3. [![A ruler as a symbol of value measurement. Take a measure to estimate the value of a task.](https://issart.com/blog/wp-content/uploads/2018/12/Ruler.svg_-150x150.png)](https://issart.com/blog/wp-content/uploads/2018/12/Ruler.svg_.png) You can estimate the factors of each feature and get the criterion value for each feature.
 4. [![A List of tasks](https://issart.com/blog/wp-content/uploads/2018/12/List.svg_-300x279.png)](https://issart.com/blog/wp-content/uploads/2018/12/List.svg_.png) You can simply sort the backlog by the criterion value!
 
-Please find the result in the spreadsheet below (or [**by the link**](https://docs.google.com/spreadsheets/d/1beYGEcqTDN72Yo6mcNCWz2qVMpQ3GlNJz0b30Lqxvkk/edit#gid=1791103186)):  
+Please find the result in the spreadsheet below (or [**by the link**](https://docs.google.com/spreadsheets/d/1beYGEcqTDN72Yo6mcNCWz2qVMpQ3GlNJz0b30Lqxvkk/edit#gid=1791103186)):
 <iframe height="450" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSW6cdSTbzuqoKneVBMXlo0qWQivQr9ESnPgkMqyKZN5h70BNnW25yIlxtTVC9Jqz_xaj14UW4ygRyK/pubhtml?gid=1791103186&single=true&widget=true&headers=false" width="600"><span class="mce_SELRES_start" data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;">﻿</span><span class="mce_SELRES_start" data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;">﻿</span><span class="mce_SELRES_start" data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;">﻿</span><span class="mce_SELRES_start" data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;">﻿</span></iframe>
 
 You are welcome to copy the spreadsheet and use it!
@@ -187,7 +187,7 @@ The suggested approach of the tasks prioritization is based on the project goals
 
 Let’s prioritize the tasks profitably!
 
-<span style="color: #000000;">**Feel free to discuss your prioritization cases in the comments!**</span>
+<span>**Feel free to discuss your prioritization cases in the comments!**</span>
 
 ## Further reading
 

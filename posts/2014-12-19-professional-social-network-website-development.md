@@ -71,13 +71,7 @@ Approaching the core design for a social media network there are 8 core function
 At [infoq.com](http://www.infoq.com/presentations/Evolution-of-Code-Design-at-Facebook) they actually have a video posted of Nick Shrock, an engineer at Facebook. He discusses how the architecture of Facebook has evolved over the years. It is an interesting rundown on the evolution of web development in social media networks.
 
 
-<style type="text/css">
-	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }<br />
-	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.<br />
-	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */<br />
-</style><div id="mc_embed_signup"><form action="//issart.us8.list-manage.com/subscribe/post?u=27b4bef1d5ce0a19dc5a471f5&id=9fce49f49e" class="validate" id="mc-embedded-subscribe-form" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank"><div id="mc_embed_signup_scroll"><label for="mce-EMAIL">Subscribe to receive more tips and tricks</label>  
-<input class="email" id="mce-EMAIL" name="EMAIL" placeholder="email address" required="" type="email" value=""></input>  
-<div style="position: absolute; left: -5000px;"><input name="b_27b4bef1d5ce0a19dc5a471f5_9fce49f49e" tabindex="-1" type="text" value=""></input></div><div class="clear"><input class="button" id="mc-embedded-subscribe" name="subscribe" type="submit" value="Subscribe"></input></div></div></form></div>## Core Architecture for Professional Social Network Website Development
+## Core Architecture for Professional Social Network Website Development
 
 The architecture of a social networking website should offer scalability, performance, flexibility and security for visible “front end” operations and capabilities. It should also offer the user a seamless interface that is fast, responsive and able to provide a long list of capabilities.
 

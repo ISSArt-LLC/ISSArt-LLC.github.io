@@ -15,13 +15,13 @@ tags:
 
 The humanity had started searching long before the beginning of modern computer century. Thanks to the common sense people invented indices. Libraries, dictionaries, maps made the life easier for the next generations of knowledge hunters. And now you as a software developer face the necessity to implement your own search functionality. Usually you can meet search-related requirements at the end of the customer’s list. But, in my opinion, they influence significantly on the final architecture of the system. Furthermore, the search index is the foundation of searching, its design errors can lead to the wrong choice of storage or database that can break your system in general.
 
-**<span style="font-size: 22px;"> Databases</span>**
+**<span> Databases</span>**
 
-All databases relates to one of the following category by their logical structure:  
-Key Value ([NOSQL](http://www.w3resource.com/mongodb/nosql.php))  
-Row Oriented ([SQL](http://www.w3schools.com/sql/sql_intro.asp))  
-Column Oriented(SQL or NOSQL)  
-Document Oriented (NOSQL)  
+All databases relates to one of the following category by their logical structure:
+Key Value ([NOSQL](http://www.w3resource.com/mongodb/nosql.php))
+Row Oriented ([SQL](http://www.w3schools.com/sql/sql_intro.asp))
+Column Oriented(SQL or NOSQL)
+Document Oriented (NOSQL)
 Graph (NOSQL)
 
 In standard cases inside the same type you can easily replace one database to another taking into accounts their general kinds of SQL and NOSQL (The difference between [Cassandra](http://cassandra.apache.org/) and [Vertica](https://my.vertica.com) is significant, the same as the difference between [MySQL](https://www.mysql.com/) and [Redis](http://redis.io/) in spite of both are the Column Oriented stores. Further, I will just say Relational about Row Oriented and SQL Column oriented, as they both implement the same specifications). However, this kind of replacement doesn’t usually have sense.
@@ -32,7 +32,7 @@ Let us suppose you’ve got all the requirements and you can start structuring t
 
 We should rely on common sense. We are always looking for something (home keys, parking space, mobile phone, etc). I consider it is useful activity that makes us think, although all our routine lookups have 2 common sides. Firstly, we have quite good knowledge about the quantity and structure of the data across which we are searching, so our expectations about the final result are based on that knowledge. Secondly, we know exactly what object we want to find. In other words, we try to reduce the number of the final results using different criteria. We can call it the filter.
 
-**<span style="font-size: 22px;"> Filters</span>**
+**<span> Filters</span>**
 
 Imagine the situation when you can’t find your mobile phone. If there is somebody who can dial your number you’ll easily resolve the problem and probably find your phone under the cushion on the sofa. But if there is no one who can help you, you will use another criterion (something of white color with the button beneath) implying that the room where you are searching is not the production warehouse.
 
@@ -44,7 +44,7 @@ Applying to the development it means if you meet the unique criterion in search 
 
 **<span style="font-size: 20px;"> Non-unique filter</span>**
 
-Let’s make the situation a little bit more difficult. For example, you need to implement filtering using by the non-unique criterion or combination of filters. Sometimes you have to reject Key Value databases. They usually don’t support such an operation or it is resource-consuming .  
+Let’s make the situation a little bit more difficult. For example, you need to implement filtering using by the non-unique criterion or combination of filters. Sometimes you have to reject Key Value databases. They usually don’t support such an operation or it is resource-consuming .
 You should understand which filters can be combined and which can’t as well as who applies these filters. The example can be online shop selling the goods of any categories (food, clothes, electronics, etc). Nobody will look for the 100% cotton kettle with the hdmi output.
 
 **<span style="font-size: 20px;"> Relationships</span>**
@@ -81,7 +81,7 @@ Thus, we need the projects filtered by the catalogue and the creation date. In t
 
 Regarding the database, I would exclude the Key-Value type, because it isn’t convenient to perform queries by non-unique criteria.
 
-1\) Relational
+1. Relational
 
 The relation between collections and projects is one-to-many, so we can just include the collection key into the projects table. And the relation between collections and catalogues is many-to-many, so we can have the separate table to maintain it.
 
@@ -109,7 +109,7 @@ The relation between collections and projects is one-to-many, so we can just inc
 |---|---|
 | foreign key to catalogue.id | foreign key to project.id |
 
-2\) Key-Document
+2. Key-Document
 
 We can index the catalogue keys (or names) inside the project document, as its amount is significantly less than projects’.
 
@@ -122,14 +122,14 @@ We can index the catalogue keys (or names) inside the project document, as its a
 }
 ```
 
-3\) Graph
+3. Graph
 
-We map the document from the previous schema to the graph.  
+We map the document from the previous schema to the graph.
 ![](/static/img/2016/07/graph.png)
 
 Perhaps, it is very tricky for this standard issue, however, [Neo4j](https://neo4j.com/), for example, easily supports such a filter . If you are going to have very different ‘documents’ and you need the extremely flexible schema and complex filters, you don’t want to have a huge combination of ‘AND’ and ‘OR’ operators in queries, the graph structure can be the better variant for you.
 
-4\) NOSQL Column Oriented
+4. NOSQL Column Oriented
 
 It depends on the database logic. If you look up the Cassandra, for example, you need to map your query to the single table. In the case of the limited number of catalogues for the project you can use the table like this:
 

@@ -4,7 +4,6 @@ title: 'High Load Java App Server: Things to consider when building'
 date: '2016-05-24T15:39:27+08:00'
 author: 'Anna Melkova'
 layout: post
-image: /static/img/2016/05/photodune-15759593-software-concept-database-with-cloud-and-java-with-optical-glass-xs.jpg
 categories:
     - General
     - 'Web Development'

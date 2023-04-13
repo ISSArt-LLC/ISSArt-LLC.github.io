@@ -33,10 +33,10 @@ Organizations have to find new ways to integrate their systems because a vertica
 
 There are a lot of market forces that are driving the need for better systems integration:
 
-● **Increased Competition:** It is becoming difficult to compete. There is more competition which is driving organizations to become more efficient and seek new ways to reduce their costs. This means, leaner supply chains or cheaper packaging of products.  
-● **Shorter Product Life-Cycles:** The Model-T was a great competitive product for years. Now, you’re lucky if a personal computer is state of the art for more than a year. The iPhone is update frequently and a new version is launched every single year. As a result, manufacturing success is about time-to-market and new product introduction capabilities.  
-● **Faster Product Development:** Related to product life-cycles is faster product development. Companies need to reduce their development time if they want to remain competitive. Early product introductions are often rewarded with a large market share and a high volume.  
-● **Globalization and Customization:** Any organization now has the potential to be your competition and consumers are demanding a personalized experience. Mass customization is the new mantra.  
+● **Increased Competition:** It is becoming difficult to compete. There is more competition which is driving organizations to become more efficient and seek new ways to reduce their costs. This means, leaner supply chains or cheaper packaging of products.
+● **Shorter Product Life-Cycles:** The Model-T was a great competitive product for years. Now, you’re lucky if a personal computer is state of the art for more than a year. The iPhone is update frequently and a new version is launched every single year. As a result, manufacturing success is about time-to-market and new product introduction capabilities.
+● **Faster Product Development:** Related to product life-cycles is faster product development. Companies need to reduce their development time if they want to remain competitive. Early product introductions are often rewarded with a large market share and a high volume.
+● **Globalization and Customization:** Any organization now has the potential to be your competition and consumers are demanding a personalized experience. Mass customization is the new mantra.
 ● **High and Natural Quality:** Consumers want high-quality products at affordable rates that are also good for the environment. This is not an easy feat to accomplish. Affordability and good for the environment don’t always go hand-in-hand. Government environmental regulations often makes manufacturing much more expensive.
 
 This isn’t new. Organizations have known this for the last decade. Many organizations have tried to find solutions, but the work involved is sometimes [a huge challenge](https://www.gartner.com/newsroom/id/3233217) because integration is an unnatural act for most large organizations.
@@ -57,17 +57,17 @@ With an effective systems integration strategy your organization will become mor
 
 Here are three tips for a successful systems integration:
 
-**1. Get the Right People On Board**  
+**1. Get the Right People On Board**
 Sometimes the largest siloes are built because of an organization’s culture, not their information architecture.
 
 For a systems integration project to be successful, an organization will need to get the right people on board and have champions in the business that can advocate for the benefits of systems integration.
 
-**2. Focus on Quick Wins**  
+**2. Focus on Quick Wins**
 Integration projects are wide-ranging, complex, and often require months of focus. Before your organization invest a significant amount of money and time in a project, get a quick win that will validate and demonstrate value.
 
 A project has a greater chance of success if you can break it down into a series of small steps.
 
-**3. Justify the Costs**  
+**3. Justify the Costs**
 Regardless of whether you’re trying to integrate internal or external systems, integration can be expensive, but the project shouldn’t be considered costs because of the benefits. While, external systems integration will require you to justify the cost of further support and technical issues, a lot can still be gained.
 
 A lot of organizations are quick to see IT as an expenses rather than a direct-investment, like marketing, that can impact the bottom line. Estimate your benefits, then determine if the benefits are greater than the cost. If so, investments should be made.

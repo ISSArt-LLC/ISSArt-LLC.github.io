@@ -3,7 +3,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import { slugify } from '../../utils';
 import { Button, Container, Grid, Typography } from '@mui/material';
-import CardPost from '../../components/CardPost';
+import CardPost from '../../components/PostListCard';
 
 export default function tag({ posts }: any) {
   return (

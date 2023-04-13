@@ -54,7 +54,7 @@ Thanks to an aggressive advertisement campaign from Google, [AngularJS](https://
 
 #### Why Stylus and LESS?
 
-[Stylus](http://learnboost.github.io/stylus/) is a cute replacement for plain CSS. It has a lot of features and makes stylesheets clear, simple and easy to maintain. [LESS](http://lesscss.org/) is a bit bulky, but it has a better IDE support compared to Stylus. So, we’ll use LESS until a bunch of IDEs will provide support for Stylus. There’s one more well known CSS preprocessor – [Sass](http://sass-lang.com/), – but it has a major pitfall. The next selector doesn’t work in Sass: &amp;-suffix, and it is crucial for us.
+[Stylus](http://learnboost.github.io/stylus/) is a cute replacement for plain CSS. It has a lot of features and makes stylesheets clear, simple and easy to maintain. [LESS](http://lesscss.org/) is a bit bulky, but it has a better IDE support compared to Stylus. So, we’ll use LESS until a bunch of IDEs will provide support for Stylus. There’s one more well known CSS preprocessor – [Sass](http://sass-lang.com/), – but it has a major pitfall. The next selector doesn’t work in Sass: &-suffix, and it is crucial for us.
 
 #### Bower
 

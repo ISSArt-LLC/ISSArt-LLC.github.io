@@ -16,7 +16,7 @@ tags:
     - 'mobile app'
 ---
 
-One day an excellent idea arose in our company: to create something connected with augmented reality. We decided to create a mobile app for our office guests. It was supposed to make visiting our office more informative and impressive.  
+One day an excellent idea arose in our company: to create something connected with augmented reality. We decided to create a mobile app for our office guests. It was supposed to make visiting our office more informative and impressive.
 For example, the app was to help a visitor find their way around our premises. It was also supposed to recognize markers and give hints as to where different rooms are situated.
 
 So, we decided to implement the following functions:
@@ -27,7 +27,7 @@ So, we decided to implement the following functions:
 
 ##### Info markers
 
-[![](/static/img/2018/05/wof-220x300.jpg)](/static/img/2018/05/wof.jpg) The first thing we did was info marker recognition. In our company we have the “*Wall of Fame*”. This is a wall with logos of the projects we have completed. It would be nice to add a full description for every project: what it is about, technologies used, the team, etc.  
+[![](/static/img/2018/05/wof-220x300.jpg)](/static/img/2018/05/wof.jpg) The first thing we did was info marker recognition. In our company we have the “*Wall of Fame*”. This is a wall with logos of the projects we have completed. It would be nice to add a full description for every project: what it is about, technologies used, the team, etc.
 The initial idea was very simple: to catch a project logo and then to show the information. Two tasks should be solved to do that:
 
 - Find and recognize a marker;
@@ -41,11 +41,11 @@ So, we used another approach: framed markers. This is a black-and-white image pl
 
 ##### ARToolkit flow
 
-At first, initialize ARToolkit:  
+At first, initialize ARToolkit:
 `ARToolKit.getInstance().initialiseNative(this.getCacheDir().getAbsolutePath());`
 
-Then add a marker:  
-`Int markerId = ARToolKit.getInstance().addMarker("single;"+markerFileName+";80");`  
+Then add a marker:
+`Int markerId = ARToolKit.getInstance().addMarker("single;"+markerFileName+";80");`
 ARToolkit is able to track multiple markers in the same frame. It assigns an ID to every new marker we add. This ID is used later to query the position of the marker. We store this ID in the markerId variable.
 
 The string we pass to addMarker may have the following formats:
@@ -90,23 +90,34 @@ To achieve this, we need to align the info with the marker on the screen. ARTool
 
 The OpenGL projection is described by 4×4 matrix. Below we will describe how to build it for AR glasses in detail. As for now, ARToolkit makes all maths for us. All we need is to pass the video frame size:
 
-`@Override<br></br>public void cameraPreviewStarted(int width, int height, int rate, int cameraIndex, boolean cameraIsFrontFacing) {<br></br>(ARToolKit.getInstance().initialiseAR(width, height, "Data/camera_para.dat", cameraIndex, cameraIsFrontFacing));<br></br>}<br></br>`  
-And the frame itself:  
-`@Override<br></br>public void cameraPreviewFrame(byte[] frame) {<br></br>ARToolKit.getInstance().convertAndDetect(frame));<br></br>}`
+`@Override
+public void cameraPreviewStarted(int width, int height, int rate, int cameraIndex, boolean cameraIsFrontFacing) {
+(ARToolKit.getInstance().initialiseAR(width, height, "Data/camera_para.dat", cameraIndex, cameraIsFrontFacing));
+}
+`
+And the frame itself:
+`@Override
+public void cameraPreviewFrame(byte[] frame) {
+ARToolKit.getInstance().convertAndDetect(frame));
+}`
 
-Recall for completeness: clear all after  
-`@Override<br></br>public void cameraPreviewStopped() {<br></br>if (ARToolKit.getInstance().isRunning())<br></br>ARToolKit.getInstance().cleanup();<br></br>}`
+Recall for completeness: clear all after
+`@Override
+public void cameraPreviewStopped() {
+if (ARToolKit.getInstance().isRunning())
+ARToolKit.getInstance().cleanup();
+}`
 
-So, now ARToolkit has a video frame, its size and a set of markers.  
+So, now ARToolkit has a video frame, its size and a set of markers.
 When a new frame is delivered, ARToolkit performs the following steps:
 
 | ![](/static/img/2018/05/artk_flow.png) | 1. Find all black borders. This is a step where unsightly black border is required. It is easily distinguishable from ordinary objects; 2. Perform perspective transform that maps an image inside a border to a square aligned with horizontal and vertical axes;       Downscale the image to 16×16 size. This is a “fingerprint” of the marker; 3. Compare this fingerprint with known samples. If enough similarity is found, then the marker is recognized. |
 |---|---|
 
-Now let us check if the marker is found:  
+Now let us check if the marker is found:
 `ARToolKit.getInstance().queryMarkerVisible(markerId)`
 
-And the last in terms of order, but the first in terms of importance – where the marker is:  
+And the last in terms of order, but the first in terms of importance – where the marker is:
 `float[] data = ARToolKit.getInstance().queryMarkerTransformation(markerId);`
 
 As a result, we have 4×4 matrix. Pass it to OpenGL and voila – we are able to draw 3D objects in the marker coordinate system. Everything we drew in that way behaves as if it was glued to the real marker.

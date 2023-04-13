@@ -70,7 +70,7 @@ I recognized the problem when I joined one of the developers’ meetings. After 
 
 I loved scrum, and practiced it a lot. I felt chaos in our workflow.
 
-After it I liked the idea to have an ideal workflow to shorten the time losses as much as possible. My consultant process engineer created a lot of rules and practices for the team to follow: the flow of Jira issues statuses, code-review, unit-tests, integration tests, load tests, configuration management and releases. I started using a more predictable workflow.  
+After it I liked the idea to have an ideal workflow to shorten the time losses as much as possible. My consultant process engineer created a lot of rules and practices for the team to follow: the flow of Jira issues statuses, code-review, unit-tests, integration tests, load tests, configuration management and releases. I started using a more predictable workflow.
 After the next sprint we delivered almost nothing (!). I tried to keep calm. But we were not productive during the following two sprints.
 
 We spent a lot of time on adjustments of our new process. Until everybody got sick of it :). The more details there are in the process, the more time we need to adapt to new technologies and product ideas, the less time we have to add the value.
@@ -127,8 +127,8 @@ Chaos in software project management is OK. Chaos has its hidden energy and forc
 
 ## References
 
-[\[1\]](https://www.irbnet.de/daten/iconda/CIB6803.pdf) Juhani Kiiras – Project Management in Chaos  
-\[2\] The Standish Group 2015 Report – CHAOS  
-[\[3\]](https://blog.marvelapp.com/state-of-the-digital-nation-2016/) Jules Ehrhardt – State of the Digital Nation 2016  
-[\[4\]](http://www.pmi.org/learning/library/applying-chaos-theory-project-based-organization-6849) By Englund, Randall L. – Applying chaos theory in a project based organization.  
+[\[1\]](https://www.irbnet.de/daten/iconda/CIB6803.pdf) Juhani Kiiras – Project Management in Chaos
+\[2\] The Standish Group 2015 Report – CHAOS
+[\[3\]](https://blog.marvelapp.com/state-of-the-digital-nation-2016/) Jules Ehrhardt – State of the Digital Nation 2016
+[\[4\]](http://www.pmi.org/learning/library/applying-chaos-theory-project-based-organization-6849) By Englund, Randall L. – Applying chaos theory in a project based organization.
 [\[5\]](http://www.scrumguides.org/scrum-guide.html) The Scrum Guide™, 2016

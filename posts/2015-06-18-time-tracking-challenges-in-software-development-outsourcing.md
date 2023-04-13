@@ -99,13 +99,13 @@ Although time tracking provides Customer and Employer with a clear picture of wh
 
 What can be done to prevent the negative effects of this?
 
-**Educate employees**  
+**Educate employees**
 Make it clear to your team members why it is important to log time accurately. Help them understand that this activity serves the goals of the whole team – the more accurately the time is tracked, the more clear the whole picture is (i.e. which tasks consume excess resources, and which ones are neglected). The more clear the situation on the project is, the more effective the further steps can be for the project. Which, in turn, should have a positive effect on Customer’s loyalty and/or can finally result in additional bonuses for the team’s efforts.
 
-**Monitor dashboard and define “procrastinators”**  
+**Monitor dashboard and define “procrastinators”**
 Through the dashboard of your time tracking tool you can see who logs time regularly, who does it from time to time, and who refuses to do it at all. This way the management team will understand who they need to talk to additionally.
 
-**Set email reminders**  
+**Set email reminders**
 Sometimes employees fail to log their time simply because they forget. If this is the case, getting an automated reminder should help them get this done finally.
 
 ### Conclusion

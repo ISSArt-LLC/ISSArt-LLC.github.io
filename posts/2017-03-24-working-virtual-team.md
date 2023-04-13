@@ -13,8 +13,8 @@ tags:
     - virtualteam
 ---
 
-How successful is your business? How much of your business is done on the internet? Nowadays, every other businessman has a web application to offer their services online. Was it created locally or by a virtual team? I believe, a group of highly-skilled developers working across the road was hired to deliver the project. You must have paid quite a fortune for the time they dedicated to the product.  
-  
+How successful is your business? How much of your business is done on the internet? Nowadays, every other businessman has a web application to offer their services online. Was it created locally or by a virtual team? I believe, a group of highly-skilled developers working across the road was hired to deliver the project. You must have paid quite a fortune for the time they dedicated to the product.
+
 And at the same time now and then you hear that there are virtual teams working successfully to achieve the same goal. Thus, you may ask yourself, how do I make my choice? Is it really better to hire a virtual team working across six continents than paying more to those who work next door?
 
 As a [Top Custom Software Development Company](https://www.softwaredevelopmentcompany.co/2019/07/01/software-development-life-cycle-a-complete-checklist/), we can highlight the pros and cons of hiring a team spread across the world.

@@ -76,8 +76,8 @@ blur = cv.medianBlur(difImage, 15)
 
 ```
 <pre class="brush: python; title: ; notranslate" title="">d = blur.sum(axis=0)
-has_col = np.max(d) &gt; np.median(d) + 1000
-if has_col &amp; ~prev_has_col:
+has_col = np.max(d) > np.median(d) + 1000
+if has_col & ~prev_has_col:
   tmp_cout += 1
 prev_has_col = has_col
 ```

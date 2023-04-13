@@ -110,7 +110,7 @@ What are they? Let’s look through the most common ones.
 
 1. *As long as the barrier to entry is quite low, more and more low-skilled participants enter the market.*
 2. *If any device with IoT is essentially a microcomputer, one must think about security and privacy.*
-  
+
 Of course, it’s rather scary to imagine, but what if your smart device (a kettle or a heating system) fails? Troubleshooting may take a certain time. One more issue here is not to damage the surrounding objects and, more important, not to injure anyone.
 
 There is another set of security and privacy concerns – interception of control, logs, substitution of values from sensors become possible.

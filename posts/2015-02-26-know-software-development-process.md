@@ -128,13 +128,7 @@ The software maintenance works may include (but are not limited to):
 
 We recommend ordering project maintenance with Provider, since the team already knows the product and can easily deal with coming requests. Besides, no one wants to deal with somebody else’s code.
 
-<style type="text/css">
-	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }<br />
-	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.<br />
-	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */<br />
-</style><div id="mc_embed_signup"><form action="//issart.us8.list-manage.com/subscribe/post?u=27b4bef1d5ce0a19dc5a471f5&id=9fce49f49e" class="validate" id="mc-embedded-subscribe-form" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank"><div id="mc_embed_signup_scroll"><label for="mce-EMAIL">Subscribe to receive more tips and tricks</label>  
-<input class="email" id="mce-EMAIL" name="EMAIL" placeholder="email address" required="" type="email" value=""></input>  
-<div style="position: absolute; left: -5000px;"><input name="b_27b4bef1d5ce0a19dc5a471f5_9fce49f49e" tabindex="-1" type="text" value=""></input></div><div class="clear"><input class="button" id="mc-embedded-subscribe" name="subscribe" type="submit" value="Subscribe"></input></div></div></form></div>## Conclusion
+## Conclusion
 
 We’ve covered the most common aspects that should be taken into account so far.
 
@@ -142,7 +136,7 @@ Please note that even the most well-known projects do not always start with the 
 
 Have something to add? Feel free to share your thoughts in comments.
 
-**References:**  
-\[1\] [https://en.wikipedia.org/wiki/List\_of\_software\_development\_philosophies](https://en.wikipedia.org/wiki/List_of_software_development_philosophies)  
-\[2\] <http://www.agiledata.org/essays/differentStrategies.html>  
+**References:**
+\[1\] [https://en.wikipedia.org/wiki/List\_of\_software\_development\_philosophies](https://en.wikipedia.org/wiki/List_of_software_development_philosophies)
+\[2\] <http://www.agiledata.org/essays/differentStrategies.html>
 \[3\] <http://www.itinfo.am/eng/software-development-methodologies/>

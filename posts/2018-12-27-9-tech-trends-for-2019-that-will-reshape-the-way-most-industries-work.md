@@ -19,7 +19,7 @@ Natural Language Processing technology will completely transform the way that se
 
 ##### AI-enabled chips
 
-To handle AI-related tasks, CPU is often irrational to use. A better option is to make separate [chips](https://www.forbes.com/sites/janakirammsv/2018/12/09/5-artificial-intelligence-trends-to-watch-out-for-in-2019/#2e6524c75618) that are aimed at performing AI-related tasks, so that the power consumption is kept low, and the performance is good. The great news is that in 2019 many manufacturers are going to produce chips which will be capable of speeding up different AI-related tasks: object recognition, speech recognition, natural language processing.  
+To handle AI-related tasks, CPU is often irrational to use. A better option is to make separate [chips](https://www.forbes.com/sites/janakirammsv/2018/12/09/5-artificial-intelligence-trends-to-watch-out-for-in-2019/#2e6524c75618) that are aimed at performing AI-related tasks, so that the power consumption is kept low, and the performance is good. The great news is that in 2019 many manufacturers are going to produce chips which will be capable of speeding up different AI-related tasks: object recognition, speech recognition, natural language processing.
 These chips are going to be widely used in many spheres applying AI – medicine, finance, manufacturing, and many more.
 
 ##### Automated machine learning
@@ -53,7 +53,7 @@ A digital twin stands for a replication of an object, a process or a system. Twi
 
 One more trend that certainly deserves our attention is the extension of the range of cloud-provided services. This means that in 2019 such areas as [Blockchain-as-a-service](https://www.forbes.com/sites/steveandriole/2018/10/22/gartners-10-technology-trends-for-2019-the-good-the-obvious-and-the-missing/#587006975999), VR-as-a-service, AR-as-a-service, IOT-as-a-service and AI-as-a-service will become more and more common.
 
-\_\_\_\_\_\_\_\_  
+\_\_\_\_\_\_\_\_
 *We hope you will find this review of tech trends useful. Maybe one of them (or even more than one) are already in your plans for **2019**?*
 
 ***Which trends do you find the most notable and perspective? Please share your thoughts in the comments!***

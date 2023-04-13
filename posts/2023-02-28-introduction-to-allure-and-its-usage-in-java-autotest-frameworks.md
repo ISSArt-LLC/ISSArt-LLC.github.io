@@ -32,15 +32,15 @@ In this article we will see how to install Allure to your project, how to genera
 
 In order to use Allure with Gradle in your project you will need to add several dependencies to projects’ build.gradle file:
 
-- testImplementation group: ‘org.aspectj’, name:   
+- testImplementation group: ‘org.aspectj’, name: 
     ‘aspectjweaver’, version: ‘{needed version}’
-- testImplementation group: ‘io.qameta.allure’, name:  
+- testImplementation group: ‘io.qameta.allure’, name:
     ‘allure-java-commons’, version: ‘{needed version}’
-- testImplementation group: ‘io.qameta.allure’, name:  
+- testImplementation group: ‘io.qameta.allure’, name:
     ‘allure-junit5’, version: ‘{needed version}’
-- testImplementation group: ‘io.qameta.allure’, name:  
+- testImplementation group: ‘io.qameta.allure’, name:
     ‘allure-commandline’, version: ‘{needed version}’
-- testImplementation group: ‘io.qameta.allure’, name:  
+- testImplementation group: ‘io.qameta.allure’, name:
     ‘allure-assertj’, version: ‘{needed version}’
 
 You are going to need to add Allure plugin into plugins section of your build.gradle file as well:
@@ -55,69 +55,69 @@ You are going to need to add Allure plugin into plugins section of your build.gr
 
 For Maven it is a pretty straightforward process as well. You are going to need to modify your pom.xml file:
 
-&lt;properties&gt;  
- &lt;aspectj.version&gt;{needed version}&lt;/aspectj.version&gt;  
- &lt;allure.version&gt;{needed version}&lt;/allure.version&gt;
+<properties>
+ <aspectj.version>{needed version}</aspectj.version>
+ <allure.version>{needed version}</allure.version>
 
-&lt;/properties&gt;
+</properties>
 
-&lt;dependencies&gt;  
- &lt;dependency&gt;  
- &lt;groupId&gt;io.qameta.allure&lt;/groupId&gt;  
- &lt;artifactId&gt;allure-junit4&lt;/artifactId&gt;  
- &lt;version&gt;${allure.version}&lt;/version&gt;  
- &lt;/dependency&gt;  
- &lt;dependency&gt;  
- &lt;groupId&gt;io.qameta.allure&lt;/groupId&gt;  
- &lt;artifactId&gt;allure-rest-assured&lt;/artifactId&gt;  
- &lt;version&gt;${allure.version}&lt;/version&gt;  
- &lt;/dependency&gt;  
-&lt;/dependencies&gt;
+<dependencies>
+ <dependency>
+ <groupId>io.qameta.allure</groupId>
+ <artifactId>allure-junit4</artifactId>
+ <version>${allure.version}</version>
+ </dependency>
+ <dependency>
+ <groupId>io.qameta.allure</groupId>
+ <artifactId>allure-rest-assured</artifactId>
+ <version>${allure.version}</version>
+ </dependency>
+</dependencies>
 
-&lt;build&gt;  
- &lt;plugins&gt;  
- &lt;plugin&gt;  
- &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;  
- &lt;artifactId&gt;maven-surefire-plugin&lt;/artifactId&gt;  
- &lt;version&gt;{needed version}&lt;/version&gt;  
- &lt;configuration&gt;  
- &lt;testFailureIgnore&gt;false&lt;/testFailureIgnore&gt;  
- &lt;argLine&gt;
+<build>
+ <plugins>
+ <plugin>
+ <groupId>org.apache.maven.plugins</groupId>
+ <artifactId>maven-surefire-plugin</artifactId>
+ <version>{needed version}</version>
+ <configuration>
+ <testFailureIgnore>false</testFailureIgnore>
+ <argLine>
 
-javaagent:”${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar”  
- &lt;/argLine&gt;  
- &lt;properties&gt;  
- &lt;property&gt;  
- &lt;name&gt;listener&lt;/name&gt;  
- &lt;value&gt;io.qameta.allure.junit4.AllureJunit4&lt;/value&gt;  
- &lt;/property&gt;  
- &lt;/properties&gt;  
- &lt;systemProperties&gt;  
- &lt;property&gt;  
- &lt;name&gt;allure.results.directory&lt;/name&gt;  
- &lt;value&gt;${project.build.directory}/allure-results&lt;/value&gt;  
- &lt;/property&gt;  
- &lt;/systemProperties&gt;  
- &lt;/configuration&gt;  
- &lt;dependencies&gt;  
- &lt;dependency&gt;  
- &lt;groupId&gt;org.aspectj&lt;/groupId&gt;  
- &lt;artifactId&gt;aspectjweaver&lt;/artifactId&gt;  
- &lt;version&gt;${aspectj.version}&lt;/version&gt;  
- &lt;/dependency&gt;  
- &lt;/dependencies&gt;
+javaagent:”${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar”
+ </argLine>
+ <properties>
+ <property>
+ <name>listener</name>
+ <value>io.qameta.allure.junit4.AllureJunit4</value>
+ </property>
+ </properties>
+ <systemProperties>
+ <property>
+ <name>allure.results.directory</name>
+ <value>${project.build.directory}/allure-results</value>
+ </property>
+ </systemProperties>
+ </configuration>
+ <dependencies>
+ <dependency>
+ <groupId>org.aspectj</groupId>
+ <artifactId>aspectjweaver</artifactId>
+ <version>${aspectj.version}</version>
+ </dependency>
+ </dependencies>
 
- &lt;/plugin&gt;  
- &lt;plugin&gt;  
- &lt;groupId&gt;io.qameta.allure&lt;/groupId&gt;  
- &lt;artifactId&gt;allure-maven&lt;/artifactId&gt;  
- &lt;version&gt;{needed version}&lt;/version&gt;  
- &lt;configuration&gt;  
- &lt;reportVersion&gt;{needed version}&lt;/reportVersion&gt;  
- &lt;/configuration&gt;  
- &lt;/plugin&gt;  
- &lt;/plugins&gt;  
-&lt;/build&gt;
+ </plugin>
+ <plugin>
+ <groupId>io.qameta.allure</groupId>
+ <artifactId>allure-maven</artifactId>
+ <version>{needed version}</version>
+ <configuration>
+ <reportVersion>{needed version}</reportVersion>
+ </configuration>
+ </plugin>
+ </plugins>
+</build>
 
 Don’t forget to replace {needed version} with the version you need.
 
@@ -177,7 +177,7 @@ To implement this, we can return to the GooglePage class and add the “@Step”
 
 ![](/static/img/2023/02/15.png)Allure also provides the duration of each test method, which can help in optimizing test performance.
 
-If you do not wish to use the page object model in your framework and want to interact with WebDriver directly, you can use the static method “step()” provided by Allure. This method allows you to define a step with a name and pass the interaction with the driver as a lambda through the ThrowableRunnableVoid (for interactions not returning any value) or ThrowableRunnable&lt;T&gt; (for interactions returning something) functional interfaces as parameters. The resulting steps will be included in the report, making it more informative.
+If you do not wish to use the page object model in your framework and want to interact with WebDriver directly, you can use the static method “step()” provided by Allure. This method allows you to define a step with a name and pass the interaction with the driver as a lambda through the ThrowableRunnableVoid (for interactions not returning any value) or ThrowableRunnable<T> (for interactions returning something) functional interfaces as parameters. The resulting steps will be included in the report, making it more informative.
 
 ![](/static/img/2023/02/16-1024x848.png)![](/static/img/2023/02/17-1024x515.png)Even with this little amount of customization our report already looks quite informative and easy to read and understand. Now we can add a level of severity to our tests. To add a level of severity to our tests, we can use the @Severity() annotation, which allows us to specify the level of severity for each test. The severity level can be chosen from the SeverityLevel enum.
 
@@ -191,7 +191,7 @@ If you do not wish to use the page object model in your framework and want to in
 
 ![](/static/img/2023/02/22-1024x513.png)When we encounter failed tests in our test runs, we often want to investigate the specific cause of the failure. One effective way to do this is to attach a screenshot of the moment the test failed. JUnit offers the TestWatcher interface, while TestNG provides the ITestListener interface, both of which allow developers to override the testFailed() and onTestFailure() methods. In these methods, a screenshot attachment can be made by adding the appropriate code. Here’s an example:
 
-byte\[\] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);  
+byte\[\] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
 Allure.getLifecycle().addAttachment(“Screenshot”, “image/png”, “png”, screenshot );
 
 Allure.getLifeCycle().addAttachment() accepts an array of bytes as one of the parameters.

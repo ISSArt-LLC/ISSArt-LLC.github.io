@@ -55,14 +55,14 @@ For example, we can upload comments and ask people to identify positive and nega
 
 Of course, in addition to the examples above Yandex.Toloka gives an ability to solve a big range of tasks:
 
-1. Data enrichment:  
-    a) questionnaires;  
-    b) object search by description;  
-    c) search for information about an object;  
+1. Data enrichment:
+    a) questionnaires;
+    b) object search by description;
+    c) search for information about an object;
     d) search for information on websites.
-2. Field tasks:  
-    a) gathering offline data;  
-    b) monitoring prices and products;  
+2. Field tasks:
+    a) gathering offline data;
+    b) monitoring prices and products;
     c) street objects control.
 
 To do these tasks you can choose the criteria for contractors: gender, age, location, level of education, languages etc.
@@ -71,27 +71,27 @@ At first look it seems great, however, there is another side of it. Let’s have
 
 First, the task is rather simple and clear – identify defects on solar panels. (pic 1) There are 15 types of defects, for example, cracks, flare, broken items with some collapsing parts etc. From physical point of view panels can have different damages that we classified into 15 types.
 
-![](/static/img/2022/04/pic-1.png)<figcaption>*pic 1*.</figcaption>Our customer provided us a dataset for this task in which some marking had already been done: defects were highlighted red on images. It is important to say that there weren’t coordinates in file, not json with specific figures, but marking on the original image that requires some extra work to do.
+![](/static/img/2022/04/pic-1.png)*pic 1*.Our customer provided us a dataset for this task in which some marking had already been done: defects were highlighted red on images. It is important to say that there weren’t coordinates in file, not json with specific figures, but marking on the original image that requires some extra work to do.
 
 The first problem was that shapes were different (pic 2) It could be circle, rectangle, square and the outline could be closed or could be not.
 
-![](/static/img/2022/04/pic-2-1024x347.png)<figcaption>*pic 2*.</figcaption>The second problem was bad highlighting of the defects. One outline could have several defects and they could be really small. (pic 3) For example, one defect is a scratch on solar panel. There could be a lot of scratches in one unit that were not highlighted separately. From human point of view it is ok, but for ML model it is unappropriate.
+![](/static/img/2022/04/pic-2-1024x347.png)*pic 2*.The second problem was bad highlighting of the defects. One outline could have several defects and they could be really small. (pic 3) For example, one defect is a scratch on solar panel. There could be a lot of scratches in one unit that were not highlighted separately. From human point of view it is ok, but for ML model it is unappropriate.
 
-![](/static/img/2022/04/pic-3-1024x260.png)<figcaption>*pic 3.*</figcaption>The third problem was that part of data was marked automatically. (pic 4) The customer had a software that could find 3 of 15 types of defects on solar panels. Furthermore, all defects were marked by a circle with an open outline. What made it more complex was the fact that there could be text on the images.
+![](/static/img/2022/04/pic-3-1024x260.png)*pic 3.*The third problem was that part of data was marked automatically. (pic 4) The customer had a software that could find 3 of 15 types of defects on solar panels. Furthermore, all defects were marked by a circle with an open outline. What made it more complex was the fact that there could be text on the images.
 
-![](/static/img/2022/04/pic-4-1024x347.png)<figcaption>*pic 4*.</figcaption>The fourth problem was that marking of some objects was much larger than defects themselves. (pic 5) For example, a small crack was marked by a big oval covering 5 units. If we gave it to the model it would be really difficult to identify a crack in the picture.
+![](/static/img/2022/04/pic-4-1024x347.png)*pic 4*.The fourth problem was that marking of some objects was much larger than defects themselves. (pic 5) For example, a small crack was marked by a big oval covering 5 units. If we gave it to the model it would be really difficult to identify a crack in the picture.
 
-![](/static/img/2022/04/pic-5.png)<figcaption>*pic 5.*</figcaption>Also there were some positive moments. A Large percentage of the data set was in quite good condition. However, we couldn’t delete a big number of material because we needed every image.
+![](/static/img/2022/04/pic-5.png)*pic 5.*Also there were some positive moments. A Large percentage of the data set was in quite good condition. However, we couldn’t delete a big number of material because we needed every image.
 
 What could be done with low-quality marking? How could we make all circles and ovals into coordinates and markers of types? Firstly, we binarized (pic 6 and 7) images, found outlines on this mask and analyzed the result.
 
-![](/static/img/2022/04/pic-6-1024x313.png)<figcaption>*pic 6.*</figcaption>![](/static/img/2022/04/pic-7-1024x313.png)<figcaption>*pic 7.*</figcaption>When we saw large fields that cross each other we got some problems:
+![](/static/img/2022/04/pic-6-1024x313.png)*pic 6.*![](/static/img/2022/04/pic-7-1024x313.png)*pic 7.*When we saw large fields that cross each other we got some problems:
 
-1. Identify rectangle:  
-    a) mark all outlines – “extra” defects;  
+1. Identify rectangle:
+    a) mark all outlines – “extra” defects;
     b) combine outlines – large defects.
-2. Test on image:  
-    a) Text recognition;  
+2. Test on image:
+    a) Text recognition;
     b) Compare text and object.
 
 To solve these issues we needed more data. One of the variants was to ask the customer to do extra marking with the tool we could provide with. But we should have needed an extra person to do that and spent working time. This way could be really time-consuming, tiring and expensive. That is why we decided to involve more people.
@@ -100,7 +100,7 @@ First, we started to solve the problem with text on images. We used computer vis
 
 To give the task we needed: to highlight the existing marking by rectangle classify it according to the text above (pic 8). We gave these images with marking to our contractors and gave them the task to put all circles into rectangles.
 
-![](/static/img/2022/04/pic-8.png)<figcaption>*pic 8.*</figcaption>As a result we supposed to get specific rectangles for specific types with coordinates. It seemed a simple task, but the contractors faced some problems:
+![](/static/img/2022/04/pic-8.png)*pic 8.*As a result we supposed to get specific rectangles for specific types with coordinates. It seemed a simple task, but the contractors faced some problems:
 
 1. All objects in spite of the defect type were marked by first class;
 2. Images included some objects marked by accident;
@@ -138,14 +138,14 @@ Our plan was:
 
 In the interface (pic 9) users saw panels, classes and massive instruction containing the description of 15 classes that should be differentiated. We gave them 10 minutes to do the task. As a result we had a lot of negative feedback which said that the instruction was hard to understand and the time was not enough.
 
-![](/static/img/2022/04/pic-9-1024x568.png)<figcaption>*pic 9.*</figcaption>We stopped the task and decided to check the result of the work done. From th epoint of view of detection the result was satisfying – about 50% of defects were marked, however, the quality of defects classification was less than 30%.
+![](/static/img/2022/04/pic-9-1024x568.png)*pic 9.*We stopped the task and decided to check the result of the work done. From th epoint of view of detection the result was satisfying – about 50% of defects were marked, however, the quality of defects classification was less than 30%.
 
 Results:
 
-1. The task was too complicated:  
-    a) a small number of contractors agreed to do the task;  
-    b) detection quality ~50%, classification – less than 30%;  
-    c) most of the defects were marked as first class;  
+1. The task was too complicated:
+    a) a small number of contractors agreed to do the task;
+    b) detection quality ~50%, classification – less than 30%;
+    c) most of the defects were marked as first class;
     d) contractors complained about lack of time (10 minutes).
 2. The interface wasn’t contractor-friendly – a lot of classes, long instruction.
 
@@ -206,7 +206,7 @@ What can be said as a conclusion:
 
 Impression of crowdsourcing:
 
-<figure class="wp-block-table">| **Pros** | **Cons** |
+| **Pros** | **Cons** |
 |---|---|
 | Increase dataset | Too flexible |
 | Increasing marking quality | Low quality |

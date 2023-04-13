@@ -21,7 +21,7 @@ Performance testing is a type of testing proceess to determine the responsivenes
 4. To find the source of performance,
 5. To determine throughput levels.
 
-  
+
 In order to successfully accomplish any of these tasks, it’s necessary to set up an environment where tested system will be deployed; to set up load generator that will imitate the end-users interaction with the system under the test; to determine performance intensive use cases and develop load testing scripts or an application for the load generator; to establish the performance testing process for the project and, of course, to have a qualified QA engineers for all these tasks. The primary accent in the performance testing should be done on the process, how to establish and maintain it, as it orchestrates all activities. Nevertheless, the other steps are important as well. This article highlights the best practices for each activity in the performance testing. Following them it helps to successfully develop performance testing strategy and get performance metrics so important for your project, not spending large budget for the performance testing.
 
 The classic performance testing process is described in the performance testing tutorial from the Microsoft. It has seven steps and activities related to these steps:

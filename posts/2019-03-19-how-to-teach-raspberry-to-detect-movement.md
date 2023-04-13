@@ -85,36 +85,36 @@ After that our sensor is ready and we can proceed and write a script to monitor 
 
 To create a Python script you can use any text editor you like. I use IDLE. Our script will be pretty simple:
 
-> import RPi.GPIO as GPIO  
-> import os  
-> import sys  
-> import time  
+> import RPi.GPIO as GPIO
+> import os
+> import sys
+> import time
 > import subprocess
 > 
 > SENSOR\_PIN = 7
 > 
-> GPIO.setwarnings(False)  
+> GPIO.setwarnings(False)
 > GPIO.setmode(GPIO.BOARD)
 > 
 > GPIO.setup(SENSOR\_PIN, GPIO.IN)
 > 
-> while True:  
-> signal = GPIO.input(SENSOR\_PIN)  
-> if signal == 0:  
-> print(“Nothing”)  
-> time.sleep(0.1)  
-> elif signal == 1:  
-> print(“Intruders detected”)  
+> while True:
+> signal = GPIO.input(SENSOR\_PIN)
+> if signal == 0:
+> print(“Nothing”)
+> time.sleep(0.1)
+> elif signal == 1:
+> print(“Intruders detected”)
 > time.sleep(0.1)
 
 Here is a detailed script description. The first five lines are needed to import Python modules, one of them – [RPi.GPIO](https://pypi.org/project/RPi.GPIO/) is used to work with Raspberry GPIO pins. After importing all the needed modules, we declare the variable **SENSOR\_PIN** and make it equal to seven. It’s not a “magic number”, seven is the number of the port which we used to connect with our sensor output pin. Next we set GPIO module in **GPIO.BOARD** mode. There are two available modes for GPIO:
 
-- **GPIO.BOARD**
-- **GPIO.BCM**
+**GPIO.BOARD**
+**GPIO.BCM**
 
 The **GPIO.BOARD** option specifies that you are referring to the pins by the number of the pin – i.e. the numbers printed on the board, on our previous picture – it’s the number in the gray square.
 
-The **GPIO.BCM** option means that you are referring to the pins by the “Broadcom SOC channel” number, these are the numbers after “GPIO”.  
+The **GPIO.BCM** option means that you are referring to the pins by the “Broadcom SOC channel” number, these are the numbers after “GPIO”.
 Unfortunately, the BCM numbers change between Raspberry versions and you’ll need to find out which ones you have to use here. So that’s why we will use **GPIO.BOARD** mode.
 
 Using the command: GPIO.setup(SENSOR\_PIN, GPIO.IN) we set the needed Raspberry pin to work as an input channel. And after that we use an infinite cycle to wait for the input on this pin. If the sensor doesn’t detect any movement, it won’t send anything to Raspberry and the signal variable will be equal to zero, otherwise it will be equal to one. You can add a few print statements to debug the sensor state and make sure it’s working.
@@ -141,7 +141,7 @@ To utilize your web camera simply connect it to one of the Raspberry Pi USB port
 
 If you are not using the default Pi user account, you need to add your username to the video group, otherwise you will see ‘permission denied’ errors.
 
-**sudo usermod -a -G video &lt;username&gt;**
+**sudo usermod -a -G video <username>**
 
 To make sure the user has been added to the group correctly, use the **groups** command. Enter the command fswebcam followed by a filename and a picture will be taken using the webcam, and saved to the filename specified:
 
@@ -173,26 +173,26 @@ To check this step you can try running your script using the command:
 
 The final step: we need to run this script from our Python code when the sensor detects the movement. To do that, we need to modify our sensor Python script.
 
-> import RPi.GPIO as GPIO  
-> import os  
-> import datetime  
-> import sys  
-> import time  
+> import RPi.GPIO as GPIO
+> import os
+> import datetime
+> import sys
+> import time
 > import subprocess
 > 
 > SENSOR\_PIN = 11
 > 
-> GPIO.setwarnings(False)  
+> GPIO.setwarnings(False)
 > GPIO.setmode(GPIO.BOARD)
 > 
 > GPIO.setup(SENSOR\_PIN, GPIO.IN)
 > 
-> while True:  
-> signal = GPIO.input(SENSOR\_PIN)  
-> if signal == 0:  
-> time.sleep(0.1)  
-> elif signal == 1:  
-> time.sleep(0.1)  
+> while True:
+> signal = GPIO.input(SENSOR\_PIN)
+> if signal == 0:
+> time.sleep(0.1)
+> elif signal == 1:
+> time.sleep(0.1)
 > os.system(‘/home/pi//webcam.sh’)
 
 As you can see, we added the line: *os.system(‘/home/pi//webcam.sh’)*. This line uses os.system() function to execute the command (a string) in a subshell. As a parameter, we pass the full path to our .sh script.
@@ -209,7 +209,7 @@ This command will change the current folder to config folder. Then we need to op
 
 After that you will see the content of the autostart file on your screen. At the end of the file, add the following lines:
 
-**@midori**  
+**@midori**
  **@python motion\_seonsor.py**
 
 Replace “motion\_seonsor.py ” part with the path to your own Python script. After that press: Ctrl+X to exit the editor and press Y when prompted to save changes. Now you can reboot your system and the script will be started automatically.

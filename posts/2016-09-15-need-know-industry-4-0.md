@@ -71,12 +71,12 @@ To prepare for industry 4.0, organizations have to break the sweeping aims of in
 
 Here are some small projects your organization can consider:
 
-● Acquiring the right talent is the main problem many organizations face with implementing industry 4.0. Spend time finding, hiring and retain top technology talent.  
-● Implementing a change management program to get stakeholders, decision makers, and employees on board with upgrading your information system.  
-● Combining data from internal and external sources, structured and unstructured data to improve decision making.  
-● Developing the competencies to better integrate IT and OT in your organization.  
-● Taking stock of existing IT support and identifying where further digitization is needed.  
-● Understanding the underlying technology of industry 4.0 — big data, cloud computing, IoT and more. Understand the impact on manufacturing operations to determine optimal tradeoffs between cost, innovation, and supply.  
+● Acquiring the right talent is the main problem many organizations face with implementing industry 4.0. Spend time finding, hiring and retain top technology talent.
+● Implementing a change management program to get stakeholders, decision makers, and employees on board with upgrading your information system.
+● Combining data from internal and external sources, structured and unstructured data to improve decision making.
+● Developing the competencies to better integrate IT and OT in your organization.
+● Taking stock of existing IT support and identifying where further digitization is needed.
+● Understanding the underlying technology of industry 4.0 — big data, cloud computing, IoT and more. Understand the impact on manufacturing operations to determine optimal tradeoffs between cost, innovation, and supply.
 ● Working toward developing smart manufacturing processes but on an step-by-step basis where the fundings can be clearly defined, and the gainings are understandable.
 
 ## Conclusion

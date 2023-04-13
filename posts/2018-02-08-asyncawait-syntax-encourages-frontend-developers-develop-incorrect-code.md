@@ -65,7 +65,7 @@ That’s not something we expected. What are we supposed to do? Tell the user no
   let githubResponse = await fetch(
     `https://api.github.com/users/${user.name}`);
   let githubUser = await githubResponse.json();
-  
+
   return githubUser;
 }
 
@@ -110,7 +110,7 @@ So we should remember if the loaded data corresponds to the current page load. A
 <pre style="font-size: .8em;">let loadIndex = 0;
 async function showAvatar() {
   const thisLoadIndex = ++loadIndex;
-  
+
   let githubUser = await loadUser();
 
   // prevent side effects
@@ -130,7 +130,7 @@ Now it works as expected. If you use some framework that provides you with the i
   componentDidMount() {
     this.showAvatar();
   }
-  
+
   async showAvatar() {
     let githubUser = await loadUser();
 

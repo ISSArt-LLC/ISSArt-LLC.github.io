@@ -45,7 +45,7 @@ Digitalriver.com posted an article earlier this year that discusses ecommerce tr
 
 ### Why is a PHP framework for ecommerce website development the solution?
 
-Core PHP-Versatile, Compatible &amp; Flexible
+Core PHP-Versatile, Compatible & Flexible
 
 As most of you reading this already know, PHP is a server-side programming language and offers a range of advantages to website owners and web developers alike. To start, PHP is an open source scripting language so that means it is free, in a more competitive market it never hurts to save a few dollars.
 
@@ -75,14 +75,14 @@ Using a PHP framework for ecommerce website development gives the development pr
 
 Advantages of using a PHP framework for ecommerce website development:
 
-- Organizes code &amp; files
-- Avoid writing repeat code &amp; faster site development
+- Organizes code & files
+- Avoid writing repeat code & faster site development
 - Frameworks provide utilities and libraries
 - Standardized security functions
 - Wide variety of support options
 - Efficient dynamic page loading
 - Performance tools
-- Frameworks allow multiple developers to work efficiently &amp; accurately
+- Frameworks allow multiple developers to work efficiently & accurately
 
 #### Selecting a PHP framework for ecommerce website development
 
@@ -94,20 +94,11 @@ See the chart below for rankings of the most popular PHP frameworks as of the en
 
 ![Framework popularity pie chart for PHP Framework for eCommerce Website development](/static/img/2014/11/Framework-Popularity.png)
 
-Source [www.sitepoint.com](http://www.sitepoint.com/best-php-frameworks-2014/)  
-<link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css"></link><style type="text/css">
-	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
-	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
-	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-</style>
-
-<div id="mc_embed_signup"><form action="//issart.us8.list-manage.com/subscribe/post?u=27b4bef1d5ce0a19dc5a471f5&id=9fce49f49e" class="validate" id="mc-embedded-subscribe-form" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank"><div id="mc_embed_signup_scroll"> <label for="mce-EMAIL">Subscribe to receive more tips and tricks</label>  
-<input class="email" id="mce-EMAIL" name="EMAIL" placeholder="email address" required="" type="email" value=""></input>  
-<div style="position: absolute; left: -5000px;"><input name="b_27b4bef1d5ce0a19dc5a471f5_9fce49f49e" tabindex="-1" type="text" value=""></input></div><div class="clear"><input class="button" id="mc-embedded-subscribe" name="subscribe" type="submit" value="Subscribe"></input></div></div></form></div>### What is the bottom line for using a PHP framework for ecommerce website development in 2014 and beyond?
+Source [www.sitepoint.com](http://www.sitepoint.com/best-php-frameworks-2014/)### What is the bottom line for using a PHP framework for ecommerce website development in 2014 and beyond?
 
 eCommerce business owners need a website that includes the following architecture and features:
 
-*Required eCommerce Website Architecture &amp; Features*
+*Required eCommerce Website Architecture & Features*
 
 *Architecture:*
 
@@ -115,7 +106,7 @@ eCommerce business owners need a website that includes the following architectur
 - *Use a PHP framework for ecommerce website development*
 - *Use an MVC (model view controller) based PHP framework*
 
-*Features &amp; Benefits:*
+*Features & Benefits:*
 
 - *Built-in security features-important especially for ecommerce websites processing financial transactions*
 - *High Compatibility with other web applications, operating systems and programming languages-allows the site to be scaled, modified and changed to accommodate a change in customer behavior or business focus*

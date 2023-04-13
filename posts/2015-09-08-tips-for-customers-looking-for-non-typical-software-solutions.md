@@ -17,35 +17,35 @@ If we talk about a unique business idea, first and foremost, you need to explore
 
 If we talk about an existing product or a business process you are recommended to conduct an audit and analysis. You can do it yourself or contact IT consultants.
 
-- - **Give Provider all the info required**
+- **Give Provider all the info required**
 
 To ensure that work goes smoothly and you are “on the same page” with your Provider, you need to disclose to them all the required info in as much detail as possible. If you can draw the process or idea schematically – that’s even better. You can utilize [Balsamiq Mockups](https://balsamiq.com/products/mockups/) or similar solutions for this.
 
 If you don’t know how to present your project vision better – check out our requirements document template.
 
-- - **Worrying about confidentiality? Sign NDA**
+- **Worrying about confidentiality? Sign NDA**
 
 To make sure that the information you’ve shared will remain confidential we recommend you to sign NDA. As soon as your Provider signs it, sign it from your side and return the signed copy to Provider. Otherwise the document won’t be legally binding. Besides, if you neglect signing documents, this will look like lack of intention to cooperate.
 
 You can read more about intellectual property (IP) issues in software development [here](http://www.issart.com/blog/intellectual-property-issues-software-development/).
 
-- - **Be sure to have everything in written form**
+- **Be sure to have everything in written form**
 
 Although you can hold most of discussions during voice meetings, don’t forget to save all the agreed points and commitments in written form. This way you will be aware that you and your Provider understand each other right.
 
 A good practice is to request from your Provider to sum up the points you have agreed upon. On one hand, this may sound like a tip for university students, but on the other hand, this does work!
 
-- - **CMS vs building from scratch**
+- **CMS vs building from scratch**
 
 As long as your solution is non-typical, keep in mind that using already existing CMSs for your product development might not work here. These ready solutions can be limited in terms of their flexibility, so, if you need some extraordinary design and/or functionality, they won’t help your developers to implement this.
 
 Chances are that Provider will need to build all the code from scratch. Therefore, be prepared for such time (and, hence, budget) expenses.
 
-- - **Start with a MVP**
+- **Start with a MVP**
 
 When building your non-standard solution, we recommend you to start with [minimum viable product (MVP)](https://en.wikipedia.org/wiki/Minimum_viable_product). Usually it has just the core set of features that allow the product to be deployed.
 
-- - **Why start with a MVP?**
+- **Why start with a MVP?**
 
 First, this will save you significant amount of money to launch it.
 
@@ -53,27 +53,27 @@ Second, after receiving and analyzing feedback from your first customers you wil
 
 Be prepared that the developed MVP may differ from your initial project vision. Great if these differences cause positive emotions. However, if you’re not quite delighted, don’t give up! Keep on testing the product and defining a room for further improvements. Remember: Rome wasn’t built in a day.
 
-- - **Design and usability**
+- **Design and usability**
 
 If your future system is intended for internal use, design might be your secondary concern. In this case you may use default themes and tools.
 
 But be sure not to confuse design and usability. Remember: even a MVP must be user-friendly. Otherwise, your product won’t get recognition.
 
-- - **Motivate your Provider**
+- **Motivate your Provider**
 
 When you reach out to Provider and request an estimate, make it clear that your MVP is just a first stage. This way you will motivate your team – they will see the potential of future collaboration. It works, and we know it firsthand.
 
-- - **Listen to your Provider**
+- **Listen to your Provider**
 
 Listen to the recommendations from your Provider. Remember, they are experts, and they already know what will work and what won’t.
 
-- - **Negotiate the product with all the stakeholders**
+- **Negotiate the product with all the stakeholders**
 
 Before you reach out to Provider, be sure to negotiate the project concept with all the concerned parties within your company.
 
 If you start the development process, and it turns out that someone from your side completely disagrees with the product idea and/or its operating principle, this will be truly frustrating. Redesigning certain elements of the system will require additional costs.
 
-- - **A responsible person should be an interested person**
+- **A responsible person should be an interested person**
 
 Appoint a responsible person from those who are interested in this product development. If you are reading this and you are not an interested person – fairly admit this and tell about it to those who are interested. This way everyone will be happy.
 

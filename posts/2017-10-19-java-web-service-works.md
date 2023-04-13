@@ -56,8 +56,8 @@ So, do you think it’s reasonable to write the same kind of app every time? We 
 
 In order not to do the same stuff over and over again, special standards and application servers were developed. In the application server, each application is run in a container and uses the infrastructure and libraries of the server application.
 
-The application server acts like an infrastructure intermediate layer between the web server and the compiled code that would process the request. Moreover, modern app servers include a built-in web server.  
-![null](/static/img/2017/10/webappserv-Page-1.png)  
+The application server acts like an infrastructure intermediate layer between the web server and the compiled code that would process the request. Moreover, modern app servers include a built-in web server.
+![null](/static/img/2017/10/webappserv-Page-1.png)
 Authorization is an essential part of many programming solutions. As our experience shows, application server can be of much help in implementing this feature as well, especially when we deal with larger systems. That is, application server can implement authorization by the lists of users that can be kept in some third-party storage. How is this actually achieved? A server can be configured in such a way that allows to check users for compliance with the certain criteria.
 
 And, a few words about requests. Based on a URL, a server “understands” what kind of request is received, and transfers this request further for processing.
@@ -76,7 +76,7 @@ So, a Java web service receives a HTTP request as an input, and generates a stru
 
 When working with web services, developers often apply Simple Object Access Protocol (SOAP) and Representational State Transfer (REST). Which one to choose? We would say that your choice will depend mostly on a project specifics and its complexity level.
 
-The message object in SOAP is XML, and in REST – JSON. JSON is compact, and Javascript works with it perfectly. In SOAP you can use more complex messages and, for example, add a digital signature.  
+The message object in SOAP is XML, and in REST – JSON. JSON is compact, and Javascript works with it perfectly. In SOAP you can use more complex messages and, for example, add a digital signature.
 In case you deal with UI-server interaction, we recommend using REST services. And if there is a complex case (say, a system you have communicate with a couple of other systems, and transfers data further to another ones), our advice would be to use SOAP.
 
 In addition, there are special frameworks that work with web services. To name a few:

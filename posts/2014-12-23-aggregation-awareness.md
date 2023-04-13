@@ -206,15 +206,15 @@ extend(Client, Class, {
         this.doneContent();
         this._super();
     },
-    
+  
     initContent: function() {
         this.content = new Content();
     },
-    
+  
     doneContent: function() {
         this.content.destroy();
     },
-    
+  
     refreshContent: function() {
         this.doneContent();
         this.initContent();
@@ -259,20 +259,20 @@ extend(Client, Class, {
         this.doneObjects();
         this._super();
     },
-    
+  
     initObjects: function() {
         var objects = this.factory.createObjects();
         this.object1 = objects.object1;
         this.object2 = objects.object2;
         this.object3 = objects.object3;
     },
-    
+  
     doneObjects: function() {
         this.object3.destroy();
         this.object2.destroy();
         this.object1.destroy();
     },
-    
+  
     refreshObjects: function() {
         this.doneObjects();
         this.initObjects();
@@ -333,7 +333,7 @@ extend(Header, Class, {
         this.titleDriver = this.locale.getDriver("title");
         this.bindText(this.element, this.titleDriver.text);
     },
-    
+  
     unrender: function() {
         this.titleDriver.destroy();
     }
@@ -387,16 +387,14 @@ extend(Locale, Class, {
 });
 ```
 
-Locale’s implementation is a little bit more complicated, but it is reusable! You can use the same “getText” method everywhere in your application and save hundreds lines of code. As a side effect, you will make your code clear and easy to maintain.  
+Locale’s implementation is a little bit more complicated, but it is reusable! You can use the same “getText” method everywhere in your application and save hundreds lines of code. As a side effect, you will make your code clear and easy to maintain.
 <link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css"></link><style type="text/css">
 	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
 	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
 	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
 </style>
 
-<div id="mc_embed_signup"><form action="//issart.us8.list-manage.com/subscribe/post?u=27b4bef1d5ce0a19dc5a471f5&id=9fce49f49e" class="validate" id="mc-embedded-subscribe-form" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank"><div id="mc_embed_signup_scroll"> <label for="mce-EMAIL">Subscribe to our mailing list</label>  
-<input class="email" id="mce-EMAIL" name="EMAIL" placeholder="email address" required="" type="email" value=""></input>  
-<div style="position: absolute; left: -5000px;"><input name="b_27b4bef1d5ce0a19dc5a471f5_9fce49f49e" tabindex="-1" type="text" value=""></input></div><div class="clear"><input class="button" id="mc-embedded-subscribe" name="subscribe" type="submit" value="Subscribe"></input></div></div></form></div>#### Conclusion
+<div id="mc_embed_signup"><form action="//issart.us8.list-manage.com/subscribe/post?u=27b4bef1d5ce0a19dc5a471f5&id=9fce49f49e" class="validate" id="mc-embedded-subscribe-form" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank"><div id="mc_embed_signup_scroll"> <label for="mce-EMAIL">Subscribe to our mailing list</label>  #### Conclusion
 
 With object aggregation system, you don’t need to define class destructors explicitly anymore. All the destructors stay in the low-level classes of the framework, and all the high-level classes of your application can aggregate each other to gain all the purposes.
 

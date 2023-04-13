@@ -36,12 +36,12 @@ SPA is similar to native desktop application. UI logic and business logic are sh
 
 According to Github statistic Javascript is the top language. The complexity of the web application is increasing now and IT will require more and more highly skilled Senior Javascript developers.
 
-[![image04](/static/img/2016/03/image04-282x300.png)](/static/img/2016/03/image04.png)  
+[![image04](/static/img/2016/03/image04-282x300.png)](/static/img/2016/03/image04.png)
 *Popularity trends of Programming languages in GitHub ([source](https://www.loggly.com/blog/the-most-popular-programming-languages-in-to-github-since-2012/)).*
 
 **Mobile Platforms**
 
-Mobile platforms are growing very fast today. Mobile devices are becoming more and more powerful. Screen size, resolution and processor speed allow us to put the main business logic to the client side and process video and audio in real time.  
+Mobile platforms are growing very fast today. Mobile devices are becoming more and more powerful. Screen size, resolution and processor speed allow us to put the main business logic to the client side and process video and audio in real time.
 Intensive development of mobile platform requires the specialists to develop new skills. New tools and libraries appear every week and the only way to be in the forefront is self-education. By reason of the lack of human resources, many mobile development companies start their trainings and internship programs.
 
 The popularity of cross-platform instruments is growing. Such tools as PhoneGap and Xamarine allow writing one application for all mobile platforms. It enables us to reduce the cost of development and eliminate the need for separate development teams for each platform.
@@ -50,7 +50,7 @@ The popularity of cross-platform instruments is growing. Such tools as PhoneGap 
 
 **Functional Programming**
 
-Functional languages have a long history. They were popular in 60s, but they were almost forgotten in the IT industry. But the new Millennium has brought concepts of big data, parallelism and [cloud](https://www.issart.com/en/services/details/service/cloud-solutions) computing which breathed new life into functional computing. Functional programming becomes really useful when there is a need to process a huge amount of uniform data with complex functions.  
+Functional languages have a long history. They were popular in 60s, but they were almost forgotten in the IT industry. But the new Millennium has brought concepts of big data, parallelism and [cloud](https://www.issart.com/en/services/details/service/cloud-solutions) computing which breathed new life into functional computing. Functional programming becomes really useful when there is a need to process a huge amount of uniform data with complex functions.
 Mainstream OOP languages include elements of functional programming in their syntax. Lambda expressions, closures and map/reduce functions are now parts of C#, Javascript and Java. But full power of Functional paradigm is available in specific languages only. That’s why developers who know Haskell, Scala and F# are highly needed.
 
 The initial cost to implement the application in functional way is still higher than in OOP (for lack of tools and developers). But the total cost of ownership and scalability can be much higher than usual. Functional programming still has a limited value but FP elements (such as immutable objects and pure functions) can significantly improve the application system design.

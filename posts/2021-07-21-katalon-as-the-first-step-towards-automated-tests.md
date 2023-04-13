@@ -12,11 +12,11 @@ Katalon Recorder is an extension for Google Chrome and Firefox browsers that all
 
 This tool is convenient when you need to quickly make an automated test. Also, tests recorded with Katalon clearly show which methods are responsible for a specific step, which is very useful not only for beginner QA Automation engineers.
 
-<div class="wp-block-group"><div class="wp-block-group__inner-container">Even for experienced testers, this tool will come in handy as creating templates for autotests. In this tutorial, we will show you how to install this tool and to write a simple test.
+Even for experienced testers, this tool will come in handy as creating templates for autotests. In this tutorial, we will show you how to install this tool and to write a simple test.
 
 **In this article, we will demonstrate the installation of Katalon recorder for the Google Chrome browser**.
 
-</div></div>- **Setup**
+**Setup**
 
 Go to Chrome web store, find Katalon Recorder extension and click “Add to Chrome” button
 
@@ -30,7 +30,7 @@ If you click on it, the Katalon Recorder window of the extension will be display
 
 ![](https://lh4.googleusercontent.com/Kvc5c9gSXlNadCzIrG5ellhcwBQOpaTBz947h2p_IaduyRsqQ7yd9xEckc-LOC9AGDsTu2vCfjmhhj_333PjsCD6Ol1jE4TnWpk6dYwTWxArEDVsKquwh3XRbKGgGPO70Bmgf31r)
 
-- **Overview of the features**
+**Overview of the features**
 
 In the upper part of the window there are buttons with the main functions of the plugin.
 
@@ -72,7 +72,7 @@ Log, Screenshots,Variables,Data Driven, Extension Scripts, Reference and Self-he
 
 ![](https://lh4.googleusercontent.com/OFbjcPCT9qmcNgIztwEl_L8YT9JtUGTz6eR6579nDWMFgh2i8fu65ZReduFeWJY_XYHCL4rk_gbjH5iZ9N6QwSYqkIMv2WmKGRmBeaK4k4LVg4OdxGHhnHYU1_4SfpH2aOnf7POy)
 
-- **Test script creation**
+**Test script creation**
 
 Let’s create a simple test that will search for the IssArt blog site on google, follow the link, then go to the QA/Testing section and verify that we are on this page.
 

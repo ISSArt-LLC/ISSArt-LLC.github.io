@@ -44,12 +44,12 @@ And, I must admit, usually new integrations involve certain risks which have to 
 - Reveal conditions that influence on their appearance;
 - To define weakening and reacting strategies.
 
-The weakening strategy should be begun with risks with high probability and serious influence.  
+The weakening strategy should be begun with risks with high probability and serious influence.
 The weakening of these risks can be done through various measures: from hiring a lawyer to writing a prototype. Risk management is an important system of measures which helps you to look at the integration more precisely.
 
 If you have deadlines on integration from this or that system, it’s not absolutely correct. A lot of things in this case depend on third-party system, but not on you. That’s why I recommend you to study integration process (and it doesn’t take 5 minutes, the integration can proceed 2 days or even more), and only after that to put down deadlines.
 
-A significant number of risks is not a reason to abandon the idea of integration.  
+A significant number of risks is not a reason to abandon the idea of integration.
 Overcoming a barrier of risks (that, perhaps, is insuperable for your competitors), let you occupy one of the leading positions on the market.
 
 So, the winner is the one, who works with risks more correctly!
@@ -113,7 +113,7 @@ In order to avoid such issues, you can take the useful practice of incremental s
 
 To control the quality of integration you can use different types of testing. Just as in the situation with the system development and design, at first, you should test requirements with the highest priority, and then – the others. A set of test events can be extensive: from specifications quality control and test design to manual testing, automated testing, load testing and security testing, etc. But the description of different test events is the subject for our other articles.
 
-Do you have any experience in this area?  
+Do you have any experience in this area?
 Which techniques have worked, and which haven’t?
 
 We would be glad, if you share your experiences with us.

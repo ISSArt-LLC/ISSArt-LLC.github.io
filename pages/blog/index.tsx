@@ -2,9 +2,9 @@ import React from 'react';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import CardPost from '../../components/CardPost';
+import CardPost from '../../components/PostListCard';
 import { sortByDate } from '../../utils';
-import { Container, Grid } from '@mui/material';
+import { Grid } from '@mui/material';
 
 export default function Home({ posts }: any) {
   return (

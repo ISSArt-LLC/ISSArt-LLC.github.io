@@ -30,11 +30,11 @@ You can read more about this method in the [complete guide](https://www.blazemet
 
 2\. Using HTTP Request samplers in the script. This solution assumes a higher level of working knowledge of Apache JMeter and in order to implement it it’s necessary to know the HLS protocol, the logic of client server interaction over this protocol and data processing. Here one may think: why do we need to create our own solution when we can simply use HLS sampler? The reason is that in addition to performance related metrics there are some user experience related metrics that have to be taken into account when conducting load testing of HLS services. These metrics are:
 
-- **Buffer fill time** – the time which users should wait before a video starts playing. During this time they get a progress roller and the first few seconds of the video are downloaded. It’s an important metric to check as users may not want to wait minutes for the video to start.
-- **Lag time** – the time a user is waiting for the data to be buffered during the playback. This negatively impacts user experience, so it’s necessary to ensure that lag time is acceptable according to SLA.
-- **Download time** – the time required to download all HLS streams artifacts: playlists and media chunks.
-- **Play time** – real playback time which includes lags.
-- **Lag ratio** – equals to lag time divided by the video total duration.The lower lag time ratio is the better.
+**Buffer fill time** – the time which users should wait before a video starts playing. During this time they get a progress roller and the first few seconds of the video are downloaded. It’s an important metric to check as users may not want to wait minutes for the video to start.
+**Lag time** – the time a user is waiting for the data to be buffered during the playback. This negatively impacts user experience, so it’s necessary to ensure that lag time is acceptable according to SLA.
+**Download time** – the time required to download all HLS streams artifacts: playlists and media chunks.
+**Play time** – real playback time which includes lags.
+**Lag ratio** – equals to lag time divided by the video total duration.The lower lag time ratio is the better.
 
 Also, by this way we’ll have more details about testing process.
 
@@ -57,12 +57,12 @@ class WebsiteTasks(TaskSet):
             "password": ""
         })
 
-&amp;amp;nbsp;
+&amp;nbsp;
 
     @task
     def index(self):
         self.client.get("/")
-        
+      
     @task
     def about(self):
         self.client.get("/about/")
@@ -149,7 +149,7 @@ class UserBehavior(TaskSet):
    @task
    def flow(self):
        # request 1 = Get original playlist
-      
+    
        request_name = 'Get original playlist'
        default_headers(self)
        response = self.client.get("/" + path + "/" + playlistName + ".m3u8", name=request_name).text
@@ -177,7 +177,7 @@ As you can see, the script has become much simpler and smaller. So when we have 
 This part is executed only under the condition that the list of chunks was found in the response of the first request i.e if (chunkListName != “null”). Now we will add the third request, it will be executed as many times as we receive parts in the request No. 2:
 
 ```
-<pre class="brush: python; title: ; notranslate" title="">while j &amp;lt; i:
+<pre class="brush: python; title: ; notranslate" title="">while j < i:
  # request 3 download chunk file
  request_name = 'download chunk file'
  default_headers(self)
@@ -214,7 +214,7 @@ class UserBehavior(TaskSet):
            i = (len(chunkNames))
            j = 0
 
-           while j &amp;lt; i:
+           while j < i:
                # request 3 download chunk file
                request_name = 'download chunk file'
                default_headers(self)
@@ -259,7 +259,7 @@ def write_to_file(file, key, string):
 And we will also write a function for maintaining the inter-thread counter, it is necessary for future calculations:
 
 ```
-<pre class="brush: python; title: ; notranslate" title=""># Modification of common for all threads variable    
+<pre class="brush: python; title: ; notranslate" title=""># Modification of common for all threads variable  
 def global_counter(name, value):
     lock = Lock()
     lock.acquire()
@@ -318,7 +318,7 @@ and after:
                 write_to_file("statistics//RTD.txt", "a", "%.2f\n" % (abs(response_time * 1000))) # open and written text to the end of file
 ```
 
-8\. Combining these parts, we will get files with statistics of interest in the “statistics” folder.  
+8\. Combining these parts, we will get files with statistics of interest in the “statistics” folder.
 9\. For visualization in the form of graphs, we use separate simple scripts. So for request per second it will be:
 
 [pyplot\_RPS.py](https://gitlab.com/mbabilo/hlswithjmeterandlocust/blob/master/pyplot_RPS.py):
@@ -336,7 +336,7 @@ style.use('ggplot')
 
 x,y = np.loadtxt('statistics//RPS.txt', unpack = True, delimiter = ',', skiprows=1)
 
-plt.figure(figsize=(10,7))  
+plt.figure(figsize=(10,7))
 plt.plot(x,y)
 plt.title('RPS [download chunk file]')
 plt.ylabel('requests per second (n/t)')
@@ -371,11 +371,11 @@ step = 500
 j = max(t, key = abs) / step + 1
 
 
-while i &amp;lt; j:
+while i < j:
     for line in t:
-        if (minVal &amp;lt; line &amp;lt; maxVal):
+        if (minVal < line < maxVal):
             counter += 1
-            
+          
     i += 1
     y.append(counter)
     counter = 0
@@ -384,7 +384,7 @@ while i &amp;lt; j:
     maxVal += 500
 
 
-plt.figure(figsize=(j,j/2))        
+plt.figure(figsize=(j,j/2))      
 plt.xticks(x)
 plt.bar(x,y, step)
 plt.title('Response Time Destribution [download chunk file]')
@@ -413,20 +413,20 @@ write_to_file("statistics//RPS.txt", "w+", "timeGetRequest, nowRPS\n")
 write_to_file("statistics//RTD.txt", "w+", "responseTime\n")
 write_to_file("statistics//UX.txt", "w+", "timeGetRequest, bufferFillTime, totalPT, totalDT, totalLT, bytesInBuffer, mediaPT, mediaDT\n")
 
-    
+  
 startTestTime = time.time()
 chunkRPS_gcounter = 0
 
 
 class UserBehavior(TaskSet):
-    
+  
     @task
-    
+  
     def flow(self):
         global chunkRPS_gcounter
 
         # request 1 = Get original playlist
-        
+      
         getStartTime = time.time()
         request_name = 'Get original playlist'
         default_headers(self)
@@ -439,11 +439,11 @@ class UserBehavior(TaskSet):
         mediaPT = 0
         mediaDT = 0
         chunkListName = re.search(r'#EXT-X-STREAM-INF:BANDWIDTH=(.+?),.*RESOLUTION=(.+?)\n(.+?)\.m3u8', response).group(3)
-        
-        
+      
+      
         if (chunkListName != "null"):
             # request 2 = Chunk list request
-           
+         
             request_name = 'Chunk list request'
             default_headers(self)
             response = self.client.get(path + "/" + chunkListName + ".m3u8", name = request_name).text
@@ -453,11 +453,11 @@ class UserBehavior(TaskSet):
             j=0
             bytesInBuffer=0
             totalLT=0
-            
+          
 
-            while j &amp;lt; i:
+            while j < i:
                 # request 3 download chunk file
-                
+              
                 getStartTime = time.time()
                 request_name = 'download chunk file'
                 default_headers(self)
@@ -469,11 +469,11 @@ class UserBehavior(TaskSet):
                 dT = getEndTime - getStartTime
                 mediaPT = mediaPT + float(extinf[j])
                 ###
-                if (bytesInBuffer &amp;lt; bufferSize): bytesInBuffer = bytesInBuffer + dB bufferFillTime = bufferFillTime + dT if(totalLT &amp;gt; 0):
+                if (bytesInBuffer < bufferSize): bytesInBuffer = bytesInBuffer + dB bufferFillTime = bufferFillTime + dT if(totalLT &gt; 0):
                         totalLT = totalLT + dT
                 else:
                     mediaDT = mediaDT + dT
-                    if (1000*mediaPT &amp;lt; mediaDT):
+                    if (1000*mediaPT < mediaDT):
                         totalLT = totalLT + mediaDT - 1000*mediaPT
 			bytesInBuffer = 0
 			mediaPT = 0
@@ -481,20 +481,20 @@ class UserBehavior(TaskSet):
 			
                 totalDT = totalDT + dT
                 totalPT = totalPT + float(extinf[j])
-                
-                
+              
+              
                 response_time = getEndTime - getStartTime
                 timeGetRequest = getEndTime - startTestTime
                 chunkRPS_gcounter = global_counter(chunkRPS_gcounter, 1)
                 nowRPS = chunkRPS_gcounter / timeGetRequest
                 write_to_file("statistics//RPS.txt", "a", "%s, %s \n" % (timeGetRequest, nowRPS)) # open and written text to the end of file
-                write_to_file("statistics//RTD.txt", "a", "%.2f\n" % (abs(response_time * 1000))) # open and written text to the end of file        
+                write_to_file("statistics//RTD.txt", "a", "%.2f\n" % (abs(response_time * 1000))) # open and written text to the end of file      
                 write_to_file("statistics//UX.txt", "a", "%s, %s, %s, %s, %.2f, %s, %s, %s\n" % (timeGetRequest, bufferFillTime, totalPT, totalDT, totalLT, bytesInBuffer, mediaPT, mediaDT)) # open and written text to the end of file
-                
+              
         totalPTLT = 1000*totalPT + totalLT
 	lagTimeRatio = totalLT / totalPTLT
-                
-        
+              
+      
 class WebsiteUser(HttpLocust):
     task_set = UserBehavior
     min_wait = 5000
@@ -604,8 +604,8 @@ Jmeter:
 
 ![](https://issart.com/blog/wp-content/uploads/2019/05/word-image-6.png)
 
-Locust:  
-![](https://issart.com/blog/wp-content/uploads/2019/05/word-image-7.png)  
+Locust:
+![](https://issart.com/blog/wp-content/uploads/2019/05/word-image-7.png)
 Custom solutions for locust (that also can be applied for JMeter):
 
 ![](https://issart.com/blog/wp-content/uploads/2019/05/word-image-8.png)

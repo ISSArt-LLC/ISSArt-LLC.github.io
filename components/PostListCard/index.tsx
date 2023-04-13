@@ -1,14 +1,14 @@
 import Link from "next/link";
 import { slugify } from "../../utils";
 import Image from "next/image";
-import { Avatar, Box, Button, Chip, Stack } from "@mui/material";
+import { Box, Button, Chip, Stack } from "@mui/material";
 import * as React from "react";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 
-export default function CardPost({ post }: any) {
+export default function PostListCard({ post }: any) {
   const date = new Date(post.date);
   return (
     <Card>

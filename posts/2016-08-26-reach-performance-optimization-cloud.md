@@ -26,7 +26,7 @@ For example, infrastructure providers like AWS have demonstrated they can handle
 
 In this article, we’re going to look at some of the challenges of deploying a cloud infrastructure, specifically making sure different components of your system are communicating. Then, we’ll explore some of the tools and solutions that exist for making sure that you optimize your cloud infrastructure.
 
-**The Main Challenge of a Cloud Infrastructure**  
+**The Main Challenge of a Cloud Infrastructure**
 You could probably cite many challenges — like privacy, security, and data ownership — that come with adopting the cloud. For the sake of this article, I’m going to focus only on performance optimization and management.
 
 Poor performance is typically linked to poor application performance. To a user, poor performance is the same as service being unavailable or slow. We all know that poor application performance can cause your organization to lose customers, reduce employee productivity, and reduce the bottom.
@@ -49,8 +49,8 @@ You can pick a client-side or server-side discovery pattern, but either way, you
 
 Some examples of service registries include:
 
-● [Zookeeper](https://zookeeper.apache.org/?utm_source=service-discovery-in-a-microservices-architecture&utm_medium=blog): Originally a sub-project of Hadoop, Zookeeper is a widely used coordination service for distributed applications.  
-● [Etcd](https://coreos.com/etcd/): A distributed, consistent key-value store that is used to share configuration and service discovery. A simple use-case is to store database connection details.  
+● [Zookeeper](https://zookeeper.apache.org/?utm_source=service-discovery-in-a-microservices-architecture&utm_medium=blog): Originally a sub-project of Hadoop, Zookeeper is a widely used coordination service for distributed applications.
+● [Etcd](https://coreos.com/etcd/): A distributed, consistent key-value store that is used to share configuration and service discovery. A simple use-case is to store database connection details.
 ● [Consul](https://www.consul.io/): A distributed, highly available service discovery tool. It allows organizations to gain a high-level awareness into their applications and architecture. It also performs regular health checks to determine service availability.
 
 You might wonder which one is the best. That depends on your organization, but Consul does have an advantage over their competitors.
@@ -65,8 +65,8 @@ Your organization only needs to register services and perform discovery using th
 
 Consul is a distributed, highly available service discovery tool and key value store. Meaning:
 
-● Distributed, Highly available: It just means that Consul runs as a cluster of systems so that it removes any single point of failure.  
-● Service Discovery Tool: This is the biggest advantage to using Consul. It acts as a database containing the network locations of service instances. Part of the service discovery tool is a [health checking component](https://aws.amazon.com/ru/blogs/apn/aws-codedeploy-deployments-with-hashicorp-consul/) that ensures that the provider of a service is working as expected. If it’s not, it routes traffic away from the unhealthy host.  
+● Distributed, Highly available: It just means that Consul runs as a cluster of systems so that it removes any single point of failure.
+● Service Discovery Tool: This is the biggest advantage to using Consul. It acts as a database containing the network locations of service instances. Part of the service discovery tool is a [health checking component](https://aws.amazon.com/ru/blogs/apn/aws-codedeploy-deployments-with-hashicorp-consul/) that ensures that the provider of a service is working as expected. If it’s not, it routes traffic away from the unhealthy host.
 ● Key/Value Store: Flexible key/value store for dynamic configuration, feature flagging, coordination, leader election, and more.
 
 **Conclusion:**

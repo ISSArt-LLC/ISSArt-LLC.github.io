@@ -31,7 +31,7 @@ AI systems make decisions before the driver even knows a decision needs to be ma
 
 In addition, [algorithmic maintenance and repair decisions](https://issart.com/portfolio/cassantec-prognostic-solution/) allow for a high level of availability and performance with significant reductions in cost. This is in stark contrast to traditional, reactive repair processes that often happen after negative impact of downtime is felt.
 
-<figure class="wp-block-image">![](https://lh3.googleusercontent.com/MOtGCwuzldtpinTFcUsDxUtA-3ifdZjwHe5jTnLxTHEd_7RBxF6Zl-QrX0kb2oNkfM8gxT4o6-8K9TjgLnsIlsV_XFinfPdCXLj8nb66kb8hlsma64ab6cOZASv58NPzIpfdfxMO)[Image source](https://s3.amazonaws.com/jwherjkn/landing/img/screenshots/dispatch.png)
+![](https://lh3.googleusercontent.com/MOtGCwuzldtpinTFcUsDxUtA-3ifdZjwHe5jTnLxTHEd_7RBxF6Zl-QrX0kb2oNkfM8gxT4o6-8K9TjgLnsIlsV_XFinfPdCXLj8nb66kb8hlsma64ab6cOZASv58NPzIpfdfxMO)[Image source](https://s3.amazonaws.com/jwherjkn/landing/img/screenshots/dispatch.png)
 
 ## Utilize Virtual Assistants
 
@@ -71,7 +71,7 @@ The sheer volume of goods in the FMCG category is only increasing, and these typ
 
 Smart warehouses, while expensive on the front end, can efficiently use inventory space, the latest technology, and the minimal personnel to do the work, saving costs in the long run.
 
-<figure class="wp-block-image">![](https://lh5.googleusercontent.com/dcrbDh2dfUs1VnismJhoyA2qxOV5xCxXA60ICLvkXYhTxMaNpcZAio6Ew0bYOLAQWGIlHKuzlFqpBG_vVbJ_A5vZvJgU-iy0JRc3rZ7-wnqTXI3aOReuW7GXKeA6L7ro5xx5nec8)[Image source](https://www.logistiek.nl/warehousing/artikel/2018/03/met-autostore-kan-beekman-verder-groeien-101162848)
+![](https://lh5.googleusercontent.com/dcrbDh2dfUs1VnismJhoyA2qxOV5xCxXA60ICLvkXYhTxMaNpcZAio6Ew0bYOLAQWGIlHKuzlFqpBG_vVbJ_A5vZvJgU-iy0JRc3rZ7-wnqTXI3aOReuW7GXKeA6L7ro5xx5nec8)[Image source](https://www.logistiek.nl/warehousing/artikel/2018/03/met-autostore-kan-beekman-verder-groeien-101162848)
 
 ## Autonomous Vehicles
 

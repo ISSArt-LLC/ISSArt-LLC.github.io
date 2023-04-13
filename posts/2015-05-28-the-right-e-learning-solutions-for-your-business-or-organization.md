@@ -32,14 +32,14 @@ There are many benefits to E-learning, as the diagram below suggests:
 
 The benefits E-learning provides to the students and/or employees are obvious. Some of the many benefits include:
 
-- ***Mobility*** – Classes can be accessed anytime and anywhere, so it is easy to fit into a busy lifestyle. It also reduces travel time.
-- ***Cost effective*** – For the organization giving the class, it is more economical than an onsite course. In addition, it also saves on travel expense.
-- ***Timely*** – The course can be updated quickly should any information need to be revised due to industry and/or compliance updates.
-- ***Large groups*** – E-learning is a simple way to teach a large group.
-- ***Effective*** – This type of learning can be very effective, and works well with different types of learning styles.
-- ***Ecofriendly*** – Since the classes are entirely online, it saves paper and other resources that can be harmful to the environment.
-- ***Increased retention*** – E-learning is a very effective teaching format because it [reduces cognitive overload](http://elearningindustry.com/5-ways-to-reduce-cognitive-load-in-elearning). This means that students and employees will retain the information much better.
-- ***Helps competitiveness*** – A [recent report](http://elearningindustry.com/4-effective-gamification-strategies-for-corporate-training) suggests that approximately 72% of companies stated that E-learning has been an integral part of helping them keep up to date with compliance and other industry issues.
+***Mobility*** – Classes can be accessed anytime and anywhere, so it is easy to fit into a busy lifestyle. It also reduces travel time.
+***Cost effective*** – For the organization giving the class, it is more economical than an onsite course. In addition, it also saves on travel expense.
+***Timely*** – The course can be updated quickly should any information need to be revised due to industry and/or compliance updates.
+***Large groups*** – E-learning is a simple way to teach a large group.
+***Effective*** – This type of learning can be very effective, and works well with different types of learning styles.
+***Ecofriendly*** – Since the classes are entirely online, it saves paper and other resources that can be harmful to the environment.
+***Increased retention*** – E-learning is a very effective teaching format because it [reduces cognitive overload](http://elearningindustry.com/5-ways-to-reduce-cognitive-load-in-elearning). This means that students and employees will retain the information much better.
+***Helps competitiveness*** – A [recent report](http://elearningindustry.com/4-effective-gamification-strategies-for-corporate-training) suggests that approximately 72% of companies stated that E-learning has been an integral part of helping them keep up to date with compliance and other industry issues.
 
 The graph below gives an excellent example of the cost effectiveness of an E-learning class versus an instructor-led class.
 

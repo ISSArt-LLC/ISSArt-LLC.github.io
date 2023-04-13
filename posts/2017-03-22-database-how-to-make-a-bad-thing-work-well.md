@@ -24,19 +24,19 @@ If you consider the possibility of splitting the code between the database manag
 
 ### If It Ain’t Broke, Don’t Fix It
 
-That’s why when the team encountered an issue where to place the business logic on another large project, it seemed there could not be two opinions – only the server.  
-![](/static/img/2017/03/Do-Not-Fix.png)  
+That’s why when the team encountered an issue where to place the business logic on another large project, it seemed there could not be two opinions – only the server.
+![](/static/img/2017/03/Do-Not-Fix.png)
 The project, alongside the other solutions, also suggested the integration with major music providers, such as [Apple Music](http://www.apple.com/music/) or [Spotify](https://www.spotify.com/int/why-not-available/). Also there was supposed to be the functionality enabling data matching for tracks, albums and artists received from different providers. Storage formats and implicit assumptions made by providers made us be thinking hard how to use the available data effectively. Anyway, the solution was found, formalized and implemented on the server side.
 
 ### A Good Beginning Is Half The Battle
 
-![](/static/img/2017/03/Dia05.jpg)  
+![](/static/img/2017/03/Dia05.jpg)
 As the load testing time approached, it turned out that its matching velocity left much to be desired. Engineers started discussing possible ways to optimize the code, whereas the project delivery deadline was approaching. It is worth mentioning that the matching functional was intended for gradual data income, but at the beginning of work a large amount of customer’s data was to be processed. Considering the factors received while load testing, the process could have taken days, or even weeks, which was completely unacceptable.
 
 ### We Need To Go Deeper
 
-Having studied the work of the algorithm that was using complex heuristics and a large amount of metadata we came to a conclusion that it was database interaction that created a bottleneck. It was logical to transfer the data matching to the database. Regardless the complexity of the algorithm, it did not require advanced structures usage and massive calculations, which made the amount of expressive means of the database management system sufficient.  
-![](/static/img/2017/03/godeeper.jpg)  
+Having studied the work of the algorithm that was using complex heuristics and a large amount of metadata we came to a conclusion that it was database interaction that created a bottleneck. It was logical to transfer the data matching to the database. Regardless the complexity of the algorithm, it did not require advanced structures usage and massive calculations, which made the amount of expressive means of the database management system sufficient.
+![](/static/img/2017/03/godeeper.jpg)
 Several elegant SQL-requests allowed reducing the initial data matching time to several hours. Besides, when using intermediate results to analyse the effectiveness of each algorithm stage it became possible to improve the matching algorithm.
 
 Scripts which were used to match the data in their turn became a prototype for stored procedures that encapsulated the matching algorithm.

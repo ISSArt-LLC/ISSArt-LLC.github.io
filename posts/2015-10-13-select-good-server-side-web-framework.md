@@ -103,30 +103,30 @@ As an option, we can define an “expected exception” class for a framework to
 ```
 <pre style="font-size: .8em">
 public class WebException extends Exception {
-    
+  
     public WebException() {
         this(null);
     }
-    
+  
     public WebException(String message) {
         this(message, null);
     }
-    
+  
     public WebException(Throwable cause) {
         this(null, cause);
     }
-    
+  
     public WebException(String message, Throwable cause) {
         super(message, cause);
     }
-    
+  
     // override this method to extend the output
     public Map<string object=""> toJson() {
         Map<string object=""> json = new HashMap();
         json.put("error", getType());
         return json;
     }
-    
+  
     protected String getType() {
         return getClass().getName();
     }
@@ -178,7 +178,7 @@ In this approach, handler is a method and it is invoked somewhere inside invokeH
 @Path("/account")
 @RequestScoped
 public class AccountResource {
-    
+  
     @GET
     @Path("/emaillist")
     @Produces({MediaType.APPLICATION_JSON})
@@ -198,7 +198,7 @@ To extract common logic, you should register a request filter and a response fil
 <pre style="font-size: .8em">
 @Authenticated
 public class AuthenticatedRequestFilter implements ContainerRequestFilter {
-    
+  
     @Override
     public void filter(ContainerRequestContext requestContext)
             throws IOException {
@@ -211,7 +211,7 @@ public class AuthenticatedRequestFilter implements ContainerRequestFilter {
 
 @Json
 public class JsonResponseFilter implements ContainerResponseFilter {
-    
+  
     @Override
     public void filter(ContainerRequestContext requestContext,
             ContainerResponseContext responseContext) {
@@ -223,7 +223,7 @@ public class JsonResponseFilter implements ContainerResponseFilter {
 @Path("/account")
 @RequestScoped
 public class AccountResource {
-    
+  
     @GET
     @Path("/emaillist")
     @Produces({MediaType.APPLICATION_JSON})
@@ -255,25 +255,25 @@ where callback is an arbitrary command. For example, in Jersey, we can do someth
 ```
 <pre style="font-size: .8em">
 public interface AuthenticatedResourceCallback {
-    
+  
     Response call();
 }
 
 public abstract class AuthenticatedResource {
-    
+  
     private String ticket;
-    
+  
     @CookieParam("ticket")
     public void setCookieTicket(String value) {
         ticket = value;
     }
-    
+  
     private Account account;
-    
+  
     protected Account getAccount() {
         return account;
     }
-    
+  
     protected Response authenticated(AuthenticatedResourceCallback callback) {
         Session session = SessionService.getSession(ticket);
         account = AccountService.getAccount(session.getAccountId());
@@ -289,13 +289,13 @@ As of now, we can inherit a final resource from AuthenticatedResource and utiliz
 @Path("/account")
 @RequestScoped
 public class AccountResource extends AuthenticatedResource {
-    
+  
     @GET
     @Path("/emaillist")
     @Produces({MediaType.APPLICATION_JSON})
     public Response getAccountEmails() {
         return authenticated(new AuthenticatedResourceCallback() {
-            
+          
             @Override
             public Response call() {
                 List<email> emails = EmailService.getEmails(getAccount());
@@ -314,7 +314,7 @@ With Scala, I’ve managed to simplify syntax quite a bit:
 @Path("/account")
 @RequestScoped
 class AccountResource extends AuthenticatedResource {
-    
+  
     @GET
     @Path("/emaillist")
     @Produces({MediaType.APPLICATION_JSON})
@@ -335,18 +335,18 @@ Let’s forget about Jersey constraints and look at the previous code from anoth
 <pre style="font-size: .8em">
 @RequestScoped
 public abstract class Resource {
-    
+  
     @Inject protected HttpServletRequest request;
     @Inject protected HttpServletResponse response;
     @Inject @RequestParameters protected Map<String, String[]> params;
-    
+  
     public abstract void process() throws ServletException, IOException;
 }
 
 public abstract class AuthenticatedResource extends Resource {
-    
+  
     private Account account;
-    
+  
     @Override
     public final void process() throws ServletException, IOException {
         String ticket = params.get("ticket")[0].value();
@@ -354,17 +354,17 @@ public abstract class AuthenticatedResource extends Resource {
         account = AccountService.getAccount(session.getAccountId());
         processAuthenticated();
     }
-    
+  
     protected abstract void processAuthenticated()
             throws ServletException, IOException;
-    
+  
     protected Account getAccount() {
         return account;
     }
 }
 
 public class AccountResource extends AuthenticatedResource {
-    
+  
     @Override
     protected void processAuthenticated()
             throws ServletException, IOException {
@@ -384,12 +384,12 @@ So, what is better: Filter, Decorator or Template Method? I’m convinced that D
 ```
 <pre style="font-size: .8em">
 public abstract class JsonResource extends Resource {
-    
+  
     private static final Logger log =
             LoggerFactory.getLogger(WebResourceTransaction.class);
-    
+  
     @Inject private ObjectMapper objectMapper = null;
-    
+  
     @Override
     public final void process() throws ServletException, IOException {
         Transaction tx = DB.startTransaction();
@@ -415,7 +415,7 @@ public abstract class JsonResource extends Resource {
         response.setCharacterEncoding("utf-8");
         response.getWriter().print(objectMapper.writeValueAsString(json));
     }
-    
+  
     protected abstract Object processJson() throws WebException;
 }
 ```

@@ -23,13 +23,13 @@ Clutch analysts interviewed many of our clients to gather their honest comments 
 
 “ISS Art is very professional, stays on top of the project, and delivers on time. “
 
-**Jason Pullar  
+**Jason Pullar
 IT Manager, Critical Control Energy Services Inc.**
 
 “The app helped our clients and raised the profile of my business. The last app that ISS Art worked on was successful; it still generates income seven years later.”
 
-**Mark Grant  
-Director, Trauma &amp; Pain Management Service**
+**Mark Grant
+Director, Trauma & Pain Management Service**
 
 “They’re excellent, and put a lot of effort into management. If I need something right away, they do their best to make it happen quickly. If there’s an emergency, they stop everything to fix it.”
 
