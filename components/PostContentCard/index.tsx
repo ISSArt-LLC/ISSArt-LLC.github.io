@@ -32,14 +32,25 @@ export default function PostContentCard({
       </Typography>
       <div className="post-image">
         <Box display="flex" justifyContent="center" alignItems="center">
-          <Image
-            src={
-              frontmatter?.image ? frontmatter.image : "/assets/images/logo.jpg"
-            }
-            alt=""
-            width="250"
-            height="250"
-          />
+          <Box
+            sx={{
+              height: 250,
+              width: { xs: "100%", md: "50%" },
+              position: "relative",
+              margin: 5,
+            }}
+          >
+            <Image
+              src={
+                frontmatter?.image
+                  ? frontmatter.image
+                  : "/assets/images/logo.jpg"
+              }
+              alt=""
+              fill
+              objectFit="contain"
+            />
+          </Box>
         </Box>
       </div>
       <Stack direction="row" spacing={1}>

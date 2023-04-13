@@ -23,19 +23,26 @@ export default function CardPost({ post }: any) {
           {`${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`} by{" "}
           {post.author}
         </Typography>
-        <Box display="flex" justifyContent="center" alignItems="center">
-          <Link href={`/blog/post/${post.slug}`}>
-            <Box>
+        <Link href={`/blog/post/${post.slug}`}>
+          <Box display="flex" justifyContent="center" alignItems="center">
+            <Box
+              sx={{
+                height: 250,
+                width: "100%",
+                position: "relative",
+                margin: 5,
+              }}
+            >
               <Image
                 src={post.image ? post.image : "/assets/images/logo.jpg"}
                 alt=""
-                width="250"
-                height="250"
-                // fill
+                fill
+                objectFit="contain"
               />
             </Box>
-          </Link>
-        </Box>
+          </Box>
+        </Link>
+
         <Stack direction="row" spacing={1} flexWrap="wrap" useFlexGap>
           {post.tags
             ? post.tags.map((tag: string) => {
