@@ -9,7 +9,7 @@ categories:
 tags:
     - christmas
     - 'it companies'
-    - 'Microsoft's ugly sweaters'
+    - 'Microsoft ugly sweaters'
     - 'Nutanix SaaS game'
     - 'Santa uses MongoDB'
 ---

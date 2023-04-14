@@ -1,6 +1,6 @@
 ---
 id: 1850
-title: 'Outsourcing: Pros and Cons of Working on Customer's Site'
+title: "Outsourcing: Pros and Cons of Working on Customer's Site"
 date: '2016-09-09T19:27:18+08:00'
 author: 'Yulia Bulakhova'
 layout: post

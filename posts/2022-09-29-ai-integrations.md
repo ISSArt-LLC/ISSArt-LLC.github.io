@@ -3,7 +3,7 @@ id: 3917
 title: 'AI integrations, still actual?'
 date: '2022-09-29T17:32:12+08:00'
 author: 'Andrew Naibauer'
-excerpt: 'It's been five years since ISS Art agency started to focus on AI software solutions development and integrations. This is a great time to look back and think whether this trend in custom software development is still relevant or we should completely go into something more trendy like web3 or back to classic web/mobile development focus.'
+excerpt: "It's been five years since ISS Art agency started to focus on AI software solutions development and integrations. This is a great time to look back and think whether this trend in custom software development is still relevant or we should completely go into something more trendy like web3 or back to classic web/mobile development focus."
 layout: post
 image: /static/img/2022/09/для-статьи-в-блоге.png
 categories:
