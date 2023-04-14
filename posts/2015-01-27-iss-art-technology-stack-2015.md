@@ -13,10 +13,9 @@ New technologies appear every day, and we try to stay in step with this tendency
 
 The table below shows our main technology stack in 2013 and 2014 years and our plans about what to try in 2015.
 
-201320142015
-
-| PHP framework | [Zend 1](http://framework.zend.com/) | [Zend 1](http://framework.zend.com/) + **[Doctrine](http://www.doctrine-project.org/)** | **[Symfony](http://symfony.com/)** + **[Doctrine 2](http://www.doctrine-project.org/)** |
+| Stack / Year | 2013 | 2014 | 2015
 |---|---|---|---|
+| PHP framework | [Zend 1](http://framework.zend.com/) | [Zend 1](http://framework.zend.com/) + **[Doctrine](http://www.doctrine-project.org/)** | **[Symfony](http://symfony.com/)** + **[Doctrine 2](http://www.doctrine-project.org/)** |
 | [Java](https://www.issart.com/en/lp/java-development-team/) framework | [Restlet](http://restlet.com/products/restlet-framework/) | [Restlet](http://restlet.com/products/restlet-framework/) | **[Spring](http://projects.spring.io/spring-framework/)** |
 | Client language | [JavaScript](http://en.wikipedia.org/wiki/JavaScript) | [JavaScript](http://en.wikipedia.org/wiki/JavaScript) | **[TypeScript](http://www.typescriptlang.org/)** |
 | Client framework | [jWidget](http://enepomnyaschih.github.io/jwidget/) | [jWidget](http://enepomnyaschih.github.io/jwidget/), **[AngularJS](https://angularjs.org/)** | [jWidget](http://enepomnyaschih.github.io/jwidget/) + **[ReactJS](http://facebook.github.io/react/)** |

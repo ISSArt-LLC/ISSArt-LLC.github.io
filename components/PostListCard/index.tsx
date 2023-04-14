@@ -7,6 +7,7 @@ import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
+import DateFormatter from "../DateFromatter";
 
 export default function PostListCard({ post }: any) {
   const date = new Date(post.date);
@@ -20,7 +21,7 @@ export default function PostListCard({ post }: any) {
           {post.categories ? `Categories: ` + post.categories.join(", ") : ""}
         </Typography>
         <Typography variant="body1" color="text.secondary">
-          {`${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`} by{" "}
+          <DateFormatter dateString={post.date} /> by{" "}
           {post.author}
         </Typography>
         <Link href={`/blog/post/${post.slug}`}>

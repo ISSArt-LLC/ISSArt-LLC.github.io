@@ -4,7 +4,7 @@ title: 'How to Make Collaboration Between Software Testers and Analysts More Eff
 date: '2018-05-10T17:54:40+08:00'
 author: 'Yulia Shepeleva'
 layout: post
-image: /static/img/2018/05/Dollarphotoclub_76801219-700x465.jpg
+image: /static/img/2018/05/Dollarphotoclub_76801219.jpg
 categories:
     - QA/Testing
 tags:

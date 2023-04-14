@@ -30,9 +30,9 @@ The main tasks that can be solved by WebRTC:
 - MediaStream;
 - RTCPeerConnection.
 
-There is one simple example of using getUserMedia (sharing video from your device camera to tag <video>):
+There is one simple example of using getUserMedia (sharing video from your device camera to tag `<video>`):
 
-```
+```js
 var constraints = {video: true};
 function successCallback(stream) {
  var video = document.querySelector("video");
@@ -45,7 +45,7 @@ In the example you can see calling getUserMedia function with two arguments. The
 
 One more example (your device screen sharing):
 
-```
+```js
 var constraints = {
    video: {
       mandatory: {
@@ -60,7 +60,7 @@ Looks good? Of course!!!
 
 A different story is **peer to peer connection**. We'd like to provide you one example to illustrate how we can use it:
 
-```
+```js
 pc = new  RTCPeerConnection(null);
 pc.onaddstream = gotRemoteStream;
 pc.addStream(localStream);
@@ -83,7 +83,7 @@ This method has a lot of issues and one of them is how to create infrastructure 
 
 (Code examples from Google I/O 13)
 
-[![68747470733a2f2f7374617469632e6f70656e746f6b2e636f6d2f696d672f70726573732f6c6f676f5f6f70656e746f6b5f726567697374657265642e706e67](/static/img/2016/01/68747470733a2f2f7374617469632e6f70656e746f6b2e636f6d2f696d672f70726573732f6c6f676f5f6f70656e746f6b5f726567697374657265642e706e67-300x90.png)](/static/img/2016/01/68747470733a2f2f7374617469632e6f70656e746f6b2e636f6d2f696d672f70726573732f6c6f676f5f6f70656e746f6b5f726567697374657265642e706e67.png)
+[![68747470733a2f2f7374617469632e6f70656e746f6b2e636f6d2f696d672f70726573732f6c6f676f5f6f70656e746f6b5f726567697374657265642e706e67](/static/img/2016/01/68747470733a2f2f7374617469632e6f70656e746f6b2e636f6d2f696d672f70726573732f6c6f676f5f6f70656e746f6b5f726567697374657265642e706e67.png)](/static/img/2016/01/68747470733a2f2f7374617469632e6f70656e746f6b2e636f6d2f696d672f70726573732f6c6f676f5f6f70656e746f6b5f726567697374657265642e706e67.png)
 
 **Opentok:**
 
@@ -91,7 +91,7 @@ In one of our projects we used OpenTok – service which provides infrastructure
 
 The OpenTok PHP SDK enables you to generate sessions and tokens for OpenTok applications. Here is an example that shows how to get sessionID and token in PHP:
 
-```
+```php
 use OpenTok\OpenTok;
 use OpenTok\MediaMode;
 use OpenTok\Session;
@@ -108,7 +108,7 @@ $token = $opentok->generateToken($sessionId);
 
 We use session and token to create a chat in browser (through JavaScript). At the moment, we are creating connection on JavaScript with session and token giving from OpenTok API:
 
-```
+```js
 var session = OT.initSession(apiKey, sessionId);
 session.connect(token, function(error) {
 // If the connection is successful, initialize a publisher and publish to the session

@@ -55,7 +55,9 @@ npx playwright show-report
 
 This command will open the default browser on the "http://localhost:9323" report URL and display results for passing 2 tests in 3 browsers – Chromium, Firefox, WebKit – 6 tests in total.
 
-![](/static/img/2023/04/3.png)These two tests are placed in the **"example.spec.ts"** file, the configuration for the test run is placed in **"playwright.config.ts"** file in which we can configure Playwright to specify browsers to run tests. The report URL page contains clickable links for each of 6 tests – passed or failed. We can click on each link to view all steps of every test with time spent for each test operation in the Typescript code.
+![](/static/img/2023/04/3.png)
+
+These two tests are placed in the **"example.spec.ts"** file, the configuration for the test run is placed in **"playwright.config.ts"** file in which we can configure Playwright to specify browsers to run tests. The report URL page contains clickable links for each of 6 tests – passed or failed. We can click on each link to view all steps of every test with time spent for each test operation in the Typescript code.
 
 The **"playwright.config.ts"** file is called the Global [configuration file](https://playwright.dev/docs/test-configuration). It provides many options to run Playwright end-to-end tests: timeouts, baseURLs, browsers, mode headless or headful, time zones, permissions, geolocations, etc. – all the features adjusted for the test from the Playwright tool developers.
 
@@ -71,7 +73,9 @@ Windows or Mac OS systems. Install VS code to follow test examples in this artic
 
 ## **Running and debugging tests in the Visual Studio Code**
 
-![](/static/img/2023/04/5.png)Open the **"playwright"** folder in VS Code and the default Playwright structure of the folder and files will be displayed. Let's open the **"example.spec.ts"** file – we can see 2 tests in it:**'has title'** and **'get started link'**. Playwright extension allows you to run any of these tests by clicking the "Run" button from the left column near the rows numbers.
+![](/static/img/2023/04/5.png)
+
+Open the **"playwright"** folder in VS Code and the default Playwright structure of the folder and files will be displayed. Let's open the **"example.spec.ts"** file – we can see 2 tests in it:**'has title'** and **'get started link'**. Playwright extension allows you to run any of these tests by clicking the "Run" button from the left column near the rows numbers.
 
 Open the "Testing" menu on the left bar of the VS Code, all the tests from the **"tests"** folder will be displayed in the "Test Explorer". This "Testing" menu displays main "Playwright" features for test execution: "Show browser" checkbox, "Pick locator", "Record new", "Record at cursor", "Reveal test output".
 
@@ -115,25 +119,35 @@ It will help you create new accounts without clicking the confirmation link in t
 
 MantisBT installation site path could be found in Mantis. Click Manage – Site information:
 
-![](/static/img/2023/04/11.png)## **Creation of a UI test with the Playwright test recorder**
+![](/static/img/2023/04/11.png)
+
+## **Creation of a UI test with the Playwright test recorder**
 
 As it is declared above, Playwright gives us an opportunity to record interactions with a web application under a test using an internal test recorder and then to generate ready-to-run (or edit/refactor) code for tests. Let's create a first recorded test in Playwright for adding a new user with a developer role in the MantisBT application and verification that the created user will be able to login to Mantis.
 
 In VS Code click on the "Record new" button in the "Testing" menu. Playwright will create a new **"test-1.spec.ts"** file with default **'test'** and the message, that the "codegen" is started. "Codegen" is the core module of the Playwright Test Generator.
 
-![](/static/img/2023/04/12.png)In a few moments Playwright will open the browser window (which you set up as default for the Playwright extension), and then you need to execute each step of the test scenario manually. Fortunately, we need to pass all the testing steps once only, and then, after recording is stopped, we will get a new recorded code for the test.
+![](/static/img/2023/04/12.png)
+
+In a few moments Playwright will open the browser window (which you set up as default for the Playwright extension), and then you need to execute each step of the test scenario manually. Fortunately, we need to pass all the testing steps once only, and then, after recording is stopped, we will get a new recorded code for the test.
 
 Open the MantisBT application in the browser tab and click into the "Username" field, which is highlighted with a pink color by the Playwright test recorder. Clicks on the web elements of the page return locators for all web elements you are working with and place them into the code of the test being recorded.
 
-![](/static/img/2023/04/13.png)Authenticate in Mantis under the name of "administrator and the password which was defined during the installation of Mantis. After that navigate to the manage section and then to the manage users tab. Create a new user with the developer role, confirming the empty password.
+![](/static/img/2023/04/13.png)
+
+Authenticate in Mantis under the name of "administrator and the password which was defined during the installation of Mantis. After that navigate to the manage section and then to the manage users tab. Create a new user with the developer role, confirming the empty password.
 
 After the new user is created, leave the application and authenticate in it again, but under a newly created user, using an empty password. Set up a new password in the user's account page and authenticate again in the application with the same user, using the created password. This is the use case. For the new user we set the name "developer1".
 
 Now, we can close the browser window and stop the test recording using the "Cancel" button in the bottom right of codegen window.
 
-![](/static/img/2023/04/14.png)And finally, don't forget to select and click Save All in VS Code from the File menu. The recorded test code will look like in this screenshot:
+![](/static/img/2023/04/14.png)
 
-![](/static/img/2023/04/15.png)All the steps of this test have been recorded in this [video](https://drive.google.com/file/d/141jR5Qe9Uo9Ew4mf6wdoBqik8qM80KGX/view?usp=share_link).
+And finally, don't forget to select and click Save All in VS Code from the File menu. The recorded test code will look like in this screenshot:
+
+![](/static/img/2023/04/15.png)
+
+All the steps of this test have been recorded in this [video](https://drive.google.com/file/d/141jR5Qe9Uo9Ew4mf6wdoBqik8qM80KGX/view?usp=share_link).
 
 ## **Running the recorded test in the Playwright**
 
@@ -153,7 +167,9 @@ Tracking the test code will help you greatly in debugging and checking the execu
 
 Open again the **"test-add-new-developer.spec.ts"** file and press the "Run" button in the left column near the rows numbers.
 
-![](/static/img/2023/04/16.png)As we have already created the "developer1" user, MantisBT returns an error during the test run, that's why the steps where a new user has the empty password can't be passed. As a result test execution is frozen on this line:
+![](/static/img/2023/04/16.png)
+
+As we have already created the "developer1" user, MantisBT returns an error during the test run, that's why the steps where a new user has the empty password can't be passed. As a result test execution is frozen on this line:
 
 ```js
 await page.getByRole('link', { name: 'developer1 ( Developer1 Name )' }).click();
@@ -167,9 +183,13 @@ npx playwright show-report
 
 Test trace details will show, all the steps executed and error message, that the "developer1" user already exists:
 
-![](/static/img/2023/04/18.png)The last recorded line from the test is the line where "developer1" cannot login with the empty password.
+![](/static/img/2023/04/18.png)
 
-![](/static/img/2023/04/19.png)Let's fix this recorded test to create a user with a unique name. We need to replace "developer1" to "developer2" string in the **"test-add-new-developer.spec.ts"** file using VS Code. Use "Edit" – "Replace" – "Replace All" operation to make the replacement and save the changed file. Run again the **'Test Add a new Developer'** test and it will pass. Now, we need to refactor this test code to get an opportunity to create a new "developer" user without any manual "Replace All" operations.
+The last recorded line from the test is the line where "developer1" cannot login with the empty password.
+
+![](/static/img/2023/04/19.png)
+
+Let's fix this recorded test to create a user with a unique name. We need to replace "developer1" to "developer2" string in the **"test-add-new-developer.spec.ts"** file using VS Code. Use "Edit" – "Replace" – "Replace All" operation to make the replacement and save the changed file. Run again the **'Test Add a new Developer'** test and it will pass. Now, we need to refactor this test code to get an opportunity to create a new "developer" user without any manual "Replace All" operations.
 
 All steps to run recorded test are shown in this [video](https://drive.google.com/file/d/1UGGbD7yd6dxV44UiXPg_nDZlf30qVKfc/view?usp=share_link)
 
@@ -221,9 +241,9 @@ MANTISBT_ADMIN_PASS='PswA123456_'
 MANTISBT_DEVELOPER_PASS='123456′
 ```
 
-They are the values used in the test. Сhange MANTISBT_URL, MANTISBT_ADMIN_PASS, MANTISBT_DEVELOPER_PASS variables, if you use different ones for your MantisBT installation and refactored test code file.
+They are the values used in the test. Сhange `MANTISBT_URL`, `MANTISBT_ADMIN_PASS`, `MANTISBT_DEVELOPER_PASS` variables, if you use different ones for your MantisBT installation and refactored test code file.
 
-Our goal is to refactor the previous **"test-add-new-developer.spec.ts"** file so that we would be able to run the test multiple times with environment variables from the **.env **file. In the demo for this article, we don't plan to use complex object-oriented programming (OOP) structure in the refactoring, but in most cases using OOP architecture is highly recommended for automation with Playwright. It often happens in real testing projects. Let's describe the main sections of code in the new file **"test-add-new-developer-refactored.spec.ts"**.
+Our goal is to refactor the previous **"test-add-new-developer.spec.ts"** file so that we would be able to run the test multiple times with environment variables from the **.env** file. In the demo for this article, we don't plan to use complex object-oriented programming (OOP) structure in the refactoring, but in most cases using OOP architecture is highly recommended for automation with Playwright. It often happens in real testing projects. Let's describe the main sections of code in the new file **"test-add-new-developer-refactored.spec.ts"**.
 
 1. Import of external modules for Playwright tests
 
@@ -320,16 +340,24 @@ test.afterAll(async () => {
 ```
 
 After you finish editing the **"test-add-new-developer-refactored.spec.ts"** file, don't forget to save all changes. Now we can run this test multiple times and every time the test will pass, because a new developer with a unique name will be created for each test run. Press the "Run" button for **'Test Add a new Developer Refactored**' test. Run this test twice, then in the "Testing" menu in VS Code click on the "Reveal test output" sub-menu to view all "stdout" output messages that we sent in our test using "console.log" method. These values are similar to:
-Developer name:developer-1677239757968*
+`Developer name:developer-1677239757968*`
 Copy and paste to show test report: npx playwright show-report*
 
-![](/static/img/2023/04/20.png)Last message will help us copy and paste the Playwright command to show a test run report. Paste this command to the "bash" section of Terminal windows in VS Code to view the test report.
+![](/static/img/2023/04/20.png)
 
-![](/static/img/2023/04/21.png)Playwright opens the report with a recorded trace of test steps, where we can see all of them.
+Last message will help us copy and paste the Playwright command to show a test run report. Paste this command to the "bash" section of Terminal windows in VS Code to view the test report.
 
-![](/static/img/2023/04/22.png)To check that all new "developers" have been created with **'Test Add a new Developer Refactored'**, authorize with "administrator" username and open the "Manage Users" tab to view all users of MantisBT.
+![](/static/img/2023/04/21.png)
 
-![](/static/img/2023/04/23.png)All details for **'Test Add a new Developer Refactored'** run are available in this [video](https://drive.google.com/file/d/1zGCvjA67Hh16-AKnl3HNdrcqinngn5ol/view?usp=share_link)**.**
+Playwright opens the report with a recorded trace of test steps, where we can see all of them.
+
+![](/static/img/2023/04/22.png)
+
+To check that all new "developers" have been created with **'Test Add a new Developer Refactored'**, authorize with "administrator" username and open the "Manage Users" tab to view all users of MantisBT.
+
+![](/static/img/2023/04/23.png)
+
+All details for **'Test Add a new Developer Refactored'** run are available in this [video](https://drive.google.com/file/d/1zGCvjA67Hh16-AKnl3HNdrcqinngn5ol/view?usp=share_link)**.**
 
 ## **Creation of the test for adding a new project and assigning it** 
 **to a user**
@@ -357,13 +385,13 @@ Code in **"test-add-project-assign-to-developer-refactored.spec.ts"** is present
 import { test, Page, expect } from '@playwright/test';
 // Read environment variables from .env file*
 const {
-    MANTISBT_URL: URL = ",*
-    MANTISBT_LOGIN_PAGE: LOGIN_PAGE = ",* 
-    MANTISBT_ADMIN_LOGIN: ADMIN_LOGIN = ",*
-    MANTISBT_ADMIN_PASS: ADMIN_PASS = ",*
-    MANTISBT_DEVELOPER_PASS: DEVELOPER_PASS = ",*
-    MANTISBT_EXISTING_DEVELOPER: EXISTING_DEVELOPER = ",*
-    MANTISBT_EXISTING_DEVELOPER_REAL_NAME: EXISTING_DEVELOPER_REAL_NAME = ",
+    MANTISBT_URL: URL = '',
+    MANTISBT_LOGIN_PAGE: LOGIN_PAGE = '',
+    MANTISBT_ADMIN_LOGIN: ADMIN_LOGIN = '',
+    MANTISBT_ADMIN_PASS: ADMIN_PASS = '',
+    MANTISBT_DEVELOPER_PASS: DEVELOPER_PASS = '',
+    MANTISBT_EXISTING_DEVELOPER: EXISTING_DEVELOPER = '',
+    MANTISBT_EXISTING_DEVELOPER_REAL_NAME: EXISTING_DEVELOPER_REAL_NAME = '',
 } = process.env
 ```
 

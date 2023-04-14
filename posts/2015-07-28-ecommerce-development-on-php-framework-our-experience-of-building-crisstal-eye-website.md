@@ -93,6 +93,6 @@ This was our experience that proved that eCommerce development on PHP framework 
 Have you utilized PHP frameworks for your eCommerce projects? What were the results? Feel free to share your thoughts in comments!
 
 **References**
-\[1\] <http://www.slideshare.net/NidhiVasavda/the-many-advantages-of-symfony-framework-21098094>
-\[2\] <http://www.symfonydriven.com/news/advantages-using-symfony-framework>
-\[3\] <http://www.sitepoint.com/11-reasons-to-use-twitter-bootstrap/>
+[1] <http://www.slideshare.net/NidhiVasavda/the-many-advantages-of-symfony-framework-21098094>
+[2] <http://www.symfonydriven.com/news/advantages-using-symfony-framework>
+[3] <http://www.sitepoint.com/11-reasons-to-use-twitter-bootstrap/>

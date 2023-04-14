@@ -11,7 +11,7 @@ categories:
 
 This cool JS snippet implements enumerations for JS:
 
-```
+```js
 function makeEnum(idField, indexField) {
   idField = idField || 'id';
   indexField = indexField || 'index';
@@ -64,14 +64,14 @@ This code is inspired by TypeScript enumeration implementation, however, it is n
 
 Essentially, enumeration is an array of all items. Therefore, all methods of Array class are applicable to enumeration: [<tt>forEach</tt>](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [<tt>filter</tt>](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter), [<tt>map</tt>](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) etc. In addition, makeEnum function extends the enumeration array with the next properties/methods:
 
-- \[id\], .get(id) – get enumeration item by id
+- [id], .get(id) – get enumeration item by id
 - .dict – pure dictionary from item id to an item
 - .register – registers a new item
 - .mapDict – helper mapping method (see description above)
 
 Here's enumeration example:
 
-```
+```js
 // Define enumeration item class.
 function Outcome(id, color) {
   this.id = id; // String, enumeration key
@@ -108,7 +108,7 @@ OutcomeEnum.compute = function(dueDate, estimatedDate) {
 
 Let's review various use cases:
 
-```
+```js
 // Parse outcome from JSON.
 var outcome = OutcomeEnum[json.outcome];
 

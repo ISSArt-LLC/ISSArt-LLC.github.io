@@ -27,7 +27,7 @@ And let me explain you what do I mean by this.
 
 Assume you have an HTTP handler to retrieve user's email list. I'll use pseudo code. Error handling and other supplying code is thrown away to keep things simple.
 
-```
+```java
 
 final Response getAccountEmails(Request request) {
     String ticket = request.getCookie("ticket");
@@ -41,7 +41,7 @@ final Response getAccountEmails(Request request) {
 
 Just to clarify, in this snippet, JsonUtils.success builds the next JSON object:
 
-```
+```json
 
 {
     "success": true,
@@ -53,7 +53,7 @@ Just to clarify, in this snippet, JsonUtils.success builds the next JSON object:
 
 At some point, I've noticed that authentication logic and response formatting code should be copied to other handler methods over and over again. I've decided to extract all this duplicating burden to some kind of utility. In a dream World, final handler implementation should look like this:
 
-```
+```java
 
 final Object getAccountEmails(Request request, Account account) {
     return EmailService.getEmails(account);
@@ -76,7 +76,7 @@ Applying a common response format (e.g. JSON) should be easy. We want to do this
 
 If resource throws an exception, Web framework must catch it and handle appropriately. If this is an unexpected exception (null reference exception or something like this), framework must log the stack trace to a file and return the next JSON object in response:
 
-```
+```json
 
 {
     "success": false,
@@ -86,7 +86,7 @@ If resource throws an exception, Web framework must catch it and handle appropri
 
 If this is some expected exception, I should be able to specify the data to deliver in output:
 
-```
+```json
 
 {
     "success": false,
@@ -100,7 +100,7 @@ This allows JS to display a user-friendly error message like "Spreadsheet is inv
 
 As an option, we can define an "expected exception" class for a framework to handle it in a special way:
 
-```
+```java
 
 public class WebException extends Exception {
   
@@ -138,7 +138,7 @@ public class WebException extends Exception {
 
 Each request should be handled in scope of database transaction. So, if handling fails, all modifications should be reverted back automatically. Of course, this approach has its downsides, but I think that its advantages beat the downsides, so I prefer to stick to it.
 
-```
+```java
 
 final void createCompany(Request request) {
     String companyName = request.getParam("companyname");
@@ -161,7 +161,7 @@ There are three common approaches that let you involve such features in a Web fr
 
 To add some features, you inject your code to some particular places. Schematically, it can be represented with the next code:
 
-```
+```java
 
 public Response handleRequest(Request request) {
     invokeRequestFilters(request);
@@ -173,7 +173,7 @@ public Response handleRequest(Request request) {
 
 In this approach, handler is a method and it is invoked somewhere inside invokeHandler. Let me demonstrate you how it looks in [Jersey](https://jersey.java.net/). Assume you have the next resource class:
 
-```
+```java
 
 @Path("/account")
 @RequestScoped
@@ -189,12 +189,12 @@ public class AccountResource {
         return Response.ok(JsonUtils.success(emails)).build();
     }
 }
-</email>
+
 ```
 
 To extract common logic, you should register a request filter and a response filter.
 
-```
+```java
 
 @Authenticated
 public class AuthenticatedRequestFilter implements ContainerRequestFilter {
@@ -234,7 +234,7 @@ public class AccountResource {
         return Response.ok(emails).build();
     }
 }
-</email>
+
 ```
 
 I never compiled this code but I hope you got the idea. For exact Jersey syntax see [documentation](https://jersey.java.net/documentation/latest/filters-and-interceptors.html).
@@ -243,7 +243,7 @@ I never compiled this code but I hope you got the idea. For exact Jersey syntax 
 
 In contrast to Filter, Decorator allows you to decide where you want to invoke a handler method. You implement a handler method which wraps some abstract method inside it.
 
-```
+```java
 
 public Response handleRequest(Request request, Callback callback) {
     // any code which calls 'callback' inside
@@ -252,7 +252,7 @@ public Response handleRequest(Request request, Callback callback) {
 
 where callback is an arbitrary command. For example, in Jersey, we can do something like this:
 
-```
+```java
 
 public interface AuthenticatedResourceCallback {
   
@@ -284,7 +284,7 @@ public abstract class AuthenticatedResource {
 
 As of now, we can inherit a final resource from AuthenticatedResource and utilize "authenticated" method.
 
-```
+```java
 
 @Path("/account")
 @RequestScoped
@@ -304,12 +304,11 @@ public class AccountResource extends AuthenticatedResource {
         });
     }
 }
-</email>
 ```
 
 With Scala, I've managed to simplify syntax quite a bit:
 
-```
+```java
 
 @Path("/account")
 @RequestScoped
@@ -331,7 +330,7 @@ Ain't Scala cool? But, unfortunately, our customer doesn't want to use Scala at 
 
 Let's forget about Jersey constraints and look at the previous code from another side. What if we create a separate class for every HTTP handler and use OOD approach to get things done?
 
-```
+```java
 
 @RequestScoped
 public abstract class Resource {
@@ -372,7 +371,6 @@ public class AccountResource extends AuthenticatedResource {
         response.getWriter().print(JsonUtils.toJson(emails));
     }
 }
-</email>
 ```
 
 Looks more intuitive, doesn't it?
@@ -381,7 +379,7 @@ Looks more intuitive, doesn't it?
 
 So, what is better: Filter, Decorator or Template Method? I'm convinced that Decorator and Template Method are much better than Filter because they don't constrain you as much. You are free to add as many abstract/callback methods as you want, modify their semantics, and call them at any step of the algorithm. You would never be able to do anything like this with Filters:
 
-```
+```java
 
 public abstract class JsonResource extends Resource {
   

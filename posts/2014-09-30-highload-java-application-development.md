@@ -19,7 +19,7 @@ Say one of your competitors wants to court a wider audience by providing a basic
 
 Highload Java application development involves a wide range of Java-based strategies that allow programmers to create richer apps, which can then perform better under user pressure. By applying these principles throughout the development process, it becomes possible to create solutions that handle transients more ably.
 
-### ![Picture of API that is pixelated and embossed.](/static/img/2014/10/highload-Java-application-development-api-300x193.jpg)
+### ![Picture of API that is pixelated and embossed.](/static/img/2014/10/highload-Java-application-development-api.jpg)
 
 ### Why Use Highload Java Application Development?
 

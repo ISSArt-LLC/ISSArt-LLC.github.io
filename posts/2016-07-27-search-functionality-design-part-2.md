@@ -50,7 +50,7 @@ Returning to the example with the projects and catalogues (see [Part 1](https://
 
 We have the following Key-Document schema:
 
-```
+```json
 {
     id : "key",
     creation_time : "timestamp",
@@ -82,15 +82,19 @@ Let's see the example of the English analyzer.
 
 The phrase 'Night and day' contains 3 terms, as 'and' is the stop-word, the analyzed phrase will be:
 
+```
 night -> pos 0
 day -> pos 2
+```
 
 The search by the phrase taking into account the terms order, i.e it compares the positions in the query and the document. It uses the maximum allowed difference between the terms position in the query phrase and the original phrase (slop).
 
 Thus, if you search by the phrase 'Night day':
 
+```
 night -> pos 0
 day -> pos 1
+```
 
 then 'Night and day' can match the phrase 'Night day' (because 'day' follows 'night'), if the slop isn't 0.
 

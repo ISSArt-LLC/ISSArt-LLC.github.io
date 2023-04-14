@@ -5,7 +5,6 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
-import BlockingScript from '../components/BlockingScript';
 import { ThemeProvider } from '@mui/system';
 import customTheme from '../styles/theme/customTheme';
 import Layout from '../components/Layout';
@@ -41,7 +40,6 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name='msapplication-TileColor' content='#2d89ef' />
         <meta name='theme-color' content='#ffffff' />
       </Head>
-      <BlockingScript />
       <ThemeProvider theme={customTheme}>
         <Layout>
           <Container>

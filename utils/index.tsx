@@ -7,5 +7,5 @@ export function slugify(title: string) {
     .toLowerCase()
     .trim()
     .replace(/[^\w ]+/g, '')
-    .replace(/ +/g, '-');
+    .replace(/ +/g, '-')
 }

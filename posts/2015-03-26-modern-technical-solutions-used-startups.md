@@ -39,7 +39,7 @@ Monitoring sensors have been used for a long time and for a variety uses, such a
 
 ### Real-Time Bidding (RTB)
 
-![Modern Technical Solutions That Are Used By Startups eCommerce Cart](/static/img/2015/03/small-ecommerce-shopping-cart-150x150.png)The RTB market has been growing rapidly and for the next few years to come, it looks to get even stronger. While some publishers are trying to fight this trend, there is no denying RTB delivers efficiency and value to advertisers who are looking to maximize results. According to [reportsnreports.com](http://www.reportsnreports.com/reports/316414-global-rtb-market-2015-2019.html), the RTB market is on the edge of exploding with an anticipated increase of just under 42% from 2015-2019.
+![Modern Technical Solutions That Are Used By Startups eCommerce Cart](/static/img/2015/03/small-ecommerce-shopping-cart.png)The RTB market has been growing rapidly and for the next few years to come, it looks to get even stronger. While some publishers are trying to fight this trend, there is no denying RTB delivers efficiency and value to advertisers who are looking to maximize results. According to [reportsnreports.com](http://www.reportsnreports.com/reports/316414-global-rtb-market-2015-2019.html), the RTB market is on the edge of exploding with an anticipated increase of just under 42% from 2015-2019.
 
 ### Augmented Reality
 
@@ -63,7 +63,7 @@ Before venturing into app development for a new technological advancement, it is
 
 ### Develop a Prototype
 
-![Technology Tree Modern Technical Solutions That Are Used By Startups](/static/img/2015/03/technology-tree-300x199.jpg)Develop a working prototype first, so you can see the app function in real time and have something real to test. You want to build a prototype in the least expensive way possible, but having a prototype of your app that you can use to test and show will save you an endless amount of money and time when you start to design the actual app for release.
+![Technology Tree Modern Technical Solutions That Are Used By Startups](/static/img/2015/03/technology-tree.jpg)Develop a working prototype first, so you can see the app function in real time and have something real to test. You want to build a prototype in the least expensive way possible, but having a prototype of your app that you can use to test and show will save you an endless amount of money and time when you start to design the actual app for release.
 
 ### Make the UI Perfect
 

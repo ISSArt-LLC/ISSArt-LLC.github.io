@@ -15,7 +15,7 @@ The demand for database management systems that store, allow access and transfer
 
 Wikibon.org published the results of a study last year that showed the total revenue of the [Big Data market in 2012](http://wikibon.org/wiki/v/Big_Data_Vendor_Revenue_and_Market_Forecast_2012-2017) at just under $12 billion. That is certainly a big number, but that is nothing compared to the projected 2017 total revenue of over $47 billion! That works out to an increase of somewhere around just over 60% per year, staggering figures. All of that leads to a much more complicated problem for businesses and data management system developers.
 
-![](https://issart.com/blog/wp-content/uploads/2014/12/Total-Revenue-of-Big-Data-market-in-2012.jpg)
+![](/static/img/2014/12/Total-Revenue-of-Big-Data-market-in-2012.jpg)
 
 Source: [Wikibon.org 2013](http://wikibon.org/wiki/v/Big_Data_Vendor_Revenue_and_Market_Forecast_2012-2017)
 

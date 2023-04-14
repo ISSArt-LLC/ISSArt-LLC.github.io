@@ -14,15 +14,15 @@ This article is dedicated to our experience in Amazon S3 and Symfony 2 integrati
 
 Let's start with the required bundles installation:
 
-```
-composer require vich/uploader-bundle
-composer require liip/imagine-bundle
-composer require knplabs/gaufrette
+```bash
+$ composer require vich/uploader-bundle
+$ composer require liip/imagine-bundle
+$ composer require knplabs/gaufrette
 ```
 
 In AppKernel.php we add the following lines:
 
-```
+```php
 new Knp\Bundle\GaufretteBundle\KnpGaufretteBundle(),
 new Vich\UploaderBundle\VichUploaderBundle(),
 new Liip\ImagineBundle\LiipImagineBundle()
@@ -32,7 +32,7 @@ new Liip\ImagineBundle\LiipImagineBundle()
 
 *parameter.yml:*
 
-```
+```yml
 aws_key: %aws_key_%
 aws_secret_key: %aws_secret_key_%
 aws_region: %aws_region_%
@@ -41,7 +41,7 @@ aws_s3_bucket: %aws_s3_bucket_%
 
 *config.yml:*
 
-```
+```yml
 #KnpGaufretteBundle:
 knp_gaufrette:
 stream_wrapper: ~
@@ -83,7 +83,7 @@ thumbnail: { size: [50, 50], mode: inset }
 ```
 
 *services.xml:*
-```
+```xml
 #Initialize the client to work with cloud S3:
 <service id="client.s3" class="Aws\S3\S3Client" factory-method="factory" factory-class="Aws\S3\S3Client">
 <argument type="collection">
@@ -94,7 +94,7 @@ thumbnail: { size: [50, 50], mode: inset }
 </service>
 ```
 
-```
+```xml
 #This service will be uploading the resized images to S3:
 <service id="app.imagine.cache.resolver.amazon_s3" class="Liip\ImagineBundle\Imagine\Cache\Resolver\AwsS3Resolver">
 <argument type="service" id="client.s3"/>
@@ -103,7 +103,7 @@ thumbnail: { size: [50, 50], mode: inset }
 </service>
 ```
 
-```
+```xml
 #To download source images from Amazon add the following service:
 <service id="app.liip_imagine.binary.loader.stream.remote" class="ABundle\Service\RemoteStreamLoader">
 <tag name="liip_imagine.binary.loader" loader="stream.remote"/>
@@ -113,7 +113,7 @@ thumbnail: { size: [50, 50], mode: inset }
 
 *ABundle\\Service\\RemoteStreamLoader:*
 
-```
+```php
 namespace ABundle\Service;
 use Liip\ImagineBundle\Binary\Loader\LoaderInterface;
 use Imagine\Image\ImagineInterface;
@@ -147,7 +147,7 @@ return $this->imagine->load(file_get_contents($path));
 
 Now we can describe the entity class and attach the image to it (pay attention to the annotations Vich\\UploaderBundle\\Mapping\\Annotation):
 
-```
+```php
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
@@ -179,7 +179,7 @@ protected $pictureName;
 
 There is a form class for the image (notice: for uploading use the standard field "file"):
 
-```
+```php
 namespace ABundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -205,14 +205,14 @@ Moreover, we configured Liip so that it keeps resized images in S3.
 
 Display the image in Twig template:
 
-```
+```php
 {{ vich_uploader_asset(entity, 'picture') | imagine_filter('50x50') }}
 ```
 
 So, we are moving in the right direction. However, a problem may arise if user files are sizable (for example, + 2 MB). The connection will fail before image resizing is completed. In this case you won't see your image. That's why you should "warm up" Liip cache (upload all resized images to Amazon S3) in advance by command:
 
-```
-php app/console liip:imagine:cache:resolve --filters=50x50 --filters=36x36
+```bash
+$ php app/console liip:imagine:cache:resolve --filters=50x50 --filters=36x36
 ```
 
 **Congrats! Now we can store the original and resized pictures on the Amazon S3!**

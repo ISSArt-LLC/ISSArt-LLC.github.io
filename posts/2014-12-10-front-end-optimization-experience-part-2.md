@@ -101,7 +101,7 @@ Ok, we've made a lot of good stuff in JS part of the application and a browser s
 
 There is a well-known solution of XML parsing without necessity to keep the entire XML document in the memory, called [SAX Parser](http://en.wikipedia.org/wiki/Simple_API_for_XML). We've decided to implement something similar to that for JSON formatting. Instead of keeping the entire JSON object in the memory, we'll be writing the data chunks to the file right away. So, we'll only keep a single chunk of data in the memory at every point in time. To do that, we've implemented a couple of PHP classes which help us to keep the JSON output valid: JsonArrayWriter and JsonObjectWriter.
 
-With JsonArrayWriter, we just put the array items to the file one by one, and it automatically appends the special symbols ("\[", "," and "\]") to give us a valid JSON array in the output. Example:
+With JsonArrayWriter, we just put the array items to the file one by one, and it automatically appends the special symbols ("[", "," and "]") to give us a valid JSON array in the output. Example:
 
 ```js
 $file = fopen($path, 'w');

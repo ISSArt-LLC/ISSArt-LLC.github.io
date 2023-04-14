@@ -76,7 +76,7 @@ So how does the highly anticipated iPhone 7 match up to its nearest Android comp
 
 Samsung Galaxy S7 (image from Samsung)
 
-![Motorola Droid Turbo 2 comparison to iPhone 7](/static/img/2016/04/5-300x169.jpg)
+![Motorola Droid Turbo 2 comparison to iPhone 7](/static/img/2016/04/5.jpg)
 
 Motorola Droid Turbo 2 (from PCMag.com)
 

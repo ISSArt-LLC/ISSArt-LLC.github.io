@@ -19,7 +19,7 @@ They work together pretty well, and there is a [plenty](http://stackoverflow.com
 
 Just to clear things out, we've defined a dream class of HTTP resource that we wanted to work with and that we wanted to inherit other resources from.
 
-```
+```java
 
 package com.myapp.servlet.resource;
 
@@ -48,7 +48,7 @@ Granularity is the key. One Resource instance is created and called to process a
 
 Sample resource class.
 
-```
+```java
 
 package com.cassantec.frontend.servlet.resource;
 
@@ -70,7 +70,7 @@ We're going to use this InvalidRequestResource as a default resource for all req
 
 Now we need to somehow make this work. Here's a universal class of servlet that allows you to register such request-scoped resources in your Guice module with ease.
 
-```
+```java
 
 package com.myapp.servlet;
 
@@ -124,7 +124,7 @@ In this snippet Guice magic happens: **it turns out that Guice Injector register
 
 So, ScopedServlet's constructor takes two arguments: a resource class to process GET requests, and a resource class to process POST requests. To make this work, we must use instance bindings.
 
-```
+```java
 
 package com.myapp.servlet;
 

@@ -33,63 +33,53 @@ If you have an independent model, you can implement or wrap any representation o
 
 There are some more questions we should answer before starting the implementation:
 
-1. The representation can be complex, however, an entire object is flat. When you join 2 tables, for example, the result is still the flat table. Of course, you can transform this result set to the more complex structure, however, this transformation is not a part of the data access layer. The data access layer should not be responsible for the final representation. Therefore, the code like ```
+1. The representation can be complex, however, an entire object is flat. When you join 2 tables, for example, the result is still the flat table. Of course, you can transform this result set to the more complex structure, however, this transformation is not a part of the data access layer. The data access layer should not be responsible for the final representation. Therefore, the code like instead:
+```java
     public class ModelA {
         ...;
         public List<ModelB> listOfB() {
             return this.listOfB;
         }
     }
-    ```
+
+    //is not acceptable to use in the data access layer.
+
+    //You should have something like
   
-    is not acceptable to use in the data access layer.
-  
-    You should have something like
-  
-    ```
     public class ModelA {
         ...;
     }
-    ```
   
-    ```
     public class ModelB {
-    ```
-  
-    ```
         ...
         AId refenebceToA() {...}
     }
-    ```
-  
-    ```
+
     public class ModelBDao {
-    ```
-  
-    ```
         ...
         List<ModelB> byA(ModelA a) {...}
     }
-    ```
-  
-    instead.
+```
+
 2. Mutable objects do not conform SOLID. Thus, all data representing objects should be *immutable*.
-3. Multi valued fields compromise. Generally this: ```
+
+3. Multi valued fields compromise. Generally this:
+```java
     public class ModelA {
         ...;
         Collection<String> strings() { return this.strings; }
     }
-    ```
+```
   
-    makes A mutable, but sometimes you need to read the multiple values.
+makes A mutable, but sometimes you need to read the multiple values.
   
-    Depending on your situation it is possible to declare this method returning read-only collection clearly. Or you can return something like rx.Observable<String> or Stream<String> here. Upon the whole, it should be obvious that the returning value is *immutable*.
+Depending on your situation it is possible to declare this method returning read-only collection clearly. Or you can return something like rx.Observable<String> or Stream<String> here. Upon the whole, it should be obvious that the returning value is *immutable*.
 
 If you agree with above statements let's move to the whole example.
 
 ### Field
 
-```
+```java
 public class Field {
     public final String name;
     public final String typedef;
@@ -116,14 +106,14 @@ In the example I will simplify the type definition just as the string, however, 
 
 ### Value
 
-```
+```java
 public interface Value {
     boolean conform(Field field); //this method isn't mandatory, but it can be used for the validation
     Object value();
 }
 ```
 
-```
+```java
 abstract class TypedValue implements Value {
 
     protected final String typedef;
@@ -149,7 +139,7 @@ abstract class TypedValue implements Value {
 
 We implement all desirable primitive values. For example,
 
-```
+```java
 public final class DateTimeValue extends TypedValue {
 
     private final LocalDateTime value;
@@ -173,7 +163,7 @@ public final class DateTimeValue extends TypedValue {
 }
 ```
 
-```
+```java
 public final class StringArrayValue extends TypedValue {
 
     private final String[] value;
@@ -203,7 +193,7 @@ Depending on your needs you can set up the type resolution for serialization/des
 
 I usually use the [mix-in](https://github.com/FasterXML/jackson-docs/wiki/JacksonMixInAnnotations) approach to keep the models clean.
 
-```
+```java
 @JsonTypeInfo(use = JsonTypeInfo.Id.CUSTOM,
     include = JsonTypeInfo.As.EXISTING_PROPERTY,
     property = ResponseFieldNames.TYPE_DEF,
@@ -249,7 +239,7 @@ public abstract class ValueMixIn {
 
 To set up the types resolution you should implement the TypeIdResolver interface. The below code can be a point to start with.
 
-```
+```java
 public class ValueTypeIdResolver extends TypeIdResolverBase {
     private JavaType baseType;
     @Override
@@ -304,7 +294,7 @@ public class ValueTypeIdResolver extends TypeIdResolverBase {
 }
 ```
 
-```
+```java
 public enum ValueType {
     INT(IntValue.class),
     LONG(LongValue.class),
@@ -358,7 +348,7 @@ public enum ValueType {
 
 Then depending on your needs you can extend the Value interface. For example, if you need to write a passed value in the database you can do something like this:
 
-```
+```java
 public class Schema {
     private final String name;
     private final Field[] fields;
@@ -412,9 +402,7 @@ public class Dao {
                 pos ++;
             }
             return ps.executeUpdate();
-```
-
-```
+        ...
         } catch (//handle the transaction correctly) {...}
     }
  }
@@ -428,7 +416,7 @@ public class Dao {
 
 Finally, you will split the difficult transactions when you need to update some related objects together into the small steps executed one by one. For example,
 
-```
+```java
 ... somewhere in the code ...
 Dao dao = ...;
 Connection transaction = ...;
@@ -454,7 +442,7 @@ Or, it can be a NoSQL database. Perhaps, you will need to define the identity in
 
 Depending on the technology you need or do not need to specify the identity of the document.
 
-```
+```java
 Map<Key, Value> entity = ...
 Map<String, Object> docSource = entity.entrySet().stream()
     .collect(Collectors.toMap(Map.Entry::getKey, en -> en.getValue().value()));

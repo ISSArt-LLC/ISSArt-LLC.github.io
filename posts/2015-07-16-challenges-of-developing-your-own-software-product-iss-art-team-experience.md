@@ -62,12 +62,6 @@ During software development when business requirements are constantly changing, 
 - write documentation for each version of the product and select options (entities of the system, typical sections) that are common for every version
 - develop and put into place a process for such situations, when documentation should be changed. Starting from the last version analyst gives detailed description in CR (Change request) itself and the final version of the documentation is provided in format of test cases.
 
-#### We need your opinion!
-
-Although we've managed to achieve what we've planned for the project launch, we are still working on further improvements. And this is where you help is welcome – we'll appreciate it if you let us know which features looks appealing for you by taking part in our poll.
-
-\[polldaddy poll="8824753″\]
-
 ### Conclusion
 
 These were the challenges that we have faced while working on CrISStal Eye system. Of course, every case is individual, and any working on any other product may avoid these difficulties and/or may involve another issues.

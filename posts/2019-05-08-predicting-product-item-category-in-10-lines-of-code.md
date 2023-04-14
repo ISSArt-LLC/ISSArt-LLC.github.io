@@ -79,7 +79,7 @@ On this stage, we will use python scraping professional's two best friends: [req
 
 Now we can fetch an html page with **requests**
 
-```
+```python
 # Import stuff.
 import requests
 from bs4 import BeautifulSoup
@@ -102,7 +102,7 @@ Let's examine DOM tree to find some clues for fetching this data.
 
 As we can see the data we need is stored in a child of *div* with id *wayfinding-breadcrumbs_feature_div*. And the particular category information lies in the links. So we have to find the breadcrumbs node, find all the links there and extract the content from them. This is how it looks like in the code.
 
-```
+```python
 breadcrumbs_node = soup.find('div', id='wayfinding-breadcrumbs_feature_div')
 categories = [a.get_text().strip() for a in breadcrumbs_node.find_all('a')]
 
@@ -122,7 +122,7 @@ We have successfully predicted a category for a given item without doing any tim
 
 ## Full code
 
-```
+```python
 import requests
 from bs4 import BeautifulSoup
 from googlesearch import search

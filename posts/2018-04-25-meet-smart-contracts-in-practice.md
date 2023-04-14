@@ -26,7 +26,7 @@ We will start with creating a very simple contract from scratch in the sandbox, 
 
 Let's create a new contract by clicking on Plus button in the upper left corner. We will name it 'forest.sol'. This is a simple contract that allows users to sponsor tree planting, so let's name it 'Forest'. The author of the contract sets the price of planting one tree. When a user sends Ether to this contract, we will increase the number of trees that this user sponsored. The author can get Ether that was sent by sponsors. Also there is an opportunity to see the contribution of each user. 
 
-```
+```js
 pragma solidity ^0.4.21;
 contract Forest {    
     uint256 public treeCost;    
@@ -84,7 +84,7 @@ These functions show how to send Ether to contact and vice versa, change contrac
 
 Before running a contract in Remix we should compile it – in the left toolbar select "compile" tab and click on the button "Start to compile". Next step is a contract deployment. To deploy contract, switch to the tab "Run", fill input field "_treeCost" below the contract name and click on "Create" button.
 
-[![](/static/img/2018/04/contract_run_params-300x221.png)](/static/img/2018/04/contract_run_params.png)
+[![](/static/img/2018/04/contract_run_params.png)](/static/img/2018/04/contract_run_params.png)
 
 After it you will see a created contract block.
 
@@ -100,7 +100,7 @@ Every contract that has been deployed to Ethereum has an address, like any user'
 
 Let's create a new contract "checker.sol" with this code:
 
-```
+```js
 pragma solidity ^0.4.21;
 import "browser/forest.sol";
 
@@ -131,7 +131,7 @@ At the previous step we successfully connected to test network, but we used Meta
 
 To do this, we need to install one of Ethereum clients. We will use the most common client – Geth. Go to [website](https://geth.ethereum.org/downloads/) and choose your operating system. In this article we are using Ubuntu 16.04, we have installed it from the package manager:
 
-```
+```bash
 sudo add-apt-repository -y ppa:ethereum/ethereum
 sudo apt-get update
 sudo apt-get install ethereum
@@ -139,7 +139,7 @@ sudo apt-get install ethereum
 
 After installing Geth we can run it. By default Geth connects to the main network and without RPC. So run it with these arguments:
 
-```
+```bash
 geth --rpcapi personal,db,eth,net,web3 --rpc --testnet --fast
 ```
 
@@ -151,13 +151,13 @@ Now we have 2 contracts and a working Ethereum node. And we want to communicate 
 
 To start working with Ethereum node, we will create a web3j object with default parameters:
 
-```
+```js
 Web3j web3 = Web3j.build(new HttpService());
 ```
 
 The first thing that we can do with it is to check connection by getting the node version:
 
-```
+```js
 Web3ClientVersion web3ClientVersion = web3.web3ClientVersion().send();
 String clientVersion = web3ClientVersion.getWeb3ClientVersion();
 ```
@@ -172,10 +172,10 @@ Geth/v1.8.2-stable-b8b9f7f4/linux-amd64/go1.9.4
 
 Next step is to read some useful data from Ethereum. So let's check the balance of our wallet, that we created in MetaMask. To get the balance you need to know its address and you can get it from MetaMask plugin by copying it to the clipboard.
 
-[![](/static/img/2018/04/get-wallet-address-277x300.png)](/static/img/2018/04/get-wallet-address.png)
+[![](/static/img/2018/04/get-wallet-address.png)](/static/img/2018/04/get-wallet-address.png)
 
 ```
-Request<?, EthGetBalance> getBalanceRequest = web3.ethGetBalance("0x5E2966E536414867Ff9D8804718000229960d15F", DefaultBlockParameterName.<i>LATEST</i>);
+Request<?, EthGetBalance> getBalanceRequest = web3.ethGetBalance("0x5E2966E536414867Ff9D8804718000229960d15F", DefaultBlockParameterName.    LATEST);
 EthGetBalance ethGetBalance = getBalanceRequest.send();
 BigInteger balance = ethGetBalance.getBalance();
 ```
@@ -200,31 +200,31 @@ It will generate in src/main/solidity/resources 2 files: bin and abi.
 
 To generate wrappers you can run this code:
 
-```
-SolidityFunctionWrapperGenerator.<i>main</i>(Arrays.<i>asList</i>(
-   "src/main/solidity/resources/forest.bin", <i>// binary file location</i>
-<i>   </i>"src/main/solidity/resources/forest.abi", <i>// abi file location</i>
-<i>   </i>"-o", "src/main/java", <i>// place to store generated wrapper</i>
-<i>   </i>"-p", "com.issart.blog.ethereum.wrappers") <i>// package name for generated class</i>
-<i>   </i>.toArray(new String[]{}));
+```js
+SolidityFunctionWrapperGenerator.main(Arrays.asList(
+    "src/main/solidity/resources/forest.bin", // binary file location
+    "src/main/solidity/resources/forest.abi", // abi file location
+    "-o", "src/main/java", // place to store generated wrapper
+    "-p", "com.issart.blog.ethereum.wrappers") // package name for generated class
+    .toArray(new String[]{}));
 ```
 
 This will generate class Forest for your contract, so now we can deploy a new contract to the test Ethereum network. To do so we need an account, which will be the sender of transactions. We will create credentials object by providing accounts private key:
 
 ```
-Credentials credentials = Credentials.<i>create</i>("7777744a213b2c35997c29b481ff091c54a18aed6d688d23f3662856cd5d5bfe");
+Credentials credentials = Credentials.create("7777744a213b2c35997c29b481ff091c54a18aed6d688d23f3662856cd5d5bfe");
 ```
 
 To deploy a new contract you can run this code:
 
-```
-Forest forest = Forest.<i>deploy</i>(
-   web3, <i>// configuration object</i>
-<i>   </i>credentials, <i>// account credentials</i>
-<i>   </i>new BigInteger("30000000000"), <i>// gas price</i>
-<i>   </i>new BigInteger("2000000"), <i>// gas limit</i>
-<i>   </i>new BigInteger("2000")) <i>// tree cost - parameter of our contract</i>
-<i>   </i>.send();
+```js
+Forest forest = Forest.deploy(
+    web3, // configuration object
+    credentials, // account credentials
+    new BigInteger("30000000000"), // gas price
+    new BigInteger("2000000"), // gas limit
+    new BigInteger("2000")) // tree cost - parameter of our contract
+    .send();
 String contractAddress = forest.getContractAddress();
 ```
 
@@ -236,18 +236,18 @@ Tree cost is sent as a parameter to contracts constructor.
 
 It takes some time to add a contract to blockchain. After completion we will get a contract object and have to save its address. So next time we can load this contract like this:
 
-```
-<i>Forest forest = Forest.load(</i>
-<i>   </i><i>"0x23948a7057929b5e9036a7faf0ceeb6499c2ddff"</i><i>, // contract address</i>
-<i>   web3,</i>
-<i>   credentials,</i>
-<i>   </i><i>new </i><i>BigInteger(</i><i>"</i>30000000000<i>"</i><i>), // gas price</i>
-<i>   </i><i>new </i><i>BigInteger(</i><i>"</i>2000000<i>"</i><i>)); // gas limit</i>
+```js
+Forest forest = Forest.load(
+    "0x23948a7057929b5e9036a7faf0ceeb6499c2ddff", // contract address
+    web3,
+    credentials,
+    new BigInteger("30000000000"), // gas price
+    new BigInteger("2000000")); // gas limit
 ```
 
 Now we can perform operations on this contract. Let's make our contribution to planting trees (change the address to your account address):
 
-```
+```js
 forest.getSponsorContribution("0x5E2966E536414867Ff9D8804718000229960d15F").send()
 ```
 
@@ -255,7 +255,7 @@ It will return 0, because we haven't called addTree yet.
 
 So try adding a tree:
 
-```
+```js
 forest.addTree(new BigInteger("2000")).send()
 ```
 

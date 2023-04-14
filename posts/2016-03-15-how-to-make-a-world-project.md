@@ -22,9 +22,9 @@ There is a common thing in every big solution. What is it?
 
 For example, the invention of the printing press allowed people to share the information intensively, the invention of the radio solved the problem of wireless information transfer. Penicillin was the first effective solution against the bacterial infections distress. The invention of airbags has saved a lot of human lives in car crashes.
 
-<div class="wp-caption aligncenter" id="attachment_1641" style="width: 650px">[![A great project requires a great goal. Great goal of the project is people's need.](/static/img/2016/03/640px-2011-05-10_18-57-46_Switzerland_-_Wil.jpg)](/static/img/2016/03/640px-2011-05-10_18-57-46_Switzerland_-_Wil.jpg)One of the most powerful people's needs is energy, which is highly demanded and now mostly supplied by the limited resources
+[![A great project requires a great goal. Great goal of the project is people's need.](/static/img/2016/03/640px-2011-05-10_18-57-46_Switzerland_-_Wil.jpg)](/static/img/2016/03/640px-2011-05-10_18-57-46_Switzerland_-_Wil.jpg)One of the most powerful people's needs is energy, which is highly demanded and now mostly supplied by the limited resources
 
-</div>All these inventions are similar in at least the following parameters:
+All these inventions are similar in at least the following parameters:
 
 1. they solved the complex problems;
 2. the big solutions in the history positively solved the big people's needs.

@@ -46,33 +46,35 @@ The first three deployment tools require us to install and setup Ruby or Python 
 
 **Let's try to deploy our Symfony2 application to production server using Deployer.**
 
-- First of all, install Deployer. It could be done by using Composer, by downloading deployer.phar file or by cloning Github repository. We'll use the first approach. ```
-    $ composer require deployer/deployer:~3.0
-    ```
-- Second step is to create deploy.php file in your project's root directory. ```
-    <?php
-    require 'vendor/deployer/deployer/recipe/symfony.php'; 
+- First of all, install Deployer. It could be done by using Composer, by downloading deployer.phar file or by cloning Github repository. We'll use the first approach.
+```bash
+$ composer require deployer/deployer:~3.0
+```
+- Second step is to create deploy.php file in your project's root directory.
+```php
+<?php
+require 'vendor/deployer/deployer/recipe/symfony.php'; 
 
-    // Define a server for deployment.
-    // Let's name it "prod".
-    server('prod', '127.0.0.1')
-        ->user('user') // Defind SSH username
-        ->password('password') // Define SSH user's password
-        ->stage('production') // Define stage name
-        ->env('deploy_path', '/home/user/project'); // Define the base path to deploy your project to.
+// Define a server for deployment.
+// Let's name it "prod".
+server('prod', '127.0.0.1')
+    ->user('user') // Defind SSH username
+    ->password('password') // Define SSH user's password
+    ->stage('production') // Define stage name
+    ->env('deploy_path', '/home/user/project'); // Define the base path to deploy your project to.
 
-    // Specify the repository from which to download your project's code.
-    set('repository', 'git@github.com:org/app.git');
-    ```
+// Specify the repository from which to download your project's code.
+set('repository', 'git@github.com:org/app.git');
+```
 - Now open up a terminal in your project directory and run the following command to deploy your application:
 
-```
+```bash
 $ php bin/dep deploy production
 ```
 
 **That's it! You project has been deployed!** Symfony receipe performed the following actions: uploaded code to the server, created cache directories, setup permissions, installed vendor dependencies, installed and dumped assets, warmed up cache. This is typical deployment steps for Symfony2 projects. Let's improve deployment script. We'll add shared directories (which will be used by all releases) for user's upload and setup additional task to install MopaBootstrapBundle fonts. To achieve this purpose, we'll need to add following code to deploy.php.
 
-```
+```php
 // Add web/uploads to shared_dirs
 set('shared_dirs', array_merge(get('shared_dirs'), [
     'web/uploads',
@@ -96,13 +98,13 @@ Now when we run "php bin/dep deploy production" we'll see web/uploads in shared 
 
 For production environment, all database structure changes should be implemented as migration. If you want to perform database migrations during deployment process, just add the following code to deploy.php.
 
-```
+```php
 after('deploy:vendors', 'database:migrate');
 ```
 
 For test environment in some cases we need to clean database and fill it with data fixtures. Let's create task to do this job. Deployer can ask for confirmation to execute some actions. Let's make sure that rebuild database is needed. This task will be executed only for "test" server.
 
-```
+```php
 server('test', '127.0.0.1')
     ->user('test')
     ->password('password')
@@ -123,13 +125,13 @@ after('deploy:assetic:dump', 'database:rebuild');
 
 And run deployment on test server.
 
-```
+```bash
 $ php bin/dep deploy testing
 ```
 
 If something is wrong, a simple rollback to the previous release is supported by Deployer.
 
-```
+```bash
 $ php bin/dep rollback testing
 ```
 

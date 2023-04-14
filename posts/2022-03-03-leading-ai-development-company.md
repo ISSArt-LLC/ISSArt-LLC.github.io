@@ -4,6 +4,7 @@ title: 'ISS Art is a Leading AI Development Company this 2022'
 date: '2022-03-03T16:37:41+08:00'
 author: 'Ilya Pikho'
 layout: post
+image: /static/img/2022/03/20CJZfw-vIY.jpg
 categories:
     - General
     - 'Natural language processing'
@@ -15,7 +16,7 @@ tags:
     - nlp
 ---
 
-<figure class="wp-block-image size-large is-style-default">![](/static/img/2022/03/20CJZfw-vIY.jpg)The AI industry is usually remembered for post-apocalyptical scenarios where robots invade earth and rid of humanity altogether. That is far from the reality, as a matter of fact, AI has been playing a vital role in helping different industries as they improve to better answer their business needs and problems. Companies like [ISS Art](https://issart.com/) have been at the forefront of this industry by providing incredible AI development services globally.
+The AI industry is usually remembered for post-apocalyptical scenarios where robots invade earth and rid of humanity altogether. That is far from the reality, as a matter of fact, AI has been playing a vital role in helping different industries as they improve to better answer their business needs and problems. Companies like [ISS Art](https://issart.com/) have been at the forefront of this industry by providing incredible AI development services globally.
 
 With almost 2 decades of experience in the industry, our team has managed to work with more than 1000 clients from all over the world. As a matter of fact, our team has received a lot of awards and accolades from the industry in the past. Today, we are looking to add another one under our belt as we receive an award from Clutch.
 

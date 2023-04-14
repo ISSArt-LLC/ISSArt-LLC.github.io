@@ -4,6 +4,7 @@ title: 'ISS Art, LLC has been included in Fastest Growing 500 company for Softwa
 date: '2022-12-27T11:01:54+08:00'
 author: admin
 layout: post
+image: /static/img/2022/12/badge.png
 categories:
     - General
 tags:
@@ -13,8 +14,6 @@ tags:
     - 'software development'
     - topdevelopers
 ---
-
-![](/static/img/2022/12/badge.png)
 
 ## ISS Art, LLC has done 
 it again!

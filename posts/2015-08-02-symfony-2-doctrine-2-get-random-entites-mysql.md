@@ -18,7 +18,7 @@ Attention! This method is not productive. I ask you to take it into account in y
 
 As ORM Doctrine 2 does not have support for RAND() function in MySQL, you must describe this function firstly. For this purpose create a class which will be used as the description of RAND() DQL. Listing class code is given below:
 
-```
+```php
 <?php
  
 namespace Acme\DemoBundle\DQL;
@@ -46,7 +46,7 @@ class RandFunction extends FunctionNode
 
 Then you need to connect this description to the list of functions Doctrine 2 ORM. This requires changing the Symfony 2 application configuration which is stored, as a rule, in the file app/config/config.yml, and add connection of the RAND() function description into the configuration of the ORM Doctrine 2. Listing of the configuration ORM Doctrine 2 is given below:
 
-```
+```yaml
 … 
 
 doctrine:
@@ -62,7 +62,7 @@ doctrine:
 
 In this guide, I'm not going to describe what repositories are and what they are used for, the official documentation for [Symfony 2 framework](http://symfony.com/doc/current/book/doctrine.html#custom-repository-classes) or [Doctrine 2 ORM](http://doctrine-orm.readthedocs.org/en/latest/reference/working-with-objects.html#custom-repositories) can tell you about it better than me. So, I'll just give you a listing of the repository with the implementation of the method of random selection of entries below:
 
-```
+```php
 <?php
  
 namespace Acme\DemoBundle\Entity\Repository;

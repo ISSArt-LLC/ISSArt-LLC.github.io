@@ -13,8 +13,6 @@ interface PostPageProps {
 }
 
 export default function PostPage({ content, frontmatter }: PostPageProps) {
-  const date = new Date(frontmatter.date);
-
   return (
     <Container>
       <Button href={`/blog`} variant="outlined">

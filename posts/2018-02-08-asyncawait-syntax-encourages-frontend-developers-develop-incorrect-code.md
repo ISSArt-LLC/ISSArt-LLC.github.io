@@ -19,7 +19,7 @@ Nevertheless, there is a significant pitfall you should be aware of while develo
 
 I am here to explain you a very important rule about developing asynchronous code for front end: **you can never predict what a user is going to do at any point of time**. Let's take a look at the next code snippet taken from [just another async/await tutorial](https://javascript.info/async-await):
 
-```
+```js
 async function showAvatar() {
 
   // read our JSON
@@ -55,7 +55,7 @@ Everything goes well so far. It takes 1 or 2 seconds before the avatar is actual
 
 That's not something we expected. What are we supposed to do? Tell the user not to be a jerk? Well, we shouldn't make the user responsible for our mistakes. We can't increase loading speed either, because it is too expensive for our small project, and it doesn't depend solely on us. The only thing we can do is to improve our code to handle such use case properly. First of all, we must split the loading code and the displaying code:
 
-```
+```js
 async function loadUser() {
   // read our JSON
   let response = await fetch('/article/promise-chaining/user.json');
@@ -86,7 +86,7 @@ showAvatar();
 
 Now we have a reusable function for user data loading and another function that serves only one purpose: load and display the user avatar in the profile page. Now we have a way to handle the problem: let's show the avatar if we are still on the profile page.
 
-```
+```js
 async function showAvatar() {
   let githubUser = await loadUser();
 
@@ -106,7 +106,7 @@ Actually, this is still wrong. If the user switches pages back and forth too qui
 
 So we should remember if the loaded data corresponds to the current page load. A simple counter would help.
 
-```
+```js
 let loadIndex = 0;
 async function showAvatar() {
   const thisLoadIndex = ++loadIndex;
@@ -125,7 +125,7 @@ async function showAvatar() {
 
 Now it works as expected. If you use some framework that provides you with the information about the component life cycle, this code would probably look better. In particular, you may end up with the following React class:
 
-```
+```js
 class Profile extends Component {
   componentDidMount() {
     this.showAvatar();
@@ -153,7 +153,7 @@ If your loading code depends on React props, componentWillReceiveProps method wo
 
 React notifies you about these problems by [deprecating isMounted method](https://reactjs.org/blog/2015/12/16/ismounted-antipattern.html) and encourages you to release your resources properly in componentWillUnmount method. They also provide you with a fallback solution which makes all your promises cancelable:
 
-```
+```js
 const makeCancelable = (promise) => {
   let hasCanceled_ = false;
 
@@ -181,7 +181,7 @@ I don't recommend you using this solution, because it doesn't release your resou
 
 So, since setTimeout and XMLHttpRequest are not promises originally, you can't use "await" operator to operate them. As a reward, you have a possibility to cancel them easily:
 
-```
+```js
 class UserLoader {
   constructor(callback) {
     this.request = $.getJSON(
@@ -219,7 +219,7 @@ showAvatar();
 
 We have implemented a reusable UserLoader class to load user avatars and abort their loading if necessary. We can use it in frameworks:
 
-```
+```js
 class Profile extends Component {
   componentDidMount() {
     this.userLoader = new UserLoader((githubUser) => {
@@ -235,7 +235,7 @@ class Profile extends Component {
 
 We sacrifice all advantages of the promises and async/await calls just to properly cancel the operations. Is there a compromise? Well, kind of. There are several ways to get an object that looks and works just like native JS promise, but can also be canceled, and [this awesome article](https://medium.com/@benlesh/promise-cancellation-is-dead-long-live-promise-cancellation-c6601f1f5082) explains them in detail. I didn't really try to use them all, but, by the look of things, only the first three options should be somewhat compatible with "await" operator, because these promises have "then" method which enables the browser to treat them as native promises. At the moment, I am working on the 2nd version of my Model-View framework jWidget which, among the other features, introduces its own DestroyablePromise implementation that integrates smoothly with jWidget's[object aggregation technology](https://www.issart.com/blog/aggregation-awareness/).
 
-```
+```js
 function loadUser() {
   return new HttpRequest($.getJSON('/article/promise-chaining/user.json'))
     .then((user) => new HttpRequest(
@@ -252,7 +252,7 @@ class ProfileView extends Component {
 
 HttpRequest is just one of DestroyablePromise implementations. As you can see, even chained promises can be aggregated and destroyed easily. Unfortunately, "await" operator is still not fully supported either in jWidget 2 or in solutions #1 and #3 above for the following reason. The following code won't work:
 
-```
+```js
 async function loadUser() {
   const user = await new HttpRequest(
     $.getJSON('/article/promise-chaining/user.json'));
@@ -270,7 +270,7 @@ class ProfileView extends Component {
 
 Code compilation will fail with error: the result of loadUser method call does not implement Destroyable interface and therefore cannot be used as this.own method argument. In fact, any async function wraps our improved promises with traditional native promises which burns down all their advantages. The only way to deal with this problem is to use a CancelToken (solution #2 from the article above). It would transform the code to something like this:
 
-```
+```js
 async function loadUser(cancelToken: Thenable) {
   const user = await fetch(
     '/article/promise-chaining/user.json', {cancelToken});

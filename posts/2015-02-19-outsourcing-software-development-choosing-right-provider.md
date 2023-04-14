@@ -47,7 +47,7 @@ It is impossible to account for all errors, but making sure you have clear speci
 
 #### III. Make sure the provider documents the code
 
-![outsourcing software development III. Make sure the provider documents the code](/static/img/2015/02/outsourcing-software-development-provider-documents-300x196.jpg)
+![outsourcing software development III. Make sure the provider documents the code](/static/img/2015/02/outsourcing-software-development-provider-documents.jpg)
 
 Extreme clarity in understanding a developer's code is important when making adjustments or fixing errors later on down the road. Without a clear understanding of exactly what the original developer was thinking and how they were thinking it can result in confusion, wasted time in deciphering exactly what was already done and bugs.
 
@@ -77,7 +77,7 @@ There are several excellent project management systems, which lend themselves to
 
 JIRA provides a flexible platform that is loaded with features, allowing all members of a project team to view, track and communicate about the same project using the same information. JIRA also offers an option for a free trial.
 
-![jira dashboard outsourcing software development](/static/img/2015/02/jira-for-outsourcing-software-development-300x172.png)
+![jira dashboard outsourcing software development](/static/img/2015/02/jira-for-outsourcing-software-development.png)
 
 Photo Source [www.atlassian.com](https://www.atlassian.com/project-management-software)
 
@@ -87,7 +87,7 @@ Because it is free and open source, there is a large amount of support informati
 
 If you are looking for a full featured project management system, it is worth a look.
 
-![redmine alterantive to jira open source project management tool](/static/img/2015/02/redmine-alterantive-to-jira-300x195.png)
+![redmine alterantive to jira open source project management tool](/static/img/2015/02/redmine-alterantive-to-jira.png)
 
 Photo Source [project-management.com](http://project-management.com/redmine-software-review/)
 

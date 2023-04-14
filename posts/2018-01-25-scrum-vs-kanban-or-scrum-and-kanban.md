@@ -35,17 +35,17 @@ More information about Scrum and Kanban and the the difference between both meth
 
 Let's make their similarities and differences simple:
 
-<div class="wp-caption aligncenter" id="attachment_2442" style="width: 934px">[![Common features of Kanban and Scrum](/static/img/2018/01/scrum-vs-kanban-comparison-diagram-common-agile-principles.png)](/static/img/2018/01/scrum-vs-kanban-comparison-diagram-common-agile-principles.png)Scrum and Kanban have both specialities and common features.
+[![Common features of Kanban and Scrum](/static/img/2018/01/scrum-vs-kanban-comparison-diagram-common-agile-principles.png)](/static/img/2018/01/scrum-vs-kanban-comparison-diagram-common-agile-principles.png)Scrum and Kanban have both specialities and common features.
 
-</div>## Scrum vs Kanban: efficiency metrics
+## Scrum vs Kanban: efficiency metrics
 
 ### Kanban metrics and tools
 
 **Kanban board** is a board for cards moving through statuses (columns) and ordered by priority in each column.
 
-<div class="wp-caption aligncenter" id="attachment_2444" style="width: 928px">[![Kanban board example](/static/img/2018/01/Kanban_Board.jpg)](/static/img/2018/01/Kanban_Board.jpg)Kanban Board example
+[![Kanban board example](/static/img/2018/01/Kanban_Board.jpg)](/static/img/2018/01/Kanban_Board.jpg)Kanban Board example
 
-</div>**Cycle time** is the time when a task is in progress.
+**Cycle time** is the time when a task is in progress.
 
 The less the cycle time, the better the customer service.
 
@@ -59,25 +59,25 @@ The smaller WIP the more ﬂexible the process is and the smaller the cycle time
 
 **Cumulative ﬂow diagram** is the chart with cumulative amount of tasks in each status by history time.
 
-<div class="wp-caption aligncenter" id="attachment_2445" style="width: 734px">[![Cumulative flow diagram / Cumulative flow chart](/static/img/2018/01/Cumulative_Flow_Chart.png)](/static/img/2018/01/Cumulative_Flow_Chart.png)An example of the Cumulative flow chart
+[![Cumulative flow diagram / Cumulative flow chart](/static/img/2018/01/Cumulative_Flow_Chart.png)](/static/img/2018/01/Cumulative_Flow_Chart.png)An example of the Cumulative flow chart
 
-</div>### Scrum metrics and tools
+### Scrum metrics and tools
 
 **Scrum board** is a board for cards (current Sprint tasks) moving through statuses (columns) and ordered by priority (actually there is no big difference between a scrum board and a kanban board).
 
-<div class="wp-caption aligncenter" id="attachment_2446" style="width: 612px">[![A Scrum Board example](/static/img/2018/01/ScrumBoard_png-1024x724.png)](/static/img/2018/01/ScrumBoard_png.png)A Scrum Board example
+[![A Scrum Board example](/static/img/2018/01/ScrumBoard_png.png)](/static/img/2018/01/ScrumBoard_png.png)A Scrum Board example
 
-</div>**Velocity** is the amount of work that is done during one Sprint.
+**Velocity** is the amount of work that is done during one Sprint.
 
 **Burndown chart** is the diagram for tracking the amount of work remaining to be done by the end of the sprint.
 
-<div class="wp-caption aligncenter" id="attachment_2447" style="width: 863px">[![An example of the Burndown Chart](/static/img/2018/01/Burndown-Chart-Example.png)](/static/img/2018/01/Burndown-Chart-Example.png)An example of the Burndown Chart
+[![An example of the Burndown Chart](/static/img/2018/01/Burndown-Chart-Example.png)](/static/img/2018/01/Burndown-Chart-Example.png)An example of the Burndown Chart
 
-</div>**Burnup chart** is the diagram for tracking the amount of work remaining to be done by the end of the sprint in relation to changes of the whole amount of work in Sprint Backlog.
+**Burnup chart** is the diagram for tracking the amount of work remaining to be done by the end of the sprint in relation to changes of the whole amount of work in Sprint Backlog.
 
-<div class="wp-caption aligncenter" id="attachment_2448" style="width: 708px">[![A sample of the BurnUp Chart / Burnup diagram](/static/img/2018/01/BurnUp-Chart-Sample.png)](/static/img/2018/01/BurnUp-Chart-Sample.png)A sample of the BurnUp Chart
+[![A sample of the BurnUp Chart / Burnup diagram](/static/img/2018/01/BurnUp-Chart-Sample.png)](/static/img/2018/01/BurnUp-Chart-Sample.png)A sample of the BurnUp Chart
 
-</div>## Moving between Scrum and Kanban
+## Moving between Scrum and Kanban
 
 ### Risks and opportunities
 

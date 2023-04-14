@@ -70,9 +70,9 @@ The approach to the prioritization includes the following steps:
 3. estimate the criterion **value** for the tasks:
 4. sort the **list** based on the criterion value.
 
-<div class="wp-caption aligncenter" id="attachment_3195" style="width: 1210px">[![Sequence of steps showing how to get tasks prioritized well.](https://issart.com/blog/wp-content/uploads/2018/12/Priorities.svg_-1.png "Sequence of steps to get tasks prioritized well: Goal -> Criterion -> Value -> List.")](https://issart.com/blog/wp-content/uploads/2018/12/Priorities.svg_-1.png)Simple steps, describing how to prioritize tasks
+[![Sequence of steps showing how to get tasks prioritized well.](https://issart.com/blog/wp-content/uploads/2018/12/Priorities.svg_-1.png "Sequence of steps to get tasks prioritized well: Goal -> Criterion -> Value -> List.")](https://issart.com/blog/wp-content/uploads/2018/12/Priorities.svg_-1.png)Simple steps, describing how to prioritize tasks
 
-</div>#### A. [![Target as a symbol of the projects goal.](https://issart.com/blog/wp-content/uploads/2018/12/Goal.svg_-150x150.png)](https://issart.com/blog/wp-content/uploads/2018/12/Goal.svg_.png) Goals
+#### A. [![Target as a symbol of the projects goal.](https://issart.com/blog/wp-content/uploads/2018/12/Goal.svg_-150x150.png)](https://issart.com/blog/wp-content/uploads/2018/12/Goal.svg_.png) Goals
 
 It is assumed, that your project has goals, that are S.M.A.R.T. enough :). Setting goals is a general topic, and we have to leave it out of this article. But the goals are crucial, they define all the priorities. So, make sure you have set the goals.
 
@@ -88,9 +88,9 @@ To make up the criterion, you need to follow the steps:
 
 So, we can represent the diagram above with the details for the criterion development.
 
-<div class="wp-caption aligncenter" id="attachment_3196" style="width: 1210px">[![Detalization of the criterion development: factors -> scale -> formula](https://issart.com/blog/wp-content/uploads/2018/12/Priorities_Criterion-explained.svg_-1.png "Detalization of the criterion development: factors -> scale -> formula")](https://issart.com/blog/wp-content/uploads/2018/12/Priorities_Criterion-explained.svg_-1.png)Steps to develop the criterion
+[![Detalization of the criterion development: factors -> scale -> formula](https://issart.com/blog/wp-content/uploads/2018/12/Priorities_Criterion-explained.svg_-1.png "Detalization of the criterion development: factors -> scale -> formula")](https://issart.com/blog/wp-content/uploads/2018/12/Priorities_Criterion-explained.svg_-1.png)Steps to develop the criterion
 
-</div>If you are working on the backlog prioritization, the following questions will help you to find a suitable criterion:
+If you are working on the backlog prioritization, the following questions will help you to find a suitable criterion:
 
 - What functionality is critical for end-users and the customer?
 - What risks are most critical? (risk exposure = probability \* loss)

@@ -18,7 +18,7 @@ Today many applications are not focused on business value, they are focused on n
 
 That is why user experience (UX) became more important than performance, application size and task solution. Nowadays UX is not a well defined concept, but UX-design comes before system design.
 
-[![image03](/static/img/2016/03/image03-300x129.jpg)](/static/img/2016/03/image03.jpg)
+[![image03](/static/img/2016/03/image03.jpg)](/static/img/2016/03/image03.jpg)
 
 **Social networking**
 
@@ -26,7 +26,7 @@ Computers are affecting the way we communicate. Today every application should h
 
 Each system should allow us to login with Facebook credentials. Some of them are so closely integrated with one of the networks that can't be used without it. This point is connected with the previous one. Social networks become an important part of users' lives and experience.
 
-[![image02](/static/img/2016/03/image02-300x225.jpg)](/static/img/2016/03/image02.jpg)
+[![image02](/static/img/2016/03/image02.jpg)](/static/img/2016/03/image02.jpg)
 
 **Single Page Applications (SPA) and Node.JS**
 
@@ -36,7 +36,7 @@ SPA is similar to native desktop application. UI logic and business logic are sh
 
 According to Github statistic Javascript is the top language. The complexity of the web application is increasing now and IT will require more and more highly skilled Senior Javascript developers.
 
-[![image04](/static/img/2016/03/image04-282x300.png)](/static/img/2016/03/image04.png)
+[![image04](/static/img/2016/03/image04.png)](/static/img/2016/03/image04.png)
 *Popularity trends of Programming languages in GitHub ([source](https://www.loggly.com/blog/the-most-popular-programming-languages-in-to-github-since-2012/)).*
 
 **Mobile Platforms**
@@ -46,7 +46,7 @@ Intensive development of mobile platform requires the specialists to develop new
 
 The popularity of cross-platform instruments is growing. Such tools as PhoneGap and Xamarine allow writing one application for all mobile platforms. It enables us to reduce the cost of development and eliminate the need for separate development teams for each platform.
 
-[![image01](/static/img/2016/03/image01-300x128.jpg)](/static/img/2016/03/image01.jpg)
+[![image01](/static/img/2016/03/image01.jpg)](/static/img/2016/03/image01.jpg)
 
 **Functional Programming**
 
@@ -55,4 +55,4 @@ Mainstream OOP languages include elements of functional programming in their syn
 
 The initial cost to implement the application in functional way is still higher than in OOP (for lack of tools and developers). But the total cost of ownership and scalability can be much higher than usual. Functional programming still has a limited value but FP elements (such as immutable objects and pure functions) can significantly improve the application system design.
 
-[![image00](/static/img/2016/03/image00-300x296.png)](/static/img/2016/03/image00.png)
+[![image00](/static/img/2016/03/image00.png)](/static/img/2016/03/mage00.png)

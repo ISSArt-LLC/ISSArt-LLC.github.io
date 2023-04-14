@@ -25,7 +25,7 @@ Well, it won't be user-friendly to delay this update for several days, but sever
 
 At the same time, when you resolve the consistency issue it is very important to know the performance requirements. You can introduce a queue between the services to reach the eventual consistency, you can use one from the box ([RabbitMQ](https://en.wikipedia.org/wiki/RabbitMQ), [Amazon SQS](http://aws.amazon.com/ru/sqs/), etc.) or implement it by yourself. And if the queue is scalable, this solution will serve any load. But you don't need a universal solution, you need a working one.
 
-[![banner-1018104_1280](/static/img/2015/12/banner-1018104_1280-1024x361.jpg)](/static/img/2015/12/banner-1018104_1280.jpg)
+[![banner-1018104_1280](/static/img/2015/12/banner-1018104_1280.jpg)](/static/img/2015/12/banner-1018104_1280.jpg)
 
 For example, you have the collection of books. A user can rate the book. And you need to implement some kind of smart search for the books and sort the results by the average rating. The eventual consistency is sufficient for the book rating.
 Thus, rating some books the user does not expect a real-time change in the sort order.
@@ -42,7 +42,7 @@ The solution of the consistency issue can be cheaper if you know your performanc
 
 As a developer, I think the microservices architecture is a kind of optimization you can do after the successful release in production. It is the way to go from a working solution to the perfect one.
 
-[![heart-rate-459226_1280](/static/img/2015/12/heart-rate-459226_1280-1024x724.jpg)](/static/img/2015/12/heart-rate-459226_1280.jpg)
+[![heart-rate-459226_1280](/static/img/2015/12/heart-rate-459226_1280.jpg)](/static/img/2015/12/heart-rate-459226_1280.jpg)
 
 ### ***We want your feedback***
 

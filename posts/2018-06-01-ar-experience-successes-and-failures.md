@@ -27,7 +27,7 @@ So, we decided to implement the following functions:
 
 ##### Info markers
 
-[![](/static/img/2018/05/wof-220x300.jpg)](/static/img/2018/05/wof.jpg) The first thing we did was info marker recognition. In our company we have the "*Wall of Fame*". This is a wall with logos of the projects we have completed. It would be nice to add a full description for every project: what it is about, technologies used, the team, etc.
+[![](/static/img/2018/05/wof.jpg)](/static/img/2018/05/wof.jpg) The first thing we did was info marker recognition. In our company we have the "*Wall of Fame*". This is a wall with logos of the projects we have completed. It would be nice to add a full description for every project: what it is about, technologies used, the team, etc.
 The initial idea was very simple: to catch a project logo and then to show the information. Two tasks should be solved to do that:
 
 - Find and recognize a marker;
@@ -90,23 +90,31 @@ To achieve this, we need to align the info with the marker on the screen. ARTool
 
 The OpenGL projection is described by 4×4 matrix. Below we will describe how to build it for AR glasses in detail. As for now, ARToolkit makes all maths for us. All we need is to pass the video frame size:
 
-`@Override
+```java
+@Override
 public void cameraPreviewStarted(int width, int height, int rate, int cameraIndex, boolean cameraIsFrontFacing) {
 (ARToolKit.getInstance().initialiseAR(width, height, "Data/camera_para.dat", cameraIndex, cameraIsFrontFacing));
 }
-`
+```
+
 And the frame itself:
-`@Override
+
+```java
+@Override
 public void cameraPreviewFrame(byte[] frame) {
-ARToolKit.getInstance().convertAndDetect(frame));
-}`
+ARToolKit.getInstance().convertAndDetect(frame);
+}
+```
 
 Recall for completeness: clear all after
-`@Override
+
+```java
+@Override
 public void cameraPreviewStopped() {
 if (ARToolKit.getInstance().isRunning())
 ARToolKit.getInstance().cleanup();
-}`
+}
+```
 
 So, now ARToolkit has a video frame, its size and a set of markers.
 When a new frame is delivered, ARToolkit performs the following steps:
@@ -136,24 +144,24 @@ So, we need to show the project logo and info on these screens. But… where? Re
 
 This is a moment where math begins. Math is not provided by ARToolkit. Math called "projective geometry", where every point has a "redundant" coordinate equal to one. This geometry describes relation between the object coordinates in the world and in the camera frame. It can also describe relations between two frames showing the same object from two different perspectives.
 
-![](/static/img/2018/05/pinhole.png) This relation is what we actually need. More precisely, we need an answer to the question "Where should we draw the point \[math\]\\mathbf{x} = (x,y,1)^T\[/math\] on the screen to align it with the world point \[math\]\\mathbf{X} = (X,Y,Z,1)^T\[/math\] that user's eye sees?" In other words, where the line "eye – point \[math\]\\mathbf{X}\[/math\]" intersects the screen?
+![](/static/img/2018/05/pinhole.png) This relation is what we actually need. More precisely, we need an answer to the question "Where should we draw the point [math\]\mathbf{x} = (x,y,1)^T[/math\] on the screen to align it with the world point [math\]\mathbf{X} = (X,Y,Z,1)^T[/math\] that user's eye sees?" In other words, where the line "eye – point [math\]\mathbf{X}[/math\]" intersects the screen?
 
-Let's place the world CS origin against the eye. Let's define the distance between the eye and the glasses screen as \[math\]f\[/math\]. Similarity of triangles gives \[math\]x = \\frac{X f}{Z}, \\; y = \\frac{Y f}{Z}\[/math\].
+Let's place the world CS origin against the eye. Let's define the distance between the eye and the glasses screen as [math\]f[/math\]. Similarity of triangles gives [math\]x = \\frac{X f}{Z}, \\; y = \\frac{Y f}{Z}[/math\].
 
-Now let us move WCS origin to a free position. Now the relation between the screen coordinates \[math\]\\mathbf{x}\[/math\] and the world coordinates \[math\]\\mathbf{X}\[/math\] is expressed by the equation \[math\]\\mathbf{x} \\parallel P \\mathbf{X}\[/math\], where \[math\]P\[/math\] is a 3х4 matrix, \[math\]\\parallel\[/math\] means equality of two vectors up to scale, also known as collinearity.
+Now let us move WCS origin to a free position. Now the relation between the screen coordinates [math\]\mathbf{x}[/math\] and the world coordinates [math\]\mathbf{X}[/math\] is expressed by the equation [math\]\mathbf{x} \\parallel P \\mathbf{X}[/math\], where [math\]P[/math\] is a 3х4 matrix, [math\]\parallel[/math\] means equality of two vectors up to scale, also known as collinearity.
 
-To get the exact equality, let's make the third coordinate of \[math\]\\mathbf{x}\[/math\] equal to one (remember that we are using homogeneous coordinates): \[math\](x,y,1)^T =\\left(\\frac{P_1 X}{P_3 X}, \\frac{P_2 X}{P_3 X}, \\frac{P_3 X}{P_3 X}\\right)^T\[/math\].
+To get the exact equality, let's make the third coordinate of [math\]\mathbf{x}[/math\] equal to one (remember that we are using homogeneous coordinates): [math\](x,y,1)^T =\\left(\\frac{P_1 X}{P_3 X}, \\frac{P_2 X}{P_3 X}, \\frac{P_3 X}{P_3 X}\\right)^T[/math\].
 
-Now let's find the \[math\]P\[/math\] matrix. To do it, we need multiple pairs of the points \[math\]\\mathbf{x}\\leftrightarrow\\mathbf{X}\[/math\]. Each pair fixes the collinearity \[math\]\\mathbf{x} \\parallel P \\mathbf{X}\[/math\]. Remember that the cross product of collinear vectors is zero, so \[math\]\\mathbf{x} \\times P \\mathbf{X} = 0\[/math\]. This vector equation produces three scalar equations for \[math\]P\[/math\] matrix elements. One of these equations is dependent, so, we get two equations for \[math\]P\[/math\] from every \[math\]\\mathbf{x}\\leftrightarrow\\mathbf{X}\[/math\] pair. The whole 3×4 matrix \[math\]P\[/math\] could be found using six pairs of \[math\]\\mathbf{x}\\leftrightarrow\\mathbf{X}\[/math\]. These pairs produce the system \[math\]A \\mathbf{p} = 0\[/math\], where \[math\]\\mathbf{p}\[/math\] stands for the elements of the matrix \[math\]P\[/math\] flattened to a single vector.
+Now let's find the [math\]P[/math\] matrix. To do it, we need multiple pairs of the points [math\]\mathbf{x}\\leftrightarrow\\mathbf{X}[/math\]. Each pair fixes the collinearity [math\]\mathbf{x} \\parallel P \\mathbf{X}[/math\]. Remember that the cross product of collinear vectors is zero, so [math\]\mathbf{x} \\times P \\mathbf{X} = 0[/math\]. This vector equation produces three scalar equations for [math\]P[/math\] matrix elements. One of these equations is dependent, so, we get two equations for [math\]P[/math\] from every [math\]\mathbf{x}\\leftrightarrow\\mathbf{X}[/math\] pair. The whole 3×4 matrix [math\]P[/math\] could be found using six pairs of [math\]\mathbf{x}\\leftrightarrow\\mathbf{X}[/math\]. These pairs produce the system [math\]A \\mathbf{p} = 0[/math\], where [math\]\mathbf{p}[/math\] stands for the elements of the matrix [math\]P[/math\] flattened to a single vector.
 
-This solution is very sensitive to errors. This effect could be decreased by using more than six pairs. It will give the system on \[math\]P\[/math\] containing more equations than unknowns (we have twelve unknowns). Such system doesn't have an exact solution. But the approximated one is more robust. This solution could be found by expressing the matrix \[math\]A\[/math\] through its singular value decomposition \[math\]A = U S V^T\[/math\], where matrices \[math\]U\[/math\] and \[math\]V\[/math\] are orthonormal, and the matrix \[math\]S\[/math\] is diagonal. The elements on its diagonal are sorted in the descending order. After this decomposition the rightmost column of \[math\]V\[/math\] is a solution, i.e. \[math\]p = V(:, end)\[/math\].
+This solution is very sensitive to errors. This effect could be decreased by using more than six pairs. It will give the system on [math\]P[/math\] containing more equations than unknowns (we have twelve unknowns). Such system doesn't have an exact solution. But the approximated one is more robust. This solution could be found by expressing the matrix [math\]A[/math\] through its singular value decomposition [math\]A = U S V^T[/math\], where matrices [math\]U[/math\] and [math\]V[/math\] are orthonormal, and the matrix [math\]S[/math\] is diagonal. The elements on its diagonal are sorted in the descending order. After this decomposition the rightmost column of [math\]V[/math\] is a solution, i.e. [math\]p = V(:, end)[/math\].
 
 The procedure we used to obtain pairs of points is the following:
 
-| ![](/static/img/2018/05/eye_cam.png) | 1. The user places glasses on his/her head and looks at the target marker; 2. The point appears on the screen. This is the point named \[math\]x\[/math\] above; 3. The user moves his/her head to align the point on the screen with the marker and then presses the button; 4. The camera catches the marker position, that is \[math\]X\[/math\] point. |
+| ![](/static/img/2018/05/eye_cam.png) | 1. The user places glasses on his/her head and looks at the target marker; 2. The point appears on the screen. This is the point named [math\]x[/math\] above; 3. The user moves his/her head to align the point on the screen with the marker and then presses the button; 4. The camera catches the marker position, that is [math\]X[/math\] point. |
 |---|---|
 
-These steps are performed for the left and the right eyes separately. As a result, two matrices \[math\]P_l\[/math\] and \[math\]P_r\[/math\] are obtained. After passing these matrices to OpenGL, we are able to draw the logo and info in 3D, as we did on the smartphone. But now the image drawn follows the marker directly seen by eye. This is what AR really is – virtual objects follow real ones seen by the user.
+These steps are performed for the left and the right eyes separately. As a result, two matrices [math\]P_l[/math\] and [math\]P_r[/math\] are obtained. After passing these matrices to OpenGL, we are able to draw the logo and info in 3D, as we did on the smartphone. But now the image drawn follows the marker directly seen by eye. This is what AR really is – virtual objects follow real ones seen by the user.
 
 All these procedures give the result for a particular person. Having another eye distance or a nose shape, user can't achieve proper alignment between drawn and seen objects.
 

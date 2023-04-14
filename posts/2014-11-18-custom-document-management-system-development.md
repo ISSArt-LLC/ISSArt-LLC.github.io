@@ -17,7 +17,7 @@ A document management system, or DMS, is a platform that's custom-designed to he
 
 Why would a business pay for custom document management system development? There's a litany of excellent reasons for doing so, including enhanced security; flexible indexing; reduced storage requirements; improved distribution; enhanced regulatory compliance and more. When properly developed and executed, a custom document management system improves a company's competitive edge; enhances its customer service and bolsters its overall productivity.
 
-![description of the document management system acronym DMS short for DMS!](/static/img/2014/11/description-of-the-document-management-system-acronym-300x199.jpg)
+![description of the document management system acronym DMS short for DMS!](/static/img/2014/11/description-of-the-document-management-system-acronym.jpg)
 
 A well-designed DMS includes a number of components. Metadata, including modification dates and the usernames of those who have modified a document, provide crucial information and enhance the ability to find documents when they are needed. Documents are stored in formats that aren't easily alterable, which makes for superior distribution. Collaboration and versioning enhance productivity and keep everyone on the same page. Capturing, which is typically achieved through a combination of document scanning and optical character recognition, or OCR, software, converts digital images into machine-readable text, which further enhances the system's ability to locate and classify information.
 
@@ -36,7 +36,7 @@ Before investing in the development of a custom document management system, it p
 
 Unlike so many business investments, custom document management system development delivers almost immediate benefits. If you've been dealing mostly with paper documents and hard copies, it's going to be a true revelation. Even if you've sort of cobbled together your own document management system, you'll be blown away by the features you'll enjoy through the professional development of a custom DMS.
 
-![Reduced need for storage when using a custom document management system development ](/static/img/2014/11/reduced-need-for-storage-300x205.jpg)
+![Reduced need for storage when using a custom document management system development ](/static/img/2014/11/reduced-need-for-storage.jpg)
 
 Shortly after your custom DMS is up and running, you'll start enjoying these and other benefits:
 

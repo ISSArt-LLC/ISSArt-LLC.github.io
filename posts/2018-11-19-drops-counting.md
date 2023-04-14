@@ -26,21 +26,19 @@ Excellent. Let's work on. Recalling that during our machine learning classes we 
 
 We can read 
 
-```
+```python
 cap = cv.VideoCapture("videoFiles/drop8.mov")
 ```
 
 or we can use the camera of our device 
 
-```
+```python
 cap = cv.VideoCapture(0)
 ```
 
-.
-
 Then, I take the first shot and convert it to grayscale. Next, I run through all the shots of the video while it plays and every next shot converts to grayscale:
 
-```
+```python
 cap = cv.VideoCapture("videoFiles/drop8.mov")
 ret, frame1 = cap.read()
 gray1 = cv.cvtColor(frame1, cv.COLOR_BGR2GRAY)
@@ -49,15 +47,15 @@ prev_has_col = False
   while cap.isOpened:
     gray2 = gray1
     ret, frame2 = cap.read()
-&nbsp; &nbsp;   if ret:
- &nbsp; &nbsp;    gray1 = cv.cvtColor(frame2, cv.COLOR_BGR2GRAY)
+        if ret:
+        gray1 = cv.cvtColor(frame2, cv.COLOR_BGR2GRAY)
 ```
 
 [![](https://issart.com/blog/wp-content/uploads/2018/11/image.png)](https://issart.com/blog/wp-content/uploads/2018/11/image.png)
 
 You can then find the difference between the two shots and start processing the image obtained:
 
-```
+```python
 difImage = cv.absdiff(gray1, gray2)
 ```
 
@@ -65,7 +63,7 @@ difImage = cv.absdiff(gray1, gray2)
 
 I applied the median blur to the difference between shots to cut off the background. That is to say, to single out a moving object among others:
 
-```
+```python
 difImage = cv.absdiff(gray1, gray2)
 blur = cv.medianBlur(difImage, 15)
 ```
@@ -74,7 +72,7 @@ blur = cv.medianBlur(difImage, 15)
 
 Further, for the obtained and processed difference, I can find a "column" (stretched drop) and every time I find a "column", I increase the counter by one:
 
-```
+```python
 d = blur.sum(axis=0)
 has_col = np.max(d) > np.median(d) + 1000
 if has_col & ~prev_has_col:
@@ -84,7 +82,7 @@ prev_has_col = has_col
 
 To demonstrate that the drop has been actually detected and counted, I have added contours around the drop and the counter of the drops:
 
-```
+```python
 blur_contours = cv.blur(difImage, (31, 31))
 res, treshold = cv.threshold(blur_contours, 10, 255, cv.THRESH_BINARY)
 _, cnts, _ = cv.findContours(treshold.copy(), cv.RETR_EXTERNAL, cv.CHAIN_APPROX_SIMPLE)

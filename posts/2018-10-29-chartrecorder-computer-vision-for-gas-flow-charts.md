@@ -63,6 +63,8 @@ After the histogram is shifted, we find trace pixels whose neighbours have simil
 
 Similar pixels are found in the next way:
 
+#TODO: refactor it
+
 1. Get all trace pixels whose bottom-right pixels are in trace too;
 2. Find the 95% percentile of the hue difference;
 3. Keep pairs with the hue difference below this level. 

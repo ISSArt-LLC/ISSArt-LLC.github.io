@@ -48,7 +48,7 @@ Once you've come up with ideas of what might be useful to your audience, think o
 - and so on.
     It's even better when it is combined with the visuals – like pics from the actual process of creating your product, prototypes compared to the final result (before and after), etc.**Engage your audience**Don't turn your postings into a monologue – encourage a dialogue instead! So, don't just drop links. In our publications, for example, we ask questions like "What solution do you have…?" and drive people to comment on our posts.
   
-    [![2015-07-24_1457](/static/img/2015/11/2015-07-24_1457-300x88.png)](/static/img/2015/11/2015-07-24_1457.png)
+    [![2015-07-24_1457](/static/img/2015/11/2015-07-24_1457.png)](/static/img/2015/11/2015-07-24_1457.png)
   
     **Don't forget about call-to-action**
   
@@ -58,8 +58,8 @@ Once you've come up with ideas of what might be useful to your audience, think o
   
     According to [Social Media Examiner](http://www.socialmediaexaminer.com/promote-your-content-social-media-content-plan/), tweets with hashtags get twice as much engagement as those without. They help people interested in a specific topic find conversations dedicated to it. So, you're your chance and make it easier for others to find your message! We use hashtags in out Twitter and Facebook posts – see the screenshots below.
   
-    [![2015-07-24_1446](/static/img/2015/11/2015-07-24_1446-300x147.png)](/static/img/2015/11/2015-07-24_1446.png)
-    [![2015-07-24_1449](/static/img/2015/11/2015-07-24_1449-300x279.png)](/static/img/2015/11/2015-07-24_1449.png)
+    [![2015-07-24_1446](/static/img/2015/11/2015-07-24_1446.png)](/static/img/2015/11/2015-07-24_1446.png)
+    [![2015-07-24_1449](/static/img/2015/11/2015-07-24_1449.png)](/static/img/2015/11/2015-07-24_1449.png)
   
     **Use URL shorteners**
   

@@ -64,11 +64,11 @@ Instead of '*lat*' and '*long*' variables you can insert any coordinates you wan
 
 ```swift
 public func mapView(_ mapView: GMSMapView, didTapAt coordinate:   CLLocationCoordinate2D) {
-destinationMarker?.map = nil
-destinationMarker = GMSMarker(position: coordinate)
-destinationMarker!.position.latitude = coordinate.latitude
-destinationMarker!.position.longitude = coordinate.longitude
-destinationMarker!.map = mapView
+    destinationMarker?.map = nil
+    destinationMarker = GMSMarker(position: coordinate)
+    destinationMarker!.position.latitude = coordinate.latitude
+    destinationMarker!.position.longitude = coordinate.longitude
+    destinationMarker!.map = mapView
 }
 ```
 
@@ -92,8 +92,8 @@ The last item of the list can be implemented using the following code:
 
 ```swift
 for index in 0...path!.count() - 1 {
-let pinLocation = CLLocation(coordinate: (path?.coordinate(at: index))!, altitude: 236)
-self.locations.append(pinLocation)
+    let pinLocation = CLLocation(coordinate: (path?.coordinate(at: index))!, altitude: 236)
+    self.locations.append(pinLocation)
 }
 ```
 
@@ -107,8 +107,8 @@ First, we will create a new view controller. And add [ARSCNView](https://develop
 public override func viewDidLoad() {
 super.viewDidLoad()
 let scene = SCNScene()
-sceneView.delegate = self
-sceneView.scene = scene
+    sceneView.delegate = self
+    sceneView.scene = scene
 }
 ```
 
@@ -116,15 +116,15 @@ sceneView.scene = scene
 override func viewWillAppear(_ animated: Bool) {
 super.viewWillAppear(animated)
 let configuration = ARWorldTrackingConfiguration()
-configuration.worldAlignment = .gravityAndHeading
-sceneView.session.run(configuration)
+    configuration.worldAlignment = .gravityAndHeading
+    sceneView.session.run(configuration)
 }
 ```
 
 ```swift
 override func viewWillDisappear(_ animated: Bool) {
-super.viewWillDisappear(animated)
-sceneView.session.pause()
+    super.viewWillDisappear(animated)
+    sceneView.session.pause()
 }
 ```
 
@@ -138,15 +138,15 @@ Now we will get back to the formulas from the beginning of this article and impl
 
 ```swift
 func translateNode (_ location: CLLocation) -> SCNVector3  {
-let locationTransform = transformMatrix(matrix_identity_float4x4, userLocation, nextWaypoint)
-return positionFromTransform(locationTransform)
+    let locationTransform = transformMatrix(matrix_identity_float4x4, userLocation, nextWaypoint)
+    return positionFromTransform(locationTransform)
 }
 ```
 
 Main calculations are hidden behind **transformMatrix** function. To calculate the transformation matrix we:
 
 1. Use an identity matrix (we don't have to use the matrix of the camera or something like that, the position and orientation of the waypoint are independent of your position and orientation).
-2. Calculate the bearing using the formula explained in the previous section: atan2 (sin(long2 – long1) \* cos(long2),cos(lat1) \* sin(lat2) – sin(lat1) \* cos(lat2) \* cos(long2 – long1))
+2. Calculate the bearing using the formula explained in the previous section: atan2 (sin(long2 – long1) * cos(long2),cos(lat1) * sin(lat2) – sin(lat1) * cos(lat2) * cos(long2 – long1))
 3. Using an identity matrix, get a rotation matrix in the y-axis using that bearing.
 4. The distance is given by the z-axis, so create a four-element vector with the distance in the z position to get a translation matrix.
 5. Multiply both matrices (remember, the order is important) to combine them.
@@ -156,12 +156,12 @@ Those steps can be implemented in the following way (main transform function):
 
 ```swift
 func transformMatrix(_ matrix:simd_float4x4,_ originLocation:CLLocation, _ waypointLocation: CLLocation) -> simd_float4x4 {
-let bearing = <strong>bearingBetweenLocations</strong>(userLocation, waypointLocation)
-let rotationMatrix = <strong>rotateAroundY</strong>(matrix_identity_float4x4, Float(bearing))
-let position = vector_float4(0.0, 0.0, -distance, 0.0)
-let translationMatrix = getTranslationMatrix(matrix_identity_float4x4, position)
-let transformMatrix = simd_mul(rotationMatrix, translationMatrix
-return simd_mul(matrix, transformMatrix)
+    let bearing = <strong>bearingBetweenLocations</strong>(userLocation, waypointLocation)
+    let rotationMatrix = <strong>rotateAroundY</strong>(matrix_identity_float4x4, Float(bearing))
+    let position = vector_float4(0.0, 0.0, -distance, 0.0)
+    let translationMatrix = getTranslationMatrix(matrix_identity_float4x4, position)
+    let transformMatrix = simd_mul(rotationMatrix, translationMatrix
+    return simd_mul(matrix, transformMatrix)
 }
 ```
 
@@ -169,14 +169,14 @@ Here goes the function for step 2 from the sequence above. We calculate the bear
 
 ```swift
 func bearingBetweenLocations(_ originLocation: CLLocation, _ waypointLocation: CLLocation) -> Double {
-let lat1 = originLocation.coordinate.latitude.toRadians()
-let lon1 = originLocation.coordinate.longitude.toRadians()
-let lat2 = waypointLocation.coordinate.latitude.toRadians()
-let lon2 = waypointLocation.coordinate.longitude.toRadians()
-let longitudeDiff = lon2 - lon1
-let y = sin(longitudeDiff) * cos(lat2);
-let x = cos(lat1) * sin(lat2) - sin(lat1) * cos(lat2) * cos(longitudeDiff);
-return atan2(y, x)
+    let lat1 = originLocation.coordinate.latitude.toRadians()
+    let lon1 = originLocation.coordinate.longitude.toRadians()
+    let lat2 = waypointLocation.coordinate.latitude.toRadians()
+    let lon2 = waypointLocation.coordinate.longitude.toRadians()
+    let longitudeDiff = lon2 - lon1
+    let y = sin(longitudeDiff) * cos(lat2);
+    let x = cos(lat1) * sin(lat2) - sin(lat1) * cos(lat2) * cos(longitudeDiff);
+    return atan2(y, x)
 }
 ```
 
@@ -185,12 +185,12 @@ Next, we need a rotation matrix:
 ```swift
 func rotateAroundY(_ matrix: simd_float4x4, _ degrees: Float) -> simd_float4x4
 {
-var matrix = matrix
-matrix.columns.0.x = cos(degrees)
-matrix.columns.0.z = -sin(degrees)
-matrix.columns.2.x = sin(degrees)
-matrix.columns.2.z = cos(degrees)
-return matrix.inverse
+    var matrix = matrix
+    matrix.columns.0.x = cos(degrees)
+    matrix.columns.0.z = -sin(degrees)
+    matrix.columns.2.x = sin(degrees)
+    matrix.columns.2.z = cos(degrees)
+    return matrix.inverse
 }
 ```
 

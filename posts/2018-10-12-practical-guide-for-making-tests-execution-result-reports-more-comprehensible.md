@@ -359,6 +359,7 @@ User             0.15.0-20180516-1 (master) [healthy]
 ```
 
 *Result:*
+
 ![Environment](https://lh3.googleusercontent.com/E9Zk-eeVT5WtKEBSmJvt2FKRb8aVOq1vTX4ojFDxlLRzJYv0kKZGYxp47Jm8tNTOZW9nP5dBsHP0Kk4UaHzGAsp6UwphcnLLR5tguXJZLODwPjZeDLKIQXzoSWyAqduEhV_5f50S)
 
 #### Conclusion

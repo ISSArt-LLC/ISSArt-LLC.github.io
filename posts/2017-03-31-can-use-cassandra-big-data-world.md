@@ -24,7 +24,7 @@ This article covers the main features of Cassandra DB with respect to usage as a
 
 Basically, you can treat Cassandra as "key-value" which means it was originally designed to effectively support a certain type of operations: value insertion and retrieval of value by its key. Cassandra 2.x and 3.x have slightly different data models, and we will consider 3.x here.
 
-Although conceptually it is still key-value storage, there are some tricks here. Internally, table is a map of partitions indexed by partition key, and the partition itself is a map of ordered rows indexed by clustering. To simplify, you may think about this structure as Map<byte\[\], SortedMap<Clustering, Row>>.
+Although conceptually it is still key-value storage, there are some tricks here. Internally, table is a map of partitions indexed by partition key, and the partition itself is a map of ordered rows indexed by clustering. To simplify, you may think about this structure as `Map<byte[], SortedMap<Clustering, Row>>`.
 
 So rows could be identified by the combination of partition key and clustering key. The hsh value of partition key determines which Cassandra node (replica) would store the data.
 

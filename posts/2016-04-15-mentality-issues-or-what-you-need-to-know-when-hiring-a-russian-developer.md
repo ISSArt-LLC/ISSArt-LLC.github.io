@@ -21,14 +21,14 @@ To understand an employee from another country you need to know how you are simi
 
 **Loyalty. Loyalty to the family, to the company you work for, to the Motherland**
 
-[![Loyalty](/static/img/2016/03/Loyalty-300x225.jpg)](/static/img/2016/03/Loyalty.jpg)
+[![Loyalty](/static/img/2016/03/Loyalty.jpg)](/static/img/2016/03/Loyalty.jpg)
 
 Russian people, though not very talkative about their family (we'll talk about it later), love their families most of all. A developer, who is invited to work on contract basis in another country, would take his wife and children with him if there is a possibility. He would care about them and miss them if they're far away. If he is invited to a party he would prefer to take his wife with him. He would hardly ever prefer to go on vacation by himself, without his family. The same is with business trips: if there is a necessity for his promotion, he would definitely go on a business trip, but not on a long one, and would miss his family a lot.
 Nobody would oppose that we see the same thing when it comes to American and European people who value family ties a lot.
 
 **Responsibility**
 
-[![Responsibility](/static/img/2016/03/Responsibility-300x259.jpg)](/static/img/2016/03/Responsibility.jpg)
+[![Responsibility](/static/img/2016/03/Responsibility.jpg)](/static/img/2016/03/Responsibility.jpg)
 
 When it comes to work on contract, especially when every hour is counted and summed to form the income, Russian developers do their best. They can overwork if the project requires. And even at their weekend they will come and fix the problem that may occur because they are responsible for what they do and for the result.
 
@@ -38,7 +38,7 @@ There are many other things we have in common but I suggest that now **we get to
 
 **Unsociability.** Seeming restraint of Russian people.
 
-[![Unsociablity](/static/img/2016/03/Unsociablity-300x300.jpg)](/static/img/2016/03/Unsociablity.jpg)
+[![Unsociablity](/static/img/2016/03/Unsociablity.jpg)](/static/img/2016/03/Unsociablity.jpg)
 
 It may only seem that Russian people don't want to communicate. There may be several reasons why they are not that talkative.
 The first and the foremost is their fear to speak. No, they are not afraid of you but they have very little experience in real everyday communication with English native speakers. Thus they find it hard to select proper words and tenses.
@@ -51,7 +51,7 @@ We can talk about Russian nature and weather, bad Russian roads and high expense
 
 - Another thing which from my personal experience surprises European and American people is our sad facial expression.**Yes, we smile quite rarely.**
 
-[![Smile](/static/img/2016/03/Smile-300x300.png)](/static/img/2016/03/Smile.png)
+[![Smile](/static/img/2016/03/Smile.png)](/static/img/2016/03/Smile.png)
 
 Our shop assistants would not greet you with a smile when you enter a shop, our people in the street would not smile in response if you smile to them. But it's not that we are unfriendly, it's just the matter of a habit. We are not used to smiling a lot. If we hear a joke and find it funny we would smile and even laugh a lot, but we do not smile to a new comer or a customer just to show our desire to be friendly and help the person. This is a thing in Russian behavior that should be neglected and not paid much attention to.
 

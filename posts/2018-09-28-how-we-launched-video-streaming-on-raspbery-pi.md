@@ -111,7 +111,7 @@ The streaming started, and the image appeared on the screen. It's probably the s
 
 To implement the plan, the Bash script was written:
 
-```
+```bash
 
 #!/bin/bash
 

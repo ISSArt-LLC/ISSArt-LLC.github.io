@@ -14,9 +14,9 @@ I know many Java and .NET developers who often like to make fun of PHP. Honestly
 
 - It is not a good idea to use dynamic typization in a server-side language, because server is all about performance and security – static typization supports these two attributes a lot. Also, static typization makes code refactoring much easier.
 - Java and .NET have much better-thought standard libraries. In PHP, you have many different ways to do the same operation – it increases code fragmentation, especially if you work in a large team of PHP developers.
-- Java and .NET have more graceful syntax. <tt>$</tt> sign in variable names, <tt>-></tt> instead of <tt>.</tt>, <tt><?php ?></tt> tags make PHP code quite bulky.
+- Java and .NET have more graceful syntax. **$** sign in variable names, **->** instead of **.**, **<?php ?>** tags make PHP code quite bulky.
 
-Nevertheless, PHP has one great feature that makes it very useful for me. From its very beginning, PHP was designed as HTML code preprocessor. Its syntax serves this purpose perfectly. Ultimately, if you write pure HTML code in your PHP file, PHP interpreter will give you this HTML in output. Only PHP insertions between tags like <tt><?php ?></tt> and <tt><?= ?></tt> will be interpreted as PHP code. It lets you do anything with your HTML output and it is usually more convenient compared to various HTML template engines, because template is just a template – it doesn't let you write code. Also PHP doesn't care about what exactly you write into output: HTML, operation progress, or message log. I found it convenient for me to build JSON files with PHP.
+Nevertheless, PHP has one great feature that makes it very useful for me. From its very beginning, PHP was designed as HTML code preprocessor. Its syntax serves this purpose perfectly. Ultimately, if you write pure HTML code in your PHP file, PHP interpreter will give you this HTML in output. Only PHP insertions between tags like **<?php ?>** and **<?= ?>** will be interpreted as PHP code. It lets you do anything with your HTML output and it is usually more convenient compared to various HTML template engines, because template is just a template – it doesn't let you write code. Also PHP doesn't care about what exactly you write into output: HTML, operation progress, or message log. I found it convenient for me to build JSON files with PHP.
 
 A good addition to output preprocessing is [buffered output feature](http://php.net/manual/en/book.outcontrol.php). You can redirect the output to a buffer and then parse this output for any purpose.
 
@@ -87,7 +87,7 @@ JSON files in "locale" folder contain operator-specific localization. It doesn't
 }
 ```
 
-With that given, <tt><?php $this->locale->write("operatorName"); ?></tt> instruction in operator.php file will be expanded to the next JSON:
+With that given, `<?php $this->locale->write("operatorName"); ?>` instruction in operator.php file will be expanded to the next JSON:
 
 ```json
 {
@@ -98,7 +98,7 @@ With that given, <tt><?php $this->locale->write("operatorName"); ?></tt> instruc
 
 ### Partials
 
-"includeAllScripts" method includes all PHP files in a folder as partials of a current configuration file. All partials will have PHP file name available in them as value of the field, specified in second argument. So, <tt><?php $this->includeAllScripts('units', 'unitId'); ?></tt> instruction will include all PHP files in "units" folder and pass "unitId" field into them.
+"includeAllScripts" method includes all PHP files in a folder as partials of a current configuration file. All partials will have PHP file name available in them as value of the field, specified in second argument. So, `<?php $this->includeAllScripts('units', 'unitId'); ?>` instruction will include all PHP files in "units" folder and pass "unitId" field into them.
 
 #### units/mouse.php
 

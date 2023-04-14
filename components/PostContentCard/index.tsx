@@ -3,6 +3,10 @@ import Image from "next/image";
 import { marked } from "marked";
 import { Box, Chip, Link, Stack, Typography } from "@mui/material";
 import { slugify } from "../../utils";
+import markdownStyles from "./markdown.module.scss"
+import DateFormatter from "../DateFromatter";
+import hljs from 'highlight.js';
+import 'highlight.js/styles/github.css';
 
 interface PostContentCardProps {
   frontmatter: {
@@ -15,17 +19,11 @@ export default function PostContentCard({
   frontmatter,
   content,
 }: PostContentCardProps) {
-  const date = new Date(frontmatter.date);
-
   useEffect(() => {
-    // get images inside "div.post-body", to fix their sizes to fit container
-    // otherwise they are too big and overflow container and even viewport
-    const images = document.querySelectorAll(".post-body img");
-
-    images.forEach(
+    const codeBlocks = document.querySelectorAll("[class^='language-']");
+    codeBlocks.forEach(
       (el) =>
-        //@ts-ignore
-        (el.style.cssText = "width: 100%; height: 300px; object-fit: contain")
+        hljs.highlightElement(el as HTMLElement)
     );
   }, []);
 
@@ -40,7 +38,7 @@ export default function PostContentCard({
           : ""}
       </Typography>
       <Typography variant="body2" color="text.secondary">
-        {`${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`} by{" "}
+        <DateFormatter dateString={frontmatter.date} /> by{" "}
         {frontmatter.author}
       </Typography>
       <div className="post-image">
@@ -81,7 +79,7 @@ export default function PostContentCard({
       </Stack>
 
       <div
-        className="post-body"
+        className={`'post-body' ${markdownStyles['markdown']}`}
         dangerouslySetInnerHTML={{ __html: marked.parse(content) }}
       ></div>
     </div>

@@ -12,7 +12,7 @@ categories:
 
 Application development has been in the spotlight for several years now, with developers creating amazing desktop, web and mobile applications at a rapid pace. There are advantages and disadvantages to each category of application, but it is clear mobile applications and web-based apps have begun to take center stage, as users prefer options that can be accessed from anywhere.
 
-![application development from scratch number of global users of mobile vs desktop](/static/img/2015/01/Mobile-stats-vs-desktop-users-global-550x405.png)
+![application development from scratch number of global users of mobile vs desktop](/static/img/2015/01/Mobile-stats-vs-desktop-users-global.png)
 
 Photo Source [smartinsights.com](http://www.smartinsights.com/mobile-marketing/mobile-marketing-analytics/mobile-marketing-statistics/)
 

@@ -17,7 +17,7 @@ In our Symfony project such integration is needed. However, there are a lot of h
 **First of all, what exactly is Amazon MWS API?**
 Amazon Marketplace Web Service (Amazon MWS) is an API which helps Amazon sellers to exchange information on listings, orders, payments, buyers, reports, and more. XML data integration with Amazon makes higher levels of selling automation possible, and this helps sellers significantly grow their business. With Amazon MWS being applied, sellers get an opportunity to increase their selling efficiency, decrease labor effort, and improve response time to customers.
 
-[![graph-163549_1280](/static/img/2016/02/graph-163549_1280-300x240.jpg)](/static/img/2016/02/graph-163549_1280.jpg)
+[![graph-163549_1280](/static/img/2016/02/graph-163549_1280.jpg)](/static/img/2016/02/graph-163549_1280.jpg)
 
 **Сhallenge №1**
 
@@ -28,7 +28,7 @@ As a result, we have registered an account and faced the following challenge:
 
 Amazon distributes its SDK (software development kit) for MWS API only as a zip-file. In our project we use Composer to connect with third-party libraries; and we faced an issue how to connect the Amazon MWS SDK and not to store it in our repository.
 
-[![puzzle-1020057_1280](/static/img/2016/02/puzzle-1020057_1280-300x300.jpg)](/static/img/2016/02/puzzle-1020057_1280.jpg)
+[![puzzle-1020057_1280](/static/img/2016/02/puzzle-1020057_1280.jpg)](/static/img/2016/02/puzzle-1020057_1280.jpg)
 In addition, there is one more issue: how to load a library with legacy code which doesn't use autoloader. To store the SDK, we created a separate git repository and added this repository in composer.json. At this stage it's necessary to resolve the issue with loading the library. There are at least two options:
 
 - *Modify SDK so that PSR-0 avtoloader could work.* Therefore, we have to replace all relative paths to library code with dirname (__ FILE__). SDK spreads under the Apache license, so the modification is authorized.
@@ -53,7 +53,7 @@ We have to use the deprecated parameter composer.json, it doesn't look good.
 
 Amazon MWS API looks like Frankenstein! It's made up of different parts (modules with different working models).
 
-[![matrix-1013612_1280](/static/img/2016/02/matrix-1013612_1280-300x300.jpg)](/static/img/2016/02/matrix-1013612_1280.jpg)
+[![matrix-1013612_1280](/static/img/2016/02/matrix-1013612_1280.jpg)](/static/img/2016/02/matrix-1013612_1280.jpg)
 For example, "Section Orders API" works as "request-> response" model, where we get the requested information immediately.
 A "Section Reports API" works as "request-> queue-> response" model, where our request gets in line. Thus, to receive the requested data, we need to monitor its status in the queue.
 
@@ -66,6 +66,6 @@ We should also say some words about the documentation. It's very informative wit
 
 The process was rather difficult, but finally we won and integrated our project with Amazon MWS!
 
-[![road-sign-940628_1280](/static/img/2016/02/road-sign-940628_1280-300x176.jpg)](/static/img/2016/02/road-sign-940628_1280.jpg)
+[![road-sign-940628_1280](/static/img/2016/02/road-sign-940628_1280.jpg)](/static/img/2016/02/road-sign-940628_1280.jpg)
 
 **And what about you? Have you got the courage to fight with such a giant as the Amazon MWS? ;-)**

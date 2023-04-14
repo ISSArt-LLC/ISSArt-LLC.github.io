@@ -28,7 +28,7 @@ It selects media playlist file, according to the selected play options and then 
 
 You can read more about this method in the [complete guide](https://www.blazemeter.com/blog/the-new-hls-plugin-for-jmeter-the-complete-guide), but we are going to use more difficult and interesting approach.
 
-2\. Using HTTP Request samplers in the script. This solution assumes a higher level of working knowledge of Apache JMeter and in order to implement it it's necessary to know the HLS protocol, the logic of client server interaction over this protocol and data processing. Here one may think: why do we need to create our own solution when we can simply use HLS sampler? The reason is that in addition to performance related metrics there are some user experience related metrics that have to be taken into account when conducting load testing of HLS services. These metrics are:
+2. Using HTTP Request samplers in the script. This solution assumes a higher level of working knowledge of Apache JMeter and in order to implement it it's necessary to know the HLS protocol, the logic of client server interaction over this protocol and data processing. Here one may think: why do we need to create our own solution when we can simply use HLS sampler? The reason is that in addition to performance related metrics there are some user experience related metrics that have to be taken into account when conducting load testing of HLS services. These metrics are:
 
 **Buffer fill time** – the time which users should wait before a video starts playing. During this time they get a progress roller and the first few seconds of the video are downloaded. It's an important metric to check as users may not want to wait minutes for the video to start.
 **Lag time** – the time a user is waiting for the data to be buffered during the playback. This negatively impacts user experience, so it's necessary to ensure that lag time is acceptable according to SLA.
@@ -48,7 +48,7 @@ More about this approach you can find in [this](https://www.blazemeter.com/blog/
 
 The first thing we need to do is to take a sample of the code from the main page of the official site [https://locust.io](https://locust.io/).
 
-```
+```python
 from locust import HttpLocust, TaskSet, task
 class WebsiteTasks(TaskSet):
     def on_start(self):
@@ -81,7 +81,7 @@ What we should understand from this code:
 
 So, we will leave the structure unchanged, but for simplicity we will use only 1 @ task which is determined inside TaskSet class. Let's add the first request to our script with headers extracting chunkListName:
 
-```
+```python
 from locust import HttpLocust, TaskSet
 import re
 
@@ -108,7 +108,7 @@ class WebsiteUser(HttpLocust):
 
 We know that the headers will be repeated for all requests, let's simplify our script right away by putting it into a separate file: [customFunctions.py](https://gitlab.com/mbabilo/hlswithjmeterandlocust/blob/master/customFunctions.py):
 
-```
+```python
 # Default Headers Manager
 def default_headers(self):
     self.client.headers['Cache-Control'] = "no-cache"
@@ -122,7 +122,7 @@ def default_headers(self):
 
 Now we will create another file for parameterizing our script, we will take all the parameters into it and name it [properties.py](https://gitlab.com/mbabilo/hlswithjmeterandlocust/blob/master/properties.py):
 
-```
+```python
 path = '/vod/mp4:BigBuckBunny_115k.mov'
 playlistName = 'playlist'
 bufferSize = 1000
@@ -138,7 +138,7 @@ host = '184.72.239.149'
 
 Now we import our modules and see how it simplifies the script:
 
-```
+```python
 from locust import HttpLocust, TaskSet, task
 import re
 from properties import *
@@ -164,7 +164,7 @@ class WebsiteUser(HttpLocust):
 
 As you can see, the script has become much simpler and smaller. So when we have the name of the list of chunks, we now should request chunks themselves for downloading. This is implemented in the request 2:
 
-```
+```python
 if (chunkListName != "null"):
  # request 2 = Chunk list request
  request_name = 'Chunk list request'
@@ -176,7 +176,7 @@ if (chunkListName != "null"):
 
 This part is executed only under the condition that the list of chunks was found in the response of the first request i.e if (chunkListName != "null"). Now we will add the third request, it will be executed as many times as we receive parts in the request No. 2:
 
-```
+```python
 while j < i:
  # request 3 download chunk file
  request_name = 'download chunk file'
@@ -186,7 +186,7 @@ while j < i:
 
 By putting these parts together we get the following code:
 
-```
+```python
 from locust import HttpLocust, TaskSet, task
 import re
 from properties import *
@@ -248,7 +248,7 @@ Realtime charts page:
 
 As a rule load tests are not launched in the GUI mode of a load testing tool and they are not controlled manually either. This means we need to launch load tests in the console non-GUI mode. Locust has such a mode, and in it (and only in it) you can specify the duration of the test. The problem is that Locust does not have special console keys for obtaining graphs as in the web interface and, if you want to have a possibility to save the intermediate request statistics, you should write it in python. To save the basic statistics, we need to save some parameters: the time to receive a response to a specific request, the response time of this request and the current number of requests per second. Avoid redundant coding and immediately create a function to write results to a file. Add a new function to the [customFunctions.py](https://gitlab.com/mbabilo/hlswithjmeterandlocust/blob/master/customFunctions.py) file:
 
-```
+```python
 # Writing to file
 def write_to_file(file, key, string):
     myfile = open(file, key) # open file
@@ -258,7 +258,7 @@ def write_to_file(file, key, string):
 
 And we will also write a function for maintaining the inter-thread counter, it is necessary for future calculations:
 
-```
+```python
 # Modification of common for all threads variable  
 def global_counter(name, value):
     lock = Lock()
@@ -274,41 +274,53 @@ At this step we:
 
 from customFunctions import default_headers, write_to_file, global_counter
 
-2\. Import from threading for using inter-thread variables:
+2. Import from threading for using inter-thread variables:
 
+```python
 from threading import Lock, Thread
+```
 
-3\. And one more import here:
+3. And one more import here:
 
+```python
 import os
+```
 
 it is needed so that the files with statistics can be stored in a separate folder and not in the general pile.
 
-4\. Add the creation/reuse of the directory for future files after import section:
+4. Add the creation/reuse of the directory for future files after import section:
 
+```python
 if not os.path.exists('statistics'):
 
 os.makedirs('statistics')
+```
 
-5\. Then we use the write_to_file function to create necessary files, having written in them the headings for the columns:
+5. Then we use the write_to_file function to create necessary files, having written in them the headings for the columns:
 
+```python
 write_to_file("statistics//RPS.txt", "w+", "timeGetRequest, nowRPS\\n")
 
 write_to_file("statistics//RTD.txt", "w+", "responseTime\\n")
+```
 
-6\. We write down the start time of the test, and declare a global counter for our requests:
+6. We write down the start time of the test, and declare a global counter for our requests:
 
+```python
 startTestTime = time.time()
 
 chunkRPS_gcounter = 0
+```
 
-7\. And, finally, for our key request we will add calculation and an entry in the statistics files:
+7. And, finally, for our key request we will add calculation and an entry in the statistics files:
 
+```python
 getStartTime = time.time() – before request
+```
 
 and after:
 
-```
+```python
 getEndTime = time.time()
                 response_time = getEndTime - getStartTime
                 timeGetRequest = getEndTime - startTestTime
@@ -318,12 +330,12 @@ getEndTime = time.time()
                 write_to_file("statistics//RTD.txt", "a", "%.2f\n" % (abs(response_time * 1000))) # open and written text to the end of file
 ```
 
-8\. Combining these parts, we will get files with statistics of interest in the "statistics" folder.
-9\. For visualization in the form of graphs, we use separate simple scripts. So for request per second it will be:
+8. Combining these parts, we will get files with statistics of interest in the "statistics" folder.
+9. For visualization in the form of graphs, we use separate simple scripts. So for request per second it will be:
 
 [pyplot_RPS.py](https://gitlab.com/mbabilo/hlswithjmeterandlocust/blob/master/pyplot_RPS.py):
 
-```
+```python
 from matplotlib import pyplot as plt
 from matplotlib import style
 import numpy as np
@@ -348,7 +360,7 @@ And a slightly more complicated construction for plotting Response Time Distribu
 
 [pyplot_RTD.py](https://gitlab.com/mbabilo/hlswithjmeterandlocust/blob/master/pyplot_RTD.py):
 
-```
+```python
 from matplotlib import pyplot as plt
 from matplotlib import style
 import numpy as np
@@ -395,9 +407,9 @@ plt.savefig('graphs//RTD.png', dpi=80)
 
 These graphs will be saved as a picture in the "graphs" folder. Great, now we can repeat the launch and acquisition of base graphs and statistics of testing HLS with the help of Locust.
 
-10\. Now let's add UX metrics in our script, just like it was done in the JMeter script, then the [final version of locustfile.py](https://gitlab.com/mbabilo/hlswithjmeterandlocust/blob/master/locustfile.py) will be:
+10. Now let's add UX metrics in our script, just like it was done in the JMeter script, then the [final version of locustfile.py](https://gitlab.com/mbabilo/hlswithjmeterandlocust/blob/master/locustfile.py) will be:
 
-```
+```python
 from locust import HttpLocust, TaskSet, task
 import re
 import time
@@ -501,9 +513,9 @@ class WebsiteUser(HttpLocust):
     max_wait = 9000
 ```
 
-11\. And to create all UX graphs, create one more module – [pyplot_UX.py](https://gitlab.com/mbabilo/hlswithjmeterandlocust/blob/master/pyplot_UX.py):
+11. And to create all UX graphs, create one more module – [pyplot_UX.py](https://gitlab.com/mbabilo/hlswithjmeterandlocust/blob/master/pyplot_UX.py):
 
-```
+```python
 from matplotlib import pyplot as plt
 from matplotlib import style
 import numpy as np
@@ -578,9 +590,9 @@ plt.xlabel('Time')
 mp.savefig('graphs//UX/mediaDT.png')
 ```
 
-12\. Almost done, but let's automate the launch of these scripts using .bash as a simple example. [locustfile.sh](https://gitlab.com/mbabilo/hlswithjmeterandlocust/blob/master/locustfile.sh):
+12. Almost done, but let's automate the launch of these scripts using .bash as a simple example. [locustfile.sh](https://gitlab.com/mbabilo/hlswithjmeterandlocust/blob/master/locustfile.sh):
 
-```
+```python
 locust --host=http://184.72.239.149 -f /home/mbabilo/Desktop/HLS/locust/locustfile.py --no-web --csv=example -c 1 -r 1 --run-time 1m  # ⇐ change this to launch  your test
 python pyplot_RPS.py	# ⇐ creating a graphs
 python pyplot_RTD.py

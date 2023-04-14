@@ -24,7 +24,7 @@ If you've already determined your strategy and set the requirements, it's time t
 
 **2. Avoid choosing the cheapest offer?**
 
-[![price-tag-374390_1280](/static/img/2016/01/price-tag-374390_1280-300x300.png)](/static/img/2016/01/price-tag-374390_1280.png)
+[![price-tag-374390_1280](/static/img/2016/01/price-tag-374390_1280.png)](/static/img/2016/01/price-tag-374390_1280.png)
 
 Do not make a decision based only on the price of services and do not choose providers with lower prices and bigger promises. You run a huge risk of being scammed. Reliable agencies won't give you a guarantee to be on top 10 in Google, Yandex and others; they can only guarantee very professional work of their experts.
 
@@ -32,7 +32,7 @@ Do not make a decision based only on the price of services and do not choose pro
 
 As I mentioned earlier, reliable SEO-agencies do not give a guarantee, since they are not the owners of any search engines. Let's think, is it possible to give 100% guarantee of being any website on the pre-selected requests for pre-selected items? Let's just imagine that the answer is yes, then all websites would be on the first page. And who would pay for the second one? So, the second page proves that 100% guarantee of being on top 10 is impossible!
 
-[![banner-764360_1280](/static/img/2016/01/banner-764360_1280-300x180.jpg)](/static/img/2016/01/banner-764360_1280.jpg)
+[![banner-764360_1280](/static/img/2016/01/banner-764360_1280.jpg)](/static/img/2016/01/banner-764360_1280.jpg)
 
 **4. Pay attention to informative and useful proposals**
 
@@ -58,7 +58,7 @@ As a result, the probability to return on SEO investment increases. Moreover, ve
 
 In order to achieve the greatest relevance to your key needs and search engine rankings a good company will optimize your website's content. Just in case ask your provider whether the content will belong to you after the end of your cooperation.
 
-[![seo-592747_1280](/static/img/2016/01/seo-592747_1280-300x198.png)](/static/img/2016/01/seo-592747_1280.png)
+[![seo-592747_1280](/static/img/2016/01/seo-592747_1280.png)](/static/img/2016/01/seo-592747_1280.png)
 
 **9.Be ready for quite long-term website optimization and promotion**
 SEO is a source with a long payback period, the average period must be between six and twelve months of active work to see the positive dynamics of the main KPI (Key Performance Indicators).
