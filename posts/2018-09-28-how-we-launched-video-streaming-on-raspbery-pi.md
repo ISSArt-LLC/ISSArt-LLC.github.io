@@ -152,9 +152,9 @@ $FFMPEG -i $file_to_convert -i $LOGO -r 25 -codec:v libx264 -profile:v high -lev
 -filter_complex "[0:v]scale=iw*min($frame_width/iw\,$frame_high/ih):ih*min($frame_width/iw\,$frame_high/ih),pad=$frame_width:$frame_high:($frame_width-iw)/2:($frame_high-ih)/2[v1];[v1][1:v]overlay=main_w-overlay_w-10:10" \
 -threads 0 -af dynaudnorm -c:a aac -ac 2 -ar 44100 -b:a 128k -y $TEMPDIR/$converted_file
 ### Save some disk space
-dd if=/dev/urandom bs=1 count=128 2&gt;/dev/null | base64 -w 0 | rev | cut -b 2- | rev &gt; $file
+dd if=/dev/urandom bs=1 count=128 2>/dev/null | base64 -w 0 | rev | cut -b 2- | rev > $file
 ### Create MD5 hash for file
-md5sum $file_to_convert | cut -d " " -f1 &gt; $TEMPDIR/$converted_file.md5
+md5sum $file_to_convert | cut -d " " -f1 > $TEMPDIR/$converted_file.md5
 STREAMING_RESTART=1
 }
 
@@ -269,14 +269,14 @@ mv $TEMPDIR/*.mp4 $OUTDIR/
 
 if [ $STREAMING_RESTART -eq 1 ]; then
 echo "Concatating converted files."
-for f in $OUTDIR/*; do echo "file '$file_to_convert'" &gt;&gt; $TEMPDIR/mylist.txt; done
+for f in $OUTDIR/*; do echo "file '$file_to_convert'" >> $TEMPDIR/mylist.txt; done
 $FFMPEG -f concat -i $TEMPDIR/mylist.txt -c copy -y /Converter_new/All_in_one.mp4
 rm $TEMPDIR/mylist.txt
 
 ### Stop streaming
 echo "Stopping streaming..."
 VLC_pid=`cat /var/run/vlc.pid`
-kill -9 $VLC_pid &gt;&gt; /dev/null 2&gt;&amp;1
+kill -9 $VLC_pid >> /dev/null 2>&1
 rm -f /var/run/vlc.pid
 sleep 5
 ### Start streaming
@@ -288,9 +288,9 @@ dst=std{access=udp,mux=ts,dst=172.17.8.201:1234},\
 dst=std{access=udp,mux=ts,dst=172.17.8.202:1234},\
 dst=std{access=udp,mux=ts,dst=172.17.9.88:1234},\
 dst=std{access=udp,mux=ts,dst=172.17.8.204:1234},\
-dst=std{access=udp,mux=ts,dst=172.17.8.205:1234}}" &gt;&gt; /var/log/vlc.log 2&gt;&amp;1 &amp;
+dst=std{access=udp,mux=ts,dst=172.17.8.205:1234}}" >> /var/log/vlc.log 2>&1 &
 sleep 5
-ps ax | grep "/usr/bin/vlc" | head -1 | awk -F " " '{ print $1 }' &gt; /var/run/vlc.pid
+ps ax | grep "/usr/bin/vlc" | head -1 | awk -F " " '{ print $1 }' > /var/run/vlc.pid
 
 fi
 ```

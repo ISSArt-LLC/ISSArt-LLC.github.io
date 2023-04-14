@@ -75,20 +75,14 @@ The deployment stage of the project assumes placing the source code on the custo
 
 Together with that, you should consider whether the software will be competitively sensitive. If you feel that your Provider can potentially develop something similar for others in future, you might want to obtain IP ownership.\[4\] For example, in our company the exclusive ownership rights are always handed over to the customer by means of signing an IP rights transfer agreement (an Agreement for compensatory transfer of exclusive intellectual property rights).
 
-<style type="text/css">
-	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }<br />
-	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.<br />
-	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */<br />
-</style><div id="mc_embed_signup"><form action="//issart.us8.list-manage.com/subscribe/post?u=27b4bef1d5ce0a19dc5a471f5&id=9fce49f49e" class="validate" id="mc-embedded-subscribe-form" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank"><div id="mc_embed_signup_scroll"><label for="mce-EMAIL">Subscribe to receive more tips and tricks</label>  
-<input class="email" id="mce-EMAIL" name="EMAIL" placeholder="email address" required="" type="email" value=""></input>  
-<div style="position: absolute; left: -5000px;"><input name="b_27b4bef1d5ce0a19dc5a471f5_9fce49f49e" tabindex="-1" type="text" value=""></input></div><div class="clear"><input class="button" id="mc-embedded-subscribe" name="subscribe" type="submit" value="Subscribe"></input></div></div></form></div>### Conclusion
+### Conclusion
 
 To ensure that everything goes smoothly, be sure to check that all these points are stated in your software development agreement. Ask your lawyer for help if needed.
 
 Share this information with your colleagues and relatives to be sure they will not encounter these IP issues.
 
-**References:**  
-\[1\] [https://en.wikipedia.org/wiki/Software\_license](https://en.wikipedia.org/wiki/Software_license)  
-\[2\] [https://www.iprhelpdesk.eu/sites/default/files/newsdocuments/Intellectual%20Property%20Rights%20Management%20in%20Software%20Developments\_updated.pdf](https://www.iprhelpdesk.eu/sites/default/files/newsdocuments/Intellectual%20Property%20Rights%20Management%20in%20Software%20Developments_updated.pdf)  
-\[3\] <https://www.appsfresh.com/blog/how-to-avoid-copyright-infringement-when-reskinning-your-app/>  
+**References:**
+\[1\] [https://en.wikipedia.org/wiki/Software\_license](https://en.wikipedia.org/wiki/Software_license)
+\[2\] [https://www.iprhelpdesk.eu/sites/default/files/newsdocuments/Intellectual%20Property%20Rights%20Management%20in%20Software%20Developments\_updated.pdf](https://www.iprhelpdesk.eu/sites/default/files/newsdocuments/Intellectual%20Property%20Rights%20Management%20in%20Software%20Developments_updated.pdf)
+\[3\] <https://www.appsfresh.com/blog/how-to-avoid-copyright-infringement-when-reskinning-your-app/>
 \[4\] [http://www.friedfrank.com/siteFiles/Publications/CC\_5KeyIPIssuesSoftwareDevelopmentAgreements\_022713.pdf](http://www.friedfrank.com/siteFiles/Publications/CC_5KeyIPIssuesSoftwareDevelopmentAgreements_022713.pdf)

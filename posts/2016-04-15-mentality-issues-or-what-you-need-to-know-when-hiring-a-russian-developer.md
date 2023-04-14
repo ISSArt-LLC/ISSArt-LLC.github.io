@@ -13,20 +13,20 @@ It’s been several years since the tendency to attract developers from Russia a
 
 **What is a “Russian soul”?**
 
-Where is it? And why does it differ from that of a European or American person? These questions will be answered further.  
-What is important to know when you decide to hire a Russian employee? Should you be suspicious about anything? The answer is no.  
+Where is it? And why does it differ from that of a European or American person? These questions will be answered further.
+What is important to know when you decide to hire a Russian employee? Should you be suspicious about anything? The answer is no.
 To understand an employee from another country you need to know how you are similar and in what things and how you differ.
 
 **Let’s start with the similarities.**
 
-- **Loyalty. Loyalty to the family, to the company you work for, to the Motherland**
+**Loyalty. Loyalty to the family, to the company you work for, to the Motherland**
 
 [![Loyalty](/static/img/2016/03/Loyalty-300x225.jpg)](/static/img/2016/03/Loyalty.jpg)
 
-Russian people, though not very talkative about their family (we’ll talk about it later), love their families most of all. A developer, who is invited to work on contract basis in another country, would take his wife and children with him if there is a possibility. He would care about them and miss them if they’re far away. If he is invited to a party he would prefer to take his wife with him. He would hardly ever prefer to go on vacation by himself, without his family. The same is with business trips: if there is a necessity for his promotion, he would definitely go on a business trip, but not on a long one, and would miss his family a lot.  
+Russian people, though not very talkative about their family (we’ll talk about it later), love their families most of all. A developer, who is invited to work on contract basis in another country, would take his wife and children with him if there is a possibility. He would care about them and miss them if they’re far away. If he is invited to a party he would prefer to take his wife with him. He would hardly ever prefer to go on vacation by himself, without his family. The same is with business trips: if there is a necessity for his promotion, he would definitely go on a business trip, but not on a long one, and would miss his family a lot.
 Nobody would oppose that we see the same thing when it comes to American and European people who value family ties a lot.
 
-- **Responsibility**
+**Responsibility**
 
 [![Responsibility](/static/img/2016/03/Responsibility-300x259.jpg)](/static/img/2016/03/Responsibility.jpg)
 
@@ -36,11 +36,11 @@ To make things clearer, I’ll give you an example. Sometime last year there was
 
 There are many other things we have in common but I suggest that now **we get to some of the differences**.
 
-- **Unsociability.** Seeming restraint of Russian people.
+**Unsociability.** Seeming restraint of Russian people.
 
 [![Unsociablity](/static/img/2016/03/Unsociablity-300x300.jpg)](/static/img/2016/03/Unsociablity.jpg)
 
-It may only seem that Russian people don’t want to communicate. There may be several reasons why they are not that talkative.  
+It may only seem that Russian people don’t want to communicate. There may be several reasons why they are not that talkative.
 The first and the foremost is their fear to speak. No, they are not afraid of you but they have very little experience in real everyday communication with English native speakers. Thus they find it hard to select proper words and tenses.
 
 The second reason may be their natural shyness which is a common thing for many people regardless their sex or nation.

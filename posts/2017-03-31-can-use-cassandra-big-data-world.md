@@ -24,7 +24,7 @@ This article covers the main features of Cassandra DB with respect to usage as a
 
 Basically, you can treat Cassandra as “key-value” which means it was originally designed to effectively support a certain type of operations: value insertion and retrieval of value by its key. Cassandra 2.x and 3.x have slightly different data models, and we will consider 3.x here.
 
-Although conceptually it is still key-value storage, there are some tricks here. Internally, table is a map of partitions indexed by partition key, and the partition itself is a map of ordered rows indexed by clustering. To simplify, you may think about this structure as Map&lt;byte\[\], SortedMap&lt;Clustering, Row&gt;&gt;.
+Although conceptually it is still key-value storage, there are some tricks here. Internally, table is a map of partitions indexed by partition key, and the partition itself is a map of ordered rows indexed by clustering. To simplify, you may think about this structure as Map<byte\[\], SortedMap<Clustering, Row>>.
 
 So rows could be identified by the combination of partition key and clustering key. The hsh value of partition key determines which Cassandra node (replica) would store the data.
 
@@ -53,7 +53,10 @@ Turning back to sensors, typically they provide data with a regular discrete ref
 
 Assume, we need to store sensor data and the only real-time query needed is to select daily measurements of a single sensor. Considering the previous section, we could store measurements in the table of the structure, described below:
 
-`<span style="font-weight: 400;">CREATE TABLE measurement_by_day (</span><span style="font-weight: 400;"><br></br></span><span style="font-weight: 400;">sensor_id text, date text, event_time timestamp, value text, PRIMARY KEY ((sensor_id, date),event_time)</span><span style="font-weight: 400;"><br></br></span><span style="font-weight: 400;">);</span><br></br>`  
+`CREATE TABLE measurement_by_day (
+sensor_id text, date text, event_time timestamp, value text, PRIMARY KEY ((sensor_id, date),event_time)
+);
+`
 *Measurement\_by\_day* table has composite partition key (*sensor\_id, date*) and *event\_time* as clustering column. So you can perform a common select query in the form of
 
 `SELECT * FROM measurement_by_day WHERE sensor_id ="temp_16" AND date="2017-22-03"`

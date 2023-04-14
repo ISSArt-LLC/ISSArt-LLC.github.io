@@ -19,63 +19,63 @@ tags:
     - tensorflow
 ---
 
-## <span style="font-weight: 400;">Introduction</span>
+## Introduction
 
-<span style="font-weight: 400;">Cracks on the surface are a major defect in concrete structures. Early crack detection allows preventing possible damage. There are various approaches to solving this problem. It can be manual inspection or automatic detection methods. But nowadays </span><span style="font-weight: 400;">automatic detection methods</span><span style="font-weight: 400;"> include not only laser testing and radiographic testing. Progress in neural networks and computer vision allows us to use image processing for concrete surface crack detection. </span>
+Cracks on the surface are a major defect in concrete structures. Early crack detection allows preventing possible damage. There are various approaches to solving this problem. It can be manual inspection or automatic detection methods. But nowadays automatic detection methods include not only laser testing and radiographic testing. Progress in neural networks and computer vision allows us to use image processing for concrete surface crack detection. 
 
-<span style="font-weight: 400;">In this article, we will share our approach to solving the problem mentioned above.</span>
+In this article, we will share our approach to solving the problem mentioned above.
 
-## <span style="font-weight: 400;">Data</span>
+## Data
 
-<span style="font-weight: 400;">We used a data set that consists of 198 high-resolution images in the JPG format and corresponding binary masks to train the neural network. Some images are photos of concrete structures only, other ones have a background and extrinsic objects. </span>
+We used a data set that consists of 198 high-resolution images in the JPG format and corresponding binary masks to train the neural network. Some images are photos of concrete structures only, other ones have a background and extrinsic objects. 
 
 <div class="wp-caption alignnone" id="attachment_3619" style="width: 612px">[![](https://issart.com/blog/wp-content/uploads/2020/03/img-1024x383.jpg)](https://issart.com/blog/wp-content/uploads/2020/03/img.jpg)Fig. 1 – Source image and its mask
 
-</div><span style="font-weight: 400;">Well, our first task is data preprocessing. At this stage, we need to create a training set for a neural network that consists of small images. </span>
+</div>Well, our first task is data preprocessing. At this stage, we need to create a training set for a neural network that consists of small images. 
 
-<span style="font-weight: 400;">Firstly, we need to split each image into overlapping tiles 256X256 px. Those images have resolution 11664X8750 px and cracks are so small that after fragmentation we’ll get huge imbalanced data set. Each image divided into just about 1600 samples without cracks and 150 with ones.</span>
+Firstly, we need to split each image into overlapping tiles 256X256 px. Those images have resolution 11664X8750 px and cracks are so small that after fragmentation we’ll get huge imbalanced data set. Each image divided into just about 1600 samples without cracks and 150 with ones.
 
-<span style="font-weight: 400;">However, we found an additional challenge. The most part of tiles with cracks has horizontal cracks. But cracks can be rotated at any angle. Therefore, our second step in data preprocessing is data augmentation.</span>
+However, we found an additional challenge. The most part of tiles with cracks has horizontal cracks. But cracks can be rotated at any angle. Therefore, our second step in data preprocessing is data augmentation.
 
-<span style="font-weight: 400;">Data augmentation is a technique to artificially create new training data from existing training data. We need to make the following transformations to get a great diversity of input data:</span>
+Data augmentation is a technique to artificially create new training data from existing training data. We need to make the following transformations to get a great diversity of input data:
 
-- <span style="font-weight: 400;">a vertical and horizontal flip of each image;</span>
-- <span style="font-weight: 400;">rotate each image at different angles;</span>
-- <span style="font-weight: 400;">change brightness and contrast settings of each image in different ways;</span>
-- <span style="font-weight: 400;">apply Gaussian blur.</span>
+- a vertical and horizontal flip of each image;
+- rotate each image at different angles;
+- change brightness and contrast settings of each image in different ways;
+- apply Gaussian blur.
 
-## <span style="font-weight: 400;">Tools</span>
+## Tools
 
-<span style="font-weight: 400;">We used Python programming language and the following libraries:</span>
+We used Python programming language and the following libraries:
 
-- [<span style="font-weight: 400;">NumPy</span>](https://numpy.org/)<span style="font-weight: 400;"> – an open source package for scientific computing;</span>
-- [<span style="font-weight: 400;">TensorFlow</span>](https://www.tensorflow.org/)<span style="font-weight: 400;"> – an open source library for machine learning;</span>
-- [<span style="font-weight: 400;">Keras</span>](https://keras.io/)<span style="font-weight: 400;"> – a high-level neural networks API;</span>
+- [NumPy](https://numpy.org/) – an open source package for scientific computing;
+- [TensorFlow](https://www.tensorflow.org/) – an open source library for machine learning;
+- [Keras](https://keras.io/) – a high-level neural networks API;
 - [OpenCV](https://opencv.org/) – an open source computer vision and machine learning software library.
 
-## <span style="font-weight: 400;">Model</span>
+## Model
 
-<span style="font-weight: 400;">Crack detection is the semantic segmentation problem. Semantic segmentation refers to the process of linking each pixel in an image to a class label. In this case, we need to find all pixels of cracks on the photo of a concrete structure. </span>
+Crack detection is the semantic segmentation problem. Semantic segmentation refers to the process of linking each pixel in an image to a class label. In this case, we need to find all pixels of cracks on the photo of a concrete structure. 
 
-<span style="font-weight: 400;">Therefore, we used the neural network architecture U-net. In the original research, this architecture consists of three sections: the contraction, the bottleneck, and the expansion section. As a result of this, U-net can predict precise segmentation maps by combining the location information and context.</span>
+Therefore, we used the neural network architecture U-net. In the original research, this architecture consists of three sections: the contraction, the bottleneck, and the expansion section. As a result of this, U-net can predict precise segmentation maps by combining the location information and context.
 
 <div class="wp-caption alignnone" id="attachment_3613" style="width: 612px">[![](https://issart.com/blog/wp-content/uploads/2020/03/unet-1024x669.png)](https://issart.com/blog/wp-content/uploads/2020/03/unet.png)Fig. 2 – U-net architecture
 
-</div><span style="font-weight: 400;">The contraction section is made of many contraction blocks. Each block takes an input and applies two 3X3 convolution layers followed by a 2X2 max pooling. The number of kernels or feature maps after each block doubles so that architecture can learn the complex structures effectively. The bottommost layer mediates between the contraction layer and the expansion layer. It uses two 3X3 CNN layers followed by 2X2 up convolution layer.</span>
+</div>The contraction section is made of many contraction blocks. Each block takes an input and applies two 3X3 convolution layers followed by a 2X2 max pooling. The number of kernels or feature maps after each block doubles so that architecture can learn the complex structures effectively. The bottommost layer mediates between the contraction layer and the expansion layer. It uses two 3X3 CNN layers followed by 2X2 up convolution layer.
 
-<span style="font-weight: 400;">In our implementation dropout layers were added because they force a neural network to learn more robust features that are useful in conjunction with many different random subsets of the other neurons. The loss function is Binary Crossentropy.</span>
+In our implementation dropout layers were added because they force a neural network to learn more robust features that are useful in conjunction with many different random subsets of the other neurons. The loss function is Binary Crossentropy.
 
-<span style="font-weight: 400;">See the following paper for more background: </span>[<span style="font-weight: 400;">“U-Net: Convolutional Networks for Biomedical Image Segmentation”</span>](https://arxiv.org/abs/1505.04597)<span style="font-weight: 400;"> by Olaf Ronneberger, Philipp Fischer and Thomas Brox (May 2015). </span>
+See the following paper for more background: [“U-Net: Convolutional Networks for Biomedical Image Segmentation”](https://arxiv.org/abs/1505.04597) by Olaf Ronneberger, Philipp Fischer and Thomas Brox (May 2015). 
 
-## <span style="font-weight: 400;">Results</span>
+## Results
 
-<span style="font-weight: 400;">The metric to evaluate our U-net model is </span>[<span style="font-weight: 400;">the Sørensen–Dice coefficient</span>](https://en.wikipedia.org/wiki/S%C3%B8rensen%E2%80%93Dice_coefficient)<span style="font-weight: 400;">. After training, the value of this metric is 95% on the train set and 93% on the validation set.</span>
+The metric to evaluate our U-net model is [the Sørensen–Dice coefficient](https://en.wikipedia.org/wiki/S%C3%B8rensen%E2%80%93Dice_coefficient). After training, the value of this metric is 95% on the train set and 93% on the validation set.
 
-<span style="font-weight: 400;">We need to make image scaling before the prediction because U-net is sensitive to image scale. If there were no similar scale images in the training set, the neural network will be wrong in its predictions. </span>
+We need to make image scaling before the prediction because U-net is sensitive to image scale. If there were no similar scale images in the training set, the neural network will be wrong in its predictions. 
 
-<span style="font-weight: 400;">Therefore, in our implementation, U-net predicts 3 masks of each image: a mask of source image, a mask of 2 times enlarged image and a mask of 2 times reduced image. After that, we need to resize received predictions into source size and compute an average value of each pixel. Target mask of an input image is a binarized average image.</span>
+Therefore, in our implementation, U-net predicts 3 masks of each image: a mask of source image, a mask of 2 times enlarged image and a mask of 2 times reduced image. After that, we need to resize received predictions into source size and compute an average value of each pixel. Target mask of an input image is a binarized average image.
 
-<span style="font-weight: 400;">Figures 3-5 show an example of prediction for the input image (fig. 1).</span>
+Figures 3-5 show an example of prediction for the input image (fig. 1).
 
 <div class="wp-caption alignnone" id="attachment_3614" style="width: 612px">[![](https://issart.com/blog/wp-content/uploads/2020/03/probabilities-1024x766.jpg)](https://issart.com/blog/wp-content/uploads/2020/03/probabilities.jpg)Fig. 3 – An average image from 3 predicted masks
 
@@ -83,6 +83,6 @@ tags:
 
 </div><div class="wp-caption alignnone" id="attachment_3616" style="width: 612px">[![](https://issart.com/blog/wp-content/uploads/2020/03/contours-1024x766.jpg)](https://issart.com/blog/wp-content/uploads/2020/03/contours.jpg)Fig. 5 – Contours of the predicted mask
 
-</div><span style="font-weight: 400;">Even though U-net architecture is intended to solve biomedical image segmentation problem, it may be used for other tasks. We got a precise solution to detect cracks on the concrete structures. Moreover, the neural network learned to find small cracks, cracks rotated at different angles and branched cracks. The major issues are recognition of spaces between blocks and its borders as cracks. One way to improve it is to solve it as an instant segmentation problem, i. e. to predict the class labels and find boundaries of the objects. Accordingly, we will know cracks localisation and its type.</span>
+</div>Even though U-net architecture is intended to solve biomedical image segmentation problem, it may be used for other tasks. We got a precise solution to detect cracks on the concrete structures. Moreover, the neural network learned to find small cracks, cracks rotated at different angles and branched cracks. The major issues are recognition of spaces between blocks and its borders as cracks. One way to improve it is to solve it as an instant segmentation problem, i. e. to predict the class labels and find boundaries of the objects. Accordingly, we will know cracks localisation and its type.
 
-<span style="font-weight: 400;">Have you used similar technologies in your projects?</span>
+Have you used similar technologies in your projects?

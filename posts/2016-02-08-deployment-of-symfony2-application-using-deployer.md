@@ -135,6 +135,6 @@ If something is wrong, a simple rollback to the previous release is supported by
 
 **Get more examples and documentation [here](http://deployer.org/).**
 
-After the first time deployment process, you should configure your web server to serve your “web” directory inside “&lt;deploy\_path&gt;/current” directory. If you have no permissions to configure your web server, simply create symlink from your document root to “&lt;deploy\_path&gt;/current” directory.
+After the first time deployment process, you should configure your web server to serve your “web” directory inside “<deploy\_path>/current” directory. If you have no permissions to configure your web server, simply create symlink from your document root to “<deploy\_path>/current” directory.
 
 ***Happy Symfonying!***

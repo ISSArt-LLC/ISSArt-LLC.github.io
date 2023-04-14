@@ -16,8 +16,8 @@ tags:
 
 For most developers performance testing sounds like something really difficult to get started on. It might come to mind that some special and usually expensive environment and tools to test the performance.
 
-Well, sometimes you do indeed need them to test the network communications impact, or if you have a cluster and want to measure its capacity, for example. But if you have some small system or you don’t have a lot of money, you may still face performance problems. Sometimes you can’t scale the environment, because it is expensive or your code has bugs preventing it from scaling.  
-  
+Well, sometimes you do indeed need them to test the network communications impact, or if you have a cluster and want to measure its capacity, for example. But if you have some small system or you don’t have a lot of money, you may still face performance problems. Sometimes you can’t scale the environment, because it is expensive or your code has bugs preventing it from scaling.
+
 Scaling doesn’t mean just increasing the environment, but also making it **efficient**. If you add an additional node to handle incoming load, but your performance increases by 5%, it isn’t the scaling, it is wasting of resources. Or if you spent weeks optimizing some part of the code, but finally got results even worse than before, that doesn’t sound optimistic.
 
 Sometimes the code works slowly. Or you think that some part works slowly and if you change it, the performance will increase significantly. How will you find the exact place in the code which should be optimized? How will you check if the performance has indeed increased? To answer these questions you need to write some performance tests, i.e. benchmarks.
@@ -26,8 +26,8 @@ Sometimes the code works slowly. Or you think that some part works slowly and if
 
 Generally, there are 2 types of benchmarks: micro and macro. The difference between them is similar to the difference between unit and integration tests, but generally, it is difficult to say that this benchmark is micro/macro, but another one isn’t.
 
-- ***Example 1.*** Imagine you have some special environment, where you emulate the load from thousands of users and analyze the throughput, response time, etc. Most likely this is a macro benchmark.
-- ***Example 2***. Imagine you have a method in the code executing other methods and you call the first method with the real execution of all the other methods multiple times and measure the throughput and execution time. This can be either a macro benchmark or micro benchmark.
+***Example 1.*** Imagine you have some special environment, where you emulate the load from thousands of users and analyze the throughput, response time, etc. Most likely this is a macro benchmark.
+***Example 2***. Imagine you have a method in the code executing other methods and you call the first method with the real execution of all the other methods multiple times and measure the throughput and execution time. This can be either a macro benchmark or micro benchmark.
 
 The benchmark depends on the functionality scope. For example, if you develop some business logic of a web application, your micro benchmark can check the method, writing some object to the database, however, if you develop the database driver, the same case for you will be the macro benchmark.
 
@@ -53,7 +53,7 @@ Most likely you won’t load all this data into the memory before the benchmarki
 
 You can write a simple benchmark to test IO throughput, just reading the same file without any parsing. So each time you run the parser’s benchmark you can compare it to the “ideal” case. It will make your benchmark sustainable.
 
-But what can you do if it seems that your code has some performance gaps? If you have benchmarks close to the code (like jmh tests module in the same project) it costs nothing to run your benchmark with the profiler. At the same time small benchmarks to some isolated parts of the code allow you to understand the performance profile better. Most likely you won’t see that the most of time your code executes the Object.wait() or Unsafe.park(), but something more reasonable.  
+But what can you do if it seems that your code has some performance gaps? If you have benchmarks close to the code (like jmh tests module in the same project) it costs nothing to run your benchmark with the profiler. At the same time small benchmarks to some isolated parts of the code allow you to understand the performance profile better. Most likely you won’t see that the most of time your code executes the Object.wait() or Unsafe.park(), but something more reasonable.
 Also benchmark + profiler allows you to estimate the profit of the code changes you want to apply. Well it isn’t a very reliable approach in terms of accuracy, when +-3 nanoseconds are crucial for your code, but it is very useful when you want to understand why some operation takes enormous time.
 
 The result of a benchmark itself doesn’t mean anything, however, you can sometimes use it to prove your viewpoint. The analysis of the benchmark results is mandatory and the conclusion must answer your initial question regarding the performance and/or optimization. Thus, it makes benchmarking one of the most significant parts of the performance engineering.

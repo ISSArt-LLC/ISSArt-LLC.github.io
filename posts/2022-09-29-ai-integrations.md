@@ -38,7 +38,7 @@ The distillery feeds recipes, sales data, and customer preferences into machine 
 
 It’s a refreshing, new look on an old classic. Of course, some might say it was inevitable that artificial intelligence would eventually develop enough to make its drinks one day. But how does it work, and what can you expect from drinking this futuristic beverage?
 
-<figure class="wp-block-image size-large is-resized">![](/static/img/2022/09/whiskey-1024x576.jpg)AI whiskey is the product of one man’s desire to create an alternative method for distilleries to make their whisky and at the same time save them money. The founder, Pernod Ricard’s Alexandre Gabriel, wants it to be a cheaper process that will help provide smaller companies with more resources in the long run.
+![](/static/img/2022/09/whiskey.jpg)AI whiskey is the product of one man’s desire to create an alternative method for distilleries to make their whisky and at the same time save them money. The founder, Pernod Ricard’s Alexandre Gabriel, wants it to be a cheaper process that will help provide smaller companies with more resources in the long run.
 
 The process is very simple and involves using a still that has been retrofitted with AI technology. Then the system takes the whisky through its paces—mashing, fermenting, distilling and maturing.
 
@@ -74,20 +74,20 @@ Video creative automation platform Phyron takes a data feed from its brand custo
 
 AI recognizes the key properties in the car images and edits them automatically into the video template. It can identify differences between interior and exterior photos and also strip away backgrounds and replace them with neutral ones. The software also adds special effects and shadows for a professional look, as well as logos and other brand assets.
 
-<figure class="wp-block-image size-large is-resized">![](/static/img/2022/09/124444.jpg)Product details, pricing and special offers are also designed into the video, and the video is re-rendered if any changes are made to the details in the data feed by the brand.
+![](/static/img/2022/09/124444.jpg)Product details, pricing and special offers are also designed into the video, and the video is re-rendered if any changes are made to the details in the data feed by the brand.
 
 Competitors are raising the bar in a content quality and production race. So, a static image that can be more easily taken from a website to social media marketing promotion won’t work anymore, for big brands and even for local car dealerships. This raises the need for videos, and for the democratization of video content production through automated solutions, as well as copywriting for written messages. There is also a similar push to standardize and simplify the production of 3D images.
 
 Phyron CEO Johan Sundstrand sees expectations for automotive marketing to be similar in Europe and North America. They use similar performance metrics (inventory turn, increased views, lead generation, cost per video) that lead to a similar value proposition from the Phyron technology. Dealerships want minimal time spent by staff updating listings and more time spent with customers.
 
-## **Fraud detection in finance**   
+## **Fraud detection in finance** 
 **and other domains**
 
 With increasing online shopping, fraudulent transactions are also on the rise. Companies use machine learning algorithms to identify and block fraudsters. You are watching “Game of Thrones” when you get a call from your bank asking if you have used your card for “$X” at a store in your city to buy a gadget. It was not you who bought the expensive device using your card; it has been in your pocket all day. How did the bank flag this purchase as fraudulent? Thanks to Machine Learning algorithms. Financial fraud costs $80 billion annually, where only Americans are at risk worth $50 billion per annum.
 
 One of the most important goals for applications of machine learning in the banking/finance domain is fraud prevention, i.e., detecting and minimizing any fraudulent activity. Machine learning is best suited for this use case as it can scan through vast amounts of transactional data and identify patterns, i.e., if there is any unusual behavior. Every transaction customer makes is analyzed in real-time and given a fraud score representing the likelihood of the transaction being fraudulent. In case of a fraud transaction, the transaction is blocked or handed over for a manual review. All of this happens in the blink of an eye. If the fraud score is above a particular range, a rejection will be triggered automatically. Otherwise this would be difficult for a human being to review 1000’s data points in seconds and make a decision without the application of machine learning.
 
-<figure class="wp-block-image size-large is-resized">![](/static/img/2022/09/Reducing-false-positives-in-credit-card-fraud-detection-1024x576.jpg)Citibank has collaborated with Portugal-based fraud detection company Feedzai which works in real-time to identify and eliminate fraud in online and in-person banking by alerting the customer. And PayPal is using machine learning to fight money laundering. PayPal has several machine learning tools that compare billions of transactions and can accurately differentiate between what is a legitimate and fraudulent transaction amongst the buyers and sellers.
+![](/static/img/2022/09/Reducing-false-positives-in-credit-card-fraud-detection.jpg)Citibank has collaborated with Portugal-based fraud detection company Feedzai which works in real-time to identify and eliminate fraud in online and in-person banking by alerting the customer. And PayPal is using machine learning to fight money laundering. PayPal has several machine learning tools that compare billions of transactions and can accurately differentiate between what is a legitimate and fraudulent transaction amongst the buyers and sellers.
 
 It should end with the fact that, apparently, the direction of artificial intelligence has not yet had time to become obsolete.
 

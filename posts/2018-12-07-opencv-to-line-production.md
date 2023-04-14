@@ -21,9 +21,9 @@ Let’s start with the analysis of the originally received input data – a set 
 
 So, we have some object on the background that we will:
 
-– define,  
-– determine the location of the label,  
-– determine the level of liquid,  
+– define,
+– determine the location of the label,
+– determine the level of liquid,
 – compare the obtained values with the admissible ones.
 
 Looking ahead, I will mention that in the future we will receive and process images directly from the webcam.
@@ -249,7 +249,7 @@ In our case, the cork of the bottle has very close values to the required ones, 
    label_y_arr = []
    for num, cnt in enumerate(contours):
        x, y, w, h = cv.boundingRect(cnt)
-       if (w &gt;= center_w) &amp; (y &gt; BANG_HEIGHT * img_h):
+       if (w >= center_w) & (y > BANG_HEIGHT * img_h):
            label_y_arr.append(y)
            label_y_arr.append(y + h)
    min_label_y, max_label_y = 0, 0
@@ -259,7 +259,7 @@ In our case, the cork of the bottle has very close values to the required ones, 
    return min_label_y, max_label_y
 ```
 
-Similarly, we will define the level of the liquid in the bottle by setting the search area in the parameters LIQUID\_LEVEL\_SEARCH\_TOP, LIQUID\_LEVEL\_SEARCH\_BOTTOM, that allows us to narrow down the parameters of the HSV filter, thereby reducing the number of false positives.  
+Similarly, we will define the level of the liquid in the bottle by setting the search area in the parameters LIQUID\_LEVEL\_SEARCH\_TOP, LIQUID\_LEVEL\_SEARCH\_BOTTOM, that allows us to narrow down the parameters of the HSV filter, thereby reducing the number of false positives.
 If the level in the given area has not been found – the level quality control is failed.
 
 If found, we will compare it with valid parameters, but there is more on that later.
@@ -281,7 +281,7 @@ If found, we will compare it with valid parameters, but there is more on that la
    level_y_arr = []
    for num, cnt in enumerate(contours):
        x, y, w, h = cv.boundingRect(cnt)
-       if w &gt;= center_w * 0.6:
+       if w >= center_w * 0.6:
            level_y_arr.append(y)
            level_y_arr.append(y + h)
    max_level_y = 0
@@ -292,7 +292,7 @@ If found, we will compare it with valid parameters, but there is more on that la
 liquid_level_y = find_liquid_level(bottle)
 liquid_level = 1 - liquid_level_y / bottle_h
 volume = None
-if (liquid_level &gt; 0.) &amp; (liquid_level &lt; 1.):
+if (liquid_level > 0.) & (liquid_level < 1.):
    volume = get_volume_by_level(liquid_level)
 ```
 
@@ -304,7 +304,7 @@ Here get\_volume\_by\_level() is used to convert the level of liquid to the volu
    keys = list(LEVEL_VOLUME_MAP.keys())
    for indx, key in enumerate(keys[:-1]):
        next_key = keys[indx + 1]
-       if (level &gt;= key) &amp; (level &lt; next_key):
+       if (level >= key) & (level < next_key):
            min = LEVEL_VOLUME_MAP[key]
            max = LEVEL_VOLUME_MAP[next_key]
            volume = int((max - min) * (level - key) / (next_key - key) + min)
@@ -328,8 +328,8 @@ We make a conclusion as to the correctness of the pasted label, checking its lev
 ```
 <pre class="brush: python; title: ; notranslate" title="">label_bottom = 1 - max_label_y / bottle_h
 label_height = (max_label_y - min_label_y) / bottle_h
-label_ok = (max_label_y &gt; min_label_y) &amp; \
-          ((label_bottom &gt; LABEL_BOTTOM_MIN) &amp; (label_bottom &lt; LABEL_BOTTOM_MAX)) &amp; \ ((label_height &gt; LABEL_HEIGHT_MIN) &amp; (label_height &lt; LABEL_HEIGHT_MAX))
+label_ok = (max_label_y > min_label_y) & \
+          ((label_bottom > LABEL_BOTTOM_MIN) & (label_bottom < LABEL_BOTTOM_MAX)) & \ ((label_height > LABEL_HEIGHT_MIN) & (label_height < LABEL_HEIGHT_MAX))
 ```
 
 We check the volume of the liquid in the bottle, comparing with the specified limits:
@@ -337,7 +337,7 @@ We check the volume of the liquid in the bottle, comparing with the specified li
 ```
 <pre class="brush: python; title: ; notranslate" title="">level_ok = False
     if volume != None:
-        level_ok = (volume &gt;= VOLUME_MIN) &amp; (volume &lt;= VOLUME_MAX)
+        level_ok = (volume >= VOLUME_MIN) & (volume <= VOLUME_MAX)
 ```
 
 And apply the obtained results to the image:
@@ -397,15 +397,15 @@ Finally, as I promised, here is the code of the function to get images from the 
    cv.destroyAllWindows()
 ```
 
-Upon the initial click of &lt;Space&gt; the current frame is recognized, the rendering of the results in the display window received from the webcam and saving of the images are performed.
+Upon the initial click of <Space> the current frame is recognized, the rendering of the results in the display window received from the webcam and saving of the images are performed.
 
-The second click on &lt;Space&gt; will clear the rendering of the results of recognition and make the process ready to repeat itself.
+The second click on <Space> will clear the rendering of the results of recognition and make the process ready to repeat itself.
 
-Exit is done by pressing &lt;Esc&gt;
+Exit is done by pressing <Esc>
 
 ### Conclusion
 
-It should be noted that to obtain stable results, it is necessary to provide favorable conditions for the operation of the system, that is pick a uniform contrasting background, work on lighting, reduce glare and shadows to the minimum, fix the camera.  
+It should be noted that to obtain stable results, it is necessary to provide favorable conditions for the operation of the system, that is pick a uniform contrasting background, work on lighting, reduce glare and shadows to the minimum, fix the camera.
 But, as you can see, even in such imperfect conditions, it is possible to achieve good results.
 
 Adjustment of the system to specific conditions is carried out by specifying the necessary parameters in the settings file without having to intervene in the source code, it is possible to track the performance of the system in real time and save the results obtained.

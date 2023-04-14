@@ -27,21 +27,21 @@ But we knew that our customer trusts us, and we didn’t want to let him down. T
 
 Here is the situation: this is an interactive JavaScript application built on model-view architecture. It means thatn all application data is stored in the “model” objects which trigger the events whenever we make any modifications. Another bunch of objects – the “view” objects – constantly listens to these events and redraws the parts of the page contents which were changed. For example, here are the steps of how we handle the change of language selection:
 
-1\. Intercept the “click” event at the language selector  
-2\. Change the “language” property in the model and trigger a “language changed” event  
-3\. All views which have the textual strings dependent on localization update their contents
+1. Intercept the “click” event at the language selector
+2. Change the “language” property in the model and trigger a “language changed” event
+3. All views which have the textual strings dependent on localization update their contents
 
 So, the application components live in constant synchronization with each other. There are a lot of frameworks which let you setup this architecture in your application. The most popular ones nowadays are [AngularJS](https://angularjs.org/) and [Backbone.JS](http://backbonejs.org/), but there are many ones of them in fact. You can find the majority of them on this site [todomvc.com](http://todomvc.com/)
 
-This architecture makes our life easier but it is not a pitfall proof solution. If you just connect two objects together via an event mindlessly, the outcome can be disasterous in performance regard. Especially with such high-level solutions like AngularJS, where you don’t have a direct access to the application components, and the communication  
+This architecture makes our life easier but it is not a pitfall proof solution. If you just connect two objects together via an event mindlessly, the outcome can be disasterous in performance regard. Especially with such high-level solutions like AngularJS, where you don’t have a direct access to the application components, and the communication
 mechanism is not smooth at all. We use our own solution – [jWidget](http://enepomnyaschih.github.io/jwidget) which is similar to Backbone but is more powerful and well-structurized. And still it doesn’t make our code invincible. But we know our job and knew exactly what to do.
 
 ### Solution
 
 **Problem #1. Memory leaks**
 
-Let me give you an example. A view is listening to an event of the model. What should we do if the user selects another component so that this view is needed no more? We can blindly remove the view from the Web page. But in fact, it is still alive, because it is listening to an event of the model. The model still has a reference to the view, so internal  
-garbage collector of the browser cannot clear the memory occupied by this view. Moreover, if the model triggers the event, this “zombie” view will receive this event for handling, so we can run into some unexpected effects. That’s why we cannot just remove the view from the Web page. Instead, we must destroy it completely by also unsubscribing from  
+Let me give you an example. A view is listening to an event of the model. What should we do if the user selects another component so that this view is needed no more? We can blindly remove the view from the Web page. But in fact, it is still alive, because it is listening to an event of the model. The model still has a reference to the view, so internal
+garbage collector of the browser cannot clear the memory occupied by this view. Moreover, if the model triggers the event, this “zombie” view will receive this event for handling, so we can run into some unexpected effects. That’s why we cannot just remove the view from the Web page. Instead, we must destroy it completely by also unsubscribing from
 the model’s event. It will guarantee the reliability and memory consistency.
 
 We found the memory leaks very fast in our application. The symptoms are simple: Google Chrome’s “Aw, Snap!” message is the first sign that probably you run out of memory. So, if several jumps between components brings you to this screen, then some parts of your component view are not destroyed for sure.
@@ -56,11 +56,11 @@ We’ve added several lines of code in jWidget framework, which showed us exactl
 
 **Problem #2. Large grid rendering**
 
-We had a screen in our application which shows the consolidated report showing all 2200 components at once in a grid. The simple grid that we had did not perform well in these circumstances. We knew some UI component libraries which provide a solution for this problem – buffered grid. But our grid had very unusual functionality and design, that’s why  
+We had a screen in our application which shows the consolidated report showing all 2200 components at once in a grid. The simple grid that we had did not perform well in these circumstances. We knew some UI component libraries which provide a solution for this problem – buffered grid. But our grid had very unusual functionality and design, that’s why
 we couldn’t use any third party solutions. So we’ve decided to implement an own buffered grid!
 
-The idea of buffered grid is to render only a visible part of it at the moment. Whenever the user scrolls the contents up or down, we render all new rows that appeared in result to the grid. To make it possible, all the rows must have a fixed height in order to calculate the range of the rows that are visible in the current Y coordinates  
-segment. To make the scrollbar visible, we forcibly set the grid contents block height to the number of rows multiplied  
+The idea of buffered grid is to render only a visible part of it at the moment. Whenever the user scrolls the contents up or down, we render all new rows that appeared in result to the grid. To make it possible, all the rows must have a fixed height in order to calculate the range of the rows that are visible in the current Y coordinates
+segment. To make the scrollbar visible, we forcibly set the grid contents block height to the number of rows multiplied
 by the row height.
 
 The outcome was incredible. The grid rendering time was improved from 20 seconds to less than a second.
@@ -69,10 +69,10 @@ The outcome was incredible. The grid rendering time was improved from 20 seconds
 
 Here is one more pitfall of the model-view architecture. Let me give you an example. We have 2200 components, each component consists of 15 details. The components are grouped by units, 4 components in each unit.
 
-Each detail has a property “condition”. This is just a number showing you how much this detail is worn out. Detail conditions are taken from the JSON file, which can be updated from time to time. We extend this term to higher levels of the hierarchy by the next rule: condition of a component is the worst condition among all its details, condition  
+Each detail has a property “condition”. This is just a number showing you how much this detail is worn out. Detail conditions are taken from the JSON file, which can be updated from time to time. We extend this term to higher levels of the hierarchy by the next rule: condition of a component is the worst condition among all its details, condition
 of a unit is the worst condition among all its components, and condition of the entire unit set is the worst condition among all units.
 
-Any detail, component or unit can be excluded from the calculation process manually by the user. That’s why we use data binding technique to calculate the consolidated condition of the higher levels in the hierarchy. In other words, whenever the condition of some object is changed (for example, the user has excluded some object from the calculation process),  
+Any detail, component or unit can be excluded from the calculation process manually by the user. That’s why we use data binding technique to calculate the consolidated condition of the higher levels in the hierarchy. In other words, whenever the condition of some object is changed (for example, the user has excluded some object from the calculation process),
 we immediately recalculate the condition of all the objects which depend on this one.
 
 And it works perfectly while we are changing the object conditions one by one. But here is a problem. If we perform a bulk modification of the component conditions (for example, JSON file has been updated and we must reload it), the algorithm gets stuck badly.
@@ -83,27 +83,18 @@ And this is how we update just the first detail! And we have 33000 of them! The 
 
 The solution was quite difficult to implement. For the time of bulk operation handling, we suspend all the data binding in our application:
 
-this.suspendSynchronization();  
-this.loadDataFromJson();  
+this.suspendSynchronization();
+this.loadDataFromJson();
 this.resumeSynchronization();
 
 It looks simple but contains quite a lot of code under the hood. The problem is that we still must recalculate everything after this bulk operation, and with the synchronization disabled it doesn’t seem to be easy. We didn’t want to duplicate the code which is already used for data binding, so we fixed the problem the next way.
 
-Before, we had a single “condition changed” event in each of the objects in the hierarchy. We decided to split it to two: “condition reset” and “condition recalculated”. First one is used for hierarchical data binding: whenever the condition of a detail is reset, we reset the condition for its component, unit and the unit set above in the  
-hierarchy. The second one is used for view data binding: whenever the condition of an object is recalculated, we  
+Before, we had a single “condition changed” event in each of the objects in the hierarchy. We decided to split it to two: “condition reset” and “condition recalculated”. First one is used for hierarchical data binding: whenever the condition of a detail is reset, we reset the condition for its component, unit and the unit set above in the
+hierarchy. The second one is used for view data binding: whenever the condition of an object is recalculated, we
 redraw it on the screen (so, its color is changed from green to red or so on).
 
-If the synchronization is active, these two events are triggered simultaneously, so the application works as before. If the synchronization is suspended, then we just trigger the “condition reset” event and put the object to the calculation queue to be recalculated as soon as synchronization is resumed (unless this object is already in queue). So, when we resume the synchronization, we already have the up-to-date info about the condition of all the details, and we also know all their dependencies that must be recalculated one by one. This algorithm is linear and it is the fastest one that can get the job done correctly.  
-<link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css"></link><style type="text/css">
-	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
-	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
-	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-</style>
+If the synchronization is active, these two events are triggered simultaneously, so the application works as before. If the synchronization is suspended, then we just trigger the “condition reset” event and put the object to the calculation queue to be recalculated as soon as synchronization is resumed (unless this object is already in queue). So, when we resume the synchronization, we already have the up-to-date info about the condition of all the details, and we also know all their dependencies that must be recalculated one by one. This algorithm is linear and it is the fastest one that can get the job done correctly.**To be continued…**
 
-<div id="mc_embed_signup"><form action="//issart.us8.list-manage.com/subscribe/post?u=27b4bef1d5ce0a19dc5a471f5&id=9fce49f49e" class="validate" id="mc-embedded-subscribe-form" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank"><div id="mc_embed_signup_scroll"> <label for="mce-EMAIL">Subscribe to receive more tips and tricks</label>  
-<input class="email" id="mce-EMAIL" name="EMAIL" placeholder="email address" required="" type="email" value=""></input>  
-<div style="position: absolute; left: -5000px;"><input name="b_27b4bef1d5ce0a19dc5a471f5_9fce49f49e" tabindex="-1" type="text" value=""></input></div><div class="clear"><input class="button" id="mc-embedded-subscribe" name="subscribe" type="submit" value="Subscribe"></input></div></div></form></div>**To be continued…**
-
-This is just a first half of improvements that we’ve made in two intense weeks of optimization challenge. Wait for the  
-[next article](http://www.issart.com/blog/front-end-optimization-experience-part-2/) where we’ll cover deferred rendering, on-demand calculations and PHP memory utilization optimization  
+This is just a first half of improvements that we’ve made in two intense weeks of optimization challenge. Wait for the
+[next article](http://www.issart.com/blog/front-end-optimization-experience-part-2/) where we’ll cover deferred rendering, on-demand calculations and PHP memory utilization optimization
 using JSON streaming.

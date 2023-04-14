@@ -25,7 +25,7 @@ Hi. I’m a junior web-developer and in this article I’ll tell you about my me
 #### Advantages:
 
 - Works on all common desktop platforms such as Windows, Mac, Linux
-- Different integrations with operating system: Menu, Notifications, Tray, Keyboard Shortcuts, Native File Drag &amp; Drop
+- Different integrations with operating system: Menu, Notifications, Tray, Keyboard Shortcuts, Native File Drag & Drop
 - Implemented Crash Reporting, Automatic Updates and Win Installers
 - Web-developers can use them for a fast start and creation of apps in a well-known environment
 
@@ -43,7 +43,7 @@ Hi. I’m a junior web-developer and in this article I’ll tell you about my me
 
 #### Alternatives*:*
 
-- **NW.js –** the aim of the project is absolutely the same, it came up earlier but less popular. It uses higher level of approach and full integration of functions of web-browser, developed by Intel.
+**NW.js –** the aim of the project is absolutely the same, it came up earlier but less popular. It uses higher level of approach and full integration of functions of web-browser, developed by Intel.
 
 ## Challenges I faced when using Electron.js
 
@@ -51,27 +51,23 @@ So now you know pros and cons of this tool. It’s time to tell you about things
 
 ### **Integration:** Common for all of us: Menu, Notification, Tray
 
-The first that comes to the mind, when we want to integrate our app into OS, when we need to make menu, notification and icon in tray. To make this functionality we have API that helps us to resolve these tasks:  
-[_Menu.buildFromTemplate_](https://www.electronjs.org/docs/api/menu#menubuildfromtemplatetemplate)
-  
-[Menu.setApplicationMenu](https://www.electronjs.org/docs/api/menu#menusetapplicationmenumenu)
-  
-[menu.popup](https://www.electronjs.org/docs/api/menu#menupopupoptions)
-  
-[new Notification](https://www.electronjs.org/docs/api/notification#new-notificationoptions-experimental)
-  
-[new Tray](https://www.electronjs.org/docs/api/tray#new-trayimage)
-  
-[tray.setContextMenu](https://www.electronjs.org/docs/api/tray#traysetcontextmenumenu)
+The first that comes to the mind, when we want to integrate our app into OS, when we need to make menu, notification and icon in tray. To make this functionality we have API that helps us to resolve these tasks:
+
+1. [_Menu.buildFromTemplate_](https://www.electronjs.org/docs/api/menu#menubuildfromtemplatetemplate)
+2. [Menu.setApplicationMenu](https://www.electronjs.org/docs/api/menu#menusetapplicationmenumenu)
+3. [menu.popup](https://www.electronjs.org/docs/api/menu#menupopupoptions)
+4. [new Notification](https://www.electronjs.org/docs/api/notification#new-notificationoptions-experimental)
+5. [new Tray](https://www.electronjs.org/docs/api/tray#new-trayimage)
+6. [tray.setContextMenu](https://www.electronjs.org/docs/api/tray#traysetcontextmenumenu)
 
 You should pay attention to some options and methods that can be special for the platform. If you want to show dynamic menu in tray, you need to create a pattern with renewed data and install it again. Talking about icon in tray, you need to be sure that the object that will bring *[new Tray()](https://www.electronjs.org/docs/api/tray#new-trayimage)* back wasn’t deleted by trash collector. It seems that junior developers face it so often that it is even described in the documents.
 
 ### **Condition:** Condition between Main Process and Render Process
 
-This task is less trivial and to solve it we have several ways. First of all, a few words about architecture of Electron. We have two independent processes Main and Render. The last one can be several that correspond to windows in OS. We need data exchange between Main and Render processes.  
+This task is less trivial and to solve it we have several ways. First of all, a few words about architecture of Electron. We have two independent processes Main and Render. The last one can be several that correspond to windows in OS. We need data exchange between Main and Render processes.
 By reading the documentation you can find different solutions:
 
-- **[Storage API](https://developer.mozilla.org/en-US/docs/Web/API/Storage)** – well-known to web-developers API to store data in client that helps to exchange data only by Render processes
+**[Storage API](https://developer.mozilla.org/en-US/docs/Web/API/Storage)** – well-known to web-developers API to store data in client that helps to exchange data only by Render processes
 - method *remote.getGlobal(sharedObject)* – the use of object *[remote](https://www.electronjs.org/docs/api/remote)* specific for the platform with the help of which Render Process can receive data sent from Main Process
 - modules *[ipcMain](https://www.electronjs.org/docs/api/ipc-main#ipcmain)* and [*ipcRenderer*](https://www.electronjs.org/docs/api/ipc-renderer#ipcrenderer) **–** interaction that does not always suit because it is directed only from Render process to Main process. For the reverse interaction we need method *webContents.send()*
 
@@ -81,9 +77,9 @@ If you use such libraries as React and Redux, you have to find other ways to sup
 
 It is an important step in the development of your app. In the documentation there are several variants of delivering the app to the final clients:
 
-- **[electron-forge](https://github.com/electron-userland/electron-forge)**
-- **[electron-builder](https://github.com/electron-userland/electron-builder)**
-- **[electron-packager](https://github.com/electron/electron-packager)**
+**[electron-forge](https://github.com/electron-userland/electron-forge)**
+**[electron-builder](https://github.com/electron-userland/electron-builder)**
+**[electron-packager](https://github.com/electron/electron-packager)**
 
 My choice was electron-builder that gives you a wide range of formats and gives you flexibility. I had another short-period experience with electron-packager using which was not so friendly – I didn’t manage to assemble Windows Installer **[Squirrel](https://github.com/Squirrel/Squirrel.Windows)**.
 

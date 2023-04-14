@@ -17,7 +17,7 @@ tags:
     - software
 ---
 
-> <span style="font-weight: 400">Good software systems are all alike; every bad system is bad in its own way. </span><span style="font-weight: 400">  
+> <span style="font-weight: 400">Good software systems are all alike; every bad system is bad in its own way. </span><span style="font-weight: 400">
 > </span><span style="font-weight: 400">Leo Tolstoy about software engineering.</span>
 
 <span style="font-weight: 400">Every stakeholder dealing with software development sooner or later tries to answer the question. </span>
@@ -29,7 +29,7 @@ tags:
 <span style="font-weight: 400">The reason and context concerning the arousal of these questions can be different, for example:</span>
 
 - <span style="font-weight: 400">a CEO in a large company is writing a report for annual general </span><span style="font-weight: 400">shareholders board meeting and wants to show the dynamics to earn some bonuses</span>
-- <span style="font-weight: 400">a customer wants to know how the outsourcing team from India  
+- <span style="font-weight: 400">a customer wants to know how the outsourcing team from India
     is doing </span>
 - <span style="font-weight: 400">or the team lead wants to know if anything goes wrong in development process and to interfere unless it’s not too late.</span>
 
@@ -117,9 +117,9 @@ tags:
 
 <span style="font-weight: 400">Just some checklist to evaluate your software project is evolving:</span>
 
-- **You allocate resources to cope with technological debt.**<span style="font-weight: 400"> Refactoring and fixing code that smells is not a waste of money. keeping a complexity monster on a leash – is a good strategy to keep the development efforts under control.</span>
-- **Your monitor the dependencies of your software and apply security patches. <span style="font-weight: 400">Put regular activities for checking and updating dependencies in your backlog. Use tools like </span>[<span style="font-weight: 400">https://owasp.org/</span>](https://owasp.org/)<span style="font-weight: 400">. However nowdays such services as github and npm provide constant monitoring of vulnerabilities across its repositories and alarms you if some dependency on your hosted project appeared to have a critical update.</span>**
-- **You are building or refactoring your software on the basis of frameworks that are industry-supported**<span style="font-weight: 400">.Before choosing framework look at its statistics – how many developers are in contributors list, does it have recent commits, how many stars does it have, is it backed by some big company. These all mean the framework is evolving and will let your software evolve with it. Angular and Batman JS started the same year in 2010. Angular is still a hot topic. And when did your hear last news about BatmanJS?</span>
+**You allocate resources to cope with technological debt.**<span style="font-weight: 400"> Refactoring and fixing code that smells is not a waste of money. keeping a complexity monster on a leash – is a good strategy to keep the development efforts under control.</span>
+**Your monitor the dependencies of your software and apply security patches. <span style="font-weight: 400">Put regular activities for checking and updating dependencies in your backlog. Use tools like </span>[<span style="font-weight: 400">https://owasp.org/</span>](https://owasp.org/)<span style="font-weight: 400">. However nowdays such services as github and npm provide constant monitoring of vulnerabilities across its repositories and alarms you if some dependency on your hosted project appeared to have a critical update.</span>**
+**You are building or refactoring your software on the basis of frameworks that are industry-supported**<span style="font-weight: 400">.Before choosing framework look at its statistics – how many developers are in contributors list, does it have recent commits, how many stars does it have, is it backed by some big company. These all mean the framework is evolving and will let your software evolve with it. Angular and Batman JS started the same year in 2010. Angular is still a hot topic. And when did your hear last news about BatmanJS?</span>
 
 ## <span style="font-weight: 400">Nutshell</span>
 

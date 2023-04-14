@@ -42,7 +42,7 @@ In addition, it gains your credibility of the company: if such work was carried 
 
 **5. Read reviews and find out how long the company is in the market**
 
-If the company is reliable, you’ll easily find out a lot of positive references from satisfied customers. That’s the team you should collaborate with!  
+If the company is reliable, you’ll easily find out a lot of positive references from satisfied customers. That’s the team you should collaborate with!
 An additional factor you should pay attention to is how long the company has existed. The longer the better, but considering that the SEO promotion is rather young field, at least 3-5 years.
 
 **6. Find out which of your competitors use the services of these SEO providers**
@@ -51,7 +51,7 @@ It will enable you to assess the result: brand awareness, traffic to the website
 
 **7. Pay your attention to the company who is ready to provide your staff with basic training in search engine optimization**
 
-It’s not free; however it will allow you not only speak the same language, but also more clearly define and assign the required tasks to your SEO specialists.  
+It’s not free; however it will allow you not only speak the same language, but also more clearly define and assign the required tasks to your SEO specialists.
 As a result, the probability to return on SEO investment increases. Moreover, very soon you’ll be able to solve some SEO issues by yourself.
 
 **8. Choose the company that plans to optimize your website**
@@ -60,13 +60,13 @@ In order to achieve the greatest relevance to your key needs and search engine r
 
 [![seo-592747_1280](/static/img/2016/01/seo-592747_1280-300x198.png)](/static/img/2016/01/seo-592747_1280.png)
 
-**9.Be ready for quite long-term website optimization and promotion**  
+**9.Be ready for quite long-term website optimization and promotion**
 SEO is a source with a long payback period, the average period must be between six and twelve months of active work to see the positive dynamics of the main KPI (Key Performance Indicators).
 
 **10. Give your preferences to multi-channel marketing**
 
-According to our experience, the most effective way is multi-channel marketing, which includes three areas: context, SEO and e-mail marketing. The best way is to involve all these directions simultaneously.  
-In our point of view, it’s better to use one-time consulting. It’s a one-time investment of a long-term positive effect. We do not recommend using SEO promotion regularly.  
+According to our experience, the most effective way is multi-channel marketing, which includes three areas: context, SEO and e-mail marketing. The best way is to involve all these directions simultaneously.
+In our point of view, it’s better to use one-time consulting. It’s a one-time investment of a long-term positive effect. We do not recommend using SEO promotion regularly.
 Content marketing on a regular basis (in your company’s blog and third-party resources) is a more effective way. So you can “kill two birds with one stone” – to get a long-term PR and improve your position in search engines. Moreover, you can do it inhouse!
 
 **11. Ask your provider what tactics they plan to use promoting your brand**
@@ -79,7 +79,7 @@ So, you’ve already round out all negotiations and found out a lot of new usefu
 
 - - - - - -
 
-**Conclusion:**  
+**Conclusion:**
 Examine into details of the campaign, set the requirements, it enables you to buy only services that you really need!
 
 We hope you’ve got all necessary knowledge that will help not only to avoid financial losses, but also to profit from your SEO campaign. What do you look for choosing a digital services provider? What tips can you advise to add to our list? We’ll be happy to receive your feedback!

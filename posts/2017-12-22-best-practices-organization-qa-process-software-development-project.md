@@ -19,8 +19,8 @@ This article describes our best practices in building the QA process for a softw
 
 ## Fast and featureful
 
-First, the delivery of new software versions to end users as fast as possible is vital for software development nowadays. Fierce competition in the software market compels software companies to release new features sooner than their rivals to attract users. As a result, the Agile techniques have spread widely as they combine flexibility and short delivery cycles.  
-  
+First, the delivery of new software versions to end users as fast as possible is vital for software development nowadays. Fierce competition in the software market compels software companies to release new features sooner than their rivals to attract users. As a result, the Agile techniques have spread widely as they combine flexibility and short delivery cycles.
+
 Testing or in a broader sense, QA (quality assurance) is a stage of software development. This stage is essential for software development, so the workflow of QA process has to be simple, flexible and fast.
 
 ## Use what is already there
@@ -41,7 +41,7 @@ Any ticket in Jira can be cloned. Cloning means that an exact copy of the source
 
 The cornerstone of the Agile methodology is splitting the development into short phases each of which has to end with the delivery of a new release. These phases are called sprints or rounds or iterations. All the changes, such as new features or bug fixes which have been implemented during a round, should be tested within it. So we need to perform testing as a repetitive task each round, and each such task will be similar to the previous one. It is a good place to use templates. So we are going to talk about QA process template.
 
-In our scheme, each testing round is represented by a separate ticket of `Task` type. Such round ticket contains all the information about this particular round and has got all the necessary sub-tasks. To make the history of testing available, all the round tickets should be linked to a chain by using Jira links. We’re using “follows” -&gt; “is followed by” link. When a new round has been started, the QA lead clones the template ticket to create a testing ticket for this round. Then QA lead updates the summary, description and any necessary fields according to the needs of this particular round. After that, they link the round ticket to the previous one.
+In our scheme, each testing round is represented by a separate ticket of `Task` type. Such round ticket contains all the information about this particular round and has got all the necessary sub-tasks. To make the history of testing available, all the round tickets should be linked to a chain by using Jira links. We’re using “follows” -> “is followed by” link. When a new round has been started, the QA lead clones the template ticket to create a testing ticket for this round. Then QA lead updates the summary, description and any necessary fields according to the needs of this particular round. After that, they link the round ticket to the previous one.
 
 The testing round template has a particular structure, so let’s look into it in more details.
 
@@ -70,7 +70,7 @@ To make the scope of the round immutable and persistent we need a way to make a 
 
 Have you ever removed all the labels from a ticket in trying to add a new one, especially when using a bulk operation? Often people don’t even realize that they have removed some labels accidentally. So the best way we found is to link tickets to the round ticket by a particular type of link. But it will be even better to link them to a “scope holder” sub-task of the round ticket. That will prevent mixing of the links to the scope tickets with other links which the round ticket can have, e.g., links to the previous/next round ticket.
 
-JQL allows selecting tickets which are linked to the specified ticket using linkedIssues() function, so we can use a link with a particular type to a particular ticket as a search criterion. We are using “contains” -&gt; “is included into” link type. Based on this criterion, we build the filter for the scope as well as filters for any required subsets of the scope e.g. a sub-scope defined by the platform. All these filters form the second section of the testing round template – `Scope` section.
+JQL allows selecting tickets which are linked to the specified ticket using linkedIssues() function, so we can use a link with a particular type to a particular ticket as a search criterion. We are using “contains” -> “is included into” link type. Based on this criterion, we build the filter for the scope as well as filters for any required subsets of the scope e.g. a sub-scope defined by the platform. All these filters form the second section of the testing round template – `Scope` section.
 
 ## How to parallelize work
 

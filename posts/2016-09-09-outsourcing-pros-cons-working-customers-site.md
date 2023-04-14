@@ -36,10 +36,10 @@ Right next to the confidence for me there is a prompt reaction to our team’s q
 
 ![Working in Customer's Office](/static/img/2016/09/T4CkpnmvcBg.jpg)
 
-Even though the product team was distributed, because two of its members were out of Grandview, where we were sent to, we managed to achieve understanding more often than we had to.  
+Even though the product team was distributed, because two of its members were out of Grandview, where we were sent to, we managed to achieve understanding more often than we had to.
 A rare opportunity to track your foreign colleagues’ contribution to the project and monitor their productivity.
 
-With that knowledge you can plan your own daily activities better, schedule any reporting on your tasks progress and make some predictions on how fast your problem would be solved if you refer it to the right person and maybe it would be easier for you to readdress the question after all.  
+With that knowledge you can plan your own daily activities better, schedule any reporting on your tasks progress and make some predictions on how fast your problem would be solved if you refer it to the right person and maybe it would be easier for you to readdress the question after all.
 Finally yet importantly I want to mention the unique opportunity for me as an analyst to co-exist in the same information space with our backend and frontend developers on a daily basis for 5 months solid. Those user requirements that I was proof-reading and editing on a daily basis did nothing with the backend developer’s needs (since all technical documentation on the project is supposed to be provided by the CEO) neither did I have that much of collaboration with our frontend developers. By any measure, my main collaborators on the project were QA engineers who tested user requirements and informed me about their flaws, so I could fix them after the product team’s confirmation.
 
 ## Some cons and my recommendations
@@ -66,7 +66,7 @@ What I would like to recommend for the future reference to make your business tr
 
 – based on your task list you need to contact your executive on a weekly basis telling how much has been completed and what is next on your task list.
 
-– never forget that you are representing the whole company while you are being abroad, therefore, you can’t be less than a highly qualified expert all the time you are contacting both your side of the project and your customer’s team regardless of the importance of your question as it may seem to you.  
+– never forget that you are representing the whole company while you are being abroad, therefore, you can’t be less than a highly qualified expert all the time you are contacting both your side of the project and your customer’s team regardless of the importance of your question as it may seem to you.
 In conclusion I would like to say that I’m grateful for that opportunity to test my professional and personal skills.
 
 I want to think that our company consider such experiment as a successful one and can see it not as a single event but as a new form of collaboration between us and our customers in the visible future.

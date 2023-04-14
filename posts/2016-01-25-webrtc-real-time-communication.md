@@ -30,21 +30,52 @@ The main tasks that can be solved by WebRTC:
 - MediaStream;
 - RTCPeerConnection.
 
-There is one simple example of using getUserMedia (sharing video from your device camera to tag &lt;video&gt;):
+There is one simple example of using getUserMedia (sharing video from your device camera to tag <video>):
 
-`<br></br><b>var </b>constraints = {video: true};<br></br><b>function </b>successCallback(stream) {<br></br> var video = document.querySelector("video");<br></br> video.src = window.URL.createObjectURL(stream);<br></br>}<br></br>navigator.getUserMedia(constraints, successCallback);<br></br>`
+```
+<b>var </b>constraints = {video: true};
+<b>function </b>successCallback(stream) {
+ var video = document.querySelector("video");
+ video.src = window.URL.createObjectURL(stream);
+}
+navigator.getUserMedia(constraints, successCallback);
+```
 
 In the example you can see calling getUserMedia function with two arguments. The first argument constraints in getting only video. The second argument is a callback in case of succesful connection – we just publish stream to video tag.
 
 One more example (your device screen sharing):
 
-`<br></br><b>var </b>constraints = {<br></br>   video: {<br></br>      mandatory: {<br></br>         chromeMediaSource: 'screen'<br></br>      }<br></br>   }<br></br>};<br></br>navigator.webkitGetUserMedia(constraints, gotStream);<br></br>`
+```
+<b>var </b>constraints = {
+   video: {
+      mandatory: {
+         chromeMediaSource: 'screen'
+      }
+   }
+};
+navigator.webkitGetUserMedia(constraints, gotStream);
+```
 
 Looks good? Of course!!!
 
 A different story is **peer to peer connection**. We’d like to provide you one example to illustrate how we can use it:
 
-`<br></br>pc = <b>new  </b>RTCPeerConnection(null);<br></br>pc.onaddstream = gotRemoteStream;<br></br>pc.addStream(localStream);<br></br>pc.createOffer(gotOffer);<br></br><b>function  </b>gotOffer(desc) {<br></br> pc.setLocalDescription(desc);<br></br> sendOffer(desc);<br></br>}<br></br><b>function </b>gotAnswer(desc) {<br></br> pc.setRemoteDescription(desc);<br></br>}<br></br><b>function </b>gotRemoteStream(e) {<br></br> attachMediaStream(remoteVideo, e.stream);<br></br>}<br></br>`
+```
+pc = <b>new  </b>RTCPeerConnection(null);
+pc.onaddstream = gotRemoteStream;
+pc.addStream(localStream);
+pc.createOffer(gotOffer);
+<b>function  </b>gotOffer(desc) {
+ pc.setLocalDescription(desc);
+ sendOffer(desc);
+}
+<b>function </b>gotAnswer(desc) {
+ pc.setRemoteDescription(desc);
+}
+<b>function </b>gotRemoteStream(e) {
+ attachMediaStream(remoteVideo, e.stream);
+}
+```
 
 At the begining, we create new RTCPeerConnection. When it’s connected, we get the stream in a callback gotRemotestream and attach it to the video element on our page. At the same time, we get a remote video description using gotRemoteStream feature and send thе offer to another end of the connection (gotOffer).
 
@@ -60,16 +91,46 @@ In one of our projects we used OpenTok – service which provides infrastructure
 
 The OpenTok PHP SDK enables you to generate sessions and tokens for OpenTok applications. Here is an example that shows how to get sessionID and token in PHP:
 
-`<br></br><b>use </b>OpenTok\OpenTok;<br></br><b>use </b>OpenTok\MediaMode;<br></br><b>use </b>OpenTok\Session;<br></br>$opentok = <b>new </b>OpenTok($apiKey, $apiSecret);<br></br>// Create a session that attempts to use peer-to-peer streaming:<br></br>$session = $opentok->createSession();<br></br>// Store this sessionId in the database for later use<br></br>$sessionId = $session->getSessionId();<br></br>// Generate a Token from just a sessionId (fetched from a database)<br></br>$token = $opentok->generateToken($sessionId);<br></br>`
+```
+<b>use </b>OpenTok\OpenTok;
+<b>use </b>OpenTok\MediaMode;
+<b>use </b>OpenTok\Session;
+$opentok = <b>new </b>OpenTok($apiKey, $apiSecret);
+// Create a session that attempts to use peer-to-peer streaming:
+$session = $opentok->createSession();
+// Store this sessionId in the database for later use
+$sessionId = $session->getSessionId();
+// Generate a Token from just a sessionId (fetched from a database)
+$token = $opentok->generateToken($sessionId);
+```
 
 *$apiKey, $apiSecret – you can get it in OpenTok personal dashboard, to gain an access you must register.*
 
 We use session and token to create a chat in browser (through JavaScript). At the moment, we are creating connection on JavaScript with session and token giving from OpenTok API:
 
-`<br></br><b>var </b>session = OT.initSession(apiKey, sessionId);<br></br>session.connect(token, <b>function</b>(error) {<br></br>// If the connection is successful, initialize a publisher and publish to the session<br></br><b>if </b>(!error) {<br></br>     <b>var </b>publisher = OT.initPublisher('publisher', {<br></br>      insertMode: 'append',<br></br>      width: '100%',<br></br>      height: '100%'<br></br>     });<br></br>     session.publish(publisher);<br></br>} <b>else </b>{<br></br>     console.log('There was an error connecting to the session:', error.code, error.message);<br></br>     session.on('streamCreated', function(event) {<br></br>      session.subscribe(event.stream, 'subscriber', {<br></br>       insertMode: 'append',<br></br>       width: '100%',<br></br>       height: '100%'<br></br>      });<br></br>`
+```
+<b>var </b>session = OT.initSession(apiKey, sessionId);
+session.connect(token, <b>function</b>(error) {
+// If the connection is successful, initialize a publisher and publish to the session
+<b>if </b>(!error) {
+     <b>var </b>publisher = OT.initPublisher('publisher', {
+      insertMode: 'append',
+      width: '100%',
+      height: '100%'
+     });
+     session.publish(publisher);
+} <b>else </b>{
+     console.log('There was an error connecting to the session:', error.code, error.message);
+     session.on('streamCreated', function(event) {
+      session.subscribe(event.stream, 'subscriber', {
+       insertMode: 'append',
+       width: '100%',
+       height: '100%'
+      });
+```
 
-OT.initPublisher – the first argument is id of DOM element that is used for broadcasting video from our device camera  
-session.on(‘streamCreated’, callback) – fired when remote client connects to us  
+OT.initPublisher – the first argument is id of DOM element that is used for broadcasting video from our device camera
+session.on(‘streamCreated’, callback) – fired when remote client connects to us
 session.subscribe – the second argument is id of DOM element that is used for broadcasting video from remote clients
 
 **Congratulations, now we have built basic video chat!**

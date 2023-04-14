@@ -10,12 +10,12 @@ categories:
     - 'Web Development'
 ---
 
-Each passing year it seems like technological advances develop faster than they did the year before and 2015 is no exception. While we have seen some recent technology trends gain momentum over the last few years, this year it looks like some of them may make significant advancements in use on a broader scale.  
+Each passing year it seems like technological advances develop faster than they did the year before and 2015 is no exception. While we have seen some recent technology trends gain momentum over the last few years, this year it looks like some of them may make significant advancements in use on a broader scale.
 ![ Modern Technical Solutions That Are Used By Startups Digital Lady](/static/img/2015/03/startup-technological-advaces-300x212.jpg)Advancements in technology mean cost savings, efficiency and the development of new products, which offer consumers new and exciting benefits. In addition, modern technical solutions that are used by startups and introduced into the marketplace, open new doors of opportunity for web developers and entrepreneurs. It provides a chance to develop apps that enhance and improve a product or service.
 
 ## Current Technological Trends
 
-### Constantly Connected with Wearables &amp; Smartphones
+### Constantly Connected with Wearables & Smartphones
 
 Smartphones and wearable devices have made staying connected everywhere you go simple, even for less tech savvy users. This trend has been ongoing for a while, but looks sure to continue as the functionality of smartphones and smartwatches continues to expand. Eventually, look to be connected to almost everything everywhere you go, with the ability to transfer data almost instantaneously.
 

@@ -9,7 +9,7 @@ categories:
     - General
 ---
 
-> “The difference between what we do and what we are capable of doing would suffice to solve most of the world’s problems.”  
+> “The difference between what we do and what we are capable of doing would suffice to solve most of the world’s problems.”
 > Mahatma Gandhi
 
 What mark do you want to leave in our history? Are you dreaming about the project influencing the entire world?
@@ -47,7 +47,7 @@ I want to share some of ISS Art’s principles, that have helped us to develop t
 
 The things are complex, but [the first step is often very simple](http://gettingthingsdone.com/). If you would like to repair a car, the first step may be to call a mechanic. You even do not need to plan all the things to be done. Just call a mechanic right now. It’s a good and simple cure against procrastination.
 
-<div class="wp-caption aligncenter" id="attachment_1643" style="width: 612px">[![Let's define the first step and accomplish it.](/static/img/2016/03/will-smith-013-1024x640.jpg)](/static/img/2016/03/will-smith-013.jpg)The first step is you have to say that you can.  
+<div class="wp-caption aligncenter" id="attachment_1643" style="width: 612px">[![Let's define the first step and accomplish it.](/static/img/2016/03/will-smith-013-1024x640.jpg)](/static/img/2016/03/will-smith-013.jpg)The first step is you have to say that you can.
 Will Smith
 
 </div>#### 2.2. Focus
@@ -84,7 +84,7 @@ Your idea, your project, and your product are worth being promoted. People shoul
 
 ## 3. The kindness returns
 
-Have you got an idea that can impress the world and meet the people’s needs?  
+Have you got an idea that can impress the world and meet the people’s needs?
 Let us **[help you](http://www.issart.com/en/services)**.
 
 Can you make a project that will change the world? **Definitely, you can.**

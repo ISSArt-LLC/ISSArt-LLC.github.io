@@ -15,8 +15,8 @@ tags:
 
 ## Definitions
 
-When you run an IT project, you should always consider the work method, that defines how the value is delivered to the IT product. The development process, no matter how many members your team has, can be either efficient or not. The challenges of your IT project have a lot in common with the challenges of other projects in the industry.  
-  
+When you run an IT project, you should always consider the work method, that defines how the value is delivered to the IT product. The development process, no matter how many members your team has, can be either efficient or not. The challenges of your IT project have a lot in common with the challenges of other projects in the industry.
+
 ![scrum vs kanban - contradiction question](/static/img/2018/01/Scrum-vs-Kanban-contradiction-question.png)
 
 There are very popular work approaches to project management, that solve common process challenges. They are Agile work methods for project management, such as Scrum and Kanban.
@@ -28,8 +28,8 @@ Both Scrum and Kanban are:
 
 Scrum and Kanban differ from each other a lot. They are even aimed at different subjects. However, they are not mutually exclusive and can be used in one project simultaneously! In very short terms,
 
-- **Scrum** is a *framework* for *complex products* development.
-- **Kanban** is an approach for *changes management* and *process improvements* of a supply chain.
+**Scrum** is a *framework* for *complex products* development.
+**Kanban** is an approach for *changes management* and *process improvements* of a supply chain.
 
 More information about Scrum and Kanban and the the difference between both methodologies can be found in this [article](https://apiumhub.com/tech-blog-barcelona/scrum-vs-kanban-infographic/).
 

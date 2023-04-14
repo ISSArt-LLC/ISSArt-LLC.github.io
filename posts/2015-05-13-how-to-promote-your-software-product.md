@@ -45,12 +45,12 @@ Today crowdfunding is not only a means of getting significant financial support 
 
 #### Marketing materials
 
-**Website**  
+**Website**
 Take care of your product website. Consider current [web design trends](http://webdesignledger.com/sponsored/7-crucial-web-design-trends-for-2015) – while flat design and long scrolling are still popular, you might want to try some newly emerging trends like [hidden main menus](http://thenextweb.com/dd/2015/01/02/10-web-design-trends-can-expect-see-2015/9/).
 
 Although design is important, usability shouldn’t be neglected. Make your site easy to navigate and user friendly. Ensure that the call-to action elements are visible and easy to reach. Do not forget about the conventions like blue links for URLs and a logo in the upper left corner.
 
-**Explainer videos**  
+**Explainer videos**
 If you want to represent your product in a fun and creative way, an explainer video might help you in it. You can place it on your website and/or send it to your customers. Don’t forget to add it to your corporate YouTube channel as well – this will positively affect your ranking.
 
 You can reach out to [Explainify](http://explainify.com/) team who makes short, animated explainer videos that enable businesses to explain their services simply, effectively, and meaningfully by capturing their one-of-a-kind story.
@@ -93,10 +93,10 @@ Blogs are another great source of promotion. Unlike advertising, blog posts usua
 
 A good idea is to compile a list of blogs that are potentially interesting to your target audience. For instance, if you are working on a webinar platform, your potential customers might read blogs dedicated to E-learning questions.
 
-**Guest post**  
+**Guest post**
 You can reach out to blog owners and discuss the possibility of writing a guest post. Be sure to discuss the conditions of getting published: the topic that might be interesting to readers, the text length, the possibility to post back links, etc.
 
-**Product review**  
+**Product review**
 Another way of getting publicity for a product is to request a review on a specialized blog. To increase chances that your product will be reviewed, be sure to provide a reviewer with a demo. For example, if you’ve developed an arcade game for iOS platform, reach out to game review blogs and send them the promo codes in case it is a paid app.
 
 #### Social networks
@@ -107,9 +107,9 @@ There is a variety of promotional tools in social networks: company pages creati
 
 You can also get in touch with your target audience on specialized forums. Introducing new project management software? Find project management forums and start your communication. Be sure to get acquainted with the forum rules before posting – this will prevent you from getting banned for the reasons unknown to you.
 
-#### Q&amp;A sites
+#### Q&A sites
 
-Q&amp;A platforms provide another great opportunity to spread a word about your product without looking promotional. Of course, your message needs to be relevant to the audience. Share your experience or tell them how you approached this or that issue while developing/or with the help of your product.
+Q&A platforms provide another great opportunity to spread a word about your product without looking promotional. Of course, your message needs to be relevant to the audience. Share your experience or tell them how you approached this or that issue while developing/or with the help of your product.
 
 #### Press releases
 

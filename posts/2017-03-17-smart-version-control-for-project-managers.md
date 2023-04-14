@@ -50,11 +50,11 @@ Junior has managed to code something:
 
 ![](/static/img/2017/03/scheme_1.png)
 
-<span style="font-weight: 400;">And went on vacation:</span>
+And went on vacation:
 
 ![](/static/img/2017/03/scheme_2.png)
 
-<span style="font-weight: 400;">Meanwhile Eeyore fixed a super-critical bug:</span>
+Meanwhile Eeyore fixed a super-critical bug:
 
 ![](/static/img/2017/03/scheme_3.png)
 

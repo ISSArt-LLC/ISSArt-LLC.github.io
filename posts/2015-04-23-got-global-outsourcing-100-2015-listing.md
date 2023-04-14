@@ -13,16 +13,16 @@ The beginning of this year was marked by a great achievement for our company. We
 
 The Global Outsourcing 100 represents the annual listing of the world’s best outsourcing service providers. The complete details on the 2015 Process and Methodology of scoring can be found [here](http://www.iaop.org/Download/Default.aspx?ID=1605). This is a real success, and we are proud that our continuous efforts to improve the quality of our services have been recognized on a global level.
 
-Sounds impossible? We did think so. But you’ll never know unless you try.  
+Sounds impossible? We did think so. But you’ll never know unless you try.
 In this article we’ll tell which materials we have prepared and provided together with our application to GO 100 program.
 
 ### How were the companies judged?
 
-Companies-contenders for inclusion in the list were evaluated based on the following criteria:  
-1\. Size and Growth;  
-2\. Delivery Excellence;  
-3\. Programs for Innovation;  
-4\. Corporate [Social](http://www.issart.com/blog/intellectual-property-issues-software-development/) Responsibility (CSR).
+Companies-contenders for inclusion in the list were evaluated based on the following criteria:
+1. Size and Growth;
+2. Delivery Excellence;
+3. Programs for Innovation;
+4. Corporate [Social](http://www.issart.com/blog/intellectual-property-issues-software-development/) Responsibility (CSR).
 
 Let’s review each of them.
 
