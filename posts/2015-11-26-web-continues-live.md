@@ -10,7 +10,7 @@ categories:
     - 'Web Development'
 ---
 
-We all use the Web, and many have done so for the better part of a quarter century. At the same time, technology continues to evolve which it an exciting time to work within this ever changing industry. As [Top Mobile Web Design Companies](https://www.webdesigncompanies.com/mobile-web-design-companies), we can say for sure that the web still plays a great role in various web applications. Despite the fact that today’s users primarily interface with mobile devices, all of the logical information is written on the server side. A web interface basis is necessary for the following, which are trending now in the wide world of information technology:
+We all use the Web, and many have done so for the better part of a quarter century. At the same time, technology continues to evolve which it an exciting time to work within this ever changing industry. As [Top Mobile Web Design Companies](https://www.webdesigncompanies.com/mobile-web-design-companies), we can say for sure that the web still plays a great role in various web applications. Despite the fact that today's users primarily interface with mobile devices, all of the logical information is written on the server side. A web interface basis is necessary for the following, which are trending now in the wide world of information technology:
 
 1. **Application of social orientation**
 
@@ -24,7 +24,7 @@ Our team realizes the importance of [Software Development for Healthcare](https:
 
 3. **Wearable devices**
 
-There are many different types of wearable devices, and this has been the most important trend of the last year. As for 2015, this trend has really taken hold. The most popular wearable devices include the Apple Watch and devices that help monitor one’s health and exercise. The Apple Watch now has some competition with the popular Fitbit.
+There are many different types of wearable devices, and this has been the most important trend of the last year. As for 2015, this trend has really taken hold. The most popular wearable devices include the Apple Watch and devices that help monitor one's health and exercise. The Apple Watch now has some competition with the popular Fitbit.
 
 ![iwatches](/static/img/2015/09/iwatches.jpg)
 
@@ -34,7 +34,7 @@ Augmented reality devices have started to become more popular, and they are some
 
 5. **Home Automation**
 
-Applications have also become popular for your home. These applications can do anything from secure your home to adjust the temperature to turn on lighting. There are so many options including wiring, controllers, door and window locks, and all of this can easily be monitored through the website interface. One such application is [Nest](https://nest.com/) which can easily control the temperature from your home if you aren’t there.
+Applications have also become popular for your home. These applications can do anything from secure your home to adjust the temperature to turn on lighting. There are so many options including wiring, controllers, door and window locks, and all of this can easily be monitored through the website interface. One such application is [Nest](https://nest.com/) which can easily control the temperature from your home if you aren't there.
 
 ![nest device in web continues to live on](/static/img/2015/09/nest_device.jpg)
 

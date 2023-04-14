@@ -19,7 +19,7 @@ In this article we will explain what a recurrent neural network is and study som
 
 ### Introduction
 
-Before explaining what a recurrent neural network (RNN) is, let’s have a quick look at neural networks based on perceptron. Perceptron can predict the output value based on input values. You can think of it as a function of input values, for example, it can tell whether a person is rich depending on the size of his income. But this approach is not suitable for working with sequences. For example, perceptron can’t predict the next word in the sentence because if we just feed one previous word on input, there won’t be enough information to make a proper prediction. Another example is a prediction of the next value for sine function with a fixed step, based only on the previous value. Recurrent neural network can solve this class of problems by feeding calculations from the previous step to the next step. To do that, RNN has an internal state (also called memory) and we can think of it as a function of input values and the previous state.
+Before explaining what a recurrent neural network (RNN) is, let's have a quick look at neural networks based on perceptron. Perceptron can predict the output value based on input values. You can think of it as a function of input values, for example, it can tell whether a person is rich depending on the size of his income. But this approach is not suitable for working with sequences. For example, perceptron can't predict the next word in the sentence because if we just feed one previous word on input, there won't be enough information to make a proper prediction. Another example is a prediction of the next value for sine function with a fixed step, based only on the previous value. Recurrent neural network can solve this class of problems by feeding calculations from the previous step to the next step. To do that, RNN has an internal state (also called memory) and we can think of it as a function of input values and the previous state.
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Recurrent_neural_network_unfold.svg/1200px-Recurrent_neural_network_unfold.svg.png)
 
@@ -29,7 +29,7 @@ You can use recurrent network in different ways. The basic type of usage is to f
 
 - We can skip several first outputs because the network should be prepared before making any predictions;
 - We can feed the output value as an input to the next step. With this approach you can create a network that will be able to generate a new sequence;
-- We can combine two previous ways – feed several input values and then start to feed network’s output values as new input values.
+- We can combine two previous ways – feed several input values and then start to feed network's output values as new input values.
 
 ### BPTT
 
@@ -52,11 +52,11 @@ Another simple model is Elman model. The main difference is that the hidden laye
 Both models have 2 main problems:
 
 - The first problem is the exploding and vanishing gradient problem. Because of the BPTT usage an error is propagated many times over one element and so it will vanish or explode at the end.
-- The second problem is that these networks can’t store information from many steps ago.
+- The second problem is that these networks can't store information from many steps ago.
 
 #### LSTM
 
-The most popular recurrent network model is Long short-term memory (LSTM). LSTM contains additional elements named ‘gates’. These elements make it possible to selectively memorize and forget parts of the sequence.
+The most popular recurrent network model is Long short-term memory (LSTM). LSTM contains additional elements named 'gates'. These elements make it possible to selectively memorize and forget parts of the sequence.
 
 ![](https://upload.wikimedia.org/wikipedia/commons/6/63/Long_Short-Term_Memory.svg)
 
@@ -103,56 +103,56 @@ To run it on your own computer, you need to install the following python package
 
 First we need to create a function to generate our train sequence, in this example we will use a simple sine function:
 
-```
+```python
 def seq_func(x):
   return sin(x)
 ```
 
 One of the most interesting parts here is the function for network training:
 
-```
-<b>def </b>fit_lstm(train_x, train_y, nb_epoch, neurons):
+```python
+def fit_lstm(train_x, train_y, nb_epoch, neurons):
   x, y = np.array(train_x), np.array(train_y)
   x = x.reshape(len(x), 1, 1)
   model = Sequential()
-  model.add(LSTM(neurons, batch_input_shape=(1, 1, 1), stateful=<b>True</b>))
+  model.add(LSTM(neurons, batch_input_shape=(1, 1, 1), stateful=True))
   model.add(Dense(1))
-  model.compile(loss=<b>'mean_squared_error'</b>, optimizer=<b>'adam'</b>)
-  <b>for </b>i <b>in </b>range(nb_epoch):
-      model.fit(x, y, epochs=1, batch_size=1, verbose=1, shuffle=<b>False</b>)
+  model.compile(loss='mean_squared_error', optimizer='adam')
+  for i in range(nb_epoch):
+      model.fit(x, y, epochs=1, batch_size=1, verbose=1, shuffle=False)
       model.reset_states()
-  <b>return </b>model
+  return model
 ```
 
-You can see here an LSTM layer. It’s important to make it stateful, so the trained state from one input item won’t be erased before the next input. By setting ‘stateful’ to the LSTM layer we get all the responsibility to reset network state in our training. So now we cannot just set epochs number to fit the function. Instead,we call fit and reset\_state in a cycle over epochs number manually. Another important thing is to turn off the shuffle in the fit function because the order of the sequence is important for our network.
+You can see here an LSTM layer. It's important to make it stateful, so the trained state from one input item won't be erased before the next input. By setting 'stateful' to the LSTM layer we get all the responsibility to reset network state in our training. So now we cannot just set epochs number to fit the function. Instead,we call fit and reset_state in a cycle over epochs number manually. Another important thing is to turn off the shuffle in the fit function because the order of the sequence is important for our network.
 
 We need to prepare sequence to train our network:
 
-```
-series = [seq_func(x) <b>for </b>x <b>in </b>range(36)]
-supervised = [seq_func(x + 1) <b>for </b>x <b>in </b>range(len(series))]
+```python
+series = [seq_func(x) for x in range(36)]
+supervised = [seq_func(x + 1) for x in range(len(series))]
 ```
 
 We will train the network by feeding the elements from the first array and waiting for the elements from the second array as the output. The second array equals to the first, but provides values from one step further.
 
-Call fit\_lstm function with series and supervised arrays. We will train our model with 1000 epochs and 16 LSTM memory cells.
+Call fit_lstm function with series and supervised arrays. We will train our model with 1000 epochs and 16 LSTM memory cells.
 
-```
+```python
 lstm_model = fit_lstm(series, supervised, 1000, 16)
 ```
 
 After we train our model we can make predictions. We need to feed the model with the initial data to make good predictions.
 
-```
+```python
 train_reshaped = np.array(series[:-1]).reshape(len(series)-1, 1, 1)
 lstm_model.predict(train_reshaped, batch_size=1)
 ```
 
-We will use the last element later, so we aren’t feeding it now.
+We will use the last element later, so we aren't feeding it now.
 
-Let’s prepare variables to store our predictions so that later we could draw it in the plot.
+Let's prepare variables to store our predictions so that later we could draw it in the plot.
 
-```
+```python
 predictions = []
 expectations = []
 forecast_result = series[-1]
@@ -165,19 +165,19 @@ Next we start making predictions. We can predict values in two ways:
 
 We will use the second approach in this example.
 
-```
-<b>for </b>i <b>in </b>range(36):
+```python
+for i in range(36):
   forecast_result_reshaped = np.array([forecast_result]).reshape(1, 1, 1)
   forecast_result = lstm_model.predict(forecast_result_reshaped)[0, 0]
   predictions.append(forecast_result)
   expected = seq_func(len(series) + i)
   expectations.append(expected)
-  print(<b>'x=%d, Predicted=%f, Expected=%f' </b>% (len(series) + i, forecast_result, expected))
+  print('x=%d, Predicted=%f, Expected=%f' % (len(series) + i, forecast_result, expected))
 ```
 
 To show the results more clearly, we will display them on the plot:
 
-```
+```python
 pyplot.plot(series + expectations)
 pyplot.plot(series + predictions)
 pyplot.show()

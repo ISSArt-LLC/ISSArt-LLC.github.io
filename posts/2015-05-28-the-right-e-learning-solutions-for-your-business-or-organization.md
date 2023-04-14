@@ -11,7 +11,7 @@ categories:
 
 Technology has come a long way when it comes to being a productive tool for teaching. In fact, E-learning has made a huge impact on training within organizations all over the world, and this type of teaching continues to evolve. Whether it be for the workplace or school, it is a great way to disseminate information to a particular group. The E-learning market is set to make a large impact with an estimated revenue of approximately $51.5 billion by 2016, which is a projected [7.6% growth](http://elearningindustry.com/5-ways-to-reduce-cognitive-load-in-elearning).
 
-<div>We’ve already covered the general topics related to software development: [how to choose a provider](http://www.issart.com/blog/outsourcing-software-development-choosing-right-provider/), [what to consider during development](http://www.issart.com/blog/know-software-development-process/) and especially while [working in international market](http://www.issart.com/blog/what-challenges-do-software-development-companies-face-while-working-with-foreign-customers/), and [how to motivate remote team](http://www.issart.com/blog/motivating-an-offshore-team/).</div><div>Are you interested in other topics? Please vote!</div>\[polldaddy poll=”8814647″\]
+<div>We've already covered the general topics related to software development: [how to choose a provider](http://www.issart.com/blog/outsourcing-software-development-choosing-right-provider/), [what to consider during development](http://www.issart.com/blog/know-software-development-process/) and especially while [working in international market](http://www.issart.com/blog/what-challenges-do-software-development-companies-face-while-working-with-foreign-customers/), and [how to motivate remote team](http://www.issart.com/blog/motivating-an-offshore-team/).</div><div>Are you interested in other topics? Please vote!</div>\[polldaddy poll=”8814647″\]
 
 ## What is E-learning?
 
@@ -47,26 +47,26 @@ The graph below gives an excellent example of the cost effectiveness of an E-lea
 
 ### Challenges with E-learning solutions
 
-As with anything, E-learning also has some challenges. Although there aren’t many, here are some disadvantages to this type of learning:
+As with anything, E-learning also has some challenges. Although there aren't many, here are some disadvantages to this type of learning:
 
 - Students must be motivated, especially if the classes are self-paced.
-- E-learning can make students feel isolated, so it’s important to be self-confident and independent in order to be successful with this type of learning.
+- E-learning can make students feel isolated, so it's important to be self-confident and independent in order to be successful with this type of learning.
 - Slow Internet connections and older computers can cause unwanted issues.
 
 As for the owner of such a system, they might face the following challenges:
 
 - The need to deal with a high load, especially when the system has the potential to grow more popular.
-- It’s important to have simple usability issues.
+- It's important to have simple usability issues.
 - It can be an issue for small organizations because sometimes they might not have the right components in place, or resources, to have a successful system.
 - The technology involved can be difficult to manage for people not familiar with this type of platform.
 
-In today’s world, the E-learning market is highly competitive market. For this reason, it’s important to offer a product which will be extremely easy to navigate and easy to use. The challenges of E-learning are few and can be dealt with appropriately depending on the particular type of student and organization giving the training. It is also important to have a point person in place who can coordinate the new learning system throughout the business or organization.
+In today's world, the E-learning market is highly competitive market. For this reason, it's important to offer a product which will be extremely easy to navigate and easy to use. The challenges of E-learning are few and can be dealt with appropriately depending on the particular type of student and organization giving the training. It is also important to have a point person in place who can coordinate the new learning system throughout the business or organization.
 
 ### How can you achieve a top of the line E-learning system?
 
 No matter what you need an E-learning system for, whether for a college or university or organization, it has become a very important way in which we live. In a [recent report](https://www.docebo.com/landing/contactform/elearning-market-trends-and-forecast-2014-2016-docebo-report.pdf), trends show that the market of E-learning will continue to grow at a significantly fast rate over the next three years.
 
-With today’s variety of programming languages there is pretty much nothing that is impossible. Based on our experience, we can say PHP turned out to be a great choice for building E-learning systems. For example, we’ve built a Chess School website, which you can see [HERE](http://www.issart.com/en/portfolio/details/id/122). The site shows a complex system intended to bring together chess coaches and interested students which were developed on PHP.
+With today's variety of programming languages there is pretty much nothing that is impossible. Based on our experience, we can say PHP turned out to be a great choice for building E-learning systems. For example, we've built a Chess School website, which you can see [HERE](http://www.issart.com/en/portfolio/details/id/122). The site shows a complex system intended to bring together chess coaches and interested students which were developed on PHP.
 
 PHP brings the following benefits to the world of [E-learning systems](http://www.efrontlearning.net/blog/2015/03/e-learning-software-made-with-passion-and-php.html):
 
@@ -82,7 +82,7 @@ E-commerce functionality, and to deal with increasing loads.
 
 ### SaaS E-learning solutions
 
-The E-learning systems that are the most often sold in today’s market are the SaaS solutions. The reason for its popularity is because of the ability to order an E-learning system tailored for your individual needs, in addition to testing the system, and then adjusting it so that it will meet user objectives better. After that, you are able to sell this type of E-learning solution to those users who need a similar system as a SaaS service.
+The E-learning systems that are the most often sold in today's market are the SaaS solutions. The reason for its popularity is because of the ability to order an E-learning system tailored for your individual needs, in addition to testing the system, and then adjusting it so that it will meet user objectives better. After that, you are able to sell this type of E-learning solution to those users who need a similar system as a SaaS service.
 
 SaaS brings the following benefits to the world of E-learning¹:
 
@@ -94,9 +94,9 @@ SaaS brings the following benefits to the world of E-learning¹:
 - Easy customization
 - Excellent access capability from any device connected to a network
 
-Once you’ve decided to go with SaaS model, you need to decide how you will monetize your project. You can earn revenue by charging users monthly subscription fees or consumption-based fees (say, $X for Y number of lessons taken). Alternatively, you can make your service free to use and earn revenue from advertising. You need to define which monetization will suit your project best.
+Once you've decided to go with SaaS model, you need to decide how you will monetize your project. You can earn revenue by charging users monthly subscription fees or consumption-based fees (say, $X for Y number of lessons taken). Alternatively, you can make your service free to use and earn revenue from advertising. You need to define which monetization will suit your project best.
 
-The SaaS model is really having a great impact within today’s E-learning market. As a result, many companies and organizations throughout the world are changing over to the SaaS model on a daily basis. Due to the system’s innovative technology, it is one of the best options around.
+The SaaS model is really having a great impact within today's E-learning market. As a result, many companies and organizations throughout the world are changing over to the SaaS model on a daily basis. Due to the system's innovative technology, it is one of the best options around.
 
 ### Making the best decision for your business
 
@@ -112,4 +112,4 @@ In short, E-learning is a great advantage for the business or organization givin
 
 ### Conclusion
 
-Once you decide that E-learning is something you want to implement within your business or organization, it’s important to set it up for success. Before this new process begins, it is important to have a successful E-learning strategy. Once a strategy is in place, you will be on your way to implementing the right type of E-learning system based on specific business or organizational needs. This is one of the key factors to having a successful training program that can address specific objectives and improving workflow and retention. No matter what your E-learning system choice is, it is an especially valuable training method. ***Have you ever built E-learning systems? If so, which challenges have you faced? Share in the comments below.***
+Once you decide that E-learning is something you want to implement within your business or organization, it's important to set it up for success. Before this new process begins, it is important to have a successful E-learning strategy. Once a strategy is in place, you will be on your way to implementing the right type of E-learning system based on specific business or organizational needs. This is one of the key factors to having a successful training program that can address specific objectives and improving workflow and retention. No matter what your E-learning system choice is, it is an especially valuable training method. ***Have you ever built E-learning systems? If so, which challenges have you faced? Share in the comments below.***

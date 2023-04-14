@@ -17,7 +17,7 @@ Flow charts are widely used in gas industry. They record parameters of a gas flo
 [![](https://issart.com/blog/wp-content/uploads/2018/10/01_barton.png)](https://issart.com/blog/wp-content/uploads/2018/10/01_barton.png)
 The chart recorder contains two or three pens driven by sensors. These pens plot traces on a rotating paper disk. The disk performs one revolution per day or week, rarely per month. The disk is replaced after one revolution.
 
-Currently disks are processed manually. The operator uses the vector graphics editor to convert the scanned bitmap to contours and then to tabular data. This approach relies heavily on the operator’s attention and experience. There is a high probability of mistakes. After all, such job is really boring!
+Currently disks are processed manually. The operator uses the vector graphics editor to convert the scanned bitmap to contours and then to tabular data. This approach relies heavily on the operator's attention and experience. There is a high probability of mistakes. After all, such job is really boring!
 
 We have developed an algorithm that performs this job automatically. Given a bitmap with a scanned chart, it produces tabular representation of chart data.
 
@@ -39,7 +39,7 @@ Note that the same concentric line has different values for different axes.
 
 ### Grid Color Detection
 
-The first task to solve is to separate trace pixels and pixels belonging to the blank area. This blank area contains two dominant colors: white and green. In theory, knowing this we could use simple thresholding to detect these two colors. But in practice this approach drops pixels on the edge between the grid and the blank paper. This happens because boundary pixels aren’t strictly white or green – they are somewhere between.
+The first task to solve is to separate trace pixels and pixels belonging to the blank area. This blank area contains two dominant colors: white and green. In theory, knowing this we could use simple thresholding to detect these two colors. But in practice this approach drops pixels on the edge between the grid and the blank paper. This happens because boundary pixels aren't strictly white or green – they are somewhere between.
 
 To deal with it, a linear model is used. To build such model, we need an area where no trace appears. Such area is the outer ring of the chart, named “Time area” on the image.
 [![](https://issart.com/blog/wp-content/uploads/2018/10/03_areas.png)](https://issart.com/blog/wp-content/uploads/2018/10/03_areas.png)
@@ -59,14 +59,14 @@ To improve the result, we build the histogram using pixels whose bottom-right ne
 Since we need the hue difference between pixels, all pixels with similar color should have a similar hue. This is not true for red pixels because they have hue values near both 0 and 180. To tackle this issue, we roll hue values to shift the significant part of the hue histogram to the center. The shift value is found as a minima of the convolution between the hue histogram and the kernel shown below. The idea behind is to “penalize” cases when large histogram values are near 0 or 180.
 [![](https://issart.com/blog/wp-content/uploads/2018/10/06_hueshift.png)](https://issart.com/blog/wp-content/uploads/2018/10/06_hueshift.png)
 
-After the histogram is shifted, we find trace pixels whose neighbours have similar hue. This step makes blobs’ edges on the h-s histogram sharper, because pixels near the trace edges are excluded.
+After the histogram is shifted, we find trace pixels whose neighbours have similar hue. This step makes blobs' edges on the h-s histogram sharper, because pixels near the trace edges are excluded.
 
 Similar pixels are found in the next way:
 
 1. Get all trace pixels whose bottom-right pixels are in trace too;
 2. Find the 95% percentile of the hue difference;
 3. Keep pairs with the hue difference below this level. 
-    1. Then, the mean hue and saturation values are taken for every neighbour pair. The obtained set of the hue and saturation values is used to build ‘filtered’ hue-saturation histogram. This histogram contains less noise produced by the ‘edge’ pixels.
+    1. Then, the mean hue and saturation values are taken for every neighbour pair. The obtained set of the hue and saturation values is used to build 'filtered' hue-saturation histogram. This histogram contains less noise produced by the 'edge' pixels.
   
     After that, the histogram is thresholded by the median value and connected components are found. We build Voronoi diagram and assign its labels to the source histogram.
   
@@ -171,7 +171,7 @@ Similar pixels are found in the next way:
           
             So, we have trace points classified by trace. We also know what template was used. This allows us to convert the image coordinates (in pixels) of every point to time and value (in hours and appropriate units: kPa, ℃, etc.). As a result, we get a set of points. If we arrange them in order by time, we have our task solved, right?
           
-            No… Because now we have tons of points that tell us nothing about the pen’s movement. Let’s look at pixels in time-value plane and a corresponding chart fragment:
+            No… Because now we have tons of points that tell us nothing about the pen's movement. Let's look at pixels in time-value plane and a corresponding chart fragment:
             [![](https://issart.com/blog/wp-content/uploads/2018/10/21_tracepts.png)](https://issart.com/blog/wp-content/uploads/2018/10/21_tracepts.png)
           
             It is easy to tell how the pen moved on the left and right ends of this excerpt, because we clearly see the line. But what about the middle part? How did the pen travel here?
@@ -196,7 +196,7 @@ Similar pixels are found in the next way:
           
             ### Improving envelope
           
-            Next, we improve the obtained min-max envelope. Initially, all bins are uniformly distributed. Sometimes thin point “columns” appear on the edge between the bins, producing two bins instead of one. Simple movement of all bins won’t help us, because having one “column” aligned, we might get another one on an edge. Below is an example of two peaks and the envelope with step 2.
+            Next, we improve the obtained min-max envelope. Initially, all bins are uniformly distributed. Sometimes thin point “columns” appear on the edge between the bins, producing two bins instead of one. Simple movement of all bins won't help us, because having one “column” aligned, we might get another one on an edge. Below is an example of two peaks and the envelope with step 2.
             [![](https://issart.com/blog/wp-content/uploads/2018/10/26_envunif.png)](https://issart.com/blog/wp-content/uploads/2018/10/26_envunif.png)
           
             To solve this issue, we improve the position of the bins by means of the next steps:

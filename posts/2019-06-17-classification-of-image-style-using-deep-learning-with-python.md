@@ -17,7 +17,7 @@ tags:
 
 In this article, I want to talk about the use of convolutional neural networks for the classification of images by style.
 
-The goal of our project is to build software to identify whether an image is in the “BMW style”. In other words, we are faced with the task of classifying images. It is important to note here that images could be of any content, with and without cars. So, the main interest here is not to identify a car object, or identify a BMW car, rather identify a BMW look and feel – colors, composition and so on. But we can’t select these attributes of style manually. To solve this problem, it was proposed to use a neural network, in which such complex features will be found automatically in the learning process.
+The goal of our project is to build software to identify whether an image is in the “BMW style”. In other words, we are faced with the task of classifying images. It is important to note here that images could be of any content, with and without cars. So, the main interest here is not to identify a car object, or identify a BMW car, rather identify a BMW look and feel – colors, composition and so on. But we can't select these attributes of style manually. To solve this problem, it was proposed to use a neural network, in which such complex features will be found automatically in the learning process.
 
 ##### Neural Networks
 
@@ -47,7 +47,7 @@ So as far as the main interest is not the car rather the background, we need to 
 
 - detect cars on the image, [Darknet YOLOv3](https://pjreddie.com/darknet/yolo/) algorithm was used for this
 - remove the rectangle bounding machine/machines – replace it with a fully transparent color
-- cut a random rectangle if a car is not found in the image. It is necessary so that the network doesn’t train to recognize only the images with cars as the “BMW style” since there are a lot of cars in the “BMW-style” images and few cars in the “non-BMW style” images in our dataset. The distribution of the positions and sizes of cars in the images with cars was studied for this.
+- cut a random rectangle if a car is not found in the image. It is necessary so that the network doesn't train to recognize only the images with cars as the “BMW style” since there are a lot of cars in the “BMW-style” images and few cars in the “non-BMW style” images in our dataset. The distribution of the positions and sizes of cars in the images with cars was studied for this.
 
 [![](https://issart.com/blog/wp-content/uploads/2019/05/bmw_removed-276x300.jpg)](https://issart.com/blog/wp-content/uploads/2019/05/bmw_removed.jpg) [![](https://issart.com/blog/wp-content/uploads/2019/05/sea_removed-276x300.jpg)](https://issart.com/blog/wp-content/uploads/2019/05/sea_removed.jpg)
 

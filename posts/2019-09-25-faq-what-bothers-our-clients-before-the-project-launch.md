@@ -15,17 +15,17 @@ Here you go.
 
 ##### 1. How do you typically communicate with your client during the development process? What communication channels are you using?
 
-Our company understands the importance of Client’s engagement into the project development. We have an established process in our project management department where an assigned project manager schedules and organizes meetings with a client.
+Our company understands the importance of Client's engagement into the project development. We have an established process in our project management department where an assigned project manager schedules and organizes meetings with a client.
 
 We try our best to make Client feel like we are sitting next to him. We are always happy to make a voice call, as well as hold a video call. In addition, we try to minimize the inconveniences caused by time zone differences. When planning a meeting, we try to find the most convenient time slot for both parties.
 
-We are quite flexible regarding the frequency of meetings. Actually, it depends on the project type and size, as well as the necessary level of Client’s engagement into the development process.
+We are quite flexible regarding the frequency of meetings. Actually, it depends on the project type and size, as well as the necessary level of Client's engagement into the development process.
 
 On average, the updates are sent to Client at least twice a week via email, and the project demo presentations are held once in two weeks via Skype or Google Hangouts.
 
 ##### 2. How do you form a team for a certain project?
 
-The project team is formed according to the expertise and experience of the specialists that the project requires. When assigning a team to a project, factors like the project timeframe and the developers’ schedule are also held accountable.
+The project team is formed according to the expertise and experience of the specialists that the project requires. When assigning a team to a project, factors like the project timeframe and the developers' schedule are also held accountable.
 
 ##### 3. How do you take care of deadlines and the budget of the project?
 
@@ -37,7 +37,7 @@ To achieve this, a project manager takes care of the following:
 - Project budget utilization plan which provides budget burndown understanding and predictable payment schedule;
 - Project backlog containing all the tasks that should be performed during the project.
 
-In addition, project manager’s responsibilities include estimation and monitoring of risks in terms of budget and timeframes.
+In addition, project manager's responsibilities include estimation and monitoring of risks in terms of budget and timeframes.
 
 [Here](https://issart.com/how-we-do/project-management/) you can find more information about project management in our company.
 
@@ -49,7 +49,7 @@ We never abandon projects unfinished or leave Client with unsolved issues; we al
 
 Our software development teams are located in two cities – Omsk (HQ) and Krasnoyarsk. For most of the projects we select a team from one city.
 
-However, we provide high quality results despite of the team location. Our well-established communication practices allow us to achieve great results in the case of a distributed team structure as well. That is, we have projects where our team members are located in both Omsk and Krasnoyarsk, and Client’s team is located abroad.
+However, we provide high quality results despite of the team location. Our well-established communication practices allow us to achieve great results in the case of a distributed team structure as well. That is, we have projects where our team members are located in both Omsk and Krasnoyarsk, and Client's team is located abroad.
 
 ##### 5. Can we increase the scope of the project during the development process?
 
@@ -65,4 +65,4 @@ After the app launch and release to online markets, we received requests from Cl
 
 Such requests are usually addressed to a project manager who then assigns a developer from the team (who worked on a project) to complete the task.
 
-***We hope that the series of FAQ articles will be useful for you. Subscribe to our blog and don’t miss the new useful materials anymore.***
+***We hope that the series of FAQ articles will be useful for you. Subscribe to our blog and don't miss the new useful materials anymore.***

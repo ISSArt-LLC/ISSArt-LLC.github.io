@@ -33,7 +33,7 @@ Important Components of the Development Process:
 - Program Code Development
 - Code Documenting
 - Software Test Results
-- Deployment of Code on the Customer’s Server
+- Deployment of Code on the Customer's Server
 - Maintenance
 - Training
 
@@ -49,7 +49,7 @@ It is impossible to account for all errors, but making sure you have clear speci
 
 ![outsourcing software development III. Make sure the provider documents the code](/static/img/2015/02/outsourcing-software-development-provider-documents-300x196.jpg)
 
-Extreme clarity in understanding a developer’s code is important when making adjustments or fixing errors later on down the road. Without a clear understanding of exactly what the original developer was thinking and how they were thinking it can result in confusion, wasted time in deciphering exactly what was already done and bugs.
+Extreme clarity in understanding a developer's code is important when making adjustments or fixing errors later on down the road. Without a clear understanding of exactly what the original developer was thinking and how they were thinking it can result in confusion, wasted time in deciphering exactly what was already done and bugs.
 
 Be sure to have the developer provide comprehensive and straightforward documentation that will give clear insight to others who may have to work with the code later. It should be much more than just a few notes here and there; it should be a full, detailed and lengthy explanation of their coding process.
 
@@ -63,7 +63,7 @@ If the element in the software causing the issue is intertwined with the core op
 
 Have you ever heard the phrase, “trust but verify”? This is an absolute rule that must be followed when outsourcing development. There is nothing wrong with building trust in a developer over time, but it is essential to test and verify the results yourself.
 
-Not only will this give you peace of mind and ensure the provider has completed the project properly, it will also give you an opportunity to test the software from a consumer’s point of view. You may find something the developer missed, an honest mistake or simply a portion of the software that needs a little tweaking.
+Not only will this give you peace of mind and ensure the provider has completed the project properly, it will also give you an opportunity to test the software from a consumer's point of view. You may find something the developer missed, an honest mistake or simply a portion of the software that needs a little tweaking.
 
 #### VI. Do not hesitate to stay involved in the development process
 
@@ -93,7 +93,7 @@ Photo Source [project-management.com](http://project-management.com/redmine-soft
 
 ### Time Tracking Software
 
-Combined with the project management software, time tracking systems represent a powerful tool for measuring your team’s performance. In recent years, time-tracking systems have become rich in functionality allowing full integration with project management tools such as JIRA and Redmine, among others. Many time tracking apps even allow activity monitoring such as apps used, screenshots, mouse activity and keyboard activity with the ability to generate various reports, billing reports and invoice generation.
+Combined with the project management software, time tracking systems represent a powerful tool for measuring your team's performance. In recent years, time-tracking systems have become rich in functionality allowing full integration with project management tools such as JIRA and Redmine, among others. Many time tracking apps even allow activity monitoring such as apps used, screenshots, mouse activity and keyboard activity with the ability to generate various reports, billing reports and invoice generation.
 
 We are currently in the process of developing our own time tracking tool, one that we would be happy to use ourselves. You can read more about it here: <http://www.issart.com/en/for-clients/crisstal-eye>
 
@@ -112,15 +112,15 @@ Clear and consistent communication solves many issues and avoids many problems b
 
 ## Choosing the Right Developer
 
-### Verifying a providers’ credibility
+### Verifying a providers' credibility
 
 #### Local Software Developers
 
 Dealing with a local provider does have some advantages, as it allows you face-to-face interaction and the ability to visit their physical office location. There are times you can get a gut feeling or sense about someone and their company in person that is difficult to do via email, Skype or other online communication sources.
 
-Additionally, you may be able to find local clients they have done business with in the past, who can give you an opinion on the overall value of the provider’s services and tell about the details of their own experience.
+Additionally, you may be able to find local clients they have done business with in the past, who can give you an opinion on the overall value of the provider's services and tell about the details of their own experience.
 
-While dealing with a local provider does add an element of easy research, you still need to search the internet for comments, reviews and information about the provider’s business. They may be local to you, but chances are they have done work nationally or even internationally, with some type of rating and feedback given on third-party websites.
+While dealing with a local provider does add an element of easy research, you still need to search the internet for comments, reviews and information about the provider's business. They may be local to you, but chances are they have done work nationally or even internationally, with some type of rating and feedback given on third-party websites.
 
 #### Offshore Software Developers
 
@@ -150,9 +150,9 @@ Additional Sources of Information on Providers:
 
 By the way, we are recognized as a top [<u>California Web Design Agency</u>](https://www.designrush.com/agency/california-website-design-development) on DesignRush.
 
-Many times providers will have profiles on the above freelance websites that give reviews and valuable information about a provider’s past performance and quality of service. By the way, there was an interesting [research](http://hostadvice.com/blog/elance-freelancers-research-2015/ "research") comparing Elance freelancers in terms of nationalities, prices and scores.
+Many times providers will have profiles on the above freelance websites that give reviews and valuable information about a provider's past performance and quality of service. By the way, there was an interesting [research](http://hostadvice.com/blog/elance-freelancers-research-2015/ "research") comparing Elance freelancers in terms of nationalities, prices and scores.
 
-Additionally, you can search social media websites such as Facebook, Google+ and LinkedIn to view their profiles, comments and posts. You may also be able to find information through specialized forums that relate directly or indirectly to an outsourcing provider’s services.
+Additionally, you can search social media websites such as Facebook, Google+ and LinkedIn to view their profiles, comments and posts. You may also be able to find information through specialized forums that relate directly or indirectly to an outsourcing provider's services.
 
 More insights on how to find remote software development providers can be found [here](https://blog.hubstaff.com/how-to-hire-web-developers/).
 

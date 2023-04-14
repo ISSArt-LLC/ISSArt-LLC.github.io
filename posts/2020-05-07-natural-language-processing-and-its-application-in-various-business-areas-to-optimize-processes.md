@@ -24,9 +24,9 @@ A miracle?
 
 You bet! The exciting combination of Artificial intelligence and Natural Language Processing has helped machines like Alexa to offer ready-service to customers.
 
-Much as we praise Alexa for helping us in our daily chores, the fact is machines like Alexa don’t readily understand human language.
+Much as we praise Alexa for helping us in our daily chores, the fact is machines like Alexa don't readily understand human language.
 
-Unlike humans, language learning is a tedious, time-consuming, and complicated process for machines. Why? For one, they tend to look at language in the form of data- loads of indecipherable, upended, and unstructured data. Another thing being, machines don’t understand grammar and context.
+Unlike humans, language learning is a tedious, time-consuming, and complicated process for machines. Why? For one, they tend to look at language in the form of data- loads of indecipherable, upended, and unstructured data. Another thing being, machines don't understand grammar and context.
 
 Now with Artificial Intelligence getting smarter and sophisticated, [Natural Language Processing](https://issart.com/services/natural-language-processing-text-analysis/) (NLP), along with AI, is aiding computers to understand human language better.
 
@@ -42,7 +42,7 @@ Though the terms AI and NLP bring to mind images of robots, there are enough exa
 
 Simply put, Natural Language Processing, aka NLP, is a part of Artificial Intelligence that aids computers understand human language.
 
-The ultimate aim of NLP is to help machines understand and make sense of human language in a much more sensible way. As mentioned above, it isn’t easy to teach computers how humans communicate.
+The ultimate aim of NLP is to help machines understand and make sense of human language in a much more sensible way. As mentioned above, it isn't easy to teach computers how humans communicate.
 
 But then, in recent years, there have been enough breakthroughs that empower computers to understand language. For instance, NLP techniques use machine learning to derive sense from human words.
 
@@ -50,19 +50,19 @@ A typical interaction between human and machines using Natural Language Processi
 
 ***\# A human speaks to a machine # The machine records the audio # Audio is converted to text***
 
- ***# Text’s data is analysed # Analyzed data is converted to audio # The machine answers human by playing the audio file***
+ ***# Text's data is analysed # Analyzed data is converted to audio # The machine answers human by playing the audio file***
 
 NLP employs algorithms to identify natural language rules.
 
 The language data gathered is then converted into a text form that computers can easily comprehend.
 
-But then, don’t forget, computers don’t always need to be successful at extracting the exact information from the text. But then, the fact is, NLP, along with AI, is enabling computers to put the best forward in terms of language comprehension. To learn more about NLP, consult [ISS Art](https://www.goodfirms.co/company/iss-art) Machine Learning experts.
+But then, don't forget, computers don't always need to be successful at extracting the exact information from the text. But then, the fact is, NLP, along with AI, is enabling computers to put the best forward in terms of language comprehension. To learn more about NLP, consult [ISS Art](https://www.goodfirms.co/company/iss-art) Machine Learning experts.
 
 **Today, NLP is powering Chatbots to aid customer service reps, Human Resource processes, Advertising and more.**
 
 ## Neural machine translation
 
-Although Microsoft Bing introduced neural machine translation technology in 2016, it’s Google and Amazon, who are carrying this technology forward by delivering the best machine translations tools to the market. NLP, applied in neural machine translation tools, enables businesses in the translation of emails, regulatory texts, and more, thus helping companies speed up their communication process.
+Although Microsoft Bing introduced neural machine translation technology in 2016, it's Google and Amazon, who are carrying this technology forward by delivering the best machine translations tools to the market. NLP, applied in neural machine translation tools, enables businesses in the translation of emails, regulatory texts, and more, thus helping companies speed up their communication process.
 
 ## NLP-powered Chatbots in Customer Service
 
@@ -70,7 +70,7 @@ Sure, [chatbots](https://www.goodfirms.co/resources/online-chatbot-technology) h
 
 However, with the introduction of NLP and NLP and voice recognition technology, chatbots can chat these days. Adding NLP to chatbots means adding a human element.
 
-In doing so, a chatbot will be exposed to all kinds of customer questions, and which, in turn, will help bots streamline their responses to the customers. Chatbots, powered by NLP, would collect relevant data, which would help them address customer issues individually and also offer personalized experience that too without any stress – an unhealthy emotional state that’s inevitability associated with any kind of human-to-human interaction.
+In doing so, a chatbot will be exposed to all kinds of customer questions, and which, in turn, will help bots streamline their responses to the customers. Chatbots, powered by NLP, would collect relevant data, which would help them address customer issues individually and also offer personalized experience that too without any stress – an unhealthy emotional state that's inevitability associated with any kind of human-to-human interaction.
 
 So, it comes as no surprise that chatbots have become an integral part of businesses these days. In fact, according to Gartner, over 80% of customer interactions will be managed by chatbots by 2020.
 
@@ -78,9 +78,9 @@ So, it comes as no surprise that chatbots have become an integral part of busine
 
 Further, chatbots are increasingly being used in sales as well when it comes to striking a conversation with customers, scheduling appointments, and so much more.
 
-Long story short: If you’d want your chatbots to be highly conversational, then NLP is imperative. Even if your button-driven chatbot has some in-built NLP, it would be helpful when users ask questions.
+Long story short: If you'd want your chatbots to be highly conversational, then NLP is imperative. Even if your button-driven chatbot has some in-built NLP, it would be helpful when users ask questions.
 
-If integrating NLP into your chatbot seems to be a problem for you, try chatbot programming platforms such as SnatchBot. The platform provides a vast number of pre-made NLP functions that allow you to build the bot without any codes. It’s also an ideal platform for custom solutions at it could help you create a set of responses from scratch.
+If integrating NLP into your chatbot seems to be a problem for you, try chatbot programming platforms such as SnatchBot. The platform provides a vast number of pre-made NLP functions that allow you to build the bot without any codes. It's also an ideal platform for custom solutions at it could help you create a set of responses from scratch.
 
 ## NLP-Powered Hiring and recruitment
 
@@ -96,13 +96,13 @@ NLP backed by automation makes it a potent tool during the hiring process:
 
 ## NLP-Powered Sentiment analysis
 
-While framing sales and marketing strategies, it’s essential first to understand how your customers feel about your brand. In other words, you need to perform a sentiment analysis of your customers. Also, know as opinion mining, the strategy has its birth in social media analysis and is known for analyzing news and blogs and even rating the text as negative, positive, or neutral.
+While framing sales and marketing strategies, it's essential first to understand how your customers feel about your brand. In other words, you need to perform a sentiment analysis of your customers. Also, know as opinion mining, the strategy has its birth in social media analysis and is known for analyzing news and blogs and even rating the text as negative, positive, or neutral.
 
 Today, NLP algorithms are crucial to identifying various customer emotions – happy, angry, sad, annoyed, and so on. Such precise judgment of human emotions will put marketers under pressure to develop actionable strategies that help customers make informed decisions.
 
 ![nlp based sentiment analysis](/static/img/2020/05/austin-distel-tLZhFRLj6nY-unsplash.jpg)
 
-NLP typically sifts through customer interactions of different social media comments, customer testimonials, and brand name mentions to see what’s being spoken about your brand. Analysis of this interaction will help brands figure whether their marketing campaign would be a success or not and even monitor trending customer issues before they decide to respond.
+NLP typically sifts through customer interactions of different social media comments, customer testimonials, and brand name mentions to see what's being spoken about your brand. Analysis of this interaction will help brands figure whether their marketing campaign would be a success or not and even monitor trending customer issues before they decide to respond.
 
 NLP also helps with text analytics in terms of keyword extraction and even figuring structure and patterns in the unstructured text data.
 
@@ -112,13 +112,13 @@ By keeping a tab on your digital arenas, including emails, keywords, social medi
 
 Though one cannot entirely deny the ambiguity associated with NLP as in, it may fail to make sense of a word used in a particular context; the application still brings the most value to the table.
 
-It’s capable of churning optimized keywords, advertising slogans, product listings, and more.
+It's capable of churning optimized keywords, advertising slogans, product listings, and more.
 
-For instance, Alibaba’s AI copywriter writes product descriptions in Chinese. There are several startups out there, such as Persado and Motiva, offering AI ad optimization. Though these bots won’t take away our jobs yet, they are excellent tools if you do not have enough resources at hand to undertake your writing tasks.
+For instance, Alibaba's AI copywriter writes product descriptions in Chinese. There are several startups out there, such as Persado and Motiva, offering AI ad optimization. Though these bots won't take away our jobs yet, they are excellent tools if you do not have enough resources at hand to undertake your writing tasks.
 
 Additionally, the improvement in voice recognition technology will enable the automation of video and audio transcription. This would mean that video and audio files could be converted into a searchable format, making it [SEO friendly](https://www.goodfirms.co/seo-agencies).
 
-What’s more, even YouTube provides machine-generated captions for its videos. In the future, we can look forward to machine audio and video translation on the fly as well.
+What's more, even YouTube provides machine-generated captions for its videos. In the future, we can look forward to machine audio and video translation on the fly as well.
 
 NLP and Artificial Intelligence are powering their way into the business world. And, businesses are gladly welcoming these technologies in their midst as it helps them speed up their process and helps serve customers better. Over to you know! Share your experiences in NLP and how it has optimized your business process so far.
 

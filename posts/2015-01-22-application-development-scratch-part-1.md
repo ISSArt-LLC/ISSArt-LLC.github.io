@@ -25,7 +25,7 @@ There are some significant advantages to web based applications for the user and
 - Easier to defend against piracy issues compared to desktop applications
 - Cross platform utilization
 
-Desktop applications have a few advantages as well. However, rewarding development in this area is getting more challenging. The simple reason for this is that user’s behavior clearly indicates they are now using web apps and mobile sources at an increasing rate.
+Desktop applications have a few advantages as well. However, rewarding development in this area is getting more challenging. The simple reason for this is that user's behavior clearly indicates they are now using web apps and mobile sources at an increasing rate.
 
 ### Desktop App Advantages
 
@@ -46,13 +46,13 @@ How users ultimately prefer to access data within those two areas is something w
 
 Nearly 50,000 games and applications are submitted to the iTunes app store every month, while the Google Play store hit the 1.3 million app mark last year. The Windows Store and Amazon App Store, lag behind with just 300,000 and 240,000 apps respectively, with Blackberry coming in last with 130,000 applications.
 
-While Google does not have a review process in place like Apple and Windows, the submissions do have to adhere to Google’s policies. Typically, Google removes about 25% of all apps submitted to their store and Apple has a rejection rate of almost 58%.
+While Google does not have a review process in place like Apple and Windows, the submissions do have to adhere to Google's policies. Typically, Google removes about 25% of all apps submitted to their store and Apple has a rejection rate of almost 58%.
 
 There are a myriad of reasons for these rejections, but you could hazard a guess that at least three quarters of these are reskinned applications and games that fail to meet developer requirements and standards.
 
 In fact, even when a company that exclusively deals with application development tried their luck with some purchased code, their offering was promptly rejected. It is an interesting story and can be found at [overpass.co.uk](http://www.overpass.co.uk/failed-experiment-app-reskinning-minute-overpass/).
 
-So, app rejections don’t just haunt novices, it also affects those who have programming expertise in their toolbox. Yet, the internet abounds with alluring promises of how people can make thousands, or even millions, in application development without any programming knowledge.
+So, app rejections don't just haunt novices, it also affects those who have programming expertise in their toolbox. Yet, the internet abounds with alluring promises of how people can make thousands, or even millions, in application development without any programming knowledge.
 
 ![application development from scratch 7 reasons for application rejection](/static/img/2015/01/application-development-from-scratch-reasons-for-app-rejection.png)
 
@@ -82,7 +82,7 @@ When working on fresh code you have absolute flexibility, in terms of not only t
 
 Photo Source [Enterprisecioforum.com](http://www.enterprisecioforum.com/en/blogs/kaushalshah/rise-cross-platform-app-development-mark)
 
-This would of course not be an option when trying to reskin an app. It should also be stated that given the popularity of the Apple store, chances are, the source code was built for the iOS platform and in Objective-C. Therefore, if you need a version of it in Java for the Android Platform, you would need to put in some serious programming hours. If you don’t have resources in-house, then you may need to [hire Android developers](https://www.devteam.space/hire-android-developers/).
+This would of course not be an option when trying to reskin an app. It should also be stated that given the popularity of the Apple store, chances are, the source code was built for the iOS platform and in Objective-C. Therefore, if you need a version of it in Java for the Android Platform, you would need to put in some serious programming hours. If you don't have resources in-house, then you may need to [hire Android developers](https://www.devteam.space/hire-android-developers/).
 
 The same dynamics can be involved when developing desktop applications. For example, if you are using .NET as your chosen programming language, then some of the architecture foundation can be transferred to Windows Phone and Windows Store applications. However, the keyword is “some” and if you are not careful, you may end up with a larger project than you realized would be necessary. Details matter when attempting to migrate or expand applications from desktop versions to mobile or web-based versions, and vice versa.
 

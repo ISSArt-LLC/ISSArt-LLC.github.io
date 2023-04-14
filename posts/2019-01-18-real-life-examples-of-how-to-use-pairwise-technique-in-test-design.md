@@ -9,11 +9,11 @@ categories:
     - QA/Testing
 ---
 
-It’s clear that there’s a point where a comprehensive testing cannot be performed by creating a set of tests using a non-formal or even random approach. Experienced testers have to address different testing techniques to maintain acceptable level of coverage and high bug detection rate within a tight schedule. In this article we are going to look at and get familiar with one of the most effective yet easy-to-use testing techniques called **pairwise testing.**
+It's clear that there's a point where a comprehensive testing cannot be performed by creating a set of tests using a non-formal or even random approach. Experienced testers have to address different testing techniques to maintain acceptable level of coverage and high bug detection rate within a tight schedule. In this article we are going to look at and get familiar with one of the most effective yet easy-to-use testing techniques called **pairwise testing.**
 
 Testers rarely have to deal with simple systems. Usually, they are supposed to test complicated software with a great variety of input and output values, unobvious correlation between parameters, selected options and execution flows. Luckily, testing techniques often let testers overcome an otherwise overwhelming complexity. 
 
-While comprehensive testing of a single module can barely discover all of the issues, testing every possible input combination is even worse – for real systems it’s just impossible to create billions of tests and execute them. Choosing tests randomly may help, but people, even testers, hardly make their choice at truly random. Their choice tends to be determined by subjective perception, assumptions, personal preferences in tools and approaches, and so on. However, according to studies, most bugs and defects are caused by incorrect interaction between two modules or functions. This is a fundamental basis that makes pairwise testing both efficient and relevant. 
+While comprehensive testing of a single module can barely discover all of the issues, testing every possible input combination is even worse – for real systems it's just impossible to create billions of tests and execute them. Choosing tests randomly may help, but people, even testers, hardly make their choice at truly random. Their choice tends to be determined by subjective perception, assumptions, personal preferences in tools and approaches, and so on. However, according to studies, most bugs and defects are caused by incorrect interaction between two modules or functions. This is a fundamental basis that makes pairwise testing both efficient and relevant. 
 
 Consider a web shop that should operate with different types of customers:
 
@@ -71,11 +71,11 @@ If you look at any two columns and discard all other, you will still have all 9 
 - 4 is the number of columns;
 - 3 is the number of different values that a column can take.
 
-So, L<sub>9</sub>(3<sup>4</sup>) is a 9×4 array where every column can take up to 3 different values. Make notice that orthogonal arrays don’t contain all possible combinations of { A; B; C } so { A; A; B }, { A; B; A }, { B; B; B } and some other don’t appear. It’s because they’re triples, while orthogonal arrays only guarantee that all pairs appear in the array. There’re orthogonal arrays that have a different number of possible values for different columns. For example, L<sub>64</sub>(8<sup>2</sup>4<sup>3</sup>) is an orthogonal array that has 64 rows, two columns of 8 values and three columns of 4 values.
+So, L<sub>9</sub>(3<sup>4</sup>) is a 9×4 array where every column can take up to 3 different values. Make notice that orthogonal arrays don't contain all possible combinations of { A; B; C } so { A; A; B }, { A; B; A }, { B; B; B } and some other don't appear. It's because they're triples, while orthogonal arrays only guarantee that all pairs appear in the array. There're orthogonal arrays that have a different number of possible values for different columns. For example, L<sub>64</sub>(8<sup>2</sup>4<sup>3</sup>) is an orthogonal array that has 64 rows, two columns of 8 values and three columns of 4 values.
 
 Unfortunately, in real software we have many more parameters (aka “columns”) and values for every parameter (aka A, B, C), and L<sub>p</sub>(X<sub>1</sub><sup>n<sub>1</sub></sup>X<sub>2</sub><sup>n<sub>2</sub></sup>…X<sub>m</sub><sup>n<sub>m</sub></sup>) orthogonal arrays may not exist. So, our goal is to locate the next big enough array and “insert” our variables properly. In such scenario, completely empty columns (every cell is empty in the column) may appear within the array. All you need to do is to discard them completely.
 
-There’re plenty of tools that help to locate a suitable orthogonal array considering the number of the variables and their values. There’s a nice list of them: [http://www.pairwise.org/tools.asp](http://www.pairwise.org/tools.asp). Be aware that some tools might not be supported anymore or require payment. We will use web-based and free [https://pairwise.teremokgames.com/](https://pairwise.teremokgames.com/) below in this article.
+There're plenty of tools that help to locate a suitable orthogonal array considering the number of the variables and their values. There's a nice list of them: [http://www.pairwise.org/tools.asp](http://www.pairwise.org/tools.asp). Be aware that some tools might not be supported anymore or require payment. We will use web-based and free [https://pairwise.teremokgames.com/](https://pairwise.teremokgames.com/) below in this article.
 
 ### **Strategy**
 
@@ -102,7 +102,7 @@ Considering input variables as columns and any row as a separate test, we need t
 1. Сhoose any two columns, all the pair combinations will occur within all of the column pairs;
 2. There might be duplicated tests.
 
-Let’s fill the columns with values of the variables (the order doesn’t matter):
+Let's fill the columns with values of the variables (the order doesn't matter):
 
 [![](https://issart.com/blog/wp-content/uploads/2018/12/generating_array-300x158.png)](https://issart.com/blog/wp-content/uploads/2018/12/generating_array.png)
 
@@ -110,7 +110,7 @@ and Generate Pairwise:
 
 [![](https://issart.com/blog/wp-content/uploads/2018/12/Pairwise-274x300.png)](https://issart.com/blog/wp-content/uploads/2018/12/Pairwise.png)
 
-As you can see, instead of 240 tests we ended up with just 25. Empty cells within array can be filled out with any valid values for particular parameters, e.g. B16-B25 can contain “individual”, “company”, “partner” or any their combination. It won’t decrease or increase the bug detection rate and coverage.
+As you can see, instead of 240 tests we ended up with just 25. Empty cells within array can be filled out with any valid values for particular parameters, e.g. B16-B25 can contain “individual”, “company”, “partner” or any their combination. It won't decrease or increase the bug detection rate and coverage.
 
 **Step #4
 We are already good to start writing test cases. Any row in the table above (except, obviously, the first one) should be processed as a set of variable+value combinations to make a single test.
@@ -126,9 +126,9 @@ Now consider a situation, when we need to run a regression testing cycle, becaus
 
 Picking up highlighted tests lets us, once again, check the interaction between a new Chrome version and every value of the other parameters at least once. 
 
-However, testers who decided to apply pairwise testing to their SUT should notice that this technique may not choose frequently used or high risky combinations over rare or less risky ones. If there’re such combinations, we strongly recommend to create extra tests in addition to the ones that were generated by pairwise testing.
+However, testers who decided to apply pairwise testing to their SUT should notice that this technique may not choose frequently used or high risky combinations over rare or less risky ones. If there're such combinations, we strongly recommend to create extra tests in addition to the ones that were generated by pairwise testing.
 
 ### 
 **Conclusion**
 
-Pairwise testing is a powerful yet easy-to-use test design technique that helps testers greatly reduce the number of tests while maintaining a reasonable coverage and issue detection rate. For those who want to dig deeper into the topic there are plenty of researches regarding minor differences between pairwise testing, allpairs algorithm, orthogonal array testing strategy, their different implementations and optimal usage. Pairwise testing might lack a rigorous scientific evidence of its efficiency, but it has a significant prevalence and acceptance within the testers’ community for one simple reason – it actually works. 
+Pairwise testing is a powerful yet easy-to-use test design technique that helps testers greatly reduce the number of tests while maintaining a reasonable coverage and issue detection rate. For those who want to dig deeper into the topic there are plenty of researches regarding minor differences between pairwise testing, allpairs algorithm, orthogonal array testing strategy, their different implementations and optimal usage. Pairwise testing might lack a rigorous scientific evidence of its efficiency, but it has a significant prevalence and acceptance within the testers' community for one simple reason – it actually works. 

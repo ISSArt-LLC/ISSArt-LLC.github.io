@@ -71,7 +71,7 @@ According to the survey, employees in the majority of the surveyed companies do 
 
 ![Difficulties mentioned by customers](/static/img/2015/03/image021.png)
 
-As for the tools that could help overcome these difficulties, the surveyed companies’ representatives noted the following (see the chart below):
+As for the tools that could help overcome these difficulties, the surveyed companies' representatives noted the following (see the chart below):
 
 ![How to overcome those difficulties](/static/img/2015/03/image023.png)
 

@@ -9,7 +9,7 @@ categories:
     - General
 ---
 
-In our previous post we’ve covered the topic of [choosing the right outsourcing provider](http://www.issart.com/blog/outsourcing-software-development-choosing-right-provider/). Now, with that knowledge in mind, we can dive deeper into software development process itself.
+In our previous post we've covered the topic of [choosing the right outsourcing provider](http://www.issart.com/blog/outsourcing-software-development-choosing-right-provider/). Now, with that knowledge in mind, we can dive deeper into software development process itself.
 
 As an experienced provider featured among [Eastern Europe Software Development Companies](https://www.softwaredevelopmentcompany.co/software-development-companies-eastern-europe/), we are happy to provide you with a brief overview of software development methodologies and cover the common software development process stages together with the challenges each of them can bring to you.
 
@@ -37,11 +37,11 @@ MethodDescriptionWhen to Use ItPrimary Modeling Artifacts
 
 Source [agiledata.org](http://www.agiledata.org/essays/differentStrategies.html)
 
-Which one to follow will depend on the type of the project you are working on – technical, organizational and team considerations matter. We won’t go into detail here as long as there is already plenty of information on this subject on the Internet.
+Which one to follow will depend on the type of the project you are working on – technical, organizational and team considerations matter. We won't go into detail here as long as there is already plenty of information on this subject on the Internet.
 
 ## Stages of software development process
 
-Now let’s review the common stages of software development process and highlight the potential pitfalls one should be aware of.
+Now let's review the common stages of software development process and highlight the potential pitfalls one should be aware of.
 
 ### Pre-project stage
 
@@ -61,7 +61,7 @@ Project development budget and timeline will depend not only on the project scop
 
 #### 4) Signing the contract
 
-After negotiating the project scope, delivery timeframes and budget make sure everything you’ve discussed is covered in the services agreement you are going to sign. Don’t forget about the source code ownership – who will possess ownership rights? This should be stated in a contract as well. In our company, for example, the exclusive ownership rights are handed over to the customer upon the project completion.
+After negotiating the project scope, delivery timeframes and budget make sure everything you've discussed is covered in the services agreement you are going to sign. Don't forget about the source code ownership – who will possess ownership rights? This should be stated in a contract as well. In our company, for example, the exclusive ownership rights are handed over to the customer upon the project completion.
 
 Ask your lawyer for help to review the contract if needed.
 
@@ -87,11 +87,11 @@ At this step the high-level system design is normally created. In addition, a pr
 
 Also, it is important to think about the potential of you future system. If it has a potential to become [highload](http://www.issart.com/blog/highload-java-application-development/) with time, it should be designed in a way that would support the increased volume of requests and computations.
 
-Some Providers make a separate estimate for this activity, others include it into the development estimate. If you don’t see this activity in the project estimate, ask Provider whether it is included in it. The estimate should include at least minimum time for architecture design.
+Some Providers make a separate estimate for this activity, others include it into the development estimate. If you don't see this activity in the project estimate, ask Provider whether it is included in it. The estimate should include at least minimum time for architecture design.
 
 #### 3) Graphic design
 
-If you don’t have in-house designer, you will have to outsource this part of work to a third-party specialist/company. When doing so, make sure the designer is not going to use other designers’ works. If he is going to purchase images, ask him to show you the payment documents. If the designer uses free images, make sure their usage does not violate ownership rights.
+If you don't have in-house designer, you will have to outsource this part of work to a third-party specialist/company. When doing so, make sure the designer is not going to use other designers' works. If he is going to purchase images, ask him to show you the payment documents. If the designer uses free images, make sure their usage does not violate ownership rights.
 
 You can read more on this subject in one of our [article about IP issues](http://www.issart.com/blog/intellectual-property-issues-software-development/).
 
@@ -112,7 +112,7 @@ At this stage it is important to make sure that the Provider has all the necessa
 
 #### 6) Deployment
 
-At deployment stage the source code is supposed to be transferred by Provider to your server (or your hosting provider’s server). However, you can refuse from this service, if you plan to place the code on your server (or your hosting provider’s server) on your own.
+At deployment stage the source code is supposed to be transferred by Provider to your server (or your hosting provider's server). However, you can refuse from this service, if you plan to place the code on your server (or your hosting provider's server) on your own.
 
 Were any project documents (i.e. user manual) created on your request? If so, they should be handed over to you as well.
 
@@ -126,17 +126,17 @@ The software maintenance works may include (but are not limited to):
 - timely software update to provide its correct functioning;
 - necessary software modifications to maintain and increase its demand in the market.
 
-We recommend ordering project maintenance with Provider, since the team already knows the product and can easily deal with coming requests. Besides, no one wants to deal with somebody else’s code.
+We recommend ordering project maintenance with Provider, since the team already knows the product and can easily deal with coming requests. Besides, no one wants to deal with somebody else's code.
 
 ## Conclusion
 
-We’ve covered the most common aspects that should be taken into account so far.
+We've covered the most common aspects that should be taken into account so far.
 
 Please note that even the most well-known projects do not always start with the most feature-rich version. Therefore, we recommend starting a project with prototype development (proof of concept). The sooner you launch the project onto the market, the better.
 
 Have something to add? Feel free to share your thoughts in comments.
 
 **References:**
-\[1\] [https://en.wikipedia.org/wiki/List\_of\_software\_development\_philosophies](https://en.wikipedia.org/wiki/List_of_software_development_philosophies)
+\[1\] [https://en.wikipedia.org/wiki/List_of_software_development_philosophies](https://en.wikipedia.org/wiki/List_of_software_development_philosophies)
 \[2\] <http://www.agiledata.org/essays/differentStrategies.html>
 \[3\] <http://www.itinfo.am/eng/software-development-methodologies/>

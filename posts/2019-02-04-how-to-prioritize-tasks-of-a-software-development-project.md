@@ -50,7 +50,7 @@ The advice of this article is applicable to **any type of processable tasks**, w
 - investments;
 - etc.
 
-So, you are welcome to replace a ‘task’ with the entity you work with.
+So, you are welcome to replace a 'task' with the entity you work with.
 
 Please, follow the logic:
 
@@ -84,7 +84,7 @@ To make up the criterion, you need to follow the steps:
 
 1. Find **factors**, that influence the goal, for example, stakeholders, market, corporate goals, risk level, opportunities, efforts/budget estimation etc. The factors can be either positive or negative in terms of their contribution to the goal.
 2. Set up a **scale** for each factor. The scale can be discrete or continuous. For example, estimated time in hours, stakeholders value in scale 1, 2, 3, 4, 5 from the minimum to the maximum importance etc.
-3. Create a **formula** for the criterion value using the factors. The criterion should be a function of factors. You can simply use the multiplication of positive factors divided by the multiplication of negative factors. Or you can use more complex functional dependencies if you know the mathematical properties of the factors you’ve chosen.
+3. Create a **formula** for the criterion value using the factors. The criterion should be a function of factors. You can simply use the multiplication of positive factors divided by the multiplication of negative factors. Or you can use more complex functional dependencies if you know the mathematical properties of the factors you've chosen.
 
 So, we can represent the diagram above with the details for the criterion development.
 
@@ -120,28 +120,28 @@ Assess the order that you get. If you are sure that some tasks are located too h
 ### 3.1 Prioritize tasks in the backlog
 
 The following example is fictional, but it helps to understand the logic better.
-Let’s imagine you are working as a product owner of a travel order processing system. The backlog contains a number of features.
+Let's imagine you are working as a product owner of a travel order processing system. The backlog contains a number of features.
 
 Please see the features in the spreadsheet below.
-<iframe height="300" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSW6cdSTbzuqoKneVBMXlo0qWQivQr9ESnPgkMqyKZN5h70BNnW25yIlxtTVC9Jqz_xaj14UW4ygRyK/pubhtml?gid=0&single=true&widget=true&headers=false" width="400"><span class="mce_SELRES_start" data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;">﻿</span><span class="mce_SELRES_start" data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;">﻿</span><span class="mce_SELRES_start" data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;">﻿</span></iframe>
+<iframe height="300" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSW6cdSTbzuqoKneVBMXlo0qWQivQr9ESnPgkMqyKZN5h70BNnW25yIlxtTVC9Jqz_xaj14UW4ygRyK/pubhtml?gid=0&single=true&widget=true&headers=false" width="400">﻿﻿﻿</iframe>
 
 Please wait for a moment and answer the question: how would you prioritize these features right now? You can compare your first prioritization with the following one.
 
-As the product owner, you are trying to determine the importance of each feature and sort the list efficiently. Let’s follow the steps from A to D described above.
+As the product owner, you are trying to determine the importance of each feature and sort the list efficiently. Let's follow the steps from A to D described above.
 
 1. [![Target as a symbol of the projects goal.](https://issart.com/blog/wp-content/uploads/2018/12/Goal.svg_-150x150.png)](https://issart.com/blog/wp-content/uploads/2018/12/Goal.svg_.png) You recall the business goal: to make the income of $X a year, delivering a comfortable travel order processing system.
 2. [![Scale as a symbol of the prioritization criterion](https://issart.com/blog/wp-content/uploads/2018/12/Scale.svg_-300x278.png)](https://issart.com/blog/wp-content/uploads/2018/12/Scale.svg_.png) You find the following measurable factors, that can represent the importance of the tasks in order to achieve the goal (you will use your own factors on your real project): 
-    1. *The loss of the income* due to the exclusion of the feature. Let’s imagine you have delivered the full scope (all the features), except for the given feature. What will you lose in terms of the income? As it is hard to be measured in physical units, you can use a scale of integer numbers from 1 to 10.
-    2. *The probability of the loss.* Not every user will feel unhappy about the loss. Let’s estimate the probability, that we’ll lose part of the income in the case of a dissatisfied user. The scale is just percentage.
+    1. *The loss of the income* due to the exclusion of the feature. Let's imagine you have delivered the full scope (all the features), except for the given feature. What will you lose in terms of the income? As it is hard to be measured in physical units, you can use a scale of integer numbers from 1 to 10.
+    2. *The probability of the loss.* Not every user will feel unhappy about the loss. Let's estimate the probability, that we'll lose part of the income in the case of a dissatisfied user. The scale is just percentage.
     3. *The importance.* You can derive a fruitful index based on the two previous ones. If you multiply the loss by the probability, you will get the mathematical expectation of the loss, that is more accurate than just the loss factor.
-    4. *The number of interested users.* Let’s imagine, you know or can estimate the number of potential users, who expect to get a feature. It is a positive factor. The more people use the product, the bigger income you get.
+    4. *The number of interested users.* Let's imagine, you know or can estimate the number of potential users, who expect to get a feature. It is a positive factor. The more people use the product, the bigger income you get.
     5. *The effort of development.* Your development team can estimate the development of each feature in working hours. Influence of this factor is negative: the stronger it is, the longer you need to achieve the goal.Having this set of factors, you can summarize their influence on the achievement of the goal. One of the simplest ways is to multiply the positive factors by each other and divide them by negative factors, so you get the formula:
         [![Formula of the tasks priority. The formula uses the factors of the importance.](https://issart.com/blog/wp-content/uploads/2018/12/3.1-backlog-tasks-priority.png)](https://issart.com/blog/wp-content/uploads/2018/12/3.1-backlog-tasks-priority.png)
 3. [![A ruler as a symbol of value measurement. Take a measure to estimate the value of a task.](https://issart.com/blog/wp-content/uploads/2018/12/Ruler.svg_-150x150.png)](https://issart.com/blog/wp-content/uploads/2018/12/Ruler.svg_.png) You can estimate the factors of each feature and get the criterion value for each feature.
 4. [![A List of tasks](https://issart.com/blog/wp-content/uploads/2018/12/List.svg_-300x279.png)](https://issart.com/blog/wp-content/uploads/2018/12/List.svg_.png) You can simply sort the backlog by the criterion value!
 
 Please find the result in the spreadsheet below (or [**by the link**](https://docs.google.com/spreadsheets/d/1beYGEcqTDN72Yo6mcNCWz2qVMpQ3GlNJz0b30Lqxvkk/edit#gid=1791103186)):
-<iframe height="450" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSW6cdSTbzuqoKneVBMXlo0qWQivQr9ESnPgkMqyKZN5h70BNnW25yIlxtTVC9Jqz_xaj14UW4ygRyK/pubhtml?gid=1791103186&single=true&widget=true&headers=false" width="600"><span class="mce_SELRES_start" data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;">﻿</span><span class="mce_SELRES_start" data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;">﻿</span><span class="mce_SELRES_start" data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;">﻿</span><span class="mce_SELRES_start" data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;">﻿</span></iframe>
+<iframe height="450" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSW6cdSTbzuqoKneVBMXlo0qWQivQr9ESnPgkMqyKZN5h70BNnW25yIlxtTVC9Jqz_xaj14UW4ygRyK/pubhtml?gid=1791103186&single=true&widget=true&headers=false" width="600">﻿﻿﻿﻿</iframe>
 
 You are welcome to copy the spreadsheet and use it!
 
@@ -157,7 +157,7 @@ The whole testing plan includes many test cases. Then, those items should be pri
 
 You can see the practical example in the spreadsheet below (or **[by the link](https://docs.google.com/spreadsheets/d/11EpdzJ1Y7mIY5jPYYQTRDf8ZWJMhyzr8hIW8W5ZDxSQ/edit#gid=0)**):
 
-<iframe height="800" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTJBSGh3xQdvE2ka32Jl12RXtp1F8Qop3KdrVYjAk9wLMDCdvxvIRw8QRXv2wPF0MlRZw81UVYKdW00/pubhtml?gid=0&single=true&widget=true&headers=false" width="600"><span class="mce_SELRES_start" data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;">﻿</span><span class="mce_SELRES_start" data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;">﻿</span></iframe>
+<iframe height="800" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTJBSGh3xQdvE2ka32Jl12RXtp1F8Qop3KdrVYjAk9wLMDCdvxvIRw8QRXv2wPF0MlRZw81UVYKdW00/pubhtml?gid=0&single=true&widget=true&headers=false" width="600">﻿﻿</iframe>
 
 It was decided to use the following factors to approximate the influence on the importance of every test case:
 
@@ -185,9 +185,9 @@ So, **the same factors can be used to calculate different priorities**.
 
 The suggested approach of the tasks prioritization is based on the project goals, that determine the sorting criterion. You are welcome to be creative in the selection of factors and creating the priority criterion formula.
 
-Let’s prioritize the tasks profitably!
+Let's prioritize the tasks profitably!
 
-<span>**Feel free to discuss your prioritization cases in the comments!**</span>
+**Feel free to discuss your prioritization cases in the comments!**
 
 ## Further reading
 

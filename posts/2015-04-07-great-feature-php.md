@@ -16,11 +16,11 @@ I know many Java and .NET developers who often like to make fun of PHP. Honestly
 - Java and .NET have much better-thought standard libraries. In PHP, you have many different ways to do the same operation – it increases code fragmentation, especially if you work in a large team of PHP developers.
 - Java and .NET have more graceful syntax. <tt>$</tt> sign in variable names, <tt>-></tt> instead of <tt>.</tt>, <tt><?php ?></tt> tags make PHP code quite bulky.
 
-Nevertheless, PHP has one great feature that makes it very useful for me. From its very beginning, PHP was designed as HTML code preprocessor. Its syntax serves this purpose perfectly. Ultimately, if you write pure HTML code in your PHP file, PHP interpreter will give you this HTML in output. Only PHP insertions between tags like <tt><?php ?></tt> and <tt><?= ?></tt> will be interpreted as PHP code. It lets you do anything with your HTML output and it is usually more convenient compared to various HTML template engines, because template is just a template – it doesn’t let you write code. Also PHP doesn’t care about what exactly you write into output: HTML, operation progress, or message log. I found it convenient for me to build JSON files with PHP.
+Nevertheless, PHP has one great feature that makes it very useful for me. From its very beginning, PHP was designed as HTML code preprocessor. Its syntax serves this purpose perfectly. Ultimately, if you write pure HTML code in your PHP file, PHP interpreter will give you this HTML in output. Only PHP insertions between tags like <tt><?php ?></tt> and <tt><?= ?></tt> will be interpreted as PHP code. It lets you do anything with your HTML output and it is usually more convenient compared to various HTML template engines, because template is just a template – it doesn't let you write code. Also PHP doesn't care about what exactly you write into output: HTML, operation progress, or message log. I found it convenient for me to build JSON files with PHP.
 
 A good addition to output preprocessing is [buffered output feature](http://php.net/manual/en/book.outcontrol.php). You can redirect the output to a buffer and then parse this output for any purpose.
 
-Now let me show you how exactly we use these features at one of our projects. The project receives data in various formats from different sources and represents this data in unified form in user’s Web browser. New data comes to us from time to time. We develop an exclusive algorithm of data parsing and data conversion for each customer (aka operator), but the output format looks the same for everyone. For a number of reasons we’ve decided to store the output in JSON files. PHP buffered output fits perfectly for a purpose of such output building. We call this part of application “PHP driven configuration”.
+Now let me show you how exactly we use these features at one of our projects. The project receives data in various formats from different sources and represents this data in unified form in user's Web browser. New data comes to us from time to time. We develop an exclusive algorithm of data parsing and data conversion for each customer (aka operator), but the output format looks the same for everyone. For a number of reasons we've decided to store the output in JSON files. PHP buffered output fits perfectly for a purpose of such output building. We call this part of application “PHP driven configuration”.
 
 ## PHP driven configuration example
 
@@ -40,8 +40,8 @@ Now let me show you how exactly we use these features at one of our projects. Th
 
 Root file of operator configuration.
 
-```
-<pre style="font-size: .8em">{
+```php
+{
 	"colorSchemes" : ["default", "chocolate"],
 	"operatorName" : <?php $this->locale->write("operatorName"); ?>,
 	"profitMargin" : <?= file_get_contents(
@@ -50,7 +50,7 @@ Root file of operator configuration.
 }
 ```
 
-Here’s how it works:
+Here's how it works:
 
 - “colorSchemes” field is set to a constant value – it never changes for this specific operator
 - “operatorName” is retrieved from localization files for this operator
@@ -59,11 +59,11 @@ Here’s how it works:
 
 ### Localization
 
-JSON files in “locale” folder contain operator-specific localization. It doesn’t make sense to put operator-specific strings to a common application localization file, that’s why we build them as a part of PHP driven configuration of the operator.
+JSON files in “locale” folder contain operator-specific localization. It doesn't make sense to put operator-specific strings to a common application localization file, that's why we build them as a part of PHP driven configuration of the operator.
 
 #### locale/en.json
 
-```
+```json
 {
 	"operatorName": "Just another operator",
 	"units": {
@@ -76,7 +76,7 @@ JSON files in “locale” folder contain operator-specific localization. It doe
 
 #### locale/ru.json
 
-```
+```json
 {
 	"operatorName": "Еще один оператор",
 	"units": {
@@ -89,7 +89,7 @@ JSON files in “locale” folder contain operator-specific localization. It doe
 
 With that given, <tt><?php $this->locale->write("operatorName"); ?></tt> instruction in operator.php file will be expanded to the next JSON:
 
-```
+```json
 {
 	"en": "Just another operator",
 	"ru": "Еще один оператор"
@@ -102,7 +102,7 @@ With that given, <tt><?php $this->locale->write("operatorName"); ?></tt> instruc
 
 #### units/mouse.php
 
-```
+```php
 <?php $locale = $this->locale->descend('units'); ?>
 {
 	"id"      : <?= json_encode($this->unitId) ?>,
@@ -113,7 +113,7 @@ With that given, <tt><?php $this->locale->write("operatorName"); ?></tt> instruc
 
 #### units/keyboard.php
 
-```
+```php
 <?php $locale = $this->locale->descend('units'); ?>
 {
 	"id"      : <?= json_encode($this->unitId) ?>,
@@ -124,7 +124,7 @@ With that given, <tt><?php $this->locale->write("operatorName"); ?></tt> instruc
 
 #### units/monitor.php
 
-```
+```php
 <?php $locale = $this->locale->descend('units'); ?>
 {
 	"id"      : <?= json_encode($this->unitId) ?>,
@@ -135,7 +135,7 @@ With that given, <tt><?php $this->locale->write("operatorName"); ?></tt> instruc
 
 ### Complete output
 
-```
+```json
 {
 	"colorSchemes": ["default", "chocolate"],
 	"operatorName": {
@@ -178,17 +178,17 @@ With that given, <tt><?php $this->locale->write("operatorName"); ?></tt> instruc
 
 Such configuration provides us with the next benefits:
 
-- Depending on operator’s needs, we can parse any data that they provide for us. For example, the majority of operators don’t give us profit margin data at all, one operator gives it in CSV format, and another operator – in a proprietary binary format. We can provide solution for all of them without application code modification – only configuration should be changed.
-- Sometimes we don’t need to internationalize some strings. For example, sometimes we use serial numbers as unit names, so there’s no need to put them to localization files. In that case, we write serial numbers right in configuration without $locale object usage. This lets us keep configuration and localization files short and clear.
+- Depending on operator's needs, we can parse any data that they provide for us. For example, the majority of operators don't give us profit margin data at all, one operator gives it in CSV format, and another operator – in a proprietary binary format. We can provide solution for all of them without application code modification – only configuration should be changed.
+- Sometimes we don't need to internationalize some strings. For example, sometimes we use serial numbers as unit names, so there's no need to put them to localization files. In that case, we write serial numbers right in configuration without $locale object usage. This lets us keep configuration and localization files short and clear.
 - We can reuse the same localization strings in different parts of configuration file. This way we can make localization files even shorter. This is crucial, because translators are usually people without technical background, so any issues in localization file can drive them crazy.
 - We can extend PHP driven configuration API as we want to.
 
 ## Under the hood: how it works
 
-Finally, I’m going to show you how this magic works. Initialization code:
+Finally, I'm going to show you how this magic works. Initialization code:
 
-```
-<pre style="font-size: .8em">public static function build(
+```php
+public static function build(
 	$operatorId, $updateId, $configPath,
 	$outputDir, $versionedStoragePath, $dateTime)
 {
@@ -250,7 +250,7 @@ Finally, I’m going to show you how this magic works. Initialization code:
 }
 ```
 
-Now it’s all about FE\_Config\_Context implementation. You can put there whatever you want. Our API is quite rich and provides about 20 methods to manage partial files, data files, retrieve current context info and generate special blocks of JSON output. You can find inspiration in Zend\_View\_Abstract class implementation. There’s a lot of stones under the water that wait for you in context implementation, so probably I’ll write another article about it in future.
+Now it's all about FE_Config_Context implementation. You can put there whatever you want. Our API is quite rich and provides about 20 methods to manage partial files, data files, retrieve current context info and generate special blocks of JSON output. You can find inspiration in Zend_View_Abstract class implementation. There's a lot of stones under the water that wait for you in context implementation, so probably I'll write another article about it in future.
 
 ## Conclusion
 

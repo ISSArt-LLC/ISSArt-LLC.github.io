@@ -15,13 +15,13 @@ Web Front End testing. The idea is that you [write an application](https://www.i
 After each action you check if application reacts as you expect it to. Selenium provides all the neccessary API to
 make the process easier for you.
 
-In the beginning of each test case, you must cleanup the testing environment to make sure that the other tests don’t
+In the beginning of each test case, you must cleanup the testing environment to make sure that the other tests don't
 have any impact to the current one. So, you usually restart the browser, clean the cache/cookies and push the
 fixed data set to the database for that. As result, you must login to your application over and over again to continue
 testing. If you have hundreds of tests, it takes quite a lot of time (10 seconds per test), and it is obvious that this
-duplicating work should be nullified if possible – you don’t need to test the same thing multiple times.
+duplicating work should be nullified if possible – you don't need to test the same thing multiple times.
 
-We’ve come up with a simple and efficient solution. Using [DbUnit](http://dbunit.sourceforge.net/),
+We've come up with a simple and efficient solution. Using [DbUnit](http://dbunit.sourceforge.net/),
 we create several “immortal” (till 2040 year) sessions, one for each user:
 
 ```
@@ -39,7 +39,7 @@ Then, in the “setUp” method, we initialize a cookie containing identifier of
 user:
 
 ```
-<pre style="font-size: 0.9em;">public class AuthorizedTest extends WebTest {
+public class AuthorizedTest extends WebTest {
 
     @Override
     public void setUp() throws Exception {
@@ -63,4 +63,4 @@ user:
     ...
 ```
 
-Now authorization doesn’t take any time at all. We managed to decrease testing time by 30% thanks to this improvement.
+Now authorization doesn't take any time at all. We managed to decrease testing time by 30% thanks to this improvement.

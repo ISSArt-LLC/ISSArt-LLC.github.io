@@ -11,7 +11,7 @@ categories:
 
 The attributes of a cloud based application hint on many of the advantages of [cloud based application development](https://www.issart.com/en/services/details/service/cloud-solutions). The cloud environment saves money through the minimization of information technology infrastructure operating expense, optimization of server use, shortening of the development cycle and providing the resources for scalability without large capital investments.
 
-Cloud computing has greatly affected information technology over the last decade. According to [Readwrite](http://readwrite.com/2013/04/16/why-cloud-development-environments-are-better-than-desktop-development) references applications are being “reengineered to take advantage of cloud’s instant access, no download and pay-as-you-go attributes.”
+Cloud computing has greatly affected information technology over the last decade. According to [Readwrite](http://readwrite.com/2013/04/16/why-cloud-development-environments-are-better-than-desktop-development) references applications are being “reengineered to take advantage of cloud's instant access, no download and pay-as-you-go attributes.”
 
 The same Readwrite article enumerates the deficiencies of desktop development environments, which include complicated configuration management, decreased productivity, limited accessibility and poor collaboration. In contrast, the cloud-based workspace is centralized, which facilitates collaboration and communication among developers. The cloud also enhances system efficiency and use, reduces IT maintenance costs, ensures peak processing capability and reduces the complexity associated with delivering programs to multiple platforms and operating systems.
 
@@ -29,7 +29,7 @@ The[ National Institute of Standards and Technology](http://nvlpubs.nist.gov/nis
 
 With on-demand self-service, consumers are able to access processing time and storage without access to a human. The broad network access ensures applications are accessible by phone, tablet, laptop or desktop computers.
 
-Resource pooling is often referenced as multi-tenancy. A service provider may host several companies’data, with geographical location posing little concern. The rapid elasticity facilities peaks in processing and storage requirements without costly investment in infrastructure and associated maintenance costs. Service providers recoup their investment by metering usages and charging the consumers.
+Resource pooling is often referenced as multi-tenancy. A service provider may host several companies'data, with geographical location posing little concern. The rapid elasticity facilities peaks in processing and storage requirements without costly investment in infrastructure and associated maintenance costs. Service providers recoup their investment by metering usages and charging the consumers.
 
 As with other development environments, there are also challenges. Some of these challenges include data location, integrity and ownership; security; regulatory compliance and disaster recovery.
 
@@ -39,7 +39,7 @@ Cloud-based applications decrease development time, increase collaboration and m
 
 #### Cost savings
 
-Most of the cost savings come from reduced infrastructure maintenance costs. However, Paul Krill of [InfoWorld](http://www.infoworld.com/article/2613117/application-development/cloud-app-dev-saves-developers-1-hour-of-every-8.html) cites the biannual Evans Data Cloud Development Survey, which found that cloud platforms decrease development time by 11.6 percent. With the time and cost savings, you’ll be able to stretch your IT staff and budget further.
+Most of the cost savings come from reduced infrastructure maintenance costs. However, Paul Krill of [InfoWorld](http://www.infoworld.com/article/2613117/application-development/cloud-app-dev-saves-developers-1-hour-of-every-8.html) cites the biannual Evans Data Cloud Development Survey, which found that cloud platforms decrease development time by 11.6 percent. With the time and cost savings, you'll be able to stretch your IT staff and budget further.
 
 #### Popularity and demand
 
@@ -49,11 +49,11 @@ With the popularity and proliferation of mobile devices, the market opportunity 
 
 #### Evaluating project architecture
 
-It’s important to ensure your project architecture meets all of the criteria for cloud-based applications, including scalability, multi-tenancy and high user load. It is much easier to plan for the increased load before it becomes a reality. Adding capability mid-stream is always an expensive proposition. Here at [ISS Art](http://www.issart.com/en/portfolio/details/id/133) we know how to create the architecture for a project with 35,000 users with 50,000–150,000 queries daily (and approximately 100 of those queries performed simultaneously).
+It's important to ensure your project architecture meets all of the criteria for cloud-based applications, including scalability, multi-tenancy and high user load. It is much easier to plan for the increased load before it becomes a reality. Adding capability mid-stream is always an expensive proposition. Here at [ISS Art](http://www.issart.com/en/portfolio/details/id/133) we know how to create the architecture for a project with 35,000 users with 50,000–150,000 queries daily (and approximately 100 of those queries performed simultaneously).
 
 #### Choosing an appropriate service model
 
-There are three service models for cloud-based applications–Infrastructure as a Service (IaaS), Platform as a Service (PaaS) and Software as a Service (SaaS). It’s easiest to think of these models as layers as shown in the figure below.
+There are three service models for cloud-based applications–Infrastructure as a Service (IaaS), Platform as a Service (PaaS) and Software as a Service (SaaS). It's easiest to think of these models as layers as shown in the figure below.
 
 ![Software as a Service, Platform as a service, and Infrastructure as a service](/static/img/2015/04/Cloud-computing-has-three-distinct-categories.gif)
 
@@ -63,7 +63,7 @@ There are three service models for cloud-based applications–Infrastructure as 
 
 In,the IaaS model, the service provider is, as the name implies, providing the infrastructure for your applications. This model is ideal if you occasionally need extra data processing space. You only pay for the extra processing space when you need it, which saves you money by right-sizing your processing capability.
 
-More of the management is handed off to the service provider in the PaaS model. You manage your applications and data, and the vendor handles everything else. The advantages of this model include the ability to scale processing (and cost) on demand. Because the service provider maintains the hardware, you’re saved the expense associated with hardware maintenance. In fact, a [survey of federal IT executives](http://www.forbes.com/sites/joemckendrick/2013/11/20/cloud-computing-may-save-u-s-federal-government-20-billion-a-year-but-theres-more-to-it-than-just-cost-savings/) estimates that using this model for application development can cut costs by $20.5 billion a year.
+More of the management is handed off to the service provider in the PaaS model. You manage your applications and data, and the vendor handles everything else. The advantages of this model include the ability to scale processing (and cost) on demand. Because the service provider maintains the hardware, you're saved the expense associated with hardware maintenance. In fact, a [survey of federal IT executives](http://www.forbes.com/sites/joemckendrick/2013/11/20/cloud-computing-may-save-u-s-federal-government-20-billion-a-year-but-theres-more-to-it-than-just-cost-savings/) estimates that using this model for application development can cut costs by $20.5 billion a year.
 
 If you have people to maintain your hardware and your staff needs to work collaboratively, the SaaS model may be your best option. This model allows your users to run programs in the cloud managed by the service provider, which ensures compatibility for your users and reduces licensing costs. This is the model used by many online banking applications.
 
@@ -87,7 +87,7 @@ There are several cloud-based application development providers–Amazon, Micros
 
 [Amazon](http://aws.amazon.com/) advertises its infrastructure services in five broad categories: compute, storage content and delivery, databases, networking and administration and security.The company also offers options to accelerate your cloud success with tools in these categories: analytics, application services, deployment and management and mobile and devices. To use a transportation analogy, AWS maintains the roads so you can concentrate on driving.
 
-Users of AWS have the advantage of around-the-clock support, It’s like having your own technician on call without the costly overtime. Pricing is reasonable, and AWS has even lowered …yes, **lowered**…prices 48 times in the last six years (Don’t you wish your cable company worked that way?).
+Users of AWS have the advantage of around-the-clock support, It's like having your own technician on call without the costly overtime. Pricing is reasonable, and AWS has even lowered …yes, **lowered**…prices 48 times in the last six years (Don't you wish your cable company worked that way?).
 
 ![Cloud Based Application Development Amazon Web Services pricing example](/static/img/2015/04/AWS-pricing-philosophy.png)
 

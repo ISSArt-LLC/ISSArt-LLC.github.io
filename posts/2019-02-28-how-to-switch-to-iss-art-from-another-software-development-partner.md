@@ -18,17 +18,17 @@ Having a reliable development partner to work with all the way, from the project
 
 ### Why you may need to switch to another provider
 
-Let’s look through the most common scenarios which can lead to the necessity of changing your software development provider.
+Let's look through the most common scenarios which can lead to the necessity of changing your software development provider.
 
 1. **The price of the services may seem too high for you.**
 
-Based on our experience, we can say that the price (in particular, hourly rate) doesn’t always determine the overall project cost. Although the hourly rate of specialists of the same level may vary from company to company, the productivity level and work approaches are also different.
+Based on our experience, we can say that the price (in particular, hourly rate) doesn't always determine the overall project cost. Although the hourly rate of specialists of the same level may vary from company to company, the productivity level and work approaches are also different.
 
-Let’s illustrate this point with the following example.
+Let's illustrate this point with the following example.
 
- *There are two companies – Company A and Company B. A developer’s hourly rate at Company A is $50/h, and a developers’s rate at Company B is $20/h. However, a certain amount of work – such as consultations, gathering project requirements, system maintenance, user support – needs to be performed onsite. An hourly rate of onsite experts at Company A is $70/h, and at Company B – $120/h. Company B spends more hours on* onsite *works, and it involves more experts than Company A does. In this case, the overall project budget at Company B may end up higher than the budget at company A.*
+ *There are two companies – Company A and Company B. A developer's hourly rate at Company A is $50/h, and a developers's rate at Company B is $20/h. However, a certain amount of work – such as consultations, gathering project requirements, system maintenance, user support – needs to be performed onsite. An hourly rate of onsite experts at Company A is $70/h, and at Company B – $120/h. Company B spends more hours on* onsite *works, and it involves more experts than Company A does. In this case, the overall project budget at Company B may end up higher than the budget at company A.*
 
-Therefore, a higher rate doesn’t necessarily mean higher project costs – such factors as, for example, the expertise should also be considered.
+Therefore, a higher rate doesn't necessarily mean higher project costs – such factors as, for example, the expertise should also be considered.
 
 2. **Your current provider may fail to meet the budget and time constraints.**
 
@@ -36,19 +36,19 @@ Needless to say, staying within the budget constraints is critical for any busin
 
 ![](https://issart.com/blog/wp-content/uploads/2019/02/accounting-blur-budget-128867.jpg)
 
-3. **The quality of the provider’s work doesn’t satisfy you.**
+3. **The quality of the provider's work doesn't satisfy you.**
 
-If you notice that a product (or a certain deliverable) doesn’t work as designed, and this happens systematically, start looking for an alternative provider.
+If you notice that a product (or a certain deliverable) doesn't work as designed, and this happens systematically, start looking for an alternative provider.
 
-4. **The provider doesn’t have sufficient competence to keep pace with the new business and technological requirements.**
+4. **The provider doesn't have sufficient competence to keep pace with the new business and technological requirements.**
 
-Business requirements are subject to change, which means that the existing solutions should adapt to these changes. Often, to keep pace with all the changes, new technological tools need to be applied, and sometimes it happens that the current provider doesn’t possess all the necessary competences.
+Business requirements are subject to change, which means that the existing solutions should adapt to these changes. Often, to keep pace with all the changes, new technological tools need to be applied, and sometimes it happens that the current provider doesn't possess all the necessary competences.
 
 5. **The provider has just disappeared.**
 
 In the most unwanted scenario, a provider may even stop replying to your requests.
 
-If any of the above is the case, then it’s time to look for a reliable partner. Let’s see how you can do this in the most efficient way.
+If any of the above is the case, then it's time to look for a reliable partner. Let's see how you can do this in the most efficient way.
 
 ### How to change the current software development provider
 
@@ -64,11 +64,11 @@ Make sure that all the access credentials (the passwords and access to the envir
 
 **Ensure the data completeness**
 
-Make sure that all the artifacts (documentation, schemes, code, etc.) of the project are located in the repository. There shouldn’t be any documents or code that exist only on the developers’ machines or in a private repository controlled by the service provider. For this purpose, you may have to build the code from the sources, deploy and run the application on the prepared environment. In addition, the application will need to be tested. But the time spent is worth it.
+Make sure that all the artifacts (documentation, schemes, code, etc.) of the project are located in the repository. There shouldn't be any documents or code that exist only on the developers' machines or in a private repository controlled by the service provider. For this purpose, you may have to build the code from the sources, deploy and run the application on the prepared environment. In addition, the application will need to be tested. But the time spent is worth it.
 
 **Take the time to transfer all the artifacts**
 
-This is not an instant process, and it requires the participation of various experts – analysts, developers, managers, testers, architects. A proven format is: the team who hands over all the artifacts holds several meetings where it shares the key points of the project, its deployment, customer’s business, etc., with the demonstration of the project related documents, and the accepting side asks all the questions it has. After getting familiar with the project materials received, the accepting side might still have some questions left. Therefore, it may be useful to hold additional meetings to answer the questions.
+This is not an instant process, and it requires the participation of various experts – analysts, developers, managers, testers, architects. A proven format is: the team who hands over all the artifacts holds several meetings where it shares the key points of the project, its deployment, customer's business, etc., with the demonstration of the project related documents, and the accepting side asks all the questions it has. After getting familiar with the project materials received, the accepting side might still have some questions left. Therefore, it may be useful to hold additional meetings to answer the questions.
 
 Most likely, this time will have to be paid for (by both sides of the process).
 
@@ -82,7 +82,7 @@ A good idea is to have all the meetings recorded (in video or at least audio for
 
 **Have the two vendors work together**
 
-For large projects, it’s a good practice to have the new provider’s team working together with the previous provider’s team under a single release or several agile iterations. As soon as they perform at least one release together, the new provider will get an understanding of the processes, technologies, and code.
+For large projects, it's a good practice to have the new provider's team working together with the previous provider's team under a single release or several agile iterations. As soon as they perform at least one release together, the new provider will get an understanding of the processes, technologies, and code.
 
 ![](https://issart.com/blog/wp-content/uploads/2019/02/adult-architect-blueprint-416405.jpg)
 
@@ -101,7 +101,7 @@ A provider who has experience in accepting projects will help you at every stage
 - The software testers make sure that the version of the application received after building the code from the sources is the same as the version the customer has paid for to the vendor.
 - The designer checks whether all the design and interface materials are transferred in formats that are appropriate to work with in the future.
 
-So, the new provider’s team should apply all of its technical expertise to ensure the successful project transfer.The activities in this area include (but are not limited to):
+So, the new provider's team should apply all of its technical expertise to ensure the successful project transfer.The activities in this area include (but are not limited to):
 
 - reviewing all the necessary documents;
 - reviewing the code; 

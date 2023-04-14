@@ -10,9 +10,9 @@ categories:
     - 'Web Development'
 ---
 
-In the [previous article](http://www.issart.com/blog/request-scoped-resources-with-guice-and-servlet/) I mentioned that we’ve decided to use [Jetty](http://www.eclipse.org/jetty/)+[Guice](https://github.com/google/guice/wiki/Motivation)+Servlet combination in our Java Web application. What was it motivated for? Why have we refused to use [Jersey](https://jersey.java.net/)? Why have we decided to implement a separate Resource class for every Web action and even for every HTTP method?
+In the [previous article](http://www.issart.com/blog/request-scoped-resources-with-guice-and-servlet/) I mentioned that we've decided to use [Jetty](http://www.eclipse.org/jetty/)+[Guice](https://github.com/google/guice/wiki/Motivation)+Servlet combination in our Java Web application. What was it motivated for? Why have we refused to use [Jersey](https://jersey.java.net/)? Why have we decided to implement a separate Resource class for every Web action and even for every HTTP method?
 
-When everyone of us selects a tool to work with, we all set some requirements to it, and it should meet all requirements to get a green light. Everyone knows them – these are such obvious things as code readability, ease of debugging/testing, following traditional coding practices (OOD, patterns) etc. But today I’ll tell you what requirements I set specifically for a good server-side Web framework. I’ll be happy to work with any technology stack meeting these key requirements, and Jetty+Guice+Servlet is just one of the options.
+When everyone of us selects a tool to work with, we all set some requirements to it, and it should meet all requirements to get a green light. Everyone knows them – these are such obvious things as code readability, ease of debugging/testing, following traditional coding practices (OOD, patterns) etc. But today I'll tell you what requirements I set specifically for a good server-side Web framework. I'll be happy to work with any technology stack meeting these key requirements, and Jetty+Guice+Servlet is just one of the options.
 
 Briefly, the requirements are:
 
@@ -25,10 +25,10 @@ And let me explain you what do I mean by this.
 
 #### 1. Extensibility
 
-Assume you have an HTTP handler to retrieve user’s email list. I’ll use pseudo code. Error handling and other supplying code is thrown away to keep things simple.
+Assume you have an HTTP handler to retrieve user's email list. I'll use pseudo code. Error handling and other supplying code is thrown away to keep things simple.
 
 ```
-<pre style="font-size: .8em">
+
 final Response getAccountEmails(Request request) {
     String ticket = request.getCookie("ticket");
     Session session = SessionService.getSession(ticket);
@@ -42,7 +42,7 @@ final Response getAccountEmails(Request request) {
 Just to clarify, in this snippet, JsonUtils.success builds the next JSON object:
 
 ```
-<pre style="font-size: .8em">
+
 {
     "success": true,
     "result": [
@@ -51,18 +51,18 @@ Just to clarify, in this snippet, JsonUtils.success builds the next JSON object:
 }
 ```
 
-At some point, I’ve noticed that authentication logic and response formatting code should be copied to other handler methods over and over again. I’ve decided to extract all this duplicating burden to some kind of utility. In a dream World, final handler implementation should look like this:
+At some point, I've noticed that authentication logic and response formatting code should be copied to other handler methods over and over again. I've decided to extract all this duplicating burden to some kind of utility. In a dream World, final handler implementation should look like this:
 
 ```
-<pre style="font-size: .8em">
+
 final Object getAccountEmails(Request request, Account account) {
     return EmailService.getEmails(account);
 }
 ```
 
-I’ll explain you how it can be achieved a little bit later.
+I'll explain you how it can be achieved a little bit later.
 
-Here’s a list of extensions I wanted to use in my application:
+Here's a list of extensions I wanted to use in my application:
 
 - Authenticated resource
 - Administrative resource
@@ -77,7 +77,7 @@ Applying a common response format (e.g. JSON) should be easy. We want to do this
 If resource throws an exception, Web framework must catch it and handle appropriately. If this is an unexpected exception (null reference exception or something like this), framework must log the stack trace to a file and return the next JSON object in response:
 
 ```
-<pre style="font-size: .8em">
+
 {
     "success": false,
     "error": "InternalError"
@@ -87,7 +87,7 @@ If resource throws an exception, Web framework must catch it and handle appropri
 If this is some expected exception, I should be able to specify the data to deliver in output:
 
 ```
-<pre style="font-size: .8em">
+
 {
     "success": false,
     "error": "Invalid spreadsheet",
@@ -101,7 +101,7 @@ This allows JS to display a user-friendly error message like “Spreadsheet is i
 As an option, we can define an “expected exception” class for a framework to handle it in a special way:
 
 ```
-<pre style="font-size: .8em">
+
 public class WebException extends Exception {
   
     public WebException() {
@@ -139,7 +139,7 @@ public class WebException extends Exception {
 Each request should be handled in scope of database transaction. So, if handling fails, all modifications should be reverted back automatically. Of course, this approach has its downsides, but I think that its advantages beat the downsides, so I prefer to stick to it.
 
 ```
-<pre style="font-size: .8em">
+
 final void createCompany(Request request) {
     String companyName = request.getParam("companyname");
     // create a company record in database
@@ -162,7 +162,7 @@ There are three common approaches that let you involve such features in a Web fr
 To add some features, you inject your code to some particular places. Schematically, it can be represented with the next code:
 
 ```
-<pre style="font-size: .8em">
+
 public Response handleRequest(Request request) {
     invokeRequestFilters(request);
     Response response = invokeHandler(request);
@@ -174,7 +174,7 @@ public Response handleRequest(Request request) {
 In this approach, handler is a method and it is invoked somewhere inside invokeHandler. Let me demonstrate you how it looks in [Jersey](https://jersey.java.net/). Assume you have the next resource class:
 
 ```
-<pre style="font-size: .8em">
+
 @Path("/account")
 @RequestScoped
 public class AccountResource {
@@ -195,7 +195,7 @@ public class AccountResource {
 To extract common logic, you should register a request filter and a response filter.
 
 ```
-<pre style="font-size: .8em">
+
 @Authenticated
 public class AuthenticatedRequestFilter implements ContainerRequestFilter {
   
@@ -244,7 +244,7 @@ I never compiled this code but I hope you got the idea. For exact Jersey syntax 
 In contrast to Filter, Decorator allows you to decide where you want to invoke a handler method. You implement a handler method which wraps some abstract method inside it.
 
 ```
-<pre style="font-size: .8em">
+
 public Response handleRequest(Request request, Callback callback) {
     // any code which calls 'callback' inside
 }
@@ -253,7 +253,7 @@ public Response handleRequest(Request request, Callback callback) {
 where callback is an arbitrary command. For example, in Jersey, we can do something like this:
 
 ```
-<pre style="font-size: .8em">
+
 public interface AuthenticatedResourceCallback {
   
     Response call();
@@ -285,7 +285,7 @@ public abstract class AuthenticatedResource {
 As of now, we can inherit a final resource from AuthenticatedResource and utilize “authenticated” method.
 
 ```
-<pre style="font-size: .8em">
+
 @Path("/account")
 @RequestScoped
 public class AccountResource extends AuthenticatedResource {
@@ -307,10 +307,10 @@ public class AccountResource extends AuthenticatedResource {
 </email>
 ```
 
-With Scala, I’ve managed to simplify syntax quite a bit:
+With Scala, I've managed to simplify syntax quite a bit:
 
 ```
-<pre style="font-size: .8em">
+
 @Path("/account")
 @RequestScoped
 class AccountResource extends AuthenticatedResource {
@@ -325,14 +325,14 @@ class AccountResource extends AuthenticatedResource {
 }
 ```
 
-Ain’t Scala cool? But, unfortunately, our customer doesn’t want to use Scala at the project, and syntax of Java 8 is just not at the same level, so, with Jersey, the quality of resulting code wasn’t good enough for us.
+Ain't Scala cool? But, unfortunately, our customer doesn't want to use Scala at the project, and syntax of Java 8 is just not at the same level, so, with Jersey, the quality of resulting code wasn't good enough for us.
 
 ##### Template method
 
-Let’s forget about Jersey constraints and look at the previous code from another side. What if we create a separate class for every HTTP handler and use OOD approach to get things done?
+Let's forget about Jersey constraints and look at the previous code from another side. What if we create a separate class for every HTTP handler and use OOD approach to get things done?
 
 ```
-<pre style="font-size: .8em">
+
 @RequestScoped
 public abstract class Resource {
   
@@ -375,14 +375,14 @@ public class AccountResource extends AuthenticatedResource {
 </email>
 ```
 
-Looks more intuitive, doesn’t it?
+Looks more intuitive, doesn't it?
 
 ##### Which pattern is better?
 
-So, what is better: Filter, Decorator or Template Method? I’m convinced that Decorator and Template Method are much better than Filter because they don’t constrain you as much. You are free to add as many abstract/callback methods as you want, modify their semantics, and call them at any step of the algorithm. You would never be able to do anything like this with Filters:
+So, what is better: Filter, Decorator or Template Method? I'm convinced that Decorator and Template Method are much better than Filter because they don't constrain you as much. You are free to add as many abstract/callback methods as you want, modify their semantics, and call them at any step of the algorithm. You would never be able to do anything like this with Filters:
 
 ```
-<pre style="font-size: .8em">
+
 public abstract class JsonResource extends Resource {
   
     private static final Logger log =
@@ -422,7 +422,7 @@ public abstract class JsonResource extends Resource {
 
 If you are free to use Scala or another functional programming language, Decorator should be a viable option. But if syntax of programming language you use makes Decorator ugly, please use Template Method.
 
-As I mentioned before, Jersey doesn’t have good capabilities to decorate your HTTP handlers. It supports filters only. This was one of the reasons why we’ve decided to select another framework.
+As I mentioned before, Jersey doesn't have good capabilities to decorate your HTTP handlers. It supports filters only. This was one of the reasons why we've decided to select another framework.
 
 **We want your feedback.**
 

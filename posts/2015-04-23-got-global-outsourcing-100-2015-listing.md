@@ -11,10 +11,10 @@ categories:
 
 The beginning of this year was marked by a great achievement for our company. We have entered the annual listing of the best outsourcing companies in the world “The 2015 Global Outsourcing 100” by IAOP for the first time.
 
-The Global Outsourcing 100 represents the annual listing of the world’s best outsourcing service providers. The complete details on the 2015 Process and Methodology of scoring can be found [here](http://www.iaop.org/Download/Default.aspx?ID=1605). This is a real success, and we are proud that our continuous efforts to improve the quality of our services have been recognized on a global level.
+The Global Outsourcing 100 represents the annual listing of the world's best outsourcing service providers. The complete details on the 2015 Process and Methodology of scoring can be found [here](http://www.iaop.org/Download/Default.aspx?ID=1605). This is a real success, and we are proud that our continuous efforts to improve the quality of our services have been recognized on a global level.
 
-Sounds impossible? We did think so. But you’ll never know unless you try.
-In this article we’ll tell which materials we have prepared and provided together with our application to GO 100 program.
+Sounds impossible? We did think so. But you'll never know unless you try.
+In this article we'll tell which materials we have prepared and provided together with our application to GO 100 program.
 
 ### How were the companies judged?
 
@@ -24,7 +24,7 @@ Companies-contenders for inclusion in the list were evaluated based on the follo
 3. Programs for Innovation;
 4. Corporate [Social](http://www.issart.com/blog/intellectual-property-issues-software-development/) Responsibility (CSR).
 
-Let’s review each of them.
+Let's review each of them.
 
 #### Size and Growth
 
@@ -42,7 +42,7 @@ Public recognitions received by our company include the following: Best Enterpri
 
 As a certification demonstrating outsourcing business excellence of our company we listed [ISO 9001:2008 certification](http://www.issart.com/en/news/index/id/91) that we obtained in 2013.
 
-As for the last (but not the least) factor – we don’t have COPs in our company yet.
+As for the last (but not the least) factor – we don't have COPs in our company yet.
 
 #### Programs for Innovation
 
@@ -60,8 +60,8 @@ As for independent reference sources that we provided to validate our activities
 
 ### Conclusion
 
-This is what we’ve done to get ino the 2015 Global Outsourcing 100 listing. The materials we provided to apply for this program helped us to make into “Best Rising Stars in Revenue Growth” sub-list. The alphabetical list of companies included into The 2015 Global Outsourcing 100® listing is available [here](http://www.iaop.org/Download/Default.aspx?ID=2401).
+This is what we've done to get ino the 2015 Global Outsourcing 100 listing. The materials we provided to apply for this program helped us to make into “Best Rising Stars in Revenue Growth” sub-list. The alphabetical list of companies included into The 2015 Global Outsourcing 100® listing is available [here](http://www.iaop.org/Download/Default.aspx?ID=2401).
 
-Also, this June FORTUNE® magazine will publish the full list of the rating participants and honors obtained in the various categories. We’ll inform our readers about it additionally, so stay tuned!
+Also, this June FORTUNE® magazine will publish the full list of the rating participants and honors obtained in the various categories. We'll inform our readers about it additionally, so stay tuned!
 
 **What do you think about Global Outsourcing 100 list? Have you ever applied to this program as a service provider? Have you ever reviewed this listing as a customer while searching for an outsourcing provider?**

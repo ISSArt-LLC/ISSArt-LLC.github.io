@@ -26,7 +26,7 @@ In some fields of business, the fundamental condition for success is to quickly 
 
 - *Marketing strategy development based on provided data and set goals.*
 
-Artificial intelligence helps marketers work: it not only analyzes previous sales but also uses forecasting to “predict” the future, taking into account competitors’ behavior and the situation on the market.
+Artificial intelligence helps marketers work: it not only analyzes previous sales but also uses forecasting to “predict” the future, taking into account competitors' behavior and the situation on the market.
 
 - *Human factor.*
 
@@ -58,7 +58,7 @@ Like many other businesses, supermarkets try to attract and keep their customers
 
 *The task:* a loyalty system (loyalty cards) was introduced in the supermarket chain and special discounts were in effect, but the effectiveness of these promotions was minimal, leading to an insignificant increase in profit.
 
-*AI solution:* AI can analyze customers’ purchase history, using data for several years, select an optimal reward system for each customer. If the buyer showed no interest in promotions and discounts, artificial intelligence will prioritize other notifications, such as assortment description or new product’s advertisement. Customers who were interested in a specific promotion can be promptly informed of it. Timely receipt of valuable information will increase customer loyalty, simultaneously enhancing profit.
+*AI solution:* AI can analyze customers' purchase history, using data for several years, select an optimal reward system for each customer. If the buyer showed no interest in promotions and discounts, artificial intelligence will prioritize other notifications, such as assortment description or new product's advertisement. Customers who were interested in a specific promotion can be promptly informed of it. Timely receipt of valuable information will increase customer loyalty, simultaneously enhancing profit.
 
 **How we Use AI in Business Today**
 
@@ -66,7 +66,7 @@ Certain business segments have been transformed with the advent of artificial in
 
 - *Chatbots*
 
-Machine learning algorithms often replace call centers, help complete the task of providing customer assistance and information around the clock, even on holidays and weekends. A “smart” program learns from its own mistakes and, over time, surpasses living operators’ incompetence. The result: a significant increase in customer loyalty, a buildup of the company’s positive image.
+Machine learning algorithms often replace call centers, help complete the task of providing customer assistance and information around the clock, even on holidays and weekends. A “smart” program learns from its own mistakes and, over time, surpasses living operators' incompetence. The result: a significant increase in customer loyalty, a buildup of the company's positive image.
 
 - *Data management*
 

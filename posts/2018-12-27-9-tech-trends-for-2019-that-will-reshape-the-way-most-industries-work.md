@@ -11,11 +11,11 @@ categories:
 
 As 2018 is coming to the end, experts all over the world are making their predictions about what will be trending in tech world in 2019.
 
-In this article we’ve gathered the 9 trends that seemed the most interesting for us.
+In this article we've gathered the 9 trends that seemed the most interesting for us.
 
 ##### Advanced chatbots
 
-Natural Language Processing technology will completely transform the way that service industry used to work. With advanced capabilities of chatbots, companies will get an opportunity to provide [innovative customer service](https://www.forbes.com/sites/gilpress/2018/12/09/120-ai-predictions-for-2019/#244017c5688c) that will certainly set them apart from competitors. That is, advanced chatbots can [mimic humans](https://www.prnewswire.com/news-releases/ieee-computer-society-predicts-the-future-of-tech-top-10-technology-trends-for-2019-300767876.html), detects users’ emotions and provide them with relevant information based on different criteria defined (interests, needs, location,etc.)
+Natural Language Processing technology will completely transform the way that service industry used to work. With advanced capabilities of chatbots, companies will get an opportunity to provide [innovative customer service](https://www.forbes.com/sites/gilpress/2018/12/09/120-ai-predictions-for-2019/#244017c5688c) that will certainly set them apart from competitors. That is, advanced chatbots can [mimic humans](https://www.prnewswire.com/news-releases/ieee-computer-society-predicts-the-future-of-tech-top-10-technology-trends-for-2019-300767876.html), detects users' emotions and provide them with relevant information based on different criteria defined (interests, needs, location,etc.)
 
 ##### AI-enabled chips
 
@@ -53,7 +53,6 @@ A digital twin stands for a replication of an object, a process or a system. Twi
 
 One more trend that certainly deserves our attention is the extension of the range of cloud-provided services. This means that in 2019 such areas as [Blockchain-as-a-service](https://www.forbes.com/sites/steveandriole/2018/10/22/gartners-10-technology-trends-for-2019-the-good-the-obvious-and-the-missing/#587006975999), VR-as-a-service, AR-as-a-service, IOT-as-a-service and AI-as-a-service will become more and more common.
 
-\_\_\_\_\_\_\_\_
 *We hope you will find this review of tech trends useful. Maybe one of them (or even more than one) are already in your plans for **2019**?*
 
 ***Which trends do you find the most notable and perspective? Please share your thoughts in the comments!***

@@ -14,7 +14,7 @@ IT and programming are changing every day. Not all the changes lead to the revol
 
 **UI/UX**
 
-Today many applications are not focused on business value, they are focused on new user experience. In modern systems we often can’t even separate user experience and business value. Business is focused on users and proposes new ways of doing work, new ways of having fun and even new ways of thinking.
+Today many applications are not focused on business value, they are focused on new user experience. In modern systems we often can't even separate user experience and business value. Business is focused on users and proposes new ways of doing work, new ways of having fun and even new ways of thinking.
 
 That is why user experience (UX) became more important than performance, application size and task solution. Nowadays UX is not a well defined concept, but UX-design comes before system design.
 
@@ -22,9 +22,9 @@ That is why user experience (UX) became more important than performance, applica
 
 **Social networking**
 
-Computers are affecting the way we communicate. Today every application should have integration with Facebook, Twitter and Instagram. You can’t just measure the average speed of your car. You need to make a snapshot of the speedometer, share it with your friends and allow them to comment on it. Video players should not play video only. They have to have rating systems and opportunity to share comments on Facebook.
+Computers are affecting the way we communicate. Today every application should have integration with Facebook, Twitter and Instagram. You can't just measure the average speed of your car. You need to make a snapshot of the speedometer, share it with your friends and allow them to comment on it. Video players should not play video only. They have to have rating systems and opportunity to share comments on Facebook.
 
-Each system should allow us to login with Facebook credentials. Some of them are so closely integrated with one of the networks that can’t be used without it. This point is connected with the previous one. Social networks become an important part of users’ lives and experience.
+Each system should allow us to login with Facebook credentials. Some of them are so closely integrated with one of the networks that can't be used without it. This point is connected with the previous one. Social networks become an important part of users' lives and experience.
 
 [![image02](/static/img/2016/03/image02-300x225.jpg)](/static/img/2016/03/image02.jpg)
 
@@ -51,7 +51,7 @@ The popularity of cross-platform instruments is growing. Such tools as PhoneGap 
 **Functional Programming**
 
 Functional languages have a long history. They were popular in 60s, but they were almost forgotten in the IT industry. But the new Millennium has brought concepts of big data, parallelism and [cloud](https://www.issart.com/en/services/details/service/cloud-solutions) computing which breathed new life into functional computing. Functional programming becomes really useful when there is a need to process a huge amount of uniform data with complex functions.
-Mainstream OOP languages include elements of functional programming in their syntax. Lambda expressions, closures and map/reduce functions are now parts of C#, Javascript and Java. But full power of Functional paradigm is available in specific languages only. That’s why developers who know Haskell, Scala and F# are highly needed.
+Mainstream OOP languages include elements of functional programming in their syntax. Lambda expressions, closures and map/reduce functions are now parts of C#, Javascript and Java. But full power of Functional paradigm is available in specific languages only. That's why developers who know Haskell, Scala and F# are highly needed.
 
 The initial cost to implement the application in functional way is still higher than in OOP (for lack of tools and developers). But the total cost of ownership and scalability can be much higher than usual. Functional programming still has a limited value but FP elements (such as immutable objects and pure functions) can significantly improve the application system design.
 

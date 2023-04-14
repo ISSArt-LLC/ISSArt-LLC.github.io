@@ -11,108 +11,108 @@ categories:
 
 ##### How we decided to launch a system of video streaming
 
-<span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><span lang="en-US">As in any other company, in ours there is some outdated equipment. It is quite workable, but cannot be used by employees. So, there are monitors, system units, and many other little computer parts like old-fashioned PS/2 mice and keyboards lying useless.</span></span></span>
+As in any other company, in ours there is some outdated equipment. It is quite workable, but cannot be used by employees. So, there are monitors, system units, and many other little computer parts like old-fashioned PS/2 mice and keyboards lying useless.
 
-<span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><span lang="en-US">In this article we are going to talk about monitors we decided to use as an announcement board.</span></span></span>
+In this article we are going to talk about monitors we decided to use as an announcement board.
 
-<span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><span lang="en-US">As the source of videos it was decided to use a Raspberry Pi.</span></span></span>
+As the source of videos it was decided to use a Raspberry Pi.
 
-<span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><span lang="en-US">Raspberry Pi is quite a weak hardware, but it suits our purpose well.</span></span></span>
+Raspberry Pi is quite a weak hardware, but it suits our purpose well.
 
-<span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><span lang="en-US">The Broadcom chip installed in the Raspberry Pi has hardware video acceleration support that allows you to play H.264 video with a bit rate of 40 MBits/s.</span></span></span>
+The Broadcom chip installed in the Raspberry Pi has hardware video acceleration support that allows you to play H.264 video with a bit rate of 40 MBits/s.
 
-<span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><span lang="en-US">It’s rather good for such a small board.</span></span></span>
+It's rather good for such a small board.
 
 ##### The first experience
 
-<span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><span lang="en-US">Let’s start with the story of the first experience of video streaming.</span></span></span>
+Let's start with the story of the first experience of video streaming.
 
-<span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><span lang="en-US">Well, not exactly video streaming, first it was just one monitor and one Raspberry Pi board.</span></span></span>
+Well, not exactly video streaming, first it was just one monitor and one Raspberry Pi board.
 
-<span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><span lang="en-US">There was nothing complicated: we installed a cross-platform media player, saved the video files on a flash drive and started their cyclic playback, perfect!</span></span></span>
+There was nothing complicated: we installed a cross-platform media player, saved the video files on a flash drive and started their cyclic playback, perfect!
 
-<span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><span lang="en-US">The screens displayed employees’ current month’s birthdays, and such information is quite useful at a company of our size.</span></span></span>
+The screens displayed employees' current month's birthdays, and such information is quite useful at a company of our size.
 
-<span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><span lang="en-US">There were also announcements of the upcoming events and photo and video records of them. In general, everyone liked the idea.</span></span></span>
+There were also announcements of the upcoming events and photo and video records of them. In general, everyone liked the idea.
 
-<span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><span lang="en-US">But there was a screen only on one floor of the office, the matter was we wanted to cover the entire audience. That’s why a second monitor was bought and a second Raspberry board, and then we went through all the same steps again.</span></span></span>
+But there was a screen only on one floor of the office, the matter was we wanted to cover the entire audience. That's why a second monitor was bought and a second Raspberry board, and then we went through all the same steps again.
 
-<span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><span lang="en-US">Everything worked fine, but we wanted more, besides, updating files on each screen separately was rather tiresome.</span></span></span>
+Everything worked fine, but we wanted more, besides, updating files on each screen separately was rather tiresome.
 
 ##### The improvement of the system
 
-<span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><span lang="en-US">The idea was the following:</span></span></span>
+The idea was the following:
 
-<span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><span lang="en-US">We set up the streaming from the server to all the screens, as a result, we get a centralized streaming, and on all screens the same information is always displayed.</span></span></span>
+We set up the streaming from the server to all the screens, as a result, we get a centralized streaming, and on all screens the same information is always displayed.
 
-<span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><span lang="en-US">In the previous version, there was mal-synchronization, because there was no simultaneous start, it was not very important while the screens were on different floors.</span></span></span>
+In the previous version, there was mal-synchronization, because there was no simultaneous start, it was not very important while the screens were on different floors.
 
-<span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><span lang="en-US">But at some point, there were multiple screens, and mal-synchronization started to be too obvious, which a perfectionist couldn’t bear.</span></span></span>
+But at some point, there were multiple screens, and mal-synchronization started to be too obvious, which a perfectionist couldn't bear.
 
-<span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><span lang="en-US">We had had experience setting streaming using VideoLAN, and we wanted to use it.</span></span></span>
+We had had experience setting streaming using VideoLAN, and we wanted to use it.
 
-<span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><span lang="en-US">Thus, we set up the server on Debian Linux, installed VLC, placed video files on the server and started streaming.</span></span></span>
+Thus, we set up the server on Debian Linux, installed VLC, placed video files on the server and started streaming.
 
 ##### Challenges
 
-<span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><span lang="en-US">However, not everything started going smoothly right away, and in the process of introducing the video streaming system, we faced various challenges.</span></span></span>
+However, not everything started going smoothly right away, and in the process of introducing the video streaming system, we faced various challenges.
 
-<span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><span lang="en-US">***1. The cross-platform media player was not very convenient, we wanted a real Linux Way***</span></span></span>
+***1. The cross-platform media player was not very convenient, we wanted a real Linux Way***
 
-<span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><span lang="en-US">The media player we use is a multimedia processor, it does a lot, but at the same time it consumes more resources, and we only need one function — to reproduce the video stream.</span></span></span>
+The media player we use is a multimedia processor, it does a lot, but at the same time it consumes more resources, and we only need one function — to reproduce the video stream.
 
-<span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><span lang="en-US">Since the media player turned out to be too bulky for the task, it was decided to use another media player.</span></span></span>
+Since the media player turned out to be too bulky for the task, it was decided to use another media player.
 
-<span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><span lang="en-US">For this purpose, the basic version of Debian Linux was installed on the Raspberry Pi.</span></span></span>
+For this purpose, the basic version of Debian Linux was installed on the Raspberry Pi.
 
-<span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><span lang="en-US">***2. Finding a suitable media player***</span></span></span>
+***2. Finding a suitable media player***
 
-<span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><span lang="en-US">To take full advantage of the video hardware acceleration, we took the OMXPlayer, because it is a console media player with OpenMAX hardware acceleration.</span></span></span>
+To take full advantage of the video hardware acceleration, we took the OMXPlayer, because it is a console media player with OpenMAX hardware acceleration.
 
-<span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><span lang="en-US">On the Raspberry Pi, the installation does not cause any problem, because there is a package in the default repository.</span></span></span>
+On the Raspberry Pi, the installation does not cause any problem, because there is a package in the default repository.
 
-<span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><span lang="en-US">apt-get install omxplayer</span></span></span>
+apt-get install omxplayer
 
-<span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><span lang="en-US">After the installation, you can run “omxplayer –live udp://@:1234” and the player is ready to accept the stream.</span></span></span>
+After the installation, you can run “omxplayer –live udp://@:1234” and the player is ready to accept the stream.
 
-<span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><span lang="en-US">***3. Optimization of parameters***</span></span></span>
+***3. Optimization of parameters***
 
-<span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><span lang="en-US">Since most of the RAM was freed up, there appeared a possibility to reallocate the physical memory to increase graphics memory.</span></span></span>
+Since most of the RAM was freed up, there appeared a possibility to reallocate the physical memory to increase graphics memory.
 
-<span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><span lang="en-US">For this you need to edit the file </span></span></span><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><span lang="en-US">**/boot/config.txt**</span></span></span>
+For this you need to edit the file **/boot/config.txt**
 
-<span style="font-family: Courier New, serif;"><span style="font-size: small;"><span lang="en-US">**Having added gpu\_mem=256 to it**</span></span></span>
+**Having added gpu_mem=256 to it**
 
-<span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><span lang="en-US">***4. OMXPlayer is very sensitive to the parameters of the video stream***</span></span></span>
+***4. OMXPlayer is very sensitive to the parameters of the video stream***
 
-<span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><span lang="en-US">For example, it used to fall displaying a cheerful phrase “have a nice day”, whenever the bit rate of the video stream was changed.</span></span></span>
+For example, it used to fall displaying a cheerful phrase “have a nice day”, whenever the bit rate of the video stream was changed.
 
-<span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><span lang="en-US">And those days were really “nice”, because now we know the cause, but then it was a mystery.</span></span></span>
+And those days were really “nice”, because now we know the cause, but then it was a mystery.
 
-<span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><span lang="en-US">We started preparing to stream video-files with the same settings, and it helped, streamings stopped interrupting.</span></span></span>
+We started preparing to stream video-files with the same settings, and it helped, streamings stopped interrupting.
 
-<span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><span lang="en-US">But sometimes the human factor intervened, and the playlist had at least one file with parameters different from the others, and then all went wrong.</span></span></span>
+But sometimes the human factor intervened, and the playlist had at least one file with parameters different from the others, and then all went wrong.
 
 ##### The final version of the system
 
-<span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><span lang="en-US">Once again I wanted to change things for the better and prevent unpleasant surprises and the human factor.</span></span></span>
+Once again I wanted to change things for the better and prevent unpleasant surprises and the human factor.
 
-<span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><span lang="en-US">The solution was found quickly, but getting from the idea to realization was not at all easy.</span></span></span>
+The solution was found quickly, but getting from the idea to realization was not at all easy.
 
-<span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><span lang="en-US">The solution itself was to make the video files with the same parameters converted completely automatically, without any human participation.</span></span></span>
+The solution itself was to make the video files with the same parameters converted completely automatically, without any human participation.
 
-<span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><span lang="en-US">No, a human is still required, but only to put the playlist together and place the video files in the network folder.</span></span></span>
+No, a human is still required, but only to put the playlist together and place the video files in the network folder.
 
-<span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><span lang="en-US">Starting from this point on everything is done automatically.</span></span></span>
+Starting from this point on everything is done automatically.
 
-<span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><span lang="en-US">At midnight when everyone is asleep, video-files start being converted and after the completion of the process the streaming restarts.</span></span></span>
+At midnight when everyone is asleep, video-files start being converted and after the completion of the process the streaming restarts.
 
-<span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><span lang="en-US">The streaming started, and the image appeared on the screen. It’s probably the same feeling that the first television watchers experienced.</span></span></span>
+The streaming started, and the image appeared on the screen. It's probably the same feeling that the first television watchers experienced.
 
-<span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><span lang="en-US">To implement the plan, the Bash script was written:</span></span></span>
+To implement the plan, the Bash script was written:
 
 ```
-<pre class="brush: bash; title: ; notranslate" title="">
+
 #!/bin/bash
 
 ### Path to FFmpeg
@@ -130,15 +130,15 @@ MD5DIR=/Converter_new/fingerprints
 ### Cleaning filenames
 rename "s/ /_/g" $INFILES/*
 rename "s/'//g" $INFILES/*
-rename "s/’//g" $INFILES/*
+rename "s/'//g" $INFILES/*
 rename "s/,//g" $INFILES/*
 rename "s/\!//g" $INFILES/*
 rename "s/\№//g" $INFILES/*
 rename "s/\050/_/g" $INFILES/*
 rename "s/\051//g" $INFILES/*
 rename "s/\.\././g" $INFILES/*
-rename "s/\.\_/_/g" $INFILES/*
-rename "s/\_\_/_/g" $INFILES/*
+rename "s/\._/_/g" $INFILES/*
+rename "s/__/_/g" $INFILES/*
 
 function converting {
 file_to_convert=$1

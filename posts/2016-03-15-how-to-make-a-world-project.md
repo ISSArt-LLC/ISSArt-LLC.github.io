@@ -9,12 +9,12 @@ categories:
     - General
 ---
 
-> “The difference between what we do and what we are capable of doing would suffice to solve most of the world’s problems.”
+> “The difference between what we do and what we are capable of doing would suffice to solve most of the world's problems.”
 > Mahatma Gandhi
 
 What mark do you want to leave in our history? Are you dreaming about the project influencing the entire world?
 
-Let’s collect ideas and principles that could answer the question “How to do it?”
+Let's collect ideas and principles that could answer the question “How to do it?”
 
 ## 1. To serve people solving their complex problems
 
@@ -22,30 +22,30 @@ There is a common thing in every big solution. What is it?
 
 For example, the invention of the printing press allowed people to share the information intensively, the invention of the radio solved the problem of wireless information transfer. Penicillin was the first effective solution against the bacterial infections distress. The invention of airbags has saved a lot of human lives in car crashes.
 
-<div class="wp-caption aligncenter" id="attachment_1641" style="width: 650px">[![A great project requires a great goal. Great goal of the project is people's need.](/static/img/2016/03/640px-2011-05-10_18-57-46_Switzerland_-_Wil.jpg)](/static/img/2016/03/640px-2011-05-10_18-57-46_Switzerland_-_Wil.jpg)One of the most powerful people’s needs is energy, which is highly demanded and now mostly supplied by the limited resources
+<div class="wp-caption aligncenter" id="attachment_1641" style="width: 650px">[![A great project requires a great goal. Great goal of the project is people's need.](/static/img/2016/03/640px-2011-05-10_18-57-46_Switzerland_-_Wil.jpg)](/static/img/2016/03/640px-2011-05-10_18-57-46_Switzerland_-_Wil.jpg)One of the most powerful people's needs is energy, which is highly demanded and now mostly supplied by the limited resources
 
 </div>All these inventions are similar in at least the following parameters:
 
 1. they solved the complex problems;
-2. the big solutions in the history positively solved the big people’s needs.
+2. the big solutions in the history positively solved the big people's needs.
 
 There are many other complex issues that lie at the intersection of science, technology, governance, and politics. They are waiting for the solutions and the appropriate solvers. Do you know the challenge you would like to take up?
 
 The [world is continuously changing](http://www.ichakadizes.com/life-is-change/) as an interconnected system. Each change leads to inconsistencies and new problems then. If you would like to forecast the new problems, you can observe what great changes are happening.
 
-To infer, we can express the way: **the highest idea is to find the people’s problem and serve them by solving their problem**.
+To infer, we can express the way: **the highest idea is to find the people's problem and serve them by solving their problem**.
 
-Have you got such an ambitious idea? Let’s go ahead then.
+Have you got such an ambitious idea? Let's go ahead then.
 
 ## 2. Principles
 
-If you have a clear vision of the problem and your purposefulness is solid, let’s go further and concentrate on how to make your idea happen.
+If you have a clear vision of the problem and your purposefulness is solid, let's go further and concentrate on how to make your idea happen.
 
-I want to share some of ISS Art’s principles, that have helped us to develop the great projects in IT sphere. All these principles are applied to every complex project.
+I want to share some of ISS Art's principles, that have helped us to develop the great projects in IT sphere. All these principles are applied to every complex project.
 
 #### 2.1. Next step
 
-The things are complex, but [the first step is often very simple](http://gettingthingsdone.com/). If you would like to repair a car, the first step may be to call a mechanic. You even do not need to plan all the things to be done. Just call a mechanic right now. It’s a good and simple cure against procrastination.
+The things are complex, but [the first step is often very simple](http://gettingthingsdone.com/). If you would like to repair a car, the first step may be to call a mechanic. You even do not need to plan all the things to be done. Just call a mechanic right now. It's a good and simple cure against procrastination.
 
 <div class="wp-caption aligncenter" id="attachment_1643" style="width: 612px">[![Let's define the first step and accomplish it.](/static/img/2016/03/will-smith-013-1024x640.jpg)](/static/img/2016/03/will-smith-013.jpg)The first step is you have to say that you can.
 Will Smith
@@ -84,7 +84,7 @@ Your idea, your project, and your product are worth being promoted. People shoul
 
 ## 3. The kindness returns
 
-Have you got an idea that can impress the world and meet the people’s needs?
+Have you got an idea that can impress the world and meet the people's needs?
 Let us **[help you](http://www.issart.com/en/services)**.
 
 Can you make a project that will change the world? **Definitely, you can.**

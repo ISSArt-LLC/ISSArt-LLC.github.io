@@ -111,7 +111,7 @@ eCommerce business owners need a website that includes the following architectur
 - *Built-in security features-important especially for ecommerce websites processing financial transactions*
 - *High Compatibility with other web applications, operating systems and programming languages-allows the site to be scaled, modified and changed to accommodate a change in customer behavior or business focus*
 - *Reliable and consistent user experience-website will not malfunction because of unreliable code*
-- *Large Support Community-A PHP based platform has a huge community of support on the web. If your site has a problem, you won’t have to wait or pay for a vendor/web developer to offer a custom solution*
+- *Large Support Community-A PHP based platform has a huge community of support on the web. If your site has a problem, you won't have to wait or pay for a vendor/web developer to offer a custom solution*
 - *Built-in solutions to recurring common issues-PHP frameworks avoid site problems and avoid paying for expensive solutions if there is a problem*
 - *Full Featured and highly customized-PHP frameworks offer full feature ecommerce solutions and can be customized to fit exact needs*
 - *PHP frameworks are easy for beginners*
@@ -120,4 +120,4 @@ eCommerce business owners need a website that includes the following architectur
 - *Lower development and maintenance cost*
 - *A PHP framework for ecommerce website development is compatible with Windows, Linux and Mac OS X servers*
 
-<span style="color: #222222;">The list can be continued. Do you have something to add? Feel free to share in comments!</span>
+The list can be continued. Do you have something to add? Feel free to share in comments!

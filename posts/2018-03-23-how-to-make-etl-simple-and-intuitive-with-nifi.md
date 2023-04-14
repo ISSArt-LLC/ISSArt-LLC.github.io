@@ -15,7 +15,7 @@ tags:
 
 *Yes, it is. With NiFi.*
 
-Implementation of ETL is one of the most common tasks now. Creating an aggregator site or simply integrating several enterprise applications leads to the need to solve the ETL task. You can solve this problem with the help of well-known frameworks, such as Apache Camel for example. But let’s try doing it with NiFi.
+Implementation of ETL is one of the most common tasks now. Creating an aggregator site or simply integrating several enterprise applications leads to the need to solve the ETL task. You can solve this problem with the help of well-known frameworks, such as Apache Camel for example. But let's try doing it with NiFi.
 
 ### *So, what is NiFi?*
 
@@ -23,12 +23,12 @@ NiFi was created by the NSA and was called “NiagaraFiles” and in 2014 was gi
 
 Its main features are:
 
-- user’s web interface;
+- user's web interface;
 - routes can be changed in the runtime;
 - flexibly configurable.
 
 You can learn more details about the main features of the system here [Apache NiFi Overview](https://nifi.apache.org/docs.html). This article will cover only the main points that provide visibility and the ability to make changes in the runtime.
-Let’s look at a simple ETL task like reading data from FTP, converting character set and uploading to the database.
+Let's look at a simple ETL task like reading data from FTP, converting character set and uploading to the database.
 
 ### *Preconditions:*
 
@@ -40,7 +40,7 @@ Let’s look at a simple ETL task like reading data from FTP, converting charact
 ### *Implementation*
 
 NiFi design is based on Flow Based Programming idea. All input files go through a chain of connected processors that perform some actions.
-We should create such chain to implement our task. We will call this chain ‘a route’. And we need a processor for reading data from FTP for our route. NiFi has a lot of already implemented processors and we can choose one of them.
+We should create such chain to implement our task. We will call this chain 'a route'. And we need a processor for reading data from FTP for our route. NiFi has a lot of already implemented processors and we can choose one of them.
 
 ![Choosing processor](/static/img/2018/03/choose.jpg)
 We choose GetFTP processor.
@@ -51,7 +51,7 @@ We want to transfer files from FTP to database after converting the character se
 
 ![Error](/static/img/2018/03/error.png)
 
-Sign in Processor corner shows processor’s configuration state (correct or incorrect). The current sign means that processor’s configuration is incorrect.We can see what the problem is.
+Sign in Processor corner shows processor's configuration state (correct or incorrect). The current sign means that processor's configuration is incorrect.We can see what the problem is.
 
 We set correct settings for all the processors.
 
@@ -67,7 +67,7 @@ We set correct settings for all the processors.
 *4. CSVReader processor*
 ![CSVReader processor](/static/img/2018/03/reader_settings.png)
 
-We need to define how exactly each type of processor results should be handled too. Let’s look into PutDatabaseRecord processor details (SETTINGS tab), for example.
+We need to define how exactly each type of processor results should be handled too. Let's look into PutDatabaseRecord processor details (SETTINGS tab), for example.
 
 We can see 3 type of results: **failure, retry, success**. We choose **failure** and **success** types as Automatically Terminate Relationships. We should definitely handle **failure** type results in a different way and we can do it using PutEmail processor, LogAttributes processor or something else, but we are not going to do it now, because it is just an example. According to the description of **retry** type, attempting the operation again may succeed. So we can send this type of results to PutDatabaseRecord processor again for a second attempt.
 ![PutDatabaseRecord processor details](/static/img/2018/03/route8.png)
@@ -82,11 +82,11 @@ Each processor shows the number of files that were handled. The content and attr
 ![Provenance event](/static/img/2018/03/provenance_event.png)
 ![DataProvenance](/static/img/2018/03/provenance2.png)
 
-It’s so comfortable to support the system without the need to search in logs trying to understand what exactly has happened. Do you agree?
+It's so comfortable to support the system without the need to search in logs trying to understand what exactly has happened. Do you agree?
 
 ### *How to make changes in the runtime*
 
-Let’s change our route and upload the data to another FTP, for example. I’ve stopped PutDatabaseRecord processor and added a new PutFTP processor.
+Let's change our route and upload the data to another FTP, for example. I've stopped PutDatabaseRecord processor and added a new PutFTP processor.
 ![Adding a new PutFTP processor](/static/img/2018/03/route5.png)
 
 You can see that input files are in the queue to PutDatabase record.
@@ -97,6 +97,6 @@ You need to change the destination of the defined connection from PutDatabaseRec
 
 We have changed the route in NiFi.
 
-Let’s sum up. We created a route that resolved our simple ETL task. After that, we made some changes to this route in the runtime without any loss of the source data. All this was done without writing the code and it was rather simple.
+Let's sum up. We created a route that resolved our simple ETL task. After that, we made some changes to this route in the runtime without any loss of the source data. All this was done without writing the code and it was rather simple.
 
-I want to add that NiFi has a lot of already implemented processors, but you can develop a processor yourself if you want. It’s a really interesting tool with a lot of other features and processors.
+I want to add that NiFi has a lot of already implemented processors, but you can develop a processor yourself if you want. It's a really interesting tool with a lot of other features and processors.

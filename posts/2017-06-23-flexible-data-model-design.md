@@ -19,7 +19,7 @@ Usually any integration brings a new dependency into the code, when you have som
 
 ## Flexible solution for data model design
 
-Generally you can’t eliminate the dependency on the data completely. You can reduce it as much as possible and encapsulate it in some stable pieces of code. So, what can be stable in the changing data?
+Generally you can't eliminate the dependency on the data completely. You can reduce it as much as possible and encapsulate it in some stable pieces of code. So, what can be stable in the changing data?
 
 And the answer is **Types**.
 
@@ -27,7 +27,7 @@ Indeed, how many primitive types (here I mean strings, numbers, booleans, etc.) 
 
 ## Implementation
 
-Why can’t we just use something like raw json or xml as the mode implementation? We can’t, because they are related to the data transmission format or the data representation, but not the data model design itself.
+Why can't we just use something like raw json or xml as the mode implementation? We can't, because they are related to the data transmission format or the data representation, but not the data model design itself.
 
 If you have an independent model, you can implement or wrap any representation over it for the data exchange in your system.
 
@@ -85,7 +85,7 @@ There are some more questions we should answer before starting the implementatio
   
     Depending on your situation it is possible to declare this method returning read-only collection clearly. Or you can return something like rx.Observable<String> or Stream<String> here. Upon the whole, it should be obvious that the returning value is *immutable*.
 
-If you agree with above statements let’s move to the whole example.
+If you agree with above statements let's move to the whole example.
 
 ### Field
 
@@ -471,12 +471,12 @@ Advantages of this solution:
 
 Disadvantages:
 
-- It isn’t kind of “traditional approach”
-- Likely it is not a startup solution. However, it is easier to introduce while you do not have a lot of traditional model classes (patterns) and don’t use them intensively.
-- Likely you won’t use any data access or entity framework as you can be accustomed to.
+- It isn't kind of “traditional approach”
+- Likely it is not a startup solution. However, it is easier to introduce while you do not have a lot of traditional model classes (patterns) and don't use them intensively.
+- Likely you won't use any data access or entity framework as you can be accustomed to.
 
 ## Conclusion
 
-Generally it doesn’t matter what kind of the application (Java applications or others) you are working on. But if you are looking for a fresh approach to make the data access code more flexible and predictable, perhaps, the above approach of using flexible data model design will solve this task for you.
+Generally it doesn't matter what kind of the application (Java applications or others) you are working on. But if you are looking for a fresh approach to make the data access code more flexible and predictable, perhaps, the above approach of using flexible data model design will solve this task for you.
 
 Would you like to get more information about flexible data model design? Fill the contact form.

@@ -67,7 +67,7 @@ Before venturing into app development for a new technological advancement, it is
 
 ### Make the UI Perfect
 
-Pay particular attention to the user interface and ensure it is perfect, in both look and function. Today’s consumers are accustomed to having UIs that are high quality, easy to use and look amazing. If you decide to take a shortcut or try to slide by with a UI that is subpar, that alone can be disastrous, even if the rest of your application is fantastic. The best variant to have perfect UI is to use [Java Script](http://firstsiteguide.com/javascript-cheat-sheet/).
+Pay particular attention to the user interface and ensure it is perfect, in both look and function. Today's consumers are accustomed to having UIs that are high quality, easy to use and look amazing. If you decide to take a shortcut or try to slide by with a UI that is subpar, that alone can be disastrous, even if the rest of your application is fantastic. The best variant to have perfect UI is to use [Java Script](http://firstsiteguide.com/javascript-cheat-sheet/).
 
 ### Beta Test
 

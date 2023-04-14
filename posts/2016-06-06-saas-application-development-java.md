@@ -11,7 +11,7 @@ categories:
 
 ### Reasons for SaaS:
 
-So you’ve decided your software product needs to be a SaaS application development Java. You’ve no doubt picked SaaS because your customers would like a cloud based application that they can access from the web anywhere they need it. This also implies your customer base has no interest in maintaining an IT staff to maintain software and equipment in-house. They are also interested in the low cost of ownership, on demand scalability, tailored Service Level Agreements, and the fact that “someone else” is worrying about upgrades, feature development, security, and all the other responsibilities that come from in-house development.
+So you've decided your software product needs to be a SaaS application development Java. You've no doubt picked SaaS because your customers would like a cloud based application that they can access from the web anywhere they need it. This also implies your customer base has no interest in maintaining an IT staff to maintain software and equipment in-house. They are also interested in the low cost of ownership, on demand scalability, tailored Service Level Agreements, and the fact that “someone else” is worrying about upgrades, feature development, security, and all the other responsibilities that come from in-house development.
 
 ![SaaS application development Java community ecosystem](/static/img/2016/05/word-image-3.jpg)
 
@@ -19,13 +19,13 @@ SaaS Strengths (courtesy of [Rishabh Software](http://www.rishabhsoft.com/))
 
 ### Is Java the best choice?
 
-You’ve probably decided on [SaaS application development](http://www.issart.com/blog/java-saas-application-development/) because the developers you’ve chosen to work with recommended Java. In the interests of comprehensiveness, there are several other choices, including:
+You've probably decided on [SaaS application development](http://www.issart.com/blog/java-saas-application-development/) because the developers you've chosen to work with recommended Java. In the interests of comprehensiveness, there are several other choices, including:
 
 PHP – very common and easy to work with, but less structured, which requires developers to be more disciplined—thus both quality and reliability can suffer. Facebook is built on PHP.
 
-JavaScript – it’s very cool that the browser client can be written in the same language as the application, but as there are fewer competent JS developers in the universe it can be more expensive. Walmart is built on JS.
+JavaScript – it's very cool that the browser client can be written in the same language as the application, but as there are fewer competent JS developers in the universe it can be more expensive. Walmart is built on JS.
 
-Ruby – it’s fast and favored by programmers, but it’s subject to code dependencies on underlying software. Twitter is built on Ruby.
+Ruby – it's fast and favored by programmers, but it's subject to code dependencies on underlying software. Twitter is built on Ruby.
 
 Python – is powerful and elegant but can be difficult to maintain. Pinterest is built on Python.
 
@@ -33,7 +33,7 @@ C# – an excellent choice for apps being developed in Microsoft environments. G
 
 Java – runs slightly slower and generally requires more memory, but is an excellent choice for a wide variety of platforms and is easily ported to Android should the need arise. LinkedIn is built on Java.
 
-While the application or the environment may heavily favor one choice over the others, most applications can be built with any language. The most important thing is to have a strong development team that’s facile and comfortable with the language chosen.
+While the application or the environment may heavily favor one choice over the others, most applications can be built with any language. The most important thing is to have a strong development team that's facile and comfortable with the language chosen.
 
 Al that said, Java is an all-around good choice because it requires more experienced and professional developers, facilitates solid structure and documentation, and development resources for it are readily available for maintenance down the road or augmenting the team should the need arise.
 
@@ -63,7 +63,7 @@ Modules should have a “stateless” design with respect to other components in
 
 #### Efficiency:
 
-The whole idea behind SaaS is efficiency. The developer only has to build and maintain one application running in a cloud environment that they have to specify, maintain and control. The benefits to the end user is a very convenient “pay as you go” model that requires no in-house hardware or IT team. Licenses don’t have to be maintained, equipment doesn’t depreciate, and applications can be scaled up or down or switched without huge capital considerations.
+The whole idea behind SaaS is efficiency. The developer only has to build and maintain one application running in a cloud environment that they have to specify, maintain and control. The benefits to the end user is a very convenient “pay as you go” model that requires no in-house hardware or IT team. Licenses don't have to be maintained, equipment doesn't depreciate, and applications can be scaled up or down or switched without huge capital considerations.
 
 Of course, to achieve maximum efficiency the initial architecture must properly consider and provide for many factors, including multi-tenancy, partitionability, and dynamic scalability.
 

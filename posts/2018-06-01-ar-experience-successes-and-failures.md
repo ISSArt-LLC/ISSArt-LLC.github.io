@@ -33,7 +33,7 @@ The initial idea was very simple: to catch a project logo and then to show the i
 - Find and recognize a marker;
 - Evaluate its position relative to the camera.
 
-To save time and avoid reinventing a wheel, we looked for a ready solution. Vuforia is an indisputable hit here. But it isn’t free. So, we took another library – ARToolkit. The documentation is far from being perfect, the source code isn’t readable in some places. … But it works!
+To save time and avoid reinventing a wheel, we looked for a ready solution. Vuforia is an indisputable hit here. But it isn't free. So, we took another library – ARToolkit. The documentation is far from being perfect, the source code isn't readable in some places. … But it works!
 
 The first step brought about the first trouble: nicely decorated logos are… decorated too nicely! The stars are very large, the logos of the projects are low-contrast and small. It makes all logos look the same.
 
@@ -51,8 +51,8 @@ ARToolkit is able to track multiple markers in the same frame. It assigns an ID 
 The string we pass to addMarker may have the following formats:
 
 - single;data/hiro.patt;80 – a single marker from data/hiro.patt file. Its physical size is expected to be 80х80mm;
-- single\_buffer;80;buffer=234 221 237… – a single 80х80mm marker, but the content is right in this string, not a separate file;
-- single\_barcode;;80 – barcode marker. Looks like not implemented: [ARPattern.cpp](https://github.com/artoolkit/artoolkit5/blob/master/lib/SRC/ARWrapper/ARPattern.cpp#L115).
+- single_buffer;80;buffer=234 221 237… – a single 80х80mm marker, but the content is right in this string, not a separate file;
+- single_barcode;;80 – barcode marker. Looks like not implemented: [ARPattern.cpp](https://github.com/artoolkit/artoolkit5/blob/master/lib/SRC/ARWrapper/ARPattern.cpp#L115).
 - multi;data/multi/marker.dat – multiple markers treated as a single one. Each marker is described in a separate file. The file passed here contains a list of markers and their mutual positions.
 - nft;data/nft/pinball – an ordinary colored image. ARToolkit can recognize such images too. The [SURF](https://en.wikipedia.org/wiki/Speeded_up_robust_features) is used in this case.
 
@@ -126,7 +126,7 @@ As a result, we have 4×4 matrix. Pass it to OpenGL and voila – we are able to
 
 ##### AR Glasses
 
-It is cool to see something drawn over the marker on the smartphone screen. But it isn’t completely augmented reality. To get complete AR experience, a user should see real objects directly with eyes, not on the screen. AR glasses provide this feature. They contain two small transparent screens: one in front of the left eye, and one in front of the right one. We can draw something on these screens. The user will see it over real objects – this is AR way!
+It is cool to see something drawn over the marker on the smartphone screen. But it isn't completely augmented reality. To get complete AR experience, a user should see real objects directly with eyes, not on the screen. AR glasses provide this feature. They contain two small transparent screens: one in front of the left eye, and one in front of the right one. We can draw something on these screens. The user will see it over real objects – this is AR way!
 
 We have used Epson Moverio BT-300 smart glasses. They work on Android 5.0 and have 1280×720 “virtual” screen (actually two 640×720 physical screens).
 
@@ -136,26 +136,26 @@ So, we need to show the project logo and info on these screens. But… where? Re
 
 This is a moment where math begins. Math is not provided by ARToolkit. Math called “projective geometry”, where every point has a “redundant” coordinate equal to one. This geometry describes relation between the object coordinates in the world and in the camera frame. It can also describe relations between two frames showing the same object from two different perspectives.
 
-![](/static/img/2018/05/pinhole.png) This relation is what we actually need. More precisely, we need an answer to the question “Where should we draw the point \[math\]\\mathbf{x} = (x,y,1)^T\[/math\] on the screen to align it with the world point \[math\]\\mathbf{X} = (X,Y,Z,1)^T\[/math\] that user’s eye sees?” In other words, where the line “eye – point \[math\]\\mathbf{X}\[/math\]” intersects the screen?
+![](/static/img/2018/05/pinhole.png) This relation is what we actually need. More precisely, we need an answer to the question “Where should we draw the point \[math\]\\mathbf{x} = (x,y,1)^T\[/math\] on the screen to align it with the world point \[math\]\\mathbf{X} = (X,Y,Z,1)^T\[/math\] that user's eye sees?” In other words, where the line “eye – point \[math\]\\mathbf{X}\[/math\]” intersects the screen?
 
-Let’s place the world CS origin against the eye. Let’s define the distance between the eye and the glasses screen as \[math\]f\[/math\]. Similarity of triangles gives \[math\]x = \\frac{X f}{Z}, \\; y = \\frac{Y f}{Z}\[/math\].
+Let's place the world CS origin against the eye. Let's define the distance between the eye and the glasses screen as \[math\]f\[/math\]. Similarity of triangles gives \[math\]x = \\frac{X f}{Z}, \\; y = \\frac{Y f}{Z}\[/math\].
 
 Now let us move WCS origin to a free position. Now the relation between the screen coordinates \[math\]\\mathbf{x}\[/math\] and the world coordinates \[math\]\\mathbf{X}\[/math\] is expressed by the equation \[math\]\\mathbf{x} \\parallel P \\mathbf{X}\[/math\], where \[math\]P\[/math\] is a 3х4 matrix, \[math\]\\parallel\[/math\] means equality of two vectors up to scale, also known as collinearity.
 
-To get the exact equality, let’s make the third coordinate of \[math\]\\mathbf{x}\[/math\] equal to one (remember that we are using homogeneous coordinates): \[math\](x,y,1)^T =\\left(\\frac{P\_1 X}{P\_3 X}, \\frac{P\_2 X}{P\_3 X}, \\frac{P\_3 X}{P\_3 X}\\right)^T\[/math\].
+To get the exact equality, let's make the third coordinate of \[math\]\\mathbf{x}\[/math\] equal to one (remember that we are using homogeneous coordinates): \[math\](x,y,1)^T =\\left(\\frac{P_1 X}{P_3 X}, \\frac{P_2 X}{P_3 X}, \\frac{P_3 X}{P_3 X}\\right)^T\[/math\].
 
-Now let’s find the \[math\]P\[/math\] matrix. To do it, we need multiple pairs of the points \[math\]\\mathbf{x}\\leftrightarrow\\mathbf{X}\[/math\]. Each pair fixes the collinearity \[math\]\\mathbf{x} \\parallel P \\mathbf{X}\[/math\]. Remember that the cross product of collinear vectors is zero, so \[math\]\\mathbf{x} \\times P \\mathbf{X} = 0\[/math\]. This vector equation produces three scalar equations for \[math\]P\[/math\] matrix elements. One of these equations is dependent, so, we get two equations for \[math\]P\[/math\] from every \[math\]\\mathbf{x}\\leftrightarrow\\mathbf{X}\[/math\] pair. The whole 3×4 matrix \[math\]P\[/math\] could be found using six pairs of \[math\]\\mathbf{x}\\leftrightarrow\\mathbf{X}\[/math\]. These pairs produce the system \[math\]A \\mathbf{p} = 0\[/math\], where \[math\]\\mathbf{p}\[/math\] stands for the elements of the matrix \[math\]P\[/math\] flattened to a single vector.
+Now let's find the \[math\]P\[/math\] matrix. To do it, we need multiple pairs of the points \[math\]\\mathbf{x}\\leftrightarrow\\mathbf{X}\[/math\]. Each pair fixes the collinearity \[math\]\\mathbf{x} \\parallel P \\mathbf{X}\[/math\]. Remember that the cross product of collinear vectors is zero, so \[math\]\\mathbf{x} \\times P \\mathbf{X} = 0\[/math\]. This vector equation produces three scalar equations for \[math\]P\[/math\] matrix elements. One of these equations is dependent, so, we get two equations for \[math\]P\[/math\] from every \[math\]\\mathbf{x}\\leftrightarrow\\mathbf{X}\[/math\] pair. The whole 3×4 matrix \[math\]P\[/math\] could be found using six pairs of \[math\]\\mathbf{x}\\leftrightarrow\\mathbf{X}\[/math\]. These pairs produce the system \[math\]A \\mathbf{p} = 0\[/math\], where \[math\]\\mathbf{p}\[/math\] stands for the elements of the matrix \[math\]P\[/math\] flattened to a single vector.
 
-This solution is very sensitive to errors. This effect could be decreased by using more than six pairs. It will give the system on \[math\]P\[/math\] containing more equations than unknowns (we have twelve unknowns). Such system doesn’t have an exact solution. But the approximated one is more robust. This solution could be found by expressing the matrix \[math\]A\[/math\] through its singular value decomposition \[math\]A = U S V^T\[/math\], where matrices \[math\]U\[/math\] and \[math\]V\[/math\] are orthonormal, and the matrix \[math\]S\[/math\] is diagonal. The elements on its diagonal are sorted in the descending order. After this decomposition the rightmost column of \[math\]V\[/math\] is a solution, i.e. \[math\]p = V(:, end)\[/math\].
+This solution is very sensitive to errors. This effect could be decreased by using more than six pairs. It will give the system on \[math\]P\[/math\] containing more equations than unknowns (we have twelve unknowns). Such system doesn't have an exact solution. But the approximated one is more robust. This solution could be found by expressing the matrix \[math\]A\[/math\] through its singular value decomposition \[math\]A = U S V^T\[/math\], where matrices \[math\]U\[/math\] and \[math\]V\[/math\] are orthonormal, and the matrix \[math\]S\[/math\] is diagonal. The elements on its diagonal are sorted in the descending order. After this decomposition the rightmost column of \[math\]V\[/math\] is a solution, i.e. \[math\]p = V(:, end)\[/math\].
 
 The procedure we used to obtain pairs of points is the following:
 
 | ![](/static/img/2018/05/eye_cam.png) | 1. The user places glasses on his/her head and looks at the target marker; 2. The point appears on the screen. This is the point named \[math\]x\[/math\] above; 3. The user moves his/her head to align the point on the screen with the marker and then presses the button; 4. The camera catches the marker position, that is \[math\]X\[/math\] point. |
 |---|---|
 
-These steps are performed for the left and the right eyes separately. As a result, two matrices \[math\]P\_l\[/math\] and \[math\]P\_r\[/math\] are obtained. After passing these matrices to OpenGL, we are able to draw the logo and info in 3D, as we did on the smartphone. But now the image drawn follows the marker directly seen by eye. This is what AR really is – virtual objects follow real ones seen by the user.
+These steps are performed for the left and the right eyes separately. As a result, two matrices \[math\]P_l\[/math\] and \[math\]P_r\[/math\] are obtained. After passing these matrices to OpenGL, we are able to draw the logo and info in 3D, as we did on the smartphone. But now the image drawn follows the marker directly seen by eye. This is what AR really is – virtual objects follow real ones seen by the user.
 
-All these procedures give the result for a particular person. Having another eye distance or a nose shape, user can’t achieve proper alignment between drawn and seen objects.
+All these procedures give the result for a particular person. Having another eye distance or a nose shape, user can't achieve proper alignment between drawn and seen objects.
 
 It is (almost) impossible to perform calibration for every new user. So, we implemented an adjustment function for our app. It allows the user to move the virtual image and change the distance between the left and right images. It works, but it takes a lot of time to explain the user how to achieve the result.
 

@@ -131,6 +131,6 @@ There can be some downsides though. Particularly, it is more difficult to write 
 
 #### New World, New Solutions
 
-In today’s world, big business and small business alike have to find better solutions to deal with the increase in data management and access to data. While some of the concepts discussed above were perhaps only for a select few, several years ago, they are becoming more applicable to smaller operations. We may not be there quite yet, but it is coming.
+In today's world, big business and small business alike have to find better solutions to deal with the increase in data management and access to data. While some of the concepts discussed above were perhaps only for a select few, several years ago, they are becoming more applicable to smaller operations. We may not be there quite yet, but it is coming.
 
 We have experience on all levels of multithreaded data management system development and web development in general. We would love to know what your thoughts are and if you have a technology need we can help you with. Do you think multithreading might be a viable option for your database? Let us know, we would love to hear from you and hear your questions or comments.

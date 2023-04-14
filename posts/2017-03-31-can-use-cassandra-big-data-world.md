@@ -34,18 +34,18 @@ Cassandra saves data in memory (*memtable*) and in append-only (*commit*) log.
 
 If *memtable* contents limit is exceeded (that is configurable), the data is flushed to the permanent storage (*SSTable*) and the commit log is purged. Commit log itself is used for recovery of in-memory information after power outage or other hardware failures.
 
-The key point here is that Cassandra does the memory-first writes, so it’s extremely fast.
+The key point here is that Cassandra does the memory-first writes, so it's extremely fast.
 
 Assume, we are working with data in the area of Internet of Things (IoT). So, initially we have many sensors and other devices liked over wired connections, network (WiFi) or Bluetooth. Initially, we need to gather their real-time data for further processing in the single place. Sensor values should be written to storage as fast as possible, because new data is expected soon. And Cassandra provides this ability.
 
 ## Cassandra data requests
 
-There is a special subset of SQL created for querying. It is called CQL and though from the first sight it looks more like SQL, that’s not really true. It’s very limited in syntax and functionality. For instance, the latest versions of Cassandra have no joins and support aggregation only within a single partition. So there is no way to find maximum, sum or average within the whole dataset using CQL, and that means no real-time data analysis.But you don’t expect key-value storage would deal with it out-of-the-box, right?
+There is a special subset of SQL created for querying. It is called CQL and though from the first sight it looks more like SQL, that's not really true. It's very limited in syntax and functionality. For instance, the latest versions of Cassandra have no joins and support aggregation only within a single partition. So there is no way to find maximum, sum or average within the whole dataset using CQL, and that means no real-time data analysis.But you don't expect key-value storage would deal with it out-of-the-box, right?
 
 In conclusion we could mark two key points here:
 
 1. As CQL is limited, you need to model the tables to fit the queries needed for support. It means that you should forget about RDBMS normalization. One table per query type is a typical scenario, so that many tables may repeat the same data. Seriously, you need to think over use-cases along with business analysts thoroughly [before database tables creation](http://www.datastax.com/dev/blog/basic-rules-of-cassandra-data-modeling).
-2. You need some external tools to analyze data (aggregation, joining data from multiple tables, etc.) . What we recommend to use, is Cassandra data processing via [Apache Spark](http://spark.apache.org/). You can analyze data via Spark streaming batches directly, or retrieve the whole Cassandra data via Spark to be put in the HDFS first. The decision also depends on your development team skills. Assume, we have skilled DBAs with strong SQL background. So it would be more effective to simply put data in HDFS first and do analytics using [Apache Hive](https://hive.apache.org/) HQL queries later. Or, another case, you have senior scala developers in your team and you’d prefer to have scala Spark jobs for analytics instead.
+2. You need some external tools to analyze data (aggregation, joining data from multiple tables, etc.) . What we recommend to use, is Cassandra data processing via [Apache Spark](http://spark.apache.org/). You can analyze data via Spark streaming batches directly, or retrieve the whole Cassandra data via Spark to be put in the HDFS first. The decision also depends on your development team skills. Assume, we have skilled DBAs with strong SQL background. So it would be more effective to simply put data in HDFS first and do analytics using [Apache Hive](https://hive.apache.org/) HQL queries later. Or, another case, you have senior scala developers in your team and you'd prefer to have scala Spark jobs for analytics instead.
 
 ## Working with IoT time series data
 
@@ -57,7 +57,7 @@ Assume, we need to store sensor data and the only real-time query needed is to s
 sensor_id text, date text, event_time timestamp, value text, PRIMARY KEY ((sensor_id, date),event_time)
 );
 `
-*Measurement\_by\_day* table has composite partition key (*sensor\_id, date*) and *event\_time* as clustering column. So you can perform a common select query in the form of
+*Measurement_by_day* table has composite partition key (*sensor_id, date*) and *event_time* as clustering column. So you can perform a common select query in the form of
 
 `SELECT * FROM measurement_by_day WHERE sensor_id ="temp_16" AND date="2017-22-03"`
 
@@ -67,21 +67,21 @@ You can find more information about timeseries data and Cassandra [here](https:/
 
 ## Big Data Storage Scalability
 
-Another important thing about big data storage is scalability. It’s great, when we have no need in deep system architecture design changes to support increasing amount of data. Besides, for data storage we typically prefer to have horizontal scalability (adding more servers to the existing data center) to avoid downtime.
+Another important thing about big data storage is scalability. It's great, when we have no need in deep system architecture design changes to support increasing amount of data. Besides, for data storage we typically prefer to have horizontal scalability (adding more servers to the existing data center) to avoid downtime.
 
 [![](/static/img/2017/03/scalability.png)](/static/img/2017/03/scalability.png)
 
 Cassandra provides linear scalability. You could simply add new nodes to the existing data center online to improve performance. For instance, assume there are *N* Cassandra nodes within your data center so they handle *X* transactions. If you double your nodes (2\**N*), the system will be able to support twice(2\**X*) as many transactions per second .
 
-Moreover, there is multi data center replication, so you don’t have to limit deployment within a single DC. This feature is provided out-of-the-box and consistency (see [later](https://docs.datastax.com/en/cassandra/3.0/cassandra/dml/dmlConfigConsistency.html)) level could be set considering data centers replicas.
+Moreover, there is multi data center replication, so you don't have to limit deployment within a single DC. This feature is provided out-of-the-box and consistency (see [later](https://docs.datastax.com/en/cassandra/3.0/cassandra/dml/dmlConfigConsistency.html)) level could be set considering data centers replicas.
 
 ## Tunable read/write consistency
 
-Consistency is a property of distributed system and it reflects that every read receives the most recent write or error (that is a equivalent to have a single up-to-date copy of the data). Don’t treat it like boolean value (either the system has consistency, or not), it’s more like fuzzy logic value (different levels of confidence). You may recollect the CAP theorem and [the current thoughts about it](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed).
+Consistency is a property of distributed system and it reflects that every read receives the most recent write or error (that is a equivalent to have a single up-to-date copy of the data). Don't treat it like boolean value (either the system has consistency, or not), it's more like fuzzy logic value (different levels of confidence). You may recollect the CAP theorem and [the current thoughts about it](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed).
 
 Cassandra provides tunable consistency for read and write requests [independently](https://docs.datastax.com/en/cassandra/3.0/cassandra/dml/dmlConfigConsistency.html).
 
-Backing to the IoT, users do not always need the latest sensor value. Sometimes they’re fine with the value measured a second before. So we really don’t need to return the record after all replicas have responded.
+Backing to the IoT, users do not always need the latest sensor value. Sometimes they're fine with the value measured a second before. So we really don't need to return the record after all replicas have responded.
 
 Another case is simple key-value storage. You could also populate all nodes with exactly the same data beforehand, and using consistency level “ONE” could be the reasonable.
 
@@ -91,13 +91,13 @@ To summarize, we could define two common roles of Cassandra:
 
 **1. Cassandra as raw data storage.**
 
-So we put any appearing data right in Cassandra and that’s fast. Then we do batch processing via Spark batch job, which either performs direct Cassandra data analysis or puts data into HDFS for further processing.
+So we put any appearing data right in Cassandra and that's fast. Then we do batch processing via Spark batch job, which either performs direct Cassandra data analysis or puts data into HDFS for further processing.
 
 **2. Cassandra as final data storage.**
 
-We’ve already performed some data processing and then we put final data in the structure suitable for end-user needs. So all we want is to provide very fast key-based search to end-user.
+We've already performed some data processing and then we put final data in the structure suitable for end-user needs. So all we want is to provide very fast key-based search to end-user.
 
-For instance, logistics company accumulates tracking operations information in the data warehouse as soon as the operation is received. Business analyst wants to see daily tracking statistics (parcels shipping delays, average service time, etc.) and he doesn’t care about live view (in terms of minutes or even hours), he is more interested in the history of the previous days (which would not be changed). Special scripts could process daily tracking data, do aggregations and put the results into Cassandra. So analyst could use date as a key and get report as a value.
+For instance, logistics company accumulates tracking operations information in the data warehouse as soon as the operation is received. Business analyst wants to see daily tracking statistics (parcels shipping delays, average service time, etc.) and he doesn't care about live view (in terms of minutes or even hours), he is more interested in the history of the previous days (which would not be changed). Special scripts could process daily tracking data, do aggregations and put the results into Cassandra. So analyst could use date as a key and get report as a value.
 
 ## Conclusion
 

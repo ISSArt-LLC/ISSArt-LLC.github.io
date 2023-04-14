@@ -15,7 +15,7 @@ In the present scenario, AI has taken the lead in the technology industry. It is
 
 When most industries are motivated to use AI to enhance their services, why will the PCB industry stay behind?
 
-Talking about PCB, also known as Printed Circuit Board, a board composed of several electronic components connected through pathways. Such electric components placed on top of a board connected marks a device’s functionality.
+Talking about PCB, also known as Printed Circuit Board, a board composed of several electronic components connected through pathways. Such electric components placed on top of a board connected marks a device's functionality.
 
 Integrating AI in designing a PCB can be a helpful idea considering the number of difficulties it will lessen. AI-based auto-routing function for designing a PCB can be helpful, and it has various other benefits as well.
 
@@ -23,7 +23,7 @@ However, integration of AI in PCB design is not that easy of a task. It would be
 
 Again, AI Integration can have different effects on the workforce– both negative and positive. However, how a worker takes it; depends upon themselves.
 
-Then again, the knowledge of AI is necessary. If you don’t know what AI is, how will you integrate it into your PCB design? Let’s get into the details of AI and discuss AI and PCB design integration.
+Then again, the knowledge of AI is necessary. If you don't know what AI is, how will you integrate it into your PCB design? Let's get into the details of AI and discuss AI and PCB design integration.
 
 **What Is AI?**
 
@@ -41,7 +41,7 @@ Before learning about the integration of AI in EDA tools, it is essential to kno
 
 In short, EDA or Electronic Designing Automation tools are a part of the designing process of a PCB. You can design your PCB or any integrated circuit boards using EDA Tools.
 
-In such processes, manual routing comes to use– specifying the signal routing’s path manually. Through the Manual routing process, one can plan the route for the silicon track manually. No matter how beneficial the process may seem, it has quite complications since it is time-consuming. You would have loads of difficulties while manual routing a PCB design, and it will take loads of time.
+In such processes, manual routing comes to use– specifying the signal routing's path manually. Through the Manual routing process, one can plan the route for the silicon track manually. No matter how beneficial the process may seem, it has quite complications since it is time-consuming. You would have loads of difficulties while manual routing a PCB design, and it will take loads of time.
 
 Now that we live in an era where people always want their work to be fast and efficient, the manual routing process may seem to be a burden. However, this is the reason for the existence of AIs. AI is made to make your work simpler and less time-consuming.
 
@@ -63,13 +63,13 @@ The process for PCB design can become fast-paced as a result of AI integration. 
 
 **Better Outputs**
 
-When designing PCB, the main thing that matters is the resulting product after such efforts put into the process. AI can produce better results once integrated with the PCB design. The resulting output would be better-functioning as a result of artificial intelligence’s integration.
+When designing PCB, the main thing that matters is the resulting product after such efforts put into the process. AI can produce better results once integrated with the PCB design. The resulting output would be better-functioning as a result of artificial intelligence's integration.
 
 **Reduction In Cost**
 
 Integrating AI can help in lessening the incurred costs. It can be highly beneficial for you. Since the AI works on its own, you would save labor cost, extra operational cost, and the cost of human expertise as well.
 
-Moreover, it is less likely for your designing process to go to waste after AI integration. It means that you are unlikely to redesign a PCB if you have already integrated AI. AI is built in a manner that doesn’t make mistakes. So you will be safe from designing a PCB all over again.
+Moreover, it is less likely for your designing process to go to waste after AI integration. It means that you are unlikely to redesign a PCB if you have already integrated AI. AI is built in a manner that doesn't make mistakes. So you will be safe from designing a PCB all over again.
 
 Thus, you will also be free from such types of costs.
 
@@ -95,7 +95,7 @@ The results of AI may be advantageous. However, without proper knowledge of AI a
 
 Lack of knowledge and expertise in such matters may lead to problems in the future.
 
-If you or your PCB experts don’t have technical expertise in AI, then it is better to get advanced training regarding the subject. It may cost some resources. However, it will show better results in the future.
+If you or your PCB experts don't have technical expertise in AI, then it is better to get advanced training regarding the subject. It may cost some resources. However, it will show better results in the future.
 
 **Improvements:
 
@@ -111,13 +111,13 @@ They may fear the loss of work which in turn will lead to loss of income as well
 
 [According to Dr. Paul Musto in an interview](http://iconnect007.uberflip.com/i/1028393-design007-sept2018/25?) by Andy Shaughnessy, AI is to gain a role of crucial importance in product development.
 
-When considering the effects of AI in Musto’s perspective, there are several merits and demerits of AI Integration with PCB design.
+When considering the effects of AI in Musto's perspective, there are several merits and demerits of AI Integration with PCB design.
 
 People may think that AI may replace human expertise or workforce. However, Musto is of the alternate view on this matter. Since electronic content is increasing day-by-day and its designing process, it is hardly possible for AI alone.
 
 What AI does is focusing and improving this aspect which the human workforce and difficulties are maintaining. AI helps the designing process to have better innovation initiatives and simulation techniques.
 
-What’s required here is not the elimination of the human workforce but their intervention. Human workers can provide more help in the design process if they get AI help. There would be an increment in their productivity level with the addition of AI. The upcoming technologies on AI and PCB design will require human intervention.
+What's required here is not the elimination of the human workforce but their intervention. Human workers can provide more help in the design process if they get AI help. There would be an increment in their productivity level with the addition of AI. The upcoming technologies on AI and PCB design will require human intervention.
 
 **Conclusion**
 

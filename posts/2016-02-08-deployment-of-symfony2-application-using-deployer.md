@@ -12,9 +12,9 @@ categories:
 
 Deployment of Symfony2 application may be a complex task, depending on the setup and the requirements of your application. On some projects we update the test server at least once a day. And production server about two times a week. Developers spend a lot of time on this routine process.
 
-**Let’s take a look at typical steps taken during deployment process:**
+**Let's take a look at typical steps taken during deployment process:**
 
-- Upload project’s code to the server
+- Upload project's code to the server
 - Install vendor dependencies via Composer
 - Install and dump your assets
 - Perform database migrations or rebuild database and fill it with data fixtures for test purposes
@@ -28,7 +28,7 @@ Deployment of Symfony2 application may be a complex task, depending on the setup
 - Clear of external cache systems. (ElasticSearch, Memcached, Redis, APC, Varnish, etc.)
 - Run tests
 
-**Manual deployment has a number of disadvantages.** In addition taking a lot of developer’s time, manual deployment is influenced by the human factor. There is a possibility of deployment bugs in cases where developer forgot to update cache, dump assets, etc. To avoid this issue, we suggest to use deployment tools.
+**Manual deployment has a number of disadvantages.** In addition taking a lot of developer's time, manual deployment is influenced by the human factor. There is a possibility of deployment bugs in cases where developer forgot to update cache, dump assets, etc. To avoid this issue, we suggest to use deployment tools.
 
 **There are plenty of tools to automate deployment process, such as:**
 
@@ -38,21 +38,21 @@ Deployment of Symfony2 application may be a complex task, depending on the setup
 4. [Magallanes](http://magephp.com). (PHP)
 5. [Deployer](http://deployer.org). (PHP)
 
-The first three deployment tools require us to install and setup Ruby or Python interpreter on the server. In some cases this is not possible: shared hosting or not enough permissions. Also configure deployment tool using Ruby/Python could be an issue for PHP developers, if they are not familiar with Ruby/Python syntax. That’s why we choose from Magallanes and Deployer.
+The first three deployment tools require us to install and setup Ruby or Python interpreter on the server. In some cases this is not possible: shared hosting or not enough permissions. Also configure deployment tool using Ruby/Python could be an issue for PHP developers, if they are not familiar with Ruby/Python syntax. That's why we choose from Magallanes and Deployer.
 
-**Magallanes** includes built-in Symfony2 tasks for installation/dumping assets and clear/warmup cache. It’s definitely not enough, so we’ll have to create custom tasks. Custom task is a class that extends Mage\\Task\\AbstractTask. Configuring Magallanes, you can’t see what logic is behind the task name, so you’ll need to find task class and read the code to make sure this task will do what you need.
+**Magallanes** includes built-in Symfony2 tasks for installation/dumping assets and clear/warmup cache. It's definitely not enough, so we'll have to create custom tasks. Custom task is a class that extends Mage\\Task\\AbstractTask. Configuring Magallanes, you can't see what logic is behind the task name, so you'll need to find task class and read the code to make sure this task will do what you need.
 
-**Deployer** is a lightweight and easy to use tool to perform all deploy routines. There is built-in recipe to deploy Symfony2 project (also there are recipes for other PHP Frameworks and CMS), which includes all typical steps that need to be taken during deployment process. All you need is extend this recipe and create additional tasks, depending on your project. That’s why Deployed is our choice.
+**Deployer** is a lightweight and easy to use tool to perform all deploy routines. There is built-in recipe to deploy Symfony2 project (also there are recipes for other PHP Frameworks and CMS), which includes all typical steps that need to be taken during deployment process. All you need is extend this recipe and create additional tasks, depending on your project. That's why Deployed is our choice.
 
-**Let’s try to deploy our Symfony2 application to production server using Deployer.**
+**Let's try to deploy our Symfony2 application to production server using Deployer.**
 
-- First of all, install Deployer. It could be done by using Composer, by downloading deployer.phar file or by cloning Github repository. We’ll use the first approach. ```
-    <pre class="EnlighterJSRAW" data-enlighter-language="shell">$ composer require deployer/deployer:~3.0
+- First of all, install Deployer. It could be done by using Composer, by downloading deployer.phar file or by cloning Github repository. We'll use the first approach. ```
+    $ composer require deployer/deployer:~3.0
     ```
-- Second step is to create deploy.php file in your project’s root directory. ```
-    <pre class="EnlighterJSRAW" data-enlighter-language="php"><?php
+- Second step is to create deploy.php file in your project's root directory. ```
+    <?php
     require 'vendor/deployer/deployer/recipe/symfony.php'; 
-    
+
     // Define a server for deployment.
     // Let's name it "prod".
     server('prod', '127.0.0.1')
@@ -60,20 +60,20 @@ The first three deployment tools require us to install and setup Ruby or Python 
         ->password('password') // Define SSH user's password
         ->stage('production') // Define stage name
         ->env('deploy_path', '/home/user/project'); // Define the base path to deploy your project to.
-    
+
     // Specify the repository from which to download your project's code.
     set('repository', 'git@github.com:org/app.git');
     ```
 - Now open up a terminal in your project directory and run the following command to deploy your application:
 
 ```
-<pre class="EnlighterJSRAW" data-enlighter-language="shell">$ php bin/dep deploy production
+$ php bin/dep deploy production
 ```
 
-**That’s it! You project has been deployed!** Symfony receipe performed the following actions: uploaded code to the server, created cache directories, setup permissions, installed vendor dependencies, installed and dumped assets, warmed up cache. This is typical deployment steps for Symfony2 projects. Let’s improve deployment script. We’ll add shared directories (which will be used by all releases) for user’s upload and setup additional task to install MopaBootstrapBundle fonts. To achieve this purpose, we’ll need to add following code to deploy.php.
+**That's it! You project has been deployed!** Symfony receipe performed the following actions: uploaded code to the server, created cache directories, setup permissions, installed vendor dependencies, installed and dumped assets, warmed up cache. This is typical deployment steps for Symfony2 projects. Let's improve deployment script. We'll add shared directories (which will be used by all releases) for user's upload and setup additional task to install MopaBootstrapBundle fonts. To achieve this purpose, we'll need to add following code to deploy.php.
 
 ```
-<pre class="EnlighterJSRAW" data-enlighter-language="php">// Add web/uploads to shared_dirs
+// Add web/uploads to shared_dirs
 set('shared_dirs', array_merge(get('shared_dirs'), [
     'web/uploads',
 ]));
@@ -92,18 +92,18 @@ task('mopa:bootstrap:font', function () {
 after('deploy:assetic:dump', 'mopa:bootstrap:font');
 ```
 
-Now when we run “php bin/dep deploy production” we’ll see web/uploads in shared directory with symlink from every release. And after “deploy:assetic:dump” task will be completed, “mopa:bootstrap:font” task will be triggered.
+Now when we run “php bin/dep deploy production” we'll see web/uploads in shared directory with symlink from every release. And after “deploy:assetic:dump” task will be completed, “mopa:bootstrap:font” task will be triggered.
 
 For production environment, all database structure changes should be implemented as migration. If you want to perform database migrations during deployment process, just add the following code to deploy.php.
 
 ```
-<pre class="EnlighterJSRAW" data-enlighter-language="php">after('deploy:vendors', 'database:migrate');
+after('deploy:vendors', 'database:migrate');
 ```
 
-For test environment in some cases we need to clean database and fill it with data fixtures. Let’s create task to do this job. Deployer can ask for confirmation to execute some actions. Let’s make sure that rebuild database is needed. This task will be executed only for “test” server.
+For test environment in some cases we need to clean database and fill it with data fixtures. Let's create task to do this job. Deployer can ask for confirmation to execute some actions. Let's make sure that rebuild database is needed. This task will be executed only for “test” server.
 
 ```
-<pre class="EnlighterJSRAW" data-enlighter-language="php">server('test', '127.0.0.1')
+server('test', '127.0.0.1')
     ->user('test')
     ->password('password')
     ->stage('testing')
@@ -124,17 +124,17 @@ after('deploy:assetic:dump', 'database:rebuild');
 And run deployment on test server.
 
 ```
-<pre class="EnlighterJSRAW" data-enlighter-language="shell">$ php bin/dep deploy testing
+$ php bin/dep deploy testing
 ```
 
 If something is wrong, a simple rollback to the previous release is supported by Deployer.
 
 ```
-<pre class="EnlighterJSRAW" data-enlighter-language="shell">$ php bin/dep rollback testing
+$ php bin/dep rollback testing
 ```
 
 **Get more examples and documentation [here](http://deployer.org/).**
 
-After the first time deployment process, you should configure your web server to serve your “web” directory inside “<deploy\_path>/current” directory. If you have no permissions to configure your web server, simply create symlink from your document root to “<deploy\_path>/current” directory.
+After the first time deployment process, you should configure your web server to serve your “web” directory inside “<deploy_path>/current” directory. If you have no permissions to configure your web server, simply create symlink from your document root to “<deploy_path>/current” directory.
 
 ***Happy Symfonying!***

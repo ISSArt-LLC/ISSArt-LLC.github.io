@@ -33,7 +33,7 @@ Scrum and Kanban differ from each other a lot. They are even aimed at different 
 
 More information about Scrum and Kanban and the the difference between both methodologies can be found in this [article](https://apiumhub.com/tech-blog-barcelona/scrum-vs-kanban-infographic/).
 
-Let’s make their similarities and differences simple:
+Let's make their similarities and differences simple:
 
 <div class="wp-caption aligncenter" id="attachment_2442" style="width: 934px">[![Common features of Kanban and Scrum](/static/img/2018/01/scrum-vs-kanban-comparison-diagram-common-agile-principles.png)](/static/img/2018/01/scrum-vs-kanban-comparison-diagram-common-agile-principles.png)Scrum and Kanban have both specialities and common features.
 
@@ -85,11 +85,11 @@ Moving from one method to another can be risky. Probably your current work metho
 
 Secondly try to prognose, what *amount of benefits* you will have additionally after the movement.
 
-And most important is that you probably don’t have to ruin Scrum to get to Kanban and vice versa. Just develop your current work process with adopting new principles (from another method) that will bring more value for the customer and the team.
+And most important is that you probably don't have to ruin Scrum to get to Kanban and vice versa. Just develop your current work process with adopting new principles (from another method) that will bring more value for the customer and the team.
 
-It is not good to throw one thing just to catch another. There are many market and technology challenges to be addressed by the software development team, and the change of the work method is yet another challenge that needs team’s energy and time.
+It is not good to throw one thing just to catch another. There are many market and technology challenges to be addressed by the software development team, and the change of the work method is yet another challenge that needs team's energy and time.
 
-But “by changing nothing, nothing changes’’. When the opportunities of the new approach are stronger than the risks to lose current properties, it is worth changing!
+But “by changing nothing, nothing changes''. When the opportunities of the new approach are stronger than the risks to lose current properties, it is worth changing!
 
 In this article we can only list changes that you may like to apply developing your current work method. Do not hesitate to leave your thoughts or questions in comments!
 
@@ -128,30 +128,30 @@ This is the opposite case. If your Kanban team is going to develop some Scrum pr
 
 ## Myths disproved
 
-Here are a number of widespread <span style="color: #ff0000;">**myths**</span> about the relation between Scrum and Kanban.
+Here are a number of widespread **myths** about the relation between Scrum and Kanban.
 
 Each myth is followed by the disprovements.
 
-1. <span style="color: #800000;">“Both Scrum and Kanban are just a sort of **Agile board** for sticky notes.”</span>
+1. “Both Scrum and Kanban are just a sort of **Agile board** for sticky notes.”
     - Scrum and Kanban (on Lean manufacturing) are approaches to work on software projects. It is far more than just a visualization of the workflow on a board. However, visualizations are crucial indeed.
-2. <span style="color: #800000;">“Kanban and Scrum are **not compatible**”</span>
+2. “Kanban and Scrum are **not compatible**”
     - As it is shown in our diagram above, Scrum and Kanban have a lot in common. The contradictions can hardly be found.
     - Both approaches are just about different principles. There are a lot of good examples of combining those principles on your project, such as Scrumban. Moreover, good Scrum teams follow all of the kanban principles and vice versa.
-3. <span style="color: #800000;">“It is always better **to start** from Scrum and move to Kanban for product **support**.”</span>
+3. “It is always better **to start** from Scrum and move to Kanban for product **support**.”
     - It may be better to move from Scrum to Kanban, because Scrum has a great potential of working in an unstable environment from scratch, while the project often has many degrees of freedom at its start.
-    - Support works such as maintenance and operations can be run in Scrum, not only in Kanban. Scrum doesn’t prohibit to release the results during the sprints continuously.
+    - Support works such as maintenance and operations can be run in Scrum, not only in Kanban. Scrum doesn't prohibit to release the results during the sprints continuously.
     - A project can be started in Kanban as well. Agility of Kanban enables fast adaptation of the work process for the product domain and specialities.
-4. <span style="color: #800000;">“Kanban is not applicable for **complex products**; Scrum is always better for development of complex products”</span>
+4. “Kanban is not applicable for **complex products**; Scrum is always better for development of complex products”
     - Scrum is optimized for complex products by design, as it is written in the Scrum Guide. And Kanban is applicable to the complex product development as well.
     - Both methods divide (decompose) complex tasks to pieces in backlog, however, the decomposition is often a sort of art in any approach. This decomposition provide teams with the required flexibility for the market demand and mitigating risks.
     - Kanban with its practices enforces teams to get the complex challenges done.
-5. <span style="color: #800000;">“**Planning** in Scrum is better than in Kanban”</span>
+5. “**Planning** in Scrum is better than in Kanban”
     - This myth could emerge from the fact, that Scrum uses the strict cadence of Sprints and every Sprint starts from the Sprint planning meeting. The team makes estimates based on results of the past sprints.
     - But Kanban is not against prognoses and estimations either.
     - The correctness of the prognosis depends on the team product and technology conditions in both methods.
-6. <span style="color: #800000;">“All working groups in the **large team** should run only Scrum or only Kanban”</span>
-    - On one of ISS Art’s large projects, we decided to give the team members rights to vote for running Scrum or Kanban.
-7. <span style="color: #800000;">“Scrum is **revolutionary**, while Kanban is **evolutionary**“</span>
+6. “All working groups in the **large team** should run only Scrum or only Kanban”
+    - On one of ISS Art's large projects, we decided to give the team members rights to vote for running Scrum or Kanban.
+7. “Scrum is **revolutionary**, while Kanban is **evolutionary**“
     - Maybe this myth emerged from the fact, that Scrum can change the product after each sprint dramatically. In fact, both methodologies are revolutionary and evolutionary at the same time.
     - However, Kanban can be revolutionary as well, it builds the manufacturing system that is ready for changes and even shocks either from the market or from the internal conditions.
     - Moreover, Scrum enables the incremental improvements of the product and the team itself, sprint by sprint. It is evolutionary by design. And Scrum does not forbid continuous delivery of small frequent changes.
@@ -161,12 +161,12 @@ Each myth is followed by the disprovements.
 
 It was shown that principles of Scrum and Kanban can be applied to a project at the same time. So, the discussion of their contradictions is actually incorrect.
 
-You don’t have to choose between the two worlds, you can (or even should) exploit the most applicable principles of Scrum and Kanban in order to make your project flourish.
+You don't have to choose between the two worlds, you can (or even should) exploit the most applicable principles of Scrum and Kanban in order to make your project flourish.
 
-<span style="color: #0000ff;">**Let’s discuss your thoughts and questions about the relation between Scrum and Kanban in the comments section below!**</span>
+**Let's discuss your thoughts and questions about the relation between Scrum and Kanban in the comments section below!**
 
-<span style="color: #999999;">**References**</span>
+**References**
 
-- <span style="color: #999999;">[Scrum and Kanban: Make your teams better by busting common myths](https://www.youtube.com/watch?v=jeKM3iDtLrg)</span>
-- <span style="color: #999999;">[3 Differences Between Scrum and Kanban You Need to Know](https://www.cprime.com/2015/02/3-differences-between-scrum-and-kanban-you-need-to-know/)</span>
-- <span style="color: #999999;">[Myths about Kanban for Software Development](https://kanbanize.com/blog/myths-about-kanban-for-software-development/)</span>
+- [Scrum and Kanban: Make your teams better by busting common myths](https://www.youtube.com/watch?v=jeKM3iDtLrg)
+- [3 Differences Between Scrum and Kanban You Need to Know](https://www.cprime.com/2015/02/3-differences-between-scrum-and-kanban-you-need-to-know/)
+- [Myths about Kanban for Software Development](https://kanbanize.com/blog/myths-about-kanban-for-software-development/)

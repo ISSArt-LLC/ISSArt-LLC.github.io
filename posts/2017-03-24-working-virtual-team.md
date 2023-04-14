@@ -21,7 +21,7 @@ As a [Top Custom Software Development Company](https://www.softwaredevelopmentco
 
 No doubt, one may find some really significant drawbacks:
 
-- First of all, people may live in different time zones when one person must be awake by 7 a.m., while another one has to stay in work mode until well past 9 p.m. We have such projects all the time with our clients located in the USA or Canada, for instance, and our team working from Moscow, Omsk and Krasnoyarsk (that’s 3 time-zones in Russia).
+- First of all, people may live in different time zones when one person must be awake by 7 a.m., while another one has to stay in work mode until well past 9 p.m. We have such projects all the time with our clients located in the USA or Canada, for instance, and our team working from Moscow, Omsk and Krasnoyarsk (that's 3 time-zones in Russia).
 - Moreover, it is quite a challenge to get work of geographically dispersed team well-organised and maintained as communication is held through e-mail, video conferences and more rarely via telephone calls rather than face to face. To maintain this pretty complicated process we have highly-qualified project managers working alongside with team-leads.
 - On top of that, having individual members who have never possibly worked in one team, a team-leader or manager needs to be able to summarise relevant information from the discussions so that every single member of the team has the right vision. This goal is achieved with tools provided by Project management methodologies.
 
