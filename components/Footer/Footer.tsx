@@ -6,7 +6,7 @@ import React from "react";
 const Footer = () => (
   <>
     <AppBar
-      position="fixed"
+      position="absolute"
       elevation={0}
       component="footer"
       color="default"
