@@ -33,9 +33,9 @@ The key Agile feature is the work on trust. The customer and the team work toget
 
 An example from our Agile experience:
 
-*One of our European customers asked us to adopt a rule of “Common sense” without pining ourselves down to detailed process regulations and product requirements. It is a wise decision to delegate detailed solutions to the team, avoid the micromanagement and save time for business development. As a result, that solution saves our customer’s time and the team’s time and budget.*
+*One of our European customers asked us to adopt a rule of “Common sense” without pining ourselves down to detailed process regulations and product requirements. It is a wise decision to delegate detailed solutions to the team, avoid the micromanagement and save time for business development. As a result, that solution saves our customer's time and the team's time and budget.*
 
-Trust can’t appear instantly. However, if you begin to trust the team to take a part of decisions, you can prove it reliable and trust it more.
+Trust can't appear instantly. However, if you begin to trust the team to take a part of decisions, you can prove it reliable and trust it more.
 
 ### 2. Validate the result iteratively
 
@@ -57,7 +57,7 @@ An example from our Agile experience:
 
 *One of our customers requested the creation of an agricultural marketplace website. We recommended the customer not to include a calculator feature on the early product version because it was not on the direct way towards the goal. It helped to direct the budget on proving more profit-oriented product features.*
 
-*On our other project, we did not work on comprehensive documentation during the start of development. We broke down the way to the customer’s goal to simpler steps and started following the first of them.*
+*On our other project, we did not work on comprehensive documentation during the start of development. We broke down the way to the customer's goal to simpler steps and started following the first of them.*
 
 ### 4. Be ready to change
 
@@ -75,11 +75,11 @@ An example from our Agile experience:
 
 ![The customer in Agile is involved in the development process](https://issart.com/blog/wp-content/uploads/2019/06/https-lh5-googleusercontent-com-nn-xa1fe_cq3ot1z.jpeg)
 
-Agile software development requires more customer’s involvement in the process. As the plans are not strict, but flexible, the development team may need your fast answer on a blocking question. If you are too busy to be deeply involved, you can delegate the product management activities to your representative.
+Agile software development requires more customer's involvement in the process. As the plans are not strict, but flexible, the development team may need your fast answer on a blocking question. If you are too busy to be deeply involved, you can delegate the product management activities to your representative.
 
 ## A development team in Agile
 
-This article is for the customers but let’s list the core responsibilities of the development team here. The development team should:
+This article is for the customers but let's list the core responsibilities of the development team here. The development team should:
 
 - be goal oriented and committed,
 - dive into your domain,
@@ -100,4 +100,4 @@ The crucial characteristics of the customer in Agile are to:
 4. be ready to change;
 5. be involved.
 
-We proved it by our experience that the customers’ trust to a mature team helps to achieve the project goals faster.
+We proved it by our experience that the customers' trust to a mature team helps to achieve the project goals faster.

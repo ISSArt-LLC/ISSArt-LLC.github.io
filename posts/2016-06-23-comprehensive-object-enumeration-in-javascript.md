@@ -12,7 +12,7 @@ categories:
 This cool JS snippet implements enumerations for JS:
 
 ```
-<pre style="font-size: .8em;">function makeEnum(idField, indexField) {
+function makeEnum(idField, indexField) {
   idField = idField || 'id';
   indexField = indexField || 'index';
 
@@ -69,10 +69,10 @@ Essentially, enumeration is an array of all items. Therefore, all methods of Arr
 - .register – registers a new item
 - .mapDict – helper mapping method (see description above)
 
-Here’s enumeration example:
+Here's enumeration example:
 
 ```
-<pre style="font-size: .8em;">// Define enumeration item class.
+// Define enumeration item class.
 function Outcome(id, color) {
   this.id = id; // String, enumeration key
   this.color = color; // String
@@ -106,10 +106,10 @@ OutcomeEnum.compute = function(dueDate, estimatedDate) {
 };
 ```
 
-Let’s review various use cases:
+Let's review various use cases:
 
 ```
-<pre style="font-size: .8em;">// Parse outcome from JSON.
+// Parse outcome from JSON.
 var outcome = OutcomeEnum[json.outcome];
 
 // Parse outcome array from JSON.

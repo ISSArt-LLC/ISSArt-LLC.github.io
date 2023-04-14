@@ -23,6 +23,6 @@ With almost 2 decades of experience in the industry, our team has managed to wor
 
 According to their [new research](https://clutch.co/developers/artificial-intelligence/natural-language-processing/leaders-matrix), our company is one of the leading AI development companies on their platform. Our passion for delivering high-quality services is what helped us in achieving this amazing award.
 
-Of course, this award wouldn’t be possible without our amazing team. Their dedication to our craft has helped us in delivering and implementing challenging ideas to help our clients. We are thankful for their amazing talent and dedication.
+Of course, this award wouldn't be possible without our amazing team. Their dedication to our craft has helped us in delivering and implementing challenging ideas to help our clients. We are thankful for their amazing talent and dedication.
 
-Are you looking for an [award-winning AI company](https://issart.com/) for your next project? You are in the right place! [Drop us a line](https://issart.com/contacts/) today and we’ll get back to you ASAP.
+Are you looking for an [award-winning AI company](https://issart.com/) for your next project? You are in the right place! [Drop us a line](https://issart.com/contacts/) today and we'll get back to you ASAP.

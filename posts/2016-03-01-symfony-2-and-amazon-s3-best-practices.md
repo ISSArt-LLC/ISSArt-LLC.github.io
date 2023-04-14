@@ -10,9 +10,9 @@ categories:
     - 'Web Development'
 ---
 
-This article is dedicated to our experience in Amazon S3 and Symfony 2 integration. Thanks to such bundles as LiipImagineBundle, KnpGaufretteBundlу and VichUploaderBundle this integration is quite a simple task. So let’s begin!
+This article is dedicated to our experience in Amazon S3 and Symfony 2 integration. Thanks to such bundles as LiipImagineBundle, KnpGaufretteBundlу and VichUploaderBundle this integration is quite a simple task. So let's begin!
 
-Let’s start with the required bundles installation:
+Let's start with the required bundles installation:
 
 ```
 composer require vich/uploader-bundle
@@ -209,7 +209,7 @@ Display the image in Twig template:
 {{ vich_uploader_asset(entity, 'picture') | imagine_filter('50x50') }}
 ```
 
-So, we are moving in the right direction. However, a problem may arise if user files are sizable (for example, + 2 MB). The connection will fail before image resizing is completed. In this case you won’t see your image. That’s why you should “warm up” Liip cache (upload all resized images to Amazon S3) in advance by command:
+So, we are moving in the right direction. However, a problem may arise if user files are sizable (for example, + 2 MB). The connection will fail before image resizing is completed. In this case you won't see your image. That's why you should “warm up” Liip cache (upload all resized images to Amazon S3) in advance by command:
 
 ```
 php app/console liip:imagine:cache:resolve --filters=50x50 --filters=36x36

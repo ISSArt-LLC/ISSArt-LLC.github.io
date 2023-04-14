@@ -16,7 +16,7 @@ tags:
 
 Packaging is an integral part of the production process, especially for the FMCG industry.
 
-As packaging is a crucial strategic factor for brand differentiation and identity, it’s no wonder that the global spending on packaging now exceeds US$500 billion.
+As packaging is a crucial strategic factor for brand differentiation and identity, it's no wonder that the global spending on packaging now exceeds US$500 billion.
 
 To increase efficiency, the logistics and distribution systems usually require secondary and tertiary packaging. The unit pack is also considered the primary package, and it plays an essential role in product protection and shelf life and presents information and sales incentives to consumers.
 
@@ -28,7 +28,7 @@ Compared to the primary functions, which mainly care for the technical requireme
 
 **Protective function –** One of the main goals of packaging is to protect the goods from the environment and vice versa.
 
-**Storage function –** The packaging containers have to be stored in multiple diverse locations before the goods’ packaging and after the package contents have been used. As a result, packaging must fulfill a storage function.
+**Storage function –** The packaging containers have to be stored in multiple diverse locations before the goods' packaging and after the package contents have been used. As a result, packaging must fulfill a storage function.
 
 **Loading and transport function –** Handling FMCG goods involves designing transport packaging so the products can be held, lifted, moved, set down, and stowed quickly, efficiently, and safely.
 
@@ -36,11 +36,11 @@ Compared to the primary functions, which mainly care for the technical requireme
 
 **Sales function –** This type of packaging enables the sales process and makes it more efficient.
 
-**Marketing/promotional function –** Promotional material on packaging plays an important role; its purpose is to attract the potential buyer’s attention and positively impact purchasing decisions.
+**Marketing/promotional function –** Promotional material on packaging plays an important role; its purpose is to attract the potential buyer's attention and positively impact purchasing decisions.
 
 **Service function –** Here, we can find the essential information about the contents and use of the particular product, such as the number of dosage units, list of the active components, and the benefits.
 
-**Guarantee function –** An undamaged package is the manufacturer’s guarantee that the details on the packaging correspond to the contents.
+**Guarantee function –** An undamaged package is the manufacturer's guarantee that the details on the packaging correspond to the contents.
 
 #### Tertiary functions:
 
@@ -58,7 +58,7 @@ As a result of the recent changing consumer preferences, FMCG companies are look
 
 Smart technologies can decrease the complexity, time, and cost of package designing.
 
-To give you an idea of what’s new on the market, we have reviewed several technologies that can transform your packaging value chain.
+To give you an idea of what's new on the market, we have reviewed several technologies that can transform your packaging value chain.
 
 #### Computer Vision
 
@@ -66,9 +66,9 @@ Computer vision is one of the latest packaging technologies that helps engineers
 
 The main advantage computer vision brings to packaging is its ability to guarantee an error-free finished product. This technology can compare files, scanning pixel-by-pixel to catch any printing errors, thus allowing FMCG companies to reduce overruns and prevent misprinted packaging from getting shipped to the customer.
 
-Based on Statista’s findings, the computer vision consumer goods market will almost double in just one year, going from [$9.4 billion this year to $17.7 billion next year](https://www.statista.com/statistics/641922/worldwide-artificial-intelligence-computer-vision-market-revenues/).
+Based on Statista's findings, the computer vision consumer goods market will almost double in just one year, going from [$9.4 billion this year to $17.7 billion next year](https://www.statista.com/statistics/641922/worldwide-artificial-intelligence-computer-vision-market-revenues/).
 
-Beyond the ability to see errors that humans cannot, computer vision enables apps to identify products by their packaging, allowing them to find that product and quickly purchase it. For example, Amazon Flow can recognize products on a physical retail shelf, in your friend’s fridge, at the office, or wherever you will go. Then it offers you options for buying that product, conveniently delivered by Amazon.
+Beyond the ability to see errors that humans cannot, computer vision enables apps to identify products by their packaging, allowing them to find that product and quickly purchase it. For example, Amazon Flow can recognize products on a physical retail shelf, in your friend's fridge, at the office, or wherever you will go. Then it offers you options for buying that product, conveniently delivered by Amazon.
 
 #### Virtual reality
 

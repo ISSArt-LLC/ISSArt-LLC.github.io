@@ -19,23 +19,23 @@ To achieve these goals with high efficiency in short time, I follow the next sim
 
 #### 1. Format code correctly
 
-Code quality is not all about formatting, but formatting is still important. Bad code formatting makes code learning and management difficult to other team members, so that’s the first thing to fix. This issue occurs very often if your team includes one or more junior developers. To deal with bad code formatting, you can encourage your team to use IDE which has auto-formatting feature, use linters or develop automatic tests.
+Code quality is not all about formatting, but formatting is still important. Bad code formatting makes code learning and management difficult to other team members, so that's the first thing to fix. This issue occurs very often if your team includes one or more junior developers. To deal with bad code formatting, you can encourage your team to use IDE which has auto-formatting feature, use linters or develop automatic tests.
 
 #### 2. Follow naming conventions
 
-Any project must have its naming conventions. Naming conventions make code review easier and that’s very important. The less time you spend on code review, the more time you spend on more important activities.
+Any project must have its naming conventions. Naming conventions make code review easier and that's very important. The less time you spend on code review, the more time you spend on more important activities.
 
 #### 3. Develop code
 
-If you are a team leader, your main role on a project is to design architecture and review code. But you won’t be able to do it efficiently if you don’t develop code by yourself. Devote at least 40% of your project time on code development. If you don’t develop code, you will very quickly lose track of what is going on. There’s a class of mistakes which is very difficult to recognize during pure code review – you can do it only if the problem bubbles up when you develop code by yourself. Also, code development aids you to generate ideas for refactoring or architecture improvement.
+If you are a team leader, your main role on a project is to design architecture and review code. But you won't be able to do it efficiently if you don't develop code by yourself. Devote at least 40% of your project time on code development. If you don't develop code, you will very quickly lose track of what is going on. There's a class of mistakes which is very difficult to recognize during pure code review – you can do it only if the problem bubbles up when you develop code by yourself. Also, code development aids you to generate ideas for refactoring or architecture improvement.
 
 #### 4. Hunt on memory/performance leaks
 
-If a developer hasn’t noticed a memory or performance leak, tester won’t be able to just catch it. But if the problem bubbles up in a highly loaded production environment, it will be difficult to debug. You should look for inefficient algorithms and uncleared object references during code review to fix the issue in advance.
+If a developer hasn't noticed a memory or performance leak, tester won't be able to just catch it. But if the problem bubbles up in a highly loaded production environment, it will be difficult to debug. You should look for inefficient algorithms and uncleared object references during code review to fix the issue in advance.
 
 #### 5. Comment on unclear code
 
-If you discuss a suspicious portion of code with its author and it turns out to be correct, it usually means that this code lacks comments. Comment on this code and explain why this code should be written this exact way and can not be simplified. Later, when any team member is working with this code, they’ll instantly understand why it looks so weird. An example:
+If you discuss a suspicious portion of code with its author and it turns out to be correct, it usually means that this code lacks comments. Comment on this code and explain why this code should be written this exact way and can not be simplified. Later, when any team member is working with this code, they'll instantly understand why it looks so weird. An example:
 
 ```
 # Originally, image transformation scaling determines
@@ -75,4 +75,4 @@ public static Vector2d GetMetersPerDegree (double latitude)
 }
 ```
 
-Here, we see 7 unnamed constants and a weird formula which magically gets a thing done. How in the world can a developer figure out how this towel of code works? But we see a comment which leads us to a Web site which has this formula injected in JS code, so we don’t even need to explain why it works. If it works somewhere else, then it is probably correct. And we won’t ever need to modify this code unless Earth becomes cubic one day.
+Here, we see 7 unnamed constants and a weird formula which magically gets a thing done. How in the world can a developer figure out how this towel of code works? But we see a comment which leads us to a Web site which has this formula injected in JS code, so we don't even need to explain why it works. If it works somewhere else, then it is probably correct. And we won't ever need to modify this code unless Earth becomes cubic one day.

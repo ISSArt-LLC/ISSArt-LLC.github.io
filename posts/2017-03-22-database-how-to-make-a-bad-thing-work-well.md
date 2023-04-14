@@ -22,16 +22,16 @@ There is a widely known opinion that implementing a business logic on the DB sid
 
 If you consider the possibility of splitting the code between the database management systems and the server there comes the problem of sharing responsibility, coordinating updates, etc.
 
-### If It Ain’t Broke, Don’t Fix It
+### If It Ain't Broke, Don't Fix It
 
-That’s why when the team encountered an issue where to place the business logic on another large project, it seemed there could not be two opinions – only the server.
+That's why when the team encountered an issue where to place the business logic on another large project, it seemed there could not be two opinions – only the server.
 ![](/static/img/2017/03/Do-Not-Fix.png)
 The project, alongside the other solutions, also suggested the integration with major music providers, such as [Apple Music](http://www.apple.com/music/) or [Spotify](https://www.spotify.com/int/why-not-available/). Also there was supposed to be the functionality enabling data matching for tracks, albums and artists received from different providers. Storage formats and implicit assumptions made by providers made us be thinking hard how to use the available data effectively. Anyway, the solution was found, formalized and implemented on the server side.
 
 ### A Good Beginning Is Half The Battle
 
 ![](/static/img/2017/03/Dia05.jpg)
-As the load testing time approached, it turned out that its matching velocity left much to be desired. Engineers started discussing possible ways to optimize the code, whereas the project delivery deadline was approaching. It is worth mentioning that the matching functional was intended for gradual data income, but at the beginning of work a large amount of customer’s data was to be processed. Considering the factors received while load testing, the process could have taken days, or even weeks, which was completely unacceptable.
+As the load testing time approached, it turned out that its matching velocity left much to be desired. Engineers started discussing possible ways to optimize the code, whereas the project delivery deadline was approaching. It is worth mentioning that the matching functional was intended for gradual data income, but at the beginning of work a large amount of customer's data was to be processed. Considering the factors received while load testing, the process could have taken days, or even weeks, which was completely unacceptable.
 
 ### We Need To Go Deeper
 

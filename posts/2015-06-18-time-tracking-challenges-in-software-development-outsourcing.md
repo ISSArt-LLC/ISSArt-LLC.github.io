@@ -21,7 +21,7 @@ Together with that, it brings certain challenges you should be aware of:
 - Cultural differences (which were covered in one of our [previous articles](http://www.issart.com/blog/what-challenges-do-software-development-companies-face-while-working-with-foreign-customers/));
 - Lack of face-to-face contact.
 
-Let’s talk about control in more depth.
+Let's talk about control in more depth.
 
 ### Control is essential
 
@@ -48,7 +48,7 @@ In order to organize the work process (given the difficulties you are going to f
 2. ***Integrity***, or, in other words, objectivity and absence of hypocrisy (the law applies to everyone without discrimination). The control system should work as a “fair judge”;
 3. ***Transparency*** – the algorithm for calculating the criterion, the criterion of praise and sanctions should be clear to all participants of the project;
 4. ***Accuracy***, which enables flexible project control;
-5. ***Inevitability*** – otherwise, the control system won’t reach its goal; the monitoring mechanism should not break or get distorted, leading to wrong conclusions and wrong decisions. It’s like to lead the plane to land on with broken instrument;
+5. ***Inevitability*** – otherwise, the control system won't reach its goal; the monitoring mechanism should not break or get distorted, leading to wrong conclusions and wrong decisions. It's like to lead the plane to land on with broken instrument;
 6. The ***common criteria and measurement units*** are important for comparing different team members to each other;
 7. ***Availability online*** – access to up-to-date information at any time.
 
@@ -56,7 +56,7 @@ In order to organize the work process (given the difficulties you are going to f
 
 To manage software development projects in correspondence with the requirements mentioned above project management system such as Redmine and JIRA are used. Redmine is free and supported by the community. JIRA is a paid system which is available both as the supply for the local server and under subscription as a remote application.
 
-Redmine and JIRA and provide planning and performance monitoring tools, but time tracking is their weak point. Here’s why…
+Redmine and JIRA and provide planning and performance monitoring tools, but time tracking is their weak point. Here's why…
 
 ![Project management](/static/img/2015/06/consultant-779590_1280.jpg)
 
@@ -84,7 +84,7 @@ Many [time tracking tools](https://hubstaff.com/) support screenshot taking func
 
 The employer and the employee reach their goals as well.
 
-As for our company’s experience, our solution is a combination of project management tools – JIRA and Redmine (which are common for us), and our own development – [CrISStal Eye](http://crisstaleye.com/) time tracking system. Such a symbiosis helps us understand:
+As for our company's experience, our solution is a combination of project management tools – JIRA and Redmine (which are common for us), and our own development – [CrISStal Eye](http://crisstaleye.com/) time tracking system. Such a symbiosis helps us understand:
 
 - What was going on during the day – in pictures;
 - What was going on during the day – in seconds;
@@ -93,14 +93,14 @@ As for our company’s experience, our solution is a combination of project mana
 
 ### How to deal with employee resistance?
 
-Although time tracking provides Customer and Employer with a clear picture of what’s happening on the project, one of the biggest impediment to its successful implementation in the organization is [employee resistance](http://blog.journyx.com/time-tracking-challenges-and-how-to-overcome-them).
+Although time tracking provides Customer and Employer with a clear picture of what's happening on the project, one of the biggest impediment to its successful implementation in the organization is [employee resistance](http://blog.journyx.com/time-tracking-challenges-and-how-to-overcome-them).
 
 ![Employee](/static/img/2015/06/desk-731896_1280.jpg)
 
 What can be done to prevent the negative effects of this?
 
 **Educate employees**
-Make it clear to your team members why it is important to log time accurately. Help them understand that this activity serves the goals of the whole team – the more accurately the time is tracked, the more clear the whole picture is (i.e. which tasks consume excess resources, and which ones are neglected). The more clear the situation on the project is, the more effective the further steps can be for the project. Which, in turn, should have a positive effect on Customer’s loyalty and/or can finally result in additional bonuses for the team’s efforts.
+Make it clear to your team members why it is important to log time accurately. Help them understand that this activity serves the goals of the whole team – the more accurately the time is tracked, the more clear the whole picture is (i.e. which tasks consume excess resources, and which ones are neglected). The more clear the situation on the project is, the more effective the further steps can be for the project. Which, in turn, should have a positive effect on Customer's loyalty and/or can finally result in additional bonuses for the team's efforts.
 
 **Monitor dashboard and define “procrastinators”**
 Through the dashboard of your time tracking tool you can see who logs time regularly, who does it from time to time, and who refuses to do it at all. This way the management team will understand who they need to talk to additionally.

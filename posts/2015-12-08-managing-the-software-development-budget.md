@@ -26,7 +26,7 @@ The reasons of overruns are bound with all the areas of the project development.
 
 The bigger the project the more probable the risk of over budget is. The scope may be changed by the project customer or the product manager for reaction to the market needs or investors plans.
 
-Some projects have not very distinct business aim and mission. It’s dangerous because it usually leads to many changes in solutions and the features planned. Changes and additions on the fly lead the situation when some part of work has to be thrown away. Because the new requirements may contradict the initial ones. It’s extra money.
+Some projects have not very distinct business aim and mission. It's dangerous because it usually leads to many changes in solutions and the features planned. Changes and additions on the fly lead the situation when some part of work has to be thrown away. Because the new requirements may contradict the initial ones. It's extra money.
 
 The target should be fixed as much as possible because the pointing to a moving target is much harder and more expensive.
 
@@ -40,7 +40,7 @@ The important way to get a more accurate scope is [the analytics phase before th
 
 Time is the third category defines the [Project management triangle](https://en.wikipedia.org/wiki/Project_management_triangle) of balancing between Scope, Budget and Time. The meaning of this diagram is simple. If one of the three is important, other two have to be abated. Or if two of the three are important, the remaining one should be sacrificed. Actually there is no ability to improve positions of all the parts of the triangle at once.
 
-<div class="wp-caption aligncenter" id="attachment_1394" style="width: 805px">[![Over night work is expensive.](/static/img/2015/12/over_night_work.png)](/static/img/2015/12/over_night_work.png)The overnight work on a project and ‘firefighting’ are expensive
+<div class="wp-caption aligncenter" id="attachment_1394" style="width: 805px">[![Over night work is expensive.](/static/img/2015/12/over_night_work.png)](/static/img/2015/12/over_night_work.png)The overnight work on a project and 'firefighting' are expensive
 
 </div>The tight schedule produces an over budget because of overtime work, that is not so productive, lack of time for planning and control, too many parallel flows to conduct etc.
 
@@ -73,7 +73,7 @@ A frequent example is the load for a new [web-application](https://www.issart.co
 
 <div class="wp-caption aligncenter" id="attachment_1397" style="width: 596px">[![Quality is a measure of the consistency between  requirements and results](/static/img/2015/12/digital-calipers-1418571.jpg)](/static/img/2015/12/digital-calipers-1418571.jpg)Quality is a measure of the consistency between requirements and results
 
-</div><span style="color: #999999;">FreeImages.com/kliverap</span>
+</div>FreeImages.com/kliverap
 
 There are a lot of methods that should be used for the quality assurance. These methods require works of the relevant experts and should be planned initially.
 
@@ -83,7 +83,7 @@ The main resources within the software development is human resources: developer
 
 <div class="wp-caption aligncenter" id="attachment_1399" style="width: 596px">[![People is the main force of an IT project](/static/img/2015/12/colleagues-1238030.jpg)](/static/img/2015/12/colleagues-1238030.jpg)People is the main force of an IT project
 
-</div><span style="color: #999999;">FreeImages.com/B S K</span>
+</div>FreeImages.com/B S K
 
 The work made by low level specialists with low rates is often far more expensive than the work by high level specialists with high skills, since a low level specialist needs more detailed code review and bigger bugfixing. This difference is obvious in case of complex tasks.
 
@@ -93,13 +93,13 @@ A customer can have a really big profit from small investments in team-building.
 
 From the other side, good companies conduct [rich stuff policy](http://www.issart.com/en/hr) to provide their employees with the systems of motivations.
 
-Work with people is connected with psychology and sociology and this topic can’t be described in the bounds of this post.
+Work with people is connected with psychology and sociology and this topic can't be described in the bounds of this post.
 
 ##### Communication
 
 The loads of communication cost much because this time is billed. The lack of communications costs even more, because each team mate of the project should be on the same page with others.
 
-That’s why the important instruments is a set of communicative rules and sufficient documentation, that eliminates the extra communications.
+That's why the important instruments is a set of communicative rules and sufficient documentation, that eliminates the extra communications.
 
 ##### Risks
 
@@ -127,9 +127,9 @@ The reliable workflow describes the flow of the distribution of responsibility. 
 
 <div class="wp-caption aligncenter" id="attachment_1401" style="width: 596px">[![Good project workflow minimize the cost](/static/img/2015/12/traffic.jpg)](/static/img/2015/12/traffic.jpg)Good project workflow is similar to the car traffic that is regulated very well
 
-</div><span style="color: #999999;">FreeImages.com/ephe drin</span>
+</div>FreeImages.com/ephe drin
 
-There are a number of methodologies of the project development from the ‘Waterfall’ to the Extreme Programming. One of the most important characteristics of the up-to-date methodologies is iterativity. It allows to have a working products after the end of each iteration. The end of each iteration can be used as a checkpoint for controlling of the budget and planning of it for the future.
+There are a number of methodologies of the project development from the 'Waterfall' to the Extreme Programming. One of the most important characteristics of the up-to-date methodologies is iterativity. It allows to have a working products after the end of each iteration. The end of each iteration can be used as a checkpoint for controlling of the budget and planning of it for the future.
 
 #### How to get the project done in the bounds of the budget?
 

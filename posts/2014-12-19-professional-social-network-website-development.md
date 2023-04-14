@@ -16,7 +16,7 @@ The infographic below from [www.leveragenewagemedia.com](http://www.leveragenewa
 
 ![professional social network website development number of social media users](/static/img/2014/12/number-of-social-media-users.jpg)Source: [Leveragenewagemedia.com 2014](https://leveragenewagemedia.com/blog/social-media-infographic/)
 
-With numbers like that, it doesn’t take a marketing guru to figure out the potential profit of capturing a fraction of the social media audience is almost unlimited. Of course, that is why so many professional social network website developers arrived on the scene over the last several years.
+With numbers like that, it doesn't take a marketing guru to figure out the potential profit of capturing a fraction of the social media audience is almost unlimited. Of course, that is why so many professional social network website developers arrived on the scene over the last several years.
 
 
 ## Barely Scratched the Service or Market Saturation?
@@ -29,7 +29,7 @@ Social networks come in many different flavors offering different environments, 
 
 Opinions on the long term viability of social networks varies quite a bit from one expert to another. One look at this [chart from Statista.com](http://www.statista.com/statistics/278414/number-of-worldwide-social-network-users/) projecting over 2 billion users of social media by 2016 makes the social media market appear to have unlimited potential. However, a look at this [listing from Wikipedia.com](http://en.wikipedia.org/wiki/List_of_social_networking_websites), with most of the social networks that are in existence today globally, makes it clear the market is ultra-competitive.
 
-***Success in the professional social network website development arena, requires a fundamentally sound business plan and the ability to scale operations at a moment’s notice.***
+***Success in the professional social network website development arena, requires a fundamentally sound business plan and the ability to scale operations at a moment's notice.***
 
 ***Management of the project must be highly effective, from the initial idea of the 2 or 3 features which will set your social network experience apart from the crowd, to the site development and application design process, all the way to flawless execution in every area.***
 
@@ -51,7 +51,7 @@ Why?
 
 While the statistics are through the roof in terms of user engagement, this also means your social network better provide exceptional value, a flawless and dynamic user experience, and basically be all things to all people. That is not exactly a simple barrier to cross in any market.
 
-On top of that, keep in mind we live in a world of convenience now. Your social platform will have to rate extremely high on the ease of use scale, include robust sharing options that are integrated with PC’s, Mac, Android, iOS, tablets, photo file formats, video file formats and players, among many other important items. All of that while providing an endless flow of captivating content and some unique features that keep your users engaged for the long term.
+On top of that, keep in mind we live in a world of convenience now. Your social platform will have to rate extremely high on the ease of use scale, include robust sharing options that are integrated with PC's, Mac, Android, iOS, tablets, photo file formats, video file formats and players, among many other important items. All of that while providing an endless flow of captivating content and some unique features that keep your users engaged for the long term.
 
 ## Social Site Development-Dynamic Performance, Ultra-Flexible Functionality, Secure and Highly Efficient
 

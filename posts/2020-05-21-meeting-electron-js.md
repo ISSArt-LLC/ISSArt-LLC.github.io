@@ -18,7 +18,7 @@ tags:
 
 ## What is Electron.js?
 
-Hi. I’m a junior web-developer and in this article I’ll tell you about my meeting with Electron.js, describe a couple of challenges I struggled with and share my opinion about the future of this technology.
+Hi. I'm a junior web-developer and in this article I'll tell you about my meeting with Electron.js, describe a couple of challenges I struggled with and share my opinion about the future of this technology.
 
 **Electron** is a platform with an open source code that helps developer to create pseudo-native applications using already known technologies such as JavaScript, HTML, and CSS with Node.js runtime environment as a back-end and Chromium as a front-end. The developer of it is GitHub Inc.
 
@@ -47,7 +47,7 @@ Hi. I’m a junior web-developer and in this article I’ll tell you about my me
 
 ## Challenges I faced when using Electron.js
 
-So now you know pros and cons of this tool. It’s time to tell you about things that every developer will face using this platform.
+So now you know pros and cons of this tool. It's time to tell you about things that every developer will face using this platform.
 
 ### **Integration:** Common for all of us: Menu, Notification, Tray
 
@@ -60,7 +60,7 @@ The first that comes to the mind, when we want to integrate our app into OS, whe
 5. [new Tray](https://www.electronjs.org/docs/api/tray#new-trayimage)
 6. [tray.setContextMenu](https://www.electronjs.org/docs/api/tray#traysetcontextmenumenu)
 
-You should pay attention to some options and methods that can be special for the platform. If you want to show dynamic menu in tray, you need to create a pattern with renewed data and install it again. Talking about icon in tray, you need to be sure that the object that will bring *[new Tray()](https://www.electronjs.org/docs/api/tray#new-trayimage)* back wasn’t deleted by trash collector. It seems that junior developers face it so often that it is even described in the documents.
+You should pay attention to some options and methods that can be special for the platform. If you want to show dynamic menu in tray, you need to create a pattern with renewed data and install it again. Talking about icon in tray, you need to be sure that the object that will bring *[new Tray()](https://www.electronjs.org/docs/api/tray#new-trayimage)* back wasn't deleted by trash collector. It seems that junior developers face it so often that it is even described in the documents.
 
 ### **Condition:** Condition between Main Process and Render Process
 
@@ -81,7 +81,7 @@ It is an important step in the development of your app. In the documentation the
 **[electron-builder](https://github.com/electron-userland/electron-builder)**
 **[electron-packager](https://github.com/electron/electron-packager)**
 
-My choice was electron-builder that gives you a wide range of formats and gives you flexibility. I had another short-period experience with electron-packager using which was not so friendly – I didn’t manage to assemble Windows Installer **[Squirrel](https://github.com/Squirrel/Squirrel.Windows)**.
+My choice was electron-builder that gives you a wide range of formats and gives you flexibility. I had another short-period experience with electron-packager using which was not so friendly – I didn't manage to assemble Windows Installer **[Squirrel](https://github.com/Squirrel/Squirrel.Windows)**.
 
 You should keep in mind that to assemble for Windows on the platform different from it, you need to instal **[Wine](https://www.winehq.org/)**.
 

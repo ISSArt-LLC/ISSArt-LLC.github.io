@@ -11,13 +11,13 @@ tags:
     - 'ioc spring javaee jaxrs'
 ---
 
-Sometimes developers discuss which framework or library is better. It depends on the performance, usability, flexibility or just a taste. Likely, my opinion won’t be new<u>,</u> however, I think that with the help of modern technologies it is always possible to write clean and beautiful code.
+Sometimes developers discuss which framework or library is better. It depends on the performance, usability, flexibility or just a taste. Likely, my opinion won't be new<u>,</u> however, I think that with the help of modern technologies it is always possible to write clean and beautiful code.
 
-It doesn’t depend on the library or framework, there aren’t any perfect solutions, everything has advantages and disadvantages, however any widely used technologies allow to achieve a good result.
+It doesn't depend on the library or framework, there aren't any perfect solutions, everything has advantages and disadvantages, however any widely used technologies allow to achieve a good result.
 
 The most difficult thing in the code design is the maintenance of dependencies. You should consider dependencies of classes, third party components, libraries, etc.
 
-The isolation of dependencies is usually a philosophical task. F. e. in C++ is quite standard practice to implement your own string class to decorate all possible existing variations. At the same time it is pretty strange to wrap *java.lang* package classes with a custom decorator. However, *java.util* package isn’t so reliable because everybody remembers *java.util.Date*.
+The isolation of dependencies is usually a philosophical task. F. e. in C++ is quite standard practice to implement your own string class to decorate all possible existing variations. At the same time it is pretty strange to wrap *java.lang* package classes with a custom decorator. However, *java.util* package isn't so reliable because everybody remembers *java.util.Date*.
 
 Or, for example *javax.inject* package. According to the specifications it represents the reference of implementation for the IoC container. The theory is perfect. You use the abstract module and rely on it in the code and it should be compatible with any IoC implementation for this module.
 
@@ -26,7 +26,7 @@ However, sometimes only this solution works.
 
 Well, you can rely on enterprise integration patterns in the microservice system to avoid the code level integration, but sometimes the best or the only possible solution from the side of performance, architecture, workflow etc. is the code sharing. And you have to extract a piece of code in one place to reuse somewhere else. And you face the IoC container dependency with inseparable *@Inject,* *@Named, @Autowired* etc.
 
-Let’s try investigating the best IoC container integration and resolve or avoid the problem above.
+Let's try investigating the best IoC container integration and resolve or avoid the problem above.
 
 ## IoC container role
 
@@ -43,7 +43,7 @@ However, almost all these details are related to [JavaEE](https://www.oracle.com
 Therefore, we can try answering another question:
 *Is it reasonable to maintain objects outside of IoC container?*
 
-```
+```java
 User userModel = ImmutableUser.builder()
     .with...(…)
     …
@@ -51,12 +51,12 @@ User userModel = ImmutableUser.builder()
 
 ```
 
-We use builder pattern here to construct an object, and if you follow more functional or eventual code style it won’t be strange to delegate such executions to IoC container, however it isn’t mandatory and is absolutely fine to instantiate such objects outside of IoC container.
+We use builder pattern here to construct an object, and if you follow more functional or eventual code style it won't be strange to delegate such executions to IoC container, however it isn't mandatory and is absolutely fine to instantiate such objects outside of IoC container.
 Another case if you imply the long live time of this object or its availability from unrelated code places, threads, etc. In this case you can think about wrapping this execution with IoC container.
 
 However, you still have the builder pattern implemented here. And the builder is still responsible to call the *User* constructor.
 
-```
+```java
 public class JwtParser {
     private static final ObjectMapper mapper = new ObjectMapper();
  
@@ -72,16 +72,16 @@ public class JwtParser {
 This is absolutely different case, and the main question I have for this code:
 Whether the *JwtParser* class need to know about *ObjectMapper* maintenance?
 
-If it was the application entry point I wouldn’t mind creating some objects there, because it would be a reasonable place to do it.
+If it was the application entry point I wouldn't mind creating some objects there, because it would be a reasonable place to do it.
 Or if it was any **creational design patterns** (buider, factory etc) it would be the fine place to call the constructor.
-But this class already has the responsibility to parse tokens, if we make it responsible for *ObejctMapper* instantiation **we’ll break the single responsibility principal**.
+But this class already has the responsibility to parse tokens, if we make it responsible for *ObejctMapper* instantiation **we'll break the single responsibility principal**.
 
 And from the practical side if you have IoC container at runtime such decision can have quite negative impact.
-F.e it is possible that you won’t be able to use IoC container to maintain these *ObjectMapper* objects anymore, because your object is outside of IoC container scope and it just won’t know how to maintain your manually created object.
+F.e it is possible that you won't be able to use IoC container to maintain these *ObjectMapper* objects anymore, because your object is outside of IoC container scope and it just won't know how to maintain your manually created object.
 
 ***So the correct design is***:
 
-```
+```java
 public class JwtParser {
     private final ObjectMapper mapper;
 
@@ -96,7 +96,7 @@ public class JwtParser {
 }
 ```
 
-*JwtParser* object depends on *ObjectMapper* object, but **isn’t responsible for it**.
+*JwtParser* object depends on *ObjectMapper* object, but **isn't responsible for it**.
 
 ## Injections classification
 
@@ -118,9 +118,9 @@ It often happens that the specification gets behind the real world and introduce
 Thus, if you want the complete and latest implemented specification, you have to use [JavaEE stack](https://www.oracle.com/technetwork/java/javaee/overview/compatibility-jsp-136984.html).
 
 With other IoC containers you will be lucky if you have *javax.inject* package supported.
-Or you decide to reject standards and use the [S*pring* ](https://spring.io/)[*Framework*](https://spring.io/) which doesn’t rely on “standard” interfaces.
+Or you decide to reject standards and use the [S*pring* ](https://spring.io/)[*Framework*](https://spring.io/) which doesn't rely on “standard” interfaces.
 
-However, I would say that any IoC container provides 4 ways to maintain objects and if it doesn’t support standard specifications it is not a big problem.
+However, I would say that any IoC container provides 4 ways to maintain objects and if it doesn't support standard specifications it is not a big problem.
 You should just isolate the IoC container dependency from your code.
 
 ## IoC container isolation
@@ -141,22 +141,21 @@ In the product that supports CDI, implementations MUST support the use of CDI-st
 
 Both of these additional requirements sometimes result in following code:
 
-```
+```java
 import javax.ws.rs.core.Configuration;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.Application;
 import javax.ws.rs.container.ContainerRequestFilter;
 import javax.ws.rs.ext.Provider;
-```
 
-```
+
 @Provider
 public class ProxyFilter implements ContainerRequestFilter {
- @Context
- private Configuration config;
+@Context
+private Configuration config;
 
- @Context
- private Application app;
+@Context
+private Application app;
 ...
 }
 
@@ -166,7 +165,7 @@ public class ProxyFilter implements ContainerRequestFilter {
 
 Another example:
 
-```
+```java
 public @interface Logged {
 ...
 }
@@ -182,15 +181,14 @@ public class LoggingFilter implements ContainerRequestFilter {
 
 ```
 
-```
+```java
 import javax.inject.Inject;
 import javax.ws.rs.container.DynamicFeature;
 import javax.ws.rs.container.ResourceInfo;
 import javax.ws.rs.core.FeatureContext;
 import javax.ws.rs.ext.Provider;
-```
 
-```
+
 @Provider
 public class LoggingFeature implements DynamicFeature {
     @Inject
@@ -208,32 +206,30 @@ public class LoggingFeature implements DynamicFeature {
 
 ```
 
-**Is it possible to inject the LoggingFilter through the LoggingFeature constructor**<span><span style="font-family: 'DejaVu Sans Mono', serif;"><span style="font-size: small;">**?** </span></span></span><span>The answer is the same, it depends on the combination of JAX-RS and IoC container implementations you have at runtime.
-The common interface doesn’t guarantee the same behavior. </span><span>However</span><span> there</span><span> are some ways to avoid the incompatibility for any combinations.</span>
+**Is it possible to inject the LoggingFilter through the LoggingFeature constructor****?** The answer is the same, it depends on the combination of JAX-RS and IoC container implementations you have at runtime.
+The common interface doesn't guarantee the same behavior. However there are some ways to avoid the incompatibility for any combinations.
 
-**<span>Turn off jax-rs autoscan and declare all jax-rs components manually</span>**
+**Turn off jax-rs autoscan and declare all jax-rs components manually**
 
-<span>Example:</span>
+Example:
 
-```
-<span>
+```java
 import javax.ws.rs.core.Application;
-public class MyApplication extends Application {</span>
+public class MyApplication extends Application {
     ...
     public Set<Object> getSingletons() {
         ...
     }
-<span>}
-</span>
-```
-
-<span>in the above method you can declare all jax-rs components which you won’t initialize without full-arg constructor.
-You can initialize and use the IoC container directly here:</span>
+}
 
 ```
-<span>
-public class MyApplication extends Application </span><span>{
-</span>    private final Injector injector = Guice.createInjector(...guice modules...);
+
+in the above method you can declare all jax-rs components which you won't initialize without full-arg constructor.
+You can initialize and use the IoC container directly here:
+
+```java
+public class MyApplication extends Application {
+    private final Injector injector = Guice.createInjector(...guice modules...);
     ...
     public Set<Object> getSingletons() {
         MyJaxrsObject value = injector.getInstance(MyJaxrsObject.class);
@@ -242,13 +238,13 @@ public class MyApplication extends Application </span><span>{
         return ...
         //return set of initialized objects including guiceFeature and MyJaxrsObject
     }
-<span>}</span>
+}
 ```
 
-<span>The *Feature* is the jax-rs provider and this example is [guice](https://github.com/google/guice) and [jersey2](https://jersey.github.io/) integration.
-Similar example for [dropwizard](https://www.dropwizard.io/1.3.14/docs/), although it already has the work around the jersey2 ServiceLocator. I also advice you to register jax-rs components manually. F.e</span>
+The *Feature* is the jax-rs provider and this example is [guice](https://github.com/google/guice) and [jersey2](https://jersey.github.io/) integration.
+Similar example for [dropwizard](https://www.dropwizard.io/1.3.14/docs/), although it already has the work around the jersey2 ServiceLocator. I also advice you to register jax-rs components manually. F.e
 
-```
+```java
 public class MyApplication extends Application<MyConfiguration> {
     ...
     private MyComponent daggerRootComponent;
@@ -272,11 +268,11 @@ public class MyApplication extends Application<MyConfiguration> {
 }
 ```
 
-<span>In this example I used [dagger](https://github.com/google/dagger) IoC container. MyComponent is dagger-generated class which provides access to the maintenance of declared objects.</span><span> However you can’t always use such solution, especially if you already used jax-rs autoscan widely.</span>
+In this example I used [dagger](https://github.com/google/dagger) IoC container. MyComponent is dagger-generated class which provides access to the maintenance of declared objects. However you can't always use such solution, especially if you already used jax-rs autoscan widely.
 
-<span>Thus **you can use** </span>***<span><span style="font-family: 'DejaVu Sans Mono', serif;"><span style="font-size: small;">javax.inject.Provider</span></span></span>***
+Thus **you can use** ***javax.inject.Provider***
 
-```
+```java
 import javax.ws.rs.ext.Provider;
 import javax.ws.rs.container.DynamicFeature;
 
@@ -304,18 +300,17 @@ public class JavaEEIoCProviders {
         ...
     }
 }
-
 ```
 
 ##### 2) Spring framework
 
-It doesn’t depend on JSR specifications, so it is unified and all its components are integrated transparently. However, if you don’t isolate your code from spring, you won’t be able to reuse it in the alternative stack (and vice versa).
+It doesn't depend on JSR specifications, so it is unified and all its components are integrated transparently. However, if you don't isolate your code from spring, you won't be able to reuse it in the alternative stack (and vice versa).
 
-From another side, if you have the clean business logic, which doesn’t depend on standards and frameworks, the integration with spring is pretty easy, you should just write decorators.
+From another side, if you have the clean business logic, which doesn't depend on standards and frameworks, the integration with spring is pretty easy, you should just write decorators.
 
 Example:
 
-```
+```java
 com.my.app module
 
 public interface MediaService {
@@ -357,47 +352,47 @@ public class ServiceProvider {
 
 You can put its implementation to the separate module if you imply the variation for the *MediaService* (variation is not like mock for unit tests), f.e.
 
-```
-<span><span style="font-family: 'DejaVu Sans Mono', monospace;"><span style="font-size: medium;">com.my.app.impl module public class MediaServiceImpl implements MediaService { ... <span><span style="font-family: 'DejaVu Sans Mono', monospace;"><span style="font-size: medium;">}</span></span></span></span></span></span>
+```java
+com.my.app.impl module public class MediaServiceImpl implements MediaService { ... }
 ```
 
 Or *MediaService* can be just a class, it depends on the concrete logic. F.e *MediaService* is organized as the virtual file system with the remote cloud storage. Thus objects removing is actually 2 operations – virtual record erasing and real binary content deletion. So it can look like this:
 
-```
-<span><span style="font-family: 'DejaVu Sans Mono', monospace;"><span style="font-size: medium;">public class MediaService {</span></span></span>
+```java
+public class MediaService {
 
-<span style="font-family: 'DejaVu Sans Mono', monospace;"><span style="font-size: medium;">    private final MetadataRepository metadata;</span></span>
-<span style="font-family: 'DejaVu Sans Mono', monospace;"><span style="font-size: medium;">    private final ContentRepository contents;</span></span>
-<span style="font-family: 'DejaVu Sans Mono', monospace;"><span style="font-size: medium;">    public MediaService(MetadataRepository metadata, ContentRepository contents) {
-</span></span>        ...
-<span style="font-family: 'DejaVu Sans Mono', monospace;"><span style="font-size: medium;">    }
-</span></span><span style="font-family: 'DejaVu Sans Mono', monospace;"><span style="font-size: medium;">    public void delete(String id) {
-</span></span><span style="font-family: 'DejaVu Sans Mono', monospace;"><span style="font-size: medium;">        Metadata deleted = metadata.delete(id);
-        contents.delete(deleted.contentId());
-</span></span><span style="font-family: 'DejaVu Sans Mono', monospace;"><span style="font-size: medium;">    }</span></span>
-<span><span style="font-family: 'DejaVu Sans Mono', monospace;"><span style="font-size: medium;">}</span></span></span>
-```
-
-Or if you don’t want to expose the virtual record and the binary content relation it should look like this:
-
-```
-<span><span style="font-family: 'DejaVu Sans Mono', monospace;"><span style="font-size: medium;">public class MediaService {</span></span></span>
-
-<span style="font-family: 'DejaVu Sans Mono', monospace;"><span style="font-size: medium;">    private final MetadataRepository metadata;
+    private final MetadataRepository metadata;
     private final ContentRepository contents;
-</span></span>
-<span style="font-family: 'DejaVu Sans Mono', monospace;"><span style="font-size: medium;">    public MediaService(MetadataRepository metadata, ContentRepository contents) {
-</span></span>        ...
-<span style="font-family: 'DejaVu Sans Mono', monospace;"><span style="font-size: medium;">    }
-</span></span><span style="font-family: 'DejaVu Sans Mono', monospace;"><span style="font-size: medium;">
+    public MediaService(MetadataRepository metadata, ContentRepository contents) {
+        ...
+    }
     public void delete(String id) {
-</span></span><span style="font-family: 'DejaVu Sans Mono', monospace;"><span style="font-size: medium;">        metadata.delete(id);
-        contents.delete(id);</span></span>
-<span style="font-family: 'DejaVu Sans Mono', monospace;"><span style="font-size: medium;">    }</span></span>
-<span><span style="font-family: 'DejaVu Sans Mono', monospace;"><span style="font-size: medium;">}</span></span></span>
+        Metadata deleted = metadata.delete(id);
+        contents.delete(deleted.contentId());
+    }
+}
 ```
 
-It isn’t very important now, but you see that the business logic is clean, it doesn’t depend on the spring. You achieve the integration with the decorators, which you can put into the separate module and your business logic is portable to any alternative stack.
+Or if you don't want to expose the virtual record and the binary content relation it should look like this:
+
+```java
+public class MediaService {
+
+    private final MetadataRepository metadata;
+    private final ContentRepository contents;
+
+    public MediaService(MetadataRepository metadata, ContentRepository contents) {
+        ...
+    }
+
+    public void delete(String id) {
+        metadata.delete(id);
+        contents.delete(id);
+    }
+}
+```
+
+It isn't very important now, but you see that the business logic is clean, it doesn't depend on the spring. You achieve the integration with the decorators, which you can put into the separate module and your business logic is portable to any alternative stack.
 
 ##### 3) Jersey2 and its own IoC container hk2
 
@@ -406,7 +401,7 @@ Its API is a little bit confusing, however it is also the solution. To isolate y
 
 It is similar to guice IoC container, where you should implement com.google.inject.Provider, f.e
 
-```
+```java
 public final class MyObjectProvider implements com.google.inject.Provider<MyObject> {
 
   private final MyObjectArg arg;
@@ -425,28 +420,28 @@ public final class MyObjectProvider implements com.google.inject.Provider<MyObje
 
 And register this injection point in the guice module:
 
-```
+```java
 bind(MyObject.class).toProvider(MyObjectProvider.class);
 ```
 
 You can use
 
-```
+```java
 bind(...).toConstructor(...)
 ```
 
 instead of providers, it makes you free of the huge amount of provider classes, however if you change the constructor signature you will receive an exception at runtime only.
 In my opinion the first option is better.
 
-Finally it is not important which technologies stack and IoC container you choose, if you isolate them you have to write IoC providers, which don’t have any common specifications. Thus the best place for them is the separated module.
+Finally it is not important which technologies stack and IoC container you choose, if you isolate them you have to write IoC providers, which don't have any common specifications. Thus the best place for them is the separated module.
 
-Regarding the above I can say IoC providers are the code representation for beans.xml in JavaEE or Spring. If you also use some jax-rs framework it isn’t mandatory to isolate it from IoC container, but you should avoid any significant logic in jaxrs components. They should be just decorators over the business logic.
+Regarding the above I can say IoC providers are the code representation for beans.xml in JavaEE or Spring. If you also use some jax-rs framework it isn't mandatory to isolate it from IoC container, but you should avoid any significant logic in jaxrs components. They should be just decorators over the business logic.
 
 ## How to isolate IoC container in the existing code?
 
 Talking about the field, accessors and constructor based injections, you can replace them with providers without any drastic changes and store providers in the separate module. Example:
 
-```
+```java
 public class ClassA {
     @Inject
     public setFiled(ClassB field) {
@@ -455,14 +450,14 @@ public class ClassA {
 }
 ```
 
-It isn’t important which access modificator you have for such methods. **IoC container requires these methods to be non-private and non-final**, sometimes the certain class can’t be final as well. In this case any modificators can be exposed to public with inheritance and/or package accessible classes.
-So if you have to change the access modificator for the modularity you don’t spoil the code, it already has the security hole.
+It isn't important which access modificator you have for such methods. **IoC container requires these methods to be non-private and non-final**, sometimes the certain class can't be final as well. In this case any modificators can be exposed to public with inheritance and/or package accessible classes.
+So if you have to change the access modificator for the modularity you don't spoil the code, it already has the security hole.
 
 Thus you can remove *@Inject* here and create the provider.
 
 F.e. in JavaEE:
 
-```
+```java
 @Produces
 public ClassA provideClassA(СlassB b) {
     ClassA a = new ClassA();
@@ -473,7 +468,7 @@ public ClassA provideClassA(СlassB b) {
 
 Full-arg constructor is the easiest case:
 
-```
+```java
 public СlassA {
     private final ClassB field;
 
@@ -484,7 +479,7 @@ public СlassA {
 
 Replace *@Inject* with:
 
-```
+```java
 @Produces
 public ClassA provideClassA(СlassB b) {
     return new ClassA(b);
@@ -498,9 +493,9 @@ However, if you write the code from the scratch, use full-args constructors at l
 
 Generally IoC container isolation is a good way to control yourself. At least it requires you to use full-arg constructor only and then:
 
-1. You won’t break the encapsulation
+1. You won't break the encapsulation
 2. You will quickly note the interface segregation or single responsibility violation, because when you have more than 4-5 constructor parameters it is the reason to think about the class refactoring.
-3. You won’t be able to introduce cyclic dependencies between the classes.
+3. You won't be able to introduce cyclic dependencies between the classes.
 4. The lack of outside initialization makes you distribute responsibility between your classes/interfaces better.
 5. It results in clean and understandable modules structure.
 6. It results in more stable, reusable and verifiable code.

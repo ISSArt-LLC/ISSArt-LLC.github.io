@@ -15,5 +15,5 @@ Will you celebrate this New Year as this true programmer? :)
 
 [![644258_435201423212701_1317592391_n](/static/img/2014/12/644258_435201423212701_1317592391_n-167x300.jpg)](/static/img/2014/12/644258_435201423212701_1317592391_n.jpg)
 
-<span style="color: #222222;">\*Pic taken from </span>[Programmer’s life](https://www.facebook.com/434638389935671/photos/a.435120493220794.98996.434638389935671/435201423212701/?type=1)<span style="color: #222222;"> Facebook page</span>
+\*Pic taken from [Programmer's life](https://www.facebook.com/434638389935671/photos/a.435120493220794.98996.434638389935671/435201423212701/?type=1) Facebook page
 

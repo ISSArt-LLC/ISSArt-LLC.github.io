@@ -14,7 +14,7 @@ categories:
 > 
 >  Brendan Eich, Mozilla CTO
 
-Today we will talk about WebRTC: how it works and how we can use it. WebRTC is an API project created by the [World Wide Web Consortium](https://en.wikipedia.org/wiki/World_Wide_Web_Consortium) (W3C). The project supports browser-to-browser applications for voice calling,video chat, and P2P file sharing without the need for both internal and external plugins. We are using WebRTC in one of our current projects. The application that we’ve developed creates rooms with many clients with video/audio chat.
+Today we will talk about WebRTC: how it works and how we can use it. WebRTC is an API project created by the [World Wide Web Consortium](https://en.wikipedia.org/wiki/World_Wide_Web_Consortium) (W3C). The project supports browser-to-browser applications for voice calling,video chat, and P2P file sharing without the need for both internal and external plugins. We are using WebRTC in one of our current projects. The application that we've developed creates rooms with many clients with video/audio chat.
 
 [![75ffad9d2bfa22aff07d8460f477ef8f](/static/img/2016/01/75ffad9d2bfa22aff07d8460f477ef8f-300x160.png)](/static/img/2016/01/75ffad9d2bfa22aff07d8460f477ef8f.png)
 
@@ -33,8 +33,8 @@ The main tasks that can be solved by WebRTC:
 There is one simple example of using getUserMedia (sharing video from your device camera to tag <video>):
 
 ```
-<b>var </b>constraints = {video: true};
-<b>function </b>successCallback(stream) {
+var constraints = {video: true};
+function successCallback(stream) {
  var video = document.querySelector("video");
  video.src = window.URL.createObjectURL(stream);
 }
@@ -46,7 +46,7 @@ In the example you can see calling getUserMedia function with two arguments. The
 One more example (your device screen sharing):
 
 ```
-<b>var </b>constraints = {
+var constraints = {
    video: {
       mandatory: {
          chromeMediaSource: 'screen'
@@ -58,26 +58,26 @@ navigator.webkitGetUserMedia(constraints, gotStream);
 
 Looks good? Of course!!!
 
-A different story is **peer to peer connection**. We’d like to provide you one example to illustrate how we can use it:
+A different story is **peer to peer connection**. We'd like to provide you one example to illustrate how we can use it:
 
 ```
-pc = <b>new  </b>RTCPeerConnection(null);
+pc = new  RTCPeerConnection(null);
 pc.onaddstream = gotRemoteStream;
 pc.addStream(localStream);
 pc.createOffer(gotOffer);
-<b>function  </b>gotOffer(desc) {
+function  gotOffer(desc) {
  pc.setLocalDescription(desc);
  sendOffer(desc);
 }
-<b>function </b>gotAnswer(desc) {
+function gotAnswer(desc) {
  pc.setRemoteDescription(desc);
 }
-<b>function </b>gotRemoteStream(e) {
+function gotRemoteStream(e) {
  attachMediaStream(remoteVideo, e.stream);
 }
 ```
 
-At the begining, we create new RTCPeerConnection. When it’s connected, we get the stream in a callback gotRemotestream and attach it to the video element on our page. At the same time, we get a remote video description using gotRemoteStream feature and send thе offer to another end of the connection (gotOffer).
+At the begining, we create new RTCPeerConnection. When it's connected, we get the stream in a callback gotRemotestream and attach it to the video element on our page. At the same time, we get a remote video description using gotRemoteStream feature and send thе offer to another end of the connection (gotOffer).
 
 This method has a lot of issues and one of them is how to create infrastructure in order to divide our clients into rooms (routing the streams to the clients). Fortunately, there are some services which can help us.
 
@@ -92,10 +92,10 @@ In one of our projects we used OpenTok – service which provides infrastructure
 The OpenTok PHP SDK enables you to generate sessions and tokens for OpenTok applications. Here is an example that shows how to get sessionID and token in PHP:
 
 ```
-<b>use </b>OpenTok\OpenTok;
-<b>use </b>OpenTok\MediaMode;
-<b>use </b>OpenTok\Session;
-$opentok = <b>new </b>OpenTok($apiKey, $apiSecret);
+use OpenTok\OpenTok;
+use OpenTok\MediaMode;
+use OpenTok\Session;
+$opentok = new OpenTok($apiKey, $apiSecret);
 // Create a session that attempts to use peer-to-peer streaming:
 $session = $opentok->createSession();
 // Store this sessionId in the database for later use
@@ -109,17 +109,17 @@ $token = $opentok->generateToken($sessionId);
 We use session and token to create a chat in browser (through JavaScript). At the moment, we are creating connection on JavaScript with session and token giving from OpenTok API:
 
 ```
-<b>var </b>session = OT.initSession(apiKey, sessionId);
-session.connect(token, <b>function</b>(error) {
+var session = OT.initSession(apiKey, sessionId);
+session.connect(token, function(error) {
 // If the connection is successful, initialize a publisher and publish to the session
-<b>if </b>(!error) {
-     <b>var </b>publisher = OT.initPublisher('publisher', {
+if (!error) {
+     var publisher = OT.initPublisher('publisher', {
       insertMode: 'append',
       width: '100%',
       height: '100%'
      });
      session.publish(publisher);
-} <b>else </b>{
+} else {
      console.log('There was an error connecting to the session:', error.code, error.message);
      session.on('streamCreated', function(event) {
       session.subscribe(event.stream, 'subscriber', {
@@ -130,7 +130,7 @@ session.connect(token, <b>function</b>(error) {
 ```
 
 OT.initPublisher – the first argument is id of DOM element that is used for broadcasting video from our device camera
-session.on(‘streamCreated’, callback) – fired when remote client connects to us
+session.on('streamCreated', callback) – fired when remote client connects to us
 session.subscribe – the second argument is id of DOM element that is used for broadcasting video from remote clients
 
 **Congratulations, now we have built basic video chat!**

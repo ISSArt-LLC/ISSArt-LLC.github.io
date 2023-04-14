@@ -25,23 +25,23 @@ These days almost every company is present on the Internet. So the first thing I
 
 If the company makes low search results, or has no contact form on the website, all this should make you think how this company will be able to promote your website while its own website leaves much to be desired.
 
-If the website is user-friendly and has a good SEO rating, then let’s proceed and look at the company’s portfolio.
+If the website is user-friendly and has a good SEO rating, then let's proceed and look at the company's portfolio.
 
 ## 2. Decent and credible portfolio
 
-The company’s portfolio is usually found on its website. Besides, most SEO companies include their experience into commercial proposals. To evaluate the portfolio you will have to spend some time, but in the end you will be sure that you are making a deal with a trustworthy company.
+The company's portfolio is usually found on its website. Besides, most SEO companies include their experience into commercial proposals. To evaluate the portfolio you will have to spend some time, but in the end you will be sure that you are making a deal with a trustworthy company.
 
-Study the information about some company’s customers. Where are the customers’ websites? What rating do they have? To make sure the portfolio is reliable, try contacting some current or previous customers.
+Study the information about some company's customers. Where are the customers' websites? What rating do they have? To make sure the portfolio is reliable, try contacting some current or previous customers.
 
 Besides, read feedbacks both on the website and on third-party on-line resources. It is better to double check the reliability of the references and examples, than to have low quality services delivered later.
 
 ## 3. Social networks and SEO companies
 
-Checking the company’s profiles in social networks won’t go amiss. Pay attention to the way they are organized, the number of the page subscribers, the frequency of updates, the relevancy of the content. Social networks analysis will enable you to make conclusions as to how effective the company’s promotion strategy functions using the social media.
+Checking the company's profiles in social networks won't go amiss. Pay attention to the way they are organized, the number of the page subscribers, the frequency of updates, the relevancy of the content. Social networks analysis will enable you to make conclusions as to how effective the company's promotion strategy functions using the social media.
 
 ## 4. Promotional methods
 
-Learn about the company’s promotional methods. Trust only those SEO providers who do not make a secret of their working methods. Professional, responsible and respectable SEO companies will not hide their optimization methods and will be using only legal search optimization technoloques.
+Learn about the company's promotional methods. Trust only those SEO providers who do not make a secret of their working methods. Professional, responsible and respectable SEO companies will not hide their optimization methods and will be using only legal search optimization technoloques.
 
 It will be useful to arrange a meeting or a skype-call to specify the full list of SEO services and promotion methods, do not hesitate to ask questions, if the company is interested to have a new customer, its specialists will definitely share information with you and answer all your questions.
 
@@ -49,7 +49,7 @@ It will be useful to arrange a meeting or a skype-call to specify the full list 
 
 Effective promotion should not be fast. A number of disrepute SEO providers promise almost immediate promotion, for which they use illegal promotion methods, thus causing the website to be finally banned by the search systems.
 
-SEO forecast is unfortunately impossible. If somebody is trying to assure you that in two or three months’ time your traffic will multiply by X times, this should make you challenge this company and its methods. One should see the lead time for SEO promotion realistically and remember that search systems might behave unpredictably.
+SEO forecast is unfortunately impossible. If somebody is trying to assure you that in two or three months' time your traffic will multiply by X times, this should make you challenge this company and its methods. One should see the lead time for SEO promotion realistically and remember that search systems might behave unpredictably.
 
 ## 6. The cost of SEO services
 
@@ -61,6 +61,6 @@ I would like to note that no promotion is ever done free. If you are planning a 
 
 ## 7. Customer care
 
-Quality service means more than just the project launch, but also further support, solving current tasks, prompt response to customers’ requests. Professional SEO companies who truly care about their customers will provide the customer with an account manager.
+Quality service means more than just the project launch, but also further support, solving current tasks, prompt response to customers' requests. Professional SEO companies who truly care about their customers will provide the customer with an account manager.
 
 We hope you will find our tips useful and helpful while looking for a reliable SEO provider. If you have your own experience choosing an SEO specialist and you are ready to add your tips to our list, we will be happy to hear your comments.

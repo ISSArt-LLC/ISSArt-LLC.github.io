@@ -16,7 +16,7 @@ tags:
 
 Augmented reality (or AR) is one of the popular digital trends that transformed the traditional way of things in many spheres of our life. Being capable of enhancing our surroundings, AR demonstrates incredible features that can educate, entertain, and assist with implementing complex procedures. This is unforgettable user experience.
 
-In one of our [previous posts](http://www.issart.com/blog/augmented-reality-staying-ahead-industry/) we’ve already discussed AR and how it is applied in various industries. In this article we’ll explain Augmented reality concept and describe how it works. We’ll cover devices supporting AR features and the programming tools that help deliver AR solutions. Next, we’ll look at the practical use of AR technology. Finally, we’ll discuss the future spreading of AR.
+In one of our [previous posts](http://www.issart.com/blog/augmented-reality-staying-ahead-industry/) we've already discussed AR and how it is applied in various industries. In this article we'll explain Augmented reality concept and describe how it works. We'll cover devices supporting AR features and the programming tools that help deliver AR solutions. Next, we'll look at the practical use of AR technology. Finally, we'll discuss the future spreading of AR.
 
 ## What does Augmented reality stand for?
 
@@ -29,11 +29,11 @@ What types of AR can we meet today? [The four types](http://www.realitytechnolog
 3. Projection based AR;
 4. Superimposition based AR.
 
-Let’s take a closer look at each of these types.
+Let's take a closer look at each of these types.
 
 **Marker based AR** assumes that camera is used to recognize this or that pattern. Reading a QR code is the most widely spread example.
 
-**GPS based AR** deals with data about a person’s position. With this technology, one can easily get interactive directions on how to get to the certain location, or see where the nearest stores and services are located.
+**GPS based AR** deals with data about a person's position. With this technology, one can easily get interactive directions on how to get to the certain location, or see where the nearest stores and services are located.
 
 With **projection based AR** the artificial light is sent onto the real objects. This light can be then touched by a user.
 
@@ -57,25 +57,25 @@ These gadgets are powerful enough to handle the incoming info about the environm
 
 By the way, headsets producers are making huge investments in eye tracking technology. Eye tracking technology is vital to foveated rendering. This technology is going to reduce graphic distortions caused from software not taking eye position into account when rendering AR/VR graphics. You can read more about eye tracking technology and its possible applications [here](http://www.iqsdirectory.com/resources/gaze-your-way-through-eye-tracking-technology/).
 
-## What’s on the developers’ side?
+## What's on the developers' side?
 
 As to developers, what programming tools do they apply to bring outstanding AR solutions into life?
 
-Together with iOS 11, Apple has recently presented [ARKit framework](https://fieldguide.gizmodo.com/all-of-the-best-augmented-reality-tricks-your-iphone-ca-1805804012), which allows building amazing solutions for iOS devices. When it comes to development for Android, ARCore is utilized (actually, this is [Google’s analogue](https://fieldguide.gizmodo.com/everything-you-need-to-know-about-augmented-reality-now-1809069515) of ARKit).
+Together with iOS 11, Apple has recently presented [ARKit framework](https://fieldguide.gizmodo.com/all-of-the-best-augmented-reality-tricks-your-iphone-ca-1805804012), which allows building amazing solutions for iOS devices. When it comes to development for Android, ARCore is utilized (actually, this is [Google's analogue](https://fieldguide.gizmodo.com/everything-you-need-to-know-about-augmented-reality-now-1809069515) of ARKit).
 
-What about app development for headsets? When building apps for Google Glass, Glass Development Kit is used. Development for Microsoft HoloLens, however, doesn’t require a separate SDK – the work can be performed in Visual Studio with Windows 10 SDK.
+What about app development for headsets? When building apps for Google Glass, Glass Development Kit is used. Development for Microsoft HoloLens, however, doesn't require a separate SDK – the work can be performed in Visual Studio with Windows 10 SDK.
 
 In addition, there are programming tools which can be applied when working with different platforms. Vuforia, EasyAR, ARToolKit, Wikitude, Kudan, Maxst, and XZIMG are among them.
 
-## What’s the practical use of AR?
+## What's the practical use of AR?
 
 Most of us would think of entertainment first when we hear about Augmented reality – indeed, this technology provides really exciting using experience. However, entertainment is just one of the variety of spheres where AR can open breathtaking opportunities. This can truly revolutionize the way many industries work.
 
-Let’s look at some truly amazing examples of applying AR technology.
+Let's look at some truly amazing examples of applying AR technology.
 
 ##### *Medicine*
 
-AR solutions providing assistance with [surgical procedures](http://www.realitytechnologies.com/augmented-reality) deserve special attention. They help doctors get instant access to a patient’s records, to archive the procedure, to project graphics on any part of a patient’s body that would help during the procedure. The good news is that these actions can be performed without removing the gloves (by means of voice commands, for example), which saves valuable time.
+AR solutions providing assistance with [surgical procedures](http://www.realitytechnologies.com/augmented-reality) deserve special attention. They help doctors get instant access to a patient's records, to archive the procedure, to project graphics on any part of a patient's body that would help during the procedure. The good news is that these actions can be performed without removing the gloves (by means of voice commands, for example), which saves valuable time.
 
 By the way, ISS Art company got featured among top [Medical Software Development Companies](https://www.softwaredevelopmentcompany.co/medical-software-development-companies/) – we know how to deliver robust and powerful solutions for medical industry utilizing AR and other great technologies.
 
@@ -93,7 +93,7 @@ There are useful solutions for [automotive industry](https://disruptionhub.com/i
 
 ##### *Other*
 
-The use of AR can be out of the ordinary. One of examples is [app that allows writing messages](https://www.newscientist.com/article/2142857-augmented-reality-graffiti-will-lead-to-advertising-ambush-wars/) and posting pics right onto the sky. Other users of this app may check what’s posted on the sky.
+The use of AR can be out of the ordinary. One of examples is [app that allows writing messages](https://www.newscientist.com/article/2142857-augmented-reality-graffiti-will-lead-to-advertising-ambush-wars/) and posting pics right onto the sky. Other users of this app may check what's posted on the sky.
 
 ## The future of AR
 
@@ -108,8 +108,8 @@ Chances are that new types of AR devices will appear. Who knows, maybe AR will b
 
 ## Conclusion
 
-Augmented reality is a very exciting topic which can be discussed endlessly. We’ve covered the basics of it and provided some bright examples of amazing opportunities it brings to certain spheres. It is impossible, however, to cover all of these benefits.
+Augmented reality is a very exciting topic which can be discussed endlessly. We've covered the basics of it and provided some bright examples of amazing opportunities it brings to certain spheres. It is impossible, however, to cover all of these benefits.
 
 If you have additional examples of the dramatic changes brought to various spheres of our life by AR – feel free to share them in comments!
 
-Should you have an exciting AR solution in mind, don’t hesitate to drop us an email at info@issart.com. Together we’ll find a way to bring it to life.
+Should you have an exciting AR solution in mind, don't hesitate to drop us an email at info@issart.com. Together we'll find a way to bring it to life.

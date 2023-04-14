@@ -18,7 +18,7 @@ In this article I will tell you about the most important points.
 
 By a software license we mean a legal means of exploiting intellectual property rights (IPR). It constitutes a contract between a licensor (a software publisher) and a licensee granting the latter to use this software under certain conditions. In addition to this, a software license normally includes liability and responsibility terms.
 
-Which one will be suitable to protect your product? Let’s see what are the options.
+Which one will be suitable to protect your product? Let's see what are the options.
 
 Software licenses are usually divided into the two categories: proprietary licenses and free and open source licenses.\[1\]
 
@@ -45,7 +45,7 @@ Which option to choose will depend on the type of product you are developing.
 
 ### 4 IP issues to consider while developing a software product
 
-You have already decided how you will protect your product once it is ready. But have you ever thought of the challenges you might face during software development process? Let’s see which IP issues can arise while developing your product.
+You have already decided how you will protect your product once it is ready. But have you ever thought of the challenges you might face during software development process? Let's see which IP issues can arise while developing your product.
 
 **Program code reskinning**
 
@@ -61,7 +61,7 @@ Keeping these things in mind, you might prefer creating the project from the gro
 
 Most of the software projects require not only clean programming code creation, but also beautiful design.
 
-It is important to initially make sure the designer is not going to use other designers’ works. In case the designer is going to purchase images, ask him to show you payment documents. If the designer uses free images, you should make sure their usage does not violate ownership rights.
+It is important to initially make sure the designer is not going to use other designers' works. In case the designer is going to purchase images, ask him to show you payment documents. If the designer uses free images, you should make sure their usage does not violate ownership rights.
 
 Make sure that while making mockups Provider will not use similar existing interfaces as a basis as well.
 
@@ -71,7 +71,7 @@ Some projects involve scanning information from the third-party services – fli
 
 **Source code ownership rights**
 
-The deployment stage of the project assumes placing the source code on the customer’s server (or on customer’s hosting provider’s server), and project documents handing over to the customer (for example user manual), if such has ever been created.
+The deployment stage of the project assumes placing the source code on the customer's server (or on customer's hosting provider's server), and project documents handing over to the customer (for example user manual), if such has ever been created.
 
 Together with that, you should consider whether the software will be competitively sensitive. If you feel that your Provider can potentially develop something similar for others in future, you might want to obtain IP ownership.\[4\] For example, in our company the exclusive ownership rights are always handed over to the customer by means of signing an IP rights transfer agreement (an Agreement for compensatory transfer of exclusive intellectual property rights).
 
@@ -82,7 +82,7 @@ To ensure that everything goes smoothly, be sure to check that all these points 
 Share this information with your colleagues and relatives to be sure they will not encounter these IP issues.
 
 **References:**
-\[1\] [https://en.wikipedia.org/wiki/Software\_license](https://en.wikipedia.org/wiki/Software_license)
-\[2\] [https://www.iprhelpdesk.eu/sites/default/files/newsdocuments/Intellectual%20Property%20Rights%20Management%20in%20Software%20Developments\_updated.pdf](https://www.iprhelpdesk.eu/sites/default/files/newsdocuments/Intellectual%20Property%20Rights%20Management%20in%20Software%20Developments_updated.pdf)
+\[1\] [https://en.wikipedia.org/wiki/Software_license](https://en.wikipedia.org/wiki/Software_license)
+\[2\] [https://www.iprhelpdesk.eu/sites/default/files/newsdocuments/Intellectual%20Property%20Rights%20Management%20in%20Software%20Developments_updated.pdf](https://www.iprhelpdesk.eu/sites/default/files/newsdocuments/Intellectual%20Property%20Rights%20Management%20in%20Software%20Developments_updated.pdf)
 \[3\] <https://www.appsfresh.com/blog/how-to-avoid-copyright-infringement-when-reskinning-your-app/>
-\[4\] [http://www.friedfrank.com/siteFiles/Publications/CC\_5KeyIPIssuesSoftwareDevelopmentAgreements\_022713.pdf](http://www.friedfrank.com/siteFiles/Publications/CC_5KeyIPIssuesSoftwareDevelopmentAgreements_022713.pdf)
+\[4\] [http://www.friedfrank.com/siteFiles/Publications/CC_5KeyIPIssuesSoftwareDevelopmentAgreements_022713.pdf](http://www.friedfrank.com/siteFiles/Publications/CC_5KeyIPIssuesSoftwareDevelopmentAgreements_022713.pdf)

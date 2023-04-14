@@ -15,12 +15,12 @@ Our team was looking for a very simple [Java](https://www.issart.com/en/lp/java-
 - [Google Guice](https://github.com/google/guice/wiki/Motivation) for dependency injection
 - Java Servlet for request handling
 
-They work together pretty well, and there is a [plenty](http://stackoverflow.com/questions/15232279/using-guice-servlet-with-jetty-to-map-paths-to-servlets-without-using-a-web-xml) [of](http://blog.timmattison.com/archives/2014/09/02/full-example-code-showing-how-to-use-guice-and-jetty/) [articles](https://github.com/google/guice/wiki/ServletModule) on the Internet covering this topic, so it is easy to get things started. But none of these articles explains how to scope your code in a single HTTP request. By design, servlet is always a singleton. Guice refuses to register servlets as request-scoped objects, so, the whole point of request-scoped object instantiation is being lost. Due to this issue, we’ve almost decided to abandon an idea of using low-level servlets and switch to [Jersey](https://jersey.java.net/) framework, which wasn’t very attractive for us as well, for different reasons. But a deeper look to Guice API has saved my day.
+They work together pretty well, and there is a [plenty](http://stackoverflow.com/questions/15232279/using-guice-servlet-with-jetty-to-map-paths-to-servlets-without-using-a-web-xml) [of](http://blog.timmattison.com/archives/2014/09/02/full-example-code-showing-how-to-use-guice-and-jetty/) [articles](https://github.com/google/guice/wiki/ServletModule) on the Internet covering this topic, so it is easy to get things started. But none of these articles explains how to scope your code in a single HTTP request. By design, servlet is always a singleton. Guice refuses to register servlets as request-scoped objects, so, the whole point of request-scoped object instantiation is being lost. Due to this issue, we've almost decided to abandon an idea of using low-level servlets and switch to [Jersey](https://jersey.java.net/) framework, which wasn't very attractive for us as well, for different reasons. But a deeper look to Guice API has saved my day.
 
-Just to clear things out, we’ve defined a dream class of HTTP resource that we wanted to work with and that we wanted to inherit other resources from.
+Just to clear things out, we've defined a dream class of HTTP resource that we wanted to work with and that we wanted to inherit other resources from.
 
 ```
-<pre style="font-size: .8em">
+
 package com.myapp.servlet.resource;
 
 import com.google.inject.Inject;
@@ -49,7 +49,7 @@ Granularity is the key. One Resource instance is created and called to process a
 Sample resource class.
 
 ```
-<pre style="font-size: .8em">
+
 package com.cassantec.frontend.servlet.resource;
 
 import com.cassantec.frontend.servlet.exception.InvalidRequestException;
@@ -66,12 +66,12 @@ public class InvalidRequestResource extends Resource {
 }
 ```
 
-We’re going to use this InvalidRequestResource as a default resource for all requests which don’t match any routes.
+We're going to use this InvalidRequestResource as a default resource for all requests which don't match any routes.
 
-Now we need to somehow make this work. Here’s a universal class of servlet that allows you to register such request-scoped resources in your Guice module with ease.
+Now we need to somehow make this work. Here's a universal class of servlet that allows you to register such request-scoped resources in your Guice module with ease.
 
 ```
-<pre style="font-size: .8em">
+
 package com.myapp.servlet;
 
 import com.myapp.servlet.resource.InvalidRequestResource;
@@ -120,12 +120,12 @@ public class ScopedServlet extends HttpServlet {
 }
 ```
 
-In this snippet Guice magic happens: **it turns out that Guice Injector registers itself as an injectable singleton object!** To be honest, I was very surprised (in a good way) when I realized that it works this way. And even more wonderful: **you don’t need to have an appropriate binding in the injector to instantiate objects of arbitrary class.** Guice is quite smart, man! As a result, we were able to use the injector to instantiate request-scoped resources and process them inside the servlet.
+In this snippet Guice magic happens: **it turns out that Guice Injector registers itself as an injectable singleton object!** To be honest, I was very surprised (in a good way) when I realized that it works this way. And even more wonderful: **you don't need to have an appropriate binding in the injector to instantiate objects of arbitrary class.** Guice is quite smart, man! As a result, we were able to use the injector to instantiate request-scoped resources and process them inside the servlet.
 
-So, ScopedServlet’s constructor takes two arguments: a resource class to process GET requests, and a resource class to process POST requests. To make this work, we must use instance bindings.
+So, ScopedServlet's constructor takes two arguments: a resource class to process GET requests, and a resource class to process POST requests. To make this work, we must use instance bindings.
 
 ```
-<pre style="font-size: .8em">
+
 package com.myapp.servlet;
 
 import com.myapp.account.AccountResource;

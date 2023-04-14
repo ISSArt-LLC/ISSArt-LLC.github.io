@@ -14,15 +14,15 @@ Imagine: you are a customer of a big software project that tangled in chaos. Sev
 
 ## Meet John
 
-Imagine, that you are John, a customer of a large and complex software project. You and your development team have done a lot of work, however, the project tangled in chaos. Your personal investments still should still return as a profit from the users of your team’s product.
+Imagine, that you are John, a customer of a large and complex software project. You and your development team have done a lot of work, however, the project tangled in chaos. Your personal investments still should still return as a profit from the users of your team's product.
 
-John’s questions and findings will help you to better organize your project.
+John's questions and findings will help you to better organize your project.
 
-*All names are fictional. Editors may not agree with John’s conclusions :).*
+*All names are fictional. Editors may not agree with John's conclusions :).*
 
-OK, let’s read what John wrote in his diary.
+OK, let's read what John wrote in his diary.
 
-## John’s preamble for his diary
+## John's preamble for his diary
 
 *\[John is saying to himself – editorial comment\]*
 
@@ -54,7 +54,7 @@ While the developers were implementing the prototype, I discovered several very 
 
 I felt embarrassed, because we had put off the release date 3 times. The developers told me that we changed the requirements too frequently.
 
-I recognized the problem when I joined one of the developers’ meetings. After each small change request they started reworking the system architecture. Otherwise, they would have to make quick and dirty solutions. Quick product changes would not allow us to accomplish even the first version. I treat this problem as my first project management failure. Frequently changing requirements are like a ship in a storm.
+I recognized the problem when I joined one of the developers' meetings. After each small change request they started reworking the system architecture. Otherwise, they would have to make quick and dirty solutions. Quick product changes would not allow us to accomplish even the first version. I treat this problem as my first project management failure. Frequently changing requirements are like a ship in a storm.
 
 <div class="wp-caption aligncenter" id="attachment_2082" style="width: 612px">[![Chaos in requirements for a software project is like a storm for a ship.](/static/img/2017/03/2017-03_04-Robert_Salmon_-_Ship_in_Storm-1024x729.jpg)](/static/img/2017/03/2017-03_04-Robert_Salmon_-_Ship_in_Storm.jpg)A software project in chaotic requirements is like a ship in a storm. Robert Salmon – “Ship in Storm”.
 
@@ -77,7 +77,7 @@ We spent a lot of time on adjustments of our new process. Until everybody got si
 
 <div class="wp-caption aligncenter" id="attachment_2086" style="width: 612px">[![The rules became competing with each other. It may cause chaos in the project workflow.](/static/img/2017/03/2017-03_06-the-chaos-in-rules-1024x768.jpg)](/static/img/2017/03/2017-03_06-the-chaos-in-rules.jpg)The rules began competing with each other. It may cause chaos in the project workflow.
 
-</div>**There’s my second lesson: let your workflow change, set up only several common rules, that can be changed easily.**
+</div>**There's my second lesson: let your workflow change, set up only several common rules, that can be changed easily.**
 
 It can be a little chaotic, but less time consuming and more flexible and productive then. It was a very expensive lesson…
 
@@ -95,15 +95,15 @@ Solving the conflicts I got a headache and heartache.
 
 I came to recognition that the people are everything in an IT project.
 
-What if my employees would not be so active and creative? We would fail. But we haven’t!
+What if my employees would not be so active and creative? We would fail. But we haven't!
 
 The goal is to make the chaos constructive and collaborative. I like how Scrum solves the problem. It inspires 5 values: commitment, courage, focus, openness and respect. With no bureaucracy or hierarchy with extra management.
 
-Here’s a citation from the Scrum Guide:
+Here's a citation from the Scrum Guide:
 
 *Successful use of Scrum depends on people becoming more proficient in living these five values. People personally **commit** to achieving the goals of the Scrum Team. The Scrum Team members have **courage** to do the right thing and work on tough problems. Everyone **focuses** on the work of the Sprint and the goals of the Scrum Team. The Scrum Team and its stakeholders agree to be **open** about all the work and the challenges with performing the work. Scrum Team members **respect** each other to be capable, independent people.*
 
-**Here’s my third big lesson: some grade of conflicts is healthy; engage people’s energy in a coherent and constructive way.**
+**Here's my third big lesson: some grade of conflicts is healthy; engage people's energy in a coherent and constructive way.**
 
 ## You manage the chaos
 
@@ -119,7 +119,7 @@ Harness the chaos. If your team is boiling, it is alive and electric. Foster it 
 
 Chaos in software project management is OK. Chaos has its hidden energy and force to outrun competitors on the end-market. Moreover, the new areas of the market are profitable because of chaos and the corresponding rules.
 
-**Here are John’s hard-won lessons:**
+**Here are John's hard-won lessons:**
 
 1. **use the iterative development process to adjust to changes fast;**
 2. **keep rules simple;**

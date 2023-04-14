@@ -25,8 +25,8 @@ As the first step, connect *Allure* framework to your project, launch tests and 
 
 In order to connect *Allure* to your project, add *Allure* adapter to *JUnit4* into section project->dependencies of the pom.xml file:
 
-```
-<pre class="brush: xml; title: ; notranslate" title="">
+```xml
+
 <dependency>
   <groupId>io.qameta.allure</groupId>
   <artifactId>allure-junit4</artifactId>
@@ -39,8 +39,8 @@ There also exist adapters for other popular testing frameworks, for example *JUn
 
 Further, you need to tune a *Surefire* plugin for collecting results after the tests run. In the pom.xml file the reference to this plugin should be written in the following way in the project->build->plugins section:
 
-```
-<pre class="brush: xml; title: ; notranslate" title="">
+```xml
+
 <plugin>
   <groupId>org.apache.maven.plugins</groupId>
   <artifactId>maven-surefire-plugin</artifactId>
@@ -66,14 +66,14 @@ Further, you need to tune a *Surefire* plugin for collecting results after the t
 </plugin>
 ```
 
-Listener is a class that processes such events as testStarted, testFinished, testFailure and other. Standard AllureJunit4 listener stores results of the test run in the files of the JSON format. *AspectJ Weaver* library allows Allure to collect information about methods, including private ones. Without connecting this library, the report will be created, but there won’t be any information about the steps of the test case in it. It should be noted, that custom settings of *Allure* features are passed through settings of the *Surefire* plugin, not impacting other parts of the project.
+Listener is a class that processes such events as testStarted, testFinished, testFailure and other. Standard AllureJunit4 listener stores results of the test run in the files of the JSON format. *AspectJ Weaver* library allows Allure to collect information about methods, including private ones. Without connecting this library, the report will be created, but there won't be any information about the steps of the test case in it. It should be noted, that custom settings of *Allure* features are passed through settings of the *Surefire* plugin, not impacting other parts of the project.
 
 ##### Tests launch
 
-In order to launch tests, using *Maven*+*Surefire* it’s necessary to use the same command, that is used without the plug in *Allure*.
+In order to launch tests, using *Maven*+*Surefire* it's necessary to use the same command, that is used without the plug in *Allure*.
 
-```
-<pre class="brush: bash; title: ; notranslate" title="">
+```bash
+
 mvn clean test
 ```
 
@@ -81,8 +81,7 @@ Tests results in JSON format are located in the project folder target/surefire-r
 
 This directory can be specified in the Surefire settings section of the pom.xml file project->build->plugins:
 
-```
-<pre class="brush: xml; title: ; notranslate" title="">
+```xml
 <plugin>
   <groupId>org.apache.maven.plugins</groupId>
   ...
@@ -101,12 +100,11 @@ This directory can be specified in the Surefire settings section of the pom.xml 
 
 ##### Building and viewing reports
 
-You can build and view the prepared report either via console application or via the employed project comprehension tool, which is *Maven* in our case. We won’t go into details in the first case, noting that this application is available for *Linux*, *MacOS* and *Windows* operating systems. Details about the console application can be found following this [link](https://docs.qameta.io/allure/#_get_started).
+You can build and view the prepared report either via console application or via the employed project comprehension tool, which is *Maven* in our case. We won't go into details in the first case, noting that this application is available for *Linux*, *MacOS* and *Windows* operating systems. Details about the console application can be found following this [link](https://docs.qameta.io/allure/#_get_started).
 
 In order to launch the report building via *Maven*, first, add a plug-in to pom.xml file:
 
-```
-<pre class="brush: xml; title: ; notranslate" title="">
+```xml
 <plugin>
   <groupId>io.qameta.allure</groupId>
   <artifactId>allure-maven</artifactId>
@@ -116,8 +114,7 @@ In order to launch the report building via *Maven*, first, add a plug-in to pom.
 
 Then, in order to build a report, execute the following command in the console:
 
-```
-<pre class="brush: bash; title: ; notranslate" title="">
+```bash
 mvn allure:serve
 ```
 
@@ -125,8 +122,7 @@ If everything has been set and configured correctly, the finished report will be
 
 One may also build a report, without running it in a browser. For this purpose, execute in the console:
 
-```
-<pre class="brush: bash; title: ; notranslate" title="">
+```bash
 mvn allure:report
 ```
 
@@ -163,7 +159,7 @@ Under the **Suits** and **Packages** tabs, the results are grouped by classes, w
 
 ##### Behaviour 
 
-The behaviour tab is handy for other members of the team. Here the results are grouped, according to the behaviour of the system under the test. Here are three levels of hierarchy: Epics, Feature, Story. While the results displayed under the Suites and Packages tab are grouped automatically, the results on this tab in the corresponding branch will be formed only if a test method or a class in the test code is entitled by the annotation @Epic, @Feature, @Story correspondingly. You needn’t use all three levels. Unmarked methods will be displayed here just as a list. 
+The behaviour tab is handy for other members of the team. Here the results are grouped, according to the behaviour of the system under the test. Here are three levels of hierarchy: Epics, Feature, Story. While the results displayed under the Suites and Packages tab are grouped automatically, the results on this tab in the corresponding branch will be formed only if a test method or a class in the test code is entitled by the annotation @Epic, @Feature, @Story correspondingly. You needn't use all three levels. Unmarked methods will be displayed here just as a list. 
 
 ##### Categories 
 
@@ -200,8 +196,7 @@ Add this annotation for methods, which you want to mark as separate steps of the
 
 *Example of the method for the update of the user profile.*
 
-```
-<pre class="brush: java; title: ; notranslate" title="">
+```java
 @Step("User: Update profile [user id: {userId}]")
     public Response updateProfile(
         final String accessToken,
@@ -225,7 +220,7 @@ Add this annotation for methods, which you want to mark as separate steps of the
 
 In particular:
 
-- If you use *JUnit* ExternalResource method, mark ‘before’ and ‘after’ methods;
+- If you use *JUnit* ExternalResource method, mark 'before' and 'after' methods;
 - If you mark *JUnit* method with annotation @Before or @After, mark it with the annotation @Step;
 - In the current version *Allure* for *JUnit* static methods marked as @BeforeClass and @AfterClass and their analogues in ExternalResource used as @ClassRule are not displayed in the report.
 
@@ -235,8 +230,7 @@ Use this annotation to add HTTP requests, responses and other files to the repor
 
 ###### *Screenshots attachment*
 
-```
-<pre class="brush: java; title: ; notranslate" title="">
+```java
 @Attachment(value = "Page screenshot", type = "image/png")
 public byte[] saveScreenshot(byte[] screenshot) {
     return screenShot;
@@ -245,8 +239,7 @@ public byte[] saveScreenshot(byte[] screenshot) {
 
 ###### *HTTP requests attachment*
 
-```
-<pre class="brush: java; title: ; notranslate" title="">
+```java
 @Attachment(value = "{method} {url}", type = "text/plain")
 private static String saveRequest(
    final String url,
@@ -260,10 +253,9 @@ private static String saveRequest(
 ```
 
 ###### *HTTP responses attachment
-*
 
-```
-<pre class="brush: java; title: ; notranslate" title="">
+
+```java
 @Attachment(value = "{code} {reasonPhrase}", type = "text/plain")
     private static String saveResponse(
         final String body,
@@ -281,8 +273,7 @@ There are other ready for use solutions for other HTTP clients, with the help of
 
 Add library allure-rest-assured to your project:
 
-```
-<pre class="brush: xml; title: ; notranslate" title="">
+```xml
 <dependency>
    <groupId>io.qameta.allure</groupId>
    <artifactId>allure-rest-assured</artifactId>
@@ -292,8 +283,7 @@ Add library allure-rest-assured to your project:
 
 While configuring the client, add filter AllureRestAssured
 
-```
-<pre class="brush: java; title: ; notranslate" title="">
+```java
 RequestSpecification spec = prepareSpecSomehow();
 spec.filter(new AllureRestAssured());
 ```
@@ -308,8 +298,7 @@ For @TmsLink this is the path to the test management system, for @Issue – this
 
 *Example: settings for Maven + Jira. As it was mentioned above, these settings are for the Surefire plugin:*
 
-```
-<pre class="brush: xml; title: ; notranslate" title="">
+```xml
 <plugin>
   <groupId>org.apache.maven.plugins</groupId>
   <artifactId>maven-surefire-plugin</artifactId>
@@ -338,8 +327,7 @@ For @TmsLink this is the path to the test management system, for @Issue – this
 
 ###### Add links to the methods:
 
-```
-<pre class="brush: java; title: ; notranslate" title="">
+```java
 @Test
     @TmsLink("MyTMSNamespace-1999")
     @Issue("MyBugTrackerSpace-2999")
@@ -366,7 +354,6 @@ In order to display the information here, add file enviroment.properties to the 
  Example: *versions and statuses for two services in enviroment.properties*
 
 ```
-<pre class="brush: plain; title: ; notranslate" title="">
 Social           0.12.0-20180521-1 (master) [healthy]
 User             0.15.0-20180516-1 (master) [healthy]
 ```
@@ -376,7 +363,7 @@ User             0.15.0-20180516-1 (master) [healthy]
 
 #### Conclusion
 
-This way, *Allure* presents results in a structure, allowing one to work with more comfortably, than with raw data. It’s especially important if we mean a huge number of tests, unstructured tests, which you need to make uniform, complex cases, consisting of many steps. The article has covered the experience of REST API testing, but tools, described in the article will be successfully used in other types of testing. So, for UI tests it will be useful to attach screenshots to the report and store the testing environment configuration, for instance browsers versions. Besides, this tool supports many popular software programming languages and test frameworks.
+This way, *Allure* presents results in a structure, allowing one to work with more comfortably, than with raw data. It's especially important if we mean a huge number of tests, unstructured tests, which you need to make uniform, complex cases, consisting of many steps. The article has covered the experience of REST API testing, but tools, described in the article will be successfully used in other types of testing. So, for UI tests it will be useful to attach screenshots to the report and store the testing environment configuration, for instance browsers versions. Besides, this tool supports many popular software programming languages and test frameworks.
 
 #### Links mentioned in this blog post:
 

@@ -13,12 +13,12 @@ tags:
     - 'version control'
 ---
 
-Today I’m going to tell you about Git version control (branching) model that we use widely in ISS Art to effectively manage code base of our projects. The experienced software development teams might know this model as major ideas were found long time ago and posted in the articles:
+Today I'm going to tell you about Git version control (branching) model that we use widely in ISS Art to effectively manage code base of our projects. The experienced software development teams might know this model as major ideas were found long time ago and posted in the articles:
 
 - [Version Control for Multiple Agile Teams](https://www.infoq.com/articles/agile-version-control) by Henrik Kniberg
 - [A successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/) by Vincent Driessen
 
-Here, I’m going to consolidate these ideas in the way that could be easily understood by software project managers, product owners and decision-makers to explain them the technical challenges that can arise due to certain harmful business decisions, and how they can impact development costs and schedule. Examples of harmful business decisions:
+Here, I'm going to consolidate these ideas in the way that could be easily understood by software project managers, product owners and decision-makers to explain them the technical challenges that can arise due to certain harmful business decisions, and how they can impact development costs and schedule. Examples of harmful business decisions:
 
 - Task reprioritization after development start
 - Request to include one more feature in release during release testing
@@ -32,8 +32,8 @@ If your team is not experienced enough in collaborative software development pro
 - Testing blocks the development until finished
 - It is hard to switch between the tasks
 - Code is not ready to be released the most of time
-- It is hard to fix the defects (i.e. client’s bug reports)
-- It is hard to fix the release bugs (i.e. tester’s bug reports)
+- It is hard to fix the defects (i.e. client's bug reports)
+- It is hard to fix the release bugs (i.e. tester's bug reports)
 
 Let me show you an example. Meet this awesome team, starring:
 
@@ -42,7 +42,7 @@ Let me show you an example. Meet this awesome team, starring:
 | Donkey Eeyore | Junior | Lion | Server |
 | Lead developer | Developer | Tester | Buzzing in the corner |
 
-They are working on some important project. They have created a Git repository to share and manage their code. They don’t worry about branching. They use only master branch, because the team is small, and this approach fits their needs very well (which is not true, but they think that it is). They have already deployed their first release on production, and here come the troubles…
+They are working on some important project. They have created a Git repository to share and manage their code. They don't worry about branching. They use only master branch, because the team is small, and this approach fits their needs very well (which is not true, but they think that it is). They have already deployed their first release on production, and here come the troubles…
 
 ##### Code conflicts strike hard
 
@@ -58,11 +58,11 @@ Meanwhile Eeyore fixed a super-critical bug:
 
 ![](/static/img/2017/03/scheme_3.png)
 
-But he was unable to commit it, because there is a code conflict with Junior’s code:
+But he was unable to commit it, because there is a code conflict with Junior's code:
 
 ![](/static/img/2017/03/scheme_4.png)
 
-So, Junior’s low-priority code gets in the way of the super-critical bug fix. Eeyore can’t resolve the conflict efficiently without Junior’s assistance, because Junior’s code is awful.
+So, Junior's low-priority code gets in the way of the super-critical bug fix. Eeyore can't resolve the conflict efficiently without Junior's assistance, because Junior's code is awful.
 
 ##### Releases are hard to get deployed
 
@@ -70,7 +70,7 @@ Eeyore worked on the development of the pool:
 
 ![](/static/img/2017/03/scheme_5.png)
 
-Meanwhile, Junior was creating a garden house. Slowly, step by step, because that’s what real guys do:
+Meanwhile, Junior was creating a garden house. Slowly, step by step, because that's what real guys do:
 
 ![](/static/img/2017/03/scheme_6.png)
 
@@ -82,7 +82,7 @@ It is no more a garden house – rather, it is a “pool house”. It is not fin
 
 ![](/static/img/2017/02/8.png)
 
-Is he satisfied? I don’t think so…
+Is he satisfied? I don't think so…
 
 ![](/static/img/2017/03/Illustration-of-house-and-disappointed-man.png)
 
@@ -185,7 +185,7 @@ Once the release is fully tested manually, and the tester confirms that the appl
 
 #### Example
 
-Let’s teach Junior and Eeyore our branching model and ask them to travel back in time and repeat the experiment. Before continuing, the guys create three main branches right away and declare their standard policies. Now, Junior must create a separate feature branch to build his garden house:
+Let's teach Junior and Eeyore our branching model and ask them to travel back in time and repeat the experiment. Before continuing, the guys create three main branches right away and declare their standard policies. Now, Junior must create a separate feature branch to build his garden house:
 
 ![](/static/img/2017/02/10.png)
 
@@ -209,7 +209,7 @@ Before release delivery, we must test it carefully. To start testing, Eeyore and
 
 ![](/static/img/2017/02/15.png)
 
-Please note that testing doesn’t block further development. Junior catches up the pool feature very early and resolves the conflicts slowly and carefully. Once the garden house is ready, Junior is free to merge it to “develop” – it won’t interrupt release testing because the branch policy doesn’t allow Junior to merge his code to “testing”.
+Please note that testing doesn't block further development. Junior catches up the pool feature very early and resolves the conflicts slowly and carefully. Once the garden house is ready, Junior is free to merge it to “develop” – it won't interrupt release testing because the branch policy doesn't allow Junior to merge his code to “testing”.
 
 ![](/static/img/2017/02/16.png)
 

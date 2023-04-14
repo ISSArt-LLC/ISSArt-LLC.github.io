@@ -66,13 +66,13 @@ ContactPage:
 
 To run the test application, just start the start.bat file, which is located in the /testApp folder.[![](https://issart.com/blog/wp-content/uploads/2019/11/1-300x69.png)](https://issart.com/blog/wp-content/uploads/2019/11/1.png)
 
-Now, if you open [http://localhost:7000](http://localhost:7000) you’ll see:
+Now, if you open [http://localhost:7000](http://localhost:7000) you'll see:
 
 [![](https://issart.com/blog/wp-content/uploads/2019/11/1.1-300x143.png)](https://issart.com/blog/wp-content/uploads/2019/11/1.1.png)
 
 **2. Java Maven project creation:**
 
-Launch the IDEA IDE. If it’s not installed yet, then install it. Create a Java Maven project, using the default settings offered by IDE. Add the following dependencies to the pom.xml file:
+Launch the IDEA IDE. If it's not installed yet, then install it. Create a Java Maven project, using the default settings offered by IDE. Add the following dependencies to the pom.xml file:
 
 ```
   <dependencies>
@@ -215,7 +215,7 @@ Launch the IDEA IDE. If it’s not installed yet, then install it. Create a Java
  }
 ```
 
-What’s interesting for us here: 
+What's interesting for us here: 
 
 - public WebDriver driver; – the variable declares a webdriver variable 
 - private String browser; – The value of this variable will determine the browser instance which should be initialized in the test.
@@ -299,7 +299,7 @@ Great, now we have the basis for creating autotests, and we can move on.
 
 ##### **Step 3: Creating tests and running them**
 
-1. **Let’s remove the debug test and add HomePageTests.java instead.**
+1. **Let's remove the debug test and add HomePageTests.java instead.**
 
 For clarity, let us return to the pseudocode written at the beginning:
 
@@ -315,7 +315,7 @@ This is almost ready-made code, we rewrite it like this:
 2. Get page title = String title = app.home().getPageTitle();
 3. Check if actual title is equal to expected = assertThat(title, equalTo(“mainPage”));
 
-As you can see, tests written in this style are practically no different from pseudocode. Let’s put our code in the appropriate class, and also write the code for the second test of this page:
+As you can see, tests written in this style are practically no different from pseudocode. Let's put our code in the appropriate class, and also write the code for the second test of this page:
 
 ```
  package tests;
@@ -355,7 +355,7 @@ As you can see, tests written in this style are practically no different from ps
  }
 ```
 
-At this point, the IDE will inform you that you are missing two classes: goTo() and homePage(). Both of these classes are just an intermediate link, and should be declared in ApplicationManager class, let’s do this, and create the classes by adding the declaration of helper classes instances. After private String browser; add the following:
+At this point, the IDE will inform you that you are missing two classes: goTo() and homePage(). Both of these classes are just an intermediate link, and should be declared in ApplicationManager class, let's do this, and create the classes by adding the declaration of helper classes instances. After private String browser; add the following:
 ```
  private NavigationHelper navigationHelper;
  
@@ -384,7 +384,7 @@ We are going to create all the missing methods of this class that we will need f
  }
 ```
 
-We don’t have to create anything else in this class for now, but IDE reminds us that we still have 4 more assistant classes. Let’s go back to them.
+We don't have to create anything else in this class for now, but IDE reminds us that we still have 4 more assistant classes. Let's go back to them.
 
 To get started, add NavigationHelper.java class to the “appmanager” folder:
 
@@ -483,7 +483,7 @@ At this stage, we already have all the high-level classes to perform the first t
  }
 ```
 
-Let’s go back to our tests and try to run them.
+Let's go back to our tests and try to run them.
 
 [![](https://issart.com/blog/wp-content/uploads/2019/11/3-300x175.png)](https://issart.com/blog/wp-content/uploads/2019/11/3.png)
 
@@ -588,7 +588,7 @@ Make sure that all tests pass successfully:
 
 ##### **Step 4: Integration with Jenkins CI**
 
-So, we have come to the final part – integration with continuous integration system (CI). We will use one of the most popular tools for this – Jenkins CI. The main idea is to have some of our tests run automatically when developers roll out a new version of the test application to the master repository branch. Let’s do it step by step:
+So, we have come to the final part – integration with continuous integration system (CI). We will use one of the most popular tools for this – Jenkins CI. The main idea is to have some of our tests run automatically when developers roll out a new version of the test application to the master repository branch. Let's do it step by step:
 
 1.  [Download](https://jenkins.io/download/) Jenkins.
 2. Install Jenkins with the recommended parameters following the installer. I recommend installing CI on a separate machine with Internet access, it is necessary for the integration of your instance with the repository. However, for the demonstration, we can use a local Jenkins project with access through the [Ngrok](https://ngrok.com/) tool.
@@ -614,11 +614,11 @@ So, we have come to the final part – integration with continuous integration s
 ```
  node {
  
- stage (‘SCM checkout’){
-  git “https://gitlab.com/mbabilo/startuitesting\_tests”
+ stage ('SCM checkout'){
+  git “https://gitlab.com/mbabilo/startuitesting_tests”
  }
 
- stage (‘Build and Run’){
+ stage ('Build and Run'){
    dir(“demo”) {
   sh “mvn clean install”
   }
@@ -629,8 +629,8 @@ So, we have come to the final part – integration with continuous integration s
 Here:
 
 1. node { } – a wrapper for our script. The script should be inside of it.
-2. stage (‘SCM checkout’) – a preparatory stage, during which we receive changes from our repository.
-3. stage (‘Build’) – the build stage, during which Jenkins performs the same steps that we did in the IDE console:
+2. stage ('SCM checkout') – a preparatory stage, during which we receive changes from our repository.
+3. stage ('Build') – the build stage, during which Jenkins performs the same steps that we did in the IDE console:
 
 - dir (“demo”) – moving to the specific folder.
 - sh “mvn clean start” – executes shell commands.
@@ -668,11 +668,11 @@ The integration settings with Jenkins CI will look as follows or similar:
 
 [![](https://issart.com/blog/wp-content/uploads/2019/11/17-300x221.png)](https://issart.com/blog/wp-content/uploads/2019/11/17.png)
 
-13. Update the settings of the Jenkins Pipeline (pipeline\_selenium1) to use a GitLab webhook.
+13. Update the settings of the Jenkins Pipeline (pipeline_selenium1) to use a GitLab webhook.
 
 [![](https://issart.com/blog/wp-content/uploads/2019/11/18-300x239.png)](https://issart.com/blog/wp-content/uploads/2019/11/18.png)
 
-14. That’s it! Now let’s push some code updates into the repository with your test app, and see what happens in Jenkins.
+14. That's it! Now let's push some code updates into the repository with your test app, and see what happens in Jenkins.
 
 [![](https://issart.com/blog/wp-content/uploads/2019/11/19-300x180.png)](https://issart.com/blog/wp-content/uploads/2019/11/19.png)
 

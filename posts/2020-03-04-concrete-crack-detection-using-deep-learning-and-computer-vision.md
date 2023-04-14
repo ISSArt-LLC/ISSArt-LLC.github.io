@@ -33,7 +33,7 @@ We used a data set that consists of 198 high-resolution images in the JPG format
 
 </div>Well, our first task is data preprocessing. At this stage, we need to create a training set for a neural network that consists of small images. 
 
-Firstly, we need to split each image into overlapping tiles 256X256 px. Those images have resolution 11664X8750 px and cracks are so small that after fragmentation we’ll get huge imbalanced data set. Each image divided into just about 1600 samples without cracks and 150 with ones.
+Firstly, we need to split each image into overlapping tiles 256X256 px. Those images have resolution 11664X8750 px and cracks are so small that after fragmentation we'll get huge imbalanced data set. Each image divided into just about 1600 samples without cracks and 150 with ones.
 
 However, we found an additional challenge. The most part of tiles with cracks has horizontal cracks. But cracks can be rotated at any angle. Therefore, our second step in data preprocessing is data augmentation.
 

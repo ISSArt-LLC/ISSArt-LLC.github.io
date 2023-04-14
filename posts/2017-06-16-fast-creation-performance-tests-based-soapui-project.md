@@ -15,15 +15,15 @@ tags:
     - testing
 ---
 
-The role of API has grown over the last few years. The growing use of cloud based technologies leads to more API-interfaces providing access to web-services. API supports this important interaction between the client and service. In this case, not only the proper operation of API methods is very important, but also their performance. Let’s take a look at the tools which are the leaders in conducting automated API [testing](https://www.issart.com/en/services/details/service/testing) such as SoapUI API testing.
+The role of API has grown over the last few years. The growing use of cloud based technologies leads to more API-interfaces providing access to web-services. API supports this important interaction between the client and service. In this case, not only the proper operation of API methods is very important, but also their performance. Let's take a look at the tools which are the leaders in conducting automated API [testing](https://www.issart.com/en/services/details/service/testing) such as SoapUI API testing.
 
-SoapUI is a testing tool SOAP and REST API. SoapUI tool allows you to create and run functional API tests. JMeter is an open-source project allowing to do SOAP and REST API based load testing. Let testers perform test suite for a REST API for SoapUI where they have to perform not only functional tests, but also load testing based on the developed test cases. JMeter as load testing tool offers more flexible settings for creating load tests, it has more additional plugins for displaying test results. But in case you’re using a new tool, you need to create a set of REST requests, debug this set, combine some requests to create test cases again.
+SoapUI is a testing tool SOAP and REST API. SoapUI tool allows you to create and run functional API tests. JMeter is an open-source project allowing to do SOAP and REST API based load testing. Let testers perform test suite for a REST API for SoapUI where they have to perform not only functional tests, but also load testing based on the developed test cases. JMeter as load testing tool offers more flexible settings for creating load tests, it has more additional plugins for displaying test results. But in case you're using a new tool, you need to create a set of REST requests, debug this set, combine some requests to create test cases again.
 
 Can a load profile of service be built based on the set of functional SoapUI tests? It is possible. This is where the new function of SoapUI project conversion to the taurus script will help us. This feature appeared in taurus 1.8.0
 
 ### A command-line utility that can be used to convert existing SoapUI scripts into Taurus config
 
-Let’s look at how it can be done. We need a rest api project for this experiment. We’ll take Flickr a test SoapUI project. You can download it [here](https://www.soapui.org/tutorials/flickr.html).
+Let's look at how it can be done. We need a rest api project for this experiment. We'll take Flickr a test SoapUI project. You can download it [here](https://www.soapui.org/tutorials/flickr.html).
 
 ![SoapUI Project Flickr](https://www.issart.com/blog/wp-content/uploads/2017/06/flickr.png)
 
@@ -33,7 +33,7 @@ For using the Flickr API, an API-key is required. It can be obtained when regist
 
 Well, now we have a ready SoapUI project.
 
-Let’s have a look at the functionality of soapui2yaml utility. It allows you to convert the script SoapUI to taurus yaml configuration.
+Let's have a look at the functionality of soapui2yaml utility. It allows you to convert the script SoapUI to taurus yaml configuration.
 
 We can run this utility without any additional keys.
 
@@ -78,7 +78,7 @@ We will save this configuration yml file and start its execution.
 
 ![SoapUI Project Console](https://www.issart.com/blog/wp-content/uploads/2017/06/console.png)
 
-We can see the artifact directory named YYYY-MM-DD\_HH-MM-SS.MS being created in the console.
+We can see the artifact directory named YYYY-MM-DD_HH-MM-SS.MS being created in the console.
 
 We also get information on the test duration, the number of tests and the result of their implementation.
 
@@ -92,10 +92,10 @@ jmeter-bzt.properties – Jmeter properties
 kpi.jtl – the test execution result in text format.
 Merged.json/yml – the result of merging several configuration files.
 requests.jmx – YAML configuration file converted to JMeter .jmx format
-modified\_requests.jmx – same as requests.jmx plus Taurus-driven changes via YAML
+modified_requests.jmx – same as requests.jmx plus Taurus-driven changes via YAML
 system.properties – effective JVM System Properties*
 
-Let’s look at the result of the tests. All the tests failed. We will open the tests in the JMeter to look for the cause.
+Let's look at the result of the tests. All the tests failed. We will open the tests in the JMeter to look for the cause.
 
 Now let us run JMeter and open requests.jmx
 

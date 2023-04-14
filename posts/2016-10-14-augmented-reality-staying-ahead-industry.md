@@ -17,7 +17,7 @@ tags:
 
 Augmented reality has the ability to disrupt the way every single business and industry operates in the next half-decade. From the obvious industries like construction, to the not-as-obvious industries like auto repair, will find new ways to compete and offer better experiences for their customers.
 
-This “cool” idea that has been in the labs for years, may soon become reality for every business. It’s part of the growing trend to deliver personal, customizable, and interactive services and products that today’s consumers are demanding.
+This “cool” idea that has been in the labs for years, may soon become reality for every business. It's part of the growing trend to deliver personal, customizable, and interactive services and products that today's consumers are demanding.
 
 While a majority of the time augmented reality (AR) has been used in the gaming — PokemonGo went viral — and entertainment industries, the potential business [applications](https://www.issart.com/en/services/details/service/cloud-solutions) are far more powerful. Augmented reality can be used in industries like manufacturing, logistics, education, construction, and more.
 
@@ -27,32 +27,32 @@ Organizations that use augmented reality in some capacity are likely to experien
 • Less breakdown time and higher efficiency and production rates because workers know exactly how to fix a machine.
 • Higher employee retention rates and better trained staff.
 
-In this article, we’ll discuss exactly what augmented reality is, how businesses are using it to improve their metrics, and how your organization can move forward into the future with AR.
+In this article, we'll discuss exactly what augmented reality is, how businesses are using it to improve their metrics, and how your organization can move forward into the future with AR.
 
 ## A Quick History of Augmented Reality
 
-The idea of augmented reality has been gestating in university labs for nearly half a century. It’s not a new trend or theory. The reason there is a lot of excitement and buzz around augmented reality and similar technology is because the technology necessary to turn theory into application is finally becoming available and affordable.
+The idea of augmented reality has been gestating in university labs for nearly half a century. It's not a new trend or theory. The reason there is a lot of excitement and buzz around augmented reality and similar technology is because the technology necessary to turn theory into application is finally becoming available and affordable.
 
 For example, the cost of cameras, computers, sensors, and connectivity has decreased in size while increasing in speed, accuracy and resolution. Accessing and storing large amounts of data is becoming cheaper and easier. All of this making augmented reality a possibility.
 
-AR is unlikely to replace any of the current technology we have. It’s meant to supplement current forms of technology. Just like the TV didn’t get rid of the radio, augmented reality won’t get rid of other technologies.
+AR is unlikely to replace any of the current technology we have. It's meant to supplement current forms of technology. Just like the TV didn't get rid of the radio, augmented reality won't get rid of other technologies.
 
 ### So what exactly is augmented reality?
 
-It can be defined as the integration of digital information with the user’s environment in real time. For example, repair and maintenance information about a machine could be seen when you look at a piece of equipment. Load capacity of a dump truck could be calculated by the distance between the ground and the bed.
+It can be defined as the integration of digital information with the user's environment in real time. For example, repair and maintenance information about a machine could be seen when you look at a piece of equipment. Load capacity of a dump truck could be calculated by the distance between the ground and the bed.
 
 AR has four distinct tasks:
 
-1\. Capture: The reality that is set to be augmented is captured using a video device.
-2\. Identification: Reality is scanned to determine the exact position for where the virtual content should be displayed and embedded. Positions can be identified by markers, infrared, GPS, sensors, or lasers.
-3\. Processing: As the environment is recognized and identified, the corresponding virtual content is requested from the internet or another database.
-4\. Visualization: A mixed image of real space and virtual content is produced.
+1. Capture: The reality that is set to be augmented is captured using a video device.
+2. Identification: Reality is scanned to determine the exact position for where the virtual content should be displayed and embedded. Positions can be identified by markers, infrared, GPS, sensors, or lasers.
+3. Processing: As the environment is recognized and identified, the corresponding virtual content is requested from the internet or another database.
+4. Visualization: A mixed image of real space and virtual content is produced.
 
-It’s important to differentiate augmented reality from virtual reality (VR). Unlike VR, which creates a totally artificial environment, AR simply overlays information in the existing environment.
+It's important to differentiate augmented reality from virtual reality (VR). Unlike VR, which creates a totally artificial environment, AR simply overlays information in the existing environment.
 
 ## Industries Using Augmented Reality to Stay Ahead
 
-We’re going to look at the industries that are likely to gain the most from applying augmented reality to their operations.
+We're going to look at the industries that are likely to gain the most from applying augmented reality to their operations.
 
 ### Manufacturing
 
@@ -64,11 +64,11 @@ They could scan an existing factory environment and lay it out with new virtual 
 
 ### Construction
 
-Imagine being able to place a building design in a city before it’s actually built or visualize buildings that were destroyed during a natural disaster. That’s exactly what engineers and city planners did after the [2011 Christchurch earthquake](http://www.hitlabnz.org/index.php/products/cityviewar/) in New Zealand.
+Imagine being able to place a building design in a city before it's actually built or visualize buildings that were destroyed during a natural disaster. That's exactly what engineers and city planners did after the [2011 Christchurch earthquake](http://www.hitlabnz.org/index.php/products/cityviewar/) in New Zealand.
 
 Planners used augmented reality to gauge the devastation of the earthquake. Now, many companies are using it for construction and earthquake investigation.
 
-AR could allow architects and project managers to see what their buildings would be like. It will give life to the 2D drawings. They can get an idea of the implications a building’s position and design could have on the area. For example, an engineer could learn that the building’s design would create unwanted heavy winds at the street-level, known as the downdraught effect.
+AR could allow architects and project managers to see what their buildings would be like. It will give life to the 2D drawings. They can get an idea of the implications a building's position and design could have on the area. For example, an engineer could learn that the building's design would create unwanted heavy winds at the street-level, known as the downdraught effect.
 
 ### Logistics
 
@@ -84,7 +84,7 @@ For many businesses, AR could be an effective way to train staff. For example, G
 
 ### Skilled Trades and Maintenance
 
-The skilled trades and maintenance industry could see a huge advantage from AR devices. For example, at ISS Art, we’re working on a project to assist workers in repairs and inspections.
+The skilled trades and maintenance industry could see a huge advantage from AR devices. For example, at ISS Art, we're working on a project to assist workers in repairs and inspections.
 
 Companies will be able to make visual instructions that users can download and follow. For example, a user could take a picture of a car wheel. According to the make and model, the system will download appropriate instructions that a user could follow on their Microsoft Hololens.
 
@@ -92,10 +92,10 @@ Companies will be able to make visual instructions that users can download and f
 
 By the year 2020, augmented reality could become reality for many businesses. It will become an important workplace tool, [according to Gartner](https://www.gartner.com/newsroom/id/2649315). It will come fast, only being slowed down by the current lack of standards which could affect connectivity and access to data that makes AR work.
 
-Regardless of whether or not your business decides to integrate AR, you will be affected. So, you’ll need to plan for it. For example, retailers will be forced to compete on different levels. When a price tag can be looked at through some augmented reality lenses, instantly pull up reviews and prices around the web, retailers will need to find new ways to keep customers in their stores and buying their merchandise.
+Regardless of whether or not your business decides to integrate AR, you will be affected. So, you'll need to plan for it. For example, retailers will be forced to compete on different levels. When a price tag can be looked at through some augmented reality lenses, instantly pull up reviews and prices around the web, retailers will need to find new ways to keep customers in their stores and buying their merchandise.
 
 Businesses that use augmented reality for their operations could experience huge benefits such as faster supply chains, lower downtimes, increased profits, and more.
 
 But like any big technology project, you should get started on a small scale until you can prove the value of the project. Start with a business problem and objective, then find the technology to solve that problem.
 
-We have experience working and developing augmented reality projects. If you’re interested in learning more about augmented reality and the potential applications for your business, then [contact us](https://www.issart.com/en/lp/java-development-team/) today.
+We have experience working and developing augmented reality projects. If you're interested in learning more about augmented reality and the potential applications for your business, then [contact us](https://www.issart.com/en/lp/java-development-team/) today.

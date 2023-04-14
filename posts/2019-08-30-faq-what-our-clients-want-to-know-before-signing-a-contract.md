@@ -29,7 +29,7 @@ You can find more details about our collaboration models[ here](https://readymag
 
 ### 2. What makes you different from freelancers?
 
-When you work with a team like ours, the whole company is responsible for the result. This prevents a situation when a dishonest developer just disappears. In addition, you don’t have to be dependent on a single developer in case he/she is on vacation or on a sick leave – the company will provide a highly qualified professional to substitute the absent team member.
+When you work with a team like ours, the whole company is responsible for the result. This prevents a situation when a dishonest developer just disappears. In addition, you don't have to be dependent on a single developer in case he/she is on vacation or on a sick leave – the company will provide a highly qualified professional to substitute the absent team member.
 
 ### 3. What do we need to start a project in the shortest amount of time?
 

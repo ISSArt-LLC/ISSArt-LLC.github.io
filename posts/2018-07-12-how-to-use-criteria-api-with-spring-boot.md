@@ -22,7 +22,7 @@ JPQL is a convenient language for writing database queries. It does not depend o
 
 [Spring Data](https://docs.spring.io/spring-data/commons/docs/current/reference/html/) provides ready implementations to create the DAO, they are called *Repository*. Spring Data Repositories allow writing fewer queries, it is even possible to write just method signatures and Spring will make queries for them by itself.
 
-```
+```java
 @Entity
 @Table
 public class Author {
@@ -50,7 +50,7 @@ private Integer pageCount;
 
 And the repository:
 
-```
+```java
 @Repository
 public interface BookRepository extends JpaRepository<Book, Integer> {
 }
@@ -62,30 +62,36 @@ All goes well as long as you need simple queries, but difficulties arise when th
 
 Criteria API is a type-safe API for composing JPQL queries. There are alternatives of Criteria API, such as jOOQ and QueryDSL, but they are not included in the standard of Java and will not be covered in this article.
 
-To create your own repository queries using Criteria API, you must create an interface, let’s call it *BookRepositoryCustom* and a class implementing this interface. When the interface is being implemented, the name of the class should coincide with the name of the heir repository JpaRepository, with the addition of “Impl” (this is mandatory).
+To create your own repository queries using Criteria API, you must create an interface, let's call it *BookRepositoryCustom* and a class implementing this interface. When the interface is being implemented, the name of the class should coincide with the name of the heir repository JpaRepository, with the addition of “Impl” (this is mandatory).
 
 The interface will have one method signature with arguments which the data will be filtered by (the title, name, and surname of the author).
 
-```
+```java
 public interface BookRepositoryCustom {
 List findAll(String bookLabel, String authorFamilyName, String authorName);
 }
 ```
 
+```java
+public class BookRepositoryImpl implements BookRepositoryCustom {
 ```
-public class BookRepositoryImpl implements BookRepositoryCustom {```
 
-```@PersistenceContext
-private EntityManager entityManager;```
+```java
+@PersistenceContext
+private EntityManager entityManager;
+```
 
-```@Override
+```java
+@Override
 public List findAll(String bookLabel, String authorFamilyName, String authorName) {
 CriteriaBuilder cb = entityManager.getCriteriaBuilder();
 CriteriaQuery query = cb.createQuery(BookDto.class);
 Root bookRoot = query.from(Book.class);
-Root authorRoot = query.from(Author.class);```
+Root authorRoot = query.from(Author.class);
+```
 
-```List filterPredicates = new ArrayList<>();
+```java
+List filterPredicates = new ArrayList<>();
 filterPredicates.add(cb.equal(bookRoot.get("authorId"), authorRoot.get("id")));
 if (bookLabel != null && !bookLabel.isEmpty()) {
 filterPredicates.add(cb.like(bookRoot.get("label"), bookLabel)) ;
@@ -103,15 +109,17 @@ return entityManager.createQuery(query).getResultList();
 }
 ```
 
-You often need to return data not only from one model but also from the one associated with it. In this case, you can create a DTO class with all necessary fields and return the copies. To do that we use ‘construct’ call to Criteria API query for CriteriaBuilder with the first argument – the type of DTO and subsequent arguments for the constructor.
-```
+You often need to return data not only from one model but also from the one associated with it. In this case, you can create a DTO class with all necessary fields and return the copies. To do that we use 'construct' call to Criteria API query for CriteriaBuilder with the first argument – the type of DTO and subsequent arguments for the constructor.
+```java
 public class BookDto {
 private String label;
 private String authorFamilyName;
 private String authorName;
-private Integer pageCount;```
+private Integer pageCount;
+```
 
-```public BookDto(String label, String authorFamilyName, String authorName, Integer pageCount) {
+```java
+public BookDto(String label, String authorFamilyName, String authorName, Integer pageCount) {
 this.label = label;
 this.authorFamilyName = authorFamilyName;
 this.authorName = authorName;
@@ -120,11 +128,11 @@ this.pageCount = pageCount;
 …
 }
 ```
-Now it’s better, there is a block in which depending on what fields are used, search conditions, instances of the class Predicate from the package of Criteria API are added.
+Now it's better, there is a block in which depending on what fields are used, search conditions, instances of the class Predicate from the package of Criteria API are added.
 
-Predicate is an expression often used that returns ‘true’ or ‘false’. Predicates are created using QueryBuilder.
+Predicate is an expression often used that returns 'true' or 'false'. Predicates are created using QueryBuilder.
 
-```
+```java
 …
 if (bookLabel != null && !bookLabel.isEmpty()) {
 filterPredicates.add(cb.like(bookRoot.get("label"), bookLabel))   ;
@@ -138,17 +146,17 @@ filterPredicates.add(cb.like(authorRoot.get("name"), authorName));
 
 In addition to the LIKE conditions, you can use equals, IN, BETWEEN and others, which are suitable for different data types. You can also use OR, AND to create more complex conditions.
 
-When a large number of records is expected, we will definitely need a pagination in the response. Although the Criteria API doesn’t support Pageable, pagination is easy to implement.
+When a large number of records is expected, we will definitely need a pagination in the response. Although the Criteria API doesn't support Pageable, pagination is easy to implement.
 
 We will add a new method signature to the interface BookRepositoryCustom:
 
-```
+```java
 Page findAllPage(String bookLabel, String authorFamilyName, String authorName, Pageable pageable);
 ```
 
 And the corresponding implementation:
 
-```
+```java
 @Override
 public Page findAllPage(String bookLabel, String authorFamilyName, String authorName, Pageable pageable) {
 …
@@ -160,14 +168,19 @@ q.setFirstResult(pageable.getPageNumber() * pageable.getPageSize());
 q.setMaxResults(pageable.getPageSize());
 return new PageImpl<>(q.getResultList(), pageable,
 getAllCount(bookLabel, authorFamilyName, authorName));
-}```
-```private Long getAllCount(String bookLabel, String authorFamilyName, String authorName) {
+}
+```
+
+```java
+private Long getAllCount(String bookLabel, String authorFamilyName, String authorName) {
 CriteriaBuilder cb = entityManager.getCriteriaBuilder();
 CriteriaQuery query = cb.createQuery(Long.class);
 Root bookRoot = query.from(Book.class);
 Root authorRoot = query.from(Author.class);
 ```
-```    List filterPredicates = new ArrayList<>();
+
+```java
+List filterPredicates = new ArrayList<>();
 filterPredicates.add(cb.equal(bookRoot.get("authorId"), authorRoot.get("id")));
 if (bookLabel != null && !bookLabel.isEmpty()) {
 filterPredicates.add(cb.like(bookRoot.get("label"), bookLabel))   ;

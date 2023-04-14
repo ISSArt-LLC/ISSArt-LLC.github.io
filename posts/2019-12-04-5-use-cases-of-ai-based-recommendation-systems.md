@@ -29,7 +29,7 @@ In addition, such AI based recommender engine can analyze the individual purchas
 
 ### 2. Alternative products recommendation
 
-Sometimes it happens that a certain product is currently out of stock. This shouldn’t become a reason to let a user leave without any purchase. To prevent this, companies implement a smart recommendation system which suggests alternative options. Check this example from Urban Outfitters.
+Sometimes it happens that a certain product is currently out of stock. This shouldn't become a reason to let a user leave without any purchase. To prevent this, companies implement a smart recommendation system which suggests alternative options. Check this example from Urban Outfitters.
 
 ![Out of stock recommendations](https://issart.com/blog/wp-content/uploads/2019/12/Urban_outfitters.png)
 

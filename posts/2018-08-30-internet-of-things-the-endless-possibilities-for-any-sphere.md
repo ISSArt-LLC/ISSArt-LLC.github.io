@@ -13,7 +13,7 @@ tags:
     - raspberry
 ---
 
-Surely you’ve heard about the Internet of things more than once. Perhaps you even came across the Internet of things in work or everyday life – say, when getting the latest updates from your smart watch.
+Surely you've heard about the Internet of things more than once. Perhaps you even came across the Internet of things in work or everyday life – say, when getting the latest updates from your smart watch.
 
 But what exactly is the Internet of Things, which is so popular today? Simply put, this means that machines, devices, vehicles, and other objects get access to Internet and/or locally deployed platforms that allow managing all these objects (think of a smart home platform), and can be further connected with one another.
 
@@ -23,11 +23,11 @@ However, not everyone knows how IoT actually appeared. Read further to learn how
 
 ***How computers changed***
 
-Several decades ago computers didn’t look like they do today: they were large. So large that a computer could occupy the whole room. However, as the years went by, technologies were constantly improving, and computers gradually decreased their size and increased performance.
+Several decades ago computers didn't look like they do today: they were large. So large that a computer could occupy the whole room. However, as the years went by, technologies were constantly improving, and computers gradually decreased their size and increased performance.
 
 Today one can purchase a computer that will have thousands of times more speed, memory and performance than a computer [in 90s](http://www.aei.org/publication/technology-has-advanced-so-rapidly-that-a-laptop-computer-today-is-96-cheaper-than-a-1994-model-and-1000x-better/) (and it will be cheaper today than it was then).
 
-The development of cell phones also went at an accelerated pace. As a result, today’s smartphones have chips capable of running applications and games that desktop computers could not previously have.
+The development of cell phones also went at an accelerated pace. As a result, today's smartphones have chips capable of running applications and games that desktop computers could not previously have.
 
 As technology is improving, the size of devices gets smaller and their power consumption is reduced as well. This, in turn, led to appearance of small devices powered by a battery. So, computers used to be big and weak, but now they are small and powerful enough to perform certain actions.
 
@@ -56,7 +56,7 @@ As to Arduino, it is a simple micro-controller board. It can run a simple progra
 
 ![](https://issart.com/blog/wp-content/uploads/2018/08/arduino-631977_1920.jpg)
 
-So, for simple tasks that don’t involve networking and multitasking Arduino is a good fit, while for projects requiring multitasking, networking and more complex features Raspberry Pi will be a better choice.
+So, for simple tasks that don't involve networking and multitasking Arduino is a good fit, while for projects requiring multitasking, networking and more complex features Raspberry Pi will be a better choice.
 
 Although it is rather expensive to build projects with Raspberry and Arduino, the good thing is that it is possible to deliver prototypes to immediately check the utility.
 
@@ -67,22 +67,22 @@ Thus, all this together led to the appearance of such an area of IoT, when there
 Also, manufacturers make platforms, to which it is possible to connect products of the same manufacturer (such as smart light bulbs, sockets, or a kettle), to manage them from one place. Just a few examples of automation systems that have such platforms.
 
 - Control4 which is known to be [one of the easiest](https://www.inc.com/john-rampton/10-amazing-home-automation-companies-you-need-to-know-about.html) home automation systems;
-- Savant system with the look and feel [Apple’s products](https://www.toptenreviews.com/home/smart-home/best-home-automation-systems/);
+- Savant system with the look and feel [Apple's products](https://www.toptenreviews.com/home/smart-home/best-home-automation-systems/);
 - Xiaomi Mi Smart Home.
 
 ## Where can IoT solutions be applied?
 
 Today IoT solutions are applicable in a variety of spheres – manufacturing automation, “smart home”, wearables, medicine and healthcare, and many more. Although many examples of using the IoT have already become common for many people (say, smart home devices or wearables), some solutions are truly non-standard and are able to change the usual course of things in various areas of life.
 
-Let’s look at some outstanding applications of IoT.
+Let's look at some outstanding applications of IoT.
 
 **1) BabyBe**
 
-BabyBe Company has developed a unique [system](https://www.sitepoint.com/5-success-stories-from-the-emerging-internet-of-things-market/) which allows premature babies to feel the heartbeat, breathing motion and voice of their mothers whilst inside the incubator. This is achieved with the help of the complementary device for Incubators and that connects a mother with her premature baby by replicating the movement of her heartbeat and lungs. Studies of BabyBe practical application have already shown that with this system, time needed for premature babies’ healing and development can be significantly expedited.
+BabyBe Company has developed a unique [system](https://www.sitepoint.com/5-success-stories-from-the-emerging-internet-of-things-market/) which allows premature babies to feel the heartbeat, breathing motion and voice of their mothers whilst inside the incubator. This is achieved with the help of the complementary device for Incubators and that connects a mother with her premature baby by replicating the movement of her heartbeat and lungs. Studies of BabyBe practical application have already shown that with this system, time needed for premature babies' healing and development can be significantly expedited.
 
 **2) Shockbox**
 
-[Shockbox](https://www.sitepoint.com/5-success-stories-from-the-emerging-internet-of-things-market/) is a must-have device for collision sports. After being attached to a player’s helmet, it is capable of measuring head impacts by means of sensor technology and Bluetooth. If the device detects a player has experienced a hit that can potentially result in a concussion, it sends an alert to a coach’s smartphone.
+[Shockbox](https://www.sitepoint.com/5-success-stories-from-the-emerging-internet-of-things-market/) is a must-have device for collision sports. After being attached to a player's helmet, it is capable of measuring head impacts by means of sensor technology and Bluetooth. If the device detects a player has experienced a hit that can potentially result in a concussion, it sends an alert to a coach's smartphone.
 
 **3) Siren**
 
@@ -92,7 +92,7 @@ And one more example of IoT application in healthcare that certainly deserves ou
 
 **4) Lilium**
 
-[Lilium](https://www.siliconrepublic.com/machines/iot-hardware-startups-europe-2018) company is currently working on a very promising project – the world’s first electric vertical takeaway and landing jet. It is also called a “flying taxi”. When it goes live, it is supposed to be capable of flying from London to Paris in just one hour.
+[Lilium](https://www.siliconrepublic.com/machines/iot-hardware-startups-europe-2018) company is currently working on a very promising project – the world's first electric vertical takeaway and landing jet. It is also called a “flying taxi”. When it goes live, it is supposed to be capable of flying from London to Paris in just one hour.
 
 **5) Click and grow**
 
@@ -100,18 +100,18 @@ And one more example of IoT application in healthcare that certainly deserves ou
 
 **6) Singlecue**
 
-Many IoT devices are controlled with the help of voice commands. Singlecue offers an alternative approach – to manage the devices (say, a TV, a stereo system, a smart lighting system or a virtual assistant) through the use of gestures. Singlecue product is compatible with a great number of devices most of us already have (and they don’t need to be smart super fancy).
+Many IoT devices are controlled with the help of voice commands. Singlecue offers an alternative approach – to manage the devices (say, a TV, a stereo system, a smart lighting system or a virtual assistant) through the use of gestures. Singlecue product is compatible with a great number of devices most of us already have (and they don't need to be smart super fancy).
 
 ## Challenges associated with IoT
 
 As many other promising areas, IoT development is associated with certain challenges.
 
-What are they? Let’s look through the most common ones.
+What are they? Let's look through the most common ones.
 
 1. *As long as the barrier to entry is quite low, more and more low-skilled participants enter the market.*
 2. *If any device with IoT is essentially a microcomputer, one must think about security and privacy.*
 
-Of course, it’s rather scary to imagine, but what if your smart device (a kettle or a heating system) fails? Troubleshooting may take a certain time. One more issue here is not to damage the surrounding objects and, more important, not to injure anyone.
+Of course, it's rather scary to imagine, but what if your smart device (a kettle or a heating system) fails? Troubleshooting may take a certain time. One more issue here is not to damage the surrounding objects and, more important, not to injure anyone.
 
 There is another set of security and privacy concerns – interception of control, logs, substitution of values from sensors become possible.
 
@@ -121,7 +121,7 @@ Therefore, antivirus systems for IoT devices may soon become necessary.
 
 ## What will IoT bring us further?
 
-Looking at the benefits IoT solutions provide, it is fair to say that they give people a completely different level of comfort. This is especially true about the lives of households. For example, setting the temperature in the room based on a person’s preference, or warming up tea by the time a person comes back from work have become common tasks for smart devices. And the list of opportunities is constantly growing.
+Looking at the benefits IoT solutions provide, it is fair to say that they give people a completely different level of comfort. This is especially true about the lives of households. For example, setting the temperature in the room based on a person's preference, or warming up tea by the time a person comes back from work have become common tasks for smart devices. And the list of opportunities is constantly growing.
 
 Manufacturers equip their production lines with innovative robotic systems and thereby bring their processes to a qualitatively new level.
 

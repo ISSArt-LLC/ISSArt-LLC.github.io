@@ -10,13 +10,13 @@ categories:
     - 'Project Management'
 ---
 
-We’ve already covered various aspects of software development process so far: how to [choose a provider](http://www.issart.com/blog/outsourcing-software-development-choosing-right-provider/), which [IP issues](http://www.issart.com/blog/intellectual-property-issues-software-development/) to consider, how to [motivate your team](http://www.issart.com/blog/motivating-an-offshore-team/), what challenges to be aware of when working on [international scale](http://www.issart.com/blog/what-challenges-do-software-development-companies-face-while-working-with-foreign-customers/)… But how to make sure that the whole team is actually working? What if the majority of time is actually spent on non-project related activities (i.e. Facebook, chats with friends, etc.)?
+We've already covered various aspects of software development process so far: how to [choose a provider](http://www.issart.com/blog/outsourcing-software-development-choosing-right-provider/), which [IP issues](http://www.issart.com/blog/intellectual-property-issues-software-development/) to consider, how to [motivate your team](http://www.issart.com/blog/motivating-an-offshore-team/), what challenges to be aware of when working on [international scale](http://www.issart.com/blog/what-challenges-do-software-development-companies-face-while-working-with-foreign-customers/)… But how to make sure that the whole team is actually working? What if the majority of time is actually spent on non-project related activities (i.e. Facebook, chats with friends, etc.)?
 
 ### How to monitor the progress?
 
 There is a solution for that – consider using time-tracking and project management software. These tools will help you a lot to stay involved in the development process and see the real picture of how things actually are on the project.
 
-Time tracking tools together with project management software give you a great opportunity to measure your team’s performance. Right now our team is working on our own time tracking system – [CrISStal Eye](http://crisstaleye.com/) – which will be released in the nearest future. When designing this tool, we’ve tried to take into account everything we find useful to monitor performance on the project. You can check its features by visiting our website.
+Time tracking tools together with project management software give you a great opportunity to measure your team's performance. Right now our team is working on our own time tracking system – [CrISStal Eye](http://crisstaleye.com/) – which will be released in the nearest future. When designing this tool, we've tried to take into account everything we find useful to monitor performance on the project. You can check its features by visiting our website.
 
 In this article we are going to focus on time tracking systems available on the market and review the most popular ones. In particular, we will compare these tools based on the criteria we consider to be the most important: integration with project management (PM) systems, built-in PM system, desktop client, activity monitoring, billing/invoicing, CRM, usability, and performance. These systems vary in their functionality significantly – from just tracking time spent to powerful integrations with accounting, ERP and CRM systems.
 
@@ -53,7 +53,7 @@ However, an issue with the speed of synchronization between the desktop client a
 There is an opportunity to monitor pages viewed in browser and time spent in applications. As for the screenshots – they are listed in features, but you will need to get in touch with the developers about this feature.
 
 **Billing/invoicing**
-The invoicing system is rather flexible. Integration with Quickbooks allows to import all client’s data and taxes to TimeCamp’s invoicing module. Besides, the invoices created in TimeCamp will be exported to QuickBooks when sent to clients.
+The invoicing system is rather flexible. Integration with Quickbooks allows to import all client's data and taxes to TimeCamp's invoicing module. Besides, the invoices created in TimeCamp will be exported to QuickBooks when sent to clients.
 
 **CRM**
 There are customer database management features, including invoice generation and sending.
@@ -64,7 +64,7 @@ Because of the rich functionality it may take some time to familiarize with the 
 **Performance**
 As mentioned above, there is an issue with the speed of synchronization between the desktop client and the web application.
 
-**Author’s comments**
+**Author's comments**
 TimeCamp is a multi-functional application with a variety of integrations. Project management and billing features are available. There is a flexible system for monitoring time spent by employees. The system allows creating a full organizational structure of the company. The visual calendar is very convenient, and it provides constant access to task management. It is also comfortable to view statistics on tasks.
 
 #### [Hubstaff](https://hubstaff.com/)
@@ -114,7 +114,7 @@ Too much action is required when dealing with projects and reporting. Familiariz
 **Performance**
 No delays in performance were noticed.
 
-**Author’s comments**
+**Author's comments**
 Hubstaff has rather rich functionality and good performance indicators. Meanwhile, integration with the only one accounting system is not as efficient as desired. The desktop client is not the most user-friendly one.
 
 #### [Toggl](https://www.toggl.com/)
@@ -163,7 +163,7 @@ A very user-friendly interface.
 **Performance**
 No delays in performance were noticed.
 
-**Author’s comments**
+**Author's comments**
 In general we can say that the target audience of the product is small independent companies with the following characteristics:
 • there is no need to conduct a complex documentation,
 • there is no multi-level accounting system,
@@ -211,12 +211,12 @@ The invoice generation system is rather convenient. Harvest supports integration
 Each project must relate to a particular customer. Subsequently, the invoices are generated based on the name of the client.
 
 **Usability**
-There are a lot of functions which are conveniently divided into sections. There is a cut-down version of the interface for an assignee who doesn’t have the status of Project Manager or administrator.
+There are a lot of functions which are conveniently divided into sections. There is a cut-down version of the interface for an assignee who doesn't have the status of Project Manager or administrator.
 
 **Performance**
 No delays in performance were noticed.
 
-**Author’s comments**
+**Author's comments**
 A user-friendly system of invoice creation. Double verification of the worked time sheets. Assigning an employee to a task (a project) is not very user-friendly. There is no desktop application.
 
 #### [Bill4time](https://www.bill4time.com/)
@@ -259,7 +259,7 @@ Although the interface is rather “heavy”, there is an easy access to the use
 **Performance**
 No delays in performance were noticed.
 
-**Author’s comments**
+**Author's comments**
 There is a wide accounting functionality. A convenient CRM system with the portal for customers. The software allows providing meaningful reports for the customer and invoice generation.
 
 #### [TimeDoctor](https://www.timedoctor.com/)
@@ -298,7 +298,7 @@ Hits and links to explainer videos appear on a regular basis.
 **Performance**
 No delays in performance were noticed.
 
-**Author’s comments**
+**Author's comments**
 In general TimeDoctor is a very user-friendly system for collaborative work.
 
 #### [Yaware](http://yaware.com/time-and-attendance-software/)
@@ -332,11 +332,11 @@ In general, the application rather convenient, but is a bit overloaded with all 
 **Performance**
 There are delays in performance when generating reports with charts.
 
-**Author’s comments**
+**Author's comments**
 The application works primarily as a tool for personnel monitoring, and secondly, as a time-tracker.
 
 #### Conclusion
 
-Obviously, there are many other time-tracking tools that we haven’t covered. But we hope our review will give you a general understanding of what is available on the market today, and which criteria to take into account when choosing a suitable solution for your needs.
+Obviously, there are many other time-tracking tools that we haven't covered. But we hope our review will give you a general understanding of what is available on the market today, and which criteria to take into account when choosing a suitable solution for your needs.
 
 ***Have something to add? Feel free to share your thoughts in the comments box below!***
