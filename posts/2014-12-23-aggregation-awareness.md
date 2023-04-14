@@ -10,13 +10,13 @@ categories:
     - 'Web Development'
 ---
 
-We told you about a special way to destroy objects in jWidget framework earlier in a section **Problem #1** of [the article about Front end optimization](http://www.issart.com/blog/front-end-optimization-experience/). Apparently, the framework introduces an unusual approach for object destruction and memory cleaning which we don't see in any other frameworks. We call it *object aggregation*.
+We told you about a special way to destroy objects in jWidget framework earlier in a section **Problem #1** of [the article about Front end optimization](https://www.issart.com/blog/front-end-optimization-experience/). Apparently, the framework introduces an unusual approach for object destruction and memory cleaning which we don't see in any other frameworks. We call it *object aggregation*.
 
 #### What problem do we face in the other frameworks?
 
-Usually you define a special method to clean the memory (let's call it “destructor”, although JavaScript doesn't provide the built-in destructors for the objects). In destructor, we revert everything that has been done in the constructor.
+Usually you define a special method to clean the memory (let's call it "destructor", although JavaScript doesn't provide the built-in destructors for the objects). In destructor, we revert everything that has been done in the constructor.
 
-```
+```js
 var Client = function(dispatcher) {
     Client._super.call(this);
     this.dispatcher = dispatcher;
@@ -36,7 +36,7 @@ extend(Client, Class, {
 
 After that, we call the destructor manually.
 
-```
+```js
 var client = new Client(dispatcher);
 ...
 client.destroy();
@@ -44,7 +44,7 @@ client.destroy();
 
 It is getting even harder if we must check what needs to be reverted.
 
-```
+```js
 var Book = function() {
     Book._super.call(this);
     this.cover = null;
@@ -71,7 +71,7 @@ The resulting code turns out to be bulky and difficult to maintain. For every ev
 
 We've found an idea to resolve this problem in the introduction to a classic book [Design Patterns: Elements of Reusable Object-Oriented Software](http://books.google.ru/books/about/Design_Patterns.html?id=6oHuKQe3TjQC). There's an impressive paragraph there about difference between object *aggregation* and *awareness*. Object A *aggregates* object B if it has a reference to object B and it is an owner of object B, i.e. it is responsible for its creation and destruction. *Awareness* is just a reference to object B without any responsibility for its creation or destruction. The only programming language among ones that I know that has a built-in syntax for object aggregation is C++. If you define a field of some class type, it is aggregation. If you define a reference or a pointer, it is most likely awareness. In the next example, Cylinder aggregates a Circle, but CircleView is aware of a Circle.
 
-```
+```js
 class Circle {
     double radius;
 public:
@@ -92,9 +92,9 @@ public:
 }
 ```
 
-We thought about the ways to implement something similar in JavaScript. As result, we've created an “own” method and injected it into the root class of the framework.
+We thought about the ways to implement something similar in JavaScript. As result, we've created an "own" method and injected it into the root class of the framework.
 
-```
+```js
 var Class = function() {
     this._ownagePool = [];
     this._super = null;
@@ -117,7 +117,7 @@ extend(Class, Object, {
 
 Now we can avoid explicit destructor method definition in our classes. Usually it is enough to just specify that one object aggregates another one. So, the example with a book and a cover can be simplified the next way:
 
-```
+```js
 var Book = function() {
     Book._super.call(this);
     this.cover = null;
@@ -130,11 +130,11 @@ extend(Book, Class, {
 });
 ```
 
-We could remove 6 lines of code thanks to one “this.own” call.
+We could remove 6 lines of code thanks to one "this.own" call.
 
-The example with an event is not as obvious. To make use of object aggregation there, notice, that when you bind a handler to an event, you essentially allocate a new “event attachment” object. Attachment destruction results in even unbinding. So, we can modify our code the next way.
+The example with an event is not as obvious. To make use of object aggregation there, notice, that when you bind a handler to an event, you essentially allocate a new "event attachment" object. Attachment destruction results in even unbinding. So, we can modify our code the next way.
 
-```
+```js
 var Client = function(dispatcher) {
     Client._super.call(this);
     this.dispatcher = dispatcher;
@@ -154,7 +154,7 @@ extend(Client, Class, {
 
 Now, let's just aggregate the event attachment.
 
-```
+```js
 var Client = function(dispatcher) {
     Client._super.call(this);
     this.own(dispatcher.bind("change", this.onChange, this));
@@ -169,9 +169,9 @@ Destructor has gone.
 
 #### Automatic destruction of proxy values and collection items
 
-We can destroy proxy values and collection items using special “ownValue” and “ownItems” methods.
+We can destroy proxy values and collection items using special "ownValue" and "ownItems" methods.
 
-```
+```js
 this.proxy = new Proxy();
 this.proxy.ownsValue();
 this.proxy.set(new SampleValue(1));
@@ -191,9 +191,9 @@ Object aggregation system lets us do some wacky stuff with our code.
 
 ##### Easy object refreshing
 
-Assume that you listen to an event and create a “content” object whenever it is triggered. Before creating the new content, you must destroy the previously created one.
+Assume that you listen to an event and create a "content" object whenever it is triggered. Before creating the new content, you must destroy the previously created one.
 
-```
+```js
 var Client = function(dispatcher) {
     Client._super.call(this);
     this.content = null;
@@ -222,9 +222,9 @@ extend(Client, Class, {
 });
 ```
 
-Thanks to proxy's “ownValue” method, this code can be cut a half.
+Thanks to proxy's "ownValue" method, this code can be cut a half.
 
-```
+```js
 var Client = function(dispatcher) {
     Client._super.call(this);
     this.content = this.own(new Proxy()).ownValue();
@@ -243,7 +243,7 @@ extend(Client, Class, {
 
 Let's complicate the previous example a little bit. Assume that you must create a bunch of objects instead of a single content object. And these objects should be created all at once in a separate class (factory).
 
-```
+```js
 var Client = function(dispatcher, factory) {
     Client._super.call(this);
     this.factory = factory;
@@ -292,7 +292,7 @@ var Factory = {
 
 The code seems very complicated, doesn't it? Fear not, my friend, look how can we deal with that.
 
-```
+```js
 var Client = function(dispatcher, factory) {
     Client._super.call(this);
     this.factory = factory;
@@ -320,9 +320,9 @@ var Factory = {
 
 ##### Object driver destruction
 
-Assume that you want to implement a method returning a string proxy which can be changed over time. String is changed on some events – let's call attachments to these events as “drivers”. As soon as this proxy is not needed anymore, all these drivers must be destroyed. Usually, to make it possible, you put all these drivers along with the resulting proxy to an object and return this object. As an example, let's look how dynamic localization change can be achieved.
+Assume that you want to implement a method returning a string proxy which can be changed over time. String is changed on some events – let's call attachments to these events as "drivers". As soon as this proxy is not needed anymore, all these drivers must be destroyed. Usually, to make it possible, you put all these drivers along with the resulting proxy to an object and return this object. As an example, let's look how dynamic localization change can be achieved.
 
-```
+```js
 var Header = function(locale) {
     Header._super.call(this);
     this.locale = locale;
@@ -358,7 +358,7 @@ Here, we have only one driver for a localization string, and it is already diffi
 
 We've got a solution for you – just aggregate the drivers inside the proxy.
 
-```
+```js
 var Header = function(locale) {
     Header._super.call(this);
     this.locale = locale;
@@ -387,14 +387,9 @@ extend(Locale, Class, {
 });
 ```
 
-Locale's implementation is a little bit more complicated, but it is reusable! You can use the same “getText” method everywhere in your application and save hundreds lines of code. As a side effect, you will make your code clear and easy to maintain.
-<link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css"></link><style type="text/css">
-	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
-	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
-	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-</style>
+Locale's implementation is a little bit more complicated, but it is reusable! You can use the same "getText" method everywhere in your application and save hundreds lines of code. As a side effect, you will make your code clear and easy to maintain.
 
-<div id="mc_embed_signup"><form action="//issart.us8.list-manage.com/subscribe/post?u=27b4bef1d5ce0a19dc5a471f5&id=9fce49f49e" class="validate" id="mc-embedded-subscribe-form" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank"><div id="mc_embed_signup_scroll"> <label for="mce-EMAIL">Subscribe to our mailing list</label>  #### Conclusion
+#### Conclusion
 
 With object aggregation system, you don't need to define class destructors explicitly anymore. All the destructors stay in the low-level classes of the framework, and all the high-level classes of your application can aggregate each other to gain all the purposes.
 

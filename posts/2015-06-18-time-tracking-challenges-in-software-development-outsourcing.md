@@ -18,7 +18,7 @@ You already know that offshore software development brings the following benefit
 Together with that, it brings certain challenges you should be aware of:
 
 - The need for constant management and control (in particular, time and budget);
-- Cultural differences (which were covered in one of our [previous articles](http://www.issart.com/blog/what-challenges-do-software-development-companies-face-while-working-with-foreign-customers/));
+- Cultural differences (which were covered in one of our [previous articles](https://www.issart.com/blog/what-challenges-do-software-development-companies-face-while-working-with-foreign-customers/));
 - Lack of face-to-face contact.
 
 Let's talk about control in more depth.
@@ -45,7 +45,7 @@ In this article we will focus on the necessity to manage work time accurately, g
 In order to organize the work process (given the difficulties you are going to face) you need to find appropriate tools for control. These tools should meet the following criteria:
 
 1. ***Universal access*** for all the team members, which is dictated by the remote character of work;
-2. ***Integrity***, or, in other words, objectivity and absence of hypocrisy (the law applies to everyone without discrimination). The control system should work as a “fair judge”;
+2. ***Integrity***, or, in other words, objectivity and absence of hypocrisy (the law applies to everyone without discrimination). The control system should work as a "fair judge";
 3. ***Transparency*** – the algorithm for calculating the criterion, the criterion of praise and sanctions should be clear to all participants of the project;
 4. ***Accuracy***, which enables flexible project control;
 5. ***Inevitability*** – otherwise, the control system won't reach its goal; the monitoring mechanism should not break or get distorted, leading to wrong conclusions and wrong decisions. It's like to lead the plane to land on with broken instrument;
@@ -78,7 +78,7 @@ Any person looking to improve his professional background seeks to control himse
 
 ### This is where time tracking software can help
 
-Today there is a great variety of time tracking tools available in the market. For more details on this read our [review of popular time tracking systems](http://www.issart.com/blog/time-tracking-systems-overview/).
+Today there is a great variety of time tracking tools available in the market. For more details on this read our [review of popular time tracking systems](https://www.issart.com/blog/time-tracking-systems-overview/).
 
 Many [time tracking tools](https://hubstaff.com/) support screenshot taking functionality, and this feature represents a good opportunity to report to the Customer or Employer whenever he requests. After looking through screenshots, Customer/Employer reassures himself that his money is not just wasted. Thus, this control method achieves one more goal – to increase loyalty and customer satisfaction.
 
@@ -102,7 +102,7 @@ What can be done to prevent the negative effects of this?
 **Educate employees**
 Make it clear to your team members why it is important to log time accurately. Help them understand that this activity serves the goals of the whole team – the more accurately the time is tracked, the more clear the whole picture is (i.e. which tasks consume excess resources, and which ones are neglected). The more clear the situation on the project is, the more effective the further steps can be for the project. Which, in turn, should have a positive effect on Customer's loyalty and/or can finally result in additional bonuses for the team's efforts.
 
-**Monitor dashboard and define “procrastinators”**
+**Monitor dashboard and define "procrastinators"**
 Through the dashboard of your time tracking tool you can see who logs time regularly, who does it from time to time, and who refuses to do it at all. This way the management team will understand who they need to talk to additionally.
 
 **Set email reminders**
@@ -112,6 +112,6 @@ Sometimes employees fail to log their time simply because they forget. If this i
 
 To sum up, I would like to say that all the projects need control, especially if the team is distributed. In particular, it is extremely important to monitor time and budget on a regular basis.
 
-When you implement a control system, make sure it works as a “fair judge” and serves the interest of the whole team.
+When you implement a control system, make sure it works as a "fair judge" and serves the interest of the whole team.
 
 ***Do you have any interesting experience to share? Do you have any comments or questions? Feel free to share in the comments box below.***

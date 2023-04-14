@@ -22,7 +22,7 @@ testing. If you have hundreds of tests, it takes quite a lot of time (10 seconds
 duplicating work should be nullified if possible – you don't need to test the same thing multiple times.
 
 We've come up with a simple and efficient solution. Using [DbUnit](http://dbunit.sourceforge.net/),
-we create several “immortal” (till 2040 year) sessions, one for each user:
+we create several "immortal" (till 2040 year) sessions, one for each user:
 
 ```
 <sessions sessionid="084e317cecea464f96b9fbc1f8b8db5c" 
@@ -35,7 +35,7 @@ we create several “immortal” (till 2040 year) sessions, one for each user:
           createtime="2013-07-01 07:55:15" />
 ```
 
-Then, in the “setUp” method, we initialize a cookie containing identifier of such an immortal session for a desired
+Then, in the "setUp" method, we initialize a cookie containing identifier of such an immortal session for a desired
 user:
 
 ```

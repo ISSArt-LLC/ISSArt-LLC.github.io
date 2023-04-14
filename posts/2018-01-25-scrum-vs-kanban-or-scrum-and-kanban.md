@@ -89,7 +89,7 @@ And most important is that you probably don't have to ruin Scrum to get to Kanba
 
 It is not good to throw one thing just to catch another. There are many market and technology challenges to be addressed by the software development team, and the change of the work method is yet another challenge that needs team's energy and time.
 
-But “by changing nothing, nothing changes''. When the opportunities of the new approach are stronger than the risks to lose current properties, it is worth changing!
+But "by changing nothing, nothing changes''. When the opportunities of the new approach are stronger than the risks to lose current properties, it is worth changing!
 
 In this article we can only list changes that you may like to apply developing your current work method. Do not hesitate to leave your thoughts or questions in comments!
 
@@ -124,7 +124,7 @@ This is the opposite case. If your Kanban team is going to develop some Scrum pr
     1. Roles
     2. Events
     3. Artifacts
-5. Definition of “Done”.
+5. Definition of "Done".
 
 ## Myths disproved
 
@@ -132,26 +132,26 @@ Here are a number of widespread **myths** about the relation between Scrum and K
 
 Each myth is followed by the disprovements.
 
-1. “Both Scrum and Kanban are just a sort of **Agile board** for sticky notes.”
+1. "Both Scrum and Kanban are just a sort of **Agile board** for sticky notes."
     - Scrum and Kanban (on Lean manufacturing) are approaches to work on software projects. It is far more than just a visualization of the workflow on a board. However, visualizations are crucial indeed.
-2. “Kanban and Scrum are **not compatible**”
+2. "Kanban and Scrum are **not compatible**"
     - As it is shown in our diagram above, Scrum and Kanban have a lot in common. The contradictions can hardly be found.
     - Both approaches are just about different principles. There are a lot of good examples of combining those principles on your project, such as Scrumban. Moreover, good Scrum teams follow all of the kanban principles and vice versa.
-3. “It is always better **to start** from Scrum and move to Kanban for product **support**.”
+3. "It is always better **to start** from Scrum and move to Kanban for product **support**."
     - It may be better to move from Scrum to Kanban, because Scrum has a great potential of working in an unstable environment from scratch, while the project often has many degrees of freedom at its start.
     - Support works such as maintenance and operations can be run in Scrum, not only in Kanban. Scrum doesn't prohibit to release the results during the sprints continuously.
     - A project can be started in Kanban as well. Agility of Kanban enables fast adaptation of the work process for the product domain and specialities.
-4. “Kanban is not applicable for **complex products**; Scrum is always better for development of complex products”
+4. "Kanban is not applicable for **complex products**; Scrum is always better for development of complex products"
     - Scrum is optimized for complex products by design, as it is written in the Scrum Guide. And Kanban is applicable to the complex product development as well.
     - Both methods divide (decompose) complex tasks to pieces in backlog, however, the decomposition is often a sort of art in any approach. This decomposition provide teams with the required flexibility for the market demand and mitigating risks.
     - Kanban with its practices enforces teams to get the complex challenges done.
-5. “**Planning** in Scrum is better than in Kanban”
+5. "**Planning** in Scrum is better than in Kanban"
     - This myth could emerge from the fact, that Scrum uses the strict cadence of Sprints and every Sprint starts from the Sprint planning meeting. The team makes estimates based on results of the past sprints.
     - But Kanban is not against prognoses and estimations either.
     - The correctness of the prognosis depends on the team product and technology conditions in both methods.
-6. “All working groups in the **large team** should run only Scrum or only Kanban”
+6. "All working groups in the **large team** should run only Scrum or only Kanban"
     - On one of ISS Art's large projects, we decided to give the team members rights to vote for running Scrum or Kanban.
-7. “Scrum is **revolutionary**, while Kanban is **evolutionary**“
+7. "Scrum is **revolutionary**, while Kanban is **evolutionary**"
     - Maybe this myth emerged from the fact, that Scrum can change the product after each sprint dramatically. In fact, both methodologies are revolutionary and evolutionary at the same time.
     - However, Kanban can be revolutionary as well, it builds the manufacturing system that is ready for changes and even shocks either from the market or from the internal conditions.
     - Moreover, Scrum enables the incremental improvements of the product and the team itself, sprint by sprint. It is evolutionary by design. And Scrum does not forbid continuous delivery of small frequent changes.

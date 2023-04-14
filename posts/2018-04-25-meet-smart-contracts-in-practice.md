@@ -82,15 +82,15 @@ This contract is only an example, it checks the compiler version and creates a s
 
 These functions show how to send Ether to contact and vice versa, change contracts state and perform read-only functions.
 
-Before running a contract in Remix we should compile it – in the left toolbar select “compile” tab and click on the button “Start to compile”. Next step is a contract deployment. To deploy contract, switch to the tab “Run”, fill input field “_treeCost” below the contract name and click on “Create” button.
+Before running a contract in Remix we should compile it – in the left toolbar select "compile" tab and click on the button "Start to compile". Next step is a contract deployment. To deploy contract, switch to the tab "Run", fill input field "_treeCost" below the contract name and click on "Create" button.
 
 [![](/static/img/2018/04/contract_run_params-300x221.png)](/static/img/2018/04/contract_run_params.png)
 
 After it you will see a created contract block.
 
-Now you can execute methods in this contract. In Remix there are 5 wallets for running in local environment, you can switch between them by selecting from “Account” drop-down list.
+Now you can execute methods in this contract. In Remix there are 5 wallets for running in local environment, you can switch between them by selecting from "Account" drop-down list.
 
-When you call method addTree, you should pass some Ether, to do so write this value in the text input “Value” near “Account”. When you call the method getSponsorContribution, you should pass the address as string – write it in double quotes. You can get the account address by clicking on the icon left to the selected “Account” value.
+When you call method addTree, you should pass some Ether, to do so write this value in the text input "Value" near "Account". When you call the method getSponsorContribution, you should pass the address as string – write it in double quotes. You can get the account address by clicking on the icon left to the selected "Account" value.
 
 ### Try communicating between contracts
 
@@ -98,7 +98,7 @@ Even if one contract is fully viable, there are many cases, when you need to get
 
 Every contract that has been deployed to Ethereum has an address, like any user's wallet. So to call another contract we have to know the address of the contract and its interface (what methods the contract has and their parameters). In Remix you can copy contract's address by clicking on the icon near the deployed contract's name.
 
-Let's create a new contract “checker.sol” with this code:
+Let's create a new contract "checker.sol" with this code:
 
 ```
 pragma solidity ^0.4.21;
@@ -123,7 +123,7 @@ To pass 2 parameters to a function you should wrap them in square brackets, like
 
 Any transaction in real Ethereum network requires a bit of Ether, the cryptocurrency of Ethereum. Even in the most used test network Ropsten you should have some Ether, but because it is a test network, you can get it for free. One of the simplest ways is to install MetaMask and create there a new account.
 
-MetaMask can be installed as a browser plugin or you can use their own browser. We will install it as a plugin to Chrome. Go to MetaMask [website](https://metamask.io/) and install plugin. Next you should click on the fox icon in browser plugins panel and finish installation. By default MetaMask uses main network to execute transaction, but we just want to check how it works, so change network to Ropsten by clicking on “Main network” text in the upper left corner of the plugin and choose “Ropsten test network”. Now we have an Ethereum wallet, but it's empty, so let's get some coins. Click on “Buy” button and select “ROPSTEN TEST FAUCET”. On the page that opened just click “request 1 Ether from faucet” and wait a minute and that's all, you have one Ether in your wallet. You can add as much Ether as you need.
+MetaMask can be installed as a browser plugin or you can use their own browser. We will install it as a plugin to Chrome. Go to MetaMask [website](https://metamask.io/) and install plugin. Next you should click on the fox icon in browser plugins panel and finish installation. By default MetaMask uses main network to execute transaction, but we just want to check how it works, so change network to Ropsten by clicking on "Main network" text in the upper left corner of the plugin and choose "Ropsten test network". Now we have an Ethereum wallet, but it's empty, so let's get some coins. Click on "Buy" button and select "ROPSTEN TEST FAUCET". On the page that opened just click "request 1 Ether from faucet" and wait a minute and that's all, you have one Ether in your wallet. You can add as much Ether as you need.
 
 ### Install and launch our Ethereum node
 

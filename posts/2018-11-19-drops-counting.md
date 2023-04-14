@@ -72,7 +72,7 @@ blur = cv.medianBlur(difImage, 15)
 
 [![](https://issart.com/blog/wp-content/uploads/2018/11/blur.png)](https://issart.com/blog/wp-content/uploads/2018/11/blur.png)
 
-Further, for the obtained and processed difference, I can find a “column” (stretched drop) and every time I find a “column”, I increase the counter by one:
+Further, for the obtained and processed difference, I can find a "column" (stretched drop) and every time I find a "column", I increase the counter by one:
 
 ```
 d = blur.sum(axis=0)

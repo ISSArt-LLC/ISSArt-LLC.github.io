@@ -14,7 +14,7 @@ tags:
     - 'performance optimization'
 ---
 
-Usually startup projects grow gradually starting as prototypes. The load increase unnoticed, so at one point your server might lay down, because it didn't manage to handle the number of incoming requests. Fine. We can hide a web application behind an http-server/servers to optimize work with static content. Additionally, we can create several instances of our web application for load balancing and fault tolerance. Some more options to improve performance of AWS Java cloud app is described in my colleague's [article](http://www.issart.com/blog/reach-performance-optimization-cloud/). But what to do if your database is a bottleneck? If you have a lot of information frequently asked, which can be cached in the memory, then it's worthwhile to try Memcached.
+Usually startup projects grow gradually starting as prototypes. The load increase unnoticed, so at one point your server might lay down, because it didn't manage to handle the number of incoming requests. Fine. We can hide a web application behind an http-server/servers to optimize work with static content. Additionally, we can create several instances of our web application for load balancing and fault tolerance. Some more options to improve performance of AWS Java cloud app is described in my colleague's [article](https://www.issart.com/blog/reach-performance-optimization-cloud/). But what to do if your database is a bottleneck? If you have a lot of information frequently asked, which can be cached in the memory, then it's worthwhile to try Memcached.
 
 ### What is Memcached?
 

@@ -94,9 +94,9 @@ Having the skill code ready, we can build our skill project. To prepare it for u
 
 **Alexa Skill Setup**
 
-Having the skill code uploaded to AWS Lambda, we can configure the skill with Alexa. First, we should navigate to the [Alexa Skills Kit Developer Console](https://developer.amazon.com/edw/home.html/) and create a skill by clicking “Create Skill” button in the upper right corner. Set “Planner” as our skill's name. On the next page, we need to select “Custom” and click “Create skill”. Excellent, we have just created a new skill. Then we need to configure the skill. Let's see it in the more details.
+Having the skill code uploaded to AWS Lambda, we can configure the skill with Alexa. First, we should navigate to the [Alexa Skills Kit Developer Console](https://developer.amazon.com/edw/home.html/) and create a skill by clicking "Create Skill" button in the upper right corner. Set "Planner" as our skill's name. On the next page, we need to select "Custom" and click "Create skill". Excellent, we have just created a new skill. Then we need to configure the skill. Let's see it in the more details.
 
-Now can proceed with defining the interaction model for the skill. Under “Invocation” tab (which is on the left side), define your Skill Invocation Name to be “planner”. This is what is used to activate your skill. For example, you сould say: “Alexa, tell the planner to fetch tasks for today”.
+Now can proceed with defining the interaction model for the skill. Under "Invocation" tab (which is on the left side), define your Skill Invocation Name to be "planner". This is what is used to activate your skill. For example, you сould say: "Alexa, tell the planner to fetch tasks for today".
 
 Now we can add some sample utterances that will be used to invoke the intent. For this example, we've provided the following sample utterances with slots:
 
@@ -115,7 +115,7 @@ Then we need to set up how we will host our skill's service endpoint. Go to the 
 
 **Testing Alexa Custom Skill**
 
-On the Test tab of the Alexa developer console we can simulate requests, in text and voice form, to your skill. Use the invocation name along with one of the sample utterances we've just configured. For example, “Alexa, tell the planner to fetch my tasks for today” should result in our skill responding with a list of the tasks.
+On the Test tab of the Alexa developer console we can simulate requests, in text and voice form, to your skill. Use the invocation name along with one of the sample utterances we've just configured. For example, "Alexa, tell the planner to fetch my tasks for today" should result in our skill responding with a list of the tasks.
 
 **Conclusion**
 

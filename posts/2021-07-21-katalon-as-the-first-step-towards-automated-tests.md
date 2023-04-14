@@ -18,7 +18,7 @@ Even for experienced testers, this tool will come in handy as creating templates
 
 **Setup**
 
-Go to Chrome web store, find Katalon Recorder extension and click “Add to Chrome” button
+Go to Chrome web store, find Katalon Recorder extension and click "Add to Chrome" button
 
 ![](https://lh3.googleusercontent.com/7m9e2g4GCObdBuhKrFFcSFd-z55aCMNV79sLxzPnIOYvF-bY8UnJt7A7Lr3QPiYVs-xHChIpvPQTZVKRzVkGmaCG8u2_2-ZykV1a9wqIqbGeuhCmM9alStEdKcMw7dud7AUyNMw_)
 
@@ -36,21 +36,21 @@ In the upper part of the window there are buttons with the main functions of the
 
 ![](https://lh5.googleusercontent.com/4W2QAndqLXN8MGccy3mtH2SDTkc4rUbg4miM9P2TdxbQhajwuWDh17NyJQwIV9amw2YliTWo-M2gxgNNlbGAfIIlYzc9ucU85Glx59niXZ9yNcN1PceYfVXxM8SvE_jUlzWox-VJ)
 
-“New” – Creating a new test case
+"New" – Creating a new test case
 
-“Rec.” – Recording a test case
+"Rec." – Recording a test case
 
-“Play” – Reproduction of the recorded test case
+"Play" – Reproduction of the recorded test case
 
-“Play Suite” – Reproduction of a test suite
+"Play Suite" – Reproduction of a test suite
 
-“Play All” – Reproduction of all cases
+"Play All" – Reproduction of all cases
 
-“Pause” – Make pause while reproducing
+"Pause" – Make pause while reproducing
 
-“Report” – Reporting problems to the developers of this plugin
+"Report" – Reporting problems to the developers of this plugin
 
-“Export” – Export of created test cases in different programming languages, using different frameworks
+"Export" – Export of created test cases in different programming languages, using different frameworks
 
 This plugin supports the following export options:
 
@@ -76,13 +76,13 @@ Log, Screenshots,Variables,Data Driven, Extension Scripts, Reference and Self-he
 
 Let's create a simple test that will search for the IssArt blog site on google, follow the link, then go to the QA/Testing section and verify that we are on this page.
 
-Click the “New” button and fill the name for the new test case. Then click **“Ok”**
+Click the "New" button and fill the name for the new test case. Then click **"Ok"**
 
 ![](https://lh4.googleusercontent.com/F2-vPdlTpp1pmxCPN7HjuL2-8n3olYdf9P42tkAWMTyxbTg0vMRTrImYPQy8Jxv1mcf3uQ6-CzRLBHjdtuwWL97MuhZzuf6vzlw-P0vJ820ULvD1IIpQ4uhKr9mxulE1srj3T0fE)
 
-Click **“Record”** button and start to carry out the steps described above for testing (Search blog page issart, etc.) then click **“Stop”**
+Click **"Record"** button and start to carry out the steps described above for testing (Search blog page issart, etc.) then click **"Stop"**
 
-After these manipulations , we'll have a step-by-step script in the “Commands” block.
+After these manipulations , we'll have a step-by-step script in the "Commands" block.
 
 ![](https://lh4.googleusercontent.com/2o2DLEBqOBd_Zbg83GJqfJWwaWb6SwrRR7QN1GAydSgj8Y0N01M3GdLF0nXwmvvOHtVa4KvkgNJnJkPSsuVb7CLwLsrhEb7SF7_FQgS3n6nxQO9Ke_2hfXBvo2jfDZvlSPkU6QXG)
 
@@ -92,15 +92,15 @@ So let's use this element as the confirmation that we are on the QA / Testing pa
 
 ![](https://lh6.googleusercontent.com/Y_jZEEHnYnFD4Likj7l_8McCmm-Y3QlGQEbucIYNelFPVzvaC-OeLXJw6ZH8gU2myEuEwj0uC5MmLgB1pe2dh9Hnb3udFTwFgNGPzOKLcM0YEJgLSAEJcQWebA0OYvQthpI9w-Qw)
 
-In order to add a check, press “+”
+In order to add a check, press "+"
 
 ![](https://lh4.googleusercontent.com/gXz2nk_hjJksEGbzNnWciYMf_smUTn3io14rsul_1SMwxSSaqvMqVyleKmWxWuB5vCbDUNt7s50AJF-Go-pLkLmlXv3uexZnkRIxj-lg-YqXWdIOwLNNE5Y2ers7pjOMb5JJQaXZ)
 
-In the “command” we will specify the “*assertText*” function, since we need to check for the presence of the text. In Target, specify the xpath locator for the title. In our case, the locator will be *“// h1 \[contains (text (), 'Category – QA / Testing')\]”*. In the “Value” field, specify the expected text in the title. In our case it will be “Category – QA / Testing”
+In the "command" we will specify the "*assertText*" function, since we need to check for the presence of the text. In Target, specify the xpath locator for the title. In our case, the locator will be *"// h1 \[contains (text (), 'Category – QA / Testing')\]"*. In the "Value" field, specify the expected text in the title. In our case it will be "Category – QA / Testing"
 
 ![](https://lh6.googleusercontent.com/CZVxE2SeXu24IjtTlOqSVadIj7Ru7817un4TT3zbizElqzBmtzaH5dJNkVIg3ZAr5G81I_-hi5POFdZTU0usdjbRa4mHqigddwcImKgjwYyeImSHpGjeiEx4NHsqTXrTILCTJ4Bm)
 
-In order to check that our script works, press **“Play”** button.
+In order to check that our script works, press **"Play"** button.
 
 ![](https://lh3.googleusercontent.com/uX7QbY-W5QFK4YDdYlxDIlNxxNOmuuiXPkqDdpDKd0qeoXYett4zR_GMldhDvV173qqLpJoIXuPCYfidA2Wu43aM7fImsfAbVy9Ca06HkyqH4GoBG3lbLGpopxzAjQriuBzvlsfc)
 
@@ -110,9 +110,9 @@ After completing the case, open the Log tab in the lower block of the extension.
 
 ![](https://lh6.googleusercontent.com/PFnJWZi54E-qlt7JHsaD2JzosQzKlcK-WgWeWSSd1bdEjkqiTCyRpNTNPGgCguFKFcfT09LxWwFpCLNtL6bOhznH_b3wa2qVaNSvwLKu1rnybN_2xmRecg7Y4gv8zov_PXr2XRzi)
 
-In the logs we should see the entry “Test case passed”. Therefore, everything went well, the locators were selected correctly.
+In the logs we should see the entry "Test case passed". Therefore, everything went well, the locators were selected correctly.
 
-If we need to convert our script into an automated test written in the programming language we need , using some of its frameworks, click “Export” and in the “Format” drop-down menu, select the one we need.
+If we need to convert our script into an automated test written in the programming language we need , using some of its frameworks, click "Export" and in the "Format" drop-down menu, select the one we need.
 
 ![](https://lh4.googleusercontent.com/upH1NKj7-CjyF-z__oTubjDVhWs90h_pYlcLSqqAUQISbIlq4oK-_P1r54FXNuZOn7eJcmNzNMaPJq3BlNhH-RJ8DOgY0RNcyBB-S4HilF54GHW9UPS4B86T8UGj9omkwfhyiGzJ)
 

@@ -17,7 +17,7 @@ tags:
 
 Augmented reality has the ability to disrupt the way every single business and industry operates in the next half-decade. From the obvious industries like construction, to the not-as-obvious industries like auto repair, will find new ways to compete and offer better experiences for their customers.
 
-This “cool” idea that has been in the labs for years, may soon become reality for every business. It's part of the growing trend to deliver personal, customizable, and interactive services and products that today's consumers are demanding.
+This "cool" idea that has been in the labs for years, may soon become reality for every business. It's part of the growing trend to deliver personal, customizable, and interactive services and products that today's consumers are demanding.
 
 While a majority of the time augmented reality (AR) has been used in the gaming — PokemonGo went viral — and entertainment industries, the potential business [applications](https://www.issart.com/en/services/details/service/cloud-solutions) are far more powerful. Augmented reality can be used in industries like manufacturing, logistics, education, construction, and more.
 

@@ -47,7 +47,7 @@ Researchers at the University of Washington were able to connect two people's mi
 
 In perhaps the most fascinating disruption of all is Elon Musk's [Neuralink](https://neuralink.com/) BMI implant. This tiny machine will be implanted into human brains (likely starting this year) and allow them to control computers and other devices with just their thoughts. We have become accustomed to voice-activated devices for quite some time now, it's true. 
 
-However, what is most astonishing about this merger of the human body with technology is the ability for humans to “upload” information to the cloud and “download” information directly into the brain. There is a high likelihood of profoundly accelerating the advancement of machine learning and artificial intelligence by allowing machines to “learn” to mimic the human brain in ways we don't even fully understand right now. This approach is also far more effective and resourceful than our current programming methods.
+However, what is most astonishing about this merger of the human body with technology is the ability for humans to "upload" information to the cloud and "download" information directly into the brain. There is a high likelihood of profoundly accelerating the advancement of machine learning and artificial intelligence by allowing machines to "learn" to mimic the human brain in ways we don't even fully understand right now. This approach is also far more effective and resourceful than our current programming methods.
 
 ![Brain-machine interface](/static/img/2020/04/woman-4929598_1920.jpg)
 

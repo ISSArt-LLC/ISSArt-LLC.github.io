@@ -10,7 +10,7 @@ categories:
     - 'Web Development'
 ---
 
-In the [previous article](http://www.issart.com/blog/request-scoped-resources-with-guice-and-servlet/) I mentioned that we've decided to use [Jetty](http://www.eclipse.org/jetty/)+[Guice](https://github.com/google/guice/wiki/Motivation)+Servlet combination in our Java Web application. What was it motivated for? Why have we refused to use [Jersey](https://jersey.java.net/)? Why have we decided to implement a separate Resource class for every Web action and even for every HTTP method?
+In the [previous article](https://www.issart.com/blog/request-scoped-resources-with-guice-and-servlet/) I mentioned that we've decided to use [Jetty](http://www.eclipse.org/jetty/)+[Guice](https://github.com/google/guice/wiki/Motivation)+Servlet combination in our Java Web application. What was it motivated for? Why have we refused to use [Jersey](https://jersey.java.net/)? Why have we decided to implement a separate Resource class for every Web action and even for every HTTP method?
 
 When everyone of us selects a tool to work with, we all set some requirements to it, and it should meet all requirements to get a green light. Everyone knows them – these are such obvious things as code readability, ease of debugging/testing, following traditional coding practices (OOD, patterns) etc. But today I'll tell you what requirements I set specifically for a good server-side Web framework. I'll be happy to work with any technology stack meeting these key requirements, and Jetty+Guice+Servlet is just one of the options.
 
@@ -96,9 +96,9 @@ If this is some expected exception, I should be able to specify the data to deli
 }
 ```
 
-This allows JS to display a user-friendly error message like “Spreadsheet is invalid: error at row 15, column C”.
+This allows JS to display a user-friendly error message like "Spreadsheet is invalid: error at row 15, column C".
 
-As an option, we can define an “expected exception” class for a framework to handle it in a special way:
+As an option, we can define an "expected exception" class for a framework to handle it in a special way:
 
 ```
 
@@ -282,7 +282,7 @@ public abstract class AuthenticatedResource {
 }
 ```
 
-As of now, we can inherit a final resource from AuthenticatedResource and utilize “authenticated” method.
+As of now, we can inherit a final resource from AuthenticatedResource and utilize "authenticated" method.
 
 ```
 

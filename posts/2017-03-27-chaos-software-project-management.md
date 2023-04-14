@@ -44,7 +44,7 @@ I have learnt that the gloomy statistics of the IT projects results. The majorit
 
 <div class="wp-caption aligncenter" id="attachment_2081" style="width: 970px">[![Cactus with both spikes and flowers is like software project-management with both chaos and profit](/static/img/2017/03/2017-03_03-cactus-with-both-spikes-and-flowers-software-project-management-with-both-chaos-and-profit.jpg)](/static/img/2017/03/2017-03_03-cactus-with-both-spikes-and-flowers-software-project-management-with-both-chaos-and-profit.jpg)A cactus with both thorns and blossoms is like software project management with both chaos and profit. Pixabay / Foto-Rabe
 
-</div>I started planning an augmented reality project, then a speech recognition project, but a musical [social network](http://www.issart.com/blog/intellectual-property-issues-software-development/) won the investment eventually. OK. I hired a team of five guys who are really smart and active.
+</div>I started planning an augmented reality project, then a speech recognition project, but a musical [social network](https://www.issart.com/blog/intellectual-property-issues-software-development/) won the investment eventually. OK. I hired a team of five guys who are really smart and active.
 
 ## 1. Chaos in software requirements. The first project management failure. Iterative process
 
@@ -56,7 +56,7 @@ I felt embarrassed, because we had put off the release date 3 times. The develop
 
 I recognized the problem when I joined one of the developers' meetings. After each small change request they started reworking the system architecture. Otherwise, they would have to make quick and dirty solutions. Quick product changes would not allow us to accomplish even the first version. I treat this problem as my first project management failure. Frequently changing requirements are like a ship in a storm.
 
-<div class="wp-caption aligncenter" id="attachment_2082" style="width: 612px">[![Chaos in requirements for a software project is like a storm for a ship.](/static/img/2017/03/2017-03_04-Robert_Salmon_-_Ship_in_Storm-1024x729.jpg)](/static/img/2017/03/2017-03_04-Robert_Salmon_-_Ship_in_Storm.jpg)A software project in chaotic requirements is like a ship in a storm. Robert Salmon – “Ship in Storm”.
+<div class="wp-caption aligncenter" id="attachment_2082" style="width: 612px">[![Chaos in requirements for a software project is like a storm for a ship.](/static/img/2017/03/2017-03_04-Robert_Salmon_-_Ship_in_Storm-1024x729.jpg)](/static/img/2017/03/2017-03_04-Robert_Salmon_-_Ship_in_Storm.jpg)A software project in chaotic requirements is like a ship in a storm. Robert Salmon – "Ship in Storm".
 
 </div>And I fixed the problem using Agile (particularly – Scrum). Iterativity of the Agile gave a great mechanism both for product changes and developers to have some stable time within a sprint. In Scrum, the product owner can change the requirements before each sprint, the development team has guarantees that the sprint goals will not change during the sprint.
 
@@ -85,7 +85,7 @@ It can be a little chaotic, but less time consuming and more flexible and produc
 
 Honestly, Scrum looked well in the Scrum guide only. But it requires the equality of each development team player. In my team I had only one nerd of high agreeableness – Mike. The rest of the team were really proactive and even explosive people. All team members were really smart.
 
-Once they decided to develop a first “killer feature” of my project. Everyone had their own solution and were trying to prove that they were right. A holy war started. The fierce fighting. Chaos in the team.
+Once they decided to develop a first "killer feature" of my project. Everyone had their own solution and were trying to prove that they were right. A holy war started. The fierce fighting. Chaos in the team.
 
 Solving the conflicts I got a headache and heartache.
 

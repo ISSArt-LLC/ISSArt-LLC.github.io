@@ -18,7 +18,7 @@ tags:
 
 More and more companies are embracing the flexibility, low barrier-to-entry, and collaboration that the cloud offers. The Infrastructure as a Service market has been growing by more than 40% in revenue every year since 2011, according to [Gartner](https://www.gartner.com/newsroom/id/3354117). This trend is only expected to continue to grow more than 25% per year through 2019.
 
-The [cloud](http://www.issart.com/blog/propagating-cloud-based-application-development/), which has been dismissed as a fad, is quickly becoming the default method for delivering IT solutions. Everything from infrastructure design to [Java](https://www.issart.com/en/lp/java-development-team/) application development needs to take the cloud into account.
+The [cloud](https://www.issart.com/blog/propagating-cloud-based-application-development/), which has been dismissed as a fad, is quickly becoming the default method for delivering IT solutions. Everything from infrastructure design to [Java](https://www.issart.com/en/lp/java-development-team/) application development needs to take the cloud into account.
 
 This rapid development of the cloud has made the deployment of scalable architectural systems much easier than traditional methods. While there are a lot of benefits to cloud computing, it isn't without its unique challenges.
 

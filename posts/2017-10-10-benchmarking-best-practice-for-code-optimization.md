@@ -51,7 +51,7 @@ Sometimes it is useful to have some baseline to analyze the benchmark results. F
 
 Most likely you won't load all this data into the memory before the benchmarking starts. So you will have some overhead on the file reading which depends 99.9% on the capacity of your IO and the platform you are using. In this case it is useful to have the base line, so you can run the benchmark test on different environments and compare the algorithm's performance, but not the hardware.
 
-You can write a simple benchmark to test IO throughput, just reading the same file without any parsing. So each time you run the parser's benchmark you can compare it to the “ideal” case. It will make your benchmark sustainable.
+You can write a simple benchmark to test IO throughput, just reading the same file without any parsing. So each time you run the parser's benchmark you can compare it to the "ideal" case. It will make your benchmark sustainable.
 
 But what can you do if it seems that your code has some performance gaps? If you have benchmarks close to the code (like jmh tests module in the same project) it costs nothing to run your benchmark with the profiler. At the same time small benchmarks to some isolated parts of the code allow you to understand the performance profile better. Most likely you won't see that the most of time your code executes the Object.wait() or Unsafe.park(), but something more reasonable.
 Also benchmark + profiler allows you to estimate the profit of the code changes you want to apply. Well it isn't a very reliable approach in terms of accuracy, when +-3 nanoseconds are crucial for your code, but it is very useful when you want to understand why some operation takes enormous time.

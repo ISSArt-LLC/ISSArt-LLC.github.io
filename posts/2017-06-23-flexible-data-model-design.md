@@ -471,7 +471,7 @@ Advantages of this solution:
 
 Disadvantages:
 
-- It isn't kind of “traditional approach”
+- It isn't kind of "traditional approach"
 - Likely it is not a startup solution. However, it is easier to introduce while you do not have a lot of traditional model classes (patterns) and don't use them intensively.
 - Likely you won't use any data access or entity framework as you can be accustomed to.
 

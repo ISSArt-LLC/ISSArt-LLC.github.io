@@ -27,7 +27,7 @@ So, we decided to implement the following functions:
 
 ##### Info markers
 
-[![](/static/img/2018/05/wof-220x300.jpg)](/static/img/2018/05/wof.jpg) The first thing we did was info marker recognition. In our company we have the “*Wall of Fame*”. This is a wall with logos of the projects we have completed. It would be nice to add a full description for every project: what it is about, technologies used, the team, etc.
+[![](/static/img/2018/05/wof-220x300.jpg)](/static/img/2018/05/wof.jpg) The first thing we did was info marker recognition. In our company we have the "*Wall of Fame*". This is a wall with logos of the projects we have completed. It would be nice to add a full description for every project: what it is about, technologies used, the team, etc.
 The initial idea was very simple: to catch a project logo and then to show the information. Two tasks should be solved to do that:
 
 - Find and recognize a marker;
@@ -84,7 +84,7 @@ b1_1 b1_2 … b1_16
 b16_1 b16_2 … b16_16
 ```
 
-Ok, we found a marker. Now we need the info about it to be displayed. Not just as a slide – we want the info to follow the marker as if it was “glued” to the real one.
+Ok, we found a marker. Now we need the info about it to be displayed. Not just as a slide – we want the info to follow the marker as if it was "glued" to the real one.
 
 To achieve this, we need to align the info with the marker on the screen. ARToolkit provides a way to do it: draw the info with OpenGL in 3D and setup a projection that gives a proper info-to-marker alignment.
 
@@ -111,7 +111,7 @@ ARToolKit.getInstance().cleanup();
 So, now ARToolkit has a video frame, its size and a set of markers.
 When a new frame is delivered, ARToolkit performs the following steps:
 
-| ![](/static/img/2018/05/artk_flow.png) | 1. Find all black borders. This is a step where unsightly black border is required. It is easily distinguishable from ordinary objects; 2. Perform perspective transform that maps an image inside a border to a square aligned with horizontal and vertical axes;       Downscale the image to 16×16 size. This is a “fingerprint” of the marker; 3. Compare this fingerprint with known samples. If enough similarity is found, then the marker is recognized. |
+| ![](/static/img/2018/05/artk_flow.png) | 1. Find all black borders. This is a step where unsightly black border is required. It is easily distinguishable from ordinary objects; 2. Perform perspective transform that maps an image inside a border to a square aligned with horizontal and vertical axes;       Downscale the image to 16×16 size. This is a "fingerprint" of the marker; 3. Compare this fingerprint with known samples. If enough similarity is found, then the marker is recognized. |
 |---|---|
 
 Now let us check if the marker is found:
@@ -128,15 +128,15 @@ As a result, we have 4×4 matrix. Pass it to OpenGL and voila – we are able to
 
 It is cool to see something drawn over the marker on the smartphone screen. But it isn't completely augmented reality. To get complete AR experience, a user should see real objects directly with eyes, not on the screen. AR glasses provide this feature. They contain two small transparent screens: one in front of the left eye, and one in front of the right one. We can draw something on these screens. The user will see it over real objects – this is AR way!
 
-We have used Epson Moverio BT-300 smart glasses. They work on Android 5.0 and have 1280×720 “virtual” screen (actually two 640×720 physical screens).
+We have used Epson Moverio BT-300 smart glasses. They work on Android 5.0 and have 1280×720 "virtual" screen (actually two 640×720 physical screens).
 
 So, we need to show the project logo and info on these screens. But… where? Remember that on AR glasses a user sees a real object by eye, not on the screen (like on smartphone). The logo and info we show should be aligned with real objects.
 
 ![](/static/img/2018/05/sp_vs_sg.png)
 
-This is a moment where math begins. Math is not provided by ARToolkit. Math called “projective geometry”, where every point has a “redundant” coordinate equal to one. This geometry describes relation between the object coordinates in the world and in the camera frame. It can also describe relations between two frames showing the same object from two different perspectives.
+This is a moment where math begins. Math is not provided by ARToolkit. Math called "projective geometry", where every point has a "redundant" coordinate equal to one. This geometry describes relation between the object coordinates in the world and in the camera frame. It can also describe relations between two frames showing the same object from two different perspectives.
 
-![](/static/img/2018/05/pinhole.png) This relation is what we actually need. More precisely, we need an answer to the question “Where should we draw the point \[math\]\\mathbf{x} = (x,y,1)^T\[/math\] on the screen to align it with the world point \[math\]\\mathbf{X} = (X,Y,Z,1)^T\[/math\] that user's eye sees?” In other words, where the line “eye – point \[math\]\\mathbf{X}\[/math\]” intersects the screen?
+![](/static/img/2018/05/pinhole.png) This relation is what we actually need. More precisely, we need an answer to the question "Where should we draw the point \[math\]\\mathbf{x} = (x,y,1)^T\[/math\] on the screen to align it with the world point \[math\]\\mathbf{X} = (X,Y,Z,1)^T\[/math\] that user's eye sees?" In other words, where the line "eye – point \[math\]\\mathbf{X}\[/math\]" intersects the screen?
 
 Let's place the world CS origin against the eye. Let's define the distance between the eye and the glasses screen as \[math\]f\[/math\]. Similarity of triangles gives \[math\]x = \\frac{X f}{Z}, \\; y = \\frac{Y f}{Z}\[/math\].
 

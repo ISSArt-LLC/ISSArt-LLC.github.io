@@ -102,32 +102,32 @@ GPIO.setup(SENSOR_PIN, GPIO.IN)
 while True:
   signal = GPIO.input(SENSOR_PIN)
   if signal == 0:
-    print(“Nothing”)
+    print("Nothing")
     time.sleep(0.1)
   elif signal == 1:
-    print(“Intruders detected”)
+    print("Intruders detected")
     time.sleep(0.1)
 ```
 
-Here is a detailed script description. The first five lines are needed to import Python modules, one of them – [RPi.GPIO](https://pypi.org/project/RPi.GPIO/) is used to work with Raspberry GPIO pins. After importing all the needed modules, we declare the variable **SENSOR_PIN** and make it equal to seven. It's not a “magic number”, seven is the number of the port which we used to connect with our sensor output pin. Next we set GPIO module in **GPIO.BOARD** mode. There are two available modes for GPIO:
+Here is a detailed script description. The first five lines are needed to import Python modules, one of them – [RPi.GPIO](https://pypi.org/project/RPi.GPIO/) is used to work with Raspberry GPIO pins. After importing all the needed modules, we declare the variable **SENSOR_PIN** and make it equal to seven. It's not a "magic number", seven is the number of the port which we used to connect with our sensor output pin. Next we set GPIO module in **GPIO.BOARD** mode. There are two available modes for GPIO:
 
 **GPIO.BOARD**
 **GPIO.BCM**
 
 The **GPIO.BOARD** option specifies that you are referring to the pins by the number of the pin – i.e. the numbers printed on the board, on our previous picture – it's the number in the gray square.
 
-The **GPIO.BCM** option means that you are referring to the pins by the “Broadcom SOC channel” number, these are the numbers after “GPIO”.
+The **GPIO.BCM** option means that you are referring to the pins by the "Broadcom SOC channel" number, these are the numbers after "GPIO".
 Unfortunately, the BCM numbers change between Raspberry versions and you'll need to find out which ones you have to use here. So that's why we will use **GPIO.BOARD** mode.
 
 Using the command: GPIO.setup(SENSOR_PIN, GPIO.IN) we set the needed Raspberry pin to work as an input channel. And after that we use an infinite cycle to wait for the input on this pin. If the sensor doesn't detect any movement, it won't send anything to Raspberry and the signal variable will be equal to zero, otherwise it will be equal to one. You can add a few print statements to debug the sensor state and make sure it's working.
 
 ###### Troubleshooting and tuning
 
-If the sensor is not working properly, check the jumper cables and make sure that you connect them to the right pins. Then take a look at two orange potentiometers situated on the opposite side of the pins (look at one of the previous pictures). If you take the sensor in your hand putting its “turtle shell” down and placing those potentiometers closer to you and pins farther, then the left one will be responsible for the distance and the right one – for the time delay.
+If the sensor is not working properly, check the jumper cables and make sure that you connect them to the right pins. Then take a look at two orange potentiometers situated on the opposite side of the pins (look at one of the previous pictures). If you take the sensor in your hand putting its "turtle shell" down and placing those potentiometers closer to you and pins farther, then the left one will be responsible for the distance and the right one – for the time delay.
 
-The distance is pretty obvious: it's the max distance that the detector can “see” the movement from. The distance can vary from 3 to 7 meters. To increase the distance, turn the potentiometer clockwise and anticlockwise – to decrease.
+The distance is pretty obvious: it's the max distance that the detector can "see" the movement from. The distance can vary from 3 to 7 meters. To increase the distance, turn the potentiometer clockwise and anticlockwise – to decrease.
 
-Time delay is the length of the sensor “alarm” signal. In other words, this potentiometer sets the time interval for the sensor to be sending the detection signal to Raspberry. Again, you can increase this value turning potentiometer clockwise or anticlockwise to decrease. Time delay can vary from 0.3 to 600 seconds.
+Time delay is the length of the sensor "alarm" signal. In other words, this potentiometer sets the time interval for the sensor to be sending the detection signal to Raspberry. Again, you can increase this value turning potentiometer clockwise or anticlockwise to decrease. Time delay can vary from 0.3 to 600 seconds.
 
 So, if for example your sensor is always signaling, try decreasing the time delay and maybe the distance. Keep in mind the sensor detects the movement not only directly in front of it.
 
@@ -172,7 +172,7 @@ Now we have a clean photo in high resolution. But we don't want to take photos m
 ```bash
 #!/bin/bash
 
-DATE=$(date +”%Y-%m-%d_%H%M”)
+DATE=$(date +"%Y-%m-%d_%H%M")
 
 fswebcam -r 1280×720 –no-banner /home/pi/webcam/$DATE.jpg
 ```
@@ -238,7 +238,7 @@ After that you will see the content of the autostart file on your screen. At the
 @python motion_seonsor.py
 ```
 
-Replace “motion_seonsor.py ” part with the path to your own Python script. After that press: Ctrl+X to exit the editor and press Y when prompted to save changes. Now you can reboot your system and the script will be started automatically.
+Replace "motion_seonsor.py " part with the path to your own Python script. After that press: Ctrl+X to exit the editor and press Y when prompted to save changes. Now you can reboot your system and the script will be started automatically.
 
 ## Conclusion
 

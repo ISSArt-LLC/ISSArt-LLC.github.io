@@ -16,7 +16,7 @@ tags:
 
 Augmented reality (or AR) is one of the popular digital trends that transformed the traditional way of things in many spheres of our life. Being capable of enhancing our surroundings, AR demonstrates incredible features that can educate, entertain, and assist with implementing complex procedures. This is unforgettable user experience.
 
-In one of our [previous posts](http://www.issart.com/blog/augmented-reality-staying-ahead-industry/) we've already discussed AR and how it is applied in various industries. In this article we'll explain Augmented reality concept and describe how it works. We'll cover devices supporting AR features and the programming tools that help deliver AR solutions. Next, we'll look at the practical use of AR technology. Finally, we'll discuss the future spreading of AR.
+In one of our [previous posts](https://www.issart.com/blog/augmented-reality-staying-ahead-industry/) we've already discussed AR and how it is applied in various industries. In this article we'll explain Augmented reality concept and describe how it works. We'll cover devices supporting AR features and the programming tools that help deliver AR solutions. Next, we'll look at the practical use of AR technology. Finally, we'll discuss the future spreading of AR.
 
 ## What does Augmented reality stand for?
 
@@ -45,7 +45,7 @@ To make transformation of our surrounding happen, computer generated content is 
 
 What components are utilized to produce digital content? These can be a camera, sensors, and a projector. Sensors and cameras acquire data about the surrounding, which is subject to further processing. A projector may be used to send graphics to the surface in front a user. In addition, CPU, GPU, accelerometer, GPS are often utilized to process the received info.
 
-Once the surrounding is enriched with digital content, can a user interact with it somehow? Sure! You can control it by means of the device controllers, by moving the device itself, and even by applying voice commands (think “OK, Glass”). In addition, the producers of smart devices are currently working on [gesture-based controls](https://www.digitaltrends.com/virtual-reality/augmented-reality-gesture-controls/), which are going to provide users with a qualitatively new and exciting experience.
+Once the surrounding is enriched with digital content, can a user interact with it somehow? Sure! You can control it by means of the device controllers, by moving the device itself, and even by applying voice commands (think "OK, Glass"). In addition, the producers of smart devices are currently working on [gesture-based controls](https://www.digitaltrends.com/virtual-reality/augmented-reality-gesture-controls/), which are going to provide users with a qualitatively new and exciting experience.
 
 ## What devices can utilize AR possibilities?
 

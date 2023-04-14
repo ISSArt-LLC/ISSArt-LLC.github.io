@@ -20,7 +20,7 @@ Nevertheless, PHP has one great feature that makes it very useful for me. From i
 
 A good addition to output preprocessing is [buffered output feature](http://php.net/manual/en/book.outcontrol.php). You can redirect the output to a buffer and then parse this output for any purpose.
 
-Now let me show you how exactly we use these features at one of our projects. The project receives data in various formats from different sources and represents this data in unified form in user's Web browser. New data comes to us from time to time. We develop an exclusive algorithm of data parsing and data conversion for each customer (aka operator), but the output format looks the same for everyone. For a number of reasons we've decided to store the output in JSON files. PHP buffered output fits perfectly for a purpose of such output building. We call this part of application “PHP driven configuration”.
+Now let me show you how exactly we use these features at one of our projects. The project receives data in various formats from different sources and represents this data in unified form in user's Web browser. New data comes to us from time to time. We develop an exclusive algorithm of data parsing and data conversion for each customer (aka operator), but the output format looks the same for everyone. For a number of reasons we've decided to store the output in JSON files. PHP buffered output fits perfectly for a purpose of such output building. We call this part of application "PHP driven configuration".
 
 ## PHP driven configuration example
 
@@ -52,14 +52,14 @@ Root file of operator configuration.
 
 Here's how it works:
 
-- “colorSchemes” field is set to a constant value – it never changes for this specific operator
-- “operatorName” is retrieved from localization files for this operator
-- “profitMargin” field value is taken from another JSON file which is located in a versioned file storage of this operator. API will select an appropriate version of this file automatically
-- To build “units” field, we delegate execution to partial PHP files located in “units” folder
+- "colorSchemes" field is set to a constant value – it never changes for this specific operator
+- "operatorName" is retrieved from localization files for this operator
+- "profitMargin" field value is taken from another JSON file which is located in a versioned file storage of this operator. API will select an appropriate version of this file automatically
+- To build "units" field, we delegate execution to partial PHP files located in "units" folder
 
 ### Localization
 
-JSON files in “locale” folder contain operator-specific localization. It doesn't make sense to put operator-specific strings to a common application localization file, that's why we build them as a part of PHP driven configuration of the operator.
+JSON files in "locale" folder contain operator-specific localization. It doesn't make sense to put operator-specific strings to a common application localization file, that's why we build them as a part of PHP driven configuration of the operator.
 
 #### locale/en.json
 
@@ -98,7 +98,7 @@ With that given, <tt><?php $this->locale->write("operatorName"); ?></tt> instruc
 
 ### Partials
 
-“includeAllScripts” method includes all PHP files in a folder as partials of a current configuration file. All partials will have PHP file name available in them as value of the field, specified in second argument. So, <tt><?php $this->includeAllScripts('units', 'unitId'); ?></tt> instruction will include all PHP files in “units” folder and pass “unitId” field into them.
+"includeAllScripts" method includes all PHP files in a folder as partials of a current configuration file. All partials will have PHP file name available in them as value of the field, specified in second argument. So, <tt><?php $this->includeAllScripts('units', 'unitId'); ?></tt> instruction will include all PHP files in "units" folder and pass "unitId" field into them.
 
 #### units/mouse.php
 

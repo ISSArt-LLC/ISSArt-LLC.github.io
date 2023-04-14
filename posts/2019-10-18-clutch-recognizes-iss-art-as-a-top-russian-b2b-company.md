@@ -19,7 +19,7 @@ In a [recent review](https://clutch.co/profile/iss-art), ISS Art provided softwa
 
 We earned five stars and our client was thoroughly satisfied with the work:
 
-*“Our professional dedicated project manager reliably produces successful outcomes. Whether it's allocating someone new to work on a project or finding a better solution, they always find the best way to solve any given problem.” — Executive, Turbo Dispute*
+*"Our professional dedicated project manager reliably produces successful outcomes. Whether it's allocating someone new to work on a project or finding a better solution, they always find the best way to solve any given problem." — Executive, Turbo Dispute*
 
 Our work is also visible at The Manifest, a research guide for entrepreneurs and buyers. We are ranked as o ne of the top 20 [Russian developers](https://themanifest.com/ru/software-development/companies#issart) at The Manifest, an amazing accomplishment for our team.
 

@@ -11,7 +11,7 @@ categories:
 
 Hearing that a US Client hires 20, 30, 50 and even 100 IT specialists from Russia, Belarus or other countries of the CIS and Eastern Europe is not surprising anymore.
 
-Nevertheless, when a Client makes the decision about where to hire developers: should they be inhouse developers, developers from local companies, or outsource developers from Russia; there are always doubts and questions “how not to miscalculate?”, “how to find reliable ones?”, “who can lead me to success?”.
+Nevertheless, when a Client makes the decision about where to hire developers: should they be inhouse developers, developers from local companies, or outsource developers from Russia; there are always doubts and questions "how not to miscalculate?", "how to find reliable ones?", "who can lead me to success?".
 
 Our case will tell you the story of [our Client](https://www.youtube.com/watch?v=LbpHL8fkbhs&ab_channel=ISSArt%2CLLC) who outsourced, what challenges they faced and how they found the solutions. We will also share our 4 insights that helped the Client to succeed – develop a high-class IT project and become an official partner of a transnational company. [We are](https://issart.com/) extremely proud of this project because we managed to put together a top-notch team, create flawless processes and help the Client reach their goal.
 
@@ -43,7 +43,7 @@ And what did the Client do? He was deep in the process and its details trying to
 
 *Insight #3 Don't let go of the project after starting. If you wanted to hire a top notch, extremely famous construction company to build your new house, you would have to dive into all the details, control the building process etc. The same is true for IT-projects: keep being involved all the time.*
 
-By the way, as for “control the building process”, the Client started visiting us to give workshops before launching the development of some large modules. And our representatives flew to the USA to demonstrate the product and brainstorm some new components.
+By the way, as for "control the building process", the Client started visiting us to give workshops before launching the development of some large modules. And our representatives flew to the USA to demonstrate the product and brainstorm some new components.
 
 *Insight #4 Have offline meetings. If it is impossible, use your camera while communicating.*
 

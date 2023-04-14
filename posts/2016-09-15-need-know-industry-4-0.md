@@ -21,13 +21,13 @@ Today's technology — [big data](https://www.issart.com/en/lp/java-development-
 
 It's going to take the manufacturing automation to the next level. Business models will be impacted, redefined, and new ones will be created. Machine safety will increase and risks to worker will decrease. It will touch the world.
 
-In this article, we're going to explore exactly what we mean by this “industry 4.0”, the need for it, and how you can get organization ready for it. Toward the end, we'll look at some of the challenges you're bound to experience and how you can solve them.
+In this article, we're going to explore exactly what we mean by this "industry 4.0", the need for it, and how you can get organization ready for it. Toward the end, we'll look at some of the challenges you're bound to experience and how you can solve them.
 
 Let's get started.
 
 ## What's Need for Industry 4.0?
 
-The question CIOs, and other professionals, ask us when we talk about industry 4.0 is, “What's wrong with industry 3.0? Isn't it enough?”
+The question CIOs, and other professionals, ask us when we talk about industry 4.0 is, "What's wrong with industry 3.0? Isn't it enough?"
 
 It's a fair question. Industry 3.0 has allowed many organizations to further automate, increase efficiency, and optimize their value chains. We have different systems for storage, tracking, production and more.
 
@@ -47,7 +47,7 @@ This and more is exactly what industry 4.0 offers.
 
 ## What's Industry 4.0?
 
-Industry 4.0 is often called the “smart factory”. It's about leveraging big data, advanced analytics, and the IoT to create a better factory. The idea is connect embedded systems and smart production facilities to create a digital convergence between business, internal functions and processes, and industry.
+Industry 4.0 is often called the "smart factory". It's about leveraging big data, advanced analytics, and the IoT to create a better factory. The idea is connect embedded systems and smart production facilities to create a digital convergence between business, internal functions and processes, and industry.
 
 A common mistake is thinking this is a new concept. Like everything else, the groundwork for industry 4.0 was laid decades ago. It wasn't until recently that we came to a convergence and tipping point where that allows us to build industry 4.0.
 

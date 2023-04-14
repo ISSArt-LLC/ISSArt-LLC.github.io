@@ -11,7 +11,7 @@ categories:
 
 The attributes of a cloud based application hint on many of the advantages of [cloud based application development](https://www.issart.com/en/services/details/service/cloud-solutions). The cloud environment saves money through the minimization of information technology infrastructure operating expense, optimization of server use, shortening of the development cycle and providing the resources for scalability without large capital investments.
 
-Cloud computing has greatly affected information technology over the last decade. According to [Readwrite](http://readwrite.com/2013/04/16/why-cloud-development-environments-are-better-than-desktop-development) references applications are being “reengineered to take advantage of cloud's instant access, no download and pay-as-you-go attributes.”
+Cloud computing has greatly affected information technology over the last decade. According to [Readwrite](http://readwrite.com/2013/04/16/why-cloud-development-environments-are-better-than-desktop-development) references applications are being "reengineered to take advantage of cloud's instant access, no download and pay-as-you-go attributes."
 
 The same Readwrite article enumerates the deficiencies of desktop development environments, which include complicated configuration management, decreased productivity, limited accessibility and poor collaboration. In contrast, the cloud-based workspace is centralized, which facilitates collaboration and communication among developers. The cloud also enhances system efficiency and use, reduces IT maintenance costs, ensures peak processing capability and reduces the complexity associated with delivering programs to multiple platforms and operating systems.
 
@@ -95,7 +95,7 @@ Users of AWS have the advantage of around-the-clock support, It's like having yo
 
 (source [AWS](http://aws.amazon.com/pricing))
 
-Amazon calls its pricing philosophy the “virtuous”circle. More use drives infrastructure investment, which increases the economies of scale, lowering cost for the users.
+Amazon calls its pricing philosophy the "virtuous"circle. More use drives infrastructure investment, which increases the economies of scale, lowering cost for the users.
 
 ### CONCLUSION
 

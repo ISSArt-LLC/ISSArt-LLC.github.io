@@ -40,7 +40,7 @@ There are many advantages that SaaS has over traditional software, as shown belo
 
 ### What is an accounting application?
 
-A good accounting application is essential in the accounting world. The [definition](https://us.intacct.com/accounting-application) of accounting application is “a software program that captures and records all accounting transactions.” This type of software has many different functions which are divided into functional modules. Some examples of this include:
+A good accounting application is essential in the accounting world. The [definition](https://us.intacct.com/accounting-application) of accounting application is "a software program that captures and records all accounting transactions." This type of software has many different functions which are divided into functional modules. Some examples of this include:
 
 - Accounts receivable
 - Accounts payable
@@ -91,13 +91,13 @@ Accounting software is an essential part of any business because all of the succ
 
 There is a wide array of different software applications that can be used depending on specific business needs. The most popular software is QuickBooks because there are different tiers which can be included in the package.
 
-A very popular accounting solution in the Russian Federation is 1C by 1C Company. However, despite the tremendous support for 1C, some companies still prefer developing custom systems tailored to their industry. In a recent development, Russia has passed a law that will force its citizens' personal data to be stored locally. The new [law](http://www.theregister.co.uk/2014/07/07/russian_law_will_force_citizens_personal_data_to_be_stored_data_locally/) specifies: “when collecting personal data, including information and telecommunications network, the Internet, the operator must ensure that record, systemization, accumulation, storage, updated, modified, removing the personal data of citizens of the Russian Federation, in databases, of information located in the territory of the Russian Federation.” The new law will be in effect as of September 1, 2016. Because of this, businesses throughout the area are working towards creating SaaS applications which will work best for their purposes, and in time for the new law to go into effect. SaaS has now become an extremely important solution in many organizations, and this is even truer now for the Russian Federation.
+A very popular accounting solution in the Russian Federation is 1C by 1C Company. However, despite the tremendous support for 1C, some companies still prefer developing custom systems tailored to their industry. In a recent development, Russia has passed a law that will force its citizens' personal data to be stored locally. The new [law](http://www.theregister.co.uk/2014/07/07/russian_law_will_force_citizens_personal_data_to_be_stored_data_locally/) specifies: "when collecting personal data, including information and telecommunications network, the Internet, the operator must ensure that record, systemization, accumulation, storage, updated, modified, removing the personal data of citizens of the Russian Federation, in databases, of information located in the territory of the Russian Federation." The new law will be in effect as of September 1, 2016. Because of this, businesses throughout the area are working towards creating SaaS applications which will work best for their purposes, and in time for the new law to go into effect. SaaS has now become an extremely important solution in many organizations, and this is even truer now for the Russian Federation.
 
 ### Why develop a custom SaaS accounting application?
 
 The SaaS accounting applications are definitely at an advantage over on premises applications. Although there is a great variety of ready solutions in the digital market of today, it is also possible that none of the applications covers all of the business needs to the fullest. If this is a dilemma that you find yourself facing, you might want to consider developing a custom SaaS accounting application.
 
-Before deciding whether or not it is in your best interest to customize a SaaS accounting application, it is important to first think about your business and any particular needs. The most important [components](http://www.issart.com/blog/outsourcing-software-development-choosing-right-provider/) of the development process include the following:
+Before deciding whether or not it is in your best interest to customize a SaaS accounting application, it is important to first think about your business and any particular needs. The most important [components](https://www.issart.com/blog/outsourcing-software-development-choosing-right-provider/) of the development process include the following:
 
 - Analytics or Specification
 - Design
@@ -108,7 +108,7 @@ Before deciding whether or not it is in your best interest to customize a SaaS a
 - Software Test Results
 - Deployment of Code on the Customer's Server
 - Maintenance
-- Training (For more details please see our post about software development process http://www.issart.com/blog/know-software-development-process/)
+- Training (For more details please see our post about software development process https://www.issart.com/blog/know-software-development-process/)
 
 There are many advantages for a business – especially a small to medium sized business. Not only that, but the cost is also lowered because there is only one fee at signup. In addition, maintenance is covered throughout the life if the system. The chart below shows the characteristics that contrast the traditional business model to the SaaS business model:
 
@@ -121,9 +121,9 @@ After reading this, you have probably realized that obtaining a SaaS accounting 
 - Conduct a competitors analysis, which is a marketing tool used to assess the strengths and weaknesses of your competitors.
 - Define all of the business's areas of improvement and focus on them because later these will be your unique selling points.
 - Gather all of the requirements and then prepare for project specification. (see more details in our software development guide <http://www.issart.com/en/materials/landing/id/1>)
-- Pay close attention to your product promotion such as identifying your target audience, meet the audience's needs, create a call of action and choose proper communication channels, just to name a [few](http://www.issart.com/blog/how-to-promote-your-software-product/).
+- Pay close attention to your product promotion such as identifying your target audience, meet the audience's needs, create a call of action and choose proper communication channels, just to name a [few](https://www.issart.com/blog/how-to-promote-your-software-product/).
 
-For smaller businesses, they might not have an in-house team, however, there are many [outsourcing companies](http://www.issart.com/blog/outsourcing-software-development-choosing-right-provider/) that will be reliable to work with. Should you decide to outsource the work, it is important to keep track of the action items.
+For smaller businesses, they might not have an in-house team, however, there are many [outsourcing companies](https://www.issart.com/blog/outsourcing-software-development-choosing-right-provider/) that will be reliable to work with. Should you decide to outsource the work, it is important to keep track of the action items.
 
 As time goes on, businesses all over the world will continue to migrate towards SaaS rather than on premises applications. In fact, it is estimated that by the end of this year, SaaS spending will exceed $22 billion. This is an [increase](http://smartbridge.com/pros-cons-saas-vs-premises-deployment/) of more than 57% from the $14 billion spent in 2012. While SaaS is a great addition for any business, it especially works well in small to medium businesses because of the cost and versatility.
 

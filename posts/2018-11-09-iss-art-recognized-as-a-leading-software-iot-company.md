@@ -21,21 +21,21 @@ While Clutch conducts research to identify the best-performing companies, The Ma
 
 Clutch analysts interviewed many of our clients to gather their honest comments and ratings, which contributed to our evaluation of being named a great company to work with. These are just a few of the remarks a few clients gave:
 
-“ISS Art is very professional, stays on top of the project, and delivers on time. “
+"ISS Art is very professional, stays on top of the project, and delivers on time. "
 
 **Jason Pullar
 IT Manager, Critical Control Energy Services Inc.**
 
-“The app helped our clients and raised the profile of my business. The last app that ISS Art worked on was successful; it still generates income seven years later.”
+"The app helped our clients and raised the profile of my business. The last app that ISS Art worked on was successful; it still generates income seven years later."
 
 **Mark Grant
 Director, Trauma & Pain Management Service**
 
-“They're excellent, and put a lot of effort into management. If I need something right away, they do their best to make it happen quickly. If there's an emergency, they stop everything to fix it.”
+"They're excellent, and put a lot of effort into management. If I need something right away, they do their best to make it happen quickly. If there's an emergency, they stop everything to fix it."
 
 **Executive Director, Non-profit**
 
-“Our team thinks their work is amazing and great so we kept the engagement going.”
+"Our team thinks their work is amazing and great so we kept the engagement going."
 
 **Manager, Technology Company Blog**
 

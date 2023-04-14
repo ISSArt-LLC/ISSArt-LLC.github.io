@@ -73,7 +73,7 @@ Training data for NLU is stored in nlu.json file and looks like this.
      },
      {
        "intent": "inform_people_num",
-       "text": “I want a table for six people"
+       "text": "I want a table for six people"
      },
     ...
     ]
@@ -146,7 +146,7 @@ All migration stuff except this can be treated with Rasa cli commands, and it's 
 
 > Since DialogFlow's dialogue management is a rule-based approach, you cannot export any training data which you could use directly to train the Rasa dialogue model. The good news is that you have access to conversations history on DialogFlow and you can use it as a basis for generating training data for Rasa Core model.
 
-So the recipe is “go to your log of bot's conversations and write stories by hand”. Don't give up – there is a way how automatically or semi-automatically to solve this. Let's move to …
+So the recipe is "go to your log of bot's conversations and write stories by hand". Don't give up – there is a way how automatically or semi-automatically to solve this. Let's move to …
 
 ## HOWTO
 
@@ -165,7 +165,7 @@ import os
 def convert_to_objects(filename):
    json_file = open(filename)
   examples = open(f'filename[:-4]_usersays_en.json')	
-   return {**json.loads(json_file.read()), “examples”:  json.loads(examples.read())}
+   return {**json.loads(json_file.read()), "examples":  json.loads(examples.read())}
 
 
 # Get all json files

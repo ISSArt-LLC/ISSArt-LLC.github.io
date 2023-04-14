@@ -19,7 +19,7 @@ However, chances are that despite such a great variety of available tools none o
 Being an offshore software development team, we provide our services remotely; most of our employees work on hourly basis. Therefore, we have faced challenges: how to control the efficiency of work, how to stay within the budget and deadlines, and how to report to a customer more effectively.
 Therefore, we've come up with the decision to create such a tool which would help us deal with these issues, and which we would be happy to use ourselves. And we have developed [CrISStal Eye](http://crisstaleye.com) – full-scale time-tracking software for controlling in-house and remote employees and for reporting to a customer.
 
-We've already covered the most popular time tracking systems – please see [this blog post](http://www.issart.com/blog/time-tracking-systems-overview/). Now let's review CrISStal Eye the way we have reviewed other tools.
+We've already covered the most popular time tracking systems – please see [this blog post](https://www.issart.com/blog/time-tracking-systems-overview/). Now let's review CrISStal Eye the way we have reviewed other tools.
 
 **CrISStal Eye overview**
 
@@ -44,7 +44,7 @@ A desktop client is easy to use and powerful. There are MacOS, Linux, Windows ve
 **Activity monitoring**
 
 CrISStal Eye tracks time spent on a particular task. Normally, it rounds time to seconds (to prevent upward rounding of working time), but it is possible to choose the required precision – rounding to minutes, for example.
-Taking into account that programmers love solving difficult tasks, and, in particular, how to “bypass” the system (not because they want to violate rules, but because they want to crack a puzzle), we've paid special attention to screenshots taking mechanism.
+Taking into account that programmers love solving difficult tasks, and, in particular, how to "bypass" the system (not because they want to violate rules, but because they want to crack a puzzle), we've paid special attention to screenshots taking mechanism.
 Our system takes screenshots at a random time of 10-minute interval. To provide additional guarantee that data is not manipulated, if a screenshot is deleted, the time associated with this screenshot is deleted as well.
 CrISStal Eye also provides flexible reports that can be adjusted as you wish – by user / period / project / task.
 

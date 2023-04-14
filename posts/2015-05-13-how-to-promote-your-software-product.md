@@ -15,7 +15,7 @@ As your software development process is getting closer to finish, your product p
 
 #### Identify your target audience
 
-First and foremost, you need to understand whose needs your product is aimed to satisfy – you need to know your target audience. For example, if your newly developed project is an [E-learning system](http://www.issart.com/blog/the-right-e-learning-solutions-for-your-business-or-organization/), your potential customers will be students and teachers most likely. If it is a [time-tracking system](http://www.issart.com/blog/time-tracking-systems-overview/), it will be interesting for startup owners, heads of IT departments and businessman working with remote employees (software development teams, for example).
+First and foremost, you need to understand whose needs your product is aimed to satisfy – you need to know your target audience. For example, if your newly developed project is an [E-learning system](https://www.issart.com/blog/the-right-e-learning-solutions-for-your-business-or-organization/), your potential customers will be students and teachers most likely. If it is a [time-tracking system](https://www.issart.com/blog/time-tracking-systems-overview/), it will be interesting for startup owners, heads of IT departments and businessman working with remote employees (software development teams, for example).
 
 #### Adjust your message to meet your audience's needs
 
@@ -23,7 +23,7 @@ Ask yourself a question: why should a customer be interested in my product? Bein
 
 Focus on a particular problem that you customer faces, and identify how your product is likely to solve this problem. You need to show actual value to a user; otherwise, he won't have motivation to even try it.
 
-If your newly developed [document management system](http://www.issart.com/blog/custom-document-management-system-development/) enables to reduce internal expenses by 20%, bring it into focus!
+If your newly developed [document management system](https://www.issart.com/blog/custom-document-management-system-development/) enables to reduce internal expenses by 20%, bring it into focus!
 
 #### Don't forget about call-to-action
 
@@ -55,7 +55,7 @@ If you want to represent your product in a fun and creative way, an explainer vi
 
 You can reach out to [Explainify](http://explainify.com/) team who makes short, animated explainer videos that enable businesses to explain their services simply, effectively, and meaningfully by capturing their one-of-a-kind story.
 
-Like they say, “It's hard to read the label from inside the bottle.” In other words, it can be hard to take a holistic look at your organization from within, which in turn makes it very difficult to tell your story quickly and impactfully. Guys at Explainify are happy to become your brand experts, gaining a deep understanding of your service from the outside.
+Like they say, "It's hard to read the label from inside the bottle." In other words, it can be hard to take a holistic look at your organization from within, which in turn makes it very difficult to tell your story quickly and impactfully. Guys at Explainify are happy to become your brand experts, gaining a deep understanding of your service from the outside.
 
 Another point they make is that they stay boutique by design: they work with just a handful of clients at a time, which allows them to really devote their time and energy to their clients. A good thing to know is that Explainify has worked with a wide range of clients – and everyone from small startups to multinational brands ([like GE!](http://explainify.com/ge-animated-video)) trust these guys to tell their story.
 

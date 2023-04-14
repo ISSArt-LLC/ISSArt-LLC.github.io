@@ -61,7 +61,7 @@ This can help improve relationships between suppliers, retailers, partners, cust
 
 Actionable reports must be delivered from your AI insights as frequently as they will be acted upon. Often this means [real-time](https://blog.issart.com/webrtc-real-time-communication/) dashboards, but daily or weekly reports can also suffice so long as the underlying data is fresh.
 
-If you don't automate inventory management to this degree, chances are you'll be making decisions with “stale data.” This leads to suboptimal supply chain performance. And of course, this real time data must be fed into the artificial intelligence algorithms with well designed pipelines. These data sources should include both forward-most demand and downstream supply. This “community data” is what gives your business a full understanding of everything that goes into the supply chain. It allows you to identify in advance areas of friction, unnecessary costs, and leverage points.
+If you don't automate inventory management to this degree, chances are you'll be making decisions with "stale data." This leads to suboptimal supply chain performance. And of course, this real time data must be fed into the artificial intelligence algorithms with well designed pipelines. These data sources should include both forward-most demand and downstream supply. This "community data" is what gives your business a full understanding of everything that goes into the supply chain. It allows you to identify in advance areas of friction, unnecessary costs, and leverage points.
 
 ## Smart Warehousing
 

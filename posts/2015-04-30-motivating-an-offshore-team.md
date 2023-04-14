@@ -37,7 +37,7 @@ The development process requires certain hardware or specific tools? Your provid
 
 #### Consider cultural differences
 
-Working with an offshore team involves cultural aspects which shouldn't be ignored (we've covered this topic in one of our [previous posts](http://www.issart.com/blog/what-challenges-do-software-development-companies-face-while-working-with-foreign-customers/)). Plan holidays on both sides in advance and try to adjust the work schedule accordingly.
+Working with an offshore team involves cultural aspects which shouldn't be ignored (we've covered this topic in one of our [previous posts](https://www.issart.com/blog/what-challenges-do-software-development-companies-face-while-working-with-foreign-customers/)). Plan holidays on both sides in advance and try to adjust the work schedule accordingly.
 
 In addition, be aware that there might be different attitude to one and the same situation in different cultures. Don't neglect cultural differences because it can result in serious consequences.
 
@@ -83,7 +83,7 @@ Start with yourself. Act the way you expect your team members to act. Contribute
 
 #### Provide and receive feedback
 
-Anyone can get into the “quagmire” from which you can escape only with the help of others. It is important that a PM regularly gives feedback on the work of each employee. Try to make it privately, especially when you are going to discuss with a certain team member his failure to achieve the desired result.
+Anyone can get into the "quagmire" from which you can escape only with the help of others. It is important that a PM regularly gives feedback on the work of each employee. Try to make it privately, especially when you are going to discuss with a certain team member his failure to achieve the desired result.
 
 Besides, a PM should also receive such feedback from all the team members.
 

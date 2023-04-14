@@ -10,7 +10,7 @@ categories:
     - 'Project Management'
 ---
 
-We've already covered various aspects of software development process so far: how to [choose a provider](http://www.issart.com/blog/outsourcing-software-development-choosing-right-provider/), which [IP issues](http://www.issart.com/blog/intellectual-property-issues-software-development/) to consider, how to [motivate your team](http://www.issart.com/blog/motivating-an-offshore-team/), what challenges to be aware of when working on [international scale](http://www.issart.com/blog/what-challenges-do-software-development-companies-face-while-working-with-foreign-customers/)… But how to make sure that the whole team is actually working? What if the majority of time is actually spent on non-project related activities (i.e. Facebook, chats with friends, etc.)?
+We've already covered various aspects of software development process so far: how to [choose a provider](https://www.issart.com/blog/outsourcing-software-development-choosing-right-provider/), which [IP issues](https://www.issart.com/blog/intellectual-property-issues-software-development/) to consider, how to [motivate your team](https://www.issart.com/blog/motivating-an-offshore-team/), what challenges to be aware of when working on [international scale](https://www.issart.com/blog/what-challenges-do-software-development-companies-face-while-working-with-foreign-customers/)… But how to make sure that the whole team is actually working? What if the majority of time is actually spent on non-project related activities (i.e. Facebook, chats with friends, etc.)?
 
 ### How to monitor the progress?
 
@@ -43,7 +43,7 @@ Redmine: yes
 • OpenProject
 
 **Built-in PM System**
-There is an opportunity to create “organizational structure”, to distribute employees among company departments, to assign tasks to employees.
+There is an opportunity to create "organizational structure", to distribute employees among company departments, to assign tasks to employees.
 
 **Desktop client**
 A desktop client is rather user-friendly. It enables to switch between two time tracking modes: manual and automatic. You can also create a new task and define its location in the project hierarchy.
@@ -254,7 +254,7 @@ Invoicing Features include:
 There is a rich CRM functionality, including customizable dashboard, unlimited billing rates, static budgeting, client based cloud storage, and Client portal.
 
 **Usability**
-Although the interface is rather “heavy”, there is an easy access to the user guides; fields are accompanied by the hints. Time tracking can run on any type of a client.
+Although the interface is rather "heavy", there is an easy access to the user guides; fields are accompanied by the hints. Time tracking can run on any type of a client.
 
 **Performance**
 No delays in performance were noticed.

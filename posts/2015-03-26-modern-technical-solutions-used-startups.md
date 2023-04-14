@@ -53,7 +53,7 @@ This means top tier web application developers are needed to perfect and expand 
 
 As [Top Software Developers](https://www.softwaredevelopmentcompany.co/software-development-companies/), we have many years of experience developing solutions for modern hi-tech devices and know the set of technologies you use for development plays an important role. For example, JavaScript has been our programming language of choice in the past couple of years, but we are now looking at moving towards TypeScript as a replacement.
 
-We do not take a change in the use of technologies lightly as we know this can sometimes create more issues than it solves. However, given our vast experience we recognize the need to evolve with the new demands of modern hi-tech solutions development. You can read more about our overall thoughts in this post about [using new technologies](http://www.issart.com/blog/iss-art-technology-stack-2015/). However, regardless of the technologies you use for development, some core steps should be followed.
+We do not take a change in the use of technologies lightly as we know this can sometimes create more issues than it solves. However, given our vast experience we recognize the need to evolve with the new demands of modern hi-tech solutions development. You can read more about our overall thoughts in this post about [using new technologies](https://www.issart.com/blog/iss-art-technology-stack-2015/). However, regardless of the technologies you use for development, some core steps should be followed.
 
 ## Core Steps in the App Development Process
 
@@ -85,4 +85,4 @@ However, with every technological innovation comes opportunity for creative and 
 
 What do you think is the next big trend? Are you working on something new and exciting right now? Leave us your comments and let us know what you think will trend in the coming year.
 
-Relevant Article: [ISS Art technology stack](http://www.issart.com/blog/iss-art-technology-stack-2015/) Building such solutions by using technologies that we checked out and proved to be efficient!
+Relevant Article: [ISS Art technology stack](https://www.issart.com/blog/iss-art-technology-stack-2015/) Building such solutions by using technologies that we checked out and proved to be efficient!

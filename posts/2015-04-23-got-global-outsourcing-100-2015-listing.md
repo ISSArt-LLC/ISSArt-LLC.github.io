@@ -9,7 +9,7 @@ categories:
     - General
 ---
 
-The beginning of this year was marked by a great achievement for our company. We have entered the annual listing of the best outsourcing companies in the world “The 2015 Global Outsourcing 100” by IAOP for the first time.
+The beginning of this year was marked by a great achievement for our company. We have entered the annual listing of the best outsourcing companies in the world "The 2015 Global Outsourcing 100" by IAOP for the first time.
 
 The Global Outsourcing 100 represents the annual listing of the world's best outsourcing service providers. The complete details on the 2015 Process and Methodology of scoring can be found [here](http://www.iaop.org/Download/Default.aspx?ID=1605). This is a real success, and we are proud that our continuous efforts to improve the quality of our services have been recognized on a global level.
 
@@ -22,7 +22,7 @@ Companies-contenders for inclusion in the list were evaluated based on the follo
 1. Size and Growth;
 2. Delivery Excellence;
 3. Programs for Innovation;
-4. Corporate [Social](http://www.issart.com/blog/intellectual-property-issues-software-development/) Responsibility (CSR).
+4. Corporate [Social](https://www.issart.com/blog/intellectual-property-issues-software-development/) Responsibility (CSR).
 
 Let's review each of them.
 
@@ -60,7 +60,7 @@ As for independent reference sources that we provided to validate our activities
 
 ### Conclusion
 
-This is what we've done to get ino the 2015 Global Outsourcing 100 listing. The materials we provided to apply for this program helped us to make into “Best Rising Stars in Revenue Growth” sub-list. The alphabetical list of companies included into The 2015 Global Outsourcing 100® listing is available [here](http://www.iaop.org/Download/Default.aspx?ID=2401).
+This is what we've done to get ino the 2015 Global Outsourcing 100 listing. The materials we provided to apply for this program helped us to make into "Best Rising Stars in Revenue Growth" sub-list. The alphabetical list of companies included into The 2015 Global Outsourcing 100® listing is available [here](http://www.iaop.org/Download/Default.aspx?ID=2401).
 
 Also, this June FORTUNE® magazine will publish the full list of the rating participants and honors obtained in the various categories. We'll inform our readers about it additionally, so stay tuned!
 

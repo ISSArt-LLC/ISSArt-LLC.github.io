@@ -72,7 +72,7 @@ That is the question. So, here is a look at why application development from scr
 
 As far as time is concerned, as a person adept at programming, writing the code from the ground up may only take a bit longer than the few weeks you would need to buy a source code, and then bend it to meet your goals.
 
-Even if you were to remove the time and money factors from the equation, you would still gain important flexibility from writing code from scratch, as it would allow you to take the development in any direction you desire without consideration of what someone else has already “baked” into the code.
+Even if you were to remove the time and money factors from the equation, you would still gain important flexibility from writing code from scratch, as it would allow you to take the development in any direction you desire without consideration of what someone else has already "baked" into the code.
 
 ## Flexibility
 
@@ -84,10 +84,10 @@ Photo Source [Enterprisecioforum.com](http://www.enterprisecioforum.com/en/blogs
 
 This would of course not be an option when trying to reskin an app. It should also be stated that given the popularity of the Apple store, chances are, the source code was built for the iOS platform and in Objective-C. Therefore, if you need a version of it in Java for the Android Platform, you would need to put in some serious programming hours. If you don't have resources in-house, then you may need to [hire Android developers](https://www.devteam.space/hire-android-developers/).
 
-The same dynamics can be involved when developing desktop applications. For example, if you are using .NET as your chosen programming language, then some of the architecture foundation can be transferred to Windows Phone and Windows Store applications. However, the keyword is “some” and if you are not careful, you may end up with a larger project than you realized would be necessary. Details matter when attempting to migrate or expand applications from desktop versions to mobile or web-based versions, and vice versa.
+The same dynamics can be involved when developing desktop applications. For example, if you are using .NET as your chosen programming language, then some of the architecture foundation can be transferred to Windows Phone and Windows Store applications. However, the keyword is "some" and if you are not careful, you may end up with a larger project than you realized would be necessary. Details matter when attempting to migrate or expand applications from desktop versions to mobile or web-based versions, and vice versa.
 
 In contrast, using a tool such as Appery.io (formerly Tiggzi) would be much simpler and less time consuming. For those of you who are more a designer than a programmer, a tool that makes life easier with its drag and drop interface is Codiqa. For mobile back end, you could use Kinvey.
 
 In other words, there are so many tools, which bring down the amount of time you spend on application development; there is simply no reason to struggle with inferior source code.
 
-Read the second part of the article [here](http://www.issart.com/blog/reskinning-tweaking-code-application-development-part-2/).
+Read the second part of the article [here](https://www.issart.com/blog/reskinning-tweaking-code-application-development-part-2/).

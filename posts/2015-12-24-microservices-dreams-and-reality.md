@@ -17,7 +17,7 @@ At the same time, the Microservices Architecture isn't another definition for [S
 
 ## The Microservices Architecture as any distributed approach has the same pros and cons.
 
-When the distributed solution appears somebody asks: “What about the consistency?”
+When the distributed solution appears somebody asks: "What about the consistency?"
 Most likely you won't be able to make services completely independent of the data they manage, so you'll have to maintain the consistency by yourself.
 
 If you don't develop the real-time system, the eventual consistency will be enough in the most of use cases. When your customer says that he needs the real-time update of the user profile picture, displayed with the user's comments, most likely he doesn't need it.

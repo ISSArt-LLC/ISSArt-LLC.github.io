@@ -26,7 +26,7 @@ In some fields of business, the fundamental condition for success is to quickly 
 
 - *Marketing strategy development based on provided data and set goals.*
 
-Artificial intelligence helps marketers work: it not only analyzes previous sales but also uses forecasting to “predict” the future, taking into account competitors' behavior and the situation on the market.
+Artificial intelligence helps marketers work: it not only analyzes previous sales but also uses forecasting to "predict" the future, taking into account competitors' behavior and the situation on the market.
 
 - *Human factor.*
 
@@ -66,7 +66,7 @@ Certain business segments have been transformed with the advent of artificial in
 
 - *Chatbots*
 
-Machine learning algorithms often replace call centers, help complete the task of providing customer assistance and information around the clock, even on holidays and weekends. A “smart” program learns from its own mistakes and, over time, surpasses living operators' incompetence. The result: a significant increase in customer loyalty, a buildup of the company's positive image.
+Machine learning algorithms often replace call centers, help complete the task of providing customer assistance and information around the clock, even on holidays and weekends. A "smart" program learns from its own mistakes and, over time, surpasses living operators' incompetence. The result: a significant increase in customer loyalty, a buildup of the company's positive image.
 
 - *Data management*
 

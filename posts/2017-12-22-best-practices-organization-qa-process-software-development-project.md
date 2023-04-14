@@ -31,7 +31,7 @@ Second, the cost of the process matters. Of course, there are many big and expen
 
 ### Filters
 
-Filters are designed for a quick selection of tickets by some criteria. Queries for Jira filters are written in JQL (Jira Query Language). Using the right filter, we can get the exact subset of tickets we need. Filters are separate objects in Jira (they are named “stored filters”) which can be reused and shared among users. But what is more valuable for us, a filter can also be presented as an HTTP link and thus be embedded into the description of a ticket.
+Filters are designed for a quick selection of tickets by some criteria. Queries for Jira filters are written in JQL (Jira Query Language). Using the right filter, we can get the exact subset of tickets we need. Filters are separate objects in Jira (they are named "stored filters") which can be reused and shared among users. But what is more valuable for us, a filter can also be presented as an HTTP link and thus be embedded into the description of a ticket.
 
 ### Cloning
 
@@ -41,7 +41,7 @@ Any ticket in Jira can be cloned. Cloning means that an exact copy of the source
 
 The cornerstone of the Agile methodology is splitting the development into short phases each of which has to end with the delivery of a new release. These phases are called sprints or rounds or iterations. All the changes, such as new features or bug fixes which have been implemented during a round, should be tested within it. So we need to perform testing as a repetitive task each round, and each such task will be similar to the previous one. It is a good place to use templates. So we are going to talk about QA process template.
 
-In our scheme, each testing round is represented by a separate ticket of `Task` type. Such round ticket contains all the information about this particular round and has got all the necessary sub-tasks. To make the history of testing available, all the round tickets should be linked to a chain by using Jira links. We're using “follows” -> “is followed by” link. When a new round has been started, the QA lead clones the template ticket to create a testing ticket for this round. Then QA lead updates the summary, description and any necessary fields according to the needs of this particular round. After that, they link the round ticket to the previous one.
+In our scheme, each testing round is represented by a separate ticket of `Task` type. Such round ticket contains all the information about this particular round and has got all the necessary sub-tasks. To make the history of testing available, all the round tickets should be linked to a chain by using Jira links. We're using "follows" -> "is followed by" link. When a new round has been started, the QA lead clones the template ticket to create a testing ticket for this round. Then QA lead updates the summary, description and any necessary fields according to the needs of this particular round. After that, they link the round ticket to the previous one.
 
 The testing round template has a particular structure, so let's look into it in more details.
 
@@ -62,15 +62,15 @@ Cloning the testing round template into a new round ticket creates a new set of 
 
 ## Drawing the boundaries
 
-At first sight, it seems easy to define which tickets exactly we need to test in the current round. You might say 'All the tickets which have `Ready for testing` status' and you wouldn't be right. You should know that one of the values in '[Agile Manifesto](http://agilemanifesto.org/)' is “Individuals and interactions over processes and tools”. That means that the rules may be violated and some tickets may fall out of the workflow because of some immediate needs. As a result, every round we may have some exceptions among the ready for testing tickets for some reasons. And moreover, some tickets can be moved from one status to another, be added to the round, or be removed from it. As a result, there is no way to create some magic Jira filter that will show such and only such tickets which should be tested. After all, when the round comes to an end, many if not all tickets are moved out of `Ready for testing` status. But despite that, we need a way to see the complete scope of tasks of the current round.
+At first sight, it seems easy to define which tickets exactly we need to test in the current round. You might say 'All the tickets which have `Ready for testing` status' and you wouldn't be right. You should know that one of the values in '[Agile Manifesto](http://agilemanifesto.org/)' is "Individuals and interactions over processes and tools". That means that the rules may be violated and some tickets may fall out of the workflow because of some immediate needs. As a result, every round we may have some exceptions among the ready for testing tickets for some reasons. And moreover, some tickets can be moved from one status to another, be added to the round, or be removed from it. As a result, there is no way to create some magic Jira filter that will show such and only such tickets which should be tested. After all, when the round comes to an end, many if not all tickets are moved out of `Ready for testing` status. But despite that, we need a way to see the complete scope of tasks of the current round.
 
 ### Scope of the testing round
 
 To make the scope of the round immutable and persistent we need a way to make a set of tickets in Jira. The simplest (and the wrong) way is to add a unique label to all the round tickets. It seems to be an easy task to assign a label to tickets using Jira's bulk operation and then filter tickets by this label. But this easiness is the weak side of this way.
 
-Have you ever removed all the labels from a ticket in trying to add a new one, especially when using a bulk operation? Often people don't even realize that they have removed some labels accidentally. So the best way we found is to link tickets to the round ticket by a particular type of link. But it will be even better to link them to a “scope holder” sub-task of the round ticket. That will prevent mixing of the links to the scope tickets with other links which the round ticket can have, e.g., links to the previous/next round ticket.
+Have you ever removed all the labels from a ticket in trying to add a new one, especially when using a bulk operation? Often people don't even realize that they have removed some labels accidentally. So the best way we found is to link tickets to the round ticket by a particular type of link. But it will be even better to link them to a "scope holder" sub-task of the round ticket. That will prevent mixing of the links to the scope tickets with other links which the round ticket can have, e.g., links to the previous/next round ticket.
 
-JQL allows selecting tickets which are linked to the specified ticket using linkedIssues() function, so we can use a link with a particular type to a particular ticket as a search criterion. We are using “contains” -> “is included into” link type. Based on this criterion, we build the filter for the scope as well as filters for any required subsets of the scope e.g. a sub-scope defined by the platform. All these filters form the second section of the testing round template – `Scope` section.
+JQL allows selecting tickets which are linked to the specified ticket using linkedIssues() function, so we can use a link with a particular type to a particular ticket as a search criterion. We are using "contains" -> "is included into" link type. Based on this criterion, we build the filter for the scope as well as filters for any required subsets of the scope e.g. a sub-scope defined by the platform. All these filters form the second section of the testing round template – `Scope` section.
 
 ## How to parallelize work
 
@@ -110,7 +110,7 @@ These filters form the third section of the testing round template – `Status` 
 
 So, we have just created a template for a testing round with all needed sections and sub-tasks. It seems quite logical that the next step should be to start using this template in the real work and see how our practices allow us to control the testing in such flexible and fast-changing environment as the Agile software development. Are you interested in how to do that? Great! Let's read our next article which will describe the whole QA process and procedures we are using during testing. And even more, we're going to do the following:
 
-- tell you what “blocked” tickets are and how we can process them flexibly;
+- tell you what "blocked" tickets are and how we can process them flexibly;
 - give you a step-by-step instruction for implementing the process;
 - and share some more tips and tricks.
 

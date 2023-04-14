@@ -45,9 +45,9 @@ In order to use Allure with Gradle in your project you will need to add several 
 
 You are going to need to add Allure plugin into plugins section of your build.gradle file as well:
 
-- id “io.qameta.allure” version “{needed version}”
+- id "io.qameta.allure" version "{needed version}"
 
-![](/static/img/2023/02/1.png)This will add “allureServe” and “allureReport” to your gradle verification tasks.
+![](/static/img/2023/02/1.png)This will add "allureServe" and "allureReport" to your gradle verification tasks.
 
 ![](/static/img/2023/02/2.png)After building the project and downloading all the files from dependencies you can start implementing Allure to your project.
 
@@ -84,7 +84,7 @@ For Maven it is a pretty straightforward process as well. You are going to need 
  <testFailureIgnore>false</testFailureIgnore>
  <argLine>
 
-javaagent:”${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar”
+javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
  </argLine>
  <properties>
  <property>
@@ -139,37 +139,37 @@ To keep things simple, I won't be creating a separate class for the search resul
 
 ## Generating report
 
-Once everything is set up, we can generate the first Allure report by running our tests for the first time. This will create folders in the build directory of our project where the results of the test runs will be recorded. Allure can then use these results to generate a report. To generate an Allure report, run either “./gradlew allureServe” or select the “allureServe” option in your Gradle tasks.
+Once everything is set up, we can generate the first Allure report by running our tests for the first time. This will create folders in the build directory of our project where the results of the test runs will be recorded. Allure can then use these results to generate a report. To generate an Allure report, run either "./gradlew allureServe" or select the "allureServe" option in your Gradle tasks.
 
-Running “allureServe” will launch the Allure web service on your local machine and open an HTML page in your browser. This page will provide an overview of the test run.
+Running "allureServe" will launch the Allure web service on your local machine and open an HTML page in your browser. This page will provide an overview of the test run.
 
-![](/static/img/2023/02/5-1024x515.png)The overview page displays various elements showcasing the results of your test run. The most important of these is the “Suites” block, which shows the test classes that were run. Additionally, there's a graphical representation of the quantity of tests above it. Clicking on a suite will allow you to see which tests were included and the steps they contained.
+![](/static/img/2023/02/5-1024x515.png)The overview page displays various elements showcasing the results of your test run. The most important of these is the "Suites" block, which shows the test classes that were run. Additionally, there's a graphical representation of the quantity of tests above it. Clicking on a suite will allow you to see which tests were included and the steps they contained.
 
-![](/static/img/2023/02/6-1024x519.png)In our example, there was only one test method. Allure automatically designates methods annotated with “@BeforeEach” and “@AfterEach” as “Set up” and “Tear down” steps, respectively. However, it doesn't display any steps within the test method itself.
+![](/static/img/2023/02/6-1024x519.png)In our example, there was only one test method. Allure automatically designates methods annotated with "@BeforeEach" and "@AfterEach" as "Set up" and "Tear down" steps, respectively. However, it doesn't display any steps within the test method itself.
 
 ## Customizing report
 
 One of the main features of Allure is its annotations, which allow users to customize the report to make it more readable. Currently, the report doesn't provide much information.
 
-To improve it, we can start by using the “@Owner('Owner's name and position')” annotation. We can annotate test classes with this annotation to indicate the owner of the tests.
+To improve it, we can start by using the "@Owner('Owner's name and position')" annotation. We can annotate test classes with this annotation to indicate the owner of the tests.
 
-![](/static/img/2023/02/7.png)After adding the “@Owner” annotation to our test classes, we need to rerun the tests and generate a new Allure report using “allureServe”. Once the new report is generated, we'll be able to see the owner section with the name included.
+![](/static/img/2023/02/7.png)After adding the "@Owner" annotation to our test classes, we need to rerun the tests and generate a new Allure report using "allureServe". Once the new report is generated, we'll be able to see the owner section with the name included.
 
-![](/static/img/2023/02/8-1024x517.png)By adding the “@Owner” annotation to our test classes, anyone who views the report will know who to contact if there are any issues with the tests.
+![](/static/img/2023/02/8-1024x517.png)By adding the "@Owner" annotation to our test classes, anyone who views the report will know who to contact if there are any issues with the tests.
 
-Next, we can improve the report even further by using the “@DisplayName('Test name')” annotation. We can add this annotation to each test class and test method to provide a clear, descriptive name for each suite and method in the report.
+Next, we can improve the report even further by using the "@DisplayName('Test name')" annotation. We can add this annotation to each test class and test method to provide a clear, descriptive name for each suite and method in the report.
 
 ![](/static/img/2023/02/9.png)We need to generate the report one more time.
 
-![](/static/img/2023/02/10-1024x516.png)By adding the “@DisplayName” and “@Owner” annotations to our test classes and test methods, the report has become more readable for non-technical stakeholders such as managers.
+![](/static/img/2023/02/10-1024x516.png)By adding the "@DisplayName" and "@Owner" annotations to our test classes and test methods, the report has become more readable for non-technical stakeholders such as managers.
 
-In some cases, it's important to provide a description of how a test works and what it does. We can use the “@Description('description')” annotation to achieve this. This annotation can be added to every test method in a suite, just like “@DisplayName”.
+In some cases, it's important to provide a description of how a test works and what it does. We can use the "@Description('description')" annotation to achieve this. This annotation can be added to every test method in a suite, just like "@DisplayName".
 
 ![](/static/img/2023/02/11-1024x592.png)This will show the description on the allures page of the test case.
 
-![](/static/img/2023/02/12-1024x515.png)To make the Allure report even more informative, we can add the “@Step('step description')” annotation to each method in our page object. This allows any exceptions that occur during the test run to be displayed in the corresponding step.
+![](/static/img/2023/02/12-1024x515.png)To make the Allure report even more informative, we can add the "@Step('step description')" annotation to each method in our page object. This allows any exceptions that occur during the test run to be displayed in the corresponding step.
 
-To implement this, we can return to the GooglePage class and add the “@Step” annotation with a descriptive text to each method.
+To implement this, we can return to the GooglePage class and add the "@Step" annotation with a descriptive text to each method.
 
 ![](/static/img/2023/02/13-1024x836.png)Now in the report we can see that our steps are displayed.
 
@@ -177,22 +177,22 @@ To implement this, we can return to the GooglePage class and add the “@Step”
 
 ![](/static/img/2023/02/15.png)Allure also provides the duration of each test method, which can help in optimizing test performance.
 
-If you do not wish to use the page object model in your framework and want to interact with WebDriver directly, you can use the static method “step()” provided by Allure. This method allows you to define a step with a name and pass the interaction with the driver as a lambda through the ThrowableRunnableVoid (for interactions not returning any value) or ThrowableRunnable<T> (for interactions returning something) functional interfaces as parameters. The resulting steps will be included in the report, making it more informative.
+If you do not wish to use the page object model in your framework and want to interact with WebDriver directly, you can use the static method "step()" provided by Allure. This method allows you to define a step with a name and pass the interaction with the driver as a lambda through the ThrowableRunnableVoid (for interactions not returning any value) or ThrowableRunnable<T> (for interactions returning something) functional interfaces as parameters. The resulting steps will be included in the report, making it more informative.
 
 ![](/static/img/2023/02/16-1024x848.png)![](/static/img/2023/02/17-1024x515.png)Even with this little amount of customization our report already looks quite informative and easy to read and understand. Now we can add a level of severity to our tests. To add a level of severity to our tests, we can use the @Severity() annotation, which allows us to specify the level of severity for each test. The severity level can be chosen from the SeverityLevel enum.
 
-![](/static/img/2023/02/18-1024x562.png)This will change the severity level in the report. Note that by default severity level is set to “Normal”.
+![](/static/img/2023/02/18-1024x562.png)This will change the severity level in the report. Note that by default severity level is set to "Normal".
 
 ![](/static/img/2023/02/19-1024x517.png)Now let's see what a failed test is going to look like. Let's change our isSearchedTextInHeader method to expect false instead of true.
 
 ![](/static/img/2023/02/20-1024x519.png)Now we can see we have failed tests in our run. Let's see what information we have inside.
 
-![](/static/img/2023/02/21-1024x515.png)The Allure report displays the number of failed tests in our suite, identifies the step where an exception occurred, and presents a relevant part of the stack trace. Furthermore, Allure distinguishes between failed and broken tests. We implemented a code block that includes a 300-millisecond wait for the search button to become clickable in both tests. If we comment out this step in one of the tests, the driver may be too quick to click the button, resulting in an “element not interactable” exception. Allure recognizes this type of error and marks the test as broken, indicating that it's most likely a test engineering mistake rather than a bug.
+![](/static/img/2023/02/21-1024x515.png)The Allure report displays the number of failed tests in our suite, identifies the step where an exception occurred, and presents a relevant part of the stack trace. Furthermore, Allure distinguishes between failed and broken tests. We implemented a code block that includes a 300-millisecond wait for the search button to become clickable in both tests. If we comment out this step in one of the tests, the driver may be too quick to click the button, resulting in an "element not interactable" exception. Allure recognizes this type of error and marks the test as broken, indicating that it's most likely a test engineering mistake rather than a bug.
 
 ![](/static/img/2023/02/22-1024x513.png)When we encounter failed tests in our test runs, we often want to investigate the specific cause of the failure. One effective way to do this is to attach a screenshot of the moment the test failed. JUnit offers the TestWatcher interface, while TestNG provides the ITestListener interface, both of which allow developers to override the testFailed() and onTestFailure() methods. In these methods, a screenshot attachment can be made by adding the appropriate code. Here's an example:
 
 byte\[\] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-Allure.getLifecycle().addAttachment(“Screenshot”, “image/png”, “png”, screenshot );
+Allure.getLifecycle().addAttachment("Screenshot", "image/png", "png", screenshot );
 
 Allure.getLifeCycle().addAttachment() accepts an array of bytes as one of the parameters.
 

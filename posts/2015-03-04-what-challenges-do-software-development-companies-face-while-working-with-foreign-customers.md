@@ -109,9 +109,9 @@ In 45% of companies the non-project relationships with customers are not maintai
 
 ### Intellectual property infringement
 
-One of the surveyed companies faced copyright infringement. They advise everyone to be extremely attentive to this issue and to explore all the possible nuances before the project start. In particular, they recommend everyone to make sure that the customer has all the necessary rights to the use of particular materials in the project (source code, graphics, text, etc.). Another recommendation is to state it in the contract that in case of any dispute the customer is liable for the use of this or that piece of content in the project. The Contractor should “mirror” this point in the contract as well – that is, to state that he will not use the materials he has no rights to use.
+One of the surveyed companies faced copyright infringement. They advise everyone to be extremely attentive to this issue and to explore all the possible nuances before the project start. In particular, they recommend everyone to make sure that the customer has all the necessary rights to the use of particular materials in the project (source code, graphics, text, etc.). Another recommendation is to state it in the contract that in case of any dispute the customer is liable for the use of this or that piece of content in the project. The Contractor should "mirror" this point in the contract as well – that is, to state that he will not use the materials he has no rights to use.
 
-You can read more about intellectual property (IP) issues [here](http://www.issart.com/blog/intellectual-property-issues-software-development/).
+You can read more about intellectual property (IP) issues [here](https://www.issart.com/blog/intellectual-property-issues-software-development/).
 
 ### Sanctions?
 

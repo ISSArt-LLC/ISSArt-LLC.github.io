@@ -10,7 +10,7 @@ categories:
     - 'Web Development'
 ---
 
-> **“WebRTC is new front in the long war for an open and unencumbered web.“**
+> **"WebRTC is new front in the long war for an open and unencumbered web."**
 > 
 >  Brendan Eich, Mozilla CTO
 

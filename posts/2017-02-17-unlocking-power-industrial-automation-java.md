@@ -23,7 +23,7 @@ Manufacturers have been drowning in environmental and production regulations com
 
 It's what organizations need to stay competitive. In the next five to ten years, there will be a sharp contrast between the businesses that use industrial automation, leveraged with big data solutions and next-generation technology, like IoT, and those that don't. More profit and larger market share will go to the company that can tap into the unlimited power of industrial automation.
 
-The ability to tap into the power of next-generation technology is exactly the problem most organizations will face. Every organization will be asking, “How do we unlock the massive potential value that exists in industrial automation and technology like IoT, machine learning, and big data?”
+The ability to tap into the power of next-generation technology is exactly the problem most organizations will face. Every organization will be asking, "How do we unlock the massive potential value that exists in industrial automation and technology like IoT, machine learning, and big data?"
 
 Being a [Top Enterprise Software Development Company](https://www.softwaredevelopmentcompany.co/2019/07/01/10-best-practices-for-developing-enterprise-software-applications/), we can say that organizations won't have problems finding technology that can meet their needs and business objectives. The technology will exist, and the potential for that technology will be much larger than what most companies can imagine.
 
@@ -37,9 +37,9 @@ Before we dive into why Java is best for industrial automation, it's beneficial 
 
 For example, manufacturers have access to ERPs that use advanced analytics to help decision makers create plans around various activities in the business. There are CRMs, programming solutions, and even GPS tracking alternatives.
 
-But the industry is heading towards a machine and an automation process that is much “smarter” by leveraging big data, advanced analytics, and the IoT. The goal is to create and connect embedded systems and smart production facilities to create a digital convergence between business, internal function and processes, and industry.
+But the industry is heading towards a machine and an automation process that is much "smarter" by leveraging big data, advanced analytics, and the IoT. The goal is to create and connect embedded systems and smart production facilities to create a digital convergence between business, internal function and processes, and industry.
 
-A “smart factory” would allow organizations to do some really interesting things. For example, a motorcycle-manufacturer might be able to gather data from the health of machines, the demand for their products, and their capacity to determine how fast an automated guided vehicle (AVG) should move.
+A "smart factory" would allow organizations to do some really interesting things. For example, a motorcycle-manufacturer might be able to gather data from the health of machines, the demand for their products, and their capacity to determine how fast an automated guided vehicle (AVG) should move.
 
 Most organizations are operating at this level, yet. A majority of them are only able to collect data from machines in isolation.
 

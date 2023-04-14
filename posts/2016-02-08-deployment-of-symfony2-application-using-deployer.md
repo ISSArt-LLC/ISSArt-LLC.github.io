@@ -92,7 +92,7 @@ task('mopa:bootstrap:font', function () {
 after('deploy:assetic:dump', 'mopa:bootstrap:font');
 ```
 
-Now when we run “php bin/dep deploy production” we'll see web/uploads in shared directory with symlink from every release. And after “deploy:assetic:dump” task will be completed, “mopa:bootstrap:font” task will be triggered.
+Now when we run "php bin/dep deploy production" we'll see web/uploads in shared directory with symlink from every release. And after "deploy:assetic:dump" task will be completed, "mopa:bootstrap:font" task will be triggered.
 
 For production environment, all database structure changes should be implemented as migration. If you want to perform database migrations during deployment process, just add the following code to deploy.php.
 
@@ -100,7 +100,7 @@ For production environment, all database structure changes should be implemented
 after('deploy:vendors', 'database:migrate');
 ```
 
-For test environment in some cases we need to clean database and fill it with data fixtures. Let's create task to do this job. Deployer can ask for confirmation to execute some actions. Let's make sure that rebuild database is needed. This task will be executed only for “test” server.
+For test environment in some cases we need to clean database and fill it with data fixtures. Let's create task to do this job. Deployer can ask for confirmation to execute some actions. Let's make sure that rebuild database is needed. This task will be executed only for "test" server.
 
 ```
 server('test', '127.0.0.1')
@@ -135,6 +135,6 @@ $ php bin/dep rollback testing
 
 **Get more examples and documentation [here](http://deployer.org/).**
 
-After the first time deployment process, you should configure your web server to serve your “web” directory inside “<deploy_path>/current” directory. If you have no permissions to configure your web server, simply create symlink from your document root to “<deploy_path>/current” directory.
+After the first time deployment process, you should configure your web server to serve your "web" directory inside "<deploy_path>/current" directory. If you have no permissions to configure your web server, simply create symlink from your document root to "<deploy_path>/current" directory.
 
 ***Happy Symfonying!***

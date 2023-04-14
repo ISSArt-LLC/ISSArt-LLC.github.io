@@ -45,7 +45,7 @@ Source: [Pew Research Internet Project](http://www.pewinternet.org/fact-sheets/s
 
 The graphics statistics from Pew Research above show amazing consistency of social media network use by almost all ages, all income ranges, education levels and gender. And here is one more great [resource](http://socialbooom.com/social-media-statistics/) with fresh social media stats.
 
-If you are a marketer at heart this might make you begin to salivate just thinking of the opportunity that awaits. However, if you are more of a “planner” who tries to find solutions for problems before they happen, this might make you very nervous.
+If you are a marketer at heart this might make you begin to salivate just thinking of the opportunity that awaits. However, if you are more of a "planner" who tries to find solutions for problems before they happen, this might make you very nervous.
 
 Why?
 
@@ -73,7 +73,7 @@ At [infoq.com](http://www.infoq.com/presentations/Evolution-of-Code-Design-at-Fa
 
 ## Core Architecture for Professional Social Network Website Development
 
-The architecture of a social networking website should offer scalability, performance, flexibility and security for visible “front end” operations and capabilities. It should also offer the user a seamless interface that is fast, responsive and able to provide a long list of capabilities.
+The architecture of a social networking website should offer scalability, performance, flexibility and security for visible "front end" operations and capabilities. It should also offer the user a seamless interface that is fast, responsive and able to provide a long list of capabilities.
 
 ![global frequency of computer languages mentioned on twitter in Professional Social Network Website Development ](/static/img/2014/12/global-frequency-of-computer-languages-mentioned-on-twitter.jpg)
 

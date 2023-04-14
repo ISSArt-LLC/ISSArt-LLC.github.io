@@ -9,7 +9,7 @@ categories:
     - General
 ---
 
-In our previous post we've covered the topic of [choosing the right outsourcing provider](http://www.issart.com/blog/outsourcing-software-development-choosing-right-provider/). Now, with that knowledge in mind, we can dive deeper into software development process itself.
+In our previous post we've covered the topic of [choosing the right outsourcing provider](https://www.issart.com/blog/outsourcing-software-development-choosing-right-provider/). Now, with that knowledge in mind, we can dive deeper into software development process itself.
 
 As an experienced provider featured among [Eastern Europe Software Development Companies](https://www.softwaredevelopmentcompany.co/software-development-companies-eastern-europe/), we are happy to provide you with a brief overview of software development methodologies and cover the common software development process stages together with the challenges each of them can bring to you.
 
@@ -24,8 +24,8 @@ MethodDescriptionWhen to Use ItPrimary Modeling Artifacts
 | Agile Data (AD) | A partial agile method which focuses on techniques which support evolutionary (iterative and incremental) database development. | Tailor the AD philosophies and techniques into other evolutionary processes. | Agile data models |
 |---|---|---|---|
 | Agile Model Driven Development (AMDD) | A partial, practices-based method which describes techniques for effective modeling and documentation of systems. | Tailor the AM principles and practices into other agile or near-agile processes. | Apply the right artifact for the situation at hand. |
-| Code and Fix | A typically ineffective approach to development, usually followed by unskilled or poorly skilled developers, where they simply write code without putting much thought into it. Also called “hacking” or “immature development”. | For throw-away prototypes. | Source code |
-| Data-Driven Approach | This is a generic category of data-driven methods popularized in the 1970s and 1980s with the emergence of structured methods. This approach is typical rigorous and serial.   For a humorous look, read The Glacial Methodology | Development of a data warehouse, although a usage-centered approach is still preferable.   Development of a simple “CRUD” (Create Read Update Delete) business application. | Conceptual data model   Logical data model   Deployment architecture   Physical data model |
+| Code and Fix | A typically ineffective approach to development, usually followed by unskilled or poorly skilled developers, where they simply write code without putting much thought into it. Also called "hacking" or "immature development". | For throw-away prototypes. | Source code |
+| Data-Driven Approach | This is a generic category of data-driven methods popularized in the 1970s and 1980s with the emergence of structured methods. This approach is typical rigorous and serial.   For a humorous look, read The Glacial Methodology | Development of a data warehouse, although a usage-centered approach is still preferable.   Development of a simple "CRUD" (Create Read Update Delete) business application. | Conceptual data model   Logical data model   Deployment architecture   Physical data model |
 | Dynamic System Development Method (DSDM) | This is an agile method that has received ISO 9001 certification. In many ways it is a formalization of the Rapid Application Development (RAD) methods of the 1980s. | Development of a user interface intensive system.   Complex business application. | Functional prototype   Design prototype |
 | Enterprise Unified Process (EUP) | A rigorous, multi-phased software process that includes development, operation, and retirement of software-based systems. Development efforts are iterative and incremental, better yet agile and ideally disciplined agile. It includes a multi-system view that includes enterprise architecture, reuse management, portfolio management, and people management activities. | Need to manage a portfolio of projects, including but not limited teams following the DAD.   You have been successful at several DAD projects and wish to now take the full system lifecycle into account. | Enterprise business model   Enterprise domain architecture model   Enterprise technical architecture model   Project-level artifacts |
 | Extreme Programming (XP) | An agile development method that focuses on the critical activities required to build software. | Small, co-located project teams (4-10 people).   Requirements are uncertain.   Good relationship (potentially) exists with project stakeholders. | User stories   Architectural metaphor/strategy   Class responsibility collaborator (CRC) cards |
@@ -45,7 +45,7 @@ Now let's review the common stages of software development process and highlight
 
 ### Pre-project stage
 
-Needless to say, it is always unpleasant to find out that you and Provider misunderstood each other after the contract was signed and the work began. To avoid such “surprises”, be sure to negotiate the following important points beforehand:
+Needless to say, it is always unpleasant to find out that you and Provider misunderstood each other after the contract was signed and the work began. To avoid such "surprises", be sure to negotiate the following important points beforehand:
 
 #### 1) The project concept and scope
 
@@ -69,7 +69,7 @@ Ask your lawyer for help to review the contract if needed.
 
 #### 1) Project Analytics and Specification creation
 
-As mentioned in one of our [previous articles](http://www.issart.com/blog/outsourcing-software-development-choosing-right-provider/), project analytics and specification creation enable reducing development costs and describing the requirements as accurately as possible. This is aimed to ensure that the developers clearly understand the goal and final results.
+As mentioned in one of our [previous articles](https://www.issart.com/blog/outsourcing-software-development-choosing-right-provider/), project analytics and specification creation enable reducing development costs and describing the requirements as accurately as possible. This is aimed to ensure that the developers clearly understand the goal and final results.
 
 Technical specification creation may consist of the following artifacts:
 
@@ -85,7 +85,7 @@ The list of artifacts for each project is defined individually depending on the 
 
 At this step the high-level system design is normally created. In addition, a prototype of the project or of some part of it can be created. Your task here is to spend as much time as possible to test this prototype. The earlier non-conformances are discovered the cheaper the corrections will be.
 
-Also, it is important to think about the potential of you future system. If it has a potential to become [highload](http://www.issart.com/blog/highload-java-application-development/) with time, it should be designed in a way that would support the increased volume of requests and computations.
+Also, it is important to think about the potential of you future system. If it has a potential to become [highload](https://www.issart.com/blog/highload-java-application-development/) with time, it should be designed in a way that would support the increased volume of requests and computations.
 
 Some Providers make a separate estimate for this activity, others include it into the development estimate. If you don't see this activity in the project estimate, ask Provider whether it is included in it. The estimate should include at least minimum time for architecture design.
 
@@ -93,7 +93,7 @@ Some Providers make a separate estimate for this activity, others include it int
 
 If you don't have in-house designer, you will have to outsource this part of work to a third-party specialist/company. When doing so, make sure the designer is not going to use other designers' works. If he is going to purchase images, ask him to show you the payment documents. If the designer uses free images, make sure their usage does not violate ownership rights.
 
-You can read more on this subject in one of our [article about IP issues](http://www.issart.com/blog/intellectual-property-issues-software-development/).
+You can read more on this subject in one of our [article about IP issues](https://www.issart.com/blog/intellectual-property-issues-software-development/).
 
 #### 4) Development
 

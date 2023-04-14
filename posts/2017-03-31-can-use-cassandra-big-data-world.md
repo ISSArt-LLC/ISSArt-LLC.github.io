@@ -22,7 +22,7 @@ This article covers the main features of Cassandra DB with respect to usage as a
 
 ## Cassandra data model
 
-Basically, you can treat Cassandra as “key-value” which means it was originally designed to effectively support a certain type of operations: value insertion and retrieval of value by its key. Cassandra 2.x and 3.x have slightly different data models, and we will consider 3.x here.
+Basically, you can treat Cassandra as "key-value" which means it was originally designed to effectively support a certain type of operations: value insertion and retrieval of value by its key. Cassandra 2.x and 3.x have slightly different data models, and we will consider 3.x here.
 
 Although conceptually it is still key-value storage, there are some tricks here. Internally, table is a map of partitions indexed by partition key, and the partition itself is a map of ordered rows indexed by clustering. To simplify, you may think about this structure as Map<byte\[\], SortedMap<Clustering, Row>>.
 
@@ -83,7 +83,7 @@ Cassandra provides tunable consistency for read and write requests [independentl
 
 Backing to the IoT, users do not always need the latest sensor value. Sometimes they're fine with the value measured a second before. So we really don't need to return the record after all replicas have responded.
 
-Another case is simple key-value storage. You could also populate all nodes with exactly the same data beforehand, and using consistency level “ONE” could be the reasonable.
+Another case is simple key-value storage. You could also populate all nodes with exactly the same data beforehand, and using consistency level "ONE" could be the reasonable.
 
 ## Cassandra in the high-level big data system architecture
 

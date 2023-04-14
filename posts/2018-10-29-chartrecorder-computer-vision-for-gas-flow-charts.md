@@ -41,7 +41,7 @@ Note that the same concentric line has different values for different axes.
 
 The first task to solve is to separate trace pixels and pixels belonging to the blank area. This blank area contains two dominant colors: white and green. In theory, knowing this we could use simple thresholding to detect these two colors. But in practice this approach drops pixels on the edge between the grid and the blank paper. This happens because boundary pixels aren't strictly white or green – they are somewhere between.
 
-To deal with it, a linear model is used. To build such model, we need an area where no trace appears. Such area is the outer ring of the chart, named “Time area” on the image.
+To deal with it, a linear model is used. To build such model, we need an area where no trace appears. Such area is the outer ring of the chart, named "Time area" on the image.
 [![](https://issart.com/blog/wp-content/uploads/2018/10/03_areas.png)](https://issart.com/blog/wp-content/uploads/2018/10/03_areas.png)
 
 We take histograms for red-green, green-blue and blue-red correspondence and then build linear models for each. After that we evaluate the residual threshold for every pair using triple standard deviation.
@@ -56,7 +56,7 @@ The next step is to determine what trace every trace pixel belongs to. This is d
 
 To improve the result, we build the histogram using pixels whose bottom-right neighbours have similar color.
 
-Since we need the hue difference between pixels, all pixels with similar color should have a similar hue. This is not true for red pixels because they have hue values near both 0 and 180. To tackle this issue, we roll hue values to shift the significant part of the hue histogram to the center. The shift value is found as a minima of the convolution between the hue histogram and the kernel shown below. The idea behind is to “penalize” cases when large histogram values are near 0 or 180.
+Since we need the hue difference between pixels, all pixels with similar color should have a similar hue. This is not true for red pixels because they have hue values near both 0 and 180. To tackle this issue, we roll hue values to shift the significant part of the hue histogram to the center. The shift value is found as a minima of the convolution between the hue histogram and the kernel shown below. The idea behind is to "penalize" cases when large histogram values are near 0 or 180.
 [![](https://issart.com/blog/wp-content/uploads/2018/10/06_hueshift.png)](https://issart.com/blog/wp-content/uploads/2018/10/06_hueshift.png)
 
 After the histogram is shifted, we find trace pixels whose neighbours have similar hue. This step makes blobs' edges on the h-s histogram sharper, because pixels near the trace edges are excluded.
@@ -144,7 +144,7 @@ Similar pixels are found in the next way:
           
             1. Group all range labels found on the image by the nearest (by angle) axis name label;
             2. Cyclically shift groups to handle combinations with a different starting group. This allows us to handle non-periodical axis sets like ABCABCAB. For every shift: 
-                - Form strings “…” for every group;
+                - Form strings "…" for every group;
                 - Form a similar string for every axis in the candidate template;
                 - Calculate string similarity for every pair group-axis;
                 - Get mean similarity through all pairs;
@@ -196,7 +196,7 @@ Similar pixels are found in the next way:
           
             ### Improving envelope
           
-            Next, we improve the obtained min-max envelope. Initially, all bins are uniformly distributed. Sometimes thin point “columns” appear on the edge between the bins, producing two bins instead of one. Simple movement of all bins won't help us, because having one “column” aligned, we might get another one on an edge. Below is an example of two peaks and the envelope with step 2.
+            Next, we improve the obtained min-max envelope. Initially, all bins are uniformly distributed. Sometimes thin point "columns" appear on the edge between the bins, producing two bins instead of one. Simple movement of all bins won't help us, because having one "column" aligned, we might get another one on an edge. Below is an example of two peaks and the envelope with step 2.
             [![](https://issart.com/blog/wp-content/uploads/2018/10/26_envunif.png)](https://issart.com/blog/wp-content/uploads/2018/10/26_envunif.png)
           
             To solve this issue, we improve the position of the bins by means of the next steps:
@@ -205,7 +205,7 @@ Similar pixels are found in the next way:
             1. Generate 10 envelopes for different bin offsets;
             2. Get max-to-min differences for each one;
             3. Apply three-item sliding mean;
-            4. Having 10xN matrix and treating it as cost, we use forward-backward algorithm to obtain the sequence of indices (“path”) that minimizes the total area of the envelope.
+            4. Having 10xN matrix and treating it as cost, we use forward-backward algorithm to obtain the sequence of indices ("path") that minimizes the total area of the envelope.
           
             After these steps, we get the envelope with a smaller area than the initial one:
             [![](https://issart.com/blog/wp-content/uploads/2018/10/27_envimpr.png)](https://issart.com/blog/wp-content/uploads/2018/10/27_envimpr.png)
@@ -218,7 +218,7 @@ Similar pixels are found in the next way:
             Applying the min-max envelope gives us an inadequate result:
             [![](https://issart.com/blog/wp-content/uploads/2018/10/29_outlbound.png)](https://issart.com/blog/wp-content/uploads/2018/10/29_outlbound.png)
           
-            To fix this, we split high blocks into vertical “chunks” with a limited height. Now for every bin more than one chunk can exist. For example, here are three such cases:
+            To fix this, we split high blocks into vertical "chunks" with a limited height. Now for every bin more than one chunk can exist. For example, here are three such cases:
             [![](https://issart.com/blog/wp-content/uploads/2018/10/30_outlchunks.png)](https://issart.com/blog/wp-content/uploads/2018/10/30_outlchunks.png)
           
             After that we find optimal indices of chunks for every vertical block. We use forward-backward algorithm with a vertical distance between the neighbouring chunks as cost function. This gives us a sequence of chunks covering inlier points.
@@ -244,6 +244,6 @@ Similar pixels are found in the next way:
           
             ## Conclusion
           
-            The algorithm described above successfully handles a wide range of input data from thin lines to dense “hatching”. The produced data allows us to calculate the gas flow characteristics without any human interaction, increasing the robustness of the whole chart handling process.
+            The algorithm described above successfully handles a wide range of input data from thin lines to dense "hatching". The produced data allows us to calculate the gas flow characteristics without any human interaction, increasing the robustness of the whole chart handling process.
           
             ***P.S. By the way, our blog got featured in the [Top Software Development Blogs](https://blog.feedspot.com/software_development_blogs/) list!***

@@ -23,7 +23,7 @@ The 21st-century has been appropriately named the integration century. Soon, eve
 
 Right now, certain organizations like CPG manufacturers are facing the most pressure to integrate their systems. No other industry is experiencing the shrinking operating margins, tighter regulations, and the demand for better data granularity like the CPG manufacturing industry.
 
-The only solution to this growing problem is through better systems and better data, which can be achieved through better systems integration. With better integration, we can create better processes, make better decisions, and create an entire [autonomous industry](http://www.issart.com/blog/need-know-industry-4-0/).
+The only solution to this growing problem is through better systems and better data, which can be achieved through better systems integration. With better integration, we can create better processes, make better decisions, and create an entire [autonomous industry](https://www.issart.com/blog/need-know-industry-4-0/).
 
 In this article, we're going to discuss a few integration processes, make the case for systems integration and why you should adopt it sooner rather than later, and look at some tips to improve your ability to integrate your systems.
 

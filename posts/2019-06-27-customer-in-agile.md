@@ -15,7 +15,7 @@ To make Agile work for your goals is the mutual task for a prepared customer and
 
 ## Agile
 
-Agile software development (Agile) is an approach for software development, based on the iterative and incremental product delivery, adaptability to the changing environment. It is a set of values and principles. Experienced IT professionals came up with 4 values and 12 principles and collected them into “Agile Manifesto”.
+Agile software development (Agile) is an approach for software development, based on the iterative and incremental product delivery, adaptability to the changing environment. It is a set of values and principles. Experienced IT professionals came up with 4 values and 12 principles and collected them into "Agile Manifesto".
 
 Here are the Agile values:
 
@@ -33,7 +33,7 @@ The key Agile feature is the work on trust. The customer and the team work toget
 
 An example from our Agile experience:
 
-*One of our European customers asked us to adopt a rule of “Common sense” without pining ourselves down to detailed process regulations and product requirements. It is a wise decision to delegate detailed solutions to the team, avoid the micromanagement and save time for business development. As a result, that solution saves our customer's time and the team's time and budget.*
+*One of our European customers asked us to adopt a rule of "Common sense" without pining ourselves down to detailed process regulations and product requirements. It is a wise decision to delegate detailed solutions to the team, avoid the micromanagement and save time for business development. As a result, that solution saves our customer's time and the team's time and budget.*
 
 Trust can't appear instantly. However, if you begin to trust the team to take a part of decisions, you can prove it reliable and trust it more.
 

@@ -78,7 +78,7 @@ One of them was forced to deal with the code conflict. Guess who:
 
 ![](/static/img/2017/03/scheme_7.png)
 
-It is no more a garden house – rather, it is a “pool house”. It is not finished yet. And for some awkward reason, the client asks the team to deliver whatever is done so far.
+It is no more a garden house – rather, it is a "pool house". It is not finished yet. And for some awkward reason, the client asks the team to deliver whatever is done so far.
 
 ![](/static/img/2017/02/8.png)
 
@@ -135,9 +135,9 @@ Let me show you some consequences:
 
 Keeping version control pattern in mind, we use the next kinds of branches in our projects (from the toughest policy to the softest one):
 
-1. “release” (for production and hotfixes)
-2. “testing” (for release testing)
-3. “develop” (for the complete features)
+1. "release" (for production and hotfixes)
+2. "testing" (for release testing)
+3. "develop" (for the complete features)
 4. Feature branches (for development)
 
 ##### Feature branches
@@ -148,34 +148,34 @@ The softest kind of a branch. Do whatever you want here as long as the **code ca
 
 Every feature branch is created to develop a separate application feature. By **feature** I mean a minimal chunk of code which brings some business value. **Only one feature can be developed in a feature branch**. So, you cannot create a branch to develop feature A, and suddenly switch to feature B without creating a new branch. It is a part of branch policy.
 
-Sometimes features depend on each other, and you badly need to have the code base of another feature branch to carry on. In this case, you can use that branch as a base branch for yours, and claim the policy that only these two features are allowed to be incomplete. In future, once the base feature is done, its branch gets merged to “develop”, and “develop” naturally becomes a base branch for the dependent one, and the development goes on as usual. If, for some reason, the dependent feature gets done faster than the base one, you can merge this code to base branch and delete the dependent branch. This way, two features become one bigger feature, and you should display it somehow in the task tracking system. We usually simply post a comment in the base feature to move the dependent one along the workflow once it is done, and it is enough. Alternatively, you can close the dependent feature as “Incomplete” and copy its description to the base one.
+Sometimes features depend on each other, and you badly need to have the code base of another feature branch to carry on. In this case, you can use that branch as a base branch for yours, and claim the policy that only these two features are allowed to be incomplete. In future, once the base feature is done, its branch gets merged to "develop", and "develop" naturally becomes a base branch for the dependent one, and the development goes on as usual. If, for some reason, the dependent feature gets done faster than the base one, you can merge this code to base branch and delete the dependent branch. This way, two features become one bigger feature, and you should display it somehow in the task tracking system. We usually simply post a comment in the base feature to move the dependent one along the workflow once it is done, and it is enough. Alternatively, you can close the dependent feature as "Incomplete" and copy its description to the base one.
 
 You should claim some naming convention for your feature branches. We use the ticket number joined with a short task name in lowercase, such as: <tt>23001-add-german-locale</tt>.
 
-##### “develop” branch
+##### "develop" branch
 
 Still full of bugs, but **all features are done**. The purpose of this branch is to let you quickly react to a release request and immediately start release testing at any point of time. There should be no partial features such as a button that cannot be pressed or a form that cannot be submitted. They confuse users and reduce conversion.
 
-Since “develop” is higher than any feature branch, of course, code must be compilable and executable in “develop” branch as well.**Unit tests must succeed**, so a developer must run them before publishing his code to “develop”.
+Since "develop" is higher than any feature branch, of course, code must be compilable and executable in "develop" branch as well.**Unit tests must succeed**, so a developer must run them before publishing his code to "develop".
 
-Sometimes it makes sense to apply additional policies to “develop” branch, such as:
+Sometimes it makes sense to apply additional policies to "develop" branch, such as:
 
 - All automatic tests succeed (incl. integration tests).
 - All features are tested one by one.
 
 These additional policies can slightly improve software quality, but require significant effort to maintain, and feature delivery time gets longer. So they are applicable only to big enterprise projects where quality is the key and budget is unlimited.
 
-##### “testing” branch
+##### "testing" branch
 
-Once the release date approaches or the customer decides to start release testing, we merge “develop” to “testing” to tighten its policies even more. In “testing” branch, **no new features are allowed to be merged until the testing is finished**. Of course, before publishing code to testing, you must make sure that **all automatic tests succeed (incl. integration tests)**. Since “testing” is higher than “develop”, all “develop” policies should also be respected.
+Once the release date approaches or the customer decides to start release testing, we merge "develop" to "testing" to tighten its policies even more. In "testing" branch, **no new features are allowed to be merged until the testing is finished**. Of course, before publishing code to testing, you must make sure that **all automatic tests succeed (incl. integration tests)**. Since "testing" is higher than "develop", all "develop" policies should also be respected.
 
-If a tester reports a release bug, the fix branch gets created from the “testing” branch. Once the bug is fixed, the fix branch is published back to “testing”. If the fix is simple, you can skip branch creation and fix the bug as long as “testing” branch policies are met.
+If a tester reports a release bug, the fix branch gets created from the "testing" branch. Once the bug is fixed, the fix branch is published back to "testing". If the fix is simple, you can skip branch creation and fix the bug as long as "testing" branch policies are met.
 
-##### “release” branch
+##### "release" branch
 
 ![](/static/img/2017/02/release.jpg)
 
-Once the release is fully tested manually, and the tester confirms that the application is viable for productive usage, we merge “testing” branch to “release”. In addition to “testing” branch policies “release” has the next restrictions:
+Once the release is fully tested manually, and the tester confirms that the application is viable for productive usage, we merge "testing" branch to "release". In addition to "testing" branch policies "release" has the next restrictions:
 
 - All features are tested manually.
 - The application has no regressions (i.e. manual test plan succeeds).
@@ -193,7 +193,7 @@ Meanwhile, Eeyore was working on the pool in a different feature branch:
 
 ![](/static/img/2017/03/scheme_11.png)
 
-As soon as the pool is done and all unit tests succeed, Eeyore merges it to “develop” branch:
+As soon as the pool is done and all unit tests succeed, Eeyore merges it to "develop" branch:
 
 ![](/static/img/2017/03/scheme_12.png)
 
@@ -201,15 +201,15 @@ And delete the branch because it is no longer needed:
 
 ![](/static/img/2017/03/scheme_13.png)
 
-Junior can keep on building his garden house as long as he needs. At the same time, “develop” branch is ready for release. Will the client be satisfied? Of course!
+Junior can keep on building his garden house as long as he needs. At the same time, "develop" branch is ready for release. Will the client be satisfied? Of course!
 
 ![](/static/img/2017/03/Illustration-of-house-and-satisfied-man.png)
 
-Before release delivery, we must test it carefully. To start testing, Eeyore and Junior make sure that integration tests succeed in “develop” branch. After that, they merge it to “testing” and deploy “testing” branch on the test server.
+Before release delivery, we must test it carefully. To start testing, Eeyore and Junior make sure that integration tests succeed in "develop" branch. After that, they merge it to "testing" and deploy "testing" branch on the test server.
 
 ![](/static/img/2017/02/15.png)
 
-Please note that testing doesn't block further development. Junior catches up the pool feature very early and resolves the conflicts slowly and carefully. Once the garden house is ready, Junior is free to merge it to “develop” – it won't interrupt release testing because the branch policy doesn't allow Junior to merge his code to “testing”.
+Please note that testing doesn't block further development. Junior catches up the pool feature very early and resolves the conflicts slowly and carefully. Once the garden house is ready, Junior is free to merge it to "develop" – it won't interrupt release testing because the branch policy doesn't allow Junior to merge his code to "testing".
 
 ![](/static/img/2017/02/16.png)
 
@@ -217,7 +217,7 @@ Let me show you what happens if the tester finds a bug in the release.
 
 ![](/static/img/2017/02/17.png)
 
-Junior creates a new branch from “testing”:
+Junior creates a new branch from "testing":
 
 ![](/static/img/2017/02/18.png)
 
@@ -229,7 +229,7 @@ Junior gives incredible effort to fix the bug, while Eeyore is working on the fe
 
 ![](/static/img/2017/03/scheme_20.png)
 
-Once the bug is fixed and auto-tests succeed, Junior merges it to the “testing” branch and merges it down to “master” branch to share this achievement with the others:
+Once the bug is fixed and auto-tests succeed, Junior merges it to the "testing" branch and merges it down to "master" branch to share this achievement with the others:
 
 ![](/static/img/2017/03/scheme_21.png)
 
@@ -237,7 +237,7 @@ Next morning, Eeyore will catch it up in his feature branch:
 
 ![](/static/img/2017/03/scheme_22.png)
 
-Meanwhile, the tester confirms that the application is ready for the productive usage. Eeyore and Junior merge “testing” branch to “release” and deploy it on the production server:
+Meanwhile, the tester confirms that the application is ready for the productive usage. Eeyore and Junior merge "testing" branch to "release" and deploy it on the production server:
 
 ![](/static/img/2017/02/23.png)
 
@@ -245,7 +245,7 @@ At some point, the client may call and report a critical bug on production that 
 
 ![](/static/img/2017/02/24.png)
 
-In this case, we follow the same process and fix the bug in the “release” branch:
+In this case, we follow the same process and fix the bug in the "release" branch:
 
 ![](/static/img/2017/02/25.png)
 
@@ -257,23 +257,23 @@ The fix gets merged to all the branches successively:
 
 ![](/static/img/2017/02/meme.jpg)
 
-Git version control system has an awesome command available to the developers – cherry pick. It allows you to take a single commit and copy it to another branch. For example, provided a feature ready in “develop” branch, we can pull it to “testing” or “release” branch, commit by commit.
+Git version control system has an awesome command available to the developers – cherry pick. It allows you to take a single commit and copy it to another branch. For example, provided a feature ready in "develop" branch, we can pull it to "testing" or "release" branch, commit by commit.
 
 ![](/static/img/2017/02/27.png)
 
-Please note that one does not simply merge simply merge “develop” branch to “testing”, because in this case all the other features will get merged as well for no reason, and it will force the tester to start testing from scratch, so all current testing effort will be lost.
+Please note that one does not simply merge simply merge "develop" branch to "testing", because in this case all the other features will get merged as well for no reason, and it will force the tester to start testing from scratch, so all current testing effort will be lost.
 
 ![](/static/img/2017/02/28.png)
 
-So, we must cherry pick a single feature to the “testing” branch.
+So, we must cherry pick a single feature to the "testing" branch.
 
 ![](/static/img/2017/02/29.png)
 
-And now let me explain you the dark part of this process. Please note that every single cherry pick may (and probably will) result in code conflicts. Because “Board” implementation can be completely different, whether we should have “House” implemented or not.
+And now let me explain you the dark part of this process. Please note that every single cherry pick may (and probably will) result in code conflicts. Because "Board" implementation can be completely different, whether we should have "House" implemented or not.
 
 ![](/static/img/2017/02/30.png)
 
-And although we have “House” unmerged, we still need to retest the release, because “Board” may impact the other features unexpectedly.
+And although we have "House" unmerged, we still need to retest the release, because "Board" may impact the other features unexpectedly.
 
 So, cherry-pick is a very bad practice and you should avoid using it if possible. To avoid it, please coordinate the delivery plan with your clients in advance and explain them how certain business decisions might impact the development costs and schedule.
 

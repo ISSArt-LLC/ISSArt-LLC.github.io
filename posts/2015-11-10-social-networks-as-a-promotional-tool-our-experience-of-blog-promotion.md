@@ -12,13 +12,13 @@ categories:
 
 Needless to say, nowadays social media provides a great opportunity for every business to build relationship with the audience. By building presence on social platforms, you can get a chance to communicate with your potential customers directly, and if you manage to grab their attention, word of mouth won't be long in coming. The great thing is that electronic word of mouth spreads more rapidly and massively than traditional word of mouth.
 
-Of course, social media is not the only promotional channel. In one of our previous posts we've made a review of tools and techniques to [promote your product](http://www.issart.com/blog/how-to-promote-your-software-product/). By the way, if you want to have such a guide ready at hand – be sure to download our [software product promotion guide](https://issart.com/blog/useful-materials/promote-software-product-useful-tips-iss-art/).
+Of course, social media is not the only promotional channel. In one of our previous posts we've made a review of tools and techniques to [promote your product](https://www.issart.com/blog/how-to-promote-your-software-product/). By the way, if you want to have such a guide ready at hand – be sure to download our [software product promotion guide](https://issart.com/blog/useful-materials/promote-software-product-useful-tips-iss-art/).
 
 In this article we will focus on social media primarily – what resources are available today and how to use them in the most efficient way.
 
 **Social networks overview**
 
-Popular [social networks](http://www.issart.com/blog/intellectual-property-issues-software-development/) include well-known Facebook, Twitter, LinkedIn, Google Plus, YouTube. We've built presence in all of the ones listed above.
+Popular [social networks](https://www.issart.com/blog/intellectual-property-issues-software-development/) include well-known Facebook, Twitter, LinkedIn, Google Plus, YouTube. We've built presence in all of the ones listed above.
 
 In particular, to promote our blog content, we share our latest articles on our corporate pages. In addition to this, we utilize the potential of groups that our potential audience is likely to belong to. LinkedIn groups, as a rule, help us attract stable traffic and get new subscribers – [Global Software Development Collaboration](https://www.linkedin.com/grps/Global-Software-Development-Collaboration-1803698/about?), [IT/Software Development Outsourcing and Offshoring](https://www.linkedin.com/grps/IT-Software-Development-Outsourcing-Offshoring-28413/about?), [Lean Agile Software Development Community](https://www.linkedin.com/grps/Lean-Agile-Software-Development-Community-1024087/about?) to name a few.
 
@@ -40,13 +40,13 @@ Focus on your audience. What are they thinking of? What issues they face every d
 
 **Tell a story**
 
-Once you've come up with ideas of what might be useful to your audience, think of how you will represent this material to them. A simple list of tips might be not enough. People want the content to be interesting, entertaining and related to real life. So, a good idea would be to tell your audience what's happening “behind the scenes”, for example:
+Once you've come up with ideas of what might be useful to your audience, think of how you will represent this material to them. A simple list of tips might be not enough. People want the content to be interesting, entertaining and related to real life. So, a good idea would be to tell your audience what's happening "behind the scenes", for example:
 
 - how you've come up with your product vision (was it a series of brainstorming sessions, or did the idea just come to you suddenly);
 - what challenges you've faced and which of them have been completely unexpected;
 - what tools you have used, what you like/dislike about them;
 - and so on.
-    It's even better when it is combined with the visuals – like pics from the actual process of creating your product, prototypes compared to the final result (before and after), etc.**Engage your audience**Don't turn your postings into a monologue – encourage a dialogue instead! So, don't just drop links. In our publications, for example, we ask questions like “What solution do you have…?” and drive people to comment on our posts.
+    It's even better when it is combined with the visuals – like pics from the actual process of creating your product, prototypes compared to the final result (before and after), etc.**Engage your audience**Don't turn your postings into a monologue – encourage a dialogue instead! So, don't just drop links. In our publications, for example, we ask questions like "What solution do you have…?" and drive people to comment on our posts.
   
     [![2015-07-24_1457](/static/img/2015/11/2015-07-24_1457-300x88.png)](/static/img/2015/11/2015-07-24_1457.png)
   
@@ -63,7 +63,7 @@ Once you've come up with ideas of what might be useful to your audience, think o
   
     **Use URL shorteners**
   
-    Don't forget to use URL shorteners, such as [Bit.ly](https://bitly.com/a/bitlinks), [TinyURL](http://tinyurl.com/), and many others. First, they will help you get enough space for your message – for example, Twitter has a 140-character limit, and non-shortened links may “eat” most of the space. Second, URL shortening services provide detailed stats on the clicks a link receives, so this is a useful analytical tool.
+    Don't forget to use URL shorteners, such as [Bit.ly](https://bitly.com/a/bitlinks), [TinyURL](http://tinyurl.com/), and many others. First, they will help you get enough space for your message – for example, Twitter has a 140-character limit, and non-shortened links may "eat" most of the space. Second, URL shortening services provide detailed stats on the clicks a link receives, so this is a useful analytical tool.
   
     **Repost/retweet interesting content**
   

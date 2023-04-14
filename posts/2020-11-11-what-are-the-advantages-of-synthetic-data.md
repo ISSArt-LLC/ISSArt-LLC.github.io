@@ -10,7 +10,7 @@ categories:
     - 'Machine Learning'
 ---
 
-These days, everyone has heard of artificial intelligence (AI). But not everyone understands what goes into making an AI algorithm work properly. At a high level, AI (also known as machine learning), works by ingesting a large set of data called training data. Then, the AI uses an algorithm to sort through this data and discover trends. This algorithm can be a bit of a black box, and there are many variations of machine learning algorithms. But the important part to remember is that AI “trains” on a dataset. This dataset is called training data. After an AI is fully trained on a dataset, it can be applied to “test” or “application” data. That is where you will typically see AI in action.
+These days, everyone has heard of artificial intelligence (AI). But not everyone understands what goes into making an AI algorithm work properly. At a high level, AI (also known as machine learning), works by ingesting a large set of data called training data. Then, the AI uses an algorithm to sort through this data and discover trends. This algorithm can be a bit of a black box, and there are many variations of machine learning algorithms. But the important part to remember is that AI "trains" on a dataset. This dataset is called training data. After an AI is fully trained on a dataset, it can be applied to "test" or "application" data. That is where you will typically see AI in action.
 
 Of those three phases (the training data, algorithm, and test data), today we will focus on training data. Specifically, we will discuss how training data is collected today, introduce an alternative called synthetic data, and examine the several advantages of synthetic data.
 

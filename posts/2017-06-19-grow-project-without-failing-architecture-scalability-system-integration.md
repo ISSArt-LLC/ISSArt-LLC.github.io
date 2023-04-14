@@ -21,7 +21,7 @@ If you thought that my phrase about a napkin was a joke, it wasn't. Okay, it is 
 
 ## Project modularization
 
-Try using a napkin to put there the main system components. Usually they are defined in “natural” way. In our case, we had the data that should have passed several phases in its lifecycle. In that case “natural” way was to separate services responsible for different phases.
+Try using a napkin to put there the main system components. Usually they are defined in "natural" way. In our case, we had the data that should have passed several phases in its lifecycle. In that case "natural" way was to separate services responsible for different phases.
 
 *Shall we introduce software project scalability from the beginning?*
 
@@ -37,7 +37,7 @@ Summing up, here are main ideas.
 
 *First*, let the project architecture grow. Good architecture is the one where the final decision can be postponed. After making architectural decision, in order to change it you will spend significant resources.
 
-*Second*, try splitting the system into modules. Modularity will help to control your system. If you see any “natural” split, make use of it.
+*Second*, try splitting the system into modules. Modularity will help to control your system. If you see any "natural" split, make use of it.
 
 *Third*, say 'no' to preliminary optimization. If you don't have any performance problems, don't try to optimize. You don't know yet where the bottleneck is. Add scalability when you have problems and you have information where scalability is necessary.
 

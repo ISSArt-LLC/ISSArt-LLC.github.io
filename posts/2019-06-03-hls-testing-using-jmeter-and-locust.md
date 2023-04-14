@@ -42,7 +42,7 @@ Now our goal in this case is not only to implement the algorithm for testing HLS
 
 ![](https://issart.com/blog/wp-content/uploads/2019/05/word-image-2.png)
 
-More about this approach you can find in [this](https://www.blazemeter.com/blog/monitoring-ux-metrics-in-hls-load-testing-in-jmeter) article. However, we provide following script. In this script we use “[jp@gc – Dummy Sampler](https://jmeter-plugins.org/wiki/DummySampler/)” and “[jp@gc – Page Data Extractor](https://jmeter-plugins.org/wiki/PageDataExtractor/)” to obtain graphs of changes in all UX metrics over time. Also, for both approaches, you should add “Simple Data Writer” to collect statistics and build KPI graphs then. This script (with listeners) can be downloaded [here](https://gitlab.com/mbabilo/hlswithjmeterandlocust/blob/master/HLS.jmx).
+More about this approach you can find in [this](https://www.blazemeter.com/blog/monitoring-ux-metrics-in-hls-load-testing-in-jmeter) article. However, we provide following script. In this script we use "[jp@gc – Dummy Sampler](https://jmeter-plugins.org/wiki/DummySampler/)" and "[jp@gc – Page Data Extractor](https://jmeter-plugins.org/wiki/PageDataExtractor/)" to obtain graphs of changes in all UX metrics over time. Also, for both approaches, you should add "Simple Data Writer" to collect statistics and build KPI graphs then. This script (with listeners) can be downloaded [here](https://gitlab.com/mbabilo/hlswithjmeterandlocust/blob/master/HLS.jmx).
 
 [Locust](https://locust.io/) is an easy-to-use, distributed, load testing tool. It is intended to test web or other applications. Behavior of each test user is defined by you and the process is monitored from a web UI in real-time. This will help you identify bottlenecks in your code before letting real users in. However, there is a certain problem related to launch and monitoring Locust scripts, but we'll elaborate it at the end of the article. So, we have a tool that executes scripts written in Python. Let's look at the implementation of HLS testing with tracking user experience metrics and collecting simple KPI (all as in the previous example).
 
@@ -174,7 +174,7 @@ if (chunkListName != "null"):
  extinf = re.findall(r'#EXTINF:(.*),\n', response)
 ```
 
-This part is executed only under the condition that the list of chunks was found in the response of the first request i.e if (chunkListName != “null”). Now we will add the third request, it will be executed as many times as we receive parts in the request No. 2:
+This part is executed only under the condition that the list of chunks was found in the response of the first request i.e if (chunkListName != "null"). Now we will add the third request, it will be executed as many times as we receive parts in the request No. 2:
 
 ```
 while j < i:
@@ -292,9 +292,9 @@ os.makedirs('statistics')
 
 5\. Then we use the write_to_file function to create necessary files, having written in them the headings for the columns:
 
-write_to_file(“statistics//RPS.txt”, “w+”, “timeGetRequest, nowRPS\\n”)
+write_to_file("statistics//RPS.txt", "w+", "timeGetRequest, nowRPS\\n")
 
-write_to_file(“statistics//RTD.txt”, “w+”, “responseTime\\n”)
+write_to_file("statistics//RTD.txt", "w+", "responseTime\\n")
 
 6\. We write down the start time of the test, and declare a global counter for our requests:
 
@@ -318,7 +318,7 @@ getEndTime = time.time()
                 write_to_file("statistics//RTD.txt", "a", "%.2f\n" % (abs(response_time * 1000))) # open and written text to the end of file
 ```
 
-8\. Combining these parts, we will get files with statistics of interest in the “statistics” folder.
+8\. Combining these parts, we will get files with statistics of interest in the "statistics" folder.
 9\. For visualization in the form of graphs, we use separate simple scripts. So for request per second it will be:
 
 [pyplot_RPS.py](https://gitlab.com/mbabilo/hlswithjmeterandlocust/blob/master/pyplot_RPS.py):
@@ -393,7 +393,7 @@ plt.xlabel('Response Time')
 plt.savefig('graphs//RTD.png', dpi=80)
 ```
 
-These graphs will be saved as a picture in the “graphs” folder. Great, now we can repeat the launch and acquisition of base graphs and statistics of testing HLS with the help of Locust.
+These graphs will be saved as a picture in the "graphs" folder. Great, now we can repeat the launch and acquisition of base graphs and statistics of testing HLS with the help of Locust.
 
 10\. Now let's add UX metrics in our script, just like it was done in the JMeter script, then the [final version of locustfile.py](https://gitlab.com/mbabilo/hlswithjmeterandlocust/blob/master/locustfile.py) will be:
 
@@ -650,7 +650,7 @@ Locust no-web:
 
 ![](https://issart.com/blog/wp-content/uploads/2019/05/word-image-14.png)
 
-Perhaps in our case % of CPU utilization depends on the style and quality of the Python code, however, when using the “HTTPlocust” libraries for requests and “re” for searching by regexp, we see considerable CPU Utilizations even with small load without calculations and writing to files. In addition, most of the time only one processor core is involved. JMeter does not require increased attention to its code, uses both processor cores and consumes much less CPU resources.
+Perhaps in our case % of CPU utilization depends on the style and quality of the Python code, however, when using the "HTTPlocust" libraries for requests and "re" for searching by regexp, we see considerable CPU Utilizations even with small load without calculations and writing to files. In addition, most of the time only one processor core is involved. JMeter does not require increased attention to its code, uses both processor cores and consumes much less CPU resources.
 
 e) MEM utilization (5u, 5min)
 

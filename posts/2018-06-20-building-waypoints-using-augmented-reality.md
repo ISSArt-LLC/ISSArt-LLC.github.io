@@ -41,10 +41,10 @@ If we were talking about a [сartesian coordinate system](https://en.wikipedia.o
 **atan2 ( X, Y )**
 
 Where X equals:
-**sin(long2 – long1) \* cos(long2)**
+**sin(long2 – long1) * cos(long2)**
 
 And Y equals:
-**cos(lat1) \* sin(lat2) – sin(lat1) \* cos(lat2) \* cos(long2 – long1)π**
+**cos(lat1) * sin(lat2) – sin(lat1) * cos(lat2) * cos(long2 – long1)π**
 
 Another thing to consider is that for the matrix transformation, we will have to use [radians](https://en.wikipedia.org/wiki/Radian) instead of degrees as angle units. As the length of the entire circumference is equal to 2π radians (360º), one radian is equal to 180/π degrees. So, our plan is when we receive the array of waypoints from Google service, using the formulas explained above, place a 3D model (or any other object) in the position of the first waypoint relative to your location inside the AR world. Then we put the second waypoint marker relative to the first one and so on.
 

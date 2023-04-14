@@ -37,13 +37,13 @@ Let's give an example of some problems that GNN can solve:
 
 **Recurrent Graph Neural Network**
 
-Recurrent Graph Neural Network – it's the first designed GNN architecture introduced in the original GNN paper. Its main idea is connected with iterative update of the node “state” – the computed function value utilizing the information about node neighborhood states.
+Recurrent Graph Neural Network – it's the first designed GNN architecture introduced in the original GNN paper. Its main idea is connected with iterative update of the node "state" – the computed function value utilizing the information about node neighborhood states.
 
-![](/static/img/2022/07/2.png)An illustration of node state update based on the information in its neighbors. Figure from [“The Graph Neural Network Model”](https://ieeexplore.ieee.org/document/4700287)**Spatial Convolutional Network**
+![](/static/img/2022/07/2.png)An illustration of node state update based on the information in its neighbors. Figure from ["The Graph Neural Network Model"](https://ieeexplore.ieee.org/document/4700287)**Spatial Convolutional Network**
 
 The idea of convolution on a graph is almost similar as in image convolution. In case of working with image, we sum the neighboring pixels around a center pixel, specified by a filter with parameterized size and learnable weight. Spatial Convolutional Network adopts the same idea by aggregating the features of neighboring nodes into the center node.
 
-![](/static/img/2022/07/3.png)Left: Convolution on a regular graph such as an image. Right: Convolution on the arbitrary graph structure. Figure from “[A Comprehensive Survey on Graph Neural Networks](https://arxiv.org/abs/1901.00596)”#### **Real-world applications**
+![](/static/img/2022/07/3.png)Left: Convolution on a regular graph such as an image. Right: Convolution on the arbitrary graph structure. Figure from "[A Comprehensive Survey on Graph Neural Networks](https://arxiv.org/abs/1901.00596)"#### **Real-world applications**
 
 **Recommender systems**
 

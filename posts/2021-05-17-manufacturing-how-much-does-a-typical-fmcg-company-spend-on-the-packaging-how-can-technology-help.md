@@ -82,7 +82,7 @@ Through augmented reality (AR), consumers can use their phones in-store to see w
 
 Even though the consumer adoption of AR adoption is in its early phases, FMCG companies can try the technology, as it offers a lot of contextual evidence as to how the product packaging will look in the real world. In addition, this technology can save time, as companies will no longer need to set up and shoot product photos at different locations, for testing and for selling purposes.
 
-Speaking of teleporting, confectionary brand Kinder provides shoppers a unique virtual experience with their “Jump into Africa”. The 3D augmented reality portal took consumers to explore the African Savanna right in the middle of a supermarket. Once inside the portal, consumers were able to admire animated 3D safari animals alongside fun infographics.
+Speaking of teleporting, confectionary brand Kinder provides shoppers a unique virtual experience with their "Jump into Africa". The 3D augmented reality portal took consumers to explore the African Savanna right in the middle of a supermarket. Once inside the portal, consumers were able to admire animated 3D safari animals alongside fun infographics.
 
 #### Connectivity
 

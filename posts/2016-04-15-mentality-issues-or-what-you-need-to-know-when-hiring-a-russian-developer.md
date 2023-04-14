@@ -11,7 +11,7 @@ categories:
 
 It's been several years since the tendency to attract developers from Russia and countries alike to work on IT projects for European and American businessmen appeared. To be able to achieve success and get maximum profit from cooperation with Russian developers you need to have full understanding of Russian nature, or soul, as Russian people say.
 
-**What is a “Russian soul”?**
+**What is a "Russian soul"?**
 
 Where is it? And why does it differ from that of a European or American person? These questions will be answered further.
 What is important to know when you decide to hire a Russian employee? Should you be suspicious about anything? The answer is no.
@@ -45,7 +45,7 @@ The first and the foremost is their fear to speak. No, they are not afraid of yo
 
 The second reason may be their natural shyness which is a common thing for many people regardless their sex or nation.
 
-And the third thing is the chosen topics for communication. Thus, some people think that if you want to establish proper relations with a person, you've got to communicate on informal topics. That's a good thing, no doubt, but if you select “family” as a topic of such communication with a Russian person you would not evoke his desire to talk. Russian people do not talk much of their families; they don't show their children photos in desire to share their pride for their kids and family as other nations do. No, they prefer to hold this inside and discuss family matters only with their near and dear.
+And the third thing is the chosen topics for communication. Thus, some people think that if you want to establish proper relations with a person, you've got to communicate on informal topics. That's a good thing, no doubt, but if you select "family" as a topic of such communication with a Russian person you would not evoke his desire to talk. Russian people do not talk much of their families; they don't show their children photos in desire to share their pride for their kids and family as other nations do. No, they prefer to hold this inside and discuss family matters only with their near and dear.
 
 We can talk about Russian nature and weather, bad Russian roads and high expense of living but we do not feel enthusiastic about discussing our personal life or political leaders and their course of governing Russia.
 

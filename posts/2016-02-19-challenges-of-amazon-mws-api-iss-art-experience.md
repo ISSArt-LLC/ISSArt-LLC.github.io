@@ -39,7 +39,7 @@ Everything looks good and correct.
 Cons:
 When a new iteration is released, we will have to monitor in manual mode that all our changes are not overwritten.
 
-- *Use such option as “include-path” in composer.json .* But it is marked as DEPRECATED. As mentioned in the documentation:
+- *Use such option as "include-path" in composer.json .* But it is marked as DEPRECATED. As mentioned in the documentation:
 
 This is only present to support legacy projects, and all new code should preferably use autoloading. As such it is a deprecated practice, but the feature itself will not likely disappear from Composer.
 
@@ -54,8 +54,8 @@ We have to use the deprecated parameter composer.json, it doesn't look good.
 Amazon MWS API looks like Frankenstein! It's made up of different parts (modules with different working models).
 
 [![matrix-1013612_1280](/static/img/2016/02/matrix-1013612_1280-300x300.jpg)](/static/img/2016/02/matrix-1013612_1280.jpg)
-For example, “Section Orders API” works as “request-> response” model, where we get the requested information immediately.
-A “Section Reports API” works as “request-> queue-> response” model, where our request gets in line. Thus, to receive the requested data, we need to monitor its status in the queue.
+For example, "Section Orders API" works as "request-> response" model, where we get the requested information immediately.
+A "Section Reports API" works as "request-> queue-> response" model, where our request gets in line. Thus, to receive the requested data, we need to monitor its status in the queue.
 
 Such situation made us write our own wrappers over the SDK and we've written … We have created a bundle for Symfony to work with Amazon MWS.
 Meanwhile the services are limited by the needs of our project. That's why we decided not to put it online at the moment.

@@ -56,14 +56,14 @@ For example, we can upload comments and ask people to identify positive and nega
 Of course, in addition to the examples above Yandex.Toloka gives an ability to solve a big range of tasks:
 
 1. Data enrichment:
-    a) questionnaires;
-    b) object search by description;
-    c) search for information about an object;
-    d) search for information on websites.
+    1. questionnaires;
+    2. object search by description;
+    3. search for information about an object;
+    4. search for information on websites.
 2. Field tasks:
-    a) gathering offline data;
-    b) monitoring prices and products;
-    c) street objects control.
+    1. gathering offline data;
+    2. monitoring prices and products;
+    3. street objects control.
 
 To do these tasks you can choose the criteria for contractors: gender, age, location, level of education, languages etc.
 
@@ -88,11 +88,11 @@ What could be done with low-quality marking? How could we make all circles and o
 ![](/static/img/2022/04/pic-6-1024x313.png)*pic 6.*![](/static/img/2022/04/pic-7-1024x313.png)*pic 7.*When we saw large fields that cross each other we got some problems:
 
 1. Identify rectangle:
-    a) mark all outlines – “extra” defects;
-    b) combine outlines – large defects.
+    1. mark all outlines – "extra" defects;
+    2. combine outlines – large defects.
 2. Test on image:
-    a) Text recognition;
-    b) Compare text and object.
+    1. Text recognition;
+    2. Compare text and object.
 
 To solve these issues we needed more data. One of the variants was to ask the customer to do extra marking with the tool we could provide with. But we should have needed an extra person to do that and spent working time. This way could be really time-consuming, tiring and expensive. That is why we decided to involve more people.
 
@@ -143,10 +143,10 @@ In the interface (pic 9) users saw panels, classes and massive instruction conta
 Results:
 
 1. The task was too complicated:
-    a) a small number of contractors agreed to do the task;
-    b) detection quality ~50%, classification – less than 30%;
-    c) most of the defects were marked as first class;
-    d) contractors complained about lack of time (10 minutes).
+    1. a small number of contractors agreed to do the task;
+    2. detection quality ~50%, classification – less than 30%;
+    3. most of the defects were marked as first class;
+    4. contractors complained about lack of time (10 minutes).
 2. The interface wasn't contractor-friendly – a lot of classes, long instruction.
 
 Result: the task was stopped before it was completed. The best solution is to divide the task into two projects:
@@ -182,7 +182,7 @@ However, the task was rather difficult as we had the following result:
 
 Trying to find the reason for our failure we changed options of the task: choosing higher or lower level of contractors, decreasing the number of contractors for overlapping; but the quality of the result was always approximately the same. We also had situations when every of 10 contractors voted for different variants. We should notice that these cases were difficult even for specialists.
 
-Finally we cut off images with absolutely different votes (with difference more than 50%), and also those images which contractors marked as “no defects” or “not a defect”. So we had 30% of the images.
+Finally we cut off images with absolutely different votes (with difference more than 50%), and also those images which contractors marked as "no defects" or "not a defect". So we had 30% of the images.
 
 Final results of the tasks:
 

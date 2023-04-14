@@ -86,7 +86,7 @@ In this activity performance testing scripts are executed either automatically a
 
 - Tests should validate the environment against which they are launched. It maybe a script, that is launched from the load generator before the test starts or a few requests, executed in the setup thread group or separate job in the CI tool. There's no sense to start executing performance test if the environment is not configured correctly or simply doesn't respond.
 - Pay attention at the background processes, that may run on the load testing environment. Check cron jobs, antivirus activities. Though for some tests, these processes should be running over the test.
-- Run a simple test, that exercises a primitive usage of the system as a “smoke” test, before you launch a real test. It simply warms up the system. Validate this smoke test results before running real tests. For example, there's no sense to launch real test for a few thousand users, exercising various cases, if the simple 'NOP' call fails.
+- Run a simple test, that exercises a primitive usage of the system as a "smoke" test, before you launch a real test. It simply warms up the system. Validate this smoke test results before running real tests. For example, there's no sense to launch real test for a few thousand users, exercising various cases, if the simple 'NOP' call fails.
 - Monitor resource utilization of the load generator. Pay attention on the CPU and memory usage. If CPU usage of the load generator is over 90% or it starts using swap over the test, it may not be producing the required load, so the test result may be incorrect. Check load generator logs, if there are any issues in the test results.
 - Be sure, that no task is running on the load generator, while it is executing the test.
 - After each test run investigate the failed requests.
@@ -99,7 +99,7 @@ In this activity performance testing scripts are executed either automatically a
 
 The reporting of the performance testing results and their discussion in the development team is the crucial part of the development project and the performance testing, that is its stage. Below there are key principlesof the effective reporting:
 
-- Analyze test results right after each test run. Don't leave it on “tomorrow”.
+- Analyze test results right after each test run. Don't leave it on "tomorrow".
 - Comment each test run.
 - Report early, report often. Customize reports. It's crucial, to share information with the team. But for the effective sharing it's necessary to establish reporting format for technical, non-technical stuff and the stakeholders.
 - Report visually. The graphical information is easily perceived, so it's necessary to establish the pattern of the graphical representation.

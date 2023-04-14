@@ -68,7 +68,7 @@ Volume 01, Issue 05, \[November – 2014\]
 
 #### Hierarchy
 
-- Files are stored in a “tree” like structure with less flexible cross referencing ability
+- Files are stored in a "tree" like structure with less flexible cross referencing ability
 
 - Less query flexibility, tendency to duplicate data, more strict data structure
 

@@ -25,10 +25,10 @@ Nearly 2 months ago our customer had an opportunity to sign a very nice contract
 
 But we knew that our customer trusts us, and we didn't want to let him down. The contract promised to be very profitable and we understood that it might guarantee the long-term collaboration and let us add several new members to the development team. That's why we accepted the challenge.
 
-Here is the situation: this is an interactive JavaScript application built on model-view architecture. It means thatn all application data is stored in the “model” objects which trigger the events whenever we make any modifications. Another bunch of objects – the “view” objects – constantly listens to these events and redraws the parts of the page contents which were changed. For example, here are the steps of how we handle the change of language selection:
+Here is the situation: this is an interactive JavaScript application built on model-view architecture. It means thatn all application data is stored in the "model" objects which trigger the events whenever we make any modifications. Another bunch of objects – the "view" objects – constantly listens to these events and redraws the parts of the page contents which were changed. For example, here are the steps of how we handle the change of language selection:
 
-1. Intercept the “click” event at the language selector
-2. Change the “language” property in the model and trigger a “language changed” event
+1. Intercept the "click" event at the language selector
+2. Change the "language" property in the model and trigger a "language changed" event
 3. All views which have the textual strings dependent on localization update their contents
 
 So, the application components live in constant synchronization with each other. There are a lot of frameworks which let you setup this architecture in your application. The most popular ones nowadays are [AngularJS](https://angularjs.org/) and [Backbone.JS](http://backbonejs.org/), but there are many ones of them in fact. You can find the majority of them on this site [todomvc.com](http://todomvc.com/)
@@ -41,10 +41,10 @@ mechanism is not smooth at all. We use our own solution – [jWidget](http://ene
 **Problem #1. Memory leaks**
 
 Let me give you an example. A view is listening to an event of the model. What should we do if the user selects another component so that this view is needed no more? We can blindly remove the view from the Web page. But in fact, it is still alive, because it is listening to an event of the model. The model still has a reference to the view, so internal
-garbage collector of the browser cannot clear the memory occupied by this view. Moreover, if the model triggers the event, this “zombie” view will receive this event for handling, so we can run into some unexpected effects. That's why we cannot just remove the view from the Web page. Instead, we must destroy it completely by also unsubscribing from
+garbage collector of the browser cannot clear the memory occupied by this view. Moreover, if the model triggers the event, this "zombie" view will receive this event for handling, so we can run into some unexpected effects. That's why we cannot just remove the view from the Web page. Instead, we must destroy it completely by also unsubscribing from
 the model's event. It will guarantee the reliability and memory consistency.
 
-We found the memory leaks very fast in our application. The symptoms are simple: Google Chrome's “Aw, Snap!” message is the first sign that probably you run out of memory. So, if several jumps between components brings you to this screen, then some parts of your component view are not destroyed for sure.
+We found the memory leaks very fast in our application. The symptoms are simple: Google Chrome's "Aw, Snap!" message is the first sign that probably you run out of memory. So, if several jumps between components brings you to this screen, then some parts of your component view are not destroyed for sure.
 
 ![](http://content.screencast.com/users/enepomnyaschih/folders/Jing/media/ea3cb099-6d62-4861-b1bd-5ec7da3daac4/2014-11-21_1803.png)
 
@@ -69,7 +69,7 @@ The outcome was incredible. The grid rendering time was improved from 20 seconds
 
 Here is one more pitfall of the model-view architecture. Let me give you an example. We have 2200 components, each component consists of 15 details. The components are grouped by units, 4 components in each unit.
 
-Each detail has a property “condition”. This is just a number showing you how much this detail is worn out. Detail conditions are taken from the JSON file, which can be updated from time to time. We extend this term to higher levels of the hierarchy by the next rule: condition of a component is the worst condition among all its details, condition
+Each detail has a property "condition". This is just a number showing you how much this detail is worn out. Detail conditions are taken from the JSON file, which can be updated from time to time. We extend this term to higher levels of the hierarchy by the next rule: condition of a component is the worst condition among all its details, condition
 of a unit is the worst condition among all its components, and condition of the entire unit set is the worst condition among all units.
 
 Any detail, component or unit can be excluded from the calculation process manually by the user. That's why we use data binding technique to calculate the consolidated condition of the higher levels in the hierarchy. In other words, whenever the condition of some object is changed (for example, the user has excluded some object from the calculation process),
@@ -89,12 +89,11 @@ this.resumeSynchronization();
 
 It looks simple but contains quite a lot of code under the hood. The problem is that we still must recalculate everything after this bulk operation, and with the synchronization disabled it doesn't seem to be easy. We didn't want to duplicate the code which is already used for data binding, so we fixed the problem the next way.
 
-Before, we had a single “condition changed” event in each of the objects in the hierarchy. We decided to split it to two: “condition reset” and “condition recalculated”. First one is used for hierarchical data binding: whenever the condition of a detail is reset, we reset the condition for its component, unit and the unit set above in the
+Before, we had a single "condition changed" event in each of the objects in the hierarchy. We decided to split it to two: "condition reset" and "condition recalculated". First one is used for hierarchical data binding: whenever the condition of a detail is reset, we reset the condition for its component, unit and the unit set above in the
 hierarchy. The second one is used for view data binding: whenever the condition of an object is recalculated, we
 redraw it on the screen (so, its color is changed from green to red or so on).
 
-If the synchronization is active, these two events are triggered simultaneously, so the application works as before. If the synchronization is suspended, then we just trigger the “condition reset” event and put the object to the calculation queue to be recalculated as soon as synchronization is resumed (unless this object is already in queue). So, when we resume the synchronization, we already have the up-to-date info about the condition of all the details, and we also know all their dependencies that must be recalculated one by one. This algorithm is linear and it is the fastest one that can get the job done correctly.**To be continued…**
+If the synchronization is active, these two events are triggered simultaneously, so the application works as before. If the synchronization is suspended, then we just trigger the "condition reset" event and put the object to the calculation queue to be recalculated as soon as synchronization is resumed (unless this object is already in queue). So, when we resume the synchronization, we already have the up-to-date info about the condition of all the details, and we also know all their dependencies that must be recalculated one by one. This algorithm is linear and it is the fastest one that can get the job done correctly.**To be continued…**
 
 This is just a first half of improvements that we've made in two intense weeks of optimization challenge. Wait for the
-[next article](http://www.issart.com/blog/front-end-optimization-experience-part-2/) where we'll cover deferred rendering, on-demand calculations and PHP memory utilization optimization
-using JSON streaming.
+[next article](https://www.issart.com/blog/front-end-optimization-experience-part-2/) where we'll cover deferred rendering, on-demand calculations and PHP memory utilization optimization using JSON streaming.

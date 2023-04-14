@@ -9,7 +9,7 @@ categories:
     - 'Web Development'
 ---
 
-As some you might know already, the primary activity of our company is [custom software development](https://www.issart.com/en/). We work in international market primarily, and during our professional life we've faced a need to monitor our team's performance as well as to provide transparent reporting to our customers (you can read more about these challenges here). Although there are a lot of ready [time tracking solutions](http://www.issart.com/blog/time-tracking-systems-overview/) aimed to help to deal with these issues, we have decided to build our own system – the one that would meet our company's need to the fullest. We've named it [CrISStal Eye](http://crisstaleye.com/).
+As some you might know already, the primary activity of our company is [custom software development](https://www.issart.com/en/). We work in international market primarily, and during our professional life we've faced a need to monitor our team's performance as well as to provide transparent reporting to our customers (you can read more about these challenges here). Although there are a lot of ready [time tracking solutions](https://www.issart.com/blog/time-tracking-systems-overview/) aimed to help to deal with these issues, we have decided to build our own system – the one that would meet our company's need to the fullest. We've named it [CrISStal Eye](http://crisstaleye.com/).
 
 Initially we've developed this tool for our internal needs. However, after launching it internally and seeing its successful utilization within the company, we thought: why not represent CrISStal Eye to the market?
 
@@ -24,7 +24,7 @@ Developing a product for your own needs is one thing. Developing a product that 
 - Develop flexible architecture. If possible, make your databases easier to expand. Make replicating and moving data as simple as possible. Don't stop on easy solutions that are faster to develop. Set up a special brainstorming session with your team to see how you can integrate future growth in your product.
 - Do market research. It's great to know your customer base, your competitors, and have at least a vague understanding of a number of users you might have. Of course, actual situation might prove different from what you have expected, but having a minimum and maximum expectation points will give you something to start from.
 - Take a round of load testing. If you're lucky enough to have specialists who can write automated tests and set up an environment to model a situation of increasing server load – go for it. It's probably the best thing you can do, and it can bring amazing results you've never expected.
-- Have a plan for increasing user flow. Always keep in mind that it's better to be prepared. Even if you've just successfully adapted your product for an increased load, ask yourself questions like “What if a number of users doubles? Triples?”
+- Have a plan for increasing user flow. Always keep in mind that it's better to be prepared. Even if you've just successfully adapted your product for an increased load, ask yourself questions like "What if a number of users doubles? Triples?"
 
 ### Rapid switching of priorities
 
@@ -66,7 +66,7 @@ During software development when business requirements are constantly changing, 
 
 Although we've managed to achieve what we've planned for the project launch, we are still working on further improvements. And this is where you help is welcome – we'll appreciate it if you let us know which features looks appealing for you by taking part in our poll.
 
-\[polldaddy poll=”8824753″\]
+\[polldaddy poll="8824753″\]
 
 ### Conclusion
 

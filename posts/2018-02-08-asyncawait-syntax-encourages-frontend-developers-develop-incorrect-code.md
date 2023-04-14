@@ -15,7 +15,7 @@ tags:
 
 [await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await) operator is an incredible new feature in ECMAScript 2017. [There](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await) [are](https://ponyfoo.com/articles/understanding-javascript-async-await) [many](https://developers.google.com/web/fundamentals/primers/async-functions) [articles](https://hackernoon.com/6-reasons-why-javascripts-async-await-blows-promises-away-tutorial-c7ec10518dd9) [demonstrating](https://codeburst.io/javascript-es-2017-learn-async-await-by-example-48acc58bad65) how much you can benefit from it. I agree: asynchronous code was never so brief and clear as when it is written via async/await syntax.
 
-Nevertheless, there is a significant pitfall you should be aware of while developing asynchronous front end code. Backend developers are safe: they can easily copy code from any of the articles above to their NodeJS application, and it will work just fine. Really! However, if you are going to run this code in a browser environment as is, it would be a serious mistake! None of the examples is correctly adjusted for the front end. This is a disaster: in the top 10 Google references on “async await”, I failed to find any examples correctly adjusted for the front end. Junior/middle JS developers and newcomers use these examples as the basis for their work and develop incorrect code that results in unexpected bugs and performance loss all over the place.
+Nevertheless, there is a significant pitfall you should be aware of while developing asynchronous front end code. Backend developers are safe: they can easily copy code from any of the articles above to their NodeJS application, and it will work just fine. Really! However, if you are going to run this code in a browser environment as is, it would be a serious mistake! None of the examples is correctly adjusted for the front end. This is a disaster: in the top 10 Google references on "async await", I failed to find any examples correctly adjusted for the front end. Junior/middle JS developers and newcomers use these examples as the basis for their work and develop incorrect code that results in unexpected bugs and performance loss all over the place.
 
 I am here to explain you a very important rule about developing asynchronous code for front end: **you can never predict what a user is going to do at any point of time**. Let's take a look at the next code snippet taken from [just another async/await tutorial](https://javascript.info/async-await):
 
@@ -144,7 +144,7 @@ class Profile extends Component {
 }
 ```
 
-If your loading code depends on React props, componentWillReceiveProps method won't handle the issue properly, because “isMounted” call won't check the load session relevance anymore: instead, you should force component remounting by specifying unique “key” prop. This code would still have significant downsides. In particular:
+If your loading code depends on React props, componentWillReceiveProps method won't handle the issue properly, because "isMounted" call won't check the load session relevance anymore: instead, you should force component remounting by specifying unique "key" prop. This code would still have significant downsides. In particular:
 
 1. It is hard to work with. Every time we make an asynchronous call, we must perform such checks, and it is annoying.
 2. Forcing component remounting results in significant performance loss.
@@ -179,7 +179,7 @@ I don't recommend you using this solution, because it doesn't release your resou
 - [XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest) (in particular, [jQuery AJAX request](http://api.jquery.com/jquery.ajax/)) can be cancelled with [abort method](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/abort).
 - Unfortunately, by the time this article is being written, [you can not cancel HTTP fetch() request](https://stackoverflow.com/questions/31061838/how-do-i-cancel-an-http-fetch-request) which is pitiful.
 
-So, since setTimeout and XMLHttpRequest are not promises originally, you can't use “await” operator to operate them. As a reward, you have a possibility to cancel them easily:
+So, since setTimeout and XMLHttpRequest are not promises originally, you can't use "await" operator to operate them. As a reward, you have a possibility to cancel them easily:
 
 ```
 class UserLoader {
@@ -233,7 +233,7 @@ class Profile extends Component {
 }
 ```
 
-We sacrifice all advantages of the promises and async/await calls just to properly cancel the operations. Is there a compromise? Well, kind of. There are several ways to get an object that looks and works just like native JS promise, but can also be canceled, and [this awesome article](https://medium.com/@benlesh/promise-cancellation-is-dead-long-live-promise-cancellation-c6601f1f5082) explains them in detail. I didn't really try to use them all, but, by the look of things, only the first three options should be somewhat compatible with “await” operator, because these promises have “then” method which enables the browser to treat them as native promises. At the moment, I am working on the 2nd version of my Model-View framework jWidget which, among the other features, introduces its own DestroyablePromise implementation that integrates smoothly with jWidget's[object aggregation technology](https://www.issart.com/blog/aggregation-awareness/).
+We sacrifice all advantages of the promises and async/await calls just to properly cancel the operations. Is there a compromise? Well, kind of. There are several ways to get an object that looks and works just like native JS promise, but can also be canceled, and [this awesome article](https://medium.com/@benlesh/promise-cancellation-is-dead-long-live-promise-cancellation-c6601f1f5082) explains them in detail. I didn't really try to use them all, but, by the look of things, only the first three options should be somewhat compatible with "await" operator, because these promises have "then" method which enables the browser to treat them as native promises. At the moment, I am working on the 2nd version of my Model-View framework jWidget which, among the other features, introduces its own DestroyablePromise implementation that integrates smoothly with jWidget's[object aggregation technology](https://www.issart.com/blog/aggregation-awareness/).
 
 ```
 function loadUser() {
@@ -250,7 +250,7 @@ class ProfileView extends Component {
 }
 ```
 
-HttpRequest is just one of DestroyablePromise implementations. As you can see, even chained promises can be aggregated and destroyed easily. Unfortunately, “await” operator is still not fully supported either in jWidget 2 or in solutions #1 and #3 above for the following reason. The following code won't work:
+HttpRequest is just one of DestroyablePromise implementations. As you can see, even chained promises can be aggregated and destroyed easily. Unfortunately, "await" operator is still not fully supported either in jWidget 2 or in solutions #1 and #3 above for the following reason. The following code won't work:
 
 ```
 async function loadUser() {
@@ -289,8 +289,8 @@ class ProfileView extends Component {
 
 This is just pseudo-code: [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) doesn't currently support CancelTokens. If you want to use CancelTokens, you should either find an AJAX library that supports it or implement it from scratch. From my point of view, although CancelToken does the trick, it slightly complicates the code and makes it hard for junior developers to understand.
 
-So, **“await” operator usage area is very limited in the front end unless you use CancelTokens**. I still manage promises the old way, but I will probably switch to CancelTokens soon.
+So, **"await" operator usage area is very limited in the front end unless you use CancelTokens**. I still manage promises the old way, but I will probably switch to CancelTokens soon.
 
-There is one more thing I would like to mention. From my point of view, rejecting the promise is not the correct way to cancel it, because it usually results in an error message being displayed to the user for no reason and causes other side effects. Promise rejection is being equated to an exception throw, and exceptions in the front end should really indicate something we don't expect, because, in contrast to Java, the exceptions in JavaScript can not be easily controlled. So, my preference in this situation is to prevent both onFulfilled and onRejected calls and just “swallow” the output, make the browser “forget” about the promise. This does not fit the philosophy of promises (promise is an object that promises you to call one of the two callbacks), but, damn, it works, and works really well! I have never faced a situation when this behaviour failed to meet my needs.
+There is one more thing I would like to mention. From my point of view, rejecting the promise is not the correct way to cancel it, because it usually results in an error message being displayed to the user for no reason and causes other side effects. Promise rejection is being equated to an exception throw, and exceptions in the front end should really indicate something we don't expect, because, in contrast to Java, the exceptions in JavaScript can not be easily controlled. So, my preference in this situation is to prevent both onFulfilled and onRejected calls and just "swallow" the output, make the browser "forget" about the promise. This does not fit the philosophy of promises (promise is an object that promises you to call one of the two callbacks), but, damn, it works, and works really well! I have never faced a situation when this behaviour failed to meet my needs.
 
 I hope that you have found this article useful and it will help you avoid similar mistakes in your asynchronous code.

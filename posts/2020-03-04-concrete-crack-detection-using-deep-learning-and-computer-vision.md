@@ -65,7 +65,7 @@ Therefore, we used the neural network architecture U-net. In the original resear
 
 In our implementation dropout layers were added because they force a neural network to learn more robust features that are useful in conjunction with many different random subsets of the other neurons. The loss function is Binary Crossentropy.
 
-See the following paper for more background: [“U-Net: Convolutional Networks for Biomedical Image Segmentation”](https://arxiv.org/abs/1505.04597) by Olaf Ronneberger, Philipp Fischer and Thomas Brox (May 2015). 
+See the following paper for more background: ["U-Net: Convolutional Networks for Biomedical Image Segmentation"](https://arxiv.org/abs/1505.04597) by Olaf Ronneberger, Philipp Fischer and Thomas Brox (May 2015). 
 
 ## Results
 

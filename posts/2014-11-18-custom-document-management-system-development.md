@@ -53,17 +53,13 @@ Shortly after your custom DMS is up and running, you'll start enjoying these and
 
 Through the development and implementation of a custom DMS, your organization will enjoy significant long-term, intangible advantages as well:
 
-**Enhanced Productivity and Cash Flow** – According to International Data Corporation, or IDC, “typical enterprise with 1,000 knowledge workers wastes $2.5 million to $3.5 million per year searching for nonexistent information, failing to find existing information, or recreating information that can't be found.” With a custom DMS, Employees will spend less time hunting down the documents and information they need, which will allow them to complete tasks more quickly. Crucial processes like invoicing and debt collection will be significantly streamlined and improved, which will help cash flow in more reliably and consistently.
+**Enhanced Productivity and Cash Flow** – According to International Data Corporation, or IDC, "typical enterprise with 1,000 knowledge workers wastes $2.5 million to $3.5 million per year searching for nonexistent information, failing to find existing information, or recreating information that can't be found." With a custom DMS, Employees will spend less time hunting down the documents and information they need, which will allow them to complete tasks more quickly. Crucial processes like invoicing and debt collection will be significantly streamlined and improved, which will help cash flow in more reliably and consistently.
 **Improved Customer Service** – Because employees will be able to locate information in an instant, their ability to provide exceptional customer service will dramatically improve. Response times will shorten, and responses will be far more accurate and professional. This all reflects very well on your organization, and it will help lay the groundwork for future success.
-**Streamlined Internal Operations** – According to Edge Systems, LLC, “7.5% of all documents get lost, 3% of the remainder get misfiled.” Having quick, reliable, immediate access to documents will bolster the internal operation of your business as well. For instance, when one department needs information from another, they won't have to wait around for it. In many cases, they'll be able to access it themselves.
+**Streamlined Internal Operations** – According to Edge Systems, LLC, "7.5% of all documents get lost, 3% of the remainder get misfiled." Having quick, reliable, immediate access to documents will bolster the internal operation of your business as well. For instance, when one department needs information from another, they won't have to wait around for it. In many cases, they'll be able to access it themselves.
 **A Significant Competitive Edge** – Finally, in addition to accessing and sharing documents internally, a DMS will allow you to effortlessly share electronic documents with customers and others. They'll receive crucial information more quickly and easily, which will give them a more favorable impression of your business.
 
 ### Custom Document Management System Development: It's About Time
 
 Your company's business processes and overall long-term success hinge on being able to access crucial information when it's needed. With the development of a custom DMS, you'll finally have a reliable way to access documents wherever and whenever they're required. Without a doubt, the return on your investment will be significant, and it will continue to return dividends well into the future. Need more information? Find out how DMS systems look by [visiting our website](http://www.issart.com/en/services/details/service/document-management).
 
-In the comments below, let us know, what problems are you encountering with your document management? How do you ensure that the documents and work progress do not get lost – what tools do you use for this?
-
-Source:
-
-http://www.edge.com/downloads/Edge%20ROI%20Document%20Management.pdf
+[Source](http://www.edge.com/downloads/Edge%20ROI%20Document%20Management.pdf)

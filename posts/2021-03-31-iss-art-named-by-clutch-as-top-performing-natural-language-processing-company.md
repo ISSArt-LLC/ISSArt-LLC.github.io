@@ -33,8 +33,8 @@ Our dedication to this craft is paying off, and we are grateful for each and eve
 
 Our team wants to thank our clients who help us continue charging in the right direction. We appreciate their reviews on our Clutch profile. Their words serve as proof of our hard work and dedication to our clients.
 
-*“ISS ART is extremely responsive and capable of resolving any development issue. They were just an email away if the site went down or a specific feature didn't function properly. Their consistent efficiency is why we engaged them for so long.”* — CEO, Casting
+*"ISS ART is extremely responsive and capable of resolving any development issue. They were just an email away if the site went down or a specific feature didn't function properly. Their consistent efficiency is why we engaged them for so long."* — CEO, Casting
 
-*“I'd be out of business if it weren't for them. Maybe I could find someone else, but I don't think I'd be able to find someone better. We're small and we're just getting out of the startup phase, so if they hadn't done a good job, we might've failed as a business.”* — Executive Director, Non-profit
+*"I'd be out of business if it weren't for them. Maybe I could find someone else, but I don't think I'd be able to find someone better. We're small and we're just getting out of the startup phase, so if they hadn't done a good job, we might've failed as a business."* — Executive Director, Non-profit
 
 Want to know more about what we can do for you? [Send us a message](https://issart.com/contacts/) and let's discuss how we can help your business.

@@ -62,7 +62,7 @@ All goes well as long as you need simple queries, but difficulties arise when th
 
 Criteria API is a type-safe API for composing JPQL queries. There are alternatives of Criteria API, such as jOOQ and QueryDSL, but they are not included in the standard of Java and will not be covered in this article.
 
-To create your own repository queries using Criteria API, you must create an interface, let's call it *BookRepositoryCustom* and a class implementing this interface. When the interface is being implemented, the name of the class should coincide with the name of the heir repository JpaRepository, with the addition of “Impl” (this is mandatory).
+To create your own repository queries using Criteria API, you must create an interface, let's call it *BookRepositoryCustom* and a class implementing this interface. When the interface is being implemented, the name of the class should coincide with the name of the heir repository JpaRepository, with the addition of "Impl" (this is mandatory).
 
 The interface will have one method signature with arguments which the data will be filtered by (the title, name, and surname of the author).
 

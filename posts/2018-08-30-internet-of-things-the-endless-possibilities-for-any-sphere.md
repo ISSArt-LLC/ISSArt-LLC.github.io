@@ -62,7 +62,7 @@ Although it is rather expensive to build projects with Raspberry and Arduino, th
 
 Making a prototype on Arduino is fast. But the cost of the board on Arduino is higher than that on the microcontroller. This factor is critical for mass production. So, it is possible to redesign the project for a cheaper microcontroller after the the concept is proved. By the way, there are microcontrollers compatible with Arduino – ESP8266 by Espressif is an example.
 
-Thus, all this together led to the appearance of such an area of IoT, when there are small chips that, in tandem with the sensor, can collect information and transmit it somewhere. These can be temperature sensors, humidity sensors, lighting sensors, smoke detectors, distance sensors, movement detectors, and many more. These devices can be inserted into different electronics to make it “smarter” – kettles, switches, lamps, and even into clothes – say, to to read the heart rate. By the way, Ralph Lauren company with [The Polotech Shirt](https://circuitdigest.com/ten-examples-of-internet-of-things-iot) capable of recording the biometric readings of Athletes (such as heart rate, calories burned, breathing depths, etc) was a pioneer to present IoT to closing industry.
+Thus, all this together led to the appearance of such an area of IoT, when there are small chips that, in tandem with the sensor, can collect information and transmit it somewhere. These can be temperature sensors, humidity sensors, lighting sensors, smoke detectors, distance sensors, movement detectors, and many more. These devices can be inserted into different electronics to make it "smarter" – kettles, switches, lamps, and even into clothes – say, to to read the heart rate. By the way, Ralph Lauren company with [The Polotech Shirt](https://circuitdigest.com/ten-examples-of-internet-of-things-iot) capable of recording the biometric readings of Athletes (such as heart rate, calories burned, breathing depths, etc) was a pioneer to present IoT to closing industry.
 
 Also, manufacturers make platforms, to which it is possible to connect products of the same manufacturer (such as smart light bulbs, sockets, or a kettle), to manage them from one place. Just a few examples of automation systems that have such platforms.
 
@@ -72,7 +72,7 @@ Also, manufacturers make platforms, to which it is possible to connect products 
 
 ## Where can IoT solutions be applied?
 
-Today IoT solutions are applicable in a variety of spheres – manufacturing automation, “smart home”, wearables, medicine and healthcare, and many more. Although many examples of using the IoT have already become common for many people (say, smart home devices or wearables), some solutions are truly non-standard and are able to change the usual course of things in various areas of life.
+Today IoT solutions are applicable in a variety of spheres – manufacturing automation, "smart home", wearables, medicine and healthcare, and many more. Although many examples of using the IoT have already become common for many people (say, smart home devices or wearables), some solutions are truly non-standard and are able to change the usual course of things in various areas of life.
 
 Let's look at some outstanding applications of IoT.
 
@@ -92,7 +92,7 @@ And one more example of IoT application in healthcare that certainly deserves ou
 
 **4) Lilium**
 
-[Lilium](https://www.siliconrepublic.com/machines/iot-hardware-startups-europe-2018) company is currently working on a very promising project – the world's first electric vertical takeaway and landing jet. It is also called a “flying taxi”. When it goes live, it is supposed to be capable of flying from London to Paris in just one hour.
+[Lilium](https://www.siliconrepublic.com/machines/iot-hardware-startups-europe-2018) company is currently working on a very promising project – the world's first electric vertical takeaway and landing jet. It is also called a "flying taxi". When it goes live, it is supposed to be capable of flying from London to Paris in just one hour.
 
 **5) Click and grow**
 
@@ -128,9 +128,3 @@ Manufacturers equip their production lines with innovative robotic systems and t
 We are pretty sure that in the next years and decades creative minds will continue to design new unique solutions using the Internet of things that will undoubtedly improve the quality of life and enhance certain processes.
 
 However, despite the variety opportunities that have been discovered with IoT, some people are beginning to worry that machines and devices are gaining more control over activities that humans previously performed.
-
-***What do you personally think of rapid IoT development? Voice your opinion in the poll below and share your thoughts in the comments section!***
-
-<script charset="utf-8" src="https://secure.polldaddy.com/p/10070651.js" type="text/javascript"></script>
-
-<noscript>[What do you think of rapid Internet of things (IoT) development?](https://polldaddy.com/poll/10070651/)</noscript>

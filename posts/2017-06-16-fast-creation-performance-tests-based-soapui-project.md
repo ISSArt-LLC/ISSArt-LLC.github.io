@@ -27,7 +27,7 @@ Let's look at how it can be done. We need a rest api project for this experiment
 
 ![SoapUI Project Flickr](https://www.issart.com/blog/wp-content/uploads/2017/06/flickr.png)
 
-For using the Flickr API, an API-key is required. It can be obtained when registering with the Flickr [“App Garden”](http://www.flickr.com/services/apps/create/apply). The project defines “ApiKey” property at the project level. It is then used in all requests via standard properties expansion:
+For using the Flickr API, an API-key is required. It can be obtained when registering with the Flickr ["App Garden"](http://www.flickr.com/services/apps/create/apply). The project defines "ApiKey" property at the project level. It is then used in all requests via standard properties expansion:
 
 ![SoapUI Project APIkey](https://www.issart.com/blog/wp-content/uploads/2017/06/api-key.png)
 

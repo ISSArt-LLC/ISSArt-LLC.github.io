@@ -21,7 +21,7 @@ This all sound attractive in theory, but what's on practice? Let's focus on our 
 
 ### Which framework to choose?
 
-In one of our previous posts we've discussed various PHP frameworks that can be used for [eCommerce website development](http://www.issart.com/blog/php-framework-ecommerce-website-development/). So, the choice can be different in every particular project – depending on the goals, conditions, team skills, etc.
+In one of our previous posts we've discussed various PHP frameworks that can be used for [eCommerce website development](https://www.issart.com/blog/php-framework-ecommerce-website-development/). So, the choice can be different in every particular project – depending on the goals, conditions, team skills, etc.
 To develop CrISStal Eye website we have decided to utilize [Symfony framework](https://symfony.com/). Why?
 
 - It is a flexible technology enabling various customizations based on your project needs;
@@ -54,7 +54,7 @@ In addition, paid services like Depositphotos provide [free images](http://ru.de
 
 We've conducted our own research. Based on this research we've come up with the website structure which we believe will serve the needs of our potential customers to the fullest. We've also prepared the graphic assets for our project. But how to make sure that the whole site will actually look like you desire?
 
-To make sure that we are “on the same page” with our development team, we've formalized the structure for each page of our website in a series of mockups – please see an example below.
+To make sure that we are "on the same page" with our development team, we've formalized the structure for each page of our website in a series of mockups – please see an example below.
 
 ![](/static/img/2015/07/698a8c8c2bf5f5ea2c4c636a04f9afdf.png)
 

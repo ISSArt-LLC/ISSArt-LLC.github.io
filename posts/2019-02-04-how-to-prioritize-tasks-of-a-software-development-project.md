@@ -94,7 +94,7 @@ So, we can represent the diagram above with the details for the criterion develo
 
 - What functionality is critical for end-users and the customer?
 - What risks are most critical? (risk exposure = probability \* loss)
-- What constraints are present? (time, scope, quality, budget, agility etc. See Wiegers, 2013 Chapter 16, Section “Prioritization based on value, cost, and risk”)
+- What constraints are present? (time, scope, quality, budget, agility etc. See Wiegers, 2013 Chapter 16, Section "Prioritization based on value, cost, and risk")
 - What are the dependencies between tasks?
 - What are the dependencies between the nonfunctional requirements? (Brosseau, 2010)
 
@@ -196,5 +196,5 @@ Let's prioritize the tasks profitably!
 - [diminishing returns](https://en.wikipedia.org/wiki/Diminishing_returns),
 - [long-tailed distribution](https://en.wikipedia.org/wiki/Diminishing_returns)
 - [Priority of tasks on Machine Learning](https://www.jeremyjordan.me/ml-projects-guide/#prioritizingprojectsandchoosinggoals)
-- Brosseau, Jim. 2010. “Software Quality Attributes: Following All the Steps.” <http://www.clarrus.com/resources/articles/software-quality-attributes>
-- Wiegers, Karl and Joy Beatty. 2013. “Software Requirements” (3rd Edition). (Chapter 16)
+- Brosseau, Jim. 2010. "Software Quality Attributes: Following All the Steps." <http://www.clarrus.com/resources/articles/software-quality-attributes>
+- Wiegers, Karl and Joy Beatty. 2013. "Software Requirements" (3rd Edition). (Chapter 16)

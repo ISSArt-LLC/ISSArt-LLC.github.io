@@ -10,7 +10,7 @@ categories:
     - 'Web Development'
 ---
 
-You can find the first part of the article [here](http://www.issart.com/blog/application-development-scratch-part-1/).
+You can find the first part of the article [here](https://www.issart.com/blog/application-development-scratch-part-1/).
 
 ### Application Development Tools-From Desktop to Mobile
 
@@ -55,7 +55,7 @@ Reference sites:
 
 > [160+ mobile marketing statistics to know in 2022](https://themarketinghelpline.com/mobile-marketing-statistics/)
 
-<iframe class="wp-embedded-content" data-secret="3W9kfbZyjP" frameborder="0" height="338" marginheight="0" marginwidth="0" sandbox="allow-scripts" scrolling="no" security="restricted" src="https://themarketinghelpline.com/mobile-marketing-statistics/embed/#?secret=3W9kfbZyjP" style="position: absolute; clip: rect(1px, 1px, 1px, 1px);" title="“160+ mobile marketing statistics to know in 2022” — The Marketing Helpline UK" width="600"></iframe><http://www.statista.com/statistics/263795/number-of-available-apps-in-the-apple-app-store/>
+<iframe class="wp-embedded-content" data-secret="3W9kfbZyjP" frameborder="0" height="338" marginheight="0" marginwidth="0" sandbox="allow-scripts" scrolling="no" security="restricted" src="https://themarketinghelpline.com/mobile-marketing-statistics/embed/#?secret=3W9kfbZyjP" style="position: absolute; clip: rect(1px, 1px, 1px, 1px);" title=""160+ mobile marketing statistics to know in 2022" — The Marketing Helpline UK" width="600"></iframe><http://www.statista.com/statistics/263795/number-of-available-apps-in-the-apple-app-store/>
 
 <http://www.techrepublic.com/article/google-play-v-apple-app-store-the-battle-for-the-mobile-app-market/>
 

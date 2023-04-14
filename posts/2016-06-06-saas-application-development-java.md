@@ -11,7 +11,7 @@ categories:
 
 ### Reasons for SaaS:
 
-So you've decided your software product needs to be a SaaS application development Java. You've no doubt picked SaaS because your customers would like a cloud based application that they can access from the web anywhere they need it. This also implies your customer base has no interest in maintaining an IT staff to maintain software and equipment in-house. They are also interested in the low cost of ownership, on demand scalability, tailored Service Level Agreements, and the fact that “someone else” is worrying about upgrades, feature development, security, and all the other responsibilities that come from in-house development.
+So you've decided your software product needs to be a SaaS application development Java. You've no doubt picked SaaS because your customers would like a cloud based application that they can access from the web anywhere they need it. This also implies your customer base has no interest in maintaining an IT staff to maintain software and equipment in-house. They are also interested in the low cost of ownership, on demand scalability, tailored Service Level Agreements, and the fact that "someone else" is worrying about upgrades, feature development, security, and all the other responsibilities that come from in-house development.
 
 ![SaaS application development Java community ecosystem](/static/img/2016/05/word-image-3.jpg)
 
@@ -19,7 +19,7 @@ SaaS Strengths (courtesy of [Rishabh Software](http://www.rishabhsoft.com/))
 
 ### Is Java the best choice?
 
-You've probably decided on [SaaS application development](http://www.issart.com/blog/java-saas-application-development/) because the developers you've chosen to work with recommended Java. In the interests of comprehensiveness, there are several other choices, including:
+You've probably decided on [SaaS application development](https://www.issart.com/blog/java-saas-application-development/) because the developers you've chosen to work with recommended Java. In the interests of comprehensiveness, there are several other choices, including:
 
 PHP – very common and easy to work with, but less structured, which requires developers to be more disciplined—thus both quality and reliability can suffer. Facebook is built on PHP.
 
@@ -59,11 +59,11 @@ Services-oriented modules can be developed to interface to all the third party a
 
 Properly defined modules are loosely coupled with well-defined interfaces. This allows for the future enhancement or addition of features by simply adding new modules, or perhaps minimal updates to existing ones. This promotes much more highly reliable code while also maintaining application flexibility. Once again features can be added and updated without any down time with the proper additon or swapping of modules in a live system.
 
-Modules should have a “stateless” design with respect to other components in the system. This is highly critical, allowing dynamic addition and subtraction of allocated resources to meet expanding and contracting demand needs on the fly. Each module should have sufficient information exchange handled by well-defined APIs so that its only dynamic memory needs are local. Otherwise very sophisticated memory management processes will need to be implemented, and reliability will be severely compromised.
+Modules should have a "stateless" design with respect to other components in the system. This is highly critical, allowing dynamic addition and subtraction of allocated resources to meet expanding and contracting demand needs on the fly. Each module should have sufficient information exchange handled by well-defined APIs so that its only dynamic memory needs are local. Otherwise very sophisticated memory management processes will need to be implemented, and reliability will be severely compromised.
 
 #### Efficiency:
 
-The whole idea behind SaaS is efficiency. The developer only has to build and maintain one application running in a cloud environment that they have to specify, maintain and control. The benefits to the end user is a very convenient “pay as you go” model that requires no in-house hardware or IT team. Licenses don't have to be maintained, equipment doesn't depreciate, and applications can be scaled up or down or switched without huge capital considerations.
+The whole idea behind SaaS is efficiency. The developer only has to build and maintain one application running in a cloud environment that they have to specify, maintain and control. The benefits to the end user is a very convenient "pay as you go" model that requires no in-house hardware or IT team. Licenses don't have to be maintained, equipment doesn't depreciate, and applications can be scaled up or down or switched without huge capital considerations.
 
 Of course, to achieve maximum efficiency the initial architecture must properly consider and provide for many factors, including multi-tenancy, partitionability, and dynamic scalability.
 
@@ -71,9 +71,9 @@ In a multi-tenant environment several customers or instantiated users are able t
 
 For most users and software vendors, partitionable instantiations of instance specific sessions will be an important aspect of efficiency and overall maintenance, tracking, and reliabilty. Billing becomes more straightforward and understandable because it can be related to actual measureable system usage. At the very least system usage reports can be easily aligned with particular customer usage. Further development efforts can be effectively deployed to target resource-heavy parts of the application and thus reduce overhead. Faults can be more quickly identified, isolated, and rectified.
 
-Assuming the architecture and implementation stayed true to good design and coding practices and produced a truly modular application, dynamic scalability should be possible. This is a boon to any [SaaS provider](http://www.issart.com/blog/custom-saas-accounting-application-development/), whether they are providing their own infrastructure or relying heavily on servicer providers. In the latter case the benefits are obvious – billing is most likely very closely correlated with usage and dynamic scalability will allow you to expand and contract your service needs as your client usage ebbs and flows. For those providing their own infrastructure, dynamic scalability allows for rapid expansion (or contraction) of your customer base by simply adding and subtracting additional resources as necessary. Servicing and maintenance should also be less disruptive to your customers as your dynamic session management capability should be able to allow you to take resources online and offline when necessary.
+Assuming the architecture and implementation stayed true to good design and coding practices and produced a truly modular application, dynamic scalability should be possible. This is a boon to any [SaaS provider](https://www.issart.com/blog/custom-saas-accounting-application-development/), whether they are providing their own infrastructure or relying heavily on servicer providers. In the latter case the benefits are obvious – billing is most likely very closely correlated with usage and dynamic scalability will allow you to expand and contract your service needs as your client usage ebbs and flows. For those providing their own infrastructure, dynamic scalability allows for rapid expansion (or contraction) of your customer base by simply adding and subtracting additional resources as necessary. Servicing and maintenance should also be less disruptive to your customers as your dynamic session management capability should be able to allow you to take resources online and offline when necessary.
 
-While SaaS application development java can lead to more resource-hungry applications, it can also be efficient in other ways. Java is more portable and less specific as regards to underlying hardware and OS requirements. It is easier to maintain a stable of “stand-by” Java developers to deal with problems since there are more of them in the labor market. The nature of the Java language and the skills required to develop Java applications also enforce more professional rigor and provide more structured code, allowing for greater flexibility in reliably allowing different developers to maintain the same code base.
+While SaaS application development java can lead to more resource-hungry applications, it can also be efficient in other ways. Java is more portable and less specific as regards to underlying hardware and OS requirements. It is easier to maintain a stable of "stand-by" Java developers to deal with problems since there are more of them in the labor market. The nature of the Java language and the skills required to develop Java applications also enforce more professional rigor and provide more structured code, allowing for greater flexibility in reliably allowing different developers to maintain the same code base.
 
 #### Reliability:
 
@@ -83,7 +83,7 @@ Fault tolerance is an important consideration at all stages of architecture, des
 
 System maintenance and upgrades are a necessary part of application maintenance and enhancement. The well built system will anticipate this necessity and provide procedures (as discussed above) to make this seamless and transparent to users.
 
-Security is another “must have” for most customers. While cloud environments hosting SaaS application provide many security features on their own, application developers will find their most efficient products will not brute-force security by providing separate complete instantiations for each session, but rather treat security as an important consideration when designing and implementing modules. Efficiency and Security need not be naturally opposing design considerations with a thoughtful architecture.![saas application development java image](/static/img/2016/05/word-image-4.jpg)
+Security is another "must have" for most customers. While cloud environments hosting SaaS application provide many security features on their own, application developers will find their most efficient products will not brute-force security by providing separate complete instantiations for each session, but rather treat security as an important consideration when designing and implementing modules. Efficiency and Security need not be naturally opposing design considerations with a thoughtful architecture.![saas application development java image](/static/img/2016/05/word-image-4.jpg)
 
 ### Conclusion
 

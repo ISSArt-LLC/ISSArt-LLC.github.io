@@ -13,13 +13,13 @@ categories:
 
 When we call a solution non-typical, we mean it has non-standard functionality or a unique concept. A non-typical solution, as a rule, is based on business processes within a Customer's organization, or on an innovative idea.
 
-If we talk about a unique business idea, first and foremost, you need to explore the market and make sure that such a solution hasn't been created already. Believe, this is very frustrating to develop and launch a project, and encounter an existing analogue in the market. Besides, by checking the market beforehand you won't waste your time (and your Provider's time) on “reinventing the wheel”.
+If we talk about a unique business idea, first and foremost, you need to explore the market and make sure that such a solution hasn't been created already. Believe, this is very frustrating to develop and launch a project, and encounter an existing analogue in the market. Besides, by checking the market beforehand you won't waste your time (and your Provider's time) on "reinventing the wheel".
 
 If we talk about an existing product or a business process you are recommended to conduct an audit and analysis. You can do it yourself or contact IT consultants.
 
 - **Give Provider all the info required**
 
-To ensure that work goes smoothly and you are “on the same page” with your Provider, you need to disclose to them all the required info in as much detail as possible. If you can draw the process or idea schematically – that's even better. You can utilize [Balsamiq Mockups](https://balsamiq.com/products/mockups/) or similar solutions for this.
+To ensure that work goes smoothly and you are "on the same page" with your Provider, you need to disclose to them all the required info in as much detail as possible. If you can draw the process or idea schematically – that's even better. You can utilize [Balsamiq Mockups](https://balsamiq.com/products/mockups/) or similar solutions for this.
 
 If you don't know how to present your project vision better – check out our requirements document template.
 
@@ -27,7 +27,7 @@ If you don't know how to present your project vision better – check out our re
 
 To make sure that the information you've shared will remain confidential we recommend you to sign NDA. As soon as your Provider signs it, sign it from your side and return the signed copy to Provider. Otherwise the document won't be legally binding. Besides, if you neglect signing documents, this will look like lack of intention to cooperate.
 
-You can read more about intellectual property (IP) issues in software development [here](http://www.issart.com/blog/intellectual-property-issues-software-development/).
+You can read more about intellectual property (IP) issues in software development [here](https://www.issart.com/blog/intellectual-property-issues-software-development/).
 
 - **Be sure to have everything in written form**
 

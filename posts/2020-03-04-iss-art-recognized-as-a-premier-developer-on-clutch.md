@@ -24,7 +24,7 @@ Since 2003, ISS Art has been delivering innovative customer software solutions t
 
 Partnering with Clutch has allowed us to show that we really are one of the most efficient, budget-friendly, and forward-thinking companies in the tech arena. Many buyers in today's market rely on reviews to make their hiring decisions, so being able to showcase our profile on Clutch is key. Our client reviews provide insights on previous projects, our project management style, and more. Here is just one of our many favorite review quotes:
 
-***“Our engagement with ISS Art has always been very effective. They complete all of our essential milestones on time. The team brainstorms creative ideas for new updates and improvements for our software.” — Executive, TurboDispute***
+***"Our engagement with ISS Art has always been very effective. They complete all of our essential milestones on time. The team brainstorms creative ideas for new updates and improvements for our software." — Executive, TurboDispute***
 
 Every month, Clutch's Leader Awards recognize the highest-performing B2B companies by industry and service focus. We're very appreciative to Clutch for the momentous acknowledgement, and to our clients for providing the feedback that made it possible!
 

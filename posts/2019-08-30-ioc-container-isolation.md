@@ -118,7 +118,7 @@ It often happens that the specification gets behind the real world and introduce
 Thus, if you want the complete and latest implemented specification, you have to use [JavaEE stack](https://www.oracle.com/technetwork/java/javaee/overview/compatibility-jsp-136984.html).
 
 With other IoC containers you will be lucky if you have *javax.inject* package supported.
-Or you decide to reject standards and use the [S*pring* ](https://spring.io/)[*Framework*](https://spring.io/) which doesn't rely on “standard” interfaces.
+Or you decide to reject standards and use the [S*pring* ](https://spring.io/)[*Framework*](https://spring.io/) which doesn't rely on "standard" interfaces.
 
 However, I would say that any IoC container provides 4 ways to maintain objects and if it doesn't support standard specifications it is not a big problem.
 You should just isolate the IoC container dependency from your code.

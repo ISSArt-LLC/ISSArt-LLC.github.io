@@ -180,7 +180,7 @@ cut_img = cut_img[:, (roi_width - ROI_EXT):(cut_img_w - roi_width + ROI_EXT)]
 background = find_background(cut_img, roi)
 ```
 
-To determine the dimensions of the object, we will write the function get_bottle_mask(), additionally trying to cut off the “noise” outside of the object:
+To determine the dimensions of the object, we will write the function get_bottle_mask(), additionally trying to cut off the "noise" outside of the object:
 
 ```python
 def get_bottle_mask(bin):
@@ -227,11 +227,11 @@ Not bad!
 
 Let's define, whether the label is pasted at the right height.
 
-To do that, we will adjust the image to HSV format and using cv.inRange() we will create the filter based on HSV limits specified in the configuration file, corresponding to the extreme stripes on the label, before doing that we will blur the image a little using cv.blur() to reduce the “noise.”
+To do that, we will adjust the image to HSV format and using cv.inRange() we will create the filter based on HSV limits specified in the configuration file, corresponding to the extreme stripes on the label, before doing that we will blur the image a little using cv.blur() to reduce the "noise."
 
 With the help of cv.findContours() we will get the contours based on the raw data passed the filtering.
 
-Then we will define the dimensions of these contours and those corresponding in width to some continuous section in the central area of the image (to cut off small “noise” that passed filtering. Yet, not everything is so rosy – there might be glares, shadows, overlaps of the values of the required sections and the sections to cut off), we will assume to be boundary stripes on the label.
+Then we will define the dimensions of these contours and those corresponding in width to some continuous section in the central area of the image (to cut off small "noise" that passed filtering. Yet, not everything is so rosy – there might be glares, shadows, overlaps of the values of the required sections and the sections to cut off), we will assume to be boundary stripes on the label.
 
 In our case, the cork of the bottle has very close values to the required ones, so we will just cut it off at the height specified in the settings BANG_HEIGHT.
 

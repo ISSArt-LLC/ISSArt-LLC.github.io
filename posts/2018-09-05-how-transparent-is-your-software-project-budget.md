@@ -44,9 +44,9 @@ At ISS Art, we once had a big project with a poor documentation. The usage of [S
 
 Typically, if we start a project from scratch, we provide a three-point estimation. We decompose tasks to 4-12 hours granularity and get optimistic, most likely and pessimistic estimations for each item. It allows us to inform the customer about the probable budget and make them more confident in making decisions regarding the required project scope.
 
-<div class="wp-caption aligncenter" id="attachment_2813" style="width: 612px">[![Template of a three-point estimation of a software project budget.](https://issart.com/blog/wp-content/uploads/2018/09/2018-08-budget-estimation-explained-1024x531.png)](https://issart.com/blog/wp-content/uploads/2018/09/2018-08-budget-estimation-explained.png)Budget estimation template for a software project. ISS Art's template.
+[![Template of a three-point estimation of a software project budget.](https://issart.com/blog/wp-content/uploads/2018/09/2018-08-budget-estimation-explained-1024x531.png)](https://issart.com/blog/wp-content/uploads/2018/09/2018-08-budget-estimation-explained.png)Budget estimation template for a software project. ISS Art's template.
 
-</div>### Risks estimated
+### Risks estimated
 
 The gap between the optimistic and the pessimistic estimation is filled with risks. The optimistic estimation is made with a suggestion of no risks, and the pessimistic one is made for the case of all the significant risks. The development team should be able to comment on the risks.
 
@@ -60,9 +60,9 @@ One day you will want to investigate the status of your project budget. Some met
 
 1. **Actual cost** is simply the amount of money, that has been consumed by the project works.
 2. **Distribution of the spent time**. On ISS Art's 'time and material' projects, we regularly provide our customers with the time logs (a roster report, a spent time report) with distribution by team members, tasks, weeks and days and any type of criteria you want to track. One of ISS Art's customers requested to provide a weekly timelog with distribution by their clients. It helped the customer to balance the priorities in accordance with the expected profit of each client.
-3. **Critical chain project buffer (CCPM fever chart) consumption**. The critical chain implies using the project buffer for all the risks that may occur. The ratio between work progress and the buffer consumption is worth being tracked. This metric can indicate whether your project is 'healthy' or not. <div class="wp-caption aligncenter" id="attachment_2804" style="width: 501px">[![Critical chain project management (CCPM) chart for status monitoring of a software project budget](https://issart.com/blog/wp-content/uploads/2018/09/ccpm_chart_for_software_project_budget.png)](https://issart.com/blog/wp-content/uploads/2018/09/ccpm_chart_for_software_project_budget.png)CCPM chart for status monitoring of a software project budget. Image by: donlowe.org
-  
-    </div>
+3. **Critical chain project buffer (CCPM fever chart) consumption**. The critical chain implies using the project buffer for all the risks that may occur. The ratio between work progress and the buffer consumption is worth being tracked. This metric can indicate whether your project is 'healthy' or not.
+
+[![Critical chain project management (CCPM) chart for status monitoring of a software project budget](https://issart.com/blog/wp-content/uploads/2018/09/ccpm_chart_for_software_project_budget.png)](https://issart.com/blog/wp-content/uploads/2018/09/ccpm_chart_for_software_project_budget.png)CCPM chart for status monitoring of a software project budget. Image by: donlowe.org
 
 Advice #3: **select the budget metrics, track them regularly**.
 
@@ -95,9 +95,9 @@ Advice #4: **identify the budget waste to eliminate it**.
 
 Here are practices to lower the project costs, that we use on different projects.
 
-1. **Limited work in progress (WIP)**, focusing. It is a well known Kanban practice, that allows one to keep minimum work 'on their plate'. It enforces focusing, enables flexibility, reduces double work and reworks, shortens the delivery time. “Grasp all, lose all”.
+1. **Limited work in progress (WIP)**, focusing. It is a well known Kanban practice, that allows one to keep minimum work 'on their plate'. It enforces focusing, enables flexibility, reduces double work and reworks, shortens the delivery time. "Grasp all, lose all".
     [![Archery targeting is a metaphor for the limiting work in progress (WIP)](https://issart.com/blog/wp-content/uploads/2018/09/archery-targeting-focusing-limiting-work-in-progress-1024x682.jpg)](https://issart.com/blog/wp-content/uploads/2018/09/archery-targeting-focusing-limiting-work-in-progress.jpg)
-2. **Concise documentation**. Full project documentation is [a dream](https://www.researchgate.net/publication/265416695_Requirements_Fixation). And this dream is oftenly able to burn the project budget. Because, the more comprehensive are the docs, the more effort is needed to keep them up to date. Keep the documentation as simple as possible. One of the core Agile values is “Working software over comprehensive documentation”. Let your product (and its source code) **document itself**. Make **checklists** instead of long articles, start from short lists of the system entities, use cases and components.
+2. **Concise documentation**. Full project documentation is [a dream](https://www.researchgate.net/publication/265416695_Requirements_Fixation). And this dream is oftenly able to burn the project budget. Because, the more comprehensive are the docs, the more effort is needed to keep them up to date. Keep the documentation as simple as possible. One of the core Agile values is "Working software over comprehensive documentation". Let your product (and its source code) **document itself**. Make **checklists** instead of long articles, start from short lists of the system entities, use cases and components.
 3. **Corresponding skills for each task**. If you have simple routine tasks assigned to your high-skilled expensive team members, try to assign those tasks to cheaper staff. Let everybody do their business.
 4. **Flexible scope**. It is impossible to reach all the three goals at once: low budget, tight timeline and highest scope/quality. A project manager has to trade between these constraints due to the project management triangle. If a feature of the product is not necessary or seems to be not very profitable, you can try to move it to future development phases or put it on hold.
     [![Project management triangle is a good illustration for three main constranints of a software project: Scope, Budget (Cost) and Schedule / Quality.](https://issart.com/blog/wp-content/uploads/2018/09/Project_management_triangle-300x228.png "Project management triangle is a good illustration for three main constranints of a software project: Scope, Budget (Cost) and Schedule / Quality.")](https://issart.com/blog/wp-content/uploads/2018/09/Project_management_triangle.png)
@@ -116,7 +116,3 @@ We hope that these simple pieces of advice will save your software project budge
 5. use reliable approaches to **lower your project cost**.
 
 Of course, there are many other different practices to make the budget crystal clear and optimized.
-
-**Please write your comments and questions below!**
-
-- - - - - -

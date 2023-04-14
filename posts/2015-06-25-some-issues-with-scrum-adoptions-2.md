@@ -9,7 +9,7 @@ categories:
     - 'Project Management'
 ---
 
-In my [previous post](http://www.issart.com/blog/scrum-development-as-a-way-of-maximizing-business-value/) I told you about Scrum advantages. But there are a lot of issues when people try to use Scrum on their projects. Scrum is ideal when a company is developing a product for itself, when there are no outsourcing, deadlines and distributed teams. But when you try to use Scrum with outsourced development, things are getting more and more complicated. So, the Project Manager should keep in mind that there might be some false hopes of Scrum (this topic is covered [here](https://www.toptal.com/project-managers/scrum/five-scrum-myths)).
+In my [previous post](https://www.issart.com/blog/scrum-development-as-a-way-of-maximizing-business-value/) I told you about Scrum advantages. But there are a lot of issues when people try to use Scrum on their projects. Scrum is ideal when a company is developing a product for itself, when there are no outsourcing, deadlines and distributed teams. But when you try to use Scrum with outsourced development, things are getting more and more complicated. So, the Project Manager should keep in mind that there might be some false hopes of Scrum (this topic is covered [here](https://www.toptal.com/project-managers/scrum/five-scrum-myths)).
 
 I have a half dozen projects in my portfolio, and today I will share my experience of Scrum in real life with you.
 
@@ -41,7 +41,7 @@ This works fine for new developers, but how can we handle the team ramp down? Fo
 
 ### Lack of documentation
 
-Scrum requires no special documentation, and it is an advantage. But sometimes clients or providers of capital requires some particular documents: delivery instructions, protocol of testing, description of architecture, etc. This problem is often considered to be a showstopper, but it is not. Scrum doesn't require documentation, but it doesn't forbid it. A work item for any document can be placed to the Sprint Backlog as separate item. You can create a User Story “Create Architecture Description” and put it into the backlog. As a result, you will have the document. I put any significant activity into the backlog. It increases transparency of development and makes it easier to track efforts.
+Scrum requires no special documentation, and it is an advantage. But sometimes clients or providers of capital requires some particular documents: delivery instructions, protocol of testing, description of architecture, etc. This problem is often considered to be a showstopper, but it is not. Scrum doesn't require documentation, but it doesn't forbid it. A work item for any document can be placed to the Sprint Backlog as separate item. You can create a User Story "Create Architecture Description" and put it into the backlog. As a result, you will have the document. I put any significant activity into the backlog. It increases transparency of development and makes it easier to track efforts.
 
 ![Documentation](/static/img/2015/06/Documentation.png)
 

@@ -19,7 +19,7 @@ Implementation of ETL is one of the most common tasks now. Creating an aggregato
 
 ### *So, what is NiFi?*
 
-NiFi was created by the NSA and was called “NiagaraFiles” and in 2014 was given over to the Apache Software Foundation (ASF) as part of the NSA technology transfer program. Currently, it is distributed under Apache License 2.0.
+NiFi was created by the NSA and was called "NiagaraFiles" and in 2014 was given over to the Apache Software Foundation (ASF) as part of the NSA technology transfer program. Currently, it is distributed under Apache License 2.0.
 
 Its main features are:
 

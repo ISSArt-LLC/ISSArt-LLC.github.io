@@ -67,7 +67,7 @@ SEO is a source with a long payback period, the average period must be between s
 
 According to our experience, the most effective way is multi-channel marketing, which includes three areas: context, SEO and e-mail marketing. The best way is to involve all these directions simultaneously.
 In our point of view, it's better to use one-time consulting. It's a one-time investment of a long-term positive effect. We do not recommend using SEO promotion regularly.
-Content marketing on a regular basis (in your company's blog and third-party resources) is a more effective way. So you can “kill two birds with one stone” – to get a long-term PR and improve your position in search engines. Moreover, you can do it inhouse!
+Content marketing on a regular basis (in your company's blog and third-party resources) is a more effective way. So you can "kill two birds with one stone" – to get a long-term PR and improve your position in search engines. Moreover, you can do it inhouse!
 
 **11. Ask your provider what tactics they plan to use promoting your brand**
 

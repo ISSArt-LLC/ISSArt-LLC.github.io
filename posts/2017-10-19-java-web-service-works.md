@@ -30,17 +30,17 @@ This was briefly about Java advantages. Now we'd like to describe shortly how we
 
 A user goes to the Internet, enters a web address into the address bar… How does a user get the desired web page?
 
-There are DNS servers. They act as a dictionary: there is a match list between the site name and the IP of the server where the site content is located (that is called “resolve name by IP”). This is for public servers. Which DNS servers exactly will be used for search (their IP addresses) depends on the connection to the network and on the provider.
+There are DNS servers. They act as a dictionary: there is a match list between the site name and the IP of the server where the site content is located (that is called "resolve name by IP"). This is for public servers. Which DNS servers exactly will be used for search (their IP addresses) depends on the connection to the network and on the provider.
 
-Then, as soon as we found the address, our request from the browser is sent there. There is a special application installed on the computer with the specified IP address – a web server. Its task is to produce content. DNS servers can “tell” at which address a website is located. Then a web server returns the required content to a user.
+Then, as soon as we found the address, our request from the browser is sent there. There is a special application installed on the computer with the specified IP address – a web server. Its task is to produce content. DNS servers can "tell" at which address a website is located. Then a web server returns the required content to a user.
 
-There can be several applications present in one system. In this case, not only an IP address matters; such an abstraction as port is involved as well. Port is actually a certain number. So, when we see an IP address and a port, we address to a web server. To make this process more clear: different applications on the same computer have their own port (a unique number). For example, a web server typically has a port number 80 or 443 (for SSL). This is some kind of arrangement. So, when we type “http:\\\\ address” in the browser, in fact the request will go to the address on port 80, and if we type “https:\\\\ address”, then it will go to the address on port 443. This way a server “understands” that this is an external request. Therefore, the task is to generate the requested content – e.g. images, PDFs, JavaScript objects. A web server produces static content only.
+There can be several applications present in one system. In this case, not only an IP address matters; such an abstraction as port is involved as well. Port is actually a certain number. So, when we see an IP address and a port, we address to a web server. To make this process more clear: different applications on the same computer have their own port (a unique number). For example, a web server typically has a port number 80 or 443 (for SSL). This is some kind of arrangement. So, when we type "http:\\ address" in the browser, in fact the request will go to the address on port 80, and if we type "https:\\ address", then it will go to the address on port 443. This way a server "understands" that this is an external request. Therefore, the task is to generate the requested content – e.g. images, PDFs, JavaScript objects. A web server produces static content only.
 
 In cases when dynamic content is requested, however, a web server isn't capable of generating it. Say, in case of an E-shop content is dynamic: a catalog is constantly changing, users have their personal pages that differ from one another. Therefore, the dynamics needs to be recreated.
 
 ### How to achieve this?
 
-A web server “understands” that it cannot do it on its own, and thus it redirects a request to an application. What kind of an application is it?
+A web server "understands" that it cannot do it on its own, and thus it redirects a request to an application. What kind of an application is it?
 
 It should receive HTTP requests and produce content which cannot be defined statically. In addition, , it returns a web page (HTML).
 
@@ -60,7 +60,7 @@ The application server acts like an infrastructure intermediate layer between th
 ![null](/static/img/2017/10/webappserv-Page-1.png)
 Authorization is an essential part of many programming solutions. As our experience shows, application server can be of much help in implementing this feature as well, especially when we deal with larger systems. That is, application server can implement authorization by the lists of users that can be kept in some third-party storage. How is this actually achieved? A server can be configured in such a way that allows to check users for compliance with the certain criteria.
 
-And, a few words about requests. Based on a URL, a server “understands” what kind of request is received, and transfers this request further for processing.
+And, a few words about requests. Based on a URL, a server "understands" what kind of request is received, and transfers this request further for processing.
 
 Let's give an example. Say, there is an online store. The page \\delivery will show the delivery methods. It is static, so, the web server will generate it directly, without the participation of the app server.
 

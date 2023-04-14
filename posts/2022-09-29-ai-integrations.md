@@ -42,7 +42,7 @@ It's a refreshing, new look on an old classic. Of course, some might say it was 
 
 The process is very simple and involves using a still that has been retrofitted with AI technology. Then the system takes the whisky through its paces—mashing, fermenting, distilling and maturing.
 
-One company that is using AI to innovate their whiskey production process is Kentucky-based liquor maker Beam Suntory, which uses an algorithm they developed called “Beam Complete”. This system predicts how flavors will mix with each other and what adjustments should be made before a batch of products leaves for bottling.
+One company that is using AI to innovate their whiskey production process is Kentucky-based liquor maker Beam Suntory, which uses an algorithm they developed called "Beam Complete". This system predicts how flavors will mix with each other and what adjustments should be made before a batch of products leaves for bottling.
 
 The whisky industry is a perfect candidate for AI because it relies on data to provide feedback insights and recommendations to perfect the perfect blend.
 
@@ -83,7 +83,7 @@ Phyron CEO Johan Sundstrand sees expectations for automotive marketing to be sim
 ## **Fraud detection in finance** 
 **and other domains**
 
-With increasing online shopping, fraudulent transactions are also on the rise. Companies use machine learning algorithms to identify and block fraudsters. You are watching “Game of Thrones” when you get a call from your bank asking if you have used your card for “$X” at a store in your city to buy a gadget. It was not you who bought the expensive device using your card; it has been in your pocket all day. How did the bank flag this purchase as fraudulent? Thanks to Machine Learning algorithms. Financial fraud costs $80 billion annually, where only Americans are at risk worth $50 billion per annum.
+With increasing online shopping, fraudulent transactions are also on the rise. Companies use machine learning algorithms to identify and block fraudsters. You are watching "Game of Thrones" when you get a call from your bank asking if you have used your card for "$X" at a store in your city to buy a gadget. It was not you who bought the expensive device using your card; it has been in your pocket all day. How did the bank flag this purchase as fraudulent? Thanks to Machine Learning algorithms. Financial fraud costs $80 billion annually, where only Americans are at risk worth $50 billion per annum.
 
 One of the most important goals for applications of machine learning in the banking/finance domain is fraud prevention, i.e., detecting and minimizing any fraudulent activity. Machine learning is best suited for this use case as it can scan through vast amounts of transactional data and identify patterns, i.e., if there is any unusual behavior. Every transaction customer makes is analyzed in real-time and given a fraud score representing the likelihood of the transaction being fraudulent. In case of a fraud transaction, the transaction is blocked or handed over for a manual review. All of this happens in the blink of an eye. If the fraud score is above a particular range, a rejection will be triggered automatically. Otherwise this would be difficult for a human being to review 1000's data points in seconds and make a decision without the application of machine learning.
 

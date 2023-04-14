@@ -10,7 +10,7 @@ categories:
     - 'Web Development'
 ---
 
-As we discussed in one of our previous articles about [software development](http://www.issart.com/blog/application-development-scratch-part-1/), there are times when outsourcing a particular project makes the most sense. After doing your initial project research, you may realize you do not possess the necessary skills for using available tools to achieve the result needed, the time demands are too great or perhaps it is much more cost efficient to use an outside provider to complete the development project.
+As we discussed in one of our previous articles about [software development](https://www.issart.com/blog/application-development-scratch-part-1/), there are times when outsourcing a particular project makes the most sense. After doing your initial project research, you may realize you do not possess the necessary skills for using available tools to achieve the result needed, the time demands are too great or perhaps it is much more cost efficient to use an outside provider to complete the development project.
 
 Say, you cannot handle Facebook integration on your own. In this case you may want to [hire Facebook API developers](https://www.devteam.space/hire-facebook-api-developers/).
 
@@ -61,7 +61,7 @@ If the element in the software causing the issue is intertwined with the core op
 
 #### V. Test the product yourself
 
-Have you ever heard the phrase, “trust but verify”? This is an absolute rule that must be followed when outsourcing development. There is nothing wrong with building trust in a developer over time, but it is essential to test and verify the results yourself.
+Have you ever heard the phrase, "trust but verify"? This is an absolute rule that must be followed when outsourcing development. There is nothing wrong with building trust in a developer over time, but it is essential to test and verify the results yourself.
 
 Not only will this give you peace of mind and ensure the provider has completed the project properly, it will also give you an opportunity to test the software from a consumer's point of view. You may find something the developer missed, an honest mistake or simply a portion of the software that needs a little tweaking.
 

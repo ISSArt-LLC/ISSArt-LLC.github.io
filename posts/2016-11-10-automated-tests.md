@@ -14,13 +14,13 @@ tags:
     - testing
 ---
 
-If you aren't implementing a prototype for some quick demo in some 8 hours, 3 days, etc. to archive it in a folder like the “trash” right after that, then you will have to think about the quality assurance, finding bugs, etc. Somebody will have to do this job after all. Whether you include the automated tests in the code development process or you totally rely on the testers, the automated tests will appear in your system sooner or later (or the project will die aborning).
+If you aren't implementing a prototype for some quick demo in some 8 hours, 3 days, etc. to archive it in a folder like the "trash" right after that, then you will have to think about the quality assurance, finding bugs, etc. Somebody will have to do this job after all. Whether you include the automated tests in the code development process or you totally rely on the testers, the automated tests will appear in your system sooner or later (or the project will die aborning).
 
 The worst thing is that auto tests are also the code, i.e. all problems relating to the code development (the design, bugs, usability, performance, etc.) exist in tests. When you automate the testing, you actually **implement the new functionality in your system**. Thus, you should develop tests as any other features.
 
-**Firstly**, you should understand the issue you want to resolve by automating the tests. “Improve the quality”, “Reduce the number of bugs”… these goals are too general for developing the feature.
+**Firstly**, you should understand the issue you want to resolve by automating the tests. "Improve the quality", "Reduce the number of bugs"… these goals are too general for developing the feature.
 
-So what is the goal? “I have some [use cases](http://searchsoftwarequality.techtarget.com/definition/use-case) with an expected behavior, I would like to automate the validation of these use cases”.
+So what is the goal? "I have some [use cases](http://searchsoftwarequality.techtarget.com/definition/use-case) with an expected behavior, I would like to automate the validation of these use cases".
 
 It doesn't matter how complex the use case is, it can be just a method call or a complex sequence of the user's actions, however, the use case must be clear and the developer must understand it.
 
@@ -36,7 +36,7 @@ So the automated tests are an additional feature of the system, but why do we ne
 
 Every time you change the existent code you have a risk to break the working functionality. And it is quite difficult to write unchangeable code, especially at the start. Use cases are generally more stable than the code implementing them, so the code testing them will be more stable as well. It means you can significantly reduce the risk to make an error with the coming implementation change.
 
-It is important to understand the difference between the business requirements and the use case. Business requirements can change a lot, but you will identify the most important and stable use cases to build the core of the system. And you can check these use cases automatically. For example, the use case can be “the data format can change any time and system should handle it correctly”, however, it doesn't mean that your customer requires this. Perhaps he/she calls you unexpectedly and asks to make a small change.
+It is important to understand the difference between the business requirements and the use case. Business requirements can change a lot, but you will identify the most important and stable use cases to build the core of the system. And you can check these use cases automatically. For example, the use case can be "the data format can change any time and system should handle it correctly", however, it doesn't mean that your customer requires this. Perhaps he/she calls you unexpectedly and asks to make a small change.
 
 The core use cases are stable and automated tests covering these use cases are stable as well.
 
@@ -44,7 +44,7 @@ Auto testing is a large area, thus I'll dwell upon some **advice** for anybody i
 
 1. Start automating the tests as early as possible. It will allow you to identify the use cases and evaluate their importance and usability for the architecture. If you understand that you can't automate the testing of this use case on your level you have the possibility to modify and decompose this use case before you have it implemented. It will allow you reach the better architecture and save time.
 
-For example, you have a requirement “a customer places an order in the system and in 5 minutes he should be connected with the operator”. You can write a fast implementation and it seems working, however, you can't easily automate the testing of such use case, so you will probably need to split the original requirement to various use cases.
+For example, you have a requirement "a customer places an order in the system and in 5 minutes he should be connected with the operator". You can write a fast implementation and it seems working, however, you can't easily automate the testing of such use case, so you will probably need to split the original requirement to various use cases.
 
 2. Modify the use case tests before you modify the use case implementation. If you find out that the automated tests support becomes costly, you perhaps should think about the refactoring of the use cases and tests. Probably you haven't taken into account some important non-functional use cases (like the code flexibility or clarity) and you should add them to the system.
 

@@ -73,7 +73,7 @@ If you look at any two columns and discard all other, you will still have all 9 
 
 So, L<sub>9</sub>(3<sup>4</sup>) is a 9×4 array where every column can take up to 3 different values. Make notice that orthogonal arrays don't contain all possible combinations of { A; B; C } so { A; A; B }, { A; B; A }, { B; B; B } and some other don't appear. It's because they're triples, while orthogonal arrays only guarantee that all pairs appear in the array. There're orthogonal arrays that have a different number of possible values for different columns. For example, L<sub>64</sub>(8<sup>2</sup>4<sup>3</sup>) is an orthogonal array that has 64 rows, two columns of 8 values and three columns of 4 values.
 
-Unfortunately, in real software we have many more parameters (aka “columns”) and values for every parameter (aka A, B, C), and L<sub>p</sub>(X<sub>1</sub><sup>n<sub>1</sub></sup>X<sub>2</sub><sup>n<sub>2</sub></sup>…X<sub>m</sub><sup>n<sub>m</sub></sup>) orthogonal arrays may not exist. So, our goal is to locate the next big enough array and “insert” our variables properly. In such scenario, completely empty columns (every cell is empty in the column) may appear within the array. All you need to do is to discard them completely.
+Unfortunately, in real software we have many more parameters (aka "columns") and values for every parameter (aka A, B, C), and L<sub>p</sub>(X<sub>1</sub><sup>n<sub>1</sub></sup>X<sub>2</sub><sup>n<sub>2</sub></sup>…X<sub>m</sub><sup>n<sub>m</sub></sup>) orthogonal arrays may not exist. So, our goal is to locate the next big enough array and "insert" our variables properly. In such scenario, completely empty columns (every cell is empty in the column) may appear within the array. All you need to do is to discard them completely.
 
 There're plenty of tools that help to locate a suitable orthogonal array considering the number of the variables and their values. There's a nice list of them: [http://www.pairwise.org/tools.asp](http://www.pairwise.org/tools.asp). Be aware that some tools might not be supported anymore or require payment. We will use web-based and free [https://pairwise.teremokgames.com/](https://pairwise.teremokgames.com/) below in this article.
 
@@ -110,13 +110,13 @@ and Generate Pairwise:
 
 [![](https://issart.com/blog/wp-content/uploads/2018/12/Pairwise-274x300.png)](https://issart.com/blog/wp-content/uploads/2018/12/Pairwise.png)
 
-As you can see, instead of 240 tests we ended up with just 25. Empty cells within array can be filled out with any valid values for particular parameters, e.g. B16-B25 can contain “individual”, “company”, “partner” or any their combination. It won't decrease or increase the bug detection rate and coverage.
+As you can see, instead of 240 tests we ended up with just 25. Empty cells within array can be filled out with any valid values for particular parameters, e.g. B16-B25 can contain "individual", "company", "partner" or any their combination. It won't decrease or increase the bug detection rate and coverage.
 
 **Step #4
 We are already good to start writing test cases. Any row in the table above (except, obviously, the first one) should be processed as a set of variable+value combinations to make a single test.
 
 **Additional capabilities**
-We rarely have to test the whole application from scratch, and an orthogonal array lets us pick up a set of tests selectively. Imagine that “partner” has just been added to the system under test and we need to check its interaction with all possible values for other parameters. Within highlighted area, every partner + location, partner + payment method, and partner + browser combination is tested at least once:
+We rarely have to test the whole application from scratch, and an orthogonal array lets us pick up a set of tests selectively. Imagine that "partner" has just been added to the system under test and we need to check its interaction with all possible values for other parameters. Within highlighted area, every partner + location, partner + payment method, and partner + browser combination is tested at least once:
 
 [![](https://issart.com/blog/wp-content/uploads/2018/12/new-275x300.png)](https://issart.com/blog/wp-content/uploads/2018/12/new.png)
 

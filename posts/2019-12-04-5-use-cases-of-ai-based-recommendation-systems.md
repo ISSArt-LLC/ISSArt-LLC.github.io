@@ -21,7 +21,7 @@ Wondering what kind of an intelligent recommendation engine to implement for you
 
 ### 1. Related products recommendations
 
-Say, a user has already purchased a hat. Why not offer buying a scarf that matches this hat, so that the look will be complete? This is about related products recommendations, and this use case is very popular among online stores. It is often implemented by means of machine learning algorithms as “Complete the look” or “You might also like” sections in online fashion stores like ASOS, H&M, Pandora and many others.
+Say, a user has already purchased a hat. Why not offer buying a scarf that matches this hat, so that the look will be complete? This is about related products recommendations, and this use case is very popular among online stores. It is often implemented by means of machine learning algorithms as "Complete the look" or "You might also like" sections in online fashion stores like ASOS, H&M, Pandora and many others.
 
 ![Intelligent recommendation system](https://issart.com/blog/wp-content/uploads/2019/12/ASOS.png)
 
@@ -33,7 +33,7 @@ Sometimes it happens that a certain product is currently out of stock. This shou
 
 ![Out of stock recommendations](https://issart.com/blog/wp-content/uploads/2019/12/Urban_outfitters.png)
 
-Combined with a feature for “notify me” when a product appears in stock again, such ML based recommender engine demonstrates markable results. See the Skechers example below.
+Combined with a feature for "notify me" when a product appears in stock again, such ML based recommender engine demonstrates markable results. See the Skechers example below.
 
 ![In stock notification](https://issart.com/blog/wp-content/uploads/2019/12/Skechers.png)
 

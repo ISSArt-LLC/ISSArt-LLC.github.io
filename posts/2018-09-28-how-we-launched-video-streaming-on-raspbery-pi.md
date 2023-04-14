@@ -73,7 +73,7 @@ On the Raspberry Pi, the installation does not cause any problem, because there 
 
 apt-get install omxplayer
 
-After the installation, you can run “omxplayer –live udp://@:1234” and the player is ready to accept the stream.
+After the installation, you can run "omxplayer –live udp://@:1234" and the player is ready to accept the stream.
 
 ***3. Optimization of parameters***
 
@@ -85,9 +85,9 @@ For this you need to edit the file **/boot/config.txt**
 
 ***4. OMXPlayer is very sensitive to the parameters of the video stream***
 
-For example, it used to fall displaying a cheerful phrase “have a nice day”, whenever the bit rate of the video stream was changed.
+For example, it used to fall displaying a cheerful phrase "have a nice day", whenever the bit rate of the video stream was changed.
 
-And those days were really “nice”, because now we know the cause, but then it was a mystery.
+And those days were really "nice", because now we know the cause, but then it was a mystery.
 
 We started preparing to stream video-files with the same settings, and it helped, streamings stopped interrupting.
 

@@ -55,7 +55,7 @@ If you came up with a decision not to develop the whole project from scratch, bu
 - Second, you need to check what the purchasing agreement actually allows you to do with the code – modify it and use it for your own needs, or distribute the modified version further.
 - Third, you have to make sure that you customize the purchased material enough for it to be considered a new product.\[3\]
 
-Keeping these things in mind, you might prefer creating the project from the ground up to reskinning the existing code. Read more about the pros and cons of both options [here](http://www.issart.com/blog/application-development-scratch-part-1/) and [here](http://www.issart.com/blog/reskinning-tweaking-code-application-development-part-2/).
+Keeping these things in mind, you might prefer creating the project from the ground up to reskinning the existing code. Read more about the pros and cons of both options [here](https://www.issart.com/blog/application-development-scratch-part-1/) and [here](https://www.issart.com/blog/reskinning-tweaking-code-application-development-part-2/).
 
 **Graphic and UI design**
 

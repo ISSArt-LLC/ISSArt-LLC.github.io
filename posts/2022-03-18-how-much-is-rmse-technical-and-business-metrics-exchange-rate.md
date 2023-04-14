@@ -69,4 +69,4 @@ To sum up:
 
 P.S. Try to be more empathic communicating with customers. This skill makes it easier to work on the project.
 
-More info about Profit Curve and other management-gadgets in ML projects yoг can find in the book[ VejKo Crunic “Succeeding with AI”](https://www.manning.com/books/succeeding-with-ai)
+More info about Profit Curve and other management-gadgets in ML projects yoг can find in the book[ VejKo Crunic "Succeeding with AI"](https://www.manning.com/books/succeeding-with-ai)

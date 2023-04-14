@@ -9,12 +9,12 @@ categories:
     - General
 ---
 
-> “The difference between what we do and what we are capable of doing would suffice to solve most of the world's problems.”
+> "The difference between what we do and what we are capable of doing would suffice to solve most of the world's problems."
 > Mahatma Gandhi
 
 What mark do you want to leave in our history? Are you dreaming about the project influencing the entire world?
 
-Let's collect ideas and principles that could answer the question “How to do it?”
+Let's collect ideas and principles that could answer the question "How to do it?"
 
 ## 1. To serve people solving their complex problems
 

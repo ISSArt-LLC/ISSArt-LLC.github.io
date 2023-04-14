@@ -26,7 +26,7 @@ One of the Christmas traditions that children have is giving Santa Claus a big l
 
 As a part of this release, Twilio has promised that it will donate $1 for each of the first 10,000 calls made to SantaPhone.
 
-<div>![](/static/img/2022/12/2.jpg)</div>Adults and children can visit the SantaPhone website and schedule a call with one of Santa's “elves”. After that a text message is delivered to verify the authenticity of the phone number provided. At the arranged time, a phone call will be made, and a pre-recorded message will ask the children what they want for Christmas. Afterwards, the recording is forwarded to a pre-designated email address to let Santa's “helpers” know what their kids' are dreaming of. It can also be forwarded to family and friends just by sharing the link or downloading the audio file. Finally, an MMS from the North Pole will be sent to the phone number, using Twilio's Programmable SMS product.
+<div>![](/static/img/2022/12/2.jpg)</div>Adults and children can visit the SantaPhone website and schedule a call with one of Santa's "elves". After that a text message is delivered to verify the authenticity of the phone number provided. At the arranged time, a phone call will be made, and a pre-recorded message will ask the children what they want for Christmas. Afterwards, the recording is forwarded to a pre-designated email address to let Santa's "helpers" know what their kids' are dreaming of. It can also be forwarded to family and friends just by sharing the link or downloading the audio file. Finally, an MMS from the North Pole will be sent to the phone number, using Twilio's Programmable SMS product.
 
 Why was SantaPhone created? Well, it's the holiday season and it seems Twilio wanted to build something lighthearted and fun while also giving back to those less fortunate — it has a pattern of doing that. It's also likely that SantaPhone was a byproduct of a hackathon host company and was too great to pass it up.
 
@@ -44,17 +44,17 @@ By playing the game, any external or internal person can compete with each other
 
 This is Microsoft's fifth year of Windows-themed ugly sweaters and the third year the company has been selling them to the general public.
 
-“It started back in 2017, we had posted three made-up sweaters and said 'which ugly sweater would you wear this year?' and it was our best performing post for the entire year,” says Megan Muehleman, senior social media manager at Microsoft, in an interview with The Verge.
+"It started back in 2017, we had posted three made-up sweaters and said 'which ugly sweater would you wear this year?' and it was our best performing post for the entire year," says Megan Muehleman, senior social media manager at Microsoft, in an interview with The Verge.
 
-<div>![](/static/img/2022/12/5.jpg)</div>This year, Microsoft has turned to Clippy, which is more Office-inspired than Windows itself. Born in Office 97, Clippy was resurrected in 2019 for Microsoft Teams before being quickly killed off in a move that one Microsoft insider described as the “brand police” not being happy that Clippy had returned. Microsoft has loosened the tight Clippy brand shackles in recent years, with its Groucho eyebrows now the default paperclip emoji in Windows and stickers in Microsoft Teams.
+<div>![](/static/img/2022/12/5.jpg)</div>This year, Microsoft has turned to Clippy, which is more Office-inspired than Windows itself. Born in Office 97, Clippy was resurrected in 2019 for Microsoft Teams before being quickly killed off in a move that one Microsoft insider described as the "brand police" not being happy that Clippy had returned. Microsoft has loosened the tight Clippy brand shackles in recent years, with its Groucho eyebrows now the default paperclip emoji in Windows and stickers in Microsoft Teams.
 
-![](/static/img/2022/12/6-1024x682.jpg)“Clippy has always been in the back of our minds. We've always discussed it every single year,” says Muehleman. “It was just always never the right time.” After a resurgence in Clippy usage inside Microsoft, the talking paperclip is now on an ugly sweater you can wear around the dinner table at Thanksgiving or on Christmas Day.
+![](/static/img/2022/12/6-1024x682.jpg)"Clippy has always been in the back of our minds. We've always discussed it every single year," says Muehleman. "It was just always never the right time." After a resurgence in Clippy usage inside Microsoft, the talking paperclip is now on an ugly sweater you can wear around the dinner table at Thanksgiving or on Christmas Day.
 
 ## **Santa uses MongoDB**
 
 MongoDB is a document-oriented database management system that does not require a description of the table schema. Considered one of the classic examples of NoSQL systems, it uses JSON-like documents and a database schema.
 
-Due to Christmas eve, MongoDB has revealed how Santa could use their MongoDB software to deliver 6 billion presents in one night. How he could collect all those “Dear Santa” letters, read them one by one, make sure that there are no mistakes, no missed presents, and no inconsistent state.
+Due to Christmas eve, MongoDB has revealed how Santa could use their MongoDB software to deliver 6 billion presents in one night. How he could collect all those "Dear Santa" letters, read them one by one, make sure that there are no mistakes, no missed presents, and no inconsistent state.
 
 For example, here is how Santa maintains a record for each one of us, where he keeps track of where he needs to deliver the presents. He uses MongoDB with geospatial information to understand where to deliver the gifts. Each record looks like this:
 

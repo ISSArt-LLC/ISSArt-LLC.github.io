@@ -41,7 +41,7 @@ The faster the development of technologies, the more concerns about cyber-securi
 
 ##### Edge computing
 
-[Edge computing](https://www.apc.com/us/en/solutions/business-solutions/edge-computing/what-is-edge-computing.jspм) assumes locating the computing infrastructure closer to the data sources. This results in latency and bandwidth use reduction. Computation and further insightful actions are performed ”[right at the edge](https://www.ge.com/digital/blog/what-edge-computing)”.
+[Edge computing](https://www.apc.com/us/en/solutions/business-solutions/edge-computing/what-is-edge-computing.jspм) assumes locating the computing infrastructure closer to the data sources. This results in latency and bandwidth use reduction. Computation and further insightful actions are performed "[right at the edge](https://www.ge.com/digital/blog/what-edge-computing)".
 
 Industrial companies will certainly take advantage of these opportunities. Autonomous vehicles producers also find this approach useful. They need to react immediately after a pedestrian is detected, so edge computing for them is a way to avoid network latency and ensure fast response. The same is true about industrial machines that need to stop immediately as soon as a [human is detected](https://blog.bosch-si.com/bosch-iot-suite/why-edge-computing-for-iot/) in a dangerous area.
 

@@ -61,8 +61,8 @@ Let's describe the real situatuion. We have 2 types of objects: Project and Coll
 
 Suppose that we have found out additional requirements after discussions with the customer.
 
-1) There aren't any restrictions on inclosing the project into the collection.
-2) You can put the collection into another collection. This action is unlimited as well. And in the future you will need to display the total number of all collection entries of all levels.
+1. There aren't any restrictions on inclosing the project into the collection.
+2. You can put the collection into another collection. This action is unlimited as well. And in the future you will need to display the total number of all collection entries of all levels.
 This example is similar to the real system case and, in my opinion, it contains the error in the design. The domain model is too abstract for the data domain, thus, the final solution has the complicated logic and it is quite difficult to test it.
 
 Indeed, the final users are mostly artists, designers, engineers, architects. The real Project is a result of the human mind. And collections serve to group projects by some clean criteria such as the project's author, the content, etc. So does it really make sense to include any projects into any collections? If I were an interior designer I wouldn't put my project into the collection of aircrafts. And I wouldn't include my collection into other designer's collection. Instead I would use a collection to organize my projects and I'd prefer to have some kind of tags to define the domain of my projects.
@@ -73,10 +73,10 @@ For example, if the requirements or the data domain imply contextual relations i
 
 Turning to our example, suppose that we have changed the domain model and we have split 2 terms – the collection and the catalogue, so we have:
 
-1) The collection is a folder which the user creates to organize the projects. The collections aren't of great value for analytics, the users can put anything they want. The collections and projects graph should represent a tree.
-2) The catalogue relates to the project domain. The user can put the project into several existent catalogues, but its number is limited.
-3) The catalogues are independent and don't have any relations between each other. The catalogue is a kind of a tag.
-4) The catalogue's name is unique and there isn't a great number of catalogues in comparison with projects. There are some restrictions on the catalogue creation as well.
+1. The collection is a folder which the user creates to organize the projects. The collections aren't of great value for analytics, the users can put anything they want. The collections and projects graph should represent a tree.
+2. The catalogue relates to the project domain. The user can put the project into several existent catalogues, but its number is limited.
+3. The catalogues are independent and don't have any relations between each other. The catalogue is a kind of a tag.
+4. The catalogue's name is unique and there isn't a great number of catalogues in comparison with projects. There are some restrictions on the catalogue creation as well.
 Thus, we need the projects filtered by the catalogue and the creation date. In the future we will implement the catalogue size statistics and probably some limited hierarchy of the catalogues. We need to implement the projects filter by the collection as well. We assume that collections don't contain many projects so we don't need to implement some additional filters.
 
 Regarding the database, I would exclude the Key-Value type, because it isn't convenient to perform queries by non-unique criteria.
@@ -149,10 +149,10 @@ Or if you don't need to retrieve the catalogue itself with the project you can u
 
 In conclusion I would like to make the following points:
 
-1) The requirement of the unique filter isn't difficult to implement.
-2) There are 2 groups of the non-unique filters: relational and non-relational.
-2.1) Relational filters lead to the limitations of your database, you should know about them as early as possible.
-2.2) Non-relational filters can lead to the limitations of your database, however, they aren't significant.
+1. The requirement of the unique filter isn't difficult to implement.
+2. There are 2 groups of the non-unique filters: relational and non-relational.
+    1. Relational filters lead to the limitations of your database, you should know about them as early as possible.
+    2. Non-relational filters can lead to the limitations of your database, however, they aren't significant.
 
-3) The combined filters must be implemented relying on common sense.
+3. The combined filters must be implemented relying on common sense.
 With regard to the filter all data is equal in terms of the search results order. If your search functionality requirements contain the non-unique filter with the pagination you will have to create the artificial order of results. In general, sorting is provided by the database, however its usage may have the negative performance effect.

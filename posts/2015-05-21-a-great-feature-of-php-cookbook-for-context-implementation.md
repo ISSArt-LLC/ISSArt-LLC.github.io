@@ -9,7 +9,7 @@ categories:
     - General
 ---
 
-This article covers technical details of PHP driven configuration described in a [previous article](http://www.issart.com/blog/great-feature-php/). There are a lot of stones under the water that can drive you crazy when you work with PHP templating engine. I will tell you how to work around some of them. We'll discuss how to:
+This article covers technical details of PHP driven configuration described in a [previous article](https://www.issart.com/blog/great-feature-php/). There are a lot of stones under the water that can drive you crazy when you work with PHP templating engine. I will tell you how to work around some of them. We'll discuss how to:
 
 1. Implement script inclusion methods
 2. Prevent vision of context's private members
@@ -21,15 +21,15 @@ This article covers technical details of PHP driven configuration described in a
 
 ### 1. How to implement script inclusion methods
 
-Scripts can be included via simple PHP “include” statement:
+Scripts can be included via simple PHP "include" statement:
 
 ```php
 include $path;
 ```
 
-Since all script inclusion statements go between “ob_start()” and “ob_get_clean()” statements (see “build” method in a [previous article](http://www.issart.com/blog/great-feature-php/)), their entire output will go to the buffer.
+Since all script inclusion statements go between "ob_start()" and "ob_get_clean()" statements (see "build" method in a [previous article](https://www.issart.com/blog/great-feature-php/)), their entire output will go to the buffer.
 
-If we type “include” statement in a scope of some object, all members of this object will be available in the script via $this variable.
+If we type "include" statement in a scope of some object, all members of this object will be available in the script via $this variable.
 
 ```php
 class FE_Config_Context
@@ -75,7 +75,7 @@ class FE_Config_Context
 }
 ```
 
-That's weird and unsecure, so we must deal with that. To do that, let's use class adapter pattern. In other words, let's implement a wrapper class which has the same API as context, but has no custom private members. Let's apparently call it “Context”, and rename the wrapped class to “ContextRunner”. Let's delegate implementation of all “Context” methods to “ContextRunner”.
+That's weird and unsecure, so we must deal with that. To do that, let's use class adapter pattern. In other words, let's implement a wrapper class which has the same API as context, but has no custom private members. Let's apparently call it "Context", and rename the wrapped class to "ContextRunner". Let's delegate implementation of all "Context" methods to "ContextRunner".
 
 ```php
 class FE_Config_Context
@@ -123,7 +123,7 @@ class FE_Config_ContextRunner
 }
 ```
 
-Field “$runner” and method “_include” are still available in the scripts, but custom private members like “$storagePath” are no longer.
+Field "$runner" and method "_include" are still available in the scripts, but custom private members like "$storagePath" are no longer.
 
 ### 3. Implement graceful error handling
 
@@ -207,7 +207,7 @@ Error occured while inclusion to 'C:\website\git\config\ISS\component-types\BLOG
 Can't read directory 'C:\website\git\config\ISS\component-types\BLOG\component'
 ```
 
-If “$cause” will appear to be an unexpected exception (i.e. not FE_Exception), it will output a full stack trace:
+If "$cause" will appear to be an unexpected exception (i.e. not FE_Exception), it will output a full stack trace:
 
 ```
 Error occured while building configuration for company ISS
@@ -218,7 +218,7 @@ Stack trace:
 usual_php_stack_trace_goes_here
 ```
 
-One more thing to explain is “$backtraceDepth” argument in “includeScript” method. The clue is that it could be useful in implementation of other context low-level methods.
+One more thing to explain is "$backtraceDepth" argument in "includeScript" method. The clue is that it could be useful in implementation of other context low-level methods.
 
 ```php
 public function includeAllScripts($path, $extension = 'php')
@@ -254,7 +254,7 @@ $this->includeScript('blog.php', array(
 }
 ```
 
-It can be achieved via state stack implementation. Let's add a new “$args” argument to “includeScript” method.
+It can be achieved via state stack implementation. Let's add a new "$args" argument to "includeScript" method.
 
 ```php
 class FE_Config_Context
@@ -363,7 +363,7 @@ class FE_Config_State
 
 ### 5. Include scripts by relative path
 
-Usual “include” PHP statement is looking for a file [in multiple locations](http://php.net/manual/en/function.include.php) which we actually don't care about in PHP driven configuration. What we actually want is to be able to include files relatively to current script location.
+Usual "include" PHP statement is looking for a file [in multiple locations](http://php.net/manual/en/function.include.php) which we actually don't care about in PHP driven configuration. What we actually want is to be able to include files relatively to current script location.
 
 ```php
 $this->includeScript('blog.php'); // include blog.php in a current folder
@@ -400,13 +400,13 @@ class FE_Config_ContextRunner
 }
 ```
 
-Find “normalizePath” implementation in [PHP user comments](http://php.net/manual/en/function.realpath.php#112367).
+Find "normalizePath" implementation in [PHP user comments](http://php.net/manual/en/function.realpath.php#112367).
 
-We've made sure that “include” statement is always called with absolute path pointing to a nested script location.
+We've made sure that "include" statement is always called with absolute path pointing to a nested script location.
 
 ### 6. Output arrays/objects in for-loops
 
-Sometimes you have a collection of objects and you want to use their properties in PHP driven configuration. The first approach that can be helpful is using “json_encode” method to serialize these properties and print them to the output.
+Sometimes you have a collection of objects and you want to use their properties in PHP driven configuration. The first approach that can be helpful is using "json_encode" method to serialize these properties and print them to the output.
 
 ```php
 {
@@ -447,7 +447,7 @@ It works in the simplest cases, but sometimes you also need to be able to use co
 }
 ```
 
-You can see that code is getting complicated because of JSON array formatting stuff. To get this fixed, let's reuse a couple of JSON writer classes to convert arbitrary data structures to JSON in streaming fashion. I already described these classes (JsonArrayWriter and JsonObjectWriter) in **Problem six** paragraph of [Front end optimization experience](http://www.issart.com/blog/front-end-optimization-experience-part-2/) article. Let me show you implementation of these classes.
+You can see that code is getting complicated because of JSON array formatting stuff. To get this fixed, let's reuse a couple of JSON writer classes to convert arbitrary data structures to JSON in streaming fashion. I already described these classes (JsonArrayWriter and JsonObjectWriter) in **Problem six** paragraph of [Front end optimization experience](https://www.issart.com/blog/front-end-optimization-experience-part-2/) article. Let me show you implementation of these classes.
 
 ```php
 class JsonArrayWriter
