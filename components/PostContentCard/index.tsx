@@ -1,12 +1,14 @@
 import { useEffect } from "react";
 import Image from "next/image";
-import { marked } from "marked";
+import ReactMarkdown from "react-markdown";
 import { Box, Chip, Link, Stack, Typography } from "@mui/material";
 import { slugify } from "../../utils";
 import markdownStyles from "./markdown.module.scss"
 import DateFormatter from "../DateFromatter";
-import hljs from 'highlight.js';
 import 'highlight.js/styles/github.css';
+import Highlight from 'react-highlight'
+import Zoom from 'react-medium-image-zoom'
+import 'react-medium-image-zoom/dist/styles.css'
 
 interface PostContentCardProps {
   frontmatter: {
@@ -19,13 +21,6 @@ export default function PostContentCard({
   frontmatter,
   content,
 }: PostContentCardProps) {
-  useEffect(() => {
-    const codeBlocks = document.querySelectorAll("[class^='language-']");
-    codeBlocks.forEach(
-      (el) =>
-        hljs.highlightElement(el as HTMLElement)
-    );
-  }, []);
 
   return (
     <div className="card card-page">
@@ -59,7 +54,7 @@ export default function PostContentCard({
               }
               alt=""
               fill
-              objectFit="contain"
+              style={{objectFit:"contain"}}
             />
           </Box>
         </Box>
@@ -67,21 +62,66 @@ export default function PostContentCard({
       <Stack direction="row" spacing={1}>
         {frontmatter.tags
           ? frontmatter.tags.map((tag: string) => {
-              const slug = slugify(tag);
+            const slug = slugify(tag);
 
-              return (
-                <Link key={tag} href={`/tag/${slug}`}>
-                  <Chip variant="outlined" clickable={true} label={`#${tag}`} />
-                </Link>
-              );
-            })
+            return (
+              <Link key={tag} href={`/tag/${slug}`}>
+                <Chip variant="outlined" clickable={true} label={`#${tag}`} />
+              </Link>
+            );
+          })
           : "no tags"}
       </Stack>
 
-      <div
-        className={`'post-body' ${markdownStyles['markdown']}`}
-        dangerouslySetInnerHTML={{ __html: marked.parse(content) }}
-      ></div>
+      <div className={`'post-body' ${markdownStyles['markdown']}`}>
+        <ReactMarkdown
+          // eslint-disable-next-line react/no-children-prop
+          children={content}
+          components={{
+            p: (paragraph: { children?: any; node?: any; }) => {
+              const { node } = paragraph
+
+              if (node.children[0].tagName === "img") {
+                const image = node.children[0]
+                const metastring = image.properties.alt
+                const alt = metastring?.replace(/ *\{[^)]*\} */g, "")
+                const metaWidth = metastring.match(/{([^}]+)x/)
+                const metaHeight = metastring.match(/x([^}]+)}/)
+                const width = metaWidth ? metaWidth[1] : "768"
+                const height = metaHeight ? metaHeight[1] : "432"
+                const isPriority = metastring?.toLowerCase().match('{priority}')
+
+                return (
+                  <Zoom>
+                    <Image
+                      src={image.properties.src}
+                      width={width}
+                      height={height}
+                      className="post-img"
+                      alt={(alt) ? alt : ''}
+                      priority={isPriority}
+                    />
+                  </Zoom>
+                )
+              }
+              return <p>{paragraph.children}</p>
+            },
+            code({ node, inline, className, children, ...props }) {
+              const match = /language-(\w+)/.exec(className || '')
+              return !inline && match ? (
+                <Highlight className={match[1]}>
+                  {String(children).replace(/\n$/, '')}
+                </Highlight>
+              ) : (
+                <code {...props} className={className}>
+                  {children}
+                </code>
+              )
+            }
+          }}
+        />
+      </div>
     </div>
+
   );
 }

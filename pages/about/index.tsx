@@ -1,5 +1,5 @@
-import { marked } from "marked";
 import React from "react";
+import ReactMarkdown from "react-markdown";
 
 const content = `
 ## Write for us!
@@ -35,7 +35,12 @@ Start your subject line with GUEST POST.
 const About = () => {
   return (
     <React.Fragment>
-      <div className='post-body p-5 m-auto' dangerouslySetInnerHTML={{ __html: marked.parse(content) }}></div>
+      <div className='post-body p-5 m-auto'>
+        <ReactMarkdown
+          // eslint-disable-next-line react/no-children-prop
+          children={content}
+        ></ReactMarkdown>
+      </div>
     </React.Fragment>
   );
 };

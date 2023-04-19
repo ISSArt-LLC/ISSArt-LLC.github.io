@@ -9,7 +9,9 @@ categories:
     - 'Machine Learning'
 ---
 
-<figure class="wp-block-embed-youtube wp-block-embed is-type-video is-provider-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" height="339" src="https://www.youtube.com/embed/w5x0jxrDsHc?feature=oembed" title="How much is RMSE? Technical and business metrics - exchange rate (ENG Subs)" width="602"></iframe></div>It is not a secret that people who work in the sphere of [Machine Learning](https://issart.com/services/machine-learning/) sooner or later start to see themselves as a kind of carriers of sacred knowledge. They know what back propagation, cross-entropy, tensors are and how you can transform them.
+<figure class="wp-block-embed-youtube wp-block-embed is-type-video is-provider-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" height="339" src="https://www.youtube.com/embed/w5x0jxrDsHc?feature=oembed" title="How much is RMSE? Technical and business metrics - exchange rate (ENG Subs)" width="602"></iframe></div>
+
+It is not a secret that people who work in the sphere of [Machine Learning](https://issart.com/services/machine-learning/) sooner or later start to see themselves as a kind of carriers of sacred knowledge. They know what back propagation, cross-entropy, tensors are and how you can transform them.
 
 It goes without saying that staying in this kind of ML bubble affects the perception. The developers start to think that everybody knows about technical specifications of this work, as they do. But it is far from being the truth. In the Machine Learning sphere there are two main parties: engineers and customers. In this article we offer you to see the process of [ML development](https://issart.com/services/machine-learning/) from the point of view of the customer.
 
