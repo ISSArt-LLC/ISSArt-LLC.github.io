@@ -65,7 +65,7 @@ workspace, ask the administrator to send you an invitation. The name of
 the workspace can be specified using the "**Settings**" button at the
 bottom of the control panel.
 
-![]/static/img/2023/05/image1.png
+![](/static/img/2023/05/image1.png)
 
 The following sections are available for administrators to manage the
 workspace:
@@ -177,7 +177,7 @@ corner. Favorite projects, marked with stars, appear first in the list.
 By selecting the appropriate position in the “**Status”** filter, you
 can filter active or archived projects.
 
-![]/static/img/2023/05/image2.png
+![](/static/img/2023/05/image2.png)
 
 So let’s create your first project!
 
@@ -203,12 +203,12 @@ In private project you can choose:
 
 - "Do not add members": no members will be added.
 
-![]/static/img/2023/05/image3.png
+![](/static/img/2023/05/image3.png)
 
 After completing the project settings click "**Create Project**" to see
 your new project page:
 
-![]/static/img/2023/05/image4.png
+![](/static/img/2023/05/image4.png)
 
 For the first project, we agree with the default settings, but on the
 "**Project settings**" page you can also change the following settings
@@ -229,7 +229,7 @@ for:
   > [!IMPORTANT]
   > Webhooks settings are available for paid plans.
 
-![]/static/img/2023/05/image5.png
+![](/static/img/2023/05/image5.png)
 
 With the buttons in the upper right corner, you can delete or archive
 your project - then it should still be available for links, but wоn't be
@@ -274,7 +274,7 @@ fields will appear to specify several properties:
   > define how to test this requirement. It is possible to add a list
   > of Test Cases that cover the new requirement.
 
-![]/static/img/2023/05/image6.png
+![](/static/img/2023/05/image6.png)
 
 To save new **Requirements** in the project click the "**Save**" button.
 Now you can see all the properties you have specified for the
@@ -284,7 +284,7 @@ requirement or delete the requirement.
 You can easily jump to the test cases that cover this requirement by
 clicking on the test case title:
 
-![]/static/img/2023/05/image7.png
+![](/static/img/2023/05/image7.png)
 
 The **Requirements** section also allows you:
 
@@ -293,7 +293,7 @@ The **Requirements** section also allows you:
 - to filter certain requirements by a specific parameter (Author,
 Status, Type, or Date):
 
-![]/static/img/2023/05/image8.png
+![](/static/img/2023/05/image8.png)
 
   > [!IMPORTANT]
   > Requirements are available in Startup, Business and Enterprise
@@ -319,7 +319,7 @@ and the information for the usage.
 
 Environment properties can also be modified after they are created:
 
-![]/static/img/2023/05/image9.png
+![](/static/img/2023/05/image9.png)
 
 ### **Configurations**
 
@@ -330,14 +330,14 @@ If your team develops web applications, you will probably test them in
 several different browsers. To do this, you can create a configuration
 group "**Browsers**" and specify your target browsers for testing there.
 
-![]/static/img/2023/05/image10.png
+![](/static/img/2023/05/image10.png)
 
 After creating a **Configuration group** and adding all possible
 individual configurations, we can specify them while preparing the Test
 Run - all available configuration groups are shown in the
 "**Configurations**" section:
 
-![]/static/img/2023/05/image11.png
+![](/static/img/2023/05/image11.png)
 
 It is possible to create multiple configuration groups and to have
 combinations such as different browsers and different operating systems.
@@ -362,12 +362,12 @@ To create a new test case you can:
 - use a creation button "**+ Case**" in the repository suite structure
 and describe your test case in detail:
 
-![]/static/img/2023/05/image12.png
+![](/static/img/2023/05/image12.png)
 
 In the creation form you should specify all properties that should be
 considered:
 
-![]/static/img/2023/05/image13.png
+![](/static/img/2023/05/image13.png)
 
 The required fields are marked with “\*” symbol. Fields can be
 additionally switched on and off in the «**Fields**» section described
@@ -454,7 +454,7 @@ Shared Step**".
     nested step, delete a step, clone a step, create a Shared Step, attach
     files.
 
-![]/static/img/2023/05/image14.png
+![](/static/img/2023/05/image14.png)
 
 Have you created several test cases related to your project? If so, you
 can now create a new Test Suite.
@@ -469,7 +469,7 @@ that you would like to highlight in a separate suite of cases.
 To create a Test Suite click the "**+Suite**" or "**Create new suite**"
 buttons:
 
-![]/static/img/2023/05/image15.png
+![](/static/img/2023/05/image15.png)
 
 Below are the properties you should specify when creating the test
 suite. Of these, "Suite name" is a required field, other fields can be
@@ -510,16 +510,16 @@ an entire test suite or a Test Plan.
 There are two ways to start a Test Run: from the project repository page
 or from the Test Run page.
 
-![]/static/img/2023/05/image16.png
+![](/static/img/2023/05/image16.png)
 
-![]/static/img/2023/05/image17.png
+![](/static/img/2023/05/image17.png)
 
 The first way is configured by selecting multiple test cases in the
 **Repository** and by clicking the "**Run**" button. You can choose
 conditions under which your object should be tested and which stage the
 test run will be associated with.
 
-![]/static/img/2023/05/image18.png
+![](/static/img/2023/05/image18.png)
 
 The second way is to create a regular Test Run. To do that, go to the
 "**Test runs**" section and click "**Start a new test run**". You will
@@ -557,7 +557,7 @@ The Test Run has the following fields for properties and settings:
   > Your Test Run also has the settings from the "Project settings"
     section:
 
-![]/static/img/2023/05/image19.png
+![](/static/img/2023/05/image19.png)
 
 After successful creation you can see your Test Run in the list. You can
 use the following filters:
@@ -582,7 +582,7 @@ use the following filters:
 
 - Configurations (If it was specified by you previously)
 
-![]/static/img/2023/05/image20.png
+![](/static/img/2023/05/image20.png)
 
 During the testing the tester-performer marks the result of a separate
 Test Case or a separate Step.
@@ -590,7 +590,7 @@ Test Case or a separate Step.
 To do this, click “**Open wizard**” and click one of the buttons
 corresponding to your result: passed, failed, blocked, invalid, skipped.
 
-![]/static/img/2023/05/image21.png
+![](/static/img/2023/05/image21.png)
 
 The results influence the overall statistics of the Test Run and will be
 displayed on the result graph. Do you want to share your test report or
@@ -598,9 +598,9 @@ show progress? Click "**Share Report**" and copy the link in the pop-up.
 To access a user who is not in your workspace the switcher "**Public
 link is turned on**" must be enabled.
 
-![]/static/img/2023/05/image22.png
+![](/static/img/2023/05/image22.png)
 
-![]/static/img/2023/05/image23.png
+![](/static/img/2023/05/image23.png)
 
 If a Test Step or a Test Case is failed, you can raise a Defect which
 will automatically be raised in the "**Defects**" section. The next
@@ -623,9 +623,9 @@ Milestone, Tags - fill in any custom fields applicable to the Defects.
 You can also add additional attachments if needed. On finishing click
 "**Create defect**".
 
-![]/static/img/2023/05/image24.png
+![](/static/img/2023/05/image24.png)
 
-![]/static/img/2023/05/image25.png
+![](/static/img/2023/05/image25.png)
 
 Another way is to raise a Defect when the test fails during the Test
 Run. If the Test Case or Step failed, mark the Test Case as "**Failed**"
@@ -633,9 +633,9 @@ after that you will be prompted to open the run result window, where you
 can submit additional comments, record how much time was spent on the
 test case performing.
 
-![]/static/img/2023/05/image26.png
+![](/static/img/2023/05/image26.png)
 
-![]/static/img/2023/05/image27.png
+![](/static/img/2023/05/image27.png)
 
 If the "**Create/Attach Defect**" checkbox is checked, you will be
 prompted to fill out other remaining Defect properties. You will be able
@@ -646,7 +646,7 @@ So a new Defect will be created from a Test Run result. You can find
 this Defect saved under the "**Defects**" section and the “**Defects**”
 tab of your Test Run.
 
-![]/static/img/2023/05/image28.png
+![](/static/img/2023/05/image28.png)
 
 ### **Qase for Jira**
 
@@ -669,7 +669,7 @@ In the field that appears you must type the Jira issue key (project key)
 which will be associated with the Test Case after pressing the
 «**Link**» button.
 
-![]/static/img/2023/05/image29.png
+![](/static/img/2023/05/image29.png)
 
 Another useful integration feature is linking Qase Test Runs to Jira
 issues. It allows you to switch quickly between Jira and Qase via
@@ -684,9 +684,9 @@ associated links. For this follow the next steps:
 
 - After the issue key is found, click the «**Link**» button.
 
-![]/static/img/2023/05/image30.png
+![](/static/img/2023/05/image30.png)
 
-![]/static/img/2023/05/image31.png
+![](/static/img/2023/05/image31.png)
 
 Another interesting thing about integration is that the Jira issue
 status and the associated Qase Defect are synchronized. It is not
